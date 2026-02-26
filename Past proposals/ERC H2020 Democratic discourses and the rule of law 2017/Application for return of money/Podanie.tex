@@ -1,0 +1,58 @@
+\documentclass[
+  fontsize=11pt,
+  paper=a4,
+  parskip=half,
+  enlargefirstpage=on,    % More space on first page
+  fromalign=right,        % PLacement of name in letter head
+  fromphone=on,           % Turn on phone number of sender
+  fromemail=on,
+  fromrule=aftername,     % Rule after sender name in letter head
+  addrfield=on,           % Adress field for envelope with window
+  backaddress=off,         % Sender address in this window
+  subject=beforeopening,  % Placement of subject
+  locfield=narrow,        % Additional field for sender
+  foldmarks=off,           % Print foldmarks
+]{scrlttr2}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\setkomafont{fromname}{ \LARGE}
+\setkomafont{fromaddress}{}%% statt \small
+\setkomafont{pagenumber}{}
+\setkomafont{subject}{\bfseries \large}
+\setkomafont{backaddress}{\mdseries}
+
+\LoadLetterOption{DIN}
+\setkomavar{fromname}{Dr Ben Stanley}
+\setkomavar{fromaddress}{ul. Wojska Polskiego 49B/30\\05-101, Nowy Dwór Mazowiecki}
+\setkomavar{fromphone}{+48 798\,814\,801}
+\setkomavar{fromemail}{bstanley@swps.edu.pl}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Ben Stanley}
+\setkomavar{place}{Nowy Dwór Mazowiecki}
+\setkomavar{date}{\today}
+\setkomavar{enclseparator}{: }
+
+\renewcommand*{\raggedsignature}{\raggedright}
+
+\renewcommand{\rmdefault}{ppl}
+
+\begin{document}
+  \begin{letter}{Prof. SWPS Mirosław Filiciak\\Dziekan WNHiS\\SWPS}
+    \setkomavar{subject}{Podanie o zwrot kosztów}
+    \opening{Szanowny Panie Dziekanie,}
+    
+Zwracam się z uprzejmą prośbą o uruchomienie z budżetu naukowego Instytutu Nauk Społecznych środków finansowych w wysokości 1627,74 zł. Środki te posłużą na pokrycie kosztów mojego udziału w spotkaniu dotyczącym przygotowania wniosku o dofinansowanie projektu w ramach Horizon 2020. Centrum Studiów nad Demokracją jest potencjalnym partnerem w tym projekcie. Powyższe spotkanie odbyło się na Uniwersytecie w Utrecht, Niderlandy, w dniach 24--25 sierpień 2017 r. Niniejszy wniosek składam dopiero w chwili obecnej, ponieważ mój udział w spotkaniu potwierdzono w trakcie mojego urlopu na kilka dni przed samym wydarzeniem.
+
+Szczegółowy kosztorys:
+\begin{itemize}
+\item 1329,54 PLN – koszt podróży
+\item 298,20 PLN (70 EUR) - dieta zagraniczna
+\end{itemize}
+
+Proszę o pozytywne rozpatrzenie mojej prośby.
+
+    \closing{Z wyrazami szacunku, \\ \hfill \break} 
+  \end{letter}
+\end{document}

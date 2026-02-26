@@ -1,0 +1,3685 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Andersen.2019.10.5129/001041519x15647434970117}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ca625dae14b90ea16c4e2c068eada9e7}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{fullhash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{bibnamehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{authorbibnamehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{authornamehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{authorfullhash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comparative Politics}
+      \field{number}{4}
+      \field{title}{{Comparative Democratization and Democratic Backsliding: The Case for a Historical-Institutional Approach}}
+      \field{volume}{51}
+      \field{year}{2019}
+      \field{pages}{645\bibrangedash 663}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.5129/001041519x15647434970117
+      \endverb
+    \endentry
+    \entry{Bundock.2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=aae32d8b6485b0e4b4646f14206a319b}{%
+           family={Arel-Bundock},
+           familyi={A\bibinithyphendelim B\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c8a93102cfffacc2ccaffaaa2070715}{%
+           family={Greifer},
+           familyi={G\bibinitperiod},
+           given={Noah},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6987855d3f745cd556dce857d4640889}{%
+           family={Heiss},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{98fb783d6744cf87a097dbf2d1ff5a4d}
+      \strng{fullhash}{03565c214c594d0597b1a2057bbc1af1}
+      \strng{bibnamehash}{03565c214c594d0597b1a2057bbc1af1}
+      \strng{authorbibnamehash}{03565c214c594d0597b1a2057bbc1af1}
+      \strng{authornamehash}{98fb783d6744cf87a097dbf2d1ff5a4d}
+      \strng{authorfullhash}{03565c214c594d0597b1a2057bbc1af1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{title}{How to Interpret Statistical Models Using {marginaleffects} in {R} and {Python}}
+      \field{year}{Forthcoming}
+    \endentry
+    \entry{Bartels.2023.10.1515/9780691244518}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c3b0a40389b651fad1ac26365148674}{%
+           family={Bartels},
+           familyi={B\bibinitperiod},
+           given={Larry\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{fullhash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{bibnamehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{authorbibnamehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{authornamehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{authorfullhash}{5c3b0a40389b651fad1ac26365148674}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Democracy Erodes from the Top, Leaders, Citizens, and the Challenge of Populism in Europe}}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1515/9780691244518
+      \endverb
+    \endentry
+    \entry{Bartels.2023.10.1093/isr/viad019}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=5c3b0a40389b651fad1ac26365148674}{%
+           family={Bartels},
+           familyi={B\bibinitperiod},
+           given={Larry\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6be2e0d923bbc5536f5463754edca04}{%
+           family={Daxecker},
+           familyi={D\bibinitperiod},
+           given={Ursula\bibnamedelima E},
+           giveni={U\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b1369530819277a11277fa111ba6d62}{%
+           family={Hyde},
+           familyi={H\bibinitperiod},
+           given={Susan\bibnamedelima D},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4bebf4f9435ea880516d0f21523fd3a}{%
+           family={Lindberg},
+           familyi={L\bibinitperiod},
+           given={Staffan\bibnamedelima I},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7218e339aeeb923a2a73dc0f2174da7}{%
+           family={Nooruddin},
+           familyi={N\bibinitperiod},
+           given={Irfan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{05d25d34f8c3532ef6a43a79dc022b35}
+      \strng{fullhash}{d478180d358952b4b901ab3ee5719b18}
+      \strng{bibnamehash}{d478180d358952b4b901ab3ee5719b18}
+      \strng{authorbibnamehash}{d478180d358952b4b901ab3ee5719b18}
+      \strng{authornamehash}{05d25d34f8c3532ef6a43a79dc022b35}
+      \strng{authorfullhash}{d478180d358952b4b901ab3ee5719b18}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Abstract There is a widespread perception that we are witnessing a period of democratic decline, manifesting itself in varieties of democratic backsliding such as the manipulation of elections, marginalization and repression of regime opponents and minorities, or more incremental executive aggrandizement. Yet others are more optimistic and have argued that democracy is in fact resilient, or that we are observing coinciding trends of democratic decline but also expansion. This forum highlights key issues in the debate on democracy's decline, which center on conceptual and measurement issues, agreement on the phenomenon but not its nature or severity, the importance of international factors, the emphasis we should put on political elites versus citizens, and the consequences of backsliding for global politics. Staffan I. Lindberg provides an empirical perspective on the scope and severity of democracy's decline, and argues that polarization and misinformation are important drivers for this current wave of autocratization. Susan D. Hyde highlights the detrimental consequences of reduced support for democracy by the international community, which has affected civil society organizations—important arbiters of democracy—especially severely. Challenging some of these conclusions, Irfan Nooruddin claims that any gains for democracy after the end of the Cold War were short-lived, failing to sustain democracy because of an overemphasis on elections and a disregard for structural factors. Finally, Larry M. Bartels argues that we need to look to political elites and not citizens if we want to protect democracy in the United States and elsewhere, which has important implications for how we study democracy and its challenges.}}
+      \field{issn}{1521-9488}
+      \field{journaltitle}{International Studies Review}
+      \field{number}{2}
+      \field{title}{{The Forum: Global Challenges to Democracy? Perspectives on Democratic Backsliding}}
+      \field{volume}{25}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1093/isr/viad019
+      \endverb
+    \endentry
+    \entry{Bill.2020.10.1177/0888325420950800}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f6b7f963c885047001346857d20211ec}{%
+           family={Bill},
+           familyi={B\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f6b7f963c885047001346857d20211ec}
+      \strng{fullhash}{f6b7f963c885047001346857d20211ec}
+      \strng{bibnamehash}{f6b7f963c885047001346857d20211ec}
+      \strng{authorbibnamehash}{f6b7f963c885047001346857d20211ec}
+      \strng{authornamehash}{f6b7f963c885047001346857d20211ec}
+      \strng{authorfullhash}{f6b7f963c885047001346857d20211ec}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0888-3254}
+      \field{journaltitle}{East European Politics and Societies: and Cultures}
+      \field{number}{1}
+      \field{title}{{Counter-Elite Populism and Civil Society in Poland: PiS’s Strategies of Elite Replacement}}
+      \field{volume}{36}
+      \field{year}{2020}
+      \field{pages}{118\bibrangedash 140}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1177/0888325420950800
+      \endverb
+    \endentry
+    \entry{Bill.2020.10.1080/21599165.2020.1787161}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f6b7f963c885047001346857d20211ec}{%
+           family={Bill},
+           familyi={B\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{fullhash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{bibnamehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{authorbibnamehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{authornamehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{authorfullhash}{fad661e19318b625ba5ea6c8046b12ae}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2159-9165}
+      \field{journaltitle}{East European Politics}
+      \field{number}{3}
+      \field{title}{{Whose Poland is it to be? PiS and the struggle between monism and pluralism}}
+      \field{volume}{36}
+      \field{year}{2020}
+      \field{pages}{378\bibrangedash 394}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/21599165.2020.1787161
+      \endverb
+    \endentry
+    \entry{Bryan.2023.10.1177/00104140231152784}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dac9fb733266669cb488c656a95320e6}{%
+           family={Bryan},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{fullhash}{dac9fb733266669cb488c656a95320e6}
+      \strng{bibnamehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{authorbibnamehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{authornamehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{authorfullhash}{dac9fb733266669cb488c656a95320e6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Despite waves of democratic backsliding over the last decade, most global citizens still claim to support democracy. On the other hand, many citizens become more supportive of specific anti-democratic actions when their preferred political side can benefit. How, then, do citizens justify their consistent “explicit support for democracy” with their more malleable support for the implementation of liberal democracy? This paper uses cross-national survey data from 74 countries and two methods—a standard cross-sectional analysis and a within-country variation design—to show that a citizen’s conceptualization of democracy, or what democracy means to them, is subject to partisan-motivated reasoning. In other words, citizens are more likely to conceptualize democracy in illiberal terms, like emphasizing the need for obeying authority, when their preferred political party is in power. The findings suggest one’s conception of democracy can be a fluid attitude that citizens mold to match their partisan self-interest.}}
+      \field{issn}{0010-4140}
+      \field{journaltitle}{Comparative Political Studies}
+      \field{title}{{What Kind of Democracy Do We All Support? How Partisan Interest Impacts a Citizen’s Conceptualization of Democracy}}
+      \field{year}{2023}
+      \field{pages}{001041402311527}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1177/00104140231152784
+      \endverb
+    \endentry
+    \entry{brms.2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={Paul-Christian},
+           giveni={P\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{fullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{bibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorbibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authornamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorfullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{number}{1}
+      \field{title}{{brms}: An {R} Package for {Bayesian} Multilevel Models Using {Stan}}
+      \field{volume}{80}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 28}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.18637/jss.v080.i01
+      \endverb
+    \endentry
+    \entry{Carey.2020.10.1080/17457289.2020.1790577}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=6aab98f00cb1ca6ca8e53e11d5173b0e}{%
+           family={Carey},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=462c355731274de7d35337405eaa60c1}{%
+           family={Clayton},
+           familyi={C\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cd82a97f00e2a590dc398f0dfa3e324}{%
+           family={Helmke},
+           familyi={H\bibinitperiod},
+           given={Gretchen},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ef5bca6f403168706ad93d11351ed60}{%
+           family={Nyhan},
+           familyi={N\bibinitperiod},
+           given={Brendan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b6280d48a12116375eccc1a46e3e369}{%
+           family={Sanders},
+           familyi={S\bibinitperiod},
+           given={Mitchell},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b0490bbee3b27b7729125f198b1b103}{%
+           family={Stokes},
+           familyi={S\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{53453474edb6e3b6b6accd96c302baa7}
+      \strng{fullhash}{21614423438641c7c47c103ba86f44cf}
+      \strng{bibnamehash}{21614423438641c7c47c103ba86f44cf}
+      \strng{authorbibnamehash}{21614423438641c7c47c103ba86f44cf}
+      \strng{authornamehash}{53453474edb6e3b6b6accd96c302baa7}
+      \strng{authorfullhash}{21614423438641c7c47c103ba86f44cf}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1745-7289}
+      \field{journaltitle}{Journal of Elections, Public Opinion and Parties}
+      \field{title}{{Who will defend democracy? Evaluating tradeoffs in candidate support among partisan donors and voters}}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1080/17457289.2020.1790577
+      \endverb
+    \endentry
+    \entry{CBOS2021.democ}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0aafe0ff400f1b98933b0ec91d77bb02}{%
+           family={{Centrum Badania Opinii Społecznej}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{fullhash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{bibnamehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{authorbibnamehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{authornamehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{authorfullhash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Komunikat z badań}
+      \field{number}{2021}
+      \field{title}{{Stosunek do demokracji i ocena jej funkcjonowania}}
+      \field{volume}{57}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 11}
+      \range{pages}{11}
+    \endentry
+    \entry{Chiopris.2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ef4118eefd5e22d5aa677a80a80ca1da}{%
+           family={Chiopris},
+           familyi={C\bibinitperiod},
+           given={Caterina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0cc3183a7d298d6114498f6bb5a39e79}{%
+           family={Nalepa},
+           familyi={N\bibinitperiod},
+           given={Monika},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bf9e068b57697f874591dd0186ce289}{%
+           family={Vanberg},
+           familyi={V\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d9600cb0693a871704d5e0d3fa648c75}
+      \strng{fullhash}{064b76274a8969831d56265b83fda94a}
+      \strng{bibnamehash}{064b76274a8969831d56265b83fda94a}
+      \strng{authorbibnamehash}{064b76274a8969831d56265b83fda94a}
+      \strng{authornamehash}{d9600cb0693a871704d5e0d3fa648c75}
+      \strng{authorfullhash}{064b76274a8969831d56265b83fda94a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Working paper}
+      \field{title}{{A wolf in sheep’s clothing: citizen uncertainty and democratic backsliding}}
+      \field{year}{2021}
+    \endentry
+    \entry{Claassen.2023}{article}{}
+      \name{author}{20}{}{%
+        {{un=0,uniquepart=base,hash=e58301d2409ef13121cb98a35ef0b2dc}{%
+           family={Claassen},
+           familyi={C\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afdaa7f7f28192a9504b2042b538e5aa}{%
+           family={Ackermann},
+           familyi={A\bibinitperiod},
+           given={Kathrin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb9b338c75a4bd8b1b251882ec2bed34}{%
+           family={Bertsou},
+           familyi={B\bibinitperiod},
+           given={Eri},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af9ad47c24b48b53b3e7e09ceb45066e}{%
+           family={Borba},
+           familyi={B\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a1b061c362725a1efb3d8cc3dcaa82a}{%
+           family={Carlin},
+           familyi={C\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bc7a15c2b95ad9d7ef0cb12d30777da}{%
+           family={Cavari},
+           familyi={C\bibinitperiod},
+           given={Amnon},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6aafac0d527eaa528c77bd94ce2cb5a1}{%
+           family={Dahlum},
+           familyi={D\bibinitperiod},
+           given={Sirianne},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3e7b2897d1aec1aac5b38028967fdf8}{%
+           family={Gherghina},
+           familyi={G\bibinitperiod},
+           given={Sergiu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1bf310b5ae67bd596a6589f9950be98}{%
+           family={Hawkins},
+           familyi={H\bibinitperiod},
+           given={Darren},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17e3e2c5aa6917f0914dd31699e53820}{%
+           family={Lelkes},
+           familyi={L\bibinitperiod},
+           given={Yphtach},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3afe69eea38c5f212d267059f80b6cd8}{%
+           family={Magalhães},
+           familyi={M\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85479b97fb8c64a6905f1d6277242033}{%
+           family={Mattes},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0290bcf897f8bce49b107edea32d8cb7}{%
+           family={Meijers},
+           familyi={M\bibinitperiod},
+           given={Maurits},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ac2276eb0bec8f3ade80cefd63a7901}{%
+           family={Neundorf},
+           familyi={N\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65216eb6fc96326d7945f0cdae784c38}{%
+           family={Oross},
+           familyi={O\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5361b7e66bb36953583e173260b5e58b}{%
+           family={Öztürk},
+           familyi={Ö\bibinitperiod},
+           given={Aykut},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6571800d92bf700c2e127efae0552d95}{%
+           family={Sarsfield},
+           familyi={S\bibinitperiod},
+           given={Rodolfo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bb529f07135113ca441b6ea4100f0ce}{%
+           family={Self},
+           familyi={S\bibinitperiod},
+           given={Darin},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0799fa37197feab19531405f107bf9bb}{%
+           family={Zechmeister},
+           familyi={Z\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0b3bc1cba904fc8464d59a684e6d0b74}
+      \strng{fullhash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \strng{bibnamehash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \strng{authorbibnamehash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \strng{authornamehash}{0b3bc1cba904fc8464d59a684e6d0b74}
+      \strng{authorfullhash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SSRN Electronic Journal}
+      \field{month}{01}
+      \field{title}{Conceptualizing and Measuring Support for Democracy: A New Approach}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.2139/ssrn.4622645
+      \endverb
+    \endentry
+    \entry{Cohen.2023.10.1111/ajps.12690}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c4b7b0b8ca69314a943adf74c0061034}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Mollie\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95fe4e95852b11d9c0eca8ded3893a18}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Amy\bibnamedelima Erica},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b718482cee78589bb47862825f5769a5}{%
+           family={Moseley},
+           familyi={M\bibinitperiod},
+           given={Mason\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=782010962791de13fec60634ca92d331}{%
+           family={Layton},
+           familyi={L\bibinitperiod},
+           given={Matthew\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{492cdb656d8a148c9a0339ff7fbac743}
+      \strng{fullhash}{09d6051cfce45c81130ef24356e957ec}
+      \strng{bibnamehash}{09d6051cfce45c81130ef24356e957ec}
+      \strng{authorbibnamehash}{09d6051cfce45c81130ef24356e957ec}
+      \strng{authornamehash}{492cdb656d8a148c9a0339ff7fbac743}
+      \strng{authorfullhash}{09d6051cfce45c81130ef24356e957ec}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Democracy is in decline worldwide, primarily because voters elect candidates harboring antidemocratic aspirations. Scholars argue that elections animate the democratic spirits of winners and deflate those of losers, but what about contests ending in the victory of authoritarian candidates? To answer this question, we consider the dynamics of commitment to democracy in Brazil's 2018 presidential campaign. Drawing on AmericasBarometer data and an original five‐wave panel survey, we confirm that Jair Bolsonaro's campaign attracted skeptics of democracy. Although his election and inauguration boosted his supporters’ allegiance to the political system, it also exacerbated their tolerance for institutional ruptures such as executive‐led coups. Meanwhile, election losers retained their democratic commitments. As a result, the authoritarian victory narrowed preexisting winner–loser gaps in support for the political system, but widened gaps in tolerance for certain antidemocratic maneuvers. Thus, authoritarian electoral victories can foster short‐term satisfaction among democracy's critics while abetting future instability.}}
+      \field{issn}{0092-5853}
+      \field{journaltitle}{American Journal of Political Science}
+      \field{number}{2}
+      \field{title}{{Winners’ Consent? Citizen Commitment to Democracy When Illiberal Candidates Win Elections}}
+      \field{volume}{67}
+      \field{year}{2023}
+      \field{pages}{261\bibrangedash 276}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1111/ajps.12690
+      \endverb
+    \endentry
+    \entry{VDem.2023}{article}{}
+      \name{author}{38}{}{%
+        {{un=0,uniquepart=base,hash=de0eebdefcf0e3d8bbef5ca455ee8445}{%
+           family={Coppedge},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6a0cbfe9daf777684dbb8947a681e73}{%
+           family={Gerring},
+           familyi={G\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7302a9adea039828fec62cbcc30ef3e4}{%
+           family={Knutsen},
+           familyi={K\bibinitperiod},
+           given={Carl\bibnamedelima Henrik},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4bebf4f9435ea880516d0f21523fd3a}{%
+           family={Lindberg},
+           familyi={L\bibinitperiod},
+           given={Staffan\bibnamedelima I.},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ab416074c4b326b5a0ecf40629d221f}{%
+           family={Teorell},
+           familyi={T\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af43ba3259f7ba0f7d2dd10334dfe5b4}{%
+           family={Altman},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5eaba9edc5caa618157dccec75fcb233}{%
+           family={Bernhard},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=beaf53caedc928751f8260d355c57318}{%
+           family={Cornell},
+           familyi={C\bibinitperiod},
+           given={Agnes},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe536975973e391aa21144553eeaad3f}{%
+           family={Fish},
+           familyi={F\bibinitperiod},
+           given={M.\bibnamedelimi Steven},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b2b217f46d08f0e1f15db2a9f5b0d4e}{%
+           family={Gastaldi},
+           familyi={G\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2ff3c5191623337875c31d70fa9544b}{%
+           family={Gjerløw},
+           familyi={G\bibinitperiod},
+           given={Haakon},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31b0a1a2cf45441187a2bfa0844c03e1}{%
+           family={Glynn},
+           familyi={G\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=885d87174603a215dd7b856f69c89e7a}{%
+           family={Good\bibnamedelima God},
+           familyi={G\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7695efd340bca6fd0ca496573bd6fecd}{%
+           family={Grahn},
+           familyi={G\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9ce0a9c28924ca7fde07b4a5bc2625a}{%
+           family={Hicken},
+           familyi={H\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1359de397d81287f111e455c3dcb5b4a}{%
+           family={Kinzelbach},
+           familyi={K\bibinitperiod},
+           given={Katrin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2be83b90721689ab55cdd466140babdf}{%
+           family={Krusell},
+           familyi={K\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8003404151c327628bd80203d3f21f90}{%
+           family={Marquardt},
+           familyi={M\bibinitperiod},
+           given={Kyle\bibnamedelima L.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f363f919e2be59bd53b03f6422ceafb3}{%
+           family={McMann},
+           familyi={M\bibinitperiod},
+           given={Kelly},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebed316c5ee9215c2c12ff6c49b22f31}{%
+           family={Mechkova},
+           familyi={M\bibinitperiod},
+           given={Valeriya},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4df7df35ab799dc8598534b36b65094b}{%
+           family={Medzihorsky},
+           familyi={M\bibinitperiod},
+           given={Juraj},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=792ee03cf2708a16c6cbde05ef79b4cd}{%
+           family={Natsika},
+           familyi={N\bibinitperiod},
+           given={Natalia},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ac2276eb0bec8f3ade80cefd63a7901}{%
+           family={Neundorf},
+           familyi={N\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c431ebb8aa47a9bf340d6a512213ff10}{%
+           family={Paxton},
+           familyi={P\bibinitperiod},
+           given={Pamela},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5467088017ca3ef134c8cff485ce6b7a}{%
+           family={Pemstein},
+           familyi={P\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d829f080a29bb25c3e54c6a260dd1e5}{%
+           family={Pernes},
+           familyi={P\bibinitperiod},
+           given={Josefine},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e63ff74235a895a9b69cc1a6eeb28002}{%
+           family={Rydén},
+           familyi={R\bibinitperiod},
+           given={Oskar},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82df7b75822fc77f70f90e37572f7555}{%
+           family={Römer},
+           familyi={R\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=fc746f265a24a7b83e7c49d19767b619}{%
+           family={Seim},
+           familyi={S\bibinitperiod},
+           given={Brigitte},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2649eb0cc0d37ebde0060216329dc8ba}{%
+           family={Sigman},
+           familyi={S\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e94ca102425095bcd7e6c02049796cc2}{%
+           family={Svaaning},
+           familyi={S\bibinitperiod},
+           given={Svend-Erik},
+           giveni={S\bibinithyphendelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c028e445227f4ec9279e768753a11f7}{%
+           family={Staton},
+           familyi={S\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=745f777ef95cb8c2c812d670cfae945d}{%
+           family={Sundström},
+           familyi={S\bibinitperiod},
+           given={Aksel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba77429c31b7a0409607a45ef9f3e33f}{%
+           family={Tzelgov},
+           familyi={T\bibinitperiod},
+           given={Eitan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82660e1f36556772b02ef864e385dc1e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yi-ting},
+           giveni={Y\bibinithyphendelim t\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffeb039134fcfa7a5cd3dbcc34749b43}{%
+           family={Wig},
+           familyi={W\bibinitperiod},
+           given={Tore},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=025be2fd4c38d6c79f0852fd2a5129d3}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f34cc061d63e0ea040319db50fcd8312}{%
+           family={Ziblatt},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b9824f70adf73e93dc51ab751873da04}
+      \strng{fullhash}{59867e0b4d31f82f75077e9a13a3da63}
+      \strng{bibnamehash}{c6c83f451863d69aaef356b51e8f19a7}
+      \strng{authorbibnamehash}{c6c83f451863d69aaef356b51e8f19a7}
+      \strng{authornamehash}{b9824f70adf73e93dc51ab751873da04}
+      \strng{authorfullhash}{59867e0b4d31f82f75077e9a13a3da63}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Varieties of Democracy (V-Dem) Project}
+      \field{title}{{V-Dem [Country-Year/Country-Date] Dataset v13}}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://doi.org/10.23696/vdemds23
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.23696/vdemds23
+      \endverb
+    \endentry
+    \entry{Dawson.2016.10.1353/jod.2016.0015}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=396c99aaf631b1aaa802ddbe17efe65d}{%
+           family={Dawson},
+           familyi={D\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e93ce773da7dd112974591941d4fde2f}{%
+           family={Hanley},
+           familyi={H\bibinitperiod},
+           given={Seán},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{fullhash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{bibnamehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{authorbibnamehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{authornamehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{authorfullhash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1086-3214}
+      \field{journaltitle}{Journal of Democracy}
+      \field{number}{1}
+      \field{title}{{The Fading Mirage of the “Liberal Consensus”}}
+      \field{volume}{27}
+      \field{year}{2016}
+      \field{pages}{20\bibrangedash 34}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1353/jod.2016.0015
+      \endverb
+    \endentry
+    \entry{ESS10.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c71f218c9c1d1c085e258ff84a38db45}{%
+           family={{European Social Survey Round 10 Data}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sikt - Norwegian Agency for Shared Services in Education and Research, Norway – Data Archive and distributor of ESS data for ESS ERIC}%
+      }
+      \strng{namehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{fullhash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{bibnamehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{authorbibnamehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{authornamehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{authorfullhash}{c71f218c9c1d1c085e258ff84a38db45}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{European Social Survey Round 10 Data (2020)}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.21338/NSD-ESS10-2020
+      \endverb
+      \verb{urlraw}
+      \verb https://www.europeansocialsurvey.org/data/download.html?r=10
+      \endverb
+      \verb{url}
+      \verb https://www.europeansocialsurvey.org/data/download.html?r=10
+      \endverb
+    \endentry
+    \entry{Fossati.2021.10.1177/1354068821992488}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bd294040314992df1668aedfa1416956}{%
+           family={Fossati},
+           familyi={F\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=47096cbe01f8c70a56aeda3fb6cbc239}{%
+           family={Muhtadi},
+           familyi={M\bibinitperiod},
+           given={Burhanuddin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de8597c122e1806c88530cd304f60153}{%
+           family={Warburton},
+           familyi={W\bibinitperiod},
+           given={Eve},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{159ee199de2d4545613a00adf42b853a}
+      \strng{fullhash}{155c26ef637c714aaf43847ec9a85664}
+      \strng{bibnamehash}{155c26ef637c714aaf43847ec9a85664}
+      \strng{authorbibnamehash}{155c26ef637c714aaf43847ec9a85664}
+      \strng{authornamehash}{159ee199de2d4545613a00adf42b853a}
+      \strng{authorfullhash}{155c26ef637c714aaf43847ec9a85664}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1354-0688}
+      \field{journaltitle}{Party Politics}
+      \field{title}{{Why democrats abandon democracy: Evidence from four survey experiments}}
+      \field{volume}{28}
+      \field{year}{2021}
+      \field{pages}{554\bibrangedash 566}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1177/1354068821992488
+      \endverb
+    \endentry
+    \entry{Galczynska.2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e979246b9229bdcf9e4a0aa57e748315}{%
+           family={Gałczyńska},
+           familyi={G\bibinitperiod},
+           given={Magdalena},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{fullhash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{bibnamehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{authorbibnamehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{authornamehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{authorfullhash}{e979246b9229bdcf9e4a0aa57e748315}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{journaltitle}{Onet.pl}
+      \field{month}{6}
+      \field{title}{{Szef stowarzyszenia sędziów podsumowuje pół roku Adama Bodnara. ``Utknęliśmy na mieliźnie''}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://wiadomosci.onet.pl/tylko-w-onecie/utknelismy-na-mieliznie-szef-stowarzyszenia-sedziow-podsumowuje-pol-roku-adama/gsj0ffk
+      \endverb
+      \verb{url}
+      \verb https://wiadomosci.onet.pl/tylko-w-onecie/utknelismy-na-mieliznie-szef-stowarzyszenia-sedziow-podsumowuje-pol-roku-adama/gsj0ffk
+      \endverb
+    \endentry
+    \entry{Ganev.2018.10.1353/jod.2018.0047}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d1d820835047975834ef989216dc1be1}{%
+           family={Ganev},
+           familyi={G\bibinitperiod},
+           given={Venelin\bibnamedelima I.},
+           giveni={V\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d1d820835047975834ef989216dc1be1}
+      \strng{fullhash}{d1d820835047975834ef989216dc1be1}
+      \strng{bibnamehash}{d1d820835047975834ef989216dc1be1}
+      \strng{authorbibnamehash}{d1d820835047975834ef989216dc1be1}
+      \strng{authornamehash}{d1d820835047975834ef989216dc1be1}
+      \strng{authorfullhash}{d1d820835047975834ef989216dc1be1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1086-3214}
+      \field{journaltitle}{Journal of Democracy}
+      \field{title}{{"Soft Decisionism" in Bulgaria}}
+      \field{volume}{29}
+      \field{year}{2018}
+      \field{pages}{91\bibrangedash 103}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1353/jod.2018.0047
+      \endverb
+    \endentry
+    \entry{Górska.2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7d51a86c8bb27a0f27055e0c8bfb607e}{%
+           family={Górska},
+           familyi={G\bibinitperiod},
+           given={Paulina},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{fullhash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{bibnamehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{authorbibnamehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{authornamehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{authorfullhash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Working paper (Centrum Badań nad Uprzedzeniami)}
+      \field{title}{{Polaryzacja polityczna w Polsce. Jak bardzo jesteśmy podzieleni?}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb http://cbu.psychologia.pl/wp-content/uploads/sites/410/2021/02/Polaryzacja-polityczna-2.pdf
+      \endverb
+      \verb{url}
+      \verb http://cbu.psychologia.pl/wp-content/uploads/sites/410/2021/02/Polaryzacja-polityczna-2.pdf
+      \endverb
+    \endentry
+    \entry{Graham.2020.10.1017/s0003055420000052}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b830d2ea78252890257fe62da8d53898}{%
+           family={Graham},
+           familyi={G\bibinitperiod},
+           given={Matthew\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc8f5ea0b23ed722921c597f37607fc5}{%
+           family={Svolik},
+           familyi={S\bibinitperiod},
+           given={Milan\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{fullhash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{bibnamehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{authorbibnamehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{authornamehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{authorfullhash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-0554}
+      \field{journaltitle}{American Political Science Review}
+      \field{title}{{Democracy in America? Partisanship, Polarization, and the Robustness of Support for Democracy in the United States}}
+      \field{volume}{114}
+      \field{year}{2020}
+      \field{pages}{392\bibrangedash 409}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1017/s0003055420000052
+      \endverb
+    \endentry
+    \entry{Hainmueller.2014.10.1093/pan/mpt024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=be94165c21f502aeaed11e611358d6be}{%
+           family={Hainmueller},
+           familyi={H\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9730fa38215f7192fd445b79a44190f3}{%
+           family={Hopkins},
+           familyi={H\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6541d7f60b0a41a40f6255d5dd88cd7}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Teppei},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed6d426837365c21ff34515997598975}
+      \strng{fullhash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \strng{bibnamehash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \strng{authorbibnamehash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \strng{authornamehash}{ed6d426837365c21ff34515997598975}
+      \strng{authorfullhash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1047-1987}
+      \field{journaltitle}{Political Analysis}
+      \field{number}{1}
+      \field{title}{{Causal Inference in Conjoint Analysis: Understanding Multidimensional Choices via Stated Preference Experiments}}
+      \field{volume}{22}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1093/pan/mpt024
+      \endverb
+    \endentry
+    \entry{HFHR.2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a12e161fd3499fe18dce8b32c26268e4}{%
+           family={{Helsinki Foundation for Human Rights}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{fullhash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{bibnamehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{authorbibnamehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{authornamehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{authorfullhash}{a12e161fd3499fe18dce8b32c26268e4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{12}
+      \field{title}{{Position statement by the Helsinki Foundation for Human Rights on the changes in the public media}}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://hfhr.pl/en/news/statement-changes-in-the-public-media
+      \endverb
+      \verb{url}
+      \verb https://hfhr.pl/en/news/statement-changes-in-the-public-media
+      \endverb
+    \endentry
+    \entry{Hrbkova.2023.10.1177/13540688231156409}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4004a6971c0573220cd397bec609208c}{%
+           family={Hrbková},
+           familyi={H\bibinitperiod},
+           given={Lenka},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bba3c519ddd1a84e5a1429714b90f0e1}{%
+           family={Voda},
+           familyi={V\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3c423b324c28391e1baf8e6e7f3d91d}{%
+           family={Havlík},
+           familyi={H\bibinitperiod},
+           given={Vlastimil},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c8859f4b078a85fd14dee93fd3eb8974}
+      \strng{fullhash}{513947f38be430801b9b86451607a8e3}
+      \strng{bibnamehash}{513947f38be430801b9b86451607a8e3}
+      \strng{authorbibnamehash}{513947f38be430801b9b86451607a8e3}
+      \strng{authornamehash}{c8859f4b078a85fd14dee93fd3eb8974}
+      \strng{authorfullhash}{513947f38be430801b9b86451607a8e3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{We demonstrate effects of political preferences on interpersonal interactions in the environment of the highly unstable and volatile party system of the Czech Republic. The effects of partisanship on interpersonal relations are compared to the effects of attitudes on a salient issue. Two experiments confirm the potential of political partisanship to affect the individual?s ingroup preferences and outgroup biases, which can influence willingness to converse with others in the context of an unstable party system. In a conjoint experiment, dis/agreement on immigration has comparable effects on interpersonal interactions. Avoidance of interactions with out-partisans is amplified when out-partisans talk about politics often. The patterns of ingroup preferences and outgroup biases are replicated in a trust game experiment. Both partisanship and immigration attitudes influence how subjects interact with others. Given the political context, the study provides a hard test of politically motivated ingroup and outgroup biases stemming both from party and policy preferences.}}
+      \field{issn}{1354-0688}
+      \field{journaltitle}{Party Politics}
+      \field{title}{{Politically motivated interpersonal biases: Polarizing effects of partisanship and immigration attitudes}}
+      \field{volume}{Ahead of print}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1177/13540688231156409
+      \endverb
+    \endentry
+    \entry{stat.power}{manual}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5b32b91930bf3bd0f57fce8857666266}{%
+           family={Lukac},
+           familyi={L\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=557b4b75cf7b18511780fa95fffeca29}{%
+           family={Stefanelli},
+           familyi={S\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{fullhash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{bibnamehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{authorbibnamehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{authornamehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{authorfullhash}{1433cb84ece37efda1027dce42b2ffd3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Conjoint Experiments: Power Analysis Tool}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://mblukac.shinyapps.io/conjoints-power-shiny/
+      \endverb
+      \verb{url}
+      \verb https://mblukac.shinyapps.io/conjoints-power-shiny/
+      \endverb
+    \endentry
+    \entry{Markowski.2016.10.1080/01402382.2016.1177305}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00de277f674c93fc9ccb4d8081ca9b94}{%
+           family={Markowski},
+           familyi={M\bibinitperiod},
+           given={Radosław},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{fullhash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{bibnamehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{authorbibnamehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{authornamehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{authorfullhash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0140-2382}
+      \field{journaltitle}{West European Politics}
+      \field{title}{{The Polish parliamentary election of 2015: a free and fair election that results in unfair political consequences}}
+      \field{volume}{39}
+      \field{year}{2016}
+      \field{pages}{1311\bibrangedash 1322}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1080/01402382.2016.1177305
+      \endverb
+    \endentry
+    \entry{Mazepus.2022.10.1177/00104140211060285}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c515bd050d76aff91fc788d666ad1955}{%
+           family={Mazepus},
+           familyi={M\bibinitperiod},
+           given={Honorata},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c8108a8171642451d3436d5f265a129}{%
+           family={Toshkov},
+           familyi={T\bibinitperiod},
+           given={Dimiter},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{fullhash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{bibnamehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{authorbibnamehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{authornamehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{authorfullhash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Winners and losers of elections have different stakes in protecting democratic institutions. We provide new evidence for the effects of partisanship and economic performance on support for checks and balances and acceptance of their infringement. Using survey data from 26 European countries, we show that voters who feel close to a political party that lost the elections support checks and balances significantly more than other citizens. We also find that higher satisfaction with the economy is associated with lower support for checks and balances. Our experiment in Ukraine shows that supporters and opponents of the governing party have divergent evaluations of a reform potentially infringing on the independence of the judiciary. Those in opposition find such reforms less acceptable and justified. Again, we find that improved economic performance leads to higher acceptance of judicial reform. Our results confirm that citizens’ support for checks and balances is contingent and volatile.}}
+      \field{issn}{0010-4140}
+      \field{journaltitle}{Comparative Political Studies}
+      \field{number}{8}
+      \field{title}{{Standing up for Democracy? Explaining Citizens’ Support for Democratic Checks and Balances}}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{pages}{1271\bibrangedash 1297}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1177/00104140211060285
+      \endverb
+    \endentry
+    \entry{Osiecki.2024}{news}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b59f507c047e7b20c96dfa4418c4e478}{%
+           family={Osiecki},
+           familyi={O\bibinitperiod},
+           given={Grzegorz},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d40a67147675b0744fd3db089fd68298}{%
+           family={Żółciak},
+           familyi={Ż\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{fullhash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{bibnamehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{authorbibnamehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{authornamehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{authorfullhash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Gazeta Prawna}
+      \field{title}{{100 dni sukcesów i porażek. Podsumowanie działań nowego rządu [SONDAŻ]}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/9467049,100-dni-sukcesow-i-porazek-podsumowanie-dzialan-nowego-rzadu-sondaz.html
+      \endverb
+      \verb{url}
+      \verb https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/9467049,100-dni-sukcesow-i-porazek-podsumowanie-dzialan-nowego-rzadu-sondaz.html
+      \endverb
+    \endentry
+    \entry{Pirro.2021.10.1017/s1537592721001924}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8cc7905191a45a83b58645ccd83d94b3}{%
+           family={Pirro},
+           familyi={P\bibinitperiod},
+           given={Andrea\bibnamedelimb L.\bibnamedelimi P.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{fullhash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{bibnamehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{authorbibnamehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{authornamehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{authorfullhash}{fcb47a00968f25e555123e85a5b8f3db}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1537-5927}
+      \field{journaltitle}{Perspectives on Politics}
+      \field{month}{07}
+      \field{title}{{Forging, Bending, and Breaking: Enacting the “Illiberal Playbook” in Hungary and Poland}}
+      \field{volume}{20}
+      \field{year}{2021}
+      \field{pages}{86\bibrangedash 101}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1017/s1537592721001924
+      \endverb
+    \endentry
+    \entry{Wyborcza.2015.democ}{news}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a24985a562f81fc07abf3aae5055f0cb}{%
+           family={{Redakcja ``Gazety Wyborczej''}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{fullhash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{bibnamehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{authorbibnamehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{authornamehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{authorfullhash}{a24985a562f81fc07abf3aae5055f0cb}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Gazeta Wyborcza}
+      \field{title}{{Stawka tych wyborów jest sama demokracja}}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://wyborcza.pl/7,75968,19071757,stawka-tych-wyborow-jest-sama-demokracja.html
+      \endverb
+      \verb{url}
+      \verb https://wyborcza.pl/7,75968,19071757,stawka-tych-wyborow-jest-sama-demokracja.html
+      \endverb
+    \endentry
+    \entry{Sadurski.2019}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=16184ee207e9e72371726542ed1c521b}{%
+           family={Sadurski},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{fullhash}{16184ee207e9e72371726542ed1c521b}
+      \strng{bibnamehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{authorbibnamehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{authornamehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{authorfullhash}{16184ee207e9e72371726542ed1c521b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Poland’s Constitutional Breakdown}}
+      \field{year}{2019}
+    \endentry
+    \entry{Sasmaz.2022}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2ca277114995183dc169175db10d31d7}{%
+           family={Şaşmaz},
+           familyi={Ş\bibinitperiod},
+           given={Aytuğ},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e726d78c3297a196d16226a8f80d0cf}{%
+           family={Yagci},
+           familyi={Y\bibinitperiod},
+           given={Alper\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f34cc061d63e0ea040319db50fcd8312}{%
+           family={Ziblatt},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{82d73ab85ccea8e1971c76fee1d86989}
+      \strng{fullhash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \strng{bibnamehash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \strng{authorbibnamehash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \strng{authornamehash}{82d73ab85ccea8e1971c76fee1d86989}
+      \strng{authorfullhash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \field{sortinit}{Ş}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{15523829}
+      \field{journaltitle}{Comparative Political Studies}
+      \field{number}{11}
+      \field{title}{How Voters Respond to Presidential Assaults on Checks and Balances: Evidence from a Survey Experiment in Turkey.}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{pages}{1947\bibrangedash 1980}
+      \range{pages}{34}
+      \keyw{democratic backsliding,executive aggrandizement,polarization,referenda,voter behavior}
+    \endentry
+    \entry{Simonovits.2022.10.1086/719009ygp}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5c6cacf632ce7f309bd66c213831a7b7}{%
+           family={Simonovits},
+           familyi={S\bibinitperiod},
+           given={Gabor},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f0e59b3e236079979ac4b81e2830da4}{%
+           family={McCoy},
+           familyi={M\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b25f8c7f285f07bdbb1a049654d169e}{%
+           family={Littvay},
+           familyi={L\bibinitperiod},
+           given={Levente},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3613e552fd65c0a0d2555a902f527e60}
+      \strng{fullhash}{d1343b6103a671d538db1b2f724ce3df}
+      \strng{bibnamehash}{d1343b6103a671d538db1b2f724ce3df}
+      \strng{authorbibnamehash}{d1343b6103a671d538db1b2f724ce3df}
+      \strng{authornamehash}{3613e552fd65c0a0d2555a902f527e60}
+      \strng{authorfullhash}{d1343b6103a671d538db1b2f724ce3df}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-3816}
+      \field{journaltitle}{The Journal of Politics}
+      \field{number}{3}
+      \field{title}{{Democratic Hypocrisy and Out-Group Threat: Explaining Citizen Support for Democratic Erosion}}
+      \field{volume}{84}
+      \field{year}{2022}
+      \field{pages}{1806\bibrangedash 1811}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1086/719009
+      \endverb
+    \endentry
+    \entry{Somer.2021.10.1080/13510347.2020.1865316}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d5ef97cad33384f636aa17c8f303fbfb}{%
+           family={Somer},
+           familyi={S\bibinitperiod},
+           given={Murat},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11e14163d3b69606e0b10a35b21745ad}{%
+           family={Mccoy},
+           familyi={M\bibinitperiod},
+           given={Jennifer\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb362b8a3aeac1a94bfc4faccc5a6c23}{%
+           family={Luke},
+           familyi={L\bibinitperiod},
+           given={Russell\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{83435ad9afa20f5e58ee9f06871f5cbc}
+      \strng{fullhash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \strng{bibnamehash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \strng{authorbibnamehash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \strng{authornamehash}{83435ad9afa20f5e58ee9f06871f5cbc}
+      \strng{authorfullhash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1351-0347}
+      \field{journaltitle}{Democratization}
+      \field{month}{07}
+      \field{title}{{Pernicious polarization, autocratization and opposition strategies}}
+      \field{volume}{28}
+      \field{year}{2021}
+      \field{pages}{929\bibrangedash 948}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1080/13510347.2020.1865316
+      \endverb
+    \endentry
+    \entry{Stanley.2016.10.1080/13510347.2015.1058782}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{fullhash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{bibnamehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{authorbibnamehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{authornamehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{authorfullhash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1351-0347}
+      \field{journaltitle}{Democratization}
+      \field{title}{{Confrontation by default and confrontation by design: strategic and institutional responses to Poland's populist coalition government}}
+      \field{volume}{23}
+      \field{year}{2016}
+      \field{pages}{263\bibrangedash 282}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1080/13510347.2015.1058782
+      \endverb
+    \endentry
+    \entry{Svolik.2019.10.1353/jod.2019.0039}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc8f5ea0b23ed722921c597f37607fc5}{%
+           family={Svolik},
+           familyi={S\bibinitperiod},
+           given={Milan\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{fullhash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{bibnamehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{authorbibnamehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{authornamehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{authorfullhash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1086-3214}
+      \field{journaltitle}{Journal of Democracy}
+      \field{title}{{Polarization versus Democracy}}
+      \field{volume}{30}
+      \field{year}{2019}
+      \field{pages}{20\bibrangedash 32}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1353/jod.2019.0039
+      \endverb
+    \endentry
+    \entry{Svolik.2023.10.1353/jod.2023.0000}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=fc8f5ea0b23ed722921c597f37607fc5}{%
+           family={Svolik},
+           familyi={S\bibinitperiod},
+           given={Milan\bibnamedelima W},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bf88e75938aebaa6e05a7695281f943}{%
+           family={Avramovska},
+           familyi={A\bibinitperiod},
+           given={Elena},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7e0876ed4eae56b5d46637f98206d8a}{%
+           family={Lutz},
+           familyi={L\bibinitperiod},
+           given={Johanna},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef81d529497ec8ce1d436eedd188e70f}{%
+           family={Milačić},
+           familyi={M\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f86437a710812f2001a38a2ad8605602}
+      \strng{fullhash}{532aff9dc2401281e552b38b11c2d87a}
+      \strng{bibnamehash}{532aff9dc2401281e552b38b11c2d87a}
+      \strng{authorbibnamehash}{532aff9dc2401281e552b38b11c2d87a}
+      \strng{authornamehash}{f86437a710812f2001a38a2ad8605602}
+      \strng{authorfullhash}{532aff9dc2401281e552b38b11c2d87a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Democracy}
+      \field{number}{1}
+      \field{title}{{In Europe, Democracy Erodes from the Right}}
+      \field{volume}{34}
+      \field{year}{2023}
+      \field{pages}{5\bibrangedash 20}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1353/jod.2023.0000
+      \endverb
+    \endentry
+    \entry{Szwed.Verf.2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=336eff0cdef1b5d53e452ffc30915718}{%
+           family={Szwed},
+           familyi={S\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{fullhash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{bibnamehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{authorbibnamehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{authornamehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{authorfullhash}{336eff0cdef1b5d53e452ffc30915718}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{journaltitle}{VerfBlog}
+      \field{month}{4}
+      \field{title}{{Rebuilding the Rule of Law: Three Guiding Principles}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.59704/794ecd417ad8ac53
+      \endverb
+    \endentry
+    \entry{Wunsch.2023.10.1080/13510347.2023.2203918}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f60dbeb9a8cd4d17561c12ac62fc8f8d}{%
+           family={Wunsch},
+           familyi={W\bibinitperiod},
+           given={Natasha},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33810726f122815cbc5ca61fed7df68a}{%
+           family={Gessler},
+           familyi={G\bibinitperiod},
+           given={Theresa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{fullhash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{bibnamehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{authorbibnamehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{authornamehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{authorfullhash}{7f53f302efc11f3e225250b0272942fe}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{In contexts of democratic backsliding, citizens represent the last bulwark against the systematic dismantling of checks and balances by overbearing executives. And yet, they repeatedly fail to punish authoritarian-leaning leaders at the ballot box, allowing them to consolidate their grip on power. Why is that so? We leverage a conjoint survey experiment in Hungary to probe competing mechanisms of citizen tolerance towards democratic violations in a context of severe backsliding. Our main contribution consists of demonstrating empirically the presence of a composite effect, whereby authoritarian-leaning elites succeed in offering targeted compensations to different groups, ultimately building a mosaic of support among voters to secure enduring electoral backing. We pinpoint trade-offs notably related to cultural conservatism and economic benefits among different subgroups of the population. At the same time, our empirical findings indicate surprisingly high levels of condemnation of undemocratic positions by Hungarian respondents. We discuss how this unexpected pattern points to the limitations of conjoint designs as well as the overlooked supply side of democratic backsliding. Our study feeds into broader debates about the unfolding and entrenchment of democratic backsliding and how we study these processes.}}
+      \field{issn}{1351-0347}
+      \field{journaltitle}{Democratization}
+      \field{title}{{Who tolerates democratic backsliding? A mosaic approach to voters’ responses to authoritarian leadership in Hungary}}
+      \field{volume}{Ahead of print}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 24}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1080/13510347.2023.2203918
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{Andersen.2019.10.5129/001041519x15647434970117}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ca625dae14b90ea16c4e2c068eada9e7}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{fullhash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{bibnamehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{authorbibnamehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{authornamehash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \strng{authorfullhash}{ca625dae14b90ea16c4e2c068eada9e7}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comparative Politics}
+      \field{number}{4}
+      \field{title}{{Comparative Democratization and Democratic Backsliding: The Case for a Historical-Institutional Approach}}
+      \field{volume}{51}
+      \field{year}{2019}
+      \field{pages}{645\bibrangedash 663}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.5129/001041519x15647434970117
+      \endverb
+    \endentry
+    \entry{Bundock.2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=aae32d8b6485b0e4b4646f14206a319b}{%
+           family={Arel-Bundock},
+           familyi={A\bibinithyphendelim B\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c8a93102cfffacc2ccaffaaa2070715}{%
+           family={Greifer},
+           familyi={G\bibinitperiod},
+           given={Noah},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6987855d3f745cd556dce857d4640889}{%
+           family={Heiss},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{98fb783d6744cf87a097dbf2d1ff5a4d}
+      \strng{fullhash}{03565c214c594d0597b1a2057bbc1af1}
+      \strng{bibnamehash}{03565c214c594d0597b1a2057bbc1af1}
+      \strng{authorbibnamehash}{03565c214c594d0597b1a2057bbc1af1}
+      \strng{authornamehash}{98fb783d6744cf87a097dbf2d1ff5a4d}
+      \strng{authorfullhash}{03565c214c594d0597b1a2057bbc1af1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{title}{How to Interpret Statistical Models Using {marginaleffects} in {R} and {Python}}
+      \field{year}{Forthcoming}
+    \endentry
+    \entry{Bartels.2023.10.1515/9780691244518}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c3b0a40389b651fad1ac26365148674}{%
+           family={Bartels},
+           familyi={B\bibinitperiod},
+           given={Larry\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{fullhash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{bibnamehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{authorbibnamehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{authornamehash}{5c3b0a40389b651fad1ac26365148674}
+      \strng{authorfullhash}{5c3b0a40389b651fad1ac26365148674}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Democracy Erodes from the Top, Leaders, Citizens, and the Challenge of Populism in Europe}}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1515/9780691244518
+      \endverb
+    \endentry
+    \entry{Bartels.2023.10.1093/isr/viad019}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=5c3b0a40389b651fad1ac26365148674}{%
+           family={Bartels},
+           familyi={B\bibinitperiod},
+           given={Larry\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6be2e0d923bbc5536f5463754edca04}{%
+           family={Daxecker},
+           familyi={D\bibinitperiod},
+           given={Ursula\bibnamedelima E},
+           giveni={U\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b1369530819277a11277fa111ba6d62}{%
+           family={Hyde},
+           familyi={H\bibinitperiod},
+           given={Susan\bibnamedelima D},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4bebf4f9435ea880516d0f21523fd3a}{%
+           family={Lindberg},
+           familyi={L\bibinitperiod},
+           given={Staffan\bibnamedelima I},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7218e339aeeb923a2a73dc0f2174da7}{%
+           family={Nooruddin},
+           familyi={N\bibinitperiod},
+           given={Irfan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{05d25d34f8c3532ef6a43a79dc022b35}
+      \strng{fullhash}{d478180d358952b4b901ab3ee5719b18}
+      \strng{bibnamehash}{d478180d358952b4b901ab3ee5719b18}
+      \strng{authorbibnamehash}{d478180d358952b4b901ab3ee5719b18}
+      \strng{authornamehash}{05d25d34f8c3532ef6a43a79dc022b35}
+      \strng{authorfullhash}{d478180d358952b4b901ab3ee5719b18}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Abstract There is a widespread perception that we are witnessing a period of democratic decline, manifesting itself in varieties of democratic backsliding such as the manipulation of elections, marginalization and repression of regime opponents and minorities, or more incremental executive aggrandizement. Yet others are more optimistic and have argued that democracy is in fact resilient, or that we are observing coinciding trends of democratic decline but also expansion. This forum highlights key issues in the debate on democracy's decline, which center on conceptual and measurement issues, agreement on the phenomenon but not its nature or severity, the importance of international factors, the emphasis we should put on political elites versus citizens, and the consequences of backsliding for global politics. Staffan I. Lindberg provides an empirical perspective on the scope and severity of democracy's decline, and argues that polarization and misinformation are important drivers for this current wave of autocratization. Susan D. Hyde highlights the detrimental consequences of reduced support for democracy by the international community, which has affected civil society organizations—important arbiters of democracy—especially severely. Challenging some of these conclusions, Irfan Nooruddin claims that any gains for democracy after the end of the Cold War were short-lived, failing to sustain democracy because of an overemphasis on elections and a disregard for structural factors. Finally, Larry M. Bartels argues that we need to look to political elites and not citizens if we want to protect democracy in the United States and elsewhere, which has important implications for how we study democracy and its challenges.}}
+      \field{issn}{1521-9488}
+      \field{journaltitle}{International Studies Review}
+      \field{number}{2}
+      \field{title}{{The Forum: Global Challenges to Democracy? Perspectives on Democratic Backsliding}}
+      \field{volume}{25}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1093/isr/viad019
+      \endverb
+    \endentry
+    \entry{Bill.2020.10.1177/0888325420950800}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f6b7f963c885047001346857d20211ec}{%
+           family={Bill},
+           familyi={B\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f6b7f963c885047001346857d20211ec}
+      \strng{fullhash}{f6b7f963c885047001346857d20211ec}
+      \strng{bibnamehash}{f6b7f963c885047001346857d20211ec}
+      \strng{authorbibnamehash}{f6b7f963c885047001346857d20211ec}
+      \strng{authornamehash}{f6b7f963c885047001346857d20211ec}
+      \strng{authorfullhash}{f6b7f963c885047001346857d20211ec}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0888-3254}
+      \field{journaltitle}{East European Politics and Societies: and Cultures}
+      \field{number}{1}
+      \field{title}{{Counter-Elite Populism and Civil Society in Poland: PiS’s Strategies of Elite Replacement}}
+      \field{volume}{36}
+      \field{year}{2020}
+      \field{pages}{118\bibrangedash 140}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1177/0888325420950800
+      \endverb
+    \endentry
+    \entry{Bill.2020.10.1080/21599165.2020.1787161}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f6b7f963c885047001346857d20211ec}{%
+           family={Bill},
+           familyi={B\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{fullhash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{bibnamehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{authorbibnamehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{authornamehash}{fad661e19318b625ba5ea6c8046b12ae}
+      \strng{authorfullhash}{fad661e19318b625ba5ea6c8046b12ae}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2159-9165}
+      \field{journaltitle}{East European Politics}
+      \field{number}{3}
+      \field{title}{{Whose Poland is it to be? PiS and the struggle between monism and pluralism}}
+      \field{volume}{36}
+      \field{year}{2020}
+      \field{pages}{378\bibrangedash 394}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/21599165.2020.1787161
+      \endverb
+    \endentry
+    \entry{Bryan.2023.10.1177/00104140231152784}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dac9fb733266669cb488c656a95320e6}{%
+           family={Bryan},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{fullhash}{dac9fb733266669cb488c656a95320e6}
+      \strng{bibnamehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{authorbibnamehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{authornamehash}{dac9fb733266669cb488c656a95320e6}
+      \strng{authorfullhash}{dac9fb733266669cb488c656a95320e6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Despite waves of democratic backsliding over the last decade, most global citizens still claim to support democracy. On the other hand, many citizens become more supportive of specific anti-democratic actions when their preferred political side can benefit. How, then, do citizens justify their consistent “explicit support for democracy” with their more malleable support for the implementation of liberal democracy? This paper uses cross-national survey data from 74 countries and two methods—a standard cross-sectional analysis and a within-country variation design—to show that a citizen’s conceptualization of democracy, or what democracy means to them, is subject to partisan-motivated reasoning. In other words, citizens are more likely to conceptualize democracy in illiberal terms, like emphasizing the need for obeying authority, when their preferred political party is in power. The findings suggest one’s conception of democracy can be a fluid attitude that citizens mold to match their partisan self-interest.}}
+      \field{issn}{0010-4140}
+      \field{journaltitle}{Comparative Political Studies}
+      \field{title}{{What Kind of Democracy Do We All Support? How Partisan Interest Impacts a Citizen’s Conceptualization of Democracy}}
+      \field{year}{2023}
+      \field{pages}{001041402311527}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1177/00104140231152784
+      \endverb
+    \endentry
+    \entry{brms.2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={Paul-Christian},
+           giveni={P\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{fullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{bibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorbibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authornamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorfullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{number}{1}
+      \field{title}{{brms}: An {R} Package for {Bayesian} Multilevel Models Using {Stan}}
+      \field{volume}{80}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 28}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.18637/jss.v080.i01
+      \endverb
+    \endentry
+    \entry{Carey.2020.10.1080/17457289.2020.1790577}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=6aab98f00cb1ca6ca8e53e11d5173b0e}{%
+           family={Carey},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=462c355731274de7d35337405eaa60c1}{%
+           family={Clayton},
+           familyi={C\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cd82a97f00e2a590dc398f0dfa3e324}{%
+           family={Helmke},
+           familyi={H\bibinitperiod},
+           given={Gretchen},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ef5bca6f403168706ad93d11351ed60}{%
+           family={Nyhan},
+           familyi={N\bibinitperiod},
+           given={Brendan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b6280d48a12116375eccc1a46e3e369}{%
+           family={Sanders},
+           familyi={S\bibinitperiod},
+           given={Mitchell},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b0490bbee3b27b7729125f198b1b103}{%
+           family={Stokes},
+           familyi={S\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{53453474edb6e3b6b6accd96c302baa7}
+      \strng{fullhash}{21614423438641c7c47c103ba86f44cf}
+      \strng{bibnamehash}{21614423438641c7c47c103ba86f44cf}
+      \strng{authorbibnamehash}{21614423438641c7c47c103ba86f44cf}
+      \strng{authornamehash}{53453474edb6e3b6b6accd96c302baa7}
+      \strng{authorfullhash}{21614423438641c7c47c103ba86f44cf}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1745-7289}
+      \field{journaltitle}{Journal of Elections, Public Opinion and Parties}
+      \field{title}{{Who will defend democracy? Evaluating tradeoffs in candidate support among partisan donors and voters}}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1080/17457289.2020.1790577
+      \endverb
+    \endentry
+    \entry{CBOS2021.democ}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0aafe0ff400f1b98933b0ec91d77bb02}{%
+           family={{Centrum Badania Opinii Społecznej}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{fullhash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{bibnamehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{authorbibnamehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{authornamehash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \strng{authorfullhash}{0aafe0ff400f1b98933b0ec91d77bb02}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Komunikat z badań}
+      \field{number}{2021}
+      \field{title}{{Stosunek do demokracji i ocena jej funkcjonowania}}
+      \field{volume}{57}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 11}
+      \range{pages}{11}
+    \endentry
+    \entry{Chiopris.2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ef4118eefd5e22d5aa677a80a80ca1da}{%
+           family={Chiopris},
+           familyi={C\bibinitperiod},
+           given={Caterina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0cc3183a7d298d6114498f6bb5a39e79}{%
+           family={Nalepa},
+           familyi={N\bibinitperiod},
+           given={Monika},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bf9e068b57697f874591dd0186ce289}{%
+           family={Vanberg},
+           familyi={V\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d9600cb0693a871704d5e0d3fa648c75}
+      \strng{fullhash}{064b76274a8969831d56265b83fda94a}
+      \strng{bibnamehash}{064b76274a8969831d56265b83fda94a}
+      \strng{authorbibnamehash}{064b76274a8969831d56265b83fda94a}
+      \strng{authornamehash}{d9600cb0693a871704d5e0d3fa648c75}
+      \strng{authorfullhash}{064b76274a8969831d56265b83fda94a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Working paper}
+      \field{title}{{A wolf in sheep’s clothing: citizen uncertainty and democratic backsliding}}
+      \field{year}{2021}
+    \endentry
+    \entry{Claassen.2023}{article}{}
+      \name{author}{20}{}{%
+        {{un=0,uniquepart=base,hash=e58301d2409ef13121cb98a35ef0b2dc}{%
+           family={Claassen},
+           familyi={C\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afdaa7f7f28192a9504b2042b538e5aa}{%
+           family={Ackermann},
+           familyi={A\bibinitperiod},
+           given={Kathrin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb9b338c75a4bd8b1b251882ec2bed34}{%
+           family={Bertsou},
+           familyi={B\bibinitperiod},
+           given={Eri},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af9ad47c24b48b53b3e7e09ceb45066e}{%
+           family={Borba},
+           familyi={B\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a1b061c362725a1efb3d8cc3dcaa82a}{%
+           family={Carlin},
+           familyi={C\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bc7a15c2b95ad9d7ef0cb12d30777da}{%
+           family={Cavari},
+           familyi={C\bibinitperiod},
+           given={Amnon},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6aafac0d527eaa528c77bd94ce2cb5a1}{%
+           family={Dahlum},
+           familyi={D\bibinitperiod},
+           given={Sirianne},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3e7b2897d1aec1aac5b38028967fdf8}{%
+           family={Gherghina},
+           familyi={G\bibinitperiod},
+           given={Sergiu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1bf310b5ae67bd596a6589f9950be98}{%
+           family={Hawkins},
+           familyi={H\bibinitperiod},
+           given={Darren},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17e3e2c5aa6917f0914dd31699e53820}{%
+           family={Lelkes},
+           familyi={L\bibinitperiod},
+           given={Yphtach},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3afe69eea38c5f212d267059f80b6cd8}{%
+           family={Magalhães},
+           familyi={M\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85479b97fb8c64a6905f1d6277242033}{%
+           family={Mattes},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0290bcf897f8bce49b107edea32d8cb7}{%
+           family={Meijers},
+           familyi={M\bibinitperiod},
+           given={Maurits},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ac2276eb0bec8f3ade80cefd63a7901}{%
+           family={Neundorf},
+           familyi={N\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65216eb6fc96326d7945f0cdae784c38}{%
+           family={Oross},
+           familyi={O\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5361b7e66bb36953583e173260b5e58b}{%
+           family={Öztürk},
+           familyi={Ö\bibinitperiod},
+           given={Aykut},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6571800d92bf700c2e127efae0552d95}{%
+           family={Sarsfield},
+           familyi={S\bibinitperiod},
+           given={Rodolfo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bb529f07135113ca441b6ea4100f0ce}{%
+           family={Self},
+           familyi={S\bibinitperiod},
+           given={Darin},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0799fa37197feab19531405f107bf9bb}{%
+           family={Zechmeister},
+           familyi={Z\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0b3bc1cba904fc8464d59a684e6d0b74}
+      \strng{fullhash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \strng{bibnamehash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \strng{authorbibnamehash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \strng{authornamehash}{0b3bc1cba904fc8464d59a684e6d0b74}
+      \strng{authorfullhash}{b6fd2e1e042084a1ba55832dfeb7765d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SSRN Electronic Journal}
+      \field{month}{01}
+      \field{title}{Conceptualizing and Measuring Support for Democracy: A New Approach}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.2139/ssrn.4622645
+      \endverb
+    \endentry
+    \entry{Cohen.2023.10.1111/ajps.12690}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c4b7b0b8ca69314a943adf74c0061034}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Mollie\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95fe4e95852b11d9c0eca8ded3893a18}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Amy\bibnamedelima Erica},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b718482cee78589bb47862825f5769a5}{%
+           family={Moseley},
+           familyi={M\bibinitperiod},
+           given={Mason\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=782010962791de13fec60634ca92d331}{%
+           family={Layton},
+           familyi={L\bibinitperiod},
+           given={Matthew\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{492cdb656d8a148c9a0339ff7fbac743}
+      \strng{fullhash}{09d6051cfce45c81130ef24356e957ec}
+      \strng{bibnamehash}{09d6051cfce45c81130ef24356e957ec}
+      \strng{authorbibnamehash}{09d6051cfce45c81130ef24356e957ec}
+      \strng{authornamehash}{492cdb656d8a148c9a0339ff7fbac743}
+      \strng{authorfullhash}{09d6051cfce45c81130ef24356e957ec}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Democracy is in decline worldwide, primarily because voters elect candidates harboring antidemocratic aspirations. Scholars argue that elections animate the democratic spirits of winners and deflate those of losers, but what about contests ending in the victory of authoritarian candidates? To answer this question, we consider the dynamics of commitment to democracy in Brazil's 2018 presidential campaign. Drawing on AmericasBarometer data and an original five‐wave panel survey, we confirm that Jair Bolsonaro's campaign attracted skeptics of democracy. Although his election and inauguration boosted his supporters’ allegiance to the political system, it also exacerbated their tolerance for institutional ruptures such as executive‐led coups. Meanwhile, election losers retained their democratic commitments. As a result, the authoritarian victory narrowed preexisting winner–loser gaps in support for the political system, but widened gaps in tolerance for certain antidemocratic maneuvers. Thus, authoritarian electoral victories can foster short‐term satisfaction among democracy's critics while abetting future instability.}}
+      \field{issn}{0092-5853}
+      \field{journaltitle}{American Journal of Political Science}
+      \field{number}{2}
+      \field{title}{{Winners’ Consent? Citizen Commitment to Democracy When Illiberal Candidates Win Elections}}
+      \field{volume}{67}
+      \field{year}{2023}
+      \field{pages}{261\bibrangedash 276}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1111/ajps.12690
+      \endverb
+    \endentry
+    \entry{VDem.2023}{article}{}
+      \name{author}{38}{}{%
+        {{un=0,uniquepart=base,hash=de0eebdefcf0e3d8bbef5ca455ee8445}{%
+           family={Coppedge},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6a0cbfe9daf777684dbb8947a681e73}{%
+           family={Gerring},
+           familyi={G\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7302a9adea039828fec62cbcc30ef3e4}{%
+           family={Knutsen},
+           familyi={K\bibinitperiod},
+           given={Carl\bibnamedelima Henrik},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4bebf4f9435ea880516d0f21523fd3a}{%
+           family={Lindberg},
+           familyi={L\bibinitperiod},
+           given={Staffan\bibnamedelima I.},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ab416074c4b326b5a0ecf40629d221f}{%
+           family={Teorell},
+           familyi={T\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af43ba3259f7ba0f7d2dd10334dfe5b4}{%
+           family={Altman},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5eaba9edc5caa618157dccec75fcb233}{%
+           family={Bernhard},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=beaf53caedc928751f8260d355c57318}{%
+           family={Cornell},
+           familyi={C\bibinitperiod},
+           given={Agnes},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe536975973e391aa21144553eeaad3f}{%
+           family={Fish},
+           familyi={F\bibinitperiod},
+           given={M.\bibnamedelimi Steven},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b2b217f46d08f0e1f15db2a9f5b0d4e}{%
+           family={Gastaldi},
+           familyi={G\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2ff3c5191623337875c31d70fa9544b}{%
+           family={Gjerløw},
+           familyi={G\bibinitperiod},
+           given={Haakon},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31b0a1a2cf45441187a2bfa0844c03e1}{%
+           family={Glynn},
+           familyi={G\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=885d87174603a215dd7b856f69c89e7a}{%
+           family={Good\bibnamedelima God},
+           familyi={G\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7695efd340bca6fd0ca496573bd6fecd}{%
+           family={Grahn},
+           familyi={G\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9ce0a9c28924ca7fde07b4a5bc2625a}{%
+           family={Hicken},
+           familyi={H\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1359de397d81287f111e455c3dcb5b4a}{%
+           family={Kinzelbach},
+           familyi={K\bibinitperiod},
+           given={Katrin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2be83b90721689ab55cdd466140babdf}{%
+           family={Krusell},
+           familyi={K\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8003404151c327628bd80203d3f21f90}{%
+           family={Marquardt},
+           familyi={M\bibinitperiod},
+           given={Kyle\bibnamedelima L.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f363f919e2be59bd53b03f6422ceafb3}{%
+           family={McMann},
+           familyi={M\bibinitperiod},
+           given={Kelly},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebed316c5ee9215c2c12ff6c49b22f31}{%
+           family={Mechkova},
+           familyi={M\bibinitperiod},
+           given={Valeriya},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4df7df35ab799dc8598534b36b65094b}{%
+           family={Medzihorsky},
+           familyi={M\bibinitperiod},
+           given={Juraj},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=792ee03cf2708a16c6cbde05ef79b4cd}{%
+           family={Natsika},
+           familyi={N\bibinitperiod},
+           given={Natalia},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ac2276eb0bec8f3ade80cefd63a7901}{%
+           family={Neundorf},
+           familyi={N\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c431ebb8aa47a9bf340d6a512213ff10}{%
+           family={Paxton},
+           familyi={P\bibinitperiod},
+           given={Pamela},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5467088017ca3ef134c8cff485ce6b7a}{%
+           family={Pemstein},
+           familyi={P\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d829f080a29bb25c3e54c6a260dd1e5}{%
+           family={Pernes},
+           familyi={P\bibinitperiod},
+           given={Josefine},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e63ff74235a895a9b69cc1a6eeb28002}{%
+           family={Rydén},
+           familyi={R\bibinitperiod},
+           given={Oskar},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82df7b75822fc77f70f90e37572f7555}{%
+           family={Römer},
+           familyi={R\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=fc746f265a24a7b83e7c49d19767b619}{%
+           family={Seim},
+           familyi={S\bibinitperiod},
+           given={Brigitte},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2649eb0cc0d37ebde0060216329dc8ba}{%
+           family={Sigman},
+           familyi={S\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e94ca102425095bcd7e6c02049796cc2}{%
+           family={Svaaning},
+           familyi={S\bibinitperiod},
+           given={Svend-Erik},
+           giveni={S\bibinithyphendelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c028e445227f4ec9279e768753a11f7}{%
+           family={Staton},
+           familyi={S\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=745f777ef95cb8c2c812d670cfae945d}{%
+           family={Sundström},
+           familyi={S\bibinitperiod},
+           given={Aksel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba77429c31b7a0409607a45ef9f3e33f}{%
+           family={Tzelgov},
+           familyi={T\bibinitperiod},
+           given={Eitan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82660e1f36556772b02ef864e385dc1e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yi-ting},
+           giveni={Y\bibinithyphendelim t\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffeb039134fcfa7a5cd3dbcc34749b43}{%
+           family={Wig},
+           familyi={W\bibinitperiod},
+           given={Tore},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=025be2fd4c38d6c79f0852fd2a5129d3}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f34cc061d63e0ea040319db50fcd8312}{%
+           family={Ziblatt},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b9824f70adf73e93dc51ab751873da04}
+      \strng{fullhash}{59867e0b4d31f82f75077e9a13a3da63}
+      \strng{bibnamehash}{c6c83f451863d69aaef356b51e8f19a7}
+      \strng{authorbibnamehash}{c6c83f451863d69aaef356b51e8f19a7}
+      \strng{authornamehash}{b9824f70adf73e93dc51ab751873da04}
+      \strng{authorfullhash}{59867e0b4d31f82f75077e9a13a3da63}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Varieties of Democracy (V-Dem) Project}
+      \field{title}{{V-Dem [Country-Year/Country-Date] Dataset v13}}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://doi.org/10.23696/vdemds23
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.23696/vdemds23
+      \endverb
+    \endentry
+    \entry{Dawson.2016.10.1353/jod.2016.0015}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=396c99aaf631b1aaa802ddbe17efe65d}{%
+           family={Dawson},
+           familyi={D\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e93ce773da7dd112974591941d4fde2f}{%
+           family={Hanley},
+           familyi={H\bibinitperiod},
+           given={Seán},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{fullhash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{bibnamehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{authorbibnamehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{authornamehash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \strng{authorfullhash}{0cf7ed0b75f2b6c91be27dcebf439117}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1086-3214}
+      \field{journaltitle}{Journal of Democracy}
+      \field{number}{1}
+      \field{title}{{The Fading Mirage of the “Liberal Consensus”}}
+      \field{volume}{27}
+      \field{year}{2016}
+      \field{pages}{20\bibrangedash 34}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1353/jod.2016.0015
+      \endverb
+    \endentry
+    \entry{ESS10.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c71f218c9c1d1c085e258ff84a38db45}{%
+           family={{European Social Survey Round 10 Data}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sikt - Norwegian Agency for Shared Services in Education and Research, Norway – Data Archive and distributor of ESS data for ESS ERIC}%
+      }
+      \strng{namehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{fullhash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{bibnamehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{authorbibnamehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{authornamehash}{c71f218c9c1d1c085e258ff84a38db45}
+      \strng{authorfullhash}{c71f218c9c1d1c085e258ff84a38db45}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{European Social Survey Round 10 Data (2020)}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.21338/NSD-ESS10-2020
+      \endverb
+      \verb{urlraw}
+      \verb https://www.europeansocialsurvey.org/data/download.html?r=10
+      \endverb
+      \verb{url}
+      \verb https://www.europeansocialsurvey.org/data/download.html?r=10
+      \endverb
+    \endentry
+    \entry{Fossati.2021.10.1177/1354068821992488}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bd294040314992df1668aedfa1416956}{%
+           family={Fossati},
+           familyi={F\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=47096cbe01f8c70a56aeda3fb6cbc239}{%
+           family={Muhtadi},
+           familyi={M\bibinitperiod},
+           given={Burhanuddin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de8597c122e1806c88530cd304f60153}{%
+           family={Warburton},
+           familyi={W\bibinitperiod},
+           given={Eve},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{159ee199de2d4545613a00adf42b853a}
+      \strng{fullhash}{155c26ef637c714aaf43847ec9a85664}
+      \strng{bibnamehash}{155c26ef637c714aaf43847ec9a85664}
+      \strng{authorbibnamehash}{155c26ef637c714aaf43847ec9a85664}
+      \strng{authornamehash}{159ee199de2d4545613a00adf42b853a}
+      \strng{authorfullhash}{155c26ef637c714aaf43847ec9a85664}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1354-0688}
+      \field{journaltitle}{Party Politics}
+      \field{title}{{Why democrats abandon democracy: Evidence from four survey experiments}}
+      \field{volume}{28}
+      \field{year}{2021}
+      \field{pages}{554\bibrangedash 566}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1177/1354068821992488
+      \endverb
+    \endentry
+    \entry{Galczynska.2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e979246b9229bdcf9e4a0aa57e748315}{%
+           family={Gałczyńska},
+           familyi={G\bibinitperiod},
+           given={Magdalena},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{fullhash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{bibnamehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{authorbibnamehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{authornamehash}{e979246b9229bdcf9e4a0aa57e748315}
+      \strng{authorfullhash}{e979246b9229bdcf9e4a0aa57e748315}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{journaltitle}{Onet.pl}
+      \field{month}{6}
+      \field{title}{{Szef stowarzyszenia sędziów podsumowuje pół roku Adama Bodnara. ``Utknęliśmy na mieliźnie''}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://wiadomosci.onet.pl/tylko-w-onecie/utknelismy-na-mieliznie-szef-stowarzyszenia-sedziow-podsumowuje-pol-roku-adama/gsj0ffk
+      \endverb
+      \verb{url}
+      \verb https://wiadomosci.onet.pl/tylko-w-onecie/utknelismy-na-mieliznie-szef-stowarzyszenia-sedziow-podsumowuje-pol-roku-adama/gsj0ffk
+      \endverb
+    \endentry
+    \entry{Ganev.2018.10.1353/jod.2018.0047}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d1d820835047975834ef989216dc1be1}{%
+           family={Ganev},
+           familyi={G\bibinitperiod},
+           given={Venelin\bibnamedelima I.},
+           giveni={V\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d1d820835047975834ef989216dc1be1}
+      \strng{fullhash}{d1d820835047975834ef989216dc1be1}
+      \strng{bibnamehash}{d1d820835047975834ef989216dc1be1}
+      \strng{authorbibnamehash}{d1d820835047975834ef989216dc1be1}
+      \strng{authornamehash}{d1d820835047975834ef989216dc1be1}
+      \strng{authorfullhash}{d1d820835047975834ef989216dc1be1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1086-3214}
+      \field{journaltitle}{Journal of Democracy}
+      \field{title}{{"Soft Decisionism" in Bulgaria}}
+      \field{volume}{29}
+      \field{year}{2018}
+      \field{pages}{91\bibrangedash 103}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1353/jod.2018.0047
+      \endverb
+    \endentry
+    \entry{Górska.2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7d51a86c8bb27a0f27055e0c8bfb607e}{%
+           family={Górska},
+           familyi={G\bibinitperiod},
+           given={Paulina},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{fullhash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{bibnamehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{authorbibnamehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{authornamehash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \strng{authorfullhash}{7d51a86c8bb27a0f27055e0c8bfb607e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Working paper (Centrum Badań nad Uprzedzeniami)}
+      \field{title}{{Polaryzacja polityczna w Polsce. Jak bardzo jesteśmy podzieleni?}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb http://cbu.psychologia.pl/wp-content/uploads/sites/410/2021/02/Polaryzacja-polityczna-2.pdf
+      \endverb
+      \verb{url}
+      \verb http://cbu.psychologia.pl/wp-content/uploads/sites/410/2021/02/Polaryzacja-polityczna-2.pdf
+      \endverb
+    \endentry
+    \entry{Graham.2020.10.1017/s0003055420000052}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b830d2ea78252890257fe62da8d53898}{%
+           family={Graham},
+           familyi={G\bibinitperiod},
+           given={Matthew\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc8f5ea0b23ed722921c597f37607fc5}{%
+           family={Svolik},
+           familyi={S\bibinitperiod},
+           given={Milan\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{fullhash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{bibnamehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{authorbibnamehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{authornamehash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \strng{authorfullhash}{4a9cbb2a3b1ef25bbe39ce0b494ba916}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-0554}
+      \field{journaltitle}{American Political Science Review}
+      \field{title}{{Democracy in America? Partisanship, Polarization, and the Robustness of Support for Democracy in the United States}}
+      \field{volume}{114}
+      \field{year}{2020}
+      \field{pages}{392\bibrangedash 409}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1017/s0003055420000052
+      \endverb
+    \endentry
+    \entry{Hainmueller.2014.10.1093/pan/mpt024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=be94165c21f502aeaed11e611358d6be}{%
+           family={Hainmueller},
+           familyi={H\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9730fa38215f7192fd445b79a44190f3}{%
+           family={Hopkins},
+           familyi={H\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6541d7f60b0a41a40f6255d5dd88cd7}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Teppei},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed6d426837365c21ff34515997598975}
+      \strng{fullhash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \strng{bibnamehash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \strng{authorbibnamehash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \strng{authornamehash}{ed6d426837365c21ff34515997598975}
+      \strng{authorfullhash}{9c0355e54fc03e6c75df4a1aba7f0378}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1047-1987}
+      \field{journaltitle}{Political Analysis}
+      \field{number}{1}
+      \field{title}{{Causal Inference in Conjoint Analysis: Understanding Multidimensional Choices via Stated Preference Experiments}}
+      \field{volume}{22}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1093/pan/mpt024
+      \endverb
+    \endentry
+    \entry{HFHR.2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a12e161fd3499fe18dce8b32c26268e4}{%
+           family={{Helsinki Foundation for Human Rights}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{fullhash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{bibnamehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{authorbibnamehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{authornamehash}{a12e161fd3499fe18dce8b32c26268e4}
+      \strng{authorfullhash}{a12e161fd3499fe18dce8b32c26268e4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{12}
+      \field{title}{{Position statement by the Helsinki Foundation for Human Rights on the changes in the public media}}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://hfhr.pl/en/news/statement-changes-in-the-public-media
+      \endverb
+      \verb{url}
+      \verb https://hfhr.pl/en/news/statement-changes-in-the-public-media
+      \endverb
+    \endentry
+    \entry{Hrbkova.2023.10.1177/13540688231156409}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4004a6971c0573220cd397bec609208c}{%
+           family={Hrbková},
+           familyi={H\bibinitperiod},
+           given={Lenka},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bba3c519ddd1a84e5a1429714b90f0e1}{%
+           family={Voda},
+           familyi={V\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3c423b324c28391e1baf8e6e7f3d91d}{%
+           family={Havlík},
+           familyi={H\bibinitperiod},
+           given={Vlastimil},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c8859f4b078a85fd14dee93fd3eb8974}
+      \strng{fullhash}{513947f38be430801b9b86451607a8e3}
+      \strng{bibnamehash}{513947f38be430801b9b86451607a8e3}
+      \strng{authorbibnamehash}{513947f38be430801b9b86451607a8e3}
+      \strng{authornamehash}{c8859f4b078a85fd14dee93fd3eb8974}
+      \strng{authorfullhash}{513947f38be430801b9b86451607a8e3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{We demonstrate effects of political preferences on interpersonal interactions in the environment of the highly unstable and volatile party system of the Czech Republic. The effects of partisanship on interpersonal relations are compared to the effects of attitudes on a salient issue. Two experiments confirm the potential of political partisanship to affect the individual?s ingroup preferences and outgroup biases, which can influence willingness to converse with others in the context of an unstable party system. In a conjoint experiment, dis/agreement on immigration has comparable effects on interpersonal interactions. Avoidance of interactions with out-partisans is amplified when out-partisans talk about politics often. The patterns of ingroup preferences and outgroup biases are replicated in a trust game experiment. Both partisanship and immigration attitudes influence how subjects interact with others. Given the political context, the study provides a hard test of politically motivated ingroup and outgroup biases stemming both from party and policy preferences.}}
+      \field{issn}{1354-0688}
+      \field{journaltitle}{Party Politics}
+      \field{title}{{Politically motivated interpersonal biases: Polarizing effects of partisanship and immigration attitudes}}
+      \field{volume}{Ahead of print}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1177/13540688231156409
+      \endverb
+    \endentry
+    \entry{stat.power}{manual}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5b32b91930bf3bd0f57fce8857666266}{%
+           family={Lukac},
+           familyi={L\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=557b4b75cf7b18511780fa95fffeca29}{%
+           family={Stefanelli},
+           familyi={S\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{fullhash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{bibnamehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{authorbibnamehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{authornamehash}{1433cb84ece37efda1027dce42b2ffd3}
+      \strng{authorfullhash}{1433cb84ece37efda1027dce42b2ffd3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Conjoint Experiments: Power Analysis Tool}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://mblukac.shinyapps.io/conjoints-power-shiny/
+      \endverb
+      \verb{url}
+      \verb https://mblukac.shinyapps.io/conjoints-power-shiny/
+      \endverb
+    \endentry
+    \entry{Markowski.2016.10.1080/01402382.2016.1177305}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00de277f674c93fc9ccb4d8081ca9b94}{%
+           family={Markowski},
+           familyi={M\bibinitperiod},
+           given={Radosław},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{fullhash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{bibnamehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{authorbibnamehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{authornamehash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \strng{authorfullhash}{00de277f674c93fc9ccb4d8081ca9b94}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0140-2382}
+      \field{journaltitle}{West European Politics}
+      \field{title}{{The Polish parliamentary election of 2015: a free and fair election that results in unfair political consequences}}
+      \field{volume}{39}
+      \field{year}{2016}
+      \field{pages}{1311\bibrangedash 1322}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1080/01402382.2016.1177305
+      \endverb
+    \endentry
+    \entry{Mazepus.2022.10.1177/00104140211060285}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c515bd050d76aff91fc788d666ad1955}{%
+           family={Mazepus},
+           familyi={M\bibinitperiod},
+           given={Honorata},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c8108a8171642451d3436d5f265a129}{%
+           family={Toshkov},
+           familyi={T\bibinitperiod},
+           given={Dimiter},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{fullhash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{bibnamehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{authorbibnamehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{authornamehash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \strng{authorfullhash}{26b9d864b0b8a38519006c26f4d4e0fc}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Winners and losers of elections have different stakes in protecting democratic institutions. We provide new evidence for the effects of partisanship and economic performance on support for checks and balances and acceptance of their infringement. Using survey data from 26 European countries, we show that voters who feel close to a political party that lost the elections support checks and balances significantly more than other citizens. We also find that higher satisfaction with the economy is associated with lower support for checks and balances. Our experiment in Ukraine shows that supporters and opponents of the governing party have divergent evaluations of a reform potentially infringing on the independence of the judiciary. Those in opposition find such reforms less acceptable and justified. Again, we find that improved economic performance leads to higher acceptance of judicial reform. Our results confirm that citizens’ support for checks and balances is contingent and volatile.}}
+      \field{issn}{0010-4140}
+      \field{journaltitle}{Comparative Political Studies}
+      \field{number}{8}
+      \field{title}{{Standing up for Democracy? Explaining Citizens’ Support for Democratic Checks and Balances}}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{pages}{1271\bibrangedash 1297}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1177/00104140211060285
+      \endverb
+    \endentry
+    \entry{Osiecki.2024}{news}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b59f507c047e7b20c96dfa4418c4e478}{%
+           family={Osiecki},
+           familyi={O\bibinitperiod},
+           given={Grzegorz},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d40a67147675b0744fd3db089fd68298}{%
+           family={Żółciak},
+           familyi={Ż\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{fullhash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{bibnamehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{authorbibnamehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{authornamehash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \strng{authorfullhash}{ca3730455d8950ac8f6e1d3ce022f068}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Gazeta Prawna}
+      \field{title}{{100 dni sukcesów i porażek. Podsumowanie działań nowego rządu [SONDAŻ]}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/9467049,100-dni-sukcesow-i-porazek-podsumowanie-dzialan-nowego-rzadu-sondaz.html
+      \endverb
+      \verb{url}
+      \verb https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/9467049,100-dni-sukcesow-i-porazek-podsumowanie-dzialan-nowego-rzadu-sondaz.html
+      \endverb
+    \endentry
+    \entry{Pirro.2021.10.1017/s1537592721001924}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8cc7905191a45a83b58645ccd83d94b3}{%
+           family={Pirro},
+           familyi={P\bibinitperiod},
+           given={Andrea\bibnamedelimb L.\bibnamedelimi P.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{fullhash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{bibnamehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{authorbibnamehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{authornamehash}{fcb47a00968f25e555123e85a5b8f3db}
+      \strng{authorfullhash}{fcb47a00968f25e555123e85a5b8f3db}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1537-5927}
+      \field{journaltitle}{Perspectives on Politics}
+      \field{month}{07}
+      \field{title}{{Forging, Bending, and Breaking: Enacting the “Illiberal Playbook” in Hungary and Poland}}
+      \field{volume}{20}
+      \field{year}{2021}
+      \field{pages}{86\bibrangedash 101}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1017/s1537592721001924
+      \endverb
+    \endentry
+    \entry{Wyborcza.2015.democ}{news}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a24985a562f81fc07abf3aae5055f0cb}{%
+           family={{Redakcja ``Gazety Wyborczej''}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{fullhash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{bibnamehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{authorbibnamehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{authornamehash}{a24985a562f81fc07abf3aae5055f0cb}
+      \strng{authorfullhash}{a24985a562f81fc07abf3aae5055f0cb}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Gazeta Wyborcza}
+      \field{title}{{Stawka tych wyborów jest sama demokracja}}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://wyborcza.pl/7,75968,19071757,stawka-tych-wyborow-jest-sama-demokracja.html
+      \endverb
+      \verb{url}
+      \verb https://wyborcza.pl/7,75968,19071757,stawka-tych-wyborow-jest-sama-demokracja.html
+      \endverb
+    \endentry
+    \entry{Sadurski.2019}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=16184ee207e9e72371726542ed1c521b}{%
+           family={Sadurski},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{fullhash}{16184ee207e9e72371726542ed1c521b}
+      \strng{bibnamehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{authorbibnamehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{authornamehash}{16184ee207e9e72371726542ed1c521b}
+      \strng{authorfullhash}{16184ee207e9e72371726542ed1c521b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Poland’s Constitutional Breakdown}}
+      \field{year}{2019}
+    \endentry
+    \entry{Sasmaz.2022}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2ca277114995183dc169175db10d31d7}{%
+           family={Şaşmaz},
+           familyi={Ş\bibinitperiod},
+           given={Aytuğ},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e726d78c3297a196d16226a8f80d0cf}{%
+           family={Yagci},
+           familyi={Y\bibinitperiod},
+           given={Alper\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f34cc061d63e0ea040319db50fcd8312}{%
+           family={Ziblatt},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{82d73ab85ccea8e1971c76fee1d86989}
+      \strng{fullhash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \strng{bibnamehash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \strng{authorbibnamehash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \strng{authornamehash}{82d73ab85ccea8e1971c76fee1d86989}
+      \strng{authorfullhash}{e9d2ae2f8b18a07afeeeca0392458611}
+      \field{sortinit}{Ş}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{15523829}
+      \field{journaltitle}{Comparative Political Studies}
+      \field{number}{11}
+      \field{title}{How Voters Respond to Presidential Assaults on Checks and Balances: Evidence from a Survey Experiment in Turkey.}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{pages}{1947\bibrangedash 1980}
+      \range{pages}{34}
+      \keyw{democratic backsliding,executive aggrandizement,polarization,referenda,voter behavior}
+    \endentry
+    \entry{Simonovits.2022.10.1086/719009ygp}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5c6cacf632ce7f309bd66c213831a7b7}{%
+           family={Simonovits},
+           familyi={S\bibinitperiod},
+           given={Gabor},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f0e59b3e236079979ac4b81e2830da4}{%
+           family={McCoy},
+           familyi={M\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b25f8c7f285f07bdbb1a049654d169e}{%
+           family={Littvay},
+           familyi={L\bibinitperiod},
+           given={Levente},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3613e552fd65c0a0d2555a902f527e60}
+      \strng{fullhash}{d1343b6103a671d538db1b2f724ce3df}
+      \strng{bibnamehash}{d1343b6103a671d538db1b2f724ce3df}
+      \strng{authorbibnamehash}{d1343b6103a671d538db1b2f724ce3df}
+      \strng{authornamehash}{3613e552fd65c0a0d2555a902f527e60}
+      \strng{authorfullhash}{d1343b6103a671d538db1b2f724ce3df}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-3816}
+      \field{journaltitle}{The Journal of Politics}
+      \field{number}{3}
+      \field{title}{{Democratic Hypocrisy and Out-Group Threat: Explaining Citizen Support for Democratic Erosion}}
+      \field{volume}{84}
+      \field{year}{2022}
+      \field{pages}{1806\bibrangedash 1811}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1086/719009
+      \endverb
+    \endentry
+    \entry{Somer.2021.10.1080/13510347.2020.1865316}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d5ef97cad33384f636aa17c8f303fbfb}{%
+           family={Somer},
+           familyi={S\bibinitperiod},
+           given={Murat},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11e14163d3b69606e0b10a35b21745ad}{%
+           family={Mccoy},
+           familyi={M\bibinitperiod},
+           given={Jennifer\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb362b8a3aeac1a94bfc4faccc5a6c23}{%
+           family={Luke},
+           familyi={L\bibinitperiod},
+           given={Russell\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{83435ad9afa20f5e58ee9f06871f5cbc}
+      \strng{fullhash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \strng{bibnamehash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \strng{authorbibnamehash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \strng{authornamehash}{83435ad9afa20f5e58ee9f06871f5cbc}
+      \strng{authorfullhash}{3df32a16b2bcfd11501e790d6751dcdd}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1351-0347}
+      \field{journaltitle}{Democratization}
+      \field{month}{07}
+      \field{title}{{Pernicious polarization, autocratization and opposition strategies}}
+      \field{volume}{28}
+      \field{year}{2021}
+      \field{pages}{929\bibrangedash 948}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1080/13510347.2020.1865316
+      \endverb
+    \endentry
+    \entry{Stanley.2016.10.1080/13510347.2015.1058782}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=11b3c5afbde3fadca19c2486aa2e8df1}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{fullhash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{bibnamehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{authorbibnamehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{authornamehash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \strng{authorfullhash}{11b3c5afbde3fadca19c2486aa2e8df1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1351-0347}
+      \field{journaltitle}{Democratization}
+      \field{title}{{Confrontation by default and confrontation by design: strategic and institutional responses to Poland's populist coalition government}}
+      \field{volume}{23}
+      \field{year}{2016}
+      \field{pages}{263\bibrangedash 282}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1080/13510347.2015.1058782
+      \endverb
+    \endentry
+    \entry{Svolik.2019.10.1353/jod.2019.0039}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc8f5ea0b23ed722921c597f37607fc5}{%
+           family={Svolik},
+           familyi={S\bibinitperiod},
+           given={Milan\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{fullhash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{bibnamehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{authorbibnamehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{authornamehash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \strng{authorfullhash}{fc8f5ea0b23ed722921c597f37607fc5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1086-3214}
+      \field{journaltitle}{Journal of Democracy}
+      \field{title}{{Polarization versus Democracy}}
+      \field{volume}{30}
+      \field{year}{2019}
+      \field{pages}{20\bibrangedash 32}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1353/jod.2019.0039
+      \endverb
+    \endentry
+    \entry{Svolik.2023.10.1353/jod.2023.0000}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=fc8f5ea0b23ed722921c597f37607fc5}{%
+           family={Svolik},
+           familyi={S\bibinitperiod},
+           given={Milan\bibnamedelima W},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bf88e75938aebaa6e05a7695281f943}{%
+           family={Avramovska},
+           familyi={A\bibinitperiod},
+           given={Elena},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7e0876ed4eae56b5d46637f98206d8a}{%
+           family={Lutz},
+           familyi={L\bibinitperiod},
+           given={Johanna},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef81d529497ec8ce1d436eedd188e70f}{%
+           family={Milačić},
+           familyi={M\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f86437a710812f2001a38a2ad8605602}
+      \strng{fullhash}{532aff9dc2401281e552b38b11c2d87a}
+      \strng{bibnamehash}{532aff9dc2401281e552b38b11c2d87a}
+      \strng{authorbibnamehash}{532aff9dc2401281e552b38b11c2d87a}
+      \strng{authornamehash}{f86437a710812f2001a38a2ad8605602}
+      \strng{authorfullhash}{532aff9dc2401281e552b38b11c2d87a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Democracy}
+      \field{number}{1}
+      \field{title}{{In Europe, Democracy Erodes from the Right}}
+      \field{volume}{34}
+      \field{year}{2023}
+      \field{pages}{5\bibrangedash 20}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1353/jod.2023.0000
+      \endverb
+    \endentry
+    \entry{Szwed.Verf.2024}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=336eff0cdef1b5d53e452ffc30915718}{%
+           family={Szwed},
+           familyi={S\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{fullhash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{bibnamehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{authorbibnamehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{authornamehash}{336eff0cdef1b5d53e452ffc30915718}
+      \strng{authorfullhash}{336eff0cdef1b5d53e452ffc30915718}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{journaltitle}{VerfBlog}
+      \field{month}{4}
+      \field{title}{{Rebuilding the Rule of Law: Three Guiding Principles}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.59704/794ecd417ad8ac53
+      \endverb
+    \endentry
+    \entry{Wunsch.2023.10.1080/13510347.2023.2203918}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f60dbeb9a8cd4d17561c12ac62fc8f8d}{%
+           family={Wunsch},
+           familyi={W\bibinitperiod},
+           given={Natasha},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33810726f122815cbc5ca61fed7df68a}{%
+           family={Gessler},
+           familyi={G\bibinitperiod},
+           given={Theresa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{fullhash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{bibnamehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{authorbibnamehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{authornamehash}{7f53f302efc11f3e225250b0272942fe}
+      \strng{authorfullhash}{7f53f302efc11f3e225250b0272942fe}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{In contexts of democratic backsliding, citizens represent the last bulwark against the systematic dismantling of checks and balances by overbearing executives. And yet, they repeatedly fail to punish authoritarian-leaning leaders at the ballot box, allowing them to consolidate their grip on power. Why is that so? We leverage a conjoint survey experiment in Hungary to probe competing mechanisms of citizen tolerance towards democratic violations in a context of severe backsliding. Our main contribution consists of demonstrating empirically the presence of a composite effect, whereby authoritarian-leaning elites succeed in offering targeted compensations to different groups, ultimately building a mosaic of support among voters to secure enduring electoral backing. We pinpoint trade-offs notably related to cultural conservatism and economic benefits among different subgroups of the population. At the same time, our empirical findings indicate surprisingly high levels of condemnation of undemocratic positions by Hungarian respondents. We discuss how this unexpected pattern points to the limitations of conjoint designs as well as the overlooked supply side of democratic backsliding. Our study feeds into broader debates about the unfolding and entrenchment of democratic backsliding and how we study these processes.}}
+      \field{issn}{1351-0347}
+      \field{journaltitle}{Democratization}
+      \field{title}{{Who tolerates democratic backsliding? A mosaic approach to voters’ responses to authoritarian leadership in Hungary}}
+      \field{volume}{Ahead of print}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 24}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1080/13510347.2023.2203918
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

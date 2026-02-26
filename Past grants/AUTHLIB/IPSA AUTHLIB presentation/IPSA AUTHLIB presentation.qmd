@@ -1,0 +1,515 @@
+---
+title: "When do voters accept democratic backsliding?"
+subtitle: "A conjoint analysis of distinct types of backsliding on diverse dimensions of democracy"
+author: "M. Vuković, J. Rovny, B. Stanley, P. Zagórski"
+date: "07/14/2025"
+date-format: long
+slide-number: true
+show-slide-number: all
+format:
+  revealjs: 
+    css: presentation_style.scss
+toc: true
+toc-depth: 1
+toc-title: Sections
+logo: swps.jpg
+---
+
+## When do citizens oppose democracy?
+
+-   Increased success of politicians defying liberal democracy
+-   Puzzle: backsliding occurs despite declared support for democracy
+-   Answers:
+    -   High polarisation
+    -   Trade-offs: disengaged and far-right voters less likely to punish undemocratic politicians
+    -   Policy congruence diminishes propensity to punish
+
+## Distinct transgressions
+
+-   Different conceptions of democracy = different likelihood to punish undemocratic behavior
+-   Populism, Illiberalism, Authoritarianism (PIA): distinct projects of backsliding
+-   **H1a:** *Parties with liberal democratic features will be more likely to be chosen than parties with populist, illiberal or authoritarian (PIA) features.*
+
+## Populism
+
+-   Divides society into “the people” vs. “the elite”
+-   Frames democracy as majoritarian, undermining minority protections
+-   Dilutes democracy subtly, framed as a complement to democracy rather than an alternative (realisation of the "redemptive face")
+-   **H1b:** *Populist violations of democracy are less likely to be punished by voters than illiberal or authoritarian violations.*
+
+## Illiberalism
+
+-   Practices and ideas against liberal democratic norms and values
+-   Attacks personal freedom, pluralism, tolerance, dissent
+-   More explicitly anti-liberal-democracy than populism, less extremely so than authoritarianism
+-   **H1c:** *Illiberal violations of democracy are more likely to be punished by voters than populist violations.*
+
+## Authoritarianism
+
+-   Deference to authorities, subordination to collective, order over other values
+-   Overtly rejects liberal democracy, elevates strong leader above the law
+-   Suppresses opposition, dismantles oversight, may advocate violence
+-   **H1d:** *Authoritarian violations of democracy will be the most strongly punished by voters compared to populist and illiberal violations.*
+
+## Dimensions of democracy
+
+-   Electoral (elections) and liberal (rights, rule of law) components
+-   Voters care more about electoral features than liberal-democratic aspects
+-   **H2:** *PIA violations of electoral democracy are more likely to be punished than violations of other democratic principles.*
+
+## Policy congruence
+
+-   Policy congruence reduces willingness to punish undemocratic behaviour
+-   We examine how economic and cultural congruence interact with types of transgression
+-   **H3:** *Citizens will be less likely to punish parties exhibiting PIA features when their policy preferences are congruent with those of the party.*
+
+## Empirical strategy
+
+-   Conjoint experiment in France, Italy, UK, Austria, Hungary, Poland, Czechia (N=7,000)
+-   Three tasks, three rounds: compare hypothetical party profiles
+-   Profiles vary by economic/cultural policy and one democratic dimension
+-   Measures: AMCEs, forced choice, congruence by taxes/redistribution (economic) and migration (cultural)
+
+## 
+
+::: {style="font-size: 0.6em;"}
+| Task | Dimension | Levels | Wording: We will... |
+|----|----|----|----|
+| ALL | Economic | Left-wing | Introduce high personal income taxes, collecting more from rich to fund a generous welfare state (e.g. health and educational public services). |
+|  |  | Centrist | Introduce moderate personal income taxes, with the rich paying somewhat more to fund a reasonable welfare state. |
+|  |  | Right-wing | Introduce low personal income taxes, with everybody paying the same rate to fund a minimal welfare state. |
+| ALL | Cultural | Liberal | Accept migrants regardless of the country of origin. |
+|  |  | Centrist | Accept only migrants that can fill important needs in our economy. |
+|  |  | Conservative | Not accept any migrants no matter where they come from. |
+:::
+
+## 
+
+::: {style="font-size: 0.5em;"}
+| Task | Dimension | Level | Wording: We will... |
+|----|----|----|----|
+| 1 | Civil liberties | Populist | Restrict the funding of political organisations that explicitly oppose the will of the people. |
+|  |  | Illiberal | Restrict the funding of political organisations that place the interests of small minorities over the common goals of our country. |
+|  |  | Authoritarian | Ban political organisations that oppose the policies of our government. |
+|  |  | Liberal (Ref.) | Ban political organisations only if they incite violence. |
+| 2 | Rule of law | Populist | Fulfill the will of the majority of the people, even if it violates some existing law. |
+|  |  | Illiberal | Contend that a law that does not serve the nation is illegitimate. |
+|  |  | Authoritarian | Remove from office those who would prevent us from renewing our country. |
+|  |  | Liberal (Ref.) | Respect all court rulings even if they go against the implementation of our program. |
+| 3 | Fair elections | Populist | Ensure that electoral rules allow the voice of ordinary people to prevail over political elites. |
+|  |  | Illiberal | Ensure that electoral rules do not give power to minorities to prevent us from realising our plans. |
+|  |  | Authoritarian | Ensure that electoral rules allow for a strong leader that does not have to worry about the opposition. |
+|  |  | Liberal (Ref.) | Ensure that electoral rules give all citizens an equal voice. |
+:::
+
+## 
+
+```{r, echo=FALSE, warning=FALSE, fig.width=12, fig.height=6}
+library(ggplot2)
+library(dplyr)
+library(tibble)
+
+# Define the custom theme function provided
+theme_plots <- function(base_size = 20, base_family = "Jost Regular") {
+  theme_bw(base_size, base_family) +
+    theme(
+      panel.background = element_rect(fill = "#ffffff", colour = NA),
+      title = element_text(size = rel(1), family = "Jost Bold", face = "plain"),
+      plot.subtitle = element_text(
+        size = rel(0.8),
+        family = "Jost Regular",
+        face = "plain"
+      ),
+      plot.caption = element_text(
+        margin = margin(t = 10),
+        size = rel(0.6),
+        family = "Jost Light",
+        face = "plain"
+      ),
+      panel.border = element_rect(
+        color = "grey50",
+        fill = NA,
+        linewidth = 0.15
+      ),
+      panel.spacing = unit(1, "lines"),
+      panel.grid.minor = element_blank(),
+      panel.grid.major = element_line(linewidth = 0.25, colour = "grey90"),
+      axis.line = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_text(
+        size = rel(0.8),
+        family = "Jost Medium",
+        face = "plain"
+      ),
+      axis.title.x = element_text(margin = margin(t = 10)),
+      axis.title.y = element_text(hjust = 1, margin = margin(r = 10)),
+      legend.position = "bottom",
+      legend.title = element_text(
+        size = rel(0.8),
+        vjust = 0.5,
+        family = "Jost Medium",
+        face = "plain"
+      ),
+      legend.key.size = unit(0.7, "line"),
+      legend.key = element_blank(),
+      legend.spacing = unit(0.1, "lines"),
+      legend.justification = "left",
+      legend.margin = margin(t = -5, b = 0, l = 0, r = 0),
+      strip.text = element_text(
+        size = rel(0.9),
+        hjust = 0,
+        family = "Jost Regular",
+        face = "plain"
+      ),
+      strip.background = element_rect(fill = "white", colour = NA),
+      plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm")
+    )
+}
+
+
+# Original data for violations
+figure1_violations_data <- tribble(
+  ~dimension                , ~party_type     , ~amce  , ~lower_ci , ~upper_ci ,
+  "Civil liberties"         , "Populist"      ,  0.02  ,  0.01     ,  0.03     ,
+  "Civil liberties"         , "Illiberal"     , -0.04  , -0.05     , -0.03     ,
+  "Civil liberties"         , "Authoritarian" , -0.145 , -0.155    , -0.135    ,
+  "Rule of law"             , "Populist"      , -0.06  , -0.07     , -0.05     ,
+  "Rule of law"             , "Illiberal"     , -0.05  , -0.06     , -0.04     ,
+  "Rule of law"             , "Authoritarian" , -0.075 , -0.085    , -0.065    ,
+  "Free and fair elections" , "Populist"      , -0.04  , -0.05     , -0.03     ,
+  "Free and fair elections" , "Illiberal"     , -0.16  , -0.17     , -0.15     ,
+  "Free and fair elections" , "Authoritarian" , -0.17  , -0.18     , -0.16
+)
+
+# Add the 'Liberal' baseline data for plotting
+# The AMCE and confidence intervals are all zero for the baseline
+figure1_liberal_baseline <- tribble(
+  ~dimension                , ~party_type , ~amce , ~lower_ci , ~upper_ci ,
+  "Civil liberties"         , "Liberal"   ,     0 ,         0 ,         0 ,
+  "Rule of law"             , "Liberal"   ,     0 ,         0 ,         0 ,
+  "Free and fair elections" , "Liberal"   ,     0 ,         0 ,         0
+)
+
+# Combine the datasets
+plot_data <- bind_rows(figure1_violations_data, figure1_liberal_baseline)
+
+# Define the custom color palette as a named vector
+party_colors <- c(
+  "Authoritarian" = "red",
+  "Illiberal" = "purple",
+  "Populist" = "blue",
+  "Liberal" = "orange"
+)
+
+# To ensure a logical order in the plot, convert 'party_type' to a factor
+plot_data$party_type <- factor(
+  plot_data$party_type,
+  levels = c("Authoritarian", "Illiberal", "Populist", "Liberal")
+)
+
+
+# Create the final plot
+amce_plot <- ggplot(
+  plot_data,
+  aes(
+    y = dimension,
+    x = amce,
+    xmin = lower_ci,
+    xmax = upper_ci,
+    color = party_type
+  )
+) +
+  # Add the points and error bars, dodged by party type
+  geom_pointrange(position = position_dodge(width = 0.7), size = 0.9) +
+  # Add a vertical line at zero for the baseline
+  geom_vline(xintercept = 0, linetype = "dashed", color = "black") +
+  # Apply the custom color scale
+  scale_color_manual(values = party_colors) +
+  # Apply the custom theme
+  theme_plots() +
+  # Set labels and titles
+  labs(
+    title = "AMCEs of deviations from liberal democracy",
+    y = "Democratic dimension",
+    x = "AMCE (Average Marginal Component Effect)",
+    color = "Party type",
+    caption = "Note: The zero line represents the 'Liberal' baseline."
+  ) +
+  # Reverse the y-axis to match the original paper's order
+  scale_y_discrete(limits = rev)
+
+# Print the plot
+print(amce_plot)
+```
+
+## 
+
+```{r, echo=FALSE, warning=FALSE, fig.width=12, fig.height=6}
+
+library(ggplot2)
+library(dplyr)
+
+theme_plots <- function(base_size = 20, base_family = "Jost Regular") {
+  theme_bw(base_size, base_family) +
+    theme(
+      panel.background = element_rect(fill = "#ffffff", colour = NA),
+      title = element_text(size = rel(1), family = "Jost Bold", face = "plain"),
+      plot.subtitle = element_text(
+        size = rel(0.8),
+        family = "Jost Regular",
+        face = "plain"
+      ),
+      plot.caption = element_text(
+        margin = margin(t = 10),
+        size = rel(0.6),
+        family = "Jost Light",
+        face = "plain"
+      ),
+      panel.border = element_rect(
+        color = "grey50",
+        fill = NA,
+        linewidth = 0.15
+      ),
+      panel.spacing = unit(1, "lines"),
+      panel.grid.minor = element_blank(),
+      panel.grid.major = element_line(linewidth = 0.25, colour = "grey90"),
+      axis.line = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_text(
+        size = rel(0.8),
+        family = "Jost Medium",
+        face = "plain"
+      ),
+      axis.title.x = element_text(margin = margin(t = 10)),
+      axis.title.y = element_text(hjust = 1, margin = margin(r = 10)),
+      legend.position = "bottom",
+      legend.title = element_text(
+        size = rel(0.8),
+        vjust = 0.5,
+        family = "Jost Medium",
+        face = "plain"
+      ),
+      legend.key.size = unit(0.7, "line"),
+      legend.key = element_blank(),
+      legend.spacing = unit(0.1, "lines"),
+      legend.justification = "left",
+      legend.margin = margin(t = -5, b = 0, l = 0, r = 0),
+      strip.text = element_text(
+        size = rel(0.9),
+        hjust = 0,
+        family = "Jost Regular",
+        face = "plain"
+      ),
+      strip.background = element_rect(fill = "white", colour = NA),
+      plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm")
+    )
+}
+
+party_colors <- c(
+  "Authoritarian" = "red",
+  "Illiberal" = "purple",
+  "Populist" = "blue",
+  "Liberal" = "orange"
+)
+
+figure2_data <- tribble(
+  ~dimension                , ~congruence     , ~party_type     , ~predicted_support , ~lower_ci , ~upper_ci ,
+  # Data for Civil Liberties
+  "Civil liberties"         , "Not congruent" , "Populist"      , 0.53               , 0.51      , 0.55      ,
+  "Civil liberties"         , "Not congruent" , "Illiberal"     , 0.47               , 0.45      , 0.49      ,
+  "Civil liberties"         , "Not congruent" , "Authoritarian" , 0.36               , 0.34      , 0.38      ,
+  "Civil liberties"         , "Not congruent" , "Liberal"       , 0.52               , 0.50      , 0.54      ,
+  "Civil liberties"         , "Congruent"     , "Populist"      , 0.63               , 0.61      , 0.65      ,
+  "Civil liberties"         , "Congruent"     , "Illiberal"     , 0.58               , 0.56      , 0.60      ,
+  "Civil liberties"         , "Congruent"     , "Authoritarian" , 0.47               , 0.45      , 0.49      ,
+  "Civil liberties"         , "Congruent"     , "Liberal"       , 0.61               , 0.59      , 0.63      ,
+
+  # Data for Rule of Law
+  "Rule of law"             , "Not congruent" , "Populist"      , 0.45               , 0.43      , 0.47      ,
+  "Rule of law"             , "Not congruent" , "Illiberal"     , 0.44               , 0.42      , 0.46      ,
+  "Rule of law"             , "Not congruent" , "Authoritarian" , 0.42               , 0.40      , 0.44      ,
+  "Rule of law"             , "Not congruent" , "Liberal"       , 0.51               , 0.49      , 0.53      ,
+  "Rule of law"             , "Congruent"     , "Populist"      , 0.56               , 0.54      , 0.58      ,
+  "Rule of law"             , "Congruent"     , "Illiberal"     , 0.57               , 0.55      , 0.59      ,
+  "Rule of law"             , "Congruent"     , "Authoritarian" , 0.55               , 0.53      , 0.57      ,
+  "Rule of law"             , "Congruent"     , "Liberal"       , 0.63               , 0.61      , 0.65      ,
+
+  # Data for Elections
+  "Free and fair elections" , "Not congruent" , "Populist"      , 0.52               , 0.50      , 0.52      ,
+  "Free and fair elections" , "Not congruent" , "Illiberal"     , 0.40               , 0.38      , 0.42      ,
+  "Free and fair elections" , "Not congruent" , "Authoritarian" , 0.39               , 0.37      , 0.41      ,
+  "Free and fair elections" , "Not congruent" , "Liberal"       , 0.56               , 0.54      , 0.58      ,
+  "Free and fair elections" , "Congruent"     , "Populist"      , 0.62               , 0.60      , 0.64      ,
+  "Free and fair elections" , "Congruent"     , "Illiberal"     , 0.50               , 0.48      , 0.52      ,
+  "Free and fair elections" , "Congruent"     , "Authoritarian" , 0.49               , 0.47      , 0.51      ,
+  "Free and fair elections" , "Congruent"     , "Liberal"       , 0.67               , 0.65      , 0.69
+)
+
+figure2_data$party_type <- factor(
+  figure2_data$party_type,
+  levels = c("Authoritarian", "Illiberal", "Populist", "Liberal")
+)
+
+cultural_plot <- ggplot(
+  figure2_data,
+  aes(x = congruence, y = predicted_support, color = party_type)
+) +
+  geom_point(position = position_dodge(width = 0.5), size = 2) +
+  geom_errorbar(
+    aes(ymin = lower_ci, ymax = upper_ci),
+    width = 0.2,
+    position = position_dodge(width = 0.5)
+  ) +
+  facet_wrap(~dimension, ncol = 3) +
+  scale_color_manual(values = party_colors) +
+  labs(
+    title = "Effects of cultural policy congruence",
+    x = "Cultural congruence",
+    y = "Predicted support",
+    color = "Party type"
+  ) +
+  theme_plots() +
+  coord_cartesian(ylim = c(0.3, 0.7))
+
+print(cultural_plot)
+```
+
+## 
+
+```{r, echo=FALSE, warning=FALSE, fig.width=12, fig.height=6}
+
+library(ggplot2)
+library(dplyr)
+
+theme_plots <- function(base_size = 20, base_family = "Jost Regular") {
+  theme_bw(base_size, base_family) +
+    theme(
+      panel.background = element_rect(fill = "#ffffff", colour = NA),
+      title = element_text(size = rel(1), family = "Jost Bold", face = "plain"),
+      plot.subtitle = element_text(
+        size = rel(0.8),
+        family = "Jost Regular",
+        face = "plain"
+      ),
+      plot.caption = element_text(
+        margin = margin(t = 10),
+        size = rel(0.6),
+        family = "Jost Light",
+        face = "plain"
+      ),
+      panel.border = element_rect(
+        color = "grey50",
+        fill = NA,
+        linewidth = 0.15
+      ),
+      panel.spacing = unit(1, "lines"),
+      panel.grid.minor = element_blank(),
+      panel.grid.major = element_line(linewidth = 0.25, colour = "grey90"),
+      axis.line = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_text(
+        size = rel(0.8),
+        family = "Jost Medium",
+        face = "plain"
+      ),
+      axis.title.x = element_text(margin = margin(t = 10)),
+      axis.title.y = element_text(hjust = 1, margin = margin(r = 10)),
+      legend.position = "bottom",
+      legend.title = element_text(
+        size = rel(0.8),
+        vjust = 0.5,
+        family = "Jost Medium",
+        face = "plain"
+      ),
+      legend.key.size = unit(0.7, "line"),
+      legend.key = element_blank(),
+      legend.spacing = unit(0.1, "lines"),
+      legend.justification = "left",
+      legend.margin = margin(t = -5, b = 0, l = 0, r = 0),
+      strip.text = element_text(
+        size = rel(0.9),
+        hjust = 0,
+        family = "Jost Regular",
+        face = "plain"
+      ),
+      strip.background = element_rect(fill = "white", colour = NA),
+      plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm")
+    )
+}
+
+figure3_data <- tribble(
+  ~dimension                , ~congruence     , ~party_type     , ~predicted_support , ~lower_ci , ~upper_ci ,
+  # Data for Civil Liberties
+  "Civil liberties"         , "Not congruent" , "Populist"      , 0.55               , 0.53      , 0.57      ,
+  "Civil liberties"         , "Not congruent" , "Illiberal"     , 0.49               , 0.47      , 0.51      ,
+  "Civil liberties"         , "Not congruent" , "Authoritarian" , 0.38               , 0.36      , 0.40      ,
+  "Civil liberties"         , "Not congruent" , "Liberal"       , 0.52               , 0.50      , 0.54      ,
+  "Civil liberties"         , "Congruent"     , "Populist"      , 0.59               , 0.57      , 0.61      ,
+  "Civil liberties"         , "Congruent"     , "Illiberal"     , 0.53               , 0.51      , 0.55      ,
+  "Civil liberties"         , "Congruent"     , "Authoritarian" , 0.42               , 0.40      , 0.44      ,
+  "Civil liberties"         , "Congruent"     , "Liberal"       , 0.56               , 0.54      , 0.58      ,
+
+  # Data for Rule of Law
+  "Rule of law"             , "Not congruent" , "Populist"      , 0.47               , 0.45      , 0.49      ,
+  "Rule of law"             , "Not congruent" , "Illiberal"     , 0.48               , 0.46      , 0.50      ,
+  "Rule of law"             , "Not congruent" , "Authoritarian" , 0.46               , 0.44      , 0.48      ,
+  "Rule of law"             , "Not congruent" , "Liberal"       , 0.53               , 0.51      , 0.55      ,
+  "Rule of law"             , "Congruent"     , "Populist"      , 0.51               , 0.49      , 0.53      ,
+  "Rule of law"             , "Congruent"     , "Illiberal"     , 0.515              , 0.495     , 0.535     ,
+  "Rule of law"             , "Congruent"     , "Authoritarian" , 0.50               , 0.48      , 0.52      ,
+  "Rule of law"             , "Congruent"     , "Liberal"       , 0.57               , 0.55      , 0.59      ,
+
+  # Data for Elections
+  "Free and fair elections" , "Not congruent" , "Populist"      , 0.55               , 0.53      , 0.57      ,
+  "Free and fair elections" , "Not congruent" , "Illiberal"     , 0.42               , 0.40      , 0.44      ,
+  "Free and fair elections" , "Not congruent" , "Authoritarian" , 0.41               , 0.39      , 0.43      ,
+  "Free and fair elections" , "Not congruent" , "Liberal"       , 0.58               , 0.56      , 0.60      ,
+  "Free and fair elections" , "Congruent"     , "Populist"      , 0.58               , 0.56      , 0.60      ,
+  "Free and fair elections" , "Congruent"     , "Illiberal"     , 0.45               , 0.43      , 0.47      ,
+  "Free and fair elections" , "Congruent"     , "Authoritarian" , 0.44               , 0.42      , 0.46      ,
+  "Free and fair elections" , "Congruent"     , "Liberal"       , 0.61               , 0.59      , 0.63
+)
+
+party_colors <- c(
+  "Authoritarian" = "red",
+  "Illiberal" = "purple",
+  "Populist" = "blue",
+  "Liberal" = "orange"
+)
+
+figure3_data$party_type <- factor(
+  figure3_data$party_type,
+  levels = c("Authoritarian", "Illiberal", "Populist", "Liberal")
+)
+
+economic_plot <- ggplot(
+  figure3_data,
+  aes(x = congruence, y = predicted_support, color = party_type)
+) +
+  geom_point(position = position_dodge(width = 0.5), size = 2) +
+  geom_errorbar(
+    aes(ymin = lower_ci, ymax = upper_ci),
+    width = 0.2,
+    position = position_dodge(width = 0.5)
+  ) +
+  facet_wrap(~dimension, ncol = 3) +
+  scale_color_manual(values = party_colors) +
+  labs(
+    title = "Effects of economic policy congruence",
+    x = "Economic congruence",
+    y = "Predicted support",
+    color = "Party type"
+  ) +
+  theme_plots() +
+  coord_cartesian(ylim = c(0.3, 0.7))
+
+print(economic_plot)
+```
+
+## Conclusions
+
+-   Citizens distinguish between types of violations; authoritarian most punished
+-   Populist violations less punished, sometimes rewarded
+-   Electoral fairness violations most consistently punished
+-   Policy congruence, especially cultural, reduces willingness to punish even grave violations
+-   Conjoint experiments have limits; future research could examine justification strategies

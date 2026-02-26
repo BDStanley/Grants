@@ -1,0 +1,52 @@
+\documentclass[
+  fontsize=11pt,
+  paper=a4,
+  parskip=half,
+  enlargefirstpage=on,    % More space on first page
+  fromalign=right,        % PLacement of name in letter head
+  fromphone=on,           % Turn on phone number of sender
+  fromemail=on,
+  fromrule=aftername,     % Rule after sender name in letter head
+  addrfield=on,           % Adress field for envelope with window
+  backaddress=off,         % Sender address in this window
+  subject=beforeopening,  % Placement of subject
+  locfield=narrow,        % Additional field for sender
+  foldmarks=off,           % Print foldmarks
+]{scrlttr2}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{blindtext}
+
+\setkomafont{fromname}{\normalfont \LARGE}
+\setkomafont{fromaddress}{\normalfont}%% statt \small
+\setkomafont{pagenumber}{\normalfont}
+\setkomafont{subject}{\bfseries}
+\setkomafont{backaddress}{\mdseries}
+
+\LoadLetterOption{DIN}
+\setkomavar{fromname}{Benjamin Stanley}
+\setkomavar{fromaddress}{ul. Wojska Polskiego 49B m.30\\05-101 Nowy Dwór Mazowiecki}
+\setkomavar{fromphone}{+48 798 814 801}
+\setkomavar{fromemail}{bstanley@swps.edu.pl}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Benjamin Stanley}
+\setkomavar{place}{Nowy Dwór Mazowiecki}
+\setkomavar{date}{15 listopada 2018}
+\setkomavar{enclseparator}{: }
+
+\renewcommand*{\raggedsignature}{\raggedright}
+
+\begin{document}
+  \begin{letter}{Prof. SWPS Mirosław Filiciak\\Dziekan WNHiS\\SWPS}
+    \setkomavar{subject}{Podanie}
+    \opening{Szanowny Panie Dziekanie,}
+
+Zwracam się z uprzejmą prośbą o wydłużenie czasu realizacji mojego projektu w ramach BST do 30 listopada. Do tej pory nie miałem możliwości zakupu książek i innych materiałów potrzebnych do realizacji projektu, ponieważ nie wiedziałem, na jaką kwotę zostanie wystawione faktura przez ośrodek badawczy za przeprowadzenie badania sondażowego, na które została przeznaczona największa część środków. 
+
+Proszę o pozytywne rozpatrzenie mojej prośby.
+
+
+    \closing{Z wyrazami szacunku,}
+      \end{letter}
+\end{document}

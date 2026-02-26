@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompileSettings>
+    <ProjectSettings>
+        <Content Scope="Included" IncludeGroupText="Yes">
+            <CompileGroup Type="BinderItem">3A4A98E5-CD12-4321-B63D-C7995B5DFB4E</CompileGroup>
+            <Filter State="Off" Exclude="No" Type="Label">
+                <CollectionID>FBEABABB-E954-4BC0-8A4E-091692B98FAC</CollectionID>
+                <Label>-1</Label>
+                <Status>-1</Status>
+            </Filter>
+        </Content>
+        <Options>
+            <RemoveAnnotations>Yes</RemoveAnnotations>
+            <Links>
+                <ConvertDocumentLinksToHTML>Yes</ConvertDocumentLinksToHTML>
+            </Links>
+            <Scriptwriting>
+                <IncludeTitles>Yes</IncludeTitles>
+                <IncludeSynopses>Yes</IncludeSynopses>
+                <FootnotesAsScriptNotes>Yes</FootnotesAsScriptNotes>
+                <CommentsAsScriptNotes>Yes</CommentsAsScriptNotes>
+            </Scriptwriting>
+            <Ebook>
+                <StartAfterFrontMatter>Yes</StartAfterFrontMatter>
+                <Cover>
+                    <ImageDocument Source="FrontMatter"></ImageDocument>
+                    <Title>Cover</Title>
+                    <SVG Width="600" Height="800"><![CDATA[]]></SVG>
+                </Cover>
+                <TOC>
+                    <HTML Generate="Yes">
+                        <Title>Contents</Title>
+                    </HTML>
+                </TOC>
+            </Ebook>
+        </Options>
+        <MetaData>
+            <ProjectTitle>BSF democratic backsliding proposal</ProjectTitle>
+            <ProjectAbbreviatedTitle>BSF democratic backsliding proposal</ProjectAbbreviatedTitle>
+            <Authors>
+                <Author Role="aut">Ben Stanley</Author>
+            </Authors>
+            <Surname>Stanley</Surname>
+            <Subjects>
+                <Subject></Subject>
+            </Subjects>
+            <EbookLanguage>en</EbookLanguage>
+            <FountainTitlePageMetaData>
+                <Value Key="Title"><![CDATA[<$projecttitle>]]></Value>
+                <Value Key="Author"><![CDATA[<$author>]]></Value>
+            </FountainTitlePageMetaData>
+            <MMDMetaData>
+                <Value Key="Title"><![CDATA[<$projecttitle>]]></Value>
+                <Value Key="Author"><![CDATA[<$author>]]></Value>
+            </MMDMetaData>
+        </MetaData>
+    </ProjectSettings>
+    <CurrentFileType>Print</CurrentFileType>
+    <FormatSettings>
+        <Format ID="DEFAULT">
+            <SectionLayouts>
+                <Type ID="F8964DE2-1958-4BCB-82AD-24F0176D4BF0">NEW-PAGE-HEADER-WITH-TEXT</Type>
+                <Type ID="85D92745-B56E-4DAD-8BAF-93B392357C7C">TEXT-SECTION</Type>
+            </SectionLayouts>
+        </Format>
+    </FormatSettings>
+    <LastUsedFormats></LastUsedFormats>
+</CompileSettings>

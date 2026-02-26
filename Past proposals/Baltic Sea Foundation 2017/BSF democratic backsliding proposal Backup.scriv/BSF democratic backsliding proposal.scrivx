@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Bens-MacBook-Air" Modified="2017-03-22 14:24:44 +0100" ModID="EF9A4FC0-C5BA-47A7-B2F5-0BBF68EFE0F5">
+    <Binder>
+        <BinderItem ID="0" UUID="3A4A98E5-CD12-4321-B63D-C7995B5DFB4E" Type="DraftFolder" Created="2017-03-03 13:49:44 +0100" Modified="2017-03-03 13:52:00 +0100">
+            <Title>BSF project proposal</Title>
+            <Children>
+                <BinderItem ID="3" UUID="9C40B147-C5E5-47D5-92FF-035B3CCE64EA" Type="Text" Created="2017-03-03 13:49:44 +0100" Modified="2017-03-21 19:38:29 +0100">
+                    <Title>By Fate or By Choice? Democratic Backsliding versus Democratic Success in Central and Eastern Europe</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>930,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="14" UUID="3A4DD09E-0AF7-4CA7-9CD2-DCDBBAE474C6" Type="Text" Created="2017-03-07 16:45:42 +0100" Modified="2017-03-21 19:44:16 +0100">
+                    <Title>The empirical background</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2243,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="15" UUID="66FADB06-6FFD-407F-A247-2FE7979E6901" Type="Text" Created="2017-03-07 21:35:47 +0100" Modified="2017-03-21 19:46:26 +0100">
+                    <Title>The theoretical context</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2287,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="16" UUID="5232AE7B-98B7-4153-BEE1-6F71E9A99222" Type="Text" Created="2017-03-07 21:35:52 +0100" Modified="2017-03-21 16:10:04 +0100">
+                    <Title>Research questions</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1605,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="4" UUID="23A69648-0509-4220-B6AE-4B9832A32378" Type="Text" Created="2017-03-03 13:50:54 +0100" Modified="2017-03-21 20:00:39 +0100">
+                    <Title>Project description</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1540,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="5" UUID="908B9CFD-FF10-4ADB-B73C-9EBC16D1371F" Type="Text" Created="2017-03-03 14:09:31 +0100" Modified="2017-03-21 16:12:03 +0100">
+                            <Title>Theme 1: The supply side</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>343,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="6" UUID="1965E040-4D6F-4698-BA2A-05ABF8331599" Type="Text" Created="2017-03-03 14:11:05 +0100" Modified="2017-03-21 19:47:08 +0100">
+                            <Title>Theme 2: The demand side</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2091,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="7" UUID="75FB2D16-5C8C-4D54-833A-ADE5C37483A4" Type="Text" Created="2017-03-03 14:11:29 +0100" Modified="2017-03-21 19:49:20 +0100">
+                            <Title>Theme 3: Checks and balances</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>294,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="9" UUID="1A589F87-BA7F-411B-96E8-FE01DBB58090" Type="Text" Created="2017-03-03 13:50:43 +0100" Modified="2017-03-21 20:04:08 +0100">
+                    <Title>Gaps in the literature</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>546,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="10" UUID="370BF747-CD3C-4A02-9304-DB1E9AEDDE31" Type="Text" Created="2017-03-03 13:51:08 +0100" Modified="2017-03-21 20:04:53 +0100">
+                    <Title>Methods, work plan, and outputs</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="11" UUID="A0E2B3C7-1031-405D-AE31-6F452799E3A8" Type="Text" Created="2017-03-03 13:51:22 +0100" Modified="2017-03-21 16:03:49 +0100">
+                    <Title>Project team, national and international collaboration</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2163,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="12" UUID="793BF43A-839C-4E3A-BADD-CE806CE8551E" Type="Text" Created="2017-03-03 13:51:39 +0100" Modified="2017-03-03 13:51:39 +0100">
+                    <Title>References</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" UUID="B53048A2-80BF-49EC-A5F5-82B61615B135" Type="ResearchFolder" Created="2017-03-03 13:49:44 +0100" Modified="2017-03-03 13:49:44 +0100">
+            <Title>Research</Title>
+        </BinderItem>
+        <BinderItem ID="2" UUID="3941481C-A775-49A5-A71B-214968387206" Type="TrashFolder" Created="2017-03-03 13:49:44 +0100" Modified="2017-03-03 13:49:44 +0100">
+            <Title>Trash</Title>
+            <Children>
+                <BinderItem ID="13" UUID="17BA40B6-CACD-468F-B2A3-9414DBDE66CC" Type="Text" Created="2017-03-03 16:08:50 +0100" Modified="2017-03-03 16:08:56 +0100">
+                    <Title>Theme 5: Policy dynamics</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="8" UUID="B43AEEDD-3828-499D-A337-93C64BC7BC39" Type="Text" Created="2017-03-03 14:11:43 +0100" Modified="2017-03-03 14:11:43 +0100">
+                    <Title>Theme 4: The external control side</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="F6577041-3AD0-4F25-BA59-EBD48E4356E7" Color="0.962266 0.962266 0.962266">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="FBEABABB-E954-4BC0-8A4E-091692B98FAC" Color="0.922 0.91 0.98">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">shle</SearchSettings>
+        </Collection>
+    </Collections>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="1.0 0.76 0.78">Red</Label>
+            <Label ID="1" Color="1.0 0.83 0.71">Orange</Label>
+            <Label ID="2" Color="1.0 0.91 0.71">Yellow</Label>
+            <Label ID="3" Color="0.76 0.95 0.75">Green</Label>
+            <Label ID="4" Color="0.75 0.91 0.98">Blue</Label>
+            <Label ID="5" Color="0.97 0.82 1.0">Purple</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">To Do</Status>
+            <Status ID="1">First Draft</Status>
+            <Status ID="2">Revised Draft</Status>
+            <Status ID="3">Final Draft</Status>
+            <Status ID="4">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets Notify="No">
+        <DraftTarget Type="Words" CountIncludedOnly="No" CurrentCompileGroupOnly="No" Deadline="2017-03-03 16:08:23 +0100" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2017-03-22 14:24:35 +0100"></PreviousSession>
+    </ProjectTargets>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScrivenerProject>

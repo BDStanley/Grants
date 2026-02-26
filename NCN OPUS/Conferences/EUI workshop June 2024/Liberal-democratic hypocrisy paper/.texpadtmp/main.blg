@@ -1,0 +1,24 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is '/Users/benstanley/Library/CloudStorage/GoogleDrive-bdstanley@gmail.com/My Drive/Grants/NCN OPUS/Conferences/EUI workshop June 2024/Liberal-democratic hypocrisy paper/.texpadtmp/main.blg'
+[29] biber-darwin:340> INFO - === Tue Jun 25, 2024, 16:37:17
+[37] Biber.pm:419> INFO - Reading '/Users/benstanley/Library/CloudStorage/GoogleDrive-bdstanley@gmail.com/My Drive/Grants/NCN OPUS/Conferences/EUI workshop June 2024/Liberal-democratic hypocrisy paper/.texpadtmp/main.bcf'
+[74] Biber.pm:979> INFO - Found 39 citekeys in bib section 0
+[83] Biber.pm:4419> INFO - Processing section 0
+[88] Biber.pm:4610> INFO - Looking for bibtex file '/Users/benstanley/Library/CloudStorage/GoogleDrive-bdstanley@gmail.com/My Drive/Grants/NCN OPUS/Conferences/EUI workshop June 2024/Liberal-democratic hypocrisy paper/NCNOpus.bib' for section 0
+[95] bibtex.pm:1713> INFO - LaTeX decoding ...
+[192] bibtex.pm:1519> INFO - Found BibTeX data source '/Users/benstanley/Library/CloudStorage/GoogleDrive-bdstanley@gmail.com/My Drive/Grants/NCN OPUS/Conferences/EUI workshop June 2024/Liberal-democratic hypocrisy paper/NCNOpus.bib'
+[335] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[336] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[336] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[336] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[375] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[375] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[375] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[375] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[401] bbl.pm:660> INFO - Writing '/Users/benstanley/Library/CloudStorage/GoogleDrive-bdstanley@gmail.com/My Drive/Grants/NCN OPUS/Conferences/EUI workshop June 2024/Liberal-democratic hypocrisy paper/.texpadtmp/main.bbl' with encoding 'UTF-8'
+[433] bbl.pm:763> INFO - Output to /Users/benstanley/Library/CloudStorage/GoogleDrive-bdstanley@gmail.com/My Drive/Grants/NCN OPUS/Conferences/EUI workshop June 2024/Liberal-democratic hypocrisy paper/.texpadtmp/main.bbl
+[433] Biber.pm:131> WARN - Duplicate entry key: 'Andersen.2019.10.5129/001041519x15647434970117' in file '/Users/benstanley/Library/CloudStorage/GoogleDrive-bdstanley@gmail.com/My Drive/Grants/NCN OPUS/Conferences/EUI workshop June 2024/Liberal-democratic hypocrisy paper/NCNOpus.bib', skipping ...
+[433] Biber.pm:131> WARN - legacy year field 'Forthcoming' in entry 'Bundock.2024' is not an integer - this will probably not sort properly.
+[433] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[433] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[433] Biber.pm:133> INFO - WARNINGS: 4

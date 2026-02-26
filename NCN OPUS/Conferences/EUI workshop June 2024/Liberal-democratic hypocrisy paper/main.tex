@@ -1,0 +1,334 @@
+\documentclass[12pt,letterpaper]{article} 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, bm}
+\usepackage[mathcal]{eucal}
+%\usepackage[varg]{txfonts} % Times
+%\usepackage[scaled=0.9]{inconsolata} % monospace
+\usepackage[charter]{mathdesign}
+\usepackage[scale = 0.8]{plex-serif}
+\usepackage[scale = 0.8]{plex-sans} % for some titlepage magic, headers and stuff
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{.75em}{}
+\usepackage{tabularx}
+\usepackage{longtable} 
+\usepackage{rotating}
+\usepackage{booktabs} 
+\usepackage{threeparttable} 
+\usepackage{threeparttablex} 
+\usepackage{lscape}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\newcolumntype{d}{S[
+    input-open-uncertainty=,
+    input-close-uncertainty=,
+    parse-numbers = false,
+    table-align-text-pre=false,
+    table-align-text-post=false
+ ]}
+\usepackage[graphicx]{realboxes}
+\usepackage[backend=biber,style=apa]{biblatex}
+\bibliography{NCNOpus.bib}
+\usepackage{xurl}
+\usepackage[margin={0in,0in},labelfont=bf,
+labelsep=period,format=plain,indention=0in]{caption}
+\renewcommand{\captionfont}{\small}
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{6pt}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\setlength\parindent{1.25cm}
+\usepackage[hang,flushmargin]{footmisc}
+\renewcommand\footnotelayout{\small}
+\renewcommand{\footnotesize}{\fontsize{7pt}{11pt}\selectfont}
+\setlength{\footnotesep}{1.5em}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.9}
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=0pt}
+\setlist[itemize]{itemsep=0pt}
+\renewcommand{\labelenumii}{\theenumi.\arabic{enumii}.}
+\usepackage{color,soul}
+\usepackage{setspace}
+\doublespacing
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage[affil-it]{authblk}
+\renewcommand\Authfont{\large}
+\renewcommand\Affilfont{\large}
+\setlength{\affilsep}{2em}
+\newcommand{\tablefontsize}{\fontsize{10pt}{12pt}\selectfont}
+\providecommand{\keywords}[1]{\textbf{Keywords}: #1}
+\providecommand{\wordcount}[1]{\textbf{Words}: #1}
+\providecommand{\funder}[1]{\textbf{Funder}: #1}
+
+%TITLE PAGE
+\title{Liberal-democratic hypocrisy? \\Stability and change in Polish citizens' attitudes towards liberal democracy\thanks{Early draft, please do not cite.}}
+\author{Ben Stanley\thanks{Funded by the Polish National Science Centre (\textit{Narodowe Centrum Nauki}), grant no. 2020/39/B/HS6/00853.}}
+\affil{SWPS University, Poland}
+\date{\today}
+
+%DOCUMENT
+\begin{document}
+\singlespace
+\maketitle
+\setcounter{page}{0}
+\thispagestyle{empty}
+
+\newpage
+\doublespace
+\setcounter{page}{0}
+\thispagestyle{empty}
+
+\begin{center}
+{\Large Liberal-democratic hypocrisy? \\Stability and change in Polish citizens' attitudes towards liberal democracy}
+\end{center}
+\vspace{2em}
+
+\begin{abstract}
+\noindent The October 2023 elections in Poland saw the populist-nativist Law and Justice (PiS) removed from power after eight years of government characterised by democratic backsliding. The victory of a broad pro-democratic coalition running the gamut from conservatives to socialists marks the potential beginning of the renewal of liberal democracy in Poland, but also carries with it significant risks. The new government faces the onerous task of repairing the damage visited upon Poland’s democratic institutions, but in conditions where the necessary haste may raise the risk of violating the very principles it aims to restore. This paper investigates the stability and fluctuation of Polish citizens' attitudes towards liberal democracy through a three-wave online panel survey aligned with the 2023 Polish elections. This study captures attitudes towards key components of liberal democracy in April 2023, comparing them with attitudes immediately prior to the October elections, and then with attitudes in April 2023. These data make it possible to evaluate whether and how voters’ attitudes towards liberal democracy remain stable or shift following a change of government. Data collected for the first two waves suggest stability, but, in line with recent research into “democratic hypocrisy” (Simonovits, McCoy and Littvay 2022), the third wave is expected to reveal greater tolerance of illiberal actions on the part of supporters of the new government. This study has implications for the broader discourse on democracy's vulnerability and vitality. The findings will contribute to understanding how shifts in political power affect public attitudes towards democracy, informing strategies for reinforcing democratic norms and institutions.
+\end{abstract}
+\vspace{2em}
+
+\begin{keywords}
+    democratic backsliding, liberalism, Poland, voting behaviour
+\end{keywords}
+\vspace{1em}
+
+\begin{wordcount}
+    8457
+\end{wordcount}
+\vspace{2em}
+
+\thispagestyle{empty}
+\newpage
+
+\section{Introduction}
+Since the victory of the nationalist-populist Law and Justice (\emph{Prawo i Sprawiedliwość}; PiS) party in the general election of October 2015, Poland -- previously seen as one of the success stories of post-1989 transition to democracy -- has experienced a precipitous decline in the quality of its liberal democratic institutions, falling from 0.79 to 0.42 on the V-Dem Liberal Democracy index and being re-classified as an ``electoral democracy'' \autocite{VDem.2023}. 
+
+With a narrow but disciplined parliamentary majority, PiS was able to make quick progress in satisfying its long-held desire to overturn the political and institutional establishment of Poland's post-1989 Third Republic \autocite{Bill.2020.10.1177/0888325420950800}. Public media was swiftly colonised, purged of dissenting voices and turned into a crude instrument of government propaganda. State-held enterprises were rich sources of patronage for the emerging ``counterelite'', which was also cultivated through the politicisation of civil society  \autocite{Bill.2020.10.1080/21599165.2020.1787161}. The Constitutional Tribunal was paralysed and then captured through the appointment of politically loyal justices, enabling PiS to establish what amounted to an alternative legal reality in which subsequent changes, most importantly the politicisation of the judiciary, were granted the dignity of official validation, however legally spurious \autocite{Sadurski.2019, Pirro.2021.10.1017/s1537592721001924}. These actions brought PiS into conflict with the European Union, with the Commission deploying its rule-of-law procedures and taking repeated action against Poland in the European Court of Justice.
+
+While many of the actions taken by PiS echoed existing deficiencies in the functioning of Poland's democratic institutions, as a whole they constituted a qualitative departure from the preceding political system. Illiberal changes were not just individual breaches of constitutional propriety but elements of a carefully sequenced and coordinated assault on the post-communist political settlement. Laws were often passed not to address a systematic problem but to facilitate \emph{ad hoc} the realisation of PiS's discrete objectives. Lacking a supermajority, PiS was unable to entrench its power as firmly and irrevocably as Fidesz in Hungary, and Poland remained a functioning electoral democracy, free if not entirely fair, with an opposition that struggled to match PiS individually but collectively remained a plausible alternative. Yet by the end of PiS's first term in 2019, the norms and procedures of liberal democracy had given way to executive decisionism, with PiS leader Jarosław Kaczyński, whose control of his party went unchallenged, essentially ruling without responsibility.
+
+A dramatic reversal occurred in October 2023, when PiS was decisively defeated by a coalition of the centrist-liberal Civic Coalition (\emph{Koalicja Obywatelska}, KO), the moderate conservative Third Way (\emph{Trzecia Droga}, TD) and The Left (\emph{Lewica}). Although PiS remained the largest party, with 35.4\% of the vote, it had no plausible path to a majority, as it lacked coalition potential with any party that could make up the shortfall in seats. In December, the new government finally took office, and was heralded by mainstream international opinion as a hopeful sign of how populism and democratic backsliding could be opposed and rolled back. 
+
+Yet amid the optimism, the new government faced significant challenges in reconciling ambitions with possibilities. As their first moves to recapture public media ran into criticism from liberal legal scholars \parencite{HFHR.2024}, it became apparent that they faced a ``post-illiberal trilemma''. On the one hand, they were expected to act \emph{effectively}, undoing the consequences of measures taken by their predecessors and removing or negating policies and mechanisms deleterious to liberal democracy. They were expected to act \emph{quickly}, purging institutions of illiberal usurpers and thereby preventing the ``rot'' of illiberalism from spreading. Yet having come to power on a promise to repeal rather than reproduce illiberalism, they were also expected to act \emph{legally}, eschewing the procedural shortcuts and decisionist philosophy of the previous government. 
+
+The problem the new government faced was that these three imperatives would often come into conflict. From a procedurally liberal-democratic perspective, the most desirable course of action is to implement changes which effectively tackle the problem and do so in a way which is legally unimpeachable. However, given the aforementioned existence of institutional barriers to swift action and the liberal-democratic commitment to procedural propriety, dealing with these issues quickly is not always a plausible option. This introduces a problem from a representational perspective. Voters have elected a post-illiberal government on a specific mandate to roll back reform, and have legitimate reason to expect that it will take swift and effective action.
+
+Indeed, evidence of impatience with the pace of change did not take long to emerge. At the end of the traditional electoral honeymoon of the first 100 days, only 28.3\% of Poles expressed satisfaction with the speed with which electoral promises were being realised \parencite{Osiecki.2024}. Summarising the first six months of the government, the head of the liberal judicial association \emph{Iustitia} expressed disappointment at the partial and cautious actions of the government in rooting out illegitimately-appointed judges, concluding that it had become ``stuck in the shallows'' \parencite{Galczynska.2024}. Yet other observers expressed concerns that precipitate action would lead only to a ``deepening of legal chaos'' that would ultimately undermine the integrity of democratic renewal \parencite{Szwed.Verf.2024}. 
+
+As Ganev \parencite*[92]{Ganev.2018.10.1353/jod.2018.0047} noted in the Bulgarian context, a key feature of the political system adopted by parties like PiS is the denial that anything untoward is happening. Where traditional authoritarians might justify their rule by pointing to the deficiencies of democracy as a political system, their contemporary equivalents pay it lip service. Instead of making a virtue of undermining a moribund political system entirely, they claim to be redeeming it. Yet the debates of the last few months raise the question of whether post-illiberal government is not prone to a similar phenomenon, with the imperative of swiftly realising ambitious but legally-complex reforms -- and the desire to enact political and personal revenge -- overcoming the need for procedural hygiene and prudent caution. Are liberals paying lip-service to liberal democracy too?
+
+While much discussion in recent months has focused on the ``supply side'' of post-illiberal political rhetoric and strategy, this article addresses this question from the demand side. Do Polish voters hold stable attitudes to liberal democracy regardless of who holds power, or are they democratic hypocrites, condemning and punishing illiberal actions when their favoured parties are in opposition, but failing to do so -- or even rewarding these actions -- when their favoured party is in power? 
+
+I address this question by using a three-wave panel survey spanning the last six months of PiS's government and the first six months of the KO-TD-Lewica coalition government. This survey makes it possible to track changes in Polish voters' preferences for liberal democracy as expressed through their \emph{declared} liberal-democratic values and their \emph{revealed} preferences for candidates who violate those values. Crucially, it captures the context of a change in government and the concomitant shift from illiberal to post-illiberal governance.
+
+In the following section, I develop the research question the context of ongoing debates about the nature, causes and consequences of democratic backsliding, and formulate hypotheses. I then discuss the data and methods of analysis, present key findings, and discuss their implications.
+
+\section{Top-down \emph{and} bottom-up: understanding the onset and persistence of democratic backsliding}
+
+Scholars have used a variety of terms to capture the phenomenon of movement away from a generally-understood ideal of liberal democracy, such as ``autocratisation'', ``democratic erosion'', ``de-democratisation'', ``democratic decay'' and perhaps the most common, ``democratic backsliding''. I do not intend to enter into the debate as to which of these terms most aptly encapsulates the dynamic, partly because it is not the primary focus of this paper but also because there is often more overlap among these terms than their respective advocates suggest. However, in committing to using the term ``democratic backsliding'' I should stress that I do not intend it to imply either a purely strategic and agent-led process of deliberate subversion, or as a set of structural influences that shape the opportunities available for such subversion to occur. Rather, I concur with Andersen \parencite*[647]{Andersen.2019.10.5129/001041519x15647434970117} that understanding the contemporary movement away from liberal democracy requires us to ``distinguish the causes of vulnerability to backsliding from the proximate causes of actual backsliding'', and in so doing to attend both to supply-side and to demand-side factors.
+
+The distinction between supply-side factors (such as party ideology and appeals, elite decision-making, the extent to which the integrity of liberal-democratic institutions are protected by common observance of norms) and demand-side factors (such as public opinion and voting behaviour) has informed attempts to understand the phenomenon. The threat backsliding poses to the stability of hitherto consolidated liberal democracies in those countries where it has already occurred has spurred attempts to move beyond \emph{sui generis} accounts of individual cases to generate broader theories of its emergence, often with the goal of identifying ways to prevent its further spread. In keeping with theoretical accounts of the closely-related phenomenon of populism, these approaches largely devolve into ``top-down'' explanations of backsliding as the work of political elites, and ``bottom-up'' explanations that focus on public support for illiberal solutions and voting for parties offering those solutions. 
+
+Taking issue with a ``folk theory'' of democratic backsliding that assumes all crises experienced by democracies must ultimately be attributable to citizens' preferences, Bartels \parencite*[23]{Bartels.2023.10.1093/isr/viad019} contends that ``democracy erodes from the top.'' Focusing in particular on European cases, he argues that the increase in support for the right-wing populist parties which have been the primary protagonists of backsliding can be explained primarily by the greater supply of populist mobilisation than any discernible increase in populist demand. Examining trends in European public opinion prior to and following the onset of backsliding, Bartels avers that popular attitudes supply a ``reservoir of right-wing populist sentiment'' rather than the much-vaunted ``wave''. Given this, he concludes that backsliding has occurred largely in the absence of any real demand-side input, with citizens of contemporary European democracies ``[going] about their political lives in much the way that democratic citizens generally do, focusing primarily on their own economic and social well-being and judging their political leaders accordingly'' \parencite[220]{Bartels.2023.10.1515/9780691244518}.
+
+At first glance, the Polish case would seem to lend considerable support to Bartels's contentions. Prior to the 2015 parliamentary election there was little sign of any significant appetite for democratic backsliding among the Polish electorate (\cite[1320]{Markowski.2016.10.1080/01402382.2016.1177305}; \cite[125]{Bartels.2023.10.1515/9780691244518}). The long-running surveys of Poles' attitudes to democracy conducted by the Public Opinion Research Centre do not show any significant decline in acceptance of democracy ahead of this election. In 2015 64\% of Poles agreed that democracy is preferable to any other form of government, and 53\% disagreed with the notion that it made no difference to people like them whether their country was democratic or not \autocite[2--3]{CBOS2021.democ}. Moreover, since 2015 the proportion of Poles endorsing democracy increased: in 2021 68\% and 62\% gave pro-democratic answers to the above questions. 
+
+However, just as it would be mistaken to infer from PiS's post-electoral actions that the party's success in 2015 can be attributed to an upsurge in anti-democratic sentiment, so it would be wrong to conclude that it represented an endorsement of liberal-democratic principles. Bartels \parencite*[224]{Bartels.2023.10.1515/9780691244518} is correct in his assessment that PiS parlayed 37\% of the vote into a narrative of a ``voting booth revolution'' with the aim of justifying everything that followed. However, his contention that Polish voters did not choose even a ``mildly authoritarian'' alternative is less sustainable. During its previous spell in government from 2005 to 2007, PiS had attempted -- in the less propitious circumstances of a fractious three-party coalition, and ultimately unsuccessfully -- to implement changes that amply foreshadowed many of the `reforms' they would undertake from 2015 onwards \parencite{Stanley.2016.10.1080/13510347.2015.1058782}. 
+
+The resistance experienced from liberal-democratic institutions during this period -- in particular, the Constitutional Tribunal -- did not impress upon the party the virtues of executive restraint. Instead, PiS spent the eight years in opposition between 2007 and 2015 railing against the ``impossibilism'' of a political system in which electoral majorities were routinely thwarted by unelected judges, stoking a divide between a ``solidaristic'' and ``liberal'' Poland that attributed the failures of Poland's post-1989 democracy to a surfeit of ``can't-do'' proceduralism, and elaborating -- particularly in the wake of the Smoleńsk air crash which claimed the life of president and PiS co-founder Lech Kaczyński -- a conspiracy-theory account of democratic transition as the seizure of power by a self-selecting and unaccountable cabal of liberal elites. When PiS leader Jarosław Kaczyński spoke in 2011 of his conviction that Poland would have ``Budapest on the Vistula'', it was a clear invocation of the illiberal crusade already embarked upon by Fidesz, PiS's Hungarian counterpart, but also the expression of a long-held enmity towards Poland's Third Republic. 
+
+Yet whether PiS were identifiable as ``mildly authoritarian'' or not in 2015 is ultimately less important than the fact that -- as Bartels \parencite*[224]{Bartels.2023.10.1515/9780691244518} himself recognises in his contention that Poles did not choose authoritarian government ``at least not at first'' -- they assuredly \emph{were} authoritarian thereafter. ``At least not at first'' is crucial here: if PiS's initial victory can be explained primarily as a triumph for the most credible opposition force over a worn-out incumbent, their subsequent victories raise the question of why those who actively spurn liberal democracy remain unpunished by ostensibly pro-liberal-democratic electorates. If voters in consolidated liberal democracies remain largely convinced that liberal democracy is ``the only game in town'', and if it is political elites that are responsible for breaking the rules of that game, then why have elites not faced greater punishment from the electorate for doing so?
+
+While Bartels \parencite*[25]{Bartels.2023.10.1515/9780691244518} concludes that publics in backsliding countries ``were little more than passive bystanders to the erosion of democracy'', this passivity in itself is a significant part of the problem, and recent studies of ``democratic hypocrisy'' indicate there may be more active complicity than this formulation suggests \parencite{Simonovits.2022.10.1086/719009ygp,Carey.2020.10.1080/17457289.2020.1790577, Graham.2020.10.1017/s0003055420000052, Svolik.2023.10.1353/jod.2023.0000}. As Cohen et al. \parencite*[264]{Cohen.2023.10.1111/ajps.12690} remark in a recent study of citizens' commitments to democracy when illiberals are in power, ``citizens are not always naive victims. ... Authoritarian candidates often openly signal plans to centralize power and repress dissent; their victory suggests a critical mass of amenable voters.'' Even if in 2015 Polish voters might have been forgiven for judging hyperbolic the warning by Polish daily Gazeta Wyborcza that ``at stake in these elections is democracy itself'' \parencite{Wyborcza.2015.democ}, by the next election in 2019 those voting for PiS could not escape the question of just how much illiberalism they were willing to tolerate.
+
+PiS's success in delivering on many of its key election promises and the period of strong economic growth Poland enjoyed over the subsequent eight years may have chimed with a a popular conception of democracy that prioritises outcomes over procedures. The vulnerability of \emph{liberal} democracy in Poland possibly derives at least in part from Poles' inattention to -- if not necessarily hostility towards -- liberal-democratic principles and institutions. As Nooruddin has remarked in direct reference to the debate sparked by Bartels, it is possible that the flourishing of liberal democracy in the post-1989 era was largely ``a mirage...optimistically mistaken for the real thing'' \parencite[Nooruddin, in][17]{Bartels.2023.10.1093/isr/viad019}. Dawson and Hanley \parencite*[21]{Dawson.2016.10.1353/jod.2016.0015} have made a similar point, noting the paucity -- in post-1989 Central and Eastern Europe at least -- of ``genuinely liberal political platforms...based on shared commitments to the norms of political equality, individual liberty, civic tolerance and the rule of law''. After all, if a robust articulation of liberal democracy is in short supply, it is plausible to suppose that there is limited demand for it too.
+
+If democracy erodes from the top, the lines of fracture cannot but reflect weaknesses beneath. An emerging body of research at the intersection of polarisation, attitudes to democracy and support for the protagonists of backsliding suggests that contemporary democracies are vulnerable to subversion not because of disenchantment with liberal democracy itself, but because the partisan force of ``pernicious polarization'' \parencite[930]{Somer.2021.10.1080/13510347.2020.1865316} trumps respect for the system of rights and restraints through which that political system functions. While Wunsch et al. \parencite*[3]{Wunsch.2023.10.1080/13510347.2023.2203918} find that voters generally condemn democratic violations by public officials, Cohen et al. \parencite*[273]{Cohen.2023.10.1111/ajps.12690} conclude that ``authoritarian winners' support for the political system is at best contingent'', Mazepus and Toshkov \parencite*{Mazepus.2022.10.1177/00104140211060285} identify a greater propensity ``to stand up for democratic checks and balances'' among supporters of opposition parties, and Şaşmaz et al. \parencite*{Sasmaz.2022} and Fossati \parencite*{Fossati.2021.10.1177/1354068821992488} find greater acceptance among voters of anti-democratic actions if those actions benefit their preferred party. Building on these findings, Bryan \parencite*[3]{Bryan.2023.10.1177/00104140231152784} shows that in the presence of strong partisanship democratic principles may be sacrificed to partisan interests, with those in power reconceptualising democracy in illiberal terms, emphasising authoritarian solutions (which favour their party's agenda) and depreciating civil rights (which favour the agenda of those without power). As Hrbková et al. \parencite*{Hrbkova.2023.10.1177/13540688231156409} note, such partisan biases may be consequential even in unstable party systems with considerable voter volatility, to say nothing of party systems as clearly defined and sharply polarised as the Polish one.
+
+PiS's illiberal revolution has given rise to a substantial literature focusing on the nature of the institutional changes implemented and their consequences for liberal democracy, particularly at the EU level. However, comparatively less attention has been paid to the interaction between illiberalism, democratic values, polarisation and partisanship at the demand side. Chiopris et al. \parencite*{Chiopris.2021} use an experimental treatment to measure how receiving information about the autocratic intentions of PiS affects intentions to vote for them. However, their use of age cohorts as a proxy for democratic attitudes (on the basis that socialisation wholly during communism, partially during communism, or wholly during post-communist democracy implies varying levels of commitment to democracy) potentially introduces a confounder, as younger voters are more likely to be unstable in their vote choices and thus more prone to change their vote in response to negative information. 
+
+Svolik et al. \parencite*{Svolik.2023.10.1353/jod.2023.0000} find that those who vote for radical right parties in Poland are more likely to fail to punish hypothetical candidates for transgressions against liberal democracy. However, this study focuses purely on the question of \emph{revealed} preferences, without attending to the question of whether the greater tendency of those who vote for the radical right in Poland to overlook illiberal actions reflects lower levels of support for liberal-democratic principles. A full investigation of the interplay between liberal democracy and voting behaviour in backsliding countries requires an exploration of the link between declared preferences (what citizens say they think about liberal democracy) and revealed preferences (how they actually act in response to threats to that system).
+
+Svolik \parencite*[21--23]{Svolik.2019.10.1353/jod.2019.0039} identifies three potential answers to the question of why pro-democratic voters fail to punish political elites who depart from liberal-democratic norms: one, that ``voters have not had enough time or clarity to recognize a subversion of democracy for what it is''; two, that they ``do not care much about democracy in the first place''; and finally, that ``[d]eep social cleavages and acute political tensions...undercut the public’s ability to curb the illiberal inclinations of elected politicians.'' As Simonovits et al. \parencite*{Simonovits.2022.10.1086/719009ygp} have termed it, voters may be ``democratic hypocrites'' whose attitudes to liberal democracy -- and the ways in which they act upon those attitudes -- are subordinated to party-political concerns. In a context as polarised as contemporary Poland, where the stakes of the rivalry between the two sides of the political divide concern not only issues of policy but the metapolitical question of the very legitimacy of Poland's post-1989 transition to democracy \parencite{Bill.2020.10.1080/21599165.2020.1787161}, and where political debates are charged with affective polarisation \parencite{Górska.2019}, there is much potential for liberal-democratic values and practices to be observed in inconsistent and opportunistic fashion.
+
+\subsection{Hypotheses}
+The notion of democratic hypocrisy informs the three hypotheses tested here. The first hypothesis concerns the nature of attitudes towards liberal democracy. In line with the democratic hypocrisy thesis, we should expect to find that changes in the attitudes of party electorates to key norms of a liberal-democratic political system correspond to a change of government. When in office, PiS and its voters benefited from being able to subvert liberal democracy, while the then-opposition parties and their voters relied on it for protection from PiS's populist majoritarianism. Yet unless parties and voters on both sides have ideological preferences for liberal democracy that are so strong as to persist regardless of circumstance, a change of government alters their incentives to value those principles. 
+
+On entering opposition, PiS and its supporters faced a situation in which the illiberal strategies their side had benefited from while in power could now be used against them. Faced with a new government that had a strong mandate for swift and decisive action, their voters might be expected to place more value on the decisionist-curbing properties of liberal democracy. On the other hand, KO, Lewica and Trzecia Droga would, as new parties of government, be confronted with the frustrations of trying to satisfy their voters' desire for a reckoning with PiS in conditions of procedural complexity and legal uncertainty. In such circumstances, the successful use of legally-dubious shortcuts might raise demands for swifter action among an electorate more concerned with exacting revenge than observing liberal-democratic propriety. Accordingly, I hypothesise that while in the first two waves of the survey attitudes to liberal democracy will remain consistent, in the third wave \emph{PiS voters' level of agreement with liberal-democratic principles will increase (H1a)}, while \emph{KO, Lewica and Trzecia Droga voters' level of agreement with liberal-democratic values will decrease (H1b)}. In the case of Konfederacja I expect no change, as this party remains in opposition. 
+
+The second hypothesis concerns party electorates' evaluations of actually-existing liberal democracy. If attitudes to liberal democracy are held sincerely, then the absence of substantial reforms should be reflected in the persistence of evaluations despite the change in government. If the democratic hypocrisy thesis is correct, I expect that \emph{PiS's voters will become more negative in their evaluations of the state of Polish democracy (H2a)} in the third wave of the survey, and \emph{KO-Lewica-TD voters will become more positive (H2b)}.
+
+The third hypothesis concerns changes in how party electorates actually respond to illiberalism. If attitudes to liberal democracy are held sincerely and inform actions as well as evaluations, then we should expect all party electorates to remain consistent in their actions towards candidates with illiberal views. However, in conditions of democratic hypocrisy I expect \emph{PiS voters will be more likely to punish illiberal candidates in the third wave of the survey (H3a)}, while \emph{KO, Lewica and TD voters will become less lenient (H3b)}.
+
+\section{Data and methods}
+To test these hypotheses, I use data from an online survey tracking Poles' attitudes to and behaviours concerning liberal democracy over a 12-month period from April 2023 to April 2024. Quota sampling was used, with oversampling of younger respondents and those with lower levels of education as attrition rates were predicted to be higher in these demographics. These data were collected to ensure that after attrition between waves, the third wave would most closely approximate the quotas. The final sample closely approximates the Polish population with respect to gender and region, but respondents aged 65 or more, those with primary education, and those living in villages and small towns are undersampled. Poststratification weights are applied in the following analyses to correct for these discrepancies.
+
+\subsection{Operationalising and measuring declared attitudes and evaluations}
+Two sets of variables were used to operationalise attitudes towards liberal democracy for the purposes of testing H1a and H1b. Liberal-democratic attitudes are operationalised using the 7-item index as detailed in Claassen et al.\parencite*{Claassen.2023}. A confirmatory factor analysis of the seven component variables shows that they load on a single dimension, with an acceptable RMSEA statistic of 0.07. The factor scores for this variable were used as an index of liberal democracy, and the individual components of the variable were analysed separately.
+
+The second set of variables draws on questions from the European Social Survey \parencite{ESS10.2020} that measure the importance respondents attribute to various aspects of democracy. The survey used three variables taken verbatim from the ESS survey, and three new questions focusing on pluralism and accountability. 
+\\
+
+\noindent
+``How important do you think it is for democracy in general...''
+
+\begin{itemize}
+\item{...that the courts treat everyone the same? (ESS question}
+\item{...that constitutional courts are able to control the actions of governments when they exceed their powers? (New question} 
+\item{...that the rights of minority groups are protected? (ESS question}
+\item{...that everybody should have the right to express their opinions, even when those opinions are extreme? (New question}
+\item{...that the media are free to criticise the government? (ESS question)}
+\item{...that the media offer citizens trustworthy information which enables them to evaluate the government? (New question)}
+\end{itemize}
+
+A similar set of variables was used to test H2a and H2b. Again following the approach used in the ESS, for the six options above respondents were asked ``To what extent do you think each of the following statements applies in Poland?'' 
+
+To identify party electorates, I used a vote recall question included in the third wave of the survey, in which respondents were asked which party or coalition they voted for in the election of October 2023. This variable was used in preference to the vote intention variables used in each of the three waves, as the aim is to establish patterns of change and stability as they pertain to the crossover point of the election.\footnote{As might be expected in such a polarised party system, using a measure of vote intention from wave 3 yields a very similar result.} This variable distinguishes between the five aforementioned parties -- PiS, KO, Trzecia Droga, Lewica and Konfederacja -- supporters of other parties, and non-voters.
+
+For the Claassen et al index variable, the predicted values were estimated using a Bayesian ordinary least squares model, regressing the index variable on vote choice. For the seven constituent variables of this index, Bayesian bivariate ordinal regressions were used to regress each variable on vote choice, and estimates were taken of the probability that respondents would choose the most liberal position on each issue, conditional on vote choice. The same approach was used for the ESS-derived variables. 
+
+\subsection{Operationalising and measuring revealed preferences}
+For H3a and H3b, I used conjoint analysis to identify the extent to which candidates espousing illiberal views were punished by voters, conditional on vote choice. Conjoint models have two key qualities which are useful for the analysis at hand. First, they incorporate the multidimensional character of decision-making into an analysis of vote choices. By allowing the researcher to vary a number of factors in a single experiment, conjoint analysis makes it possible to estimate the impact of multiple components of an experimental treatment in the determination of an outcome, enabling the simultaneous testing of competing hypotheses \parencite[3]{Hainmueller.2014.10.1093/pan/mpt024}. Second, by giving respondents a variety of reasons to justify their choices, conjoint experiments mitigate the social desirability problems that often afflict experiments where the sole treatment concerns a variable susceptible to such problems. They are thus particularly advantageous when analysing the impact of illiberalism on vote choice, given the normatively positive associations of democracy in liberal-democratic polities \parencite{Simonovits.2022.10.1086/719009ygp}. 
+
+I used a paired conjoint design in which two candidates were presented to the respondent, with ten iterations of the choice. To increase the realism of the choice sets and to ensure that respondents made a fuller consideration of candidates than a pure focus on policy allows, I included information on a number of factors that were likely to be of relevance in the evaluation of candidates' suitability for office. \emph{Political experience} distinguishes candidates with 8 years of experience (two parliamentary terms in the Polish case), 4 years of experience, and new candidates without prior experience. \emph{Chance of getting elected} distinguishes between those who are unlikely to get elected, those who have a possibility of getting elected, and those who will probably get elected. \emph{Gender} distinguishes between male and female candidates, and age ranges from 23 to 57 years old, with three intermediate categories. For each of these variables a ``no information'' option was also included.
+
+Each candidate was associated with three policy positions. The first two policy positions were chosen at random from among possible stances on four issues chosen to be representative of contemporary economic and socio-cultural debates in Poland: the scope of child benefit\footnote{A universal child benefit policy was introduced by the PiS government in 2016. This policy introduced monthly benefit payments of 500 złoty per child - initially from the second child onwards, but subsequently for all children. While the introduction of this policy was initially contested by several opposition parties on the grounds of affordability, it has become an important touchstone of Polish politics.}, changes to personal income tax, introducing LGBT partnerships, and the law on abortion.
+
+The third policy position was chosen at random from ten possibilities. Six of these reflected a position contrary to the tenets of liberal democracy outlined in Claassen et al. \parencite{Claassen.2023}. These were:
+\begin{itemize}
+\item{governments should have the possibility to ignore court rulings that they regard as politically motivated;}
+\item{governments should be able to bend the law to solve urgent social and political problems;}
+\item{some citizens should be deprived of democratic rights on the basis of their political views;}
+\item{minority groups whose protests disturb the values of the majority should be deprived of the right to protest;}
+\item{governments should have the possibility to bend the rules in their favour if their predecessors have done so;}
+\item{political decisions should be made by experts and not politicians or ordinary people.}	
+\end{itemize}
+
+The remaining four policy positions concerned issues that were not directly related to liberal democracy. These were included to ensure that respondents were not only choosing between candidates with illiberal views. These policy positions were:
+\begin{itemize}
+\item{improving air quality by banning the sale of new cars that run on petrol;}
+\item{increasing tax on the sale of cigarettes;}
+\item{increasing access to state-funded childcare;}
+\item{increasing investment in public schools.}	
+\end{itemize}
+
+These choice sets thus enabled respondents to select between candidates who expressed a range of views on politically divisive and valence issues. In doing so, they may or may not be forced to consider whether to punish (or indeed, should they be so minded, to reward) a candidate for expressing illiberal views, or to overlook those views for the sake of other policy stances they agree with. Given 1500 respondents and a maximum of 10 variable levels this design has 98\% statistical power to detect an effect size of 0.05 \parencite{stat.power}.
+
+The responses to the conjoint questions were modelled using multilevel logistic regression, with each of the 10 candidate choices nested within respondents. Candidate choice was regressed on interacted policy choice and vote choice variables. The models were estimated within a Bayesian framework, which offers much greater flexibility for the analysis of quantities of interest. Models were estimated using the \emph{brms} package \parencite{brms.2017}, and quantities of interest were calculated using the \emph{marginaleffects} package \parencite{Bundock.2024}. 
+
+\section{Findings}
+Overall, the analyses indicate that declared attitudes to liberal democracy are -- albeit in varying measure -- responsive to a change in government, but that this is largely not reflected in the choices voters actually make.
+
+\subsection{Adherence to liberal-democratic values}
+Attitudes to liberal democracy show significant variation between the first and third wave. Approximately equal proportions of respondents had less pro-liberal views (37.9\%) or more pro-liberal views (36.9\%) in April 2024, while only a quarter (25.3\%) had not changed their views at all. In a minority of cases, the change was substantial, exceeding one standard deviation from the mean difference (-0.02) in a negative (9.8\%) or positive (9.2\%) direction. 
+
+\begin{figure}[!htbp]
+\centering
+  \caption{Support for liberal democracy, by party electorate} \label{libdem_change_plot}
+      \includegraphics[width=\textwidth]{libdem_change_plot.png}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \caption{Agreement with liberal-democratic principles, by party electorate} \label{claassen_most_lib}
+      \includegraphics[width=\textwidth]{claassen_most_lib_position.png}
+\end{figure}
+
+In the case of PiS, around twice as many respondents became more pro-liberal (50.6\%) as became less pro-liberal (25.7\%), and a notable minority (16.8\%) became much more pro-liberal, exceeding the mean by at least one standard deviation. KO's electorate was more likely over the same period to become less pro-liberal. Nearly half (48.1\%) held less pro-liberal views overall after the election, and 14\% by at least one standard deviation from the mean. At the same time, 30.4\% held more pro-liberal views. Among Lewica's voters, the proportion with an increase in pro-liberal views (30.4\%) slightly outweighed the proportion with less pro-liberal views (36.8\%).
+
+Figure \ref{libdem_change_plot} shows mean attitudes to liberal democracy for each party's electorate across the three waves of the survey. As expected, there are clear differences between parties, and across waves. There is a pronounced difference between PiS's electorate and that of KO and Lewica. In each of the waves, PiS's electorate is markedly less liberal than the mean Polish voter. Yet while there is no significant difference between April 2023 and October 2023, in April 2024 PiS's electorate was significantly more pro-liberal-democratic, albeit still less so than the average voter. KO voters moved in the other direction. In April 2023 and October 2023 the party's voters were substantially more pro-liberal-democratic than the average voter, but in April 2024 they were significantly less so, although still more pro-liberal than average. The electorate of Lewica did not change as substantially after October's election, but still saw some movement away from a strongly pro-liberal position. The electorates of Konfederacja and Trzecia Droga, on the other hand, occupied an intermediate position.
+
+To understand better what is driving these changes, we need to look at the distributions of the component variables. For each of the seven Claassen et al variables, Figure \ref{claassen_most_lib} plots the predicted probability of respondents giving the most pro-liberal-democratic response, conditional on their party membership. The light-shaded points correspond to the first wave of April 2023, the medium-shaded points to the second wave of October 2023, and the dark-shaded points to the third and final wave of April 2024. I focus on the most pro-liberal-democratic response (either ``strongly agree'' or ``strongly disagree'', depending on the direction in which the variable is coded)\footnote{If necessary, variables have been recoded so that all variables run from the most illiberal response to the most liberal one.} because in most cases there is a strong skew towards preference for pro-liberal-democratic positions. The strongest test of commitment to liberal democracy is ultimately whether respondents are willing to strongly agree with its key premises.
+
+There are nevertheless some pronounced differences, both between parties and across waves. To take PiS first, there are two clear findings. First, as expected, PiS voters are on average less enthusiastic about liberal democracy than are those of KO and Lewica. In most cases the probability of their giving the most pro-liberal-democratic response is less than 50\%, and in many cases significantly so. Second, PiS voters are with one exception more likely to hold pro-liberal-democratic views in the third wave of the survey compared with the preceding two. 
+
+The results of the subcomponent analysis are mostly consistent with the overall picture. Overall, Polish voters object to political parties bending electoral laws in their favour, with a an average probability of over 50\% or more that party electorates will give the most liberal-democratic response to this question. The exception is PiS, whose electorate was more equivocal on the question in the first two waves, although in 2024 they became slightly more likely to object to such a practice. The electorates of KO and Lewica stand out for a particularly high probability of strong disagreement at bending electoral laws, although this figure decreases in the third wave.
+
+There is a similar distribution in the case of opposition to censoring critical media, but a much larger change in the third wave. In the first two waves, PiS supporters had a relatively small probability of being strongly opposed, but the proportion of those opposed increased substantially after the election. Conversely, while in the first two waves there was over 75\% probability that the electorates of KO and Lewica would be strongly opposed to media censorship, in the third wave the proportion of those expressing this view fell substantially, particularly in the case of KO.
+
+In the case of governments bending the law to achieve urgent objectives, the proportion of party electorates expressing strong opposition is significantly lower, but the patterns of change are similar to those observed in the previous cases. In waves 1 and 2, there was a 50\% probability or more that KO and Lewica voters would be strongly opposed to bending the law. However, in the third wave this decreased significantly in both cases. At the same time, the probability of PiS voters strongly opposing such actions rose from less than 25\% in the first two waves to around 33\% in the third wave.
+
+There was an even more significant shift in the case of whether governments should be able to ignore court rulings they deem politically motivated. The probability of PiS voters strongly disagreeing with this idea was less than 20\% in the first two waves, but rose to 25\% in the third wave. There was a far more significant change in the case of KO and Lewica voters, who after the election were much less likely to express strong opposition to governments ignoring court rulings.
+
+Similarly, in waves 1 and 2 there was a less than 20\% probability that PiS's voters strongly opposed ignoring parliament if it opposed the will of the government, in the third wave this rose to 25\%. At the same time, the probability of KO voters strongly opposing this fell from around 50\% in the second wave to only 30\% in the third wave. There was, however, little change in the case of Lewica. 
+
+In the cases of pluralism and voting rights, the picture is somewhat different. While PiS voters are significantly less likely than their KO and Lewica counterparts to strongly oppose the idea that there should be only one political party, and only slightly more likely to express opposition in the third wave, the probability of KO and Lewica voters giving this response remains above 50\%. Where questioning the right of uninformed voters to vote is concerned, the probability of KO and Lewica voters opposing this solution rises across each of the three waves, and does not change in the case of PiS.
+
+The electorates of the remaining two parties, Konfederacja and Trzecia Droga, generally fall in between the two extremes. Konfederacja's electorate is characterised by greater stability of opinion, with no changes that are unambiguously different to the preceding wave. There is more variation in the case of Trzecia Droga. In the cases of bending electoral laws, censoring critical media, and allowing the government to bend the law or ignore court rulings, the party's electorate follows that of its coalition counterparts, becoming less likely to strongly oppose these actions.
+
+As Figure \ref{essgen_most_lib} shows, Poles' assessments of the importance of key liberal democratic principles vary by party, and in some cases across waves. The most significant differences between the main parties' electorates can be seen in the key cases of the relationship between the constitutional courts and media. In waves 1 and 2, the probability of KO voters considering it very important that constitutional courts control the government was around 75\%, with Lewica voters also highly likely to hold such a view. By contrast, the probability of a PiS voter holding these views was only around 30\%. However, in the third wave, KO and Lewica voters are less likely to see control by constitutional courts and the media as very important, while PiS voters are more likely to place emphasis on this.
+
+\begin{figure}[!htbp]
+\centering
+  \caption{Importance of liberal-democratic principles, by party electorate} \label{essgen_most_lib}
+      \includegraphics[width=\textwidth]{essgen_most_lib_position.png}
+\end{figure}
+
+There is less of a difference in electorates' attitudes with respect to the court and the media as they relate to the citizen. In each case, there is a high probability that party electorates accord great importance to this principle, although there is still a significant difference between KO and Lewica voters on the one hand, and PiS voters on the other. PiS voters are significantly less likely than KO and Lewica voters to agree that it is important that the media give trustworthy information, although the difference is one of degree rather than kind. In the case of the media, there is a slight difference in the third wave, with PiS voters more likely to see it as very important that the media supplies trustworthy information, while KO and Lewica electorates are slightly less likely to hold this view.
+
+The probability of thinking it is important for democracy that everyone should be able to express their views varies between party electorates. KO voters are most likely to hold this view, followed by supporters of Lewica and Trzecia Droga. Konfederacja and PiS voters are less likely to see freedom of expression as important, although again the difference is relative. In the case case of minority protections, there is a much more substantial difference. While there is more than a 50\% probability of a KO or Lewica voter considering minority protections very important, this figure falls to less than 25\% in the case of Konfederacja voters, and it is not much higher among PiS voters. In both cases there is little difference across waves, although PiS voters are slightly more likely to think it important that everyone can express their views, while KO voters give slightly less priority to this principle.
+
+Overall, then, these findings are mostly in line with expectations. H1a is fully supported, with PiS voters showing a marked increase in pro-liberal-democratic attitudes, and significant proportions opposing political manipulation and media censorship to a much greater extent than in the pre-election waves. However, H1b is only partially supported; while KO and Lewica voters generally moved towards less pro-liberal views, some pro-liberal attitudes persisted, and the changes among Trzecia Droga voters were more varied. 
+
+\subsection{Perceptions of actually-existing liberal democracy}
+When asked whether the aforementioned principles of liberal democracy actually hold sway, party electorates differ between the pre-election and post-election waves, often substantially. As shown in Figure \ref{esspol_most_lib}, the largest differences concern the media's ability to hold the government to account and the freedom of individuals to express their views. In waves 1 and 2, the probability of KO supporters strongly agreeing that the media was able to criticise the government was 15\% or less, and the figure for Lewica was even lower. Yet after the election, the probability of KO and Lewica voters being very content with the media's capacity to hold the government to account rose to over 40\%, while in the case of PiS's electorate it fell from just over 40\% to just over 20\%.
+
+\begin{figure}[!htbp]
+\centering
+  \caption{Perception of realisation of liberal-democratic principles, by party electorate} \label{esspol_most_lib}
+      \includegraphics[width=\textwidth]{esspol_most_lib_position.png}
+\end{figure}
+
+There is a similar shift in the case of freedom of self-expression. In waves 1 and 2, the probability that a KO or Lewica supporter was very content with the extent to which Polish democracy secured freedom of self-expression was 10\% or less. After the election, this rose to over 25\%. At the same time, the corresponding proportions among PiS voters fell from 44\% to 23\%.
+
+There are smaller but also significant differences in three of the remaining cases. While there was no clear change in the probability that PiS voters strongly believe the constitutional court is capable of controlling the government, the likelihood of believing this rose among KO and Lewica voters after the election. Similarly, while few supporters of any party strongly believe that the media gives trustworthy information, KO and Lewica voters were more likely to believe this after the election, while PiS voters were less likely to. There is a similar pattern in the case of minority rights: PiS's voters remain more likely to strongly believe that minorities are protected by Polish democracy, but KO and Lewica voters became more likely to believe this after the election.
+
+The one exception to the variation observed elsewhere is the case of perceptions that the courts treat everyone fairly. While KO and Lewica voters became slightly more likely to hold this view after the election, it is still an opinion held by very few of the electorates of any party.
+
+This analysis thus partly bears out the hypotheses about voters' perceptions of Polish democracy. There is only limited support for the hypothesis that PiS's voters would become more negative in their evaluation following the election (H2a). However, these results may be intelligible in the light of the nature of reforms made by the government, which succeeded in removing PiS's control over public media while achieving less success in undoing PiS's capture of key judicial institutions. The expectation that KO, Lewica and Trzecia Droga voters would hold more positive attitudes to actually-existing liberal democracy (H2b) is broadly borne out by the evidence, but it is worth noting that -- as in the case of PiS -- by far the most significant change in perception concerns the media, where genuine change actually did occur. 
+
+\subsection{Electoral punishment of illiberal candidates}
+Figure \ref{conjoint_plot} plots marginal means of the probability of choosing candidates who breach liberal-democratic norms, conditional on the party a respondent voted for in the October 2023 election. If the estimates are lower than 0.5, the average party voter is likely to prefer candidates who do not offer illiberal ideas or policies. Conversely, if estimates are higher than 0.5 then they are likely to prefer such candidates. 
+
+\begin{figure}[!htbp]
+\centering
+  \caption{Average marginal probability of voting for illiberal candidates, by party electorate} \label{conjoint_plot}
+      \includegraphics[width=\textwidth]{conjoint_plot.png}
+\end{figure}
+
+
+With the exception of the option ``Independent experts should make decisions'', candidates are generally more likely to be punished by voters for espousing illiberal preferences. In most other cases, party electorates are more likely to punish candidates with illiberal views, but the extent to which they do so varies.
+
+In all cases, candidates who advocate bending electoral rules if others did are more likely to be punished than rewarded for such views. There is no party-electorate divergence between waves. There is somewhat more ambivalence in the case of minority protests: in waves 1 and 3 Konfederacja voters were slightly more likely to choose a candidate who holds such a view, and the same was the case with PiS voters in wave 1. Voters are less tolerant of candidates who advocate removing political rights from others due to their views. 
+
+The most significant differences concern respect for the rule of law. While in the first wave KO voters were no more likely to punish candidates who advocated bending the law to solve problems than they were to reward them, in subsequent waves they were much more likely to punish such candidates, as were Lewica voters. Trzecia Droga voters also became more likely to punish these candidates. In wave 1, Konfederacja voters were slightly more likely to vote for those advocating bending the law, but by wave 3 they had turned against such candidates. PiS voters continued to be ambiguous on the issue, erring on the side of punishing such candidates in waves 2 and 3, but only slightly. Where ignoring court rulings is concerned, there was a clear and consistent opposition to such candidates on the part of the voters of all parties excepting PiS. In the first wave, PiS's electorate was more likely to reward such candidates, but by the third wave had shifted clearly to punishing candidates who advocate ignoring court rulings. 
+
+These findings do not lend unambiguous support to either hypothesis. Above all, it should be noted that candidates who openly espouse illiberal solutions do not  meet with voters' approval, which perhaps accounts for why political elites opposed to liberal democracy have been less strident in their articulation of that belief when compared to counterparts in other countries, such as Hungary.\footnote{It remains to be seen whether PiS voters would respond more positively to illiberal attitudes if their party was more active in ``owning'' the rhetoric of illiberalism.} Although KO, Lewica and Trzecia Droga voters remain somewhat more likely than PiS and Konfederacja voters to punish illiberal candidates, there are no consistent shifts that would suggest either a hypocritical post-electoral embrace of illiberal values on the part of the former, or an equally hypocritical rejection of illiberalism on the part of the latter. 
+
+\section{Conclusions}
+While Polish democracy may have been eroded from the top, and with little initial prompting from the electorate, the results of this study suggest that this erosion was facilitated by weaknesses in the structure of liberal-democratic values. Even if a majority of Poles remain nominally pro-democratic, their attitudes are nevertheless strongly influenced by party affiliation and political context. While Poles may not be entirely hypocritical about democracy, a substantial proportion of the electorate on both sides of the divide hold positions on liberal democracy that smack more of pragmatism than principle.
+
+By using panel data to study stability and change in attitudes over a period in which government changed hands, this study has shown that Poles' agreement with fundamental liberal democratic principles is prone to change in ways that may facilitate backsliding. When their party was in power, PiS voters were less critical of illiberal actions, but they became much more critical when PiS entered opposition, particularly with respect to the media and judiciary. Rather than a sudden conversion to the virtues of judicial independence and media pluralism, this suggests a partisan opportunism that helps explain why PiS supporters were willing to tolerate backsliding in the first place.
+
+However, there are also grounds for concern about whether supporters of the current government will wait patiently for the resolution of what is likely to be a long and frustrating process of restoring liberal democracy. The post-election decrease in enthusiasm for liberal-democratic principles among supporters of the governing parties, and their tendency to evaluate actually-existing liberal democracy more positively despite the paucity of tangible reforms to date, suggests that pragmatism may come to trump ideology. The increasing impatience of the more militantly anti-PiS elements of KO's support in particular -- the so-called "Strong Together" (\emph{Silni Razem}) contingent of activists -- raises the possibility that Polish democracy may settle into a post-illiberal equilibrium, with pro-government partisans content with a semi-reformed system in which efficient executive decisionism is relatively unencumbered by judicial control. Much will depend on whether the current government is ultimately prepared to risk acting against its own interests. 
+
+One the one hand, the reluctance of Poles to select candidates who openly negate liberal democracy gives some reassurance that there are limits to illiberalism. Yet in conditions where affective polarisation exerts such a powerful impact, it seems plausible to expect that voters might be willing to treat such candidates with more leniency if they come from their preferred party. Further research should explore this possibility. It will also be important to go beneath the surface of the aggregate-level conclusions drawn in this paper to investigate the key correlates of attitudinal change.
+
+\small
+\singlespace
+
+\printbibliography
+
+\end{document}
+
