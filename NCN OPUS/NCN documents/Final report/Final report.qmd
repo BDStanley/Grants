@@ -1,0 +1,101 @@
+---
+title: "NCN OPUS 20 Final Report"
+subtitle: "Project: *Partisan bias or indifference? Actually-existing democratic values and their consequences in Poland* (2020/39/B/HS6/00853)"
+author: "Ben Stanley (Principal Investigator)"
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - top=1.5cm
+      - bottom=1.5cm
+      - left=2cm
+      - right=2cm
+    fontsize: 11pt
+    mainfont: "Times New Roman"
+    linestretch: 1.0
+    pdf-engine: xelatex
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist[itemize]{topsep=2pt,itemsep=1pt,parsep=0pt}
+        \setlist[enumerate]{topsep=2pt,itemsep=1pt,parsep=0pt}
+        \usepackage{titlesec}
+        \titlespacing*{\section}{0pt}{6pt}{3pt}
+        \titlespacing*{\subsection}{0pt}{4pt}{2pt}
+        \setlength{\parskip}{2pt}
+        \setlength{\parindent}{0pt}
+---
+
+# 1. Most important achievements
+
+- **Three-wave nationally representative CAWI panel survey of Polish citizens (N $\approx$ 1,400--1,800 per wave), spanning a change of government.** Waves were fielded in April 2023 (PiS in power), October 2023 (immediately before the parliamentary election that ended PiS rule), and April 2024 (after the formation of the Tusk-led pro-democratic coalition). The panel design, originally planned around the 2023 electoral cycle, was successfully implemented despite the operational complexities of survey work bridging an actual change of executive power.
+
+- **Pilot survey (May 2022) testing a new battery of items to measure actually-existing democratic values.** The pilot informed the design of the main panel survey and contributed methodologically to a large international collaboration (see below).
+
+- **Conjoint experiment embedded in all three panel waves**, enabling causal estimation of the impact of partisanship and democratic values on willingness to reward or punish candidates who breach liberal-democratic norms. To the best of my knowledge, this is the first conjoint experiment of its kind to be fielded in a panel format across an actual change of government in a democratically backsliding case.
+
+- **Four peer-reviewed publications produced or accepted during the grant period**:
+    1. **Claassen et al. (2024), "Conceptualizing and Measuring Support for Democracy: A New Approach"**, accepted at *Comparative Political Studies*. A 25-author cross-national study covering 19 countries; the Polish data and conceptual contribution from this project were funded under the OPUS 20 grant (explicitly acknowledged).
+    2. **Stanley (2026), "Democratic hypocrisy in practice: a panel study of revealed preferences for liberal democracy in Poland"**, published in *East European Politics* (open access, doi:10.1080/21599165.2026.2656881). Sole-authored, drawing directly on the three-wave panel and conjoint experiment.
+    3. **Bill and Stanley (2025), "Democracy after Illiberalism: A Warning from Poland"**, *Journal of Democracy* 36(3): 16--32.
+    4. **Bill and Stanley (2025), *Good Change: The Rise and Fall of Poland's Illiberal Revolution***, Stanford University Press (monograph, forthcoming 2025).
+
+- **Two further outputs nearing completion**: a chapter on democratic hypocrisy and the conjoint findings (for an edited volume in preparation) and an article for *Politics and Governance*, both at advanced draft stage.
+
+- **Extensive international and domestic dissemination**: papers based on project data have been presented at APSA (2023, 2025), ASEEES (2025), ECPR (2024, 2025, 2026), IPSA (2025), PSA (2026), the EUI Florence workshop on democratic backsliding (June 2024), the ESS Lisbon conference (July 2024), the Södertörn/Stockholm workshop (May 2024), the Illiberalism conference in Washington DC (November 2023), the Cambridge POLIS seminar series (2024, 2025), Vienna (December 2024), Manchester (December 2025), and the Taube Center conference in Stockholm (June 2026), among others. In total, the project funded over 15 international conference and workshop presentations.
+
+- **Public-facing dissemination in Poland**: collaboration with the Fundacja Nowej Wspólnoty (FNW) and the SWPS Centre for the Study of Democracy on two large public-opinion reports on ideological and affective polarisation in Poland (released in 2025), based on a co-funded survey instrument that built directly on the OPUS panel design. A keynote lecture, "A new beginning for democracy? Poland after the PiS government", delivered to a non-academic audience, drew on project findings.
+
+- **Methodological contribution to the international literature on the measurement of support for democracy**: through the Claassen et al. (2024) collaboration, the project's pilot work fed into a new 17-item battery covering all eight V-Dem components of liberal democracy, now available to the cross-national research community.
+
+# 2. Short description of the project's results
+
+The project produced both *empirical* and *methodological* findings. Empirically, the panel and conjoint data show that Polish citizens consistently penalise candidates who espouse illiberal policy positions in trade-off-laden, multidimensional choice scenarios. This penalty is observable across both wings of the partisan divide and was not significantly altered by the change of government in 2023. Affective polarisation, while substantial, does not eliminate the punishment effect for democratic norm breaches in a conjoint setting --- contrary to the strong form of "democratic hypocrisy" theories drawn from the United States. The Polish electorate appears to display *less* hypocrisy with respect to revealed preferences for liberal democracy than the US case literature would predict.
+
+However, this comparatively encouraging finding is qualified by two further results. First, revealed preferences for liberal democracy did *not* become significantly stronger after the PiS lost power, even among voters whose preferred party was now in government. This implies that democratic restoration cannot rely on a "natural correction" in public attitudes once illiberal incumbents are removed. Second, the standard survey measures used historically in Poland and elsewhere materially overstate the depth and homogeneity of support for *liberal* democracy: when the new 17-item V-Dem-aligned battery is fielded, the connections between the eight components of liberal democracy are far weaker than the "support for democracy" literature typically assumes, particularly in cases such as Poland and Hungary where political events have stress-tested these institutions.
+
+Methodologically, the project (i) provides a validated Polish-language adaptation of the new measurement battery; (ii) furnishes a publicly usable three-wave panel dataset with embedded conjoint experimental data; and (iii) demonstrates the feasibility and value of using conjoint methods in a panel format around a real-world change of government --- a research design now ready to be exported to other backsliding/restoration cases. Substantively, the *Good Change* monograph and the *Journal of Democracy* article integrate these findings into a broader analytical account of how and why Poland's illiberal turn proved electorally reversible, and what the case tells us about the "post-illiberal trilemma" facing governments that seek to restore the rule of law quickly, legally and effectively.
+
+# 3. Achievement of objectives stated in the funding proposal
+
+The proposal set out three research questions and three project objectives (one empirical, one methodological, and one theoretical/comparative).
+
+**Research questions** (from the *Detailed description*, pp. 1--2):
+
+1. *Do Polish citizens genuinely value liberal democracy as a set of principles and as a political system, and to what extent?* --- **Achieved.** Addressed in the *East European Politics* article and in Claassen et al. (2024). The combination of the new 17-item battery and the conjoint design provides a more behaviourally grounded answer than has previously been available for the Polish case.
+2. *Do Polish citizens view the post-2015 changes as a subversion of liberal democracy, the pursuit of a different democratic model, or as "more of the same"?* --- **Achieved.** Addressed in the panel survey items on evaluations of post-2015 institutional change, in the *Good Change* monograph, and in the *Journal of Democracy* article.
+3. *Does political partisanship inhibit the capacity of Polish voters to hold illiberal political elites to account?* --- **Achieved.** This is the core question of the *East European Politics* article. The conjoint results show that partisanship moderates but does not eliminate the punishment effect, even under conditions of strong affective polarisation.
+
+**Stated objectives** (from the *Detailed description*, pp. 2--3):
+
+- *Empirical objective: to contribute insights from the Polish case to the comparative literatures on democratic backsliding, democratic values and affective polarisation.* --- **Achieved**, with outputs in *Comparative Political Studies*, *East European Politics*, *Journal of Democracy*, and Stanford University Press.
+- *Methodological objective: to develop new survey questions and a panel/conjoint design less affected by social desirability bias.* --- **Achieved**, both through the bespoke Polish items and through the collaboration on the 17-item V-Dem-aligned battery.
+- *Theoretical objective: to build hypotheses on the interaction of democratic values, polarisation and voting behaviour beyond the dominant US case.* --- **Achieved**; this is the central theoretical contribution of the *EEP* article and of the book.
+
+**Objectives partly achieved / not achieved.** The original work plan envisaged the analysis and writing-up phase concluding by September 2024. In practice, this stage was extended (and the project was formally extended by three months) for two reasons: (i) the October 2023 Polish parliamentary election --- which fell during the second-wave fieldwork --- created a substantively important "natural experiment" that warranted a third wave timed to the post-election period rather than a pre-election one, so the original three-wave timetable was rescheduled around the election; (ii) the additional value of capturing the change of government meant that the analytical work for the panel-based article (Stanley 2026) was deferred until after the third wave was fully fielded and cleaned. As a consequence, the number of Polish-language articles led by the co-investigator is lower than originally envisaged: one international article (Stanley 2026) replaced what was provisionally planned as two outputs, one of which was to be in Polish. The Polish-language dissemination shortfall has been more than compensated for by the two FNW/SWPS public-opinion reports in Polish, by the *Good Change* monograph (which has been received in Poland as a major intervention in domestic debate on the post-2015 period), and by Polish-language commentary and media engagement.
+
+**Additional goals achieved beyond the proposal.** Several outputs were not anticipated at the time of application but emerged from the project's data and network:
+
+- The Stanford University Press monograph *Good Change* was not part of the original work plan; it grew out of the analytical synthesis of the panel data and the public-attitudes literature, and now serves as the single most visible output of the project.
+- The *Journal of Democracy* article was likewise not planned but was solicited on the strength of the project's empirical findings.
+- The Claassen et al. (2024) cross-national collaboration in *Comparative Political Studies* was not foreseen; the project's pilot work allowed Poland to be included as one of 19 national samples in a major international measurement effort.
+- The collaboration with FNW on two large-scale Polish-language public opinion reports on polarisation, and a co-funded follow-up survey using project instrumentation, has extended the project's reach into Polish public debate.
+- The post-doctoral team member envisaged in the original proposal was not ultimately recruited; the corresponding budget line was reallocated (with NCN agreement) to additional data collection, allowing the original panel sample size to be maintained against higher-than-anticipated wave-to-wave attrition.
+
+# 4. Current and expected impact
+
+**Impact on the discipline (political science / democratisation studies).** The project's most immediate disciplinary impact is on the empirical literature on democratic backsliding and citizen-level "democratic hypocrisy". Until now, the strong-form hypocrisy result --- that pro-democratic voters readily tolerate norm violations by their preferred party --- has rested almost entirely on US-based, often cross-sectional, often hypothetical-scenario data. By providing the first panel-conjoint evidence from a European backsliding case that has actually experienced a change of government, the project contributes a key piece of comparative evidence that should reshape how this literature treats the generalisability of US findings. Citation patterns for the *East European Politics* article and the *Journal of Democracy* piece are already developing in the months since publication.
+
+**Impact on the measurement of democratic support.** Through Claassen et al. (2024), the project has contributed to a methodological turn in the field --- away from monolithic "support for democracy" items and towards componentwise measures aligned with the V-Dem conceptualisation of liberal democracy. This battery is now available for replication, extension and inclusion in major cross-national projects (e.g., the European Social Survey, the World Values Survey), and the *CPS* article is becoming a reference point for ongoing efforts to redesign the standard democratic-attitudes question wording.
+
+**Impact on Polish political science and area studies.** The project's combination of (i) a publicly available, well-documented three-wave panel with embedded experiments and (ii) the *Good Change* monograph provides Polish-studies scholars and CEE specialists with both a primary data resource and an analytical reference work for understanding the 2015--2023 period and its aftermath. The book in particular speaks to historians, sociologists and journalists as well as political scientists, and its publication by Stanford University Press in English ensures international reach.
+
+**Impact on adjacent disciplines.** Several findings have implications beyond political science:
+
+- For **political psychology and social psychology**, the panel evidence on the stability of revealed preferences for liberal democracy across a change in incumbency speaks to debates on motivated reasoning and partisan identity.
+- For **constitutional law and rule-of-law studies**, the "post-illiberal trilemma" articulated in the *Journal of Democracy* article and developed in *Good Change* gives normative-legal scholars an empirically grounded vocabulary for thinking about the legitimacy of "militant democracy" measures used by restoration governments.
+- For **communication studies** and the study of polarisation, the FNW/SWPS reports and the panel data on affective polarisation contribute to an evidence base usable in debates about media regulation and democratic deliberation in Poland.
+
+**Expected future impact.** The dataset is being prepared for archiving with appropriate documentation; once released, it will be available for secondary analysis well beyond the lifetime of the grant. Two further outputs (a comparative book chapter and a follow-up article extending the conjoint design) are at advanced stages of preparation. The instrumentation developed here is currently being adapted for use in a successor survey (Dec 2025), which will allow the project's measurement framework to track Polish public opinion through the post-2025 presidential cycle and the consolidation (or otherwise) of the post-illiberal political order. Beyond Poland, the design is directly portable to other cases of attempted democratic restoration --- Hungary, the United States, Israel --- where comparable questions about the stability of citizen-level democratic commitments under conditions of alternation in power are increasingly salient.
+
+**Public and policy impact.** Through the FNW/SWPS polarisation reports, media engagement around the publication of *Good Change* and the *Journal of Democracy* article, and a public lecture on Poland after the PiS government, the project's findings have reached audiences well beyond the academy in both Poland and abroad. The framing of the "post-illiberal trilemma" has been picked up in policy discussion of how the Tusk government should approach institutional repair, and the empirical finding that revealed democratic preferences do not strengthen automatically after illiberal incumbents lose power has direct implications for civic-education and pro-democracy advocacy strategies in Poland and comparable contexts.
