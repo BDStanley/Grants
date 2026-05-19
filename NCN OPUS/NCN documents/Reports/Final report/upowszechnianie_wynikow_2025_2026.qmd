@@ -1,0 +1,57 @@
+---
+title: "Upowszechnianie wyników (2025--2026)"
+subtitle: ""
+author: ""
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - top=1.5cm
+      - bottom=1.5cm
+      - left=2cm
+      - right=2cm
+    fontsize: 11pt
+    mainfont: "Times New Roman"
+    linestretch: 1.0
+    pdf-engine: xelatex
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist[itemize]{topsep=2pt,itemsep=1pt,parsep=0pt}
+        \setlist[enumerate]{topsep=2pt,itemsep=1pt,parsep=0pt}
+        \usepackage{titlesec}
+        \titlespacing*{\section}{0pt}{6pt}{3pt}
+        \titlespacing*{\subsection}{0pt}{4pt}{2pt}
+        \setlength{\parskip}{2pt}
+        \setlength{\parindent}{0pt}
+        \usepackage{polski}
+        \usepackage[polish]{babel}
+---
+
+# 1. Konferencja/Sympozjum
+
+PI uczestniczył w konferencji *APSA Annual Meeting* (American Political Science Association) we wrześniu 2025 r. Wygłosił on referat oparty na danych projektu, dotyczący ujawnionych preferencji wobec liberalnej demokracji w Polsce w świetle eksperymentu koniunkcyjnego osadzonego w trójfalowym panelu CAWI.
+
+PI uczestniczył w konferencji *ECPR General Conference* w sierpniu 2025 r. Wygłosił on referat na podstawie danych panelowych projektu, dotyczący "demokratycznej hipokryzji" w polskim elektoracie w okresie zmiany rządu.
+
+PI uczestniczył w konferencji *IPSA World Congress* (International Political Science Association) w lipcu 2025 r. Wygłosił on referat na podstawie wyników projektu dotyczący stabilności postaw demokratycznych w warunkach zmiany władzy.
+
+PI uczestniczył w konwencji *ASEEES Annual Convention* (Association for Slavic, East European, and Eurasian Studies) w listopadzie 2025 r. Wygłosił on referat oparty na danych projektu i monografii *Good Change*, dotyczący "post-illiberal trilemma" i wyzwań restauracji demokratycznej w Polsce po 2023 r.
+
+PI uczestniczył w konferencji *PSA Annual Conference* (Political Studies Association) w marcu 2026 r. Wygłosił on referat oparty na danych z trójkrajowego badania BDCS (Polska, Wielka Brytania, Hiszpania) z eksperymentem koniunkcyjnym, dotyczący instytucjonalnej heterogeniczności tolerancji dla łamania norm demokratycznych.
+
+# 2. Wydarzenie popularyzujące naukę
+
+W maju 2025 r. opublikowano polski raport o polaryzacji ideologicznej, afektywnej i "doświadczanej", współfinansowany z grantu OPUS i jawnie potwierdzony w podziękowaniach.
+
+# 3. Inne formy upowszechniania wyników
+
+Cztery artykuły w *Kulturze Liberalnej* (2025--2026) oparte na danych projektu; szeroka relacja w mediach (TVN24, Polskie Radio, Onet, Polsat, *Gazeta Prawna*); recenzje monografii *Good Change* w *TLS* i *Foreign Affairs*; podcasty *Review of Democracy* (CEU) i *New Books Network*.
+
+# 4. Strona internetowa
+
+<https://swps.pl/nauka-i-badania/projekty/42-projekty-naukowe/33513-plemiennosc-czy-obojetnosc-badanie-rzeczywiscie-istniejacych-wartosci-demokratycznych-i-ich-konsekwencji-w-polsce>
+
+# 5. Zamieszczenie pozycji w publicznej bazie danych
+
+Pięć zbiorów danych zdeponowano w Harvard Dataverse: *Polarisation in Poland 2025* (DVN/OMWQR0); *Polarisation in Poland Dec 2025* (DVN/C76JXD); *Polarisation in UK Dec 2025* (DVN/BRJS4U); *BDCS surveys Dec 2025: PL, GB, ES* (DVN/FNESP1); *Postliberal attitudes in Poland March 2026* (DVN/YL1BVE).
