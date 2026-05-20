@@ -1,0 +1,38 @@
+---
+title: "Opis popularnonaukowy"
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - top=1.5cm
+      - bottom=1.5cm
+      - left=2cm
+      - right=2cm
+    fontsize: 10.5pt
+    mainfont: "Times New Roman"
+    linestretch: 1.0
+    pdf-engine: xelatex
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist[itemize]{topsep=5pt,itemsep=4pt,parsep=0pt,leftmargin=*}
+        \setlist[enumerate]{topsep=5pt,itemsep=4pt,parsep=0pt,leftmargin=*}
+        \usepackage{titlesec}
+        \titlespacing*{\section}{0pt}{14pt}{7pt}
+        \titlespacing*{\subsection}{0pt}{10pt}{5pt}
+        \setlength{\parskip}{5pt}
+        \setlength{\parindent}{0pt}
+        \usepackage{polski}
+        \usepackage[polish]{babel}
+        \usepackage{titling}
+        \setlength{\droptitle}{-2em}
+        \posttitle{\par\end{center}\vspace{-1.5em}}
+---
+
+**Czy obywatele bronią demokracji, gdy widzą, że jest podważana?** Projekt szukał odpowiedzi na to pytanie w polskim kontekście lat 2015--2024 --- okresie, w którym po raz pierwszy w III RP doszło do prób systemowego ograniczenia niezależności sądów, mediów publicznych i innych instytucji liberalnej demokracji, a następnie do wyborczej alternacji władzy w 2023 r. Polska stała się dzięki temu nietypowo wartościowym "laboratorium" obywatelskich postaw wobec demokracji: można było zbadać nie tylko, co Polacy *mówią* o demokracji, ale i jak *zachowują się* wówczas, gdy realna polityka oferuje im wybór między lojalnością partyjną a obroną zasad demokratycznych.
+
+**Co zostało zrobione.** Zrealizowano trzy fale ogólnopolskiego badania panelowego (kwiecień 2023, październik 2023 i kwiecień 2024) na próbach $1\,400$--$1\,800$ osób, obejmujących okres przed wyborami, tuż przed wyborami i po utworzeniu rządu obecnej koalicji. W każdej fali respondenci wypełniali nową, opartą na międzynarodowym standardzie V-Dem baterię pytań o ośmiu wymiarach liberalnej demokracji (wolne wybory, niezależne sądy, kontrola władzy wykonawczej, prawa mniejszości, wolność mediów, swoboda zgromadzeń, równość wobec prawa, wolność słowa). Równolegle uczestniczyli w eksperymencie typu conjoint, w którym musieli dokonywać wyborów między hipotetycznymi kandydatami różniącymi się jednocześnie pod kilkoma względami, w tym pod względem stosunku do norm demokratycznych. Projekt rozszerzono następnie o trójkrajowy sondaż porównawczy w Polsce, Wielkiej Brytanii i Hiszpanii ($N \approx 4\,500$), nową baterię postaw "postliberalnych" w sondażu marcowym 2026 r. oraz dwa powiązane publiczne raporty o polaryzacji w Polsce (maj 2025 i czerwiec 2026) opracowane we współpracy z Fundacją Nowej Wspólnoty i Centrum Studiów nad Demokracją SWPS. Wszystkie dziewięć zbiorów danych udostępniono publicznie w Harvard Dataverse.
+
+**Co się okazało.** Po pierwsze, polscy wyborcy *konsekwentnie karzą* kandydatów łamiących normy demokratyczne --- po obu stronach sceny politycznej, i po obu stronach zmiany rządu w 2023 r. Wbrew dominującej w literaturze amerykańskiej tezie o "demokratycznej hipokryzji" --- czyli skłonności do przymykania oka na łamanie reguł przez własną partię --- polski elektorat okazuje się mniej hipokrytyczny, niż przewidywałaby teoria. Po drugie, choć Polacy karzą łamanie norm w wyborach, ich ogólne *poparcie* dla liberalnej demokracji *nie wzmocniło się* po przegranej PiS, nawet wśród wyborców partii rządzących. Demokratyczna restauracja nie może więc liczyć na to, że poparcie dla liberalnej demokracji wzrośnie samo z siebie po zmianie rządu; przywracanie praworządności wymaga osobnych działań nakierowanych na umocnienie obywatelskich postaw demokratycznych. Po trzecie, standardowe pytania sondażowe (CBOS, World Values Survey) przeszacowują spójność obywatelskiego poparcia dla liberalnej demokracji: powiązania między jej składowymi są znacznie słabsze, niż dotąd zakładano. Po czwarte, idee "postliberalne" --- krytyka indywidualizmu, ekspertokracji czy oddzielenia państwa od etyki --- są wśród zwykłych obywateli rozpoznawalnym, spójnym syndromem postaw, a nie tylko elitarnym projektem intelektualnym; w Polsce silnie wiążą się z wyborem partyjnym (m.in. z głosowaniem na Karola Nawrockiego w drugiej turze wyborów prezydenckich 2025 r.).
+
+**Dlaczego to ma znaczenie.** Dla nauki: projekt wnosi jedne z pierwszych dowodów panelowo-eksperymentalnych z europejskiego przypadku rzeczywistej regresji i restauracji demokratycznej, co istotnie koryguje wnioski wyciągane dotąd niemal wyłącznie z badań amerykańskich. Sformułowana w ramach grantu kategoria "post-illiberal trilemma" --- napięcia między *szybkością*, *legalnością* i *skutecznością* działań restauracyjnych --- jest podchwytywana w międzynarodowej debacie o Węgrzech, Stanach Zjednoczonych i Izraelu. Dla społeczeństwa: ustalenie, że polska polaryzacja afektywna jest *umiarkowana*, a nie ekstremalna, oraz że obywatele *karzą* łamanie reguł, stanowi empirycznie ugruntowaną korektę popularnej narracji o "plemiennej" Polsce; wyniki upowszechniano szeroko w mediach (TVN24, Polskie Radio, Onet, Polsat News, *Gazeta Prawna*, ośmioczęściowa seria w *Kulturze Liberalnej*). Dla polityki publicznej: jednoznaczny sygnał, że odbudowa praworządności wymaga aktywnego zajęcia się postawami obywatelskimi, a nie zakładania, że "powrócą same". Dla nauk społecznych Europy Środkowo-Wschodniej: dowód, że region może być źródłem teorii o znaczeniu uniwersalnym, a nie tylko miejscem testowania koncepcji powstałych na Zachodzie.

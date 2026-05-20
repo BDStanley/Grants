@@ -1,0 +1,37 @@
+---
+title: "Lay summary"
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - top=1.5cm
+      - bottom=1.5cm
+      - left=2cm
+      - right=2cm
+    fontsize: 10.5pt
+    mainfont: "Times New Roman"
+    linestretch: 1.0
+    pdf-engine: xelatex
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist[itemize]{topsep=5pt,itemsep=4pt,parsep=0pt,leftmargin=*}
+        \setlist[enumerate]{topsep=5pt,itemsep=4pt,parsep=0pt,leftmargin=*}
+        \usepackage{titlesec}
+        \titlespacing*{\section}{0pt}{14pt}{7pt}
+        \titlespacing*{\subsection}{0pt}{10pt}{5pt}
+        \setlength{\parskip}{5pt}
+        \setlength{\parindent}{0pt}
+        \usepackage[english]{babel}
+        \usepackage{titling}
+        \setlength{\droptitle}{-2em}
+        \posttitle{\par\end{center}\vspace{-1.5em}}
+---
+
+**Do citizens defend democracy when they see it being undermined?** This project sought an answer in the Polish case of 2015--2024 --- a period in which, for the first time since 1989, an elected government systematically attempted to limit the independence of courts, public media, and other liberal-democratic institutions, before losing power at the ballot box in 2023. Poland thus became an unusually valuable "laboratory" for studying citizens' real attitudes towards democracy: it allowed us to ask not only what Poles *say* about democracy but how they *behave* when politics actually forces them to choose between party loyalty and democratic principle.
+
+**What was done.** The project ran three waves of a nationally representative panel survey (April 2023, October 2023, April 2024) with $1\,400$--$1\,800$ respondents per wave, spanning the pre-election period, the immediate pre-election moment, and the formation of the current coalition government. In each wave respondents answered a new, V-Dem--aligned battery covering eight dimensions of liberal democracy (free elections, independent courts, executive constraint, minority rights, free media, freedom of assembly, equality before the law, freedom of speech). They also took part in a conjoint experiment in which they had to choose between hypothetical candidates differing simultaneously on several traits, including respect for democratic norms. The project was then extended through a three-country comparative survey of Poland, the United Kingdom and Spain ($N \approx 4\,500$), a new "post-liberal" attitudes battery fielded in March 2026, and two linked public reports on polarisation in Poland (May 2025 and June 2026) produced jointly with the New Community Foundation (FNW) and the SWPS Centre for the Study of Democracy. All nine datasets are openly available on the Harvard Dataverse.
+
+**What was found.** First, Polish voters *consistently punish* candidates who break democratic norms --- on both sides of the political divide, and on both sides of the 2023 change of government. Contrary to the dominant US-based "democratic hypocrisy" thesis --- that pro-democratic voters easily tolerate norm-breaking by their own party --- Polish voters turn out to be *less* hypocritical than theory predicts. Second, although Poles punish norm-breaking at the ballot box, their general *support* for liberal democracy did *not* rise after the defeat of PiS, even among supporters of the new ruling coalition. Democratic restoration therefore cannot count on support for liberal democracy rising of its own accord after a change of government; restoring the rule of law requires separate, deliberate effort to strengthen citizens' democratic attitudes. Third, standard survey items (CBOS, World Values Survey) overstate the coherence of citizen support for liberal democracy: the links between its components are considerably weaker than previously assumed. Fourth, "post-liberal" ideas --- critiques of individualism, of rule by experts, of the separation of state and ethics --- are a recognisable and internally coherent syndrome of attitudes among ordinary citizens, not merely an elite intellectual project; in Poland these attitudes are strongly tied to party choice (including the vote for Karol Nawrocki in the second round of the 2025 presidential election).
+
+**Why it matters.** For scholarship: the project provides some of the first panel-experimental evidence from a European case of *actual* democratic backsliding and restoration, substantially qualifying conclusions previously drawn almost exclusively from US data. The "post-illiberal trilemma" --- the trade-off between *speed*, *legality* and *effectiveness* in restoring the rule of law --- introduced in the course of the grant is being taken up in international debate on Hungary, the United States and Israel. For society: the finding that Polish affective polarisation is *moderate* rather than extreme, and that citizens *do* punish norm-breaking, provides an empirically grounded correction to the popular narrative of a "tribal" Poland; the results were widely disseminated in Polish media (TVN24, Polish Radio, Onet, Polsat News, *Gazeta Prawna*, an eight-part series in *Kultura Liberalna*). For public policy: a clear signal that rebuilding the rule of law requires active engagement with public attitudes rather than the assumption that they will "self-correct". For Central and Eastern European social science: evidence that the region can be a source of theory of universal relevance, rather than merely a testing ground for ideas formulated in the West.
