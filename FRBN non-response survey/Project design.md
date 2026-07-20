@@ -1,7 +1,7 @@
 # Project design: Pilot implementation of a randomized response instrument in a Polish socio-political survey
 
 **FRBN decision 67/2026/FRBN/C** · PI: Ben Stanley · Team: Mikołaj Cześnik, Marta Żerkowska-Balas
-**Budget:** 25,830 zł gross (21,000 zł net + 23% VAT), fieldwork only · **Deadline:** all activities complete by **16 November 2026**
+**Budget:** 25,830 zł gross (21,000 zł net + 23% VAT), fieldwork only · **Deadline:** all activities complete by **16 December 2026**
 **Methodological basis:** Bailey, M.A. (2024). *Polling at a Crossroads: Rethinking Modern Survey Research*. CUP. (esp. chs. 5–12)
 
 ---
@@ -18,17 +18,17 @@ The application (wniosek #34, 13 May 2026) commits us to:
 6. **Selection models** to correct estimates for flagged items; comparison of corrected estimates with conventional weighting.
 7. Deliverables: methodological report; article manuscript for POQ / Survey Research Methods / IJPOR; public repository with full R code, replication materials, and an implementation guide; workshop for the PGSW team and CSD staff; a validated protocol ready for a future PGSW round and for NCN OPUS / Horizon Europe scale-up.
 
-Tasks and months in the application map onto the decision window as follows (decision signed 13.07.2026; months are calendar months from mid-July):
+Tasks and months in the application map onto the project window as follows (decision signed 13.07.2026; project activities begin **7 September 2026**, so months are calendar months from early September):
 
 | Application task | Content | Calendar |
 |---|---|---|
-| Zadanie 1 (m. 1) | Questionnaire + pre-registration | mid-Jul – mid-Aug |
-| Zadanie 2 (m. 1) | Agency procurement, contract, ethics approval | mid-Jul – late Aug |
-| Zadanie 3 (m. 2) | Fieldwork, ~2,000 completes; invoice | late Aug – mid/late Sep |
-| Zadanie 4 (m. 2–3) | Validation + diagnostic regressions | mid-Sep – mid-Oct |
-| Zadanie 5 (m. 3) | Selection models, corrected vs weighted estimates | Oct |
-| Zadanie 6 (m. 3–4) | Report + manuscript | mid-Oct – early Nov |
-| Zadanie 7 (m. 4) | Public repo + PGSW/CSD workshop | early Nov, done by 16.11 |
+| Zadanie 1 (m. 1) | Questionnaire + pre-registration | early Sep – early Oct |
+| Zadanie 2 (m. 1) | Agency procurement, contract, ethics approval | early Sep – mid-Oct |
+| Zadanie 3 (m. 2) | Fieldwork, ~2,000 completes; invoice | late Oct – mid-Nov |
+| Zadanie 4 (m. 2–3) | Validation + diagnostic regressions | mid–late Nov |
+| Zadanie 5 (m. 3) | Selection models, corrected vs weighted estimates | late Nov |
+| Zadanie 6 (m. 3–4) | Report + manuscript | late Nov – mid-Dec |
+| Zadanie 7 (m. 4) | Public repo + PGSW/CSD workshop | early–mid Dec, done by 16.12 |
 
 ---
 
@@ -218,19 +218,19 @@ Before data arrive: simulate the full design (invited pool with profile X; laten
 
 ---
 
-## 8. Timeline (16 July → 16 November 2026)
+## 8. Timeline (7 September → 16 December 2026)
 
 | Weeks (2026) | Workstream | Milestones |
 |---|---|---|
-| **17–31 Jul** | Ethics application submitted to SWPS KEB (light-contact arm framed as burden-*reducing*); RFQ with contract annex (§9) to ≥3 agencies (Ariadna, Opinia24, Pollster, + Norstat/IQS as backups); questionnaire v0.9 assembled from PGSW/CSES/EVS items; repo initialized, simulation harness started | RFQ out by 24 Jul; ethics submitted by 31 Jul |
-| **1–21 Aug** | Bids evaluated (criteria §9); contract signed; questionnaire finalized + cognitive check; prereg drafted; simulation-based power analysis locked | Contract by ~21 Aug; ethics decision received |
-| **24 Aug – 4 Sep** | Agency scripting + our testing; **soft launch** (~100/arm); prereg **frozen on OSF before main launch** | Prereg frozen; go/no-go on reminder-lift check |
-| **7–21 Sep** | **Main fieldwork** (14-day window, both arms; avoid fielding across any major political event day); daily monitoring of per-arm completes; top-up batches if needed; **agency invoice** on completion (coordinate FRBN invoice timing with Dział Badań — application scheduled it for "month 2") | ≥ 1,800 completes by 21 Sep |
-| **22 Sep – 11 Oct** | Data delivery (contractual: ≤ 5 working days after close); Stage 0–2 per SAP; flag items; Stage 3–4 models | Diagnostic results by ~5 Oct |
-| **12 Oct – 1 Nov** | Methodological report (PL, incl. journalist-accessible summary per application); manuscript draft (EN); PGSW implementation memo (arm design for next wave, cost model, protocol lessons) | Report v1 by 26 Oct |
-| **2–13 Nov** | Public repo release (code, anonymized data per §10, replication guide); **workshop** for PGSW team + CSD; final FRBN report to Dział Badań | Everything closed by **13 Nov**, 3-day buffer to 16.11 |
+| **7–18 Sep** | Ethics application submitted to SWPS KEB (light-contact arm framed as burden-*reducing*); RFQ with contract annex (§9) to ≥3 agencies (Ariadna, Opinia24, Pollster, + Norstat/IQS as backups); questionnaire v0.9 assembled from PGSW/CSES/EVS items; repo initialized, simulation harness started | RFQ out by 11 Sep; ethics submitted by 18 Sep |
+| **21 Sep – 9 Oct** | Bids evaluated (criteria §9); contract signed; questionnaire finalized + cognitive check; prereg drafted; simulation-based power analysis locked | Contract by ~9 Oct; ethics decision received |
+| **12 – 23 Oct** | Agency scripting + our testing; **soft launch** (~100/arm); prereg **frozen on OSF before main launch** | Prereg frozen; go/no-go on reminder-lift check |
+| **26 Oct – 9 Nov** | **Main fieldwork** (14-day window, both arms; closes before 11 Nov Independence Day; avoid fielding across any other major political event day — All Saints' falls mid-window but is apolitical and affects both arms symmetrically); daily monitoring of per-arm completes; top-up batches if needed; **agency invoice** on completion (coordinate FRBN invoice timing with Dział Badań — application scheduled it for "month 2") | ≥ 1,800 completes by 9 Nov |
+| **10 – 27 Nov** | Data delivery (contractual: ≤ 5 working days after close, i.e. by 16 Nov); Stage 0–2 per SAP; flag items; Stage 3–4 models | Diagnostic results by ~23 Nov |
+| **23 Nov – 9 Dec** | Methodological report (PL, incl. journalist-accessible summary per application); manuscript draft (EN); PGSW implementation memo (arm design for next wave, cost model, protocol lessons) | Report v1 by 4 Dec |
+| **7–14 Dec** | Public repo release (code, anonymized data per §10, replication guide); **workshop** for PGSW team + CSD; final FRBN report to Dział Badań | Everything closed by **14 Dec**, 2-day buffer to 16.12 |
 
-August is Poland's vacation trough — that is why fieldwork sits in September (better response behavior, agency staffing back) while August absorbs contracting, scripting and pre-registration. If contracting slips a week, fieldwork can start as late as 21 Sep without endangering the deadline, because the analysis pipeline will already exist (simulation-first).
+The September start puts contracting and pre-registration in the post-vacation period (agency staffing back, faster turnaround) and fieldwork in late October–early November — still good response behavior, closing before Independence Day and well clear of the December holiday trough. The schedule is ~3 weeks tighter than a four-month window; the slack is taken out of analysis and reporting, which is safe because the pipeline is built simulation-first (analysis is a re-run on real data). If contracting slips a week, fieldwork can start as late as 2 Nov (close 16 Nov, data by ~23 Nov) without endangering the deadline, at the cost of overlapping the reporting and closeout phases; slippage beyond that eats the final buffer and should trigger trimming the manuscript draft to an outline (the report, repo and workshop are the FRBN commitments).
 
 ---
 
@@ -265,7 +265,7 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 1. **Methodological report (PL)** for SWPS/FRBN + accessible summary for journalists (application commitment): what is non-ignorable in Polish CAWI, what weighting can and cannot fix, protocol recommendations.
 2. **Article manuscript (EN)** — working title: *"Diagnosing Non-Ignorable Nonresponse with a Randomized Response Instrument: Evidence from a Polish Online Panel."* Target order: **Public Opinion Quarterly** (fits ch.-12-style applied-methods papers), then **Survey Research Methods**, then **IJPOR**. Selling points: first systematic randomized response instrument in a CEE panel; benchmark validation; partisan mirror-image evidence outside the US two-party context; open protocol.
 3. **Public repository:** `renv`-pinned R project, `targets` pipeline, simulation suite, anonymized data, questionnaire (PL/EN), agency contract annex template, and a step-by-step implementation guide ("how to add a light-contact arm to your CAWI study").
-4. **Workshop** (PGSW team + CSD, early Nov): method, results, and a concrete proposal for a light-contact arm in the next PGSW CAWI component; cost model from this pilot.
+4. **Workshop** (PGSW team + CSD, early–mid Dec): method, results, and a concrete proposal for a light-contact arm in the next PGSW CAWI component; cost model from this pilot.
 5. **Grant leverage:** the pilot's effect-size estimates and demonstrated protocol feed directly into an NCN OPUS proposal (full-scale implementation: multi-wave, 3+ contact levels, within-party power) and position CSD for Horizon Europe survey-infrastructure calls. (Note: the professorship case and OPUS 2020/39/B/HS6/00853 history make a clean, delivered, pre-registered pilot the right kind of track-record item.)
 
 ---
@@ -281,13 +281,13 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 | Price above 10.50 zł net/complete | Med | Med | Trim questionnaire to 10 min; reduce target to ~1,800 (power at 1,100/700: MDE 6.8 pp / 0.14 SD — still adequate); negotiate arm-B discount |
 | Fieldwork collides with unscheduled political shock | Low | Med | 14-day window, timestamps, field-day FE robustness, A-wave-0 vs B placebo |
 | Heckman/GJRM instability on flagged items | Med | Low–Med | Primary claim rests on the nonparametric test; report R²_M; copula range; document honestly (ch. 12 practice) |
-| Ethics decision delayed over summer | Low–Med | Med | Submit in July; KEB chair contacted about summer schedule; fieldwork not before 7 Sep anyway |
+| Ethics decision delayed | Low–Med | Med | Submit in first project week (early Sep, post-vacation — KEB back to normal schedule); KEB chair contacted about turnaround; fieldwork not before 26 Oct anyway |
 | Timeline compression at analysis stage | Low | Med | Simulation-first pipeline: analysis is a re-run on real data |
 | Multiple-testing / researcher-df criticism at review | Med | Med | Frozen OSF prereg, BH within family, TOST for nulls, full code+data release (ch. 11.4 defenses, verbatim) |
 
 ---
 
-## 13. Immediate next actions (this week, 16–24 July)
+## 13. Immediate next actions (first project week, 7–11 September)
 
 1. **Submit KEB ethics application** (PI; template + consent text drafted from this document).
 2. **Send RFQ** with the §9 annex to Ariadna, Opinia24, Pollster (CC backups); ask for bids + RR evidence within 10 working days.
@@ -298,4 +298,4 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 
 ---
 
-*Design document prepared 16 July 2026. Funding: Uniwersytet SWPS, FRBN, decyzja nr 67/2026/FRBN/C. All outputs to acknowledge: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C)."*
+*Design document prepared 16 July 2026; revised 20 July 2026 (timeline shifted to 7 September – 16 December 2026). Funding: Uniwersytet SWPS, FRBN, decyzja nr 67/2026/FRBN/C. All outputs to acknowledge: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C)."*
