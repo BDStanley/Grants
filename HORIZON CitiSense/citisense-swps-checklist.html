@@ -1,0 +1,701 @@
+<title>CitiSense at SWPS</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+  :root {
+    --paper:        #f2f4f7;
+    --surface:      #ffffff;
+    --surface-sunk: #e8ecf1;
+    --ink:          #121820;
+    --ink-soft:     #3d4854;
+    --muted:        #667585;
+    --rule:         #d5dce4;
+    --rule-soft:    #e3e9ef;
+    --accent:       #2b4b8c;
+    --accent-soft:  #e7ecf6;
+    --flag:         #8a5a0c;
+    --flag-soft:    #f7efdd;
+    --done:         #2f6b4f;
+    --shadow:       0 1px 2px rgba(18, 24, 32, .05), 0 8px 24px -16px rgba(18, 24, 32, .22);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:        #0e1217;
+      --surface:      #161b22;
+      --surface-sunk: #1d242d;
+      --ink:          #e5eaf0;
+      --ink-soft:     #b3bdc9;
+      --muted:        #8a95a3;
+      --rule:         #2a323c;
+      --rule-soft:    #222932;
+      --accent:       #8aa9e8;
+      --accent-soft:  #1b2434;
+      --flag:         #d7a54e;
+      --flag-soft:    #2a2316;
+      --done:         #6bbf94;
+      --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:        #0e1217;
+    --surface:      #161b22;
+    --surface-sunk: #1d242d;
+    --ink:          #e5eaf0;
+    --ink-soft:     #b3bdc9;
+    --muted:        #8a95a3;
+    --rule:         #2a323c;
+    --rule-soft:    #222932;
+    --accent:       #8aa9e8;
+    --accent-soft:  #1b2434;
+    --flag:         #d7a54e;
+    --flag-soft:    #2a2316;
+    --done:         #6bbf94;
+    --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 40px 80px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(28px, 5.4vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -.015em;
+    text-wrap: balance;
+    margin: 0 0 12px;
+  }
+  .standfirst {
+    font-size: 16.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  /* ---------- fact strip ---------- */
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    margin-block: 32px;
+    overflow: hidden;
+  }
+  .fact { background: var(--surface); padding: 12px 14px; }
+  .fact dt {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 4px;
+  }
+  .fact dd {
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .fact dd small { display: block; font-weight: 400; font-size: 12.5px; color: var(--muted); }
+
+  /* ---------- assumption banner ---------- */
+
+  .assume {
+    border-left: 3px solid var(--flag);
+    background: var(--flag-soft);
+    padding: 14px 16px;
+    border-radius: 0 3px 3px 0;
+    margin-block: 0 36px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .assume strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- progress ---------- */
+
+  .progress {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--paper);
+    padding-block: 12px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .bar {
+    flex: 1 1 180px;
+    height: 5px;
+    background: var(--surface-sunk);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    border-radius: 3px;
+    transition: width .25s ease;
+  }
+  .count {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .count b { color: var(--ink); font-weight: 600; }
+  .syncnote {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .04em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ---------- sections ---------- */
+
+  section { margin-top: 44px; }
+  .shead {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 4px;
+  }
+  .shead h2 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -.01em;
+    margin: 0;
+    flex: 1;
+    text-wrap: balance;
+  }
+  .shead .when {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .sintro {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 12px 0 4px;
+    max-width: 64ch;
+  }
+
+  /* ---------- items ---------- */
+
+  .item {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 0 12px;
+    padding: 14px 2px;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: start;
+  }
+  .item:last-child { border-bottom: none; }
+
+  .item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 0;
+    border: 1.5px solid var(--rule);
+    border-radius: 3px;
+    background: var(--surface);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    flex: none;
+  }
+  .item input[type="checkbox"]:hover { border-color: var(--accent); }
+  .item input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .item input[type="checkbox"]::after {
+    content: "";
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid var(--surface);
+    border-bottom: 2px solid var(--surface);
+    transform: rotate(-45deg) translateY(-1px);
+    opacity: 0;
+  }
+  .item input[type="checkbox"]:checked {
+    background: var(--done);
+    border-color: var(--done);
+  }
+  .item input[type="checkbox"]:checked::after { opacity: 1; }
+
+  .body { min-width: 0; }
+  .row {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: .05em;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: var(--surface-sunk);
+    color: var(--muted);
+    white-space: nowrap;
+    flex: none;
+    position: relative;
+    top: -1px;
+  }
+  .tag.now   { background: var(--accent-soft); color: var(--accent); }
+  .tag.lead  { background: var(--accent); color: var(--surface); }
+  :root[data-theme="dark"] .tag.lead,
+  :root:not([data-theme="light"]) .tag.lead { color: var(--paper); }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .tag.lead { color: #fff; } }
+  .tag.flag  { background: var(--flag-soft); color: var(--flag); }
+
+  .title { font-weight: 500; font-size: 14.5px; }
+  .item.checked .title { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
+  .detail {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 4px 0 0;
+    max-width: 70ch;
+  }
+  .item.checked .detail { color: var(--muted); }
+  .detail code {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    background: var(--surface-sunk);
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- source note ---------- */
+
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 70ch;
+  }
+  footer p { margin: 0 0 8px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+  @media (max-width: 420px) {
+    .item { grid-template-columns: 20px 1fr; gap: 0 10px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Horizon Europe &middot; HORIZON-CL2-2025-01-DEMOCRACY-03</p>
+  <h1>CitiSense at SWPS</h1>
+  <p class="standfirst">What SWPS University has to do to deliver its part of <em>Making Sense of EU Enlargement for, with and by Citizens</em> — leading Work Package 5 and two of its public deliverables, on 13 person-months.</p>
+
+  <dl class="facts">
+    <div class="fact"><dt>Role</dt><dd>Partner 12<small>WP5 co-lead</small></dd></div>
+    <div class="fact"><dt>PI</dt><dd>Ben Stanley<small>Inst. of Social Sciences</small></dd></div>
+    <div class="fact"><dt>Effort</dt><dd>13 PM<small>10–11 in WP5</small></dd></div>
+    <div class="fact"><dt>Budget</dt><dd>€113,000<small>incl. 25% indirect</small></dd></div>
+    <div class="fact"><dt>SWPS deliverables</dt><dd>D5.2, D5.3<small>both due M24</small></dd></div>
+    <div class="fact"><dt>Duration</dt><dd>36 months<small>16 partners</small></dd></div>
+  </dl>
+
+  <p class="assume"><strong>One assumption runs through every date below.</strong> Consortium partners announced their involvement as starting May 2026, so this treats <strong>M1 = May 2026</strong>, putting the project at roughly M5 now and WP5's deliverables in April 2028. Nothing in the project folder confirms the signed start date — item 1.5 is to check it, and if it moves, every calendar date here moves with it.</p>
+
+  <div class="progress">
+    <div class="bar"><span id="fill"></span></div>
+    <div class="count"><b id="ndone">0</b> of <span id="ntotal">0</span> done</div>
+    <div class="syncnote" id="sync">local only</div>
+  </div>
+
+  <main id="list"></main>
+
+  <footer>
+    <p>Built from the CitiSense Part B proposal of 16 September 2025 (50 pp.), the SWPS partner form, the budget sheet sent to the coordinator (last touched 5 February 2026), the Polish application summary prepared with Aleksandra Noga, and SWPS's internal procurement rules of 25 March 2025.</p>
+    <p>Public sources confirm the project was funded and is coordinated by the EUI with Maastricht University as scientific lead. No grant agreement, consortium agreement or Annex 1 is in the project folder, so everything about the <em>signed</em> baseline is stated as something to verify, not as fact.</p>
+  </footer>
+
+</div>
+
+<script>
+  const SECTIONS = [
+    {
+      title: "Confirm the contractual baseline",
+      when: "now — by M6",
+      intro: "Everything else depends on these. The newest CitiSense document in the folder is the September 2025 proposal; the binding version is the Annex 1 that was actually signed, and the two will differ.",
+      items: [
+        ["1.1", "now", "Obtain and file the signed Grant Agreement, Annex 1 (Description of Action) and Annex 2 (budget)",
+         "The proposal is not the contract. Deliverable titles, months, task leads and partner names all move during grant preparation."],
+        ["1.2", "now", "Check SWPS's Annex 2 figures against the sheet sent to the coordinator",
+         "That sheet has 13 PM at €6,400 = €83,200 personnel, €7,200 travel, €22,600 indirect at 25%, €113,000 total. Confirm those are the signed numbers."],
+        ["1.3", "flag", "Reconcile the person-month split — the two sources disagree",
+         "Part B Table 3.1f: WP2 1 / WP5 10 / WP8 1 / WP9 0.5 / WP10 0.5. The budget sheet: WP2 1 / WP5 11 / WP8 1. Both total 13, but only one is in Annex 1, and the difference is a person-month of WP5 work."],
+        ["1.4", "flag", "Confirm the €7,200 travel line survived into Annex 2",
+         "SWPS has no row at all in Part B Table 3.1h, the purchase-costs table where every other travelling partner justified its trips. If the line was dropped, six planned trips have no budget."],
+        ["1.5", "now", "Confirm the actual project start date and therefore the month-to-calendar map",
+         "Everything in this list is pinned to M1 = May 2026. One line from the coordinator settles it."],
+        ["1.6", "now", "Confirm the reporting periods, pre-financing share and payment schedule for SWPS",
+         "Typically RP1 covers M1–M18 with the report due 60 days after, but read it from the GA rather than assuming."],
+        ["1.7", "now", "Get the Consortium Agreement signed off by SWPS legal",
+         "Check the WP5 co-lead split with CEU, IP and access rights, background knowledge, the payment flow from the coordinator, liability, and the exit provisions the risk table promises."],
+        ["1.8", "now", "Register the project internally: cost centre, project number, Centrum Wsparcia Nauki file",
+         "Also confirm PIC 999884634 and the LEAR's details are current in the Funding &amp; Tenders Portal."],
+        ["1.9", "now", "Fix the portal and contact roles",
+         "The partner form names Magda Freyer as the second contact. Add Aleksandra Noga if she is administering the project, and make sure someone other than the PI receives EC notifications."]
+      ]
+    },
+    {
+      title: "People and employment",
+      when: "M5 onward",
+      intro: "The budget books all 13 person-months at senior-scientist rate. There is no junior researcher and no research assistant in it.",
+      items: [
+        ["2.1", "now", "Decide whether the WP5 work is done solo or a junior researcher is added",
+         "Adding one means a budget transfer between cost categories and a conversation with the coordinator. Deciding late is worse than deciding either way now."],
+        ["2.2", "now", "Sanity-check the workload: ~11 PM across M7–M24 is roughly 0.6 FTE for eighteen months",
+         "Set against teaching, the OPUS commitments and post-professorship duties, this is the number most likely to turn into a delivery problem."],
+        ["2.3", "now", "Put the project supplement (dodatek projektowy) in place",
+         "An annex or decision under SWPS's remuneration rules, with declared monthly involvement, dated from the project start rather than from when the paperwork catches up."],
+        ["2.4", "flag", "Stress-test the personnel-cost assumptions against Horizon rules",
+         "The budget justification assumes project-based supplementary payments plus 5% annual salary growth. Horizon reimburses actual costs under the beneficiary's usual practice, with a ceiling on additional remuneration. Get the grants office to confirm the model is audit-proof before the first claim, not after."],
+        ["2.5", "now", "Start time recording from M1, retroactively if necessary",
+         "Reliable records of declared time are the single most common finding in Horizon audits. Monthly declarations, signed, kept with the project file."],
+        ["2.6", "now", "Rule out double funding against the OPUS grant and any other commitment",
+         "No hour declared to CitiSense may also be declared elsewhere. Document the split now while it is easy."]
+      ]
+    },
+    {
+      title: "Ethics, data protection and compliance",
+      when: "by M6",
+      intro: "WP5's own work is mostly secondary analysis, but SWPS will be receiving individual-level survey data from Stockholm University and working alongside partners outside the EEA.",
+      items: [
+        ["3.1", "now", "Check whether the GA carries ethics requirements or deliverables binding on SWPS",
+         "The proposal commits the consortium to an Ethics Monitoring Protocol from M1 and to appointing a Data Protection Officer. Find out what that means for a partner."],
+        ["3.2", "now", "Decide whether an SWPS ethics committee application is needed",
+         "T5.3 is secondary analysis of existing survey and socio-economic data. T5.2 involves fieldwork in two Ukrainian regions, led by CEU — establish whether SWPS is exposed to that at all."],
+        ["3.3", "now", "Register the processing with the SWPS data protection officer",
+         "Set out the legal basis for holding individual-level WP2 microdata and for any personal data arising from SWPS's own work."],
+        ["3.4", "now", "Settle controller and processor roles for the WP2 survey microdata",
+         "Stockholm University collects it via a subcontracted agency; SWPS analyses it in T5.3. That needs a data-sharing agreement, plus transfer arrangements covering the Georgian, Ukrainian, Moldovan and North Macedonian partners."],
+        ["3.5", "M6", "Feed SWPS's storage, retention and repository arrangements into the Data Management Plan",
+         "D10.2 is due M6 (~Oct 2026), EUI-led, and is meant to specify per dataset what is open, what is restricted and where it lives long-term."],
+        ["3.6", "now", "Confirm SWPS's Gender Equality Plan is current and on file",
+         "A Horizon Europe eligibility condition, and the GA aligns project practice with partners' GEPs. The proposal also commits WP5 specifically to a gender dimension in its economic analysis — that has to show up in D5.3, not just in the plan."]
+      ]
+    },
+    {
+      title: "WP5 — the substantive work",
+      when: "M7 — M24",
+      intro: "SWPS co-leads Work Package 5 with László Bruszt (CEU), leads two of its four tasks, and is lead beneficiary for two of its four deliverables. WP5 runs M7 to M24; every deliverable lands in the same month.",
+      items: [
+        ["4.1", "now", "Agree the WP5 division of labour with CEU in writing",
+         "Who drafts what, internal deadlines, who reviews, and how the two leads split the co-lead role. Nothing in the proposal fixes this and it will not get easier at M20."],
+        ["4.2", "M7–M18", "T5.1 Literature review — CEU lead, SWPS partner",
+         "Systematic review covering the limits of static cost-benefit analysis, the economic terms of accession treaties, and a comparison of Southern, Eastern and current integration strategies. Feeds D5.1."],
+        ["4.3", "M13–M24", "T5.2 Inclusion and exclusion at the regional level — CEU lead, SWPS partner",
+         "SWPS covers Poland: subnational variation in the governance and absorption of EU funds. Note the asymmetry — the task is CEU-led but the deliverable it feeds, D5.2, is SWPS-led."],
+        ["4.4", "M7+", "Assemble the Polish regional dataset for T5.2",
+         "CST2021/SIMIK payment data, MFiPR and ARDECO regional accounts, NUTS-2 and NUTS-3 socio-economic series, with the Hungarian counterpart coming from CEU. Start the data-access requests early; this is the long pole."],
+        ["4.5", "lead", "T5.3 Perceptions, attitudes and behaviour — SWPS leads (M13–M24)",
+         "Design a longitudinal, comparative strategy capturing how citizens perceive post-accession socio-economic change in absolute and relative terms, and how that relates to political attitudes and behaviour in Poland and Hungary."],
+        ["4.6", "flag", "Build the T5.3 data inventory — and check the WP2 survey actually covers Poland and Hungary",
+         "The proposal lists the survey countries as Estonia, Slovenia, the Netherlands, France, Spain, Moldova, Ukraine, North Macedonia and Serbia. Neither Poland nor Hungary is among them, yet T5.3 is built on those two cases. Fall back on PGSW, the Polish Panel Survey, ESS, EVS, CSES and Eurobarometer, or get the WP2 design changed while it is still open."],
+        ["4.7", "lead", "T5.4 Policy recommendations — SWPS leads (M7–M24)",
+         "Synthesise WP5 findings into adaptive, regionally responsive recommendations, validated through the Civil Society Network (UDE) and the EU Enlargement Expert Hub (TEPSA). Book those consultation slots well before M22 — they are a dependency, not a formality."],
+        ["4.8", "lead", "D5.2 — Policy Paper: Patterns of Regional Exclusion and Inclusion (M24, public)",
+         "SWPS is lead beneficiary. Compares the current enlargement with previous ones, focused on regional economic impact."],
+        ["4.9", "lead", "D5.3 — Research Report: Popular Perceptions of Socio-Economic Developments (M24, public)",
+         "SWPS is lead beneficiary. Uses Poland and Hungary to examine how attitudes relate to economic performance."],
+        ["4.10", "M21–M24", "Work the delivery schedule back from M24",
+         "Internal draft by M21, consortium and Advisory Board review at M22, sign-off at M23. All four WP5 deliverables plus the WP8 toolboxes compete for attention in the same window."],
+        ["4.11", "M18+", "Plan the journal output",
+         "The proposal promises peer-reviewed articles from WP5 on economic cost-benefit analysis and on regional inclusion and exclusion. Decide targets early enough that D5.3 and the article can share an analysis rather than duplicate one."]
+      ]
+    },
+    {
+      title: "Contributions to other work packages",
+      when: "M3 — M33",
+      intro: "Three and a half person-months are spread across WP2, WP8, WP9 and WP10. Small allocations, but each carries a named commitment.",
+      items: [
+        ["5.1", "M3–M10", "WP2 (1 PM): contribute to survey and experiment design",
+         "The window to influence question wording and country coverage closes at the pilot (M6–M10). See item 4.6 — this is where that gets fixed."],
+        ["5.2", "flag", "Clarify what the 'survey panel access' commitment means",
+         "Part B cites SWPS among partners providing access to nationally representative survey panels. Establish whether anyone expects SWPS to field or fund anything, because nothing in the budget would pay for it."],
+        ["5.3", "M22–M32", "WP8 T8.1: contribute to the Toolbox for Policymakers",
+         "SWPS is a named partner. Includes input to the digital guidebook, '30 FAQs on Enlargement'."],
+        ["5.4", "M13–M33", "WP8 T8.4: the Poland chapter of 'Europe Next'",
+         "Short country reports by College of Europe post-graduates using CitiSense data. SWPS is a named partner — expect to supply data, supervise or review."],
+        ["5.5", "flag", "Establish who runs and funds the Warsaw Youth Lab",
+         "Part B lists Warsaw among the 14 Youth Lab cities (T8.3, M12–M32, UDE lead). SWPS has 1 PM in WP8 and no event budget. Confirm before someone assumes the host is SWPS."],
+        ["5.6", "M18–M36", "WP9 T9.6: run the Polish national policymaker briefing",
+         "Each partner organises a decentralised briefing in its own national context to discuss the recommendations."],
+        ["5.7", "M18–M36", "WP9 T9.10: at least one op-ed in Polish or EU media",
+         "Coordinate with TEPSA, who lead WP9, and with the SWPS press office."]
+      ]
+    },
+    {
+      title: "Meetings, travel and governance",
+      when: "M3 — M36",
+      intro: "Six trips are budgeted at roughly €1,200 each. The meeting calendar in the proposal is longer than six.",
+      items: [
+        ["6.1", "M3", "Kick-off conference, Florence (~July 2026)",
+         "If it has already happened, obtain the minutes, the action log and any internal deadlines agreed there. If not, register two SWPS attendees."],
+        ["6.2", "M3/M18/M30", "Diarise the Advisory Board and Civil Society Network consultations",
+         "Three structured online consultations, with two-page briefs circulated a fortnight ahead and written comments due within two weeks. The M18 and M30 rounds bracket WP5's deliverables."],
+        ["6.3", "M18/M24/M36", "Attend the cross-WP integration workshops",
+         "The project's own stated defence against incoherent outputs. The M24 workshop coincides with WP5's deliverable month, which makes it load-bearing for SWPS."],
+        ["6.4", "M18", "Mid-term conference, Florence or Tbilisi (~Oct 2027)"],
+        ["6.5", "M36", "Final conference, Brussels (~April 2029)",
+         "Budgeted for two SWPS participants."],
+        ["6.6", "M12+", "Two international conferences for dissemination",
+         "Budgeted at ~€1,200 each including fees. Choose targets that suit D5.3's findings."],
+        ["6.7", "flag", "Check the travel budget against the actual meeting calendar",
+         "Six trips cover the kick-off (2 people), the final conference (2 people) and two conferences. That leaves nothing for the mid-term conference, the three integration workshops, or the national briefing. Either re-budget or plan to attend remotely — decide deliberately."],
+        ["6.8", "now", "Check SWPS delegacja rules and per-diem rates against the €1,200 per trip assumption",
+         "Flights at €350 and accommodation at €200–250 a night were 2025 estimates."]
+      ]
+    },
+    {
+      title: "Money, procurement and reporting",
+      when: "throughout",
+      items: [
+        ["7.1", "now", "Set up cost tracking by Annex 2 category",
+         "Indirect costs are a 25% flat rate on direct costs excluding subcontracting; SWPS has no subcontracting line."],
+        ["7.2", "~M18", "Submit the RP1 financial statement and use of resources to the coordinator",
+         "Personnel costs, travel, declared person-months, with the supporting time records."],
+        ["7.3", "M36", "Submit the RP2 / final financial statement"],
+        ["7.4", "~M18, M36", "Write SWPS's technical input to each periodic report",
+         "Task progress, deliverable status, deviations and their justification, and the dissemination log."],
+        ["7.5", "now", "Confirm no Certificate on Financial Statements is required, then stop worrying about it",
+         "The CFS threshold is €430,000 of EU contribution per beneficiary; SWPS is at roughly €113,000. Worth confirming once against the GA."],
+        ["7.6", "flag", "Apply SWPS procurement rules to anything the project buys",
+         "Under the internal rules of 25 March 2025, purchases from 80,000 PLN net require a competitive procedure — and values are aggregated across like purchases for the whole project, not judged item by item. Transcription, translation, data access and RA services can add up past that line."],
+        ["7.7", "throughout", "Keep the audit trail from day one",
+         "Contracts, time records, travel documentation, procurement files. Retention runs for years past the final payment."]
+      ]
+    },
+    {
+      title: "Open science and dissemination",
+      when: "throughout",
+      intro: "Horizon Europe's open science obligations are contractual, not aspirational, and the project committed to more than the minimum.",
+      items: [
+        ["8.1", "throughout", "Immediate open access, CC BY, for every peer-reviewed publication",
+         "Deposited in a trusted repository at publication. Hybrid APCs paid to subscription journals are not eligible costs under Horizon Europe — the proposal says so explicitly."],
+        ["8.2", "flag", "Decide the open access route, because SWPS has no publication-fee line",
+         "The coordinator budgeted €3,000 per article; SWPS budgeted nothing. Diamond OA, the Polish national licence, an SWPS open access fund, or a budget transfer — pick one before submitting anywhere."],
+        ["8.3", "M24", "Deposit the data and analysis code behind D5.3",
+         "Zenodo, RepOD or EUI's Cadmus, with a persistent identifier and FAIR metadata, subject to whatever the WP2 data-sharing agreement permits."],
+        ["8.4", "throughout", "EU emblem, funding statement and disclaimer on every output",
+         "Papers, slides, datasets, briefings and the SWPS project page."],
+        ["8.5", "throughout", "Register outputs in the F&amp;T Portal and in SWPS's own systems",
+         "The Polish-language project description and summary are already drafted in the application file and can be reused for the SWPS project database."],
+        ["8.6", "M30+", "Report dissemination and exploitation activity to TEPSA",
+         "It feeds the Recommendations Digest (D9.2) and the digest of public-oriented communications products (D9.3), both due M36."]
+      ]
+    },
+    {
+      title: "Raise with the coordinator",
+      when: "next exchange",
+      intro: "Six things the proposal leaves genuinely unresolved for SWPS. Each is cheap to settle now and expensive to discover at M22.",
+      items: [
+        ["9.1", "flag", "Which Moldovan partner is in Annex 1?",
+         "Partners' own announcements name the Institute for European Policies and Reforms (IPRE), where the proposal had WatchDog.MD. WMD is a named partner in T5.3, so this is not cosmetic for WP5."],
+        ["9.2", "flag", "Confirm the task and deliverable ownership crossover in WP5",
+         "D5.2 is SWPS-led but T5.2 is CEU-led; D5.4 is CEU-led but T5.4 is SWPS-led. Either it is deliberate or it is a drafting artefact — find out which."],
+        ["9.3", "flag", "Is the WP8 effort real?",
+         "WP5 closes at M24, but SWPS's named WP8 tasks run to M32 and M33 on a single person-month covering both."],
+        ["9.4", "flag", "What data will T5.3 actually use for Poland and Hungary?",
+         "See item 4.6. This is the most consequential open question on the list, because it goes to whether SWPS's lead deliverable can be written as specified."],
+        ["9.5", "flag", "Who organises and pays for the Warsaw Youth Lab?"],
+        ["9.6", "now", "Ask for the internal deadline calendar",
+         "Deliverable draft dates, review windows, and the quality-assurance pass under T10.4 ahead of the M24 cluster. Without it, WP5's four simultaneous deliverables will collide."]
+      ]
+    }
+  ];
+
+  const TAGS = {
+    now:  { cls: "now",  text: "DO NOW" },
+    flag: { cls: "flag", text: "VERIFY" },
+    lead: { cls: "lead", text: "SWPS LEADS" }
+  };
+
+  const list = document.getElementById("list");
+  const boxes = [];
+
+  SECTIONS.forEach((sec) => {
+    const el = document.createElement("section");
+    const head = document.createElement("div");
+    head.className = "shead";
+    const h2 = document.createElement("h2");
+    h2.textContent = sec.title;
+    const when = document.createElement("span");
+    when.className = "when";
+    when.textContent = sec.when;
+    head.append(h2, when);
+    el.append(head);
+
+    if (sec.intro) {
+      const p = document.createElement("p");
+      p.className = "sintro";
+      p.textContent = sec.intro;
+      el.append(p);
+    }
+
+    sec.items.forEach(([id, tag, title, detail]) => {
+      const item = document.createElement("div");
+      item.className = "item";
+
+      const box = document.createElement("input");
+      box.type = "checkbox";
+      box.id = "chk-" + id;
+      box.setAttribute("aria-label", id + " " + title);
+      boxes.push(box);
+
+      const body = document.createElement("div");
+      body.className = "body";
+
+      const row = document.createElement("div");
+      row.className = "row";
+
+      const num = document.createElement("span");
+      num.className = "tag";
+      num.textContent = id;
+
+      const badge = document.createElement("span");
+      const t = TAGS[tag];
+      badge.className = "tag " + (t ? t.cls : "");
+      badge.textContent = t ? t.text : tag;
+
+      const label = document.createElement("label");
+      label.className = "title";
+      label.htmlFor = box.id;
+      label.textContent = title;
+
+      row.append(num, badge, label);
+      body.append(row);
+
+      if (detail) {
+        const d = document.createElement("p");
+        d.className = "detail";
+        d.innerHTML = detail;
+        body.append(d);
+      }
+
+      item.append(box, body);
+      el.append(item);
+
+      box.addEventListener("change", () => {
+        item.classList.toggle("checked", box.checked);
+        tally();
+        save(id, box.checked);
+      });
+    });
+
+    list.append(el);
+  });
+
+  const fill = document.getElementById("fill");
+  const ndone = document.getElementById("ndone");
+  document.getElementById("ntotal").textContent = boxes.length;
+
+  function tally() {
+    const n = boxes.filter((b) => b.checked).length;
+    ndone.textContent = n;
+    fill.style.width = (boxes.length ? (n / boxes.length) * 100 : 0) + "%";
+  }
+  tally();
+
+  /* ---- shared, persistent state ---- */
+
+  const sync = document.getElementById("sync");
+  let doc = null;
+
+  function applyState(done) {
+    if (!done) return;
+    boxes.forEach((b) => {
+      const id = b.id.slice(4);
+      const want = done[id] === true;
+      if (b.checked !== want) {
+        b.checked = want;
+        b.closest(".item").classList.toggle("checked", want);
+      }
+    });
+    tally();
+  }
+
+  async function save(id, value) {
+    if (!doc) return;
+    try {
+      await doc.update({ done: { [id]: value } });
+    } catch (e) {
+      sync.textContent = "not saved";
+    }
+  }
+
+  (async () => {
+    const db = await (window.claude?.use?.("db") ?? Promise.resolve(null));
+    if (!db) { sync.textContent = "local only"; return; }
+    try {
+      doc = db.doc("checklist/swps");
+      const snap = await doc.get();
+      if (!snap.exists) await doc.set({ done: {} });
+      doc.onSnapshot(
+        (s) => {
+          applyState(s.data()?.done);
+          sync.textContent = "shared";
+        },
+        () => { sync.textContent = "not syncing"; }
+      );
+    } catch (e) {
+      doc = null;
+      sync.textContent = "local only";
+    }
+  })();
+</script>
