@@ -1,0 +1,171 @@
+---
+title: "Diagnosing non-ignorable nonresponse with a randomized response instrument: a Polish CAWI pilot"
+subtitle: "Pre-registration — text prepared for submission to AsPredicted (Questions version 2.00)"
+date: "2026-10-20"
+date-format: "YYYY/MM/DD"
+lang: en
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.2cm
+      y: 2cm
+    fontsize: 10pt
+    mainfont: "Times New Roman"
+    toc: false
+---
+
+*Authors: Ben Stanley (SWPS University), Mikołaj Cześnik (SWPS University), Marta Żerkowska-Balas (SWPS University). Funded by the Research Development Fund of SWPS University (decision no. 67/2026/FRBN/C). Ethics approval: Research Ethics Committee of SWPS University. To be frozen before the main launch of fieldwork; a copy deposited on OSF alongside the full questionnaire, contact protocol and simulation code.*
+
+# 1) Have any data been collected for this study already?
+
+**Yes, but we have not looked at the data.** Before registration we ran a technical soft launch of approximately 100 invitations per arm to verify that the survey script functions correctly, that arm and reminder-wave tags are written to the data, that paradata fields are populated, and that median completion time is within budget.
+
+We disclose precisely what was examined. We inspected: (a) completion counts and response rates by arm, in order to verify that the contact manipulation produces a difference in response propensity (the inclusion condition, and the basis of a pre-specified go/no-go decision described in Q8); (b) the structural integrity of the data file. We did **not** examine any respondent-level outcome variable, any association between arm and any outcome, or any analysis described in Q5. No hypothesis-relevant result has been seen by any member of the team.
+
+Soft-launch cases are included in the main data set only if their contact protocol was identical to the main-study protocol; otherwise they are discarded. This decision is made and recorded before the main launch.
+
+# 2) What's the main question being asked or hypothesis being tested in this study?
+
+Survey estimates are biased when the propensity to respond is correlated with the answer a person would give — "non-ignorable nonresponse". Demographic weighting cannot detect or repair this, because it corrects only observable imbalance. The main question is: **in a Polish online access panel, for which socio-political survey items is nonresponse non-ignorable, and how large is the resulting distortion?**
+
+We answer it by randomly assigning invited panel members to two contact protocols of differing intensity, holding the questionnaire and all other fieldwork parameters constant. The light-contact arm yields a lower response rate and therefore contains only the most willing respondents; the standard-contact arm additionally reaches more reluctant respondents. Differences in answers between arms, conditional on covariates, identify items for which willingness to respond is related to the answer itself.
+
+Throughout, **Z = 1 for arm B (light contact: single invitation, no reminders)** and Z = 0 for arm A (standard contact: invitation plus two reminders). Arm B respondents are the high-response-propensity types.
+
+**Manipulation check (MC).** Political interest will be higher among arm B respondents (β_Z > 0), and the effect will be substantial. Political interest is the canonical driver of response propensity for political surveys; if this coefficient is null, the instrument is weak and null results for H1–H4 are uninformative (see the inference rule in Q8).
+
+**Confirmatory hypotheses.**
+
+**H1 (Turnout).** Reported turnout propensity and certainty of voting will be higher among arm B respondents (β_Z > 0).
+
+**H2 (Stigmatised parties).** Sympathy towards Konfederacja Wolność i Niepodległość and Konfederacja Korony Polskiej will be lower among arm B respondents (β_Z < 0). Sympathy towards Prawo i Sprawiedliwość is tested as a secondary item with the same predicted direction.
+
+**H3 (Minority attitudes).** Scores on the minority-attitudes index, scored so that higher values indicate more progressive attitudes, will be higher among arm B respondents (β_Z > 0).
+
+**H4 (Democratic norms).** Scores on the democratic-norms index, scored so that higher values indicate stronger commitment to liberal-democratic norms, will be higher among arm B respondents (β_Z > 0).
+
+**H5 (Ignorable items).** For left–right self-placement, support for EU membership, three low-stigma valence policy items, and two benchmarked behavioural items, arm assignment will have no effect of substantive size. H5 is tested by equivalence testing (TOST) against a smallest effect size of interest of ±0.10 SD (±3 percentage points for binary items), not by failure to reject a null.
+
+H5 is stated affirmatively by design: a claim that weighting is adequate for an item is a positive claim and must be supported by a positive test.
+
+# 3) Describe the key dependent variable(s) specifying how they will be measured.
+
+All items are administered in Polish. Item labels below refer to the questionnaire deposited with this registration. Every attitudinal item offers explicit "Don't know / hard to say" (code 97) and "Refusal" (code 98) options; no item other than consent and the age screener requires a response.
+
+**Manipulation check.** `intpol` — political interest, four-point scale (1 = very interested to 4 = not at all interested), recoded so that higher values indicate greater interest.
+
+**H1.** `sklonfrek` — self-assessed probability of voting in the next parliamentary election, 0–10. `frekniedz` — certainty of voting if a Sejm election were held next Sunday, five-point scale; the primary analysis uses a binary indicator (certain to vote vs. all other responses), with the five-point ordinal variable as a secondary outcome.
+
+**H2.** `prefkonf`, `prefkor`, and (secondary) `prefpis` — party sympathy scales, 0–10, where 0 = "I definitely dislike this party" and 10 = "I definitely like this party". Six further party sympathy items and four leader sympathy items are collected for exploratory analysis and subgroup construction.
+
+**H3.** `idx_mniej` — minority-attitudes index, the mean of eight standardised five-point agreement items covering rights of sexual minorities (three items), Ukrainian refugees (three items) and citizenship and national belonging (two items). Three items are negatively worded and are reverse-coded before standardisation so that higher values indicate more progressive attitudes. Cronbach's α and McDonald's ω are reported. Three thematic subindices (LGBT rights, refugees, citizenship) are analysed in parallel with the overall index, because the direction and magnitude of selection may differ across domains; the overall index is the confirmatory outcome and the subindices are reported alongside it.
+
+**H4.** `idx_norm` — democratic-norms index, the mean of six standardised items: four five-point agreement items (unconstrained strong leadership — reverse-coded; judicial review of government decisions; the right to criticise government in a crisis; acceptance of election results) and two 0–10 importance-for-democracy items (media able to criticise government; protection of minority rights). Items measured on different scales are standardised separately before averaging. Higher values indicate stronger commitment to liberal-democratic norms. Reliability is reported as for `idx_mniej`.
+
+**H5.** `lewprawo` — left–right self-placement, 0–10. `ue` — evaluation of Polish EU membership, five-point scale. `pol1`, `pol2`, `pol3` — three bipolar 1–7 policy items (healthcare waiting times; housing policy; air quality and vehicle regulation). `palenie` — current tobacco use, analysed as a binary indicator (currently smokes daily or occasionally vs. not). `prawojazdy` — possession of a category B driving licence, binary. A third behavioural item, frequency of internet use, is collected but is not part of the confirmatory family, since its distribution in a panel population is not informative about the general population.
+
+**Benchmark items** (not hypothesis tests; used in Q5, Stage 4). Recalled turnout and vote choice in the 2023 Sejm election and in both rounds of the 2025 presidential election; frequency of religious service attendance.
+
+**Covariates (X).** Sex; age and age squared (from year of birth); education (six categories); settlement size (five categories); voivodeship; labour-market status; household material situation; frequency of religious attendance; self-rated religiosity. **Political interest is deliberately excluded from X** in the primary specification, because it is itself a test variable and is outcome-adjacent; a specification including it is reported as a robustness column.
+
+**Invitee-level variables supplied by the fieldwork agency** (available for all approximately 20,000 invited persons, respondents and nonrespondents alike): arm indicator; invitation batch identifier; timestamps of the invitation and of each reminder actually sent; disposition (completed / partial with break-off point / clicked without starting / no response); completion timestamp; device type; and the panel's profile variables (sex, age or age band, education, NUTS2 region, settlement size, panel tenure, recent activity). If the agency is unable to release individual-level profile variables for nonrespondents on data-protection grounds, we will instead receive aggregate cross-tabulations of the invited pool by arm and use the pseudo-nonrespondent construction described in Q8.
+
+# 4) How many and which conditions will participants be assigned to?
+
+Two conditions, differing **only** in the number of reminder contacts sent to invited persons who have not yet completed the survey.
+
+A pool of approximately 20,000 adult panel members, pre-stratified by sex × age × education × region, is randomly assigned 50/50 at the level of the **invited person**, before any contact is made. Assignment is executed using a seed supplied by the research team or by a documented procedure that permits independent verification of balance.
+
+- **Arm A (standard contact, Z = 0):** invitation on day 0; reminders to non-completers on approximately day 4 and approximately day 9.
+- **Arm B (light contact, Z = 1):** the identical invitation on day 0; no reminders of any kind, by any channel.
+
+Identical across arms: invitation text, sender and subject line; questionnaire content and order; incentive (standard panel points); field window (both arms close on day 14); device availability; and all information screens. Quota management during fielding, router-based recruitment, open survey links, automatic agency-initiated top-ups, and staggered closing of the arms are contractually prohibited. Any additional batch of invitations is released to both arms simultaneously in the same 50/50 ratio and carries its own batch identifier.
+
+Respondents are not informed before participating that the number of reminders varies between randomly assigned groups, because that information would alter the behaviour under study. All respondents receive a debriefing note explaining the manipulation on the closing screen. Arm B receives fewer contacts than the panel's standard protocol, so the experimental treatment reduces rather than increases participant burden. This procedure has been reviewed by the Research Ethics Committee of SWPS University.
+
+A secondary, non-randomised gradient of response propensity is derived from the reminder wave at which each arm A respondent completed: arm B, arm A wave 0, arm A wave 1, arm A wave 2, ordered by decreasing willingness to respond. Arm B and arm A wave 0 received an identical stimulus at the time of completion and their comparison serves as a placebo test.
+
+# 5) Specify exactly which analyses you will conduct to examine the main question/hypothesis.
+
+All analyses are conducted in R (≥ 4.4) using a `targets` pipeline with an `renv`-pinned environment. The entire pipeline is written and tested on simulated data before the real data are received.
+
+**Stage 0 — Validation.** Reconcile the invitee file against the agency field report (denominators per arm and batch). Verify randomisation balance on profile covariates using standardised differences and a joint permutation test. Construct outcomes and indices according to the coding rules in Q3.
+
+**Stage 1 — Instrument strength (invitee level, N ≈ 20,000).** Report response rates by arm. Estimate a response probit, R ~ Z + X_profile + batch fixed effects, and report the coefficient on Z, the implied effect in percentage points, and its z-statistic. This is the inclusion condition; we expect a large-magnitude z-statistic given the number of invitations. Report the response curve by reminder wave within arm A.
+
+**Stage 2 — The diagnostic test (respondent level). This is the primary test of every confirmatory hypothesis.** For each outcome in Q3, estimate
+
+> Y = β₀ + β_Z·Z + Xγ + ε
+
+by OLS, using a linear probability model for binary outcomes, with HC2 heteroskedasticity-consistent standard errors. The coefficient β_Z is the quantity of interest. Ordered logit is reported as a sensitivity analysis for ordinal outcomes. We report standardised effect sizes with 95% confidence intervals for every outcome; the interval, not the significance star, is the reported result.
+
+The covariate-adjusted specification is essential and is not a robustness choice: although Z is randomised in the invited pool, conditioning on response induces a correlation between Z and X among respondents, so the bivariate test has a badly inflated false-positive rate while the covariate-adjusted test has approximately correct size.
+
+**Multiple testing.** Benjamini–Hochberg false discovery rate control at 5% within the confirmatory family (the H1–H4 outcomes). Tests are two-sided and reported with their signed expectations. The H5 equivalence tests form a separate family.
+
+**Stage 3 — Equivalence tests for H5.** Two one-sided tests against bounds of ±0.10 SD (±3 percentage points for binary outcomes). An item is declared **ignorable** only if TOST rejects at the 5% level; **flagged** if the Stage 2 test rejects at BH-5%; and **indeterminate** if neither. Indeterminate results are reported as such and are not presented as evidence of either conclusion.
+
+**Stage 4 — Selection models for flagged items.** For each item flagged in Stage 2:
+
+- **Heckman maximum likelihood** (`sampleSelection::selection`) as the fixed, interpretable reference specification: selection equation R ~ Z + X_profile estimated on the full invited sample, outcome equation Y ~ X. We report ρ̂ with its confidence interval, the corrected population estimate (fitted values over the full invited sample, post-stratified to population margins), and the R²_M multicollinearity diagnostic (the R² from regressing the inverse Mills ratio on the outcome-equation covariates).
+- **Copula models** (`GJRM`: Gaussian, Frank, Gumbel, Joe and rotations, AIC-selected) reported alongside Heckman as a **range** of corrected estimates rather than as an adjudication between specifications.
+- Uncertainty for corrected estimates via nonparametric bootstrap over the invited sample, stratified by arm.
+
+Selection-model evidence is **corroborating, not primary**: the confirmatory claim that an item exhibits non-ignorable nonresponse rests on the Stage 2 covariate-adjusted test, because the selection-model ρ̂ over-rejects under misspecification.
+
+**Stage 5 — Comparison and external validation.** For each flagged item we report three estimates side by side: (1) the observed unweighted estimate; (2) a conventionally raked estimate (sex × age, education, settlement size, region — standard Polish practice; `survey::rake`); and (3) the selection-corrected estimate (Heckman reference plus copula range). Where an external benchmark exists we report the absolute error of each estimator against it: recalled 2023 Sejm turnout and vote against official PKW results; recalled 2025 presidential turnout and vote for both rounds against PKW; smoking against GUS/EHIS; religious attendance against CBOS/ISKK. Benchmarks validate direction and approximate magnitude, not decimal precision, since recall error is itself correlated with engagement; this caveat is stated wherever benchmark comparisons are reported.
+
+**Placebo and gradient tests.** (a) Arm A wave 0 versus arm B, which differ in assignment but not in the stimulus received at the time of completion: we expect no difference, and a difference here would indicate a timing or composition artefact rather than selection. (b) A test for monotone trend across the four-level propensity gradient (arm B, arm A wave 0, arm A wave 1, arm A wave 2), which provides a second, partially independent test and guards against non-monotonic relationships between response propensity and outcomes.
+
+# 6) Describe exactly how outliers will be defined and handled, and your precise rule(s) for excluding observations.
+
+**No observations are excluded from the primary analysis.** The primary sample is all completed interviews. This is a design decision, not an oversight: rules that exclude respondents on the basis of response quality interact with response propensity, so applying them would preferentially remove the reluctant respondents whose presence in the sample is the object of study.
+
+**Partial interviews** are treated as nonrespondents in the primary analysis. A sensitivity analysis treats them as respondents for those items answered before break-off.
+
+**Item-level missingness.** "Don't know / hard to say" (97) and "Refusal" (98) are treated as missing for the item in question and observations are excluded listwise from models in which that item appears. Rates of 97 and 98 responses by arm are analysed separately as outcomes in their own right (see Q8), since item nonresponse is itself a form of the behaviour under study. Index scores are computed for respondents answering at least six of the eight items (`idx_mniej`) or at least four of the six items (`idx_norm`), as the mean of available standardised items; respondents below these thresholds receive a missing index value.
+
+**Pre-specified quality-filtered sensitivity sample.** Reported as a sensitivity analysis only, never as the primary result. A respondent is excluded from this sample if any of the following holds: (a) total completion time below one third of the median completion time of the full sample; (b) an identical response given to every item in any one of the grid batteries M5, M6 or M7 (straightlining); (c) an incorrect response to the single instructed-response attention check. These three criteria are also analysed separately as by-arm quality outcomes.
+
+**No outlier exclusion on the basis of response values or index distributions** is applied. Continuous outcomes are bounded by their response scales, so extreme values are substantively meaningful rather than erroneous.
+
+**Soft-launch cases** are included only if their contact protocol was identical to the main-study protocol, as determined and recorded before the main launch.
+
+# 7) How many observations will be collected or what will determine sample size?
+
+Approximately **20,000 invitations** will be issued, approximately 10,000 per arm, drawn as a single pool and randomised 50/50 before contact. The number of completed interviews is not controlled and is not a quota: the contracted deliverable is the number of invitations issued and adherence to the contact protocol, not the number of interviews obtained.
+
+Expected yield, based on the agency's documented invitation-to-completion rates for comparable 10–12 minute socio-political surveys, is approximately **2,000 completed interviews** — approximately 1,200 in arm A and 700–900 in arm B. The minimum acceptable realisation is 1,800 completed interviews in total with no fewer than 650 in arm B. If completion counts lag at the midpoint of the field period, additional pre-randomised batches are released **to both arms simultaneously in the same 50/50 ratio**, never selectively, each carrying its own batch identifier; the day 0 / day 4 / day 9 cadence is preserved within each batch.
+
+Fieldwork closes on day 14 for both arms regardless of the number of interviews obtained.
+
+At the expected realisation (n_A = 1,200, n_B = 800), minimum detectable effects at 80% power and α = .05, two-sided, are approximately: 6.4 percentage points for a binary outcome with p ≈ 0.5; 5.1 percentage points for a binary outcome with p ≈ 0.2; and 0.13 SD for a standardised index. At the minimum acceptable realisation (1,100 / 700) these become approximately 6.8 percentage points and 0.14 SD. Effects of the magnitude reported in comparable work in the United States (turnout differences of 16–25 percentage points across propensity groups; party-evaluation differences of 0.2–0.4 SD) lie well above these thresholds. Within-party subgroup comparisons have a minimum detectable effect of approximately 0.23 SD and are therefore designated exploratory (Q8).
+
+# 8) Anything else you would like to pre-register?
+
+**Inference rule conditional on the manipulation check.** If the manipulation check (political interest) does not show a substantial arm effect, the instrument is weak, and null results for H1–H4 will be reported as uninformative rather than as evidence of ignorability. This rule is fixed in advance because the alternative — treating a weak-instrument null as a finding of no bias — is the most likely way this design could mislead.
+
+**Interpretive rules fixed in advance.** (a) Confirmatory claims are made only within the H1–H5 family with BH correction. (b) An item "exhibits non-ignorable nonresponse" if and only if the covariate-adjusted arm test rejects at BH-5%; selection-model ρ̂ significance is corroborating, not primary. (c) "Ignorable" is claimed only where TOST rejects the ±0.10 SD bound; intermediate results are reported as indeterminate. (d) Corrected point estimates are always reported with the statement that identification depends on functional form, with the copula range shown as the plausible span.
+
+**Exploratory analyses** (pre-registered as exploratory; not subject to multiplicity correction and carrying no confirmatory claims):
+
+1. **Within-electorate mirror-image effects.** Selection may operate in opposite directions within different party electorates and cancel in the full sample, which would cause an item to appear ignorable when it is not. We will estimate arm effects on party and leader sympathy separately among respondents identifying with PiS, KO and Konfederacja, and test whether published estimates overstate the degree of polarisation.
+2. **Heterogeneity** by education and by political-interest stratum, as a guard against non-monotonic relationships between response propensity and outcomes.
+3. **Item nonresponse by arm**: rates of "don't know" and refusal for each attitudinal item, treated as outcomes in their own right.
+4. **Data-quality outcomes by arm**: median completion time, straightlining, attention-check failure, break-off position.
+5. **The four-level propensity gradient** and the arm A wave 0 versus arm B placebo, as described in Q5.
+6. **NINR weights** (method-of-moments implementation following Sun et al. 2018) as a third correction approach. This is a stretch goal; if the estimator does not converge stably we will report that outcome rather than omit it.
+7. **Manski bounds** for headline items at the observed response rates, and a Hartman–Huang-style sensitivity analysis for one or two items, to connect this design to the situation of studies that have no randomised instrument available.
+
+**Pre-registered contingencies.**
+
+- *Weak reminder lift.* If the soft launch indicates a difference in response rates between arms of less than 2 percentage points, a third reminder is added to arm A before the main launch. This decision is made before the main launch and is recorded.
+- *Completion shortfall.* Symmetric top-up batches as described in Q7.
+- *No individual-level covariates for nonrespondents.* If the agency cannot release profile variables for nonrespondents, the first stage is estimated using pseudo-nonrespondents constructed from aggregate margins of the invited pool, Pr(X | R = 0) = [Pr(X)·N − Pr(X | R = 1)·n] / (N − n), with multiple imputation over draws from the pseudo-nonrespondent pool. Randomisation guarantees that Z is independent of X among nonrespondents, which is what makes this fallback viable.
+
+**Scope limitation, stated in advance.** All participants are members of a commercial online panel and have therefore already selected into survey participation. This design identifies selection *within* the panel-recruited population, not selection from the Polish adult population as a whole. Corrected estimates are accordingly expected to remain closer to the observed values than to population benchmarks, and this limitation will be stated in every report of the results rather than raised only if challenged.
+
+**Deviations.** Any departure from this registration will be reported in a clearly labelled section of every resulting paper and report, with the reason and the date on which the decision was taken.
+
+**Materials.** The full Polish questionnaire, the contact protocol and data specification agreed with the fieldwork agency, the simulation code used to derive the power analysis, and the complete analysis pipeline are deposited with this registration. Anonymised data and all code will be released publicly on completion.

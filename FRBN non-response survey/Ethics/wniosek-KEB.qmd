@@ -1,0 +1,435 @@
+---
+title: "Wniosek o wydanie opinii Komisji ds. Etyki Badań Naukowych Uniwersytetu SWPS"
+subtitle: "Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi w polskim sondażu społeczno-politycznym"
+date: "2026-09-18"
+date-format: "D MMMM YYYY"
+lang: pl
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.2cm
+      y: 2.2cm
+    fontsize: 10pt
+    mainfont: "Times New Roman"
+    section-numbering: "1.1"
+    toc: true
+    toc-title: "Spis treści"
+    toc-depth: 2
+---
+
+# Dane podstawowe wniosku
+
+| | |
+|:--------------------------------|:---------------------------------------------------|
+| **Tytuł projektu (PL)** | Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi w polskim sondażu społeczno-politycznym |
+| **Tytuł projektu (EN)** | Diagnosing non-ignorable nonresponse with a randomized response instrument: a pilot in a Polish online panel |
+| **Kierownik projektu** | dr hab. Ben Stanley, prof. Uniwersytetu SWPS |
+| **Jednostka** | Instytut Nauk Społecznych, Uniwersytet SWPS; Centrum Studiów nad Demokracją |
+| **Zespół badawczy** | prof. dr hab. Mikołaj Cześnik; dr hab. Marta Żerkowska-Balas, prof. Uniwersytetu SWPS |
+| **Źródło finansowania** | Fundusz Rozwoju Badań Naukowych Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C |
+| **Budżet** | 25 830 zł brutto (21 000 zł netto + VAT) — wyłącznie realizacja terenowa badania |
+| **Okres realizacji projektu** | 7 września 2026 – 16 grudnia 2026 |
+| **Planowany termin badania terenowego** | 26 października – 9 listopada 2026 (14-dniowe okno) |
+| **Typ badania** | Sondaż CAWI z wbudowanym eksperymentem randomizowanym (manipulacja parametrem kontaktu) |
+| **Uczestnicy** | Osoby pełnoletnie, członkowie komercyjnego panelu internetowego; ok. 20 000 zaproszonych, ok. 2 000 wywiadów zrealizowanych |
+| **Kontakt** | bstanley\@swps.edu.pl |
+
+: {tbl-colwidths="[30,70]"}
+
+**Rodzaj wnioskowanej opinii:** opinia o projekcie badawczym z udziałem ludzi, obejmującym przetwarzanie danych szczególnych kategorii (poglądy polityczne, przekonania światopoglądowe) oraz element niepełnego ujawnienia jednego parametru procedury terenowej.
+
+# Streszczenie projektu
+
+Projekt odpowiada na problem, który w ostatniej dekadzie stał się centralny dla wiarygodności badań opinii publicznej: **systematyczne odchylenie wyników sondaży wynikające z tego, że osoby udzielające odpowiedzi różnią się od osób, które odpowiedzi odmawiają, pod względem samych mierzonych postaw**. Przy wskaźnikach realizacji rzędu kilku–kilkunastu procent, typowych dla paneli internetowych, standardowe ważenie po zmiennych demograficznych nie usuwa tego odchylenia, ponieważ koryguje wyłącznie te różnice, które są obserwowalne. Gdy skłonność do udziału w badaniu jest skorelowana z treścią odpowiedzi — co jest wysoce prawdopodobne w przypadku deklaracji uczestnictwa w wyborach, poparcia dla ugrupowań obciążonych stygmatem społecznym czy postaw wobec mniejszości — mamy do czynienia z tzw. **nieignorowalnym brakiem odpowiedzi** (*non-ignorable nonresponse*).
+
+Projekt wdraża w polskim kontekście podejście zaproponowane przez Michaela A. Baileya (*Polling at a Crossroads: Rethinking Modern Survey Research*, Cambridge University Press, 2024). Jego istotą jest **randomizowany instrument odpowiedzi**: losowe zróżnicowanie intensywności kontaktu z zaproszonymi osobami przy całkowicie identycznej treści badania. Zaproszona próba jest dzielona losowo na dwie grupy:
+
+- **Grupa A (kontakt standardowy):** zaproszenie w dniu 0 oraz dwa przypomnienia (dzień 4 i dzień 9) — dokładnie taka procedura, jaką agencje panelowe stosują rutynowo we wszystkich swoich badaniach;
+- **Grupa B (kontakt ograniczony):** wyłącznie zaproszenie w dniu 0, bez żadnych przypomnień.
+
+Grupa B osiąga niższy wskaźnik realizacji, a zatem obejmuje wyłącznie osoby najbardziej skłonne do udziału; grupa A obejmuje dodatkowo osoby mniej chętne. **Porównanie odpowiedzi między grupami pozwala — pytanie po pytaniu — rozstrzygnąć empirycznie, czy skłonność do odpowiadania wiąże się z treścią odpowiedzi.** Brak różnicy stanowi pozytywny dowód, że dla danego pytania standardowe ważenie jest wystarczające; różnica ujawnia obciążenie, którego ważenie nie usuwa, i pozwala je skorygować przy użyciu modeli selekcji.
+
+Ponieważ o przydziale do grupy decyduje losowanie, różnice między grupami nie mogą wynikać z tego, że tworzą je odmienne kategorie osób. To właśnie randomizacja przekształca przypuszczenie w pomiar.
+
+**Kluczowa uwaga z punktu widzenia oceny etycznej:** manipulacja eksperymentalna dotyczy wyłącznie **liczby przypomnień** — parametru operacyjnego, który agencje badawcze i tak zmieniają rutynowo z badania na badanie, i którego wartość nigdy nie jest komunikowana uczestnikom panelu. Kwestionariusz, treść zaproszenia, gratyfikacja, okno terenowe i wszystkie pozostałe elementy są w obu grupach identyczne. Grupa eksperymentalna (B) otrzymuje **mniej** kontaktów niż standard branżowy, zatem interwencja **zmniejsza** obciążenie uczestników względem praktyki rutynowej.
+
+# Cel naukowy i spodziewane korzyści
+
+## Cele
+
+1. Sprawdzenie, czy w polskim panelu internetowym brak odpowiedzi jest nieignorowalny, i dla **których konkretnie** pytań społeczno-politycznych.
+2. Oszacowanie skorygowanych wartości dla pytań, dla których wykryto obciążenie, oraz porównanie ich z wynikami ważenia konwencjonalnego i z zewnętrznymi punktami odniesienia (oficjalne wyniki PKW, dane GUS).
+3. Wypracowanie powtarzalnego, taniego protokołu diagnostycznego, możliwego do zastosowania w kolejnych edycjach Polskiego Generalnego Studium Wyborczego (PGSW) oraz w innych badaniach akademickich.
+
+## Spodziewane korzyści poznawcze i praktyczne
+
+- **Poznawcze:** pierwsza systematyczna implementacja randomizowanego instrumentu odpowiedzi poza obszarem anglosaskim, w kontekście silnie spolaryzowanym i z obecnością ugrupowań obciążonych stygmatem społecznym. Wyniki zostaną zgłoszone do czasopisma z zakresu metodologii badań sondażowych (*Public Opinion Quarterly* i alternatywy).
+- **Dla infrastruktury badawczej:** rekomendacja protokołu dla PGSW — flagowego akademickiego badania wyborczego w Polsce — wraz z modelem kosztowym.
+- **Dla debaty publicznej:** raport w języku polskim, zawierający część przystępną dla dziennikarzy pracujących z sondażami, wyjaśniający, które wielkości sondażowe są wiarygodne, a które systematycznie zawyżone (najsilniej podejrzana jest deklarowana frekwencja wyborcza).
+- **Dla przejrzystości nauki:** pełna pre-rejestracja hipotez i planu analitycznego przed zebraniem danych (OSF), publiczne udostępnienie kodu, materiałów i zanonimizowanych danych.
+
+Ryzyko dla uczestników jest — jak uzasadniamy w rozdziale 6 — minimalne i nie przekracza ryzyka związanego z rutynowym udziałem w sondażu panelowym. W ocenie zespołu relacja korzyści do ryzyka jest jednoznacznie korzystna.
+
+# Uczestnicy badania
+
+## Populacja i dobór próby
+
+| | |
+|:-----------------------------|:--------------------------------------------------|
+| Populacja | Dorośli mieszkańcy Polski (18+) |
+| Operat | Komercyjny panel internetowy wybranej agencji badawczej (wyłonionej w procedurze zapytania ofertowego zgodnej z wewnętrznymi zasadami udzielania zamówień Uniwersytetu SWPS) |
+| Sposób doboru | Próba losowa z panelu, prestratyfikowana wg płci × wieku × wykształcenia × regionu |
+| Liczebność zaproszonych | ok. 20 000 osób (ok. 10 000 na grupę) |
+| Liczebność zrealizowanych wywiadów | ok. 2 000 (ok. 1 200 w grupie A, ok. 700–800 w grupie B) |
+| Kryteria włączenia | Ukończone 18 lat; członkostwo w panelu; wyrażenie zgody na ekranie zgody |
+| Kryteria wyłączenia | Wiek poniżej 18 lat (weryfikacja na ekranie wstępnym — osoby niepełnoletnie nie są zapraszane i nie są dopuszczane do kwestionariusza) |
+| Czas trwania | mediana ≤ 12 minut, ok. 60 pytań |
+| Gratyfikacja | Standardowe punkty panelowe agencji, **identyczne w obu grupach**; brak manipulacji gratyfikacją |
+
+: {tbl-colwidths="[30,70]"}
+
+Badanie **nie obejmuje osób małoletnich, osób pozbawionych zdolności do świadomego wyrażenia zgody, pacjentów, osób pozostających w stosunku zależności wobec badaczy ani innych grup wymagających szczególnej ochrony**. Uczestnikami są dorośli wolontariusze panelowi, którzy uprzednio, niezależnie od niniejszego projektu, przystąpili do panelu badawczego i wyrazili zgodę na otrzymywanie zaproszeń do badań.
+
+## Rekrutacja
+
+Rekrutacja jest prowadzona wyłącznie przez agencję badawczą, w ramach jej standardowej procedury zapraszania członków panelu (wiadomość e-mail lub powiadomienie w aplikacji). Zespół badawczy **nie ma na żadnym etapie dostępu do danych identyfikujących** członków panelu i nie kontaktuje się z nimi bezpośrednio.
+
+# Procedura badania
+
+## Przebieg
+
+1. Agencja losuje z panelu pulę ok. 20 000 osób, prestratyfikowaną demograficznie.
+2. Pula jest dzielona losowo w proporcji 50/50 na grupę A i grupę B (losowanie wykonane przy użyciu ziarna dostarczonego przez zespół badawczy albo udokumentowane przez agencję w sposób umożliwiający weryfikację).
+3. W dniu 0 wszystkie osoby otrzymują **identyczne** zaproszenie (ten sam nadawca, temat, treść, ten sam link, ta sama informacja o gratyfikacji).
+4. Osoby z grupy A, które nie wypełniły kwestionariusza, otrzymują przypomnienia w dniu ok. 4 i ok. 9. Osoby z grupy B nie otrzymują żadnych przypomnień.
+5. Po kliknięciu w link uczestnik widzi **ekran informacyjny i ekran zgody** (Załącznik A), następnie pytanie weryfikujące pełnoletność, następnie kwestionariusz.
+6. Okno terenowe zamyka się w dniu 14 jednocześnie dla obu grup.
+7. Po zakończeniu kwestionariusza uczestnik widzi ekran podziękowania zawierający **notę informacyjną po badaniu** (Załącznik B) wraz z odnośnikiem do strony projektu.
+
+Przed uruchomieniem badania głównego przeprowadzony zostanie tzw. miękki start (ok. 100 zaproszeń na grupę) w celu weryfikacji poprawności działania kwestionariusza, oznaczeń grup i czasu wypełniania. Uczestnicy miękkiego startu są traktowani identycznie jak uczestnicy badania głównego pod względem informacji, zgody i gratyfikacji.
+
+## Zawartość kwestionariusza
+
+Kwestionariusz obejmuje moduły opisane poniżej. Pełne brzmienie pytań stanowi Załącznik C; wszędzie tam, gdzie to możliwe, wykorzystywane są sformułowania **już wcześniej stosowane i zwalidowane** w PGSW, CSES, European Values Study oraz w badaniach CBOS — co oznacza, że ich obciążenie dla respondenta jest znane i akceptowane w polskiej praktyce badawczej.
+
+| Moduł | Treść | Rola w badaniu |
+|:--|:-------------------------|:-----------------------|
+| M1 | Ekran informacyjny, zgoda, weryfikacja wieku | Wymóg etyczny |
+| M2 | Dane społeczno-demograficzne (płeć, wiek, wykształcenie, wielkość miejscowości, region, status na rynku pracy, przedział dochodu gospodarstwa domowego, religijność/praktyki religijne) | Zmienne kontrolne i ważące |
+| M3 | Zainteresowanie polityką, uwaga poświęcana kampanii, wiedza polityczna (3 pytania), korzystanie z mediów | Kontrola pozytywna |
+| M4 | Skłonność do głosowania, deklaracja udziału w hipotetycznych wyborach, preferencja partyjna, przypomnienie głosowania w 2023 i 2025 r. | Hipoteza główna H1 |
+| M5 | Skale sympatii (0–10) wobec partii i liderów | Hipoteza H2 |
+| M6 | Postawy wobec mniejszości (prawa osób LGBT, uchodźcy z Ukrainy, mniejszości narodowe) — krótkie zwalidowane baterie | Hipoteza H3 |
+| M7 | Normy demokratyczne (niezależność sądów, tolerancja krytyki władzy, akceptacja porażki wyborczej) | Hipoteza H4 |
+| M8 | Autoidentyfikacja lewica–prawica, poparcie dla członkostwa w UE, 2–3 pytania o politykę publiczną nieobciążone stygmatem | Kontrole negatywne (H5) |
+| M9 | Zachowania o znanej wartości populacyjnej (np. palenie tytoniu, posiadanie prawa jazdy) | Kontrole z zewnętrznym punktem odniesienia |
+| M10 | Jedno pytanie sprawdzające uważność | Wskaźnik jakości danych |
+
+: {tbl-colwidths="[8,52,40]"}
+
+**Zasady konstrukcji kwestionariusza istotne etycznie:**
+
+- przy wszystkich pytaniach o postawy jawnie udostępniane są odpowiedzi "trudno powiedzieć" oraz "odmowa odpowiedzi";
+- **nie stosuje się wymuszania odpowiedzi** (*forced response*) na żadnym pytaniu poza zgodą i podstawowymi danymi demograficznymi;
+- uczestnik może przerwać wypełnianie w dowolnym momencie, zamykając okno przeglądarki, bez podawania powodu i bez negatywnych konsekwencji dla jego statusu w panelu;
+- kolejność pytań w bateriach M5–M7 jest randomizowana, co ogranicza efekty kolejności;
+- stosowane jest wyłącznie jedno pytanie sprawdzające uważność, aby nie zwiększać nadmiernie obciążenia poznawczego.
+
+# Manipulacja eksperymentalna i zakres niepełnego ujawnienia
+
+Jest to element wniosku wymagający najbardziej szczegółowego uzasadnienia; przedstawiamy go w całości.
+
+## Czym manipulacja jest, a czym nie jest
+
+Manipulacja polega **wyłącznie** na zróżnicowaniu liczby przypomnień wysyłanych do osób, które nie wypełniły kwestionariusza: dwa przypomnienia w grupie A, brak przypomnień w grupie B. Nie manipulujemy:
+
+- treścią kwestionariusza ani żadnego pytania;
+- treścią, nadawcą ani tonem zaproszenia;
+- wysokością ani formą gratyfikacji;
+- informacją przekazywaną uczestnikom o celu i przebiegu badania;
+- długością okna terenowego.
+
+Uczestnik grupy A i uczestnik grupy B widzą **dokładnie to samo badanie**. Jedyna różnica dotyczy osób, które badania nie wypełniły — a więc osób, których dane merytoryczne w ogóle nie powstają.
+
+## Dlaczego interwencja nie zwiększa obciążenia
+
+Standardem branżowym w polskich panelach internetowych jest zaproszenie plus dwa przypomnienia. Grupa A odpowiada zatem dokładnie praktyce rutynowej, której uczestnicy panelu doświadczają w każdym innym badaniu, do którego są zapraszani. Grupa B otrzymuje **mniej** kontaktów niż ten standard. **Żaden uczestnik nie otrzymuje większej liczby kontaktów niż otrzymałby, gdyby projekt nie był realizowany.** Interwencja eksperymentalna ma zatem charakter redukujący obciążenie, nie zaś je zwiększający.
+
+## Zakres niepełnego ujawnienia i jego uzasadnienie
+
+Uczestnicy **nie są informowani przed badaniem**, że liczba przypomnień została przydzielona losowo i że stanowi ona przedmiot badania. Są natomiast informowani zgodnie z prawdą, czego badanie dotyczy (postawy społeczne i polityczne), ile trwa, kto je prowadzi i finansuje, jakie dane są zbierane i jak będą wykorzystane. **Nie stosujemy podstępu w rozumieniu przekazywania informacji nieprawdziwych** — stosujemy niepełne ujawnienie jednego parametru procedury terenowej.
+
+Uzasadnienie:
+
+1. **Konieczność metodologiczna.** Poinformowanie zaproszonych, że liczba przypomnień jest eksperymentalnie zróżnicowana, wpłynęłoby na samo zachowanie będące przedmiotem pomiaru (decyzję o udziale), co unieważniłoby badanie. Nie istnieje alternatywna procedura pozwalająca odpowiedzieć na pytanie badawcze.
+2. **Minimalne ryzyko.** Nieujawniana informacja dotyczy parametru operacyjnego, którego wartość nie jest komunikowana uczestnikom w żadnym badaniu panelowym. Trudno wskazać osobę, której decyzja o udziale zmieniłaby się, gdyby wiedziała, ile przypomnień otrzyma — a jeśli już, to w kierunku obniżającym, nie podwyższającym, komfort uczestnictwa (grupa B jest mniej nagabywana).
+3. **Brak negatywnych konsekwencji.** Nieujawnienie nie naraża uczestnika na dyskomfort, stratę, ryzyko reputacyjne ani na jakąkolwiek zmianę sposobu, w jaki jest traktowany w panelu.
+4. **Debriefing.** Pełna informacja o eksperymentalnym charakterze zróżnicowania kontaktu jest udostępniana **wszystkim uczestnikom po wypełnieniu kwestionariusza**, na ekranie podziękowania (Załącznik B), wraz z adresem strony projektu, na której publikowany będzie raport, oraz z kontaktem do kierownika projektu. Uczestnik może po tej informacji zażądać usunięcia swoich odpowiedzi.
+5. **Zgodność ze standardami.** Procedura jest zgodna z Kodeksem Etyki Pracownika Naukowego PAN oraz ze standardami ESOMAR/WAPOR dotyczącymi badań sondażowych, które traktują zróżnicowanie protokołu kontaktu jako element metodologii pracy terenowej, a nie jako interwencję wobec uczestnika.
+
+Prosimy Komisję o wyraźne odniesienie się do tego elementu wniosku.
+
+# Ryzyka, obciążenia i sposoby ich minimalizacji
+
+| Potencjalne ryzyko / obciążenie | Ocena | Sposób minimalizacji |
+|:--------------------|:--------|:-------------------------------|
+| Dyskomfort związany z pytaniami o poglądy polityczne, postawy wobec mniejszości, normy demokratyczne | Niski; pytania tego typu są standardem w polskich badaniach opinii (CBOS, PGSW, EVS) i są kierowane do dorosłych wolontariuszy panelowych | Wyłącznie sformułowania już zwalidowane i wcześniej stosowane; jawna opcja "trudno powiedzieć" i "odmowa odpowiedzi"; brak wymuszania odpowiedzi; możliwość przerwania w każdej chwili; informacja o tematyce badania podana przed wyrażeniem zgody |
+| Obciążenie czasowe | Niskie — mediana ≤ 12 minut | Czas podany w zaproszeniu i na ekranie zgody; kwestionariusz testowany pod kątem czasu w miękkim starcie |
+| Uciążliwość przypomnień | Nie przekracza standardu panelowego; w grupie B jest niższa | Maksymalnie dwa przypomnienia (standard branżowy); przypomnienia otrzymują wyłącznie osoby, które nie wypełniły kwestionariusza; każde zawiera standardową panelową możliwość rezygnacji |
+| Ryzyko ujawnienia poglądów politycznych osoby możliwej do zidentyfikowania | Niskie | Zespół otrzymuje wyłącznie dane spseudonimizowane; brak dostępu do danych identyfikujących; region na poziomie NUTS2; wiek w przedziałach w pliku publikowanym; kontrola k-anonimowości przed publikacją danych (rozdz. 9) |
+| Ryzyko związane z przetwarzaniem danych osób, które nie wzięły udziału (paradane) | Umiarkowane — omówione osobno w rozdz. 8.3 | Wyłącznie dane spseudonimizowane i ograniczone do kategorii profilowych już posiadanych przez agencję; wariant awaryjny oparty na danych wyłącznie zagregowanych |
+| Fałszywe wrażenie, że badanie ocenia indywidualne poglądy uczestnika | Niskie | Nota po badaniu wyjaśnia, że przedmiotem analizy są wzorce zbiorowe, a nie odpowiedzi jednostkowe; brak informacji zwrotnej indywidualnej |
+
+: {tbl-colwidths="[26,17,57]"}
+
+**Brak procedur obciążających:** badanie nie obejmuje interwencji medycznych, farmakologicznych ani fizjologicznych; nie indukuje stanów emocjonalnych; nie zawiera bodźców drastycznych; nie obejmuje zadań wywołujących stres; nie gromadzi materiału biologicznego; nie wykorzystuje nagrań audio ani wideo.
+
+**Postępowanie w razie skarg lub pytań uczestników:** uczestnicy mogą kierować pytania do agencji (kanał standardowy panelu) oraz bezpośrednio do kierownika projektu, którego adres e-mail podany jest na ekranie zgody i na ekranie podziękowania. Zespół zobowiązuje się do odpowiedzi w terminie 7 dni roboczych.
+
+# Świadoma zgoda
+
+## Sposób uzyskania zgody
+
+Zgoda jest uzyskiwana elektronicznie, przed rozpoczęciem kwestionariusza. Uczestnik widzi ekran informacyjny, a następnie musi aktywnie zaznaczyć oświadczenie zgody, aby przejść dalej. Brak zaznaczenia kończy sesję z podziękowaniem. Nie stosuje się zgody domniemanej ani mechanizmu "dalej oznacza zgodę".
+
+Pełna treść ekranu informacyjnego i ekranu zgody stanowi **Załącznik A**.
+
+## Elementy przekazywanej informacji
+
+Ekran informacyjny zawiera:
+
+1. tożsamość organizatora badania (Uniwersytet SWPS, Instytut Nauk Społecznych) i podmiotu realizującego (agencja badawcza), imię i nazwisko kierownika projektu oraz adres kontaktowy;
+2. źródło finansowania (FRBN Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C);
+3. przedmiot badania — postawy społeczne i polityczne dorosłych Polaków — oraz cel naukowy;
+4. przewidywany czas wypełnienia (ok. 10–12 minut);
+5. informację, że badanie obejmuje pytania o poglądy polityczne, praktyki religijne oraz postawy wobec grup mniejszościowych, i że przy każdym z nich można odmówić odpowiedzi;
+6. informację o pełnej dobrowolności i o prawie przerwania w każdej chwili bez podania przyczyny i bez konsekwencji dla statusu w panelu;
+7. informację o gratyfikacji (standardowe punkty panelowe);
+8. informację o sposobie przetwarzania danych: pseudonimizacja, brak przekazania danych identyfikujących zespołowi badawczemu, planowane publiczne udostępnienie zanonimizowanego zbioru danych;
+9. pełną klauzulę informacyjną RODO (administratorzy, podstawy prawne, okres przechowywania, prawa osoby, kontakt do inspektora ochrony danych Uniwersytetu SWPS);
+10. informację o możliwości wycofania zgody i jej granicach (wycofanie możliwe do momentu anonimizacji zbioru; po anonimizacji identyfikacja rekordu nie jest już możliwa — z podaniem daty granicznej).
+
+## Debriefing
+
+Nota po badaniu (**Załącznik B**) wyświetlana jest wszystkim osobom, które ukończyły kwestionariusz, i wyjaśnia: że zaproszone osoby zostały losowo przydzielone do dwóch wariantów różniących się liczbą przypomnień; dlaczego informacja ta nie mogła zostać podana wcześniej; do czego porównanie obu wariantów służy; gdzie i kiedy zostaną opublikowane wyniki; jak zażądać usunięcia własnych odpowiedzi.
+
+# Ochrona danych osobowych
+
+## Kategorie przetwarzanych danych
+
+Zbierane są dane dotyczące poglądów politycznych oraz przekonań światopoglądowych i praktyk religijnych, a także pojedyncze pytania dotyczące zachowań zdrowotnych (palenie tytoniu). Stanowią one **dane szczególnych kategorii w rozumieniu art. 9 ust. 1 RODO** i są traktowane z odpowiadającym temu poziomem ostrożności. Nie są zbierane: imię i nazwisko, adres, numer telefonu, adres e-mail, numer PESEL, adres IP przekazywany zespołowi ani żadne inne dane bezpośrednio identyfikujące.
+
+## Role i podstawy prawne
+
+- **Agencja badawcza** jest administratorem danych swojego panelu (dane rejestracyjne, kontaktowe, profilowe) i pozostaje jedynym podmiotem mającym dostęp do danych identyfikujących uczestników.
+- **Uniwersytet SWPS** jest administratorem zbioru spseudonimizowanego otrzymanego od agencji, przetwarzanego wyłącznie w celach naukowych.
+- Podstawę przetwarzania danych zwykłych stanowi art. 6 ust. 1 lit. a RODO (zgoda) w powiązaniu z art. 6 ust. 1 lit. e (zadanie realizowane w interesie publicznym — prowadzenie badań naukowych); podstawę przetwarzania danych szczególnych kategorii — art. 9 ust. 2 lit. a RODO (wyraźna zgoda) oraz art. 9 ust. 2 lit. j (cele badań naukowych, z zastosowaniem odpowiednich zabezpieczeń, w tym pseudonimizacji i minimalizacji).
+- Przekazanie zbioru zespołowi badawczemu następuje na podstawie **umowy o powierzeniu/udostępnieniu danych** zawartej z agencją, stanowiącej załącznik do umowy o realizację badania, i obejmuje wyłącznie dane spseudonimizowane.
+
+## Dane dotyczące osób, które nie wzięły udziału w badaniu
+
+Metodologia wymaga informacji o **całej zaproszonej puli** (ok. 20 000 osób), a nie tylko o uczestnikach: pierwszy stopień modelu selekcji szacowany jest na wszystkich zaproszonych. Zespół wnioskuje o przekazanie przez agencję — **w formie spseudonimizowanej** — następujących danych na poziomie zaproszonego: oznaczenie grupy, identyfikator partii zaproszeń, znaczniki czasowe wysłanych zaproszeń i przypomnień, status realizacji (wypełnione / przerwane / kliknięte / brak reakcji), typ urządzenia oraz **posiadane już przez agencję** zmienne profilowe (płeć, wiek lub przedział wieku, wykształcenie, region NUTS2, wielkość miejscowości, staż w panelu).
+
+Zabezpieczenia:
+
+1. **Żadna z tych zmiennych nie jest zbierana na potrzeby projektu od osób, które nie wyraziły zgody** — wszystkie są danymi, które agencja posiada w ramach własnej relacji z członkiem panelu, na podstawie zgód udzielonych przy przystąpieniu do panelu.
+2. Zbiór nie zawiera **żadnych danych o poglądach** osób, które nie wzięły udziału — ze zrozumiałych względów takie dane nie istnieją.
+3. Dane są przekazywane wyłącznie spseudonimizowane, bez możliwości ponownej identyfikacji po stronie zespołu badawczego.
+4. **Wariant awaryjny:** jeżeli agencja — z uwagi na własną ocenę zgodności z RODO — odmówi przekazania danych profilowych na poziomie jednostkowym dla osób, które nie odpowiedziały, projekt przejdzie na **rozwiązanie oparte wyłącznie na danych zagregowanych** (tablice wielodzielcze zaproszonej puli w podziale na grupy). Zespół dysponuje metodą analityczną (tzw. pseudo-nierespondenci) pozwalającą zrealizować cel badania na takich danych. **Projekt nie jest uzależniony od przekazania danych jednostkowych osób nieuczestniczących.**
+
+## Przechowywanie, anonimizacja i udostępnianie
+
+- Dane przechowywane są na infrastrukturze Uniwersytetu SWPS, w repozytorium z kontrolą dostępu ograniczoną do trzech członków zespołu; kopie robocze wyłącznie na urządzeniach służbowych z pełnym szyfrowaniem dysku.
+- Okres przechowywania zbioru spseudonimizowanego: do zakończenia procesu publikacyjnego, nie dłużej niż 10 lat od zakończenia projektu; następnie usunięcie.
+- **Przed jakimkolwiek udostępnieniem publicznym** zbiór podlega anonimizacji: usunięcie identyfikatorów, przedziałowanie wieku, region na poziomie NUTS2, kontrola k-anonimowości z wygaszeniem komórek o liczebności poniżej 5 w przekrojach region × wielkość miejscowości × wiek.
+- Publiczne udostępnienie: zanonimizowany zbiór, pełny kod analityczny i materiały w repozytorium OSF z kopią na GitHub. Plik dotyczący zaproszonej puli udostępniany jest wyłącznie w postaci zredukowanej (grupa, status realizacji, fala przypomnienia, zgrubione zmienne demograficzne).
+- Prawo do publikacji danych zostanie uregulowane w umowie z agencją.
+
+## Ocena skutków dla ochrony danych
+
+Z uwagi na przetwarzanie danych szczególnych kategorii na dużą skalę zespół skonsultuje z Inspektorem Ochrony Danych Uniwersytetu SWPS potrzebę przeprowadzenia oceny skutków dla ochrony danych (DPIA) przed rozpoczęciem realizacji terenowej i dołączy jej wynik do dokumentacji projektu.
+
+# Pre-rejestracja, przejrzystość i rzetelność
+
+Przed rozpoczęciem badania głównego zespół zdeponuje w otwartym repozytorium OSF pełną pre-rejestrację: protokół badania, kwestionariusz, hipotezy, plan analizy statystycznej (estymatory, korekta na wielokrotne testowanie, reguły wykluczania obserwacji), analizę mocy oraz reguły postępowania w sytuacjach awaryjnych. Pre-rejestracja zostaje zamrożona przed uruchomieniem badania głównego. Cały kod analityczny powstaje i jest testowany na danych symulowanych **przed** otrzymaniem danych rzeczywistych.
+
+Rozwiązanie to stanowi zabezpieczenie przed selektywnym raportowaniem i nadużyciem swobody analitycznej — kwestią o wadze etycznej w badaniach, których wyniki wchodzą do debaty publicznej na temat wiarygodności sondaży.
+
+# Konflikt interesów i finansowanie
+
+Zespół oświadcza, że **nie występuje konflikt interesów**. Projekt jest finansowany wyłącznie ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C). Agencja badawcza jest wykonawcą usługi realizacji terenowej wyłonionym w procedurze zgodnej z wewnętrznymi zasadami udzielania zamówień Uniwersytetu SWPS i nie ma wpływu na hipotezy, analizę ani treść publikacji. Żaden z członków zespołu nie ma powiązań finansowych z podmiotami, których dotyczą pytania kwestionariusza, ani interesu w określonym kierunku wyników.
+
+Wszystkie publikacje i materiały projektu będą zawierać informację: "Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C)".
+
+# Zgodność ze standardami
+
+Projekt jest realizowany zgodnie z:
+
+- Kodeksem Etyki Pracownika Naukowego (Komisja do spraw etyki w nauce PAN);
+- rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO) oraz ustawą z dnia 10 maja 2018 r. o ochronie danych osobowych;
+- ustawą z dnia 20 lipca 2018 r. Prawo o szkolnictwie wyższym i nauce;
+- wewnętrznymi regulacjami Uniwersytetu SWPS dotyczącymi etyki badań naukowych i ochrony danych osobowych;
+- międzynarodowym kodeksem ICC/ESOMAR dotyczącym badań rynku, badań opinii i analityki danych oraz wytycznymi WAPOR w zakresie ujawniania metodologii badań sondażowych.
+
+# Oświadczenia wnioskodawcy
+
+Kierownik projektu oświadcza, że:
+
+1. badanie zostanie przeprowadzone zgodnie z procedurą opisaną w niniejszym wniosku i w załącznikach;
+2. udział w badaniu będzie w pełni dobrowolny, a uczestnicy zostaną poinformowani o możliwości przerwania w każdej chwili bez podania przyczyny;
+3. świadoma zgoda zostanie uzyskana od wszystkich uczestników przed rozpoczęciem kwestionariusza;
+4. dane będą przetwarzane wyłącznie w celach naukowych, w formie spseudonimizowanej, a udostępnienie publiczne nastąpi wyłącznie po anonimizacji;
+5. o wszelkich istotnych zmianach w procedurze zespół poinformuje Komisję i — jeżeli będzie to konieczne — wystąpi o ponowną opinię przed ich wdrożeniem;
+6. zespół posiada kompetencje metodologiczne i doświadczenie w prowadzeniu badań sondażowych niezbędne do realizacji projektu.
+
+\
+\
+
+*Data i podpis kierownika projektu:* ......................................................................................
+
+# Wykaz załączników
+
+| Załącznik | Treść | Status |
+|:--|:--------------------------------|:------------------|
+| A | Ekran informacyjny i ekran zgody (pełna treść, w tym klauzula informacyjna RODO) | Poniżej |
+| B | Nota informacyjna po badaniu (debriefing) | Poniżej |
+| C | Kwestionariusz — pełne brzmienie pytań | Do dołączenia po finalizacji (planowo do 9.10.2026) |
+| D | Treść zaproszenia i przypomnień | Poniżej (wzór) |
+| E | Wymogi wobec agencji badawczej w zakresie protokołu kontaktu i przekazania danych (aneks do umowy) | Do dołączenia |
+| F | Decyzja o finansowaniu nr 67/2026/FRBN/C | Do dołączenia |
+
+: {tbl-colwidths="[10,55,35]"}
+
+{{< pagebreak >}}
+
+# Załącznik A. Ekran informacyjny i zgoda {#sec-zal-a}
+
+## Ekran informacyjny
+
+**Badanie postaw społecznych i politycznych Polaków**
+
+Zapraszamy do udziału w badaniu naukowym prowadzonym przez **Instytut Nauk Społecznych Uniwersytetu SWPS**. Badanie realizuje na nasze zlecenie agencja badawcza [nazwa agencji].
+
+**Czego dotyczy badanie?** Interesuje nas, co dorośli mieszkańcy Polski sądzą o życiu publicznym: o polityce, instytucjach państwa, relacjach między różnymi grupami społecznymi oraz o zasadach, na jakich powinno opierać się państwo demokratyczne. Wyniki posłużą do analizy naukowej i zostaną opublikowane w formie raportu oraz artykułów naukowych.
+
+**Ile to trwa?** Około 10–12 minut.
+
+**O co będziemy pytać?** O Pani/Pana poglądy polityczne, w tym o preferencje wyborcze; o praktyki religijne; o stosunek do różnych grup społecznych, w tym mniejszości; oraz o podstawowe informacje o Pani/Panu (wiek, wykształcenie, miejsce zamieszkania). **Przy każdym pytaniu o poglądy może Pani/Pan wybrać odpowiedź "trudno powiedzieć" lub odmówić odpowiedzi.** Nie ma odpowiedzi dobrych i złych — interesuje nas wyłącznie to, co Pani/Pan naprawdę sądzi.
+
+**Czy udział jest dobrowolny?** Tak, w pełni. Może Pani/Pan przerwać wypełnianie w dowolnym momencie, zamykając okno przeglądarki, bez podawania przyczyny. Nie wpłynie to w żaden sposób na Pani/Pana status w panelu ani na przyszłe zaproszenia do badań.
+
+**Wynagrodzenie:** standardowe punkty panelowe, zgodnie z zasadami panelu [nazwa agencji].
+
+**Czy to badanie jest bezpieczne?** Badanie nie wiąże się z żadnym znanym ryzykiem wykraczającym poza zwykły udział w ankiecie internetowej. Niektóre pytania dotyczą tematów, o których ludzie miewają silne opinie; przy każdym z nich można odmówić odpowiedzi.
+
+**Co dzieje się z Pani/Pana odpowiedziami?** Zespół badawczy Uniwersytetu SWPS **nie otrzymuje Pani/Pana imienia, nazwiska, adresu e-mail ani żadnych innych danych pozwalających Panią/Pana zidentyfikować.** Otrzymujemy wyłącznie odpowiedzi opatrzone numerem, którego nie możemy powiązać z konkretną osobą. Wyniki analizujemy i publikujemy wyłącznie w postaci zbiorczej. Po zakończeniu projektu zanonimizowany zbiór danych zostanie udostępniony publicznie do celów naukowych — w postaci, która uniemożliwia identyfikację osób (bez dokładnego wieku, bez dokładnego miejsca zamieszkania, z wygaszeniem rzadkich kombinacji cech).
+
+**Kto za to odpowiada?** Kierownik projektu: dr hab. Ben Stanley, prof. Uniwersytetu SWPS, Instytut Nauk Społecznych, Uniwersytet SWPS, ul. Chodakowska 19/31, 03-815 Warszawa, e-mail: bstanley\@swps.edu.pl. Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C). Projekt uzyskał opinię Komisji ds. Etyki Badań Naukowych Uniwersytetu SWPS (nr opinii: [uzupełnić]).
+
+**Pytania?** Można je kierować na adres bstanley\@swps.edu.pl — odpowiadamy w ciągu 7 dni roboczych.
+
+## Klauzula informacyjna (RODO)
+
+1. **Administratorzy danych:** [nazwa agencji] — w zakresie danych panelowych, w tym danych kontaktowych; Uniwersytet SWPS z siedzibą w Warszawie (03-815), ul. Chodakowska 19/31 — w zakresie spseudonimizowanego zbioru odpowiedzi przekazanego do analizy naukowej.
+2. **Inspektor Ochrony Danych Uniwersytetu SWPS:** iod\@swps.edu.pl.
+3. **Cel przetwarzania:** realizacja badania naukowego dotyczącego postaw społecznych i politycznych oraz jakości pomiaru sondażowego; publikacja wyników w formie zagregowanej i udostępnienie zanonimizowanego zbioru danych.
+4. **Podstawy prawne:** art. 6 ust. 1 lit. a oraz lit. e RODO; w odniesieniu do danych ujawniających poglądy polityczne i przekonania światopoglądowe — art. 9 ust. 2 lit. a RODO (wyraźna zgoda) oraz art. 9 ust. 2 lit. j RODO (cele badań naukowych, z zastosowaniem zabezpieczeń, w tym pseudonimizacji).
+5. **Zakres danych przekazywanych Uniwersytetowi SWPS:** odpowiedzi na pytania kwestionariusza, podstawowe dane demograficzne oraz techniczne informacje o przebiegu wypełniania (czas, urządzenie), **bez danych identyfikujących**.
+6. **Okres przechowywania:** nie dłużej niż 10 lat od zakończenia projektu; zbiór publikowany jest w postaci zanonimizowanej, a więc niepodlegającej już przepisom o ochronie danych osobowych.
+7. **Prawa:** dostęp do danych, sprostowanie, usunięcie, ograniczenie przetwarzania, sprzeciw, przenoszenie danych oraz cofnięcie zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania dokonanego przed cofnięciem. Realizacja praw wymagających identyfikacji rekordu możliwa jest **do dnia [data anonimizacji]**; po anonimizacji zbioru powiązanie odpowiedzi z osobą nie jest już możliwe. Wnioski prosimy kierować do [nazwa agencji] lub na adres iod\@swps.edu.pl.
+8. **Prawo wniesienia skargi** do Prezesa Urzędu Ochrony Danych Osobowych.
+9. **Dobrowolność:** podanie danych jest całkowicie dobrowolne; odmowa nie wiąże się z żadnymi konsekwencjami.
+10. **Brak zautomatyzowanego podejmowania decyzji** i profilowania wywołującego skutki prawne wobec uczestnika.
+
+## Ekran zgody
+
+> ☐ **Zapoznałam się / zapoznałem się z powyższą informacją. Wyrażam dobrowolną zgodę na udział w badaniu oraz na przetwarzanie moich odpowiedzi — w tym odpowiedzi ujawniających moje poglądy polityczne i przekonania światopoglądowe — w celach naukowych, na zasadach opisanych powyżej. Wiem, że mogę przerwać udział w każdej chwili bez podania przyczyny.**
+>
+> ☐ Nie wyrażam zgody i rezygnuję z udziału.
+
+*Przejście do kwestionariusza możliwe wyłącznie po zaznaczeniu pierwszej opcji.*
+
+**Weryfikacja wieku (pytanie następne):** "Czy ukończyła Pani / ukończył Pan 18 lat?" — odpowiedź "nie" kończy badanie ekranem podziękowania.
+
+{{< pagebreak >}}
+
+# Załącznik B. Nota informacyjna po badaniu (debriefing) {#sec-zal-b}
+
+*Ekran wyświetlany wszystkim osobom, które ukończyły kwestionariusz.*
+
+**Dziękujemy za udział w badaniu.**
+
+Chcielibyśmy wyjaśnić jeden element tego badania, o którym nie mogliśmy poinformować wcześniej.
+
+Poza pytaniem o Pani/Pana poglądy, badanie sprawdza **jak bardzo wyniki sondaży zależą od tego, kto na nie odpowiada**. Dziś na zaproszenie do badania internetowego odpowiada zwykle kilka–kilkanaście procent zaproszonych osób. Jeżeli osoby odpowiadające różnią się poglądami od tych, które nie odpowiadają, wyniki sondaży są zniekształcone — a standardowe metody korekty (ważenie po wieku, płci czy wykształceniu) tego nie naprawiają.
+
+Aby to sprawdzić, **losowo podzieliliśmy zaproszone osoby na dwie grupy**: jedna otrzymała zaproszenie i dwa przypomnienia (tak jak w każdym typowym badaniu panelowym), druga — samo zaproszenie, bez przypomnień. Grupa bez przypomnień składa się z osób najbardziej chętnych do udziału; grupa z przypomnieniami obejmuje dodatkowo osoby mniej chętne. **Porównanie odpowiedzi obu grup pozwala nam ustalić — pytanie po pytaniu — czy chęć udziału w badaniu wiąże się z treścią odpowiedzi.** Jeśli nie ma różnicy, wynik sondażu dla danego pytania jest wiarygodny. Jeśli różnica jest, potrafimy oszacować, o ile wynik jest przesunięty.
+
+**Dlaczego nie powiedzieliśmy o tym wcześniej?** Ponieważ informacja o tym, ile przypomnień ktoś otrzyma, sama wpłynęłaby na decyzję o udziale — a to właśnie tę decyzję badamy. Podkreślamy, że:
+
+- **wszystkie pytania, które Pani/Pan widziała/widział, były prawdziwe i zadane w tej samej formie wszystkim uczestnikom;**
+- obie grupy otrzymały identyczne zaproszenie, identyczny kwestionariusz i identyczne wynagrodzenie;
+- grupa bez przypomnień otrzymała **mniej** wiadomości niż w standardowym badaniu panelowym — nikt nie został zaczepiony częściej, niż byłoby to normalne.
+
+**Co dalej z Pani/Pana odpowiedziami?** Analizujemy je wyłącznie zbiorczo. Nie wyciągamy żadnych wniosków o pojedynczych osobach i nie mamy możliwości ustalenia, kto udzielił jakich odpowiedzi.
+
+**Gdzie będą wyniki?** Raport z badania (po polsku) zostanie opublikowany na stronie projektu: [adres]. Planowany termin: grudzień 2026 r.
+
+**Chce Pani/Pan wycofać swoje odpowiedzi?** Prosimy o kontakt — bstanley\@swps.edu.pl lub kanałem kontaktowym panelu [nazwa agencji] — do dnia [data anonimizacji]. Usuniemy je bez pytania o powód. Po tej dacie zbiór zostaje zanonimizowany i powiązanie odpowiedzi z osobą przestaje być możliwe.
+
+**Kontakt:** dr hab. Ben Stanley, prof. Uniwersytetu SWPS, Instytut Nauk Społecznych, Uniwersytet SWPS, bstanley\@swps.edu.pl.
+
+*Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C).*
+
+{{< pagebreak >}}
+
+# Załącznik D. Wzór zaproszenia i przypomnień {#sec-zal-d}
+
+**Uwaga: treść zaproszenia jest identyczna dla obu grup. Grupa B nie otrzymuje żadnych przypomnień.**
+
+## Zaproszenie (dzień 0, obie grupy)
+
+> **Temat:** Zaproszenie do badania — postawy społeczne i polityczne (ok. 10 minut)
+>
+> Dzień dobry,
+>
+> zapraszamy do udziału w badaniu naukowym realizowanym dla Instytutu Nauk Społecznych Uniwersytetu SWPS. Interesuje nas, co dorośli mieszkańcy Polski sądzą o życiu publicznym.
+>
+> Wypełnienie ankiety zajmuje około 10 minut. Za udział przyznajemy [liczba] punktów panelowych.
+>
+> Udział jest dobrowolny, a odpowiedzi analizowane wyłącznie zbiorczo. Szczegółowe informacje o badaniu i o przetwarzaniu danych znajdzie Pani/Pan na pierwszym ekranie ankiety.
+>
+> [LINK]
+>
+> Ankieta będzie dostępna do [data].
+>
+> Zespół [nazwa agencji]
+
+## Przypomnienie 1 (dzień ok. 4, wyłącznie grupa A, wyłącznie do osób, które nie wypełniły ankiety)
+
+> **Temat:** Przypomnienie — badanie postaw społecznych i politycznych (ok. 10 minut)
+>
+> Dzień dobry,
+>
+> przypominamy o zaproszeniu do badania naukowego dla Uniwersytetu SWPS. Ankieta zajmuje około 10 minut, za udział przyznajemy [liczba] punktów panelowych.
+>
+> [LINK]
+>
+> Jeśli nie chce Pani/Pan brać udziału, prosimy o zignorowanie tej wiadomości.
+>
+> Zespół [nazwa agencji]
+
+## Przypomnienie 2 (dzień ok. 9, wyłącznie grupa A, wyłącznie do osób, które nie wypełniły ankiety)
+
+> **Temat:** Ostatnie przypomnienie — badanie postaw społecznych i politycznych
+>
+> Dzień dobry,
+>
+> ankieta dla Uniwersytetu SWPS będzie dostępna jeszcze do [data]. Wypełnienie zajmuje około 10 minut.
+>
+> [LINK]
+>
+> To ostatnia wiadomość w sprawie tego badania.
+>
+> Zespół [nazwa agencji]

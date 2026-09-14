@@ -1,0 +1,618 @@
+---
+title: "Kwestionariusz badania"
+subtitle: "Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi w polskim sondażu społeczno-politycznym — wersja 0.9 do testu poznawczego i wyceny"
+date: "2026-09-18"
+date-format: "D MMMM YYYY"
+lang: pl
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2cm
+      y: 2cm
+    fontsize: 9.5pt
+    mainfont: "Times New Roman"
+    section-numbering: "1.1"
+    toc: true
+    toc-title: "Spis treści"
+    toc-depth: 2
+---
+
+# Informacje o dokumencie
+
+| | |
+|:-------------------------|:---------------------------------------------------|
+| **Projekt** | Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi w polskim sondażu społeczno-politycznym |
+| **Finansowanie** | FRBN Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C |
+| **Zespół** | B. Stanley (kierownik), M. Cześnik, M. Żerkowska-Balas |
+| **Status** | Wersja 0.9 — do testu poznawczego (zespół + 2–3 testerów naiwnych) i do wyceny przez agencje; wersja finalna do 9 października 2026 |
+| **Zakres** | 58 pytań merytorycznych + ekran zgody + weryfikacja wieku + 1 pytanie kontrolne uważności |
+| **Zakładany czas** | mediana ≤ 12 minut |
+| **Podział na grupy** | Kwestionariusz **identyczny** w grupie A i grupie B; jedyna różnica między grupami dotyczy liczby przypomnień wysyłanych przed wypełnieniem |
+
+: {tbl-colwidths="[24,76]"}
+
+**Uwaga o pochodzeniu pytań.** Wszędzie tam, gdzie było to możliwe, wykorzystano sformułowania już zrealizowane i zwalidowane we wcześniejszych badaniach zespołu oraz w PGSW. Ma to trzy powody: (a) obciążenie poznawcze tych pytań jest znane, co jest argumentem w postępowaniu przed Komisją ds. Etyki Badań Naukowych; (b) porównywalność z PGSW jest odrębnym produktem projektu; (c) pozwala to zestawić rozkłady z niniejszego badania z rozkładami z badań o innych protokołach kontaktu. Pochodzenie każdego pytania podano w rozdz. 12.
+
+# Instrukcje dla wykonawcy
+
+Poniższe zasady mają charakter wiążący i wynikają z konstrukcji badania. Odstępstwa wymagają uprzedniej zgody Zamawiającego.
+
+1. **Brak wymuszania odpowiedzi.** Poza ekranem zgody (M1.1) i weryfikacją wieku (M1.2) **żadne pytanie nie może być obowiązkowe**. Respondent musi mieć możliwość przejścia dalej bez udzielenia odpowiedzi. Braki danych są w tym badaniu przedmiotem analizy, nie usterką.
+2. **Jawne opcje "nie wiem" i "odmowa".** Przy każdym pytaniu o postawy wyświetlane są widoczne opcje *Nie wiem / Trudno powiedzieć* (kod 97) oraz *Odmowa odpowiedzi* (kod 98). Nie wolno ich ukrywać, wyszarzać ani umieszczać poza główną listą.
+3. **Brak imputacji i brak własnych reguł czyszczenia.** Zbiór przekazywany Zamawiającemu zawiera odpowiedzi surowe, z zachowaniem odrębnych kodów 97 i 98. Wykonawca nie usuwa rekordów według własnych kryteriów jakości.
+4. **Rotacja.** Kolejność pozycji rotowana w blokach M5, M6 i M7 (rotacja na poziomie pozycji, niezależnie dla każdego respondenta). W M4.4 i M4.6 rotowana kolejność komitetów wyborczych, z wyłączeniem pozycji "inny", "nie pamiętam", "odmowa", które zawsze pozostają na końcu. Fakt i porządek rotacji zapisywane w danych.
+5. **Jedno pytanie kontrolne uważności** (M10.1), umieszczone wewnątrz bloku M6. Nie wolno dodawać kolejnych pytań kontrolnych ani pułapek czasowych.
+6. **Paradane.** Dla każdego respondenta zapisywane są: oznaczenie grupy (A/B), fala przypomnienia po której nastąpiło wypełnienie (0/1/2), identyfikator partii zaproszeń, znaczniki czasowe rozpoczęcia i zakończenia, czas na poszczególnych ekranach (jeżeli system to rejestruje), typ urządzenia oraz numer ostatniego wyświetlonego pytania w razie przerwania.
+7. **Zapis przerwań.** Rekordy niedokończone są zachowywane i przekazywane wraz z numerem pytania, na którym nastąpiło przerwanie.
+8. **Ekrany dostarczone przez Zamawiającego** (ekran informacyjny, ekran zgody, nota po badaniu) wyświetlane są w brzmieniu zatwierdzonym przez Komisję ds. Etyki Badań Naukowych, bez zmian redakcyjnych.
+9. **Jeden ekran — jedno pytanie lub jeden blok.** Baterie M5, M6, M7 mogą być prezentowane jako tabele (grid), pozostałe pytania pojedynczo.
+10. **Brak pasków postępu opartych na kwotach** ani komunikatów typu "zostało już niewiele miejsc".
+
+## Standardowe skale odpowiedzi
+
+Poniższe skale są w dalszej części dokumentu przywoływane skrótem.
+
+**Skala S1 (zgoda, 5-stopniowa).** 1 — Zdecydowanie się zgadzam; 2 — Raczej się zgadzam; 3 — Ani się zgadzam, ani nie zgadzam; 4 — Raczej się nie zgadzam; 5 — Zdecydowanie się nie zgadzam; 97 — Nie wiem / Trudno powiedzieć; 98 — Odmowa odpowiedzi.
+
+**Skala S2 (sympatia, 0–10).** 0 — Zdecydowanie mi się nie podoba … 10 — Zdecydowanie mi się podoba; 97 — Nie wiem / Trudno powiedzieć; 98 — Odmowa odpowiedzi.
+
+**Skala S3 (prawdopodobieństwo, 0–10).** 0 — Na pewno nie wezmę udziału … 10 — Na pewno wezmę udział; 97 — Nie wiem / Trudno powiedzieć; 98 — Odmowa odpowiedzi.
+
+**Skala S4 (ważność dla demokracji, 0–10).** 0 — Zupełnie nieważne … 10 — Bardzo ważne; 97 — Nie wiem / Trudno powiedzieć; 98 — Odmowa odpowiedzi.
+
+Kody 97 i 98 stosowane są konsekwentnie w całym kwestionariuszu, zgodnie z konwencją przyjętą w dotychczasowych badaniach zespołu (panel NCN OPUS 2023–2024), co umożliwia zestawianie rozkładów między badaniami.
+
+# Struktura i budżet czasu
+
+| Moduł | Treść | Pytań | Szac. czas |
+|:--|:-----------------------------------|--:|--:|
+| M1 | Ekran informacyjny, zgoda, weryfikacja wieku | — | 0:45 |
+| M2 | Dane społeczno-demograficzne | 9 | 1:40 |
+| M3 | Zaangażowanie polityczne i wiedza | 6 | 1:30 |
+| M4 | Frekwencja i zachowania wyborcze | 9 | 2:10 |
+| M5 | Oceny partii i liderów | 12 | 1:40 |
+| M6 | Postawy wobec mniejszości | 8 | 1:30 |
+| M7 | Normy demokratyczne | 6 | 1:10 |
+| M8 | Ideologia i kontrole tematyczne | 5 | 0:55 |
+| M9 | Zachowania o znanej wartości populacyjnej | 3 | 0:30 |
+| M10 | Kontrola uważności (wewnątrz M6) | 1 | 0:10 |
+| | **Razem** | **58** | **≈ 12:00** |
+
+: {tbl-colwidths="[8,52,20,20]"}
+
+Kolejność modułów: M1 → M2 → M3 → M4 → M5 → M6 (z M10 w środku) → M7 → M8 → M9 → ekran podziękowania z notą po badaniu.
+
+**Uzasadnienie kolejności.** Demografia na początku (M2) zapewnia komplet zmiennych kontrolnych nawet przy przerwaniu w dalszej części — jest to istotne, ponieważ przerwania są w tym badaniu zdarzeniem informacyjnym, a nie tylko stratą. Pytania najbardziej obciążone społecznie (M6) umieszczono w środkowej części, po zbudowaniu rutyny odpowiadania, ale przed spadkiem uwagi. Kontrole negatywne (M8, M9) na końcu — ich pozycja jest mniej wrażliwa, a ewentualne zmęczenie działa symetrycznie w obu grupach.
+
+# Mapa hipotez
+
+Kierunek: **Z = 1 dla grupy B (kontakt ograniczony)**. Grupa B to respondenci o wysokiej skłonności do udziału.
+
+| Hipoteza | Pytania | Oczekiwanie | Uzasadnienie |
+|:--|:----------------------|:--------|:---------------------------|
+| **M-check** | M3.1 (zainteresowanie polityką) | β_Z > 0, wyraźne | Kontrola pozytywna. Brak efektu oznacza słaby instrument i nakazuje ostrożność w interpretacji zerowych wyników H1–H4 |
+| **H1** | M4.1, M4.2 | β_Z > 0 | Zaangażowanie obywatelskie a skłonność do odpowiadania — najlepiej udokumentowana zależność w literaturze |
+| **H2** | M5.7, M5.8 (Konfederacja, Korona); wtórnie M5.1 (PiS) | β_Z < 0 | Nieufność wobec instytucji obniża skłonność do udziału w badaniach wśród tych elektoratów |
+| **H3** | Indeks z M6 (kodowany progresywnie) | β_Z > 0 | Poglądy konserwatywne skoncentrowane wśród osób o niskiej skłonności do odpowiadania |
+| **H4** | Indeks z M7 (kodowany liberalnie) | β_Z > 0 | Osoby przywiązane do norm demokratycznych nadreprezentowane wśród chętnych respondentów |
+| **H5** | M8.1–M8.5, M9.1–M9.3 | β_Z ≈ 0, test równoważności TOST, SESOI ± 0,10 SD (± 3 pp dla zmiennych binarnych) | Twierdzenie o ignorowalności musi być potwierdzone pozytywnie, a nie wywiedzione z braku istotności |
+
+: {tbl-colwidths="[12,24,22,42]"}
+
+**Eksploracyjnie** (bez roszczeń konfirmacyjnych): efekty lustrzane wewnątrz elektoratów; gradient czterostopniowy (B / A-fala 0 / A-fala 1 / A-fala 2); odsetki braków odpowiedzi według grup; placebo A-fala 0 vs B; wskaźniki jakości odpowiedzi według grup.
+
+**Uwaga analityczna.** M3.1 (zainteresowanie polityką) jest zmienną testowaną, nie kontrolną — **nie wchodzi do zestawu kowariantów X** w podstawowej specyfikacji testu diagnostycznego. Specyfikacja z M3.1 w X raportowana jest jako kolumna odpornościowa.
+
+{{< pagebreak >}}
+
+# M1. Ekran informacyjny, zgoda i weryfikacja wieku
+
+**M1.0** — Ekran informacyjny w brzmieniu Załącznika A wniosku do Komisji ds. Etyki Badań Naukowych (dokument osobny, dostarczany wykonawcy).
+
+**M1.1 `zgoda`** — ekran zgody. *(Pytanie obowiązkowe. Zaznaczenie opcji 2 kończy sesję ekranem podziękowania.)*
+
+| Kod | Opcja |
+|:--:|:-------------------------------------------------------|
+| 1 | Zapoznałam się / zapoznałem się z powyższą informacją i wyrażam zgodę na udział w badaniu |
+| 2 | Nie wyrażam zgody i rezygnuję z udziału |
+
+**M1.2 `wiek18`** — Czy ukończyła Pani / ukończył Pan 18 lat? *(Pytanie obowiązkowe. Odpowiedź "Nie" kończy sesję ekranem podziękowania; rekord zachowywany ze statusem "niekwalifikujący się".)*
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Tak |
+| 2 | Nie |
+
+# M2. Dane społeczno-demograficzne
+
+*Rola: zmienne kontrolne X w teście diagnostycznym oraz zmienne pierwszego stopnia modelu selekcji. Bez rotacji.*
+
+**M2.1 `plec`** — Proszę podać swoją płeć.
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Mężczyzna |
+| 2 | Kobieta |
+| 3 | Inna |
+| 98 | Nie chcę podawać |
+
+**M2.2 `rokur`** — W którym roku się Pani/Pan urodziła/urodził? *(Pole otwarte, liczba czterocyfrowa, walidacja 1900–2008.)*
+
+**M2.3 `eduk`** — Jakie jest Pani/Pana najwyższe ukończone wykształcenie?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Podstawowe lub gimnazjalne |
+| 2 | Zasadnicze zawodowe / branżowe |
+| 3 | Średnie (liceum, technikum) |
+| 4 | Policealne |
+| 5 | Wyższe licencjackie / inżynierskie |
+| 6 | Wyższe magisterskie lub więcej |
+| 98 | Odmowa odpowiedzi |
+
+**M2.4 `miejsc`** — Która z poniższych odpowiedzi najlepiej opisuje miejsce, w którym Pani/Pan mieszka?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Wieś |
+| 2 | Małe miasto (do 20 tys. mieszkańców) |
+| 3 | Średnie miasto (od 20 do 99 tys. mieszkańców) |
+| 4 | Duże miasto (od 100 do 500 tys. mieszkańców) |
+| 5 | Wielkie miasto (powyżej 500 tys. mieszkańców) |
+| 98 | Odmowa odpowiedzi |
+
+**M2.5 `woj`** — W którym województwie Pani/Pan mieszka? *(Lista 16 województw w porządku alfabetycznym; kod 98 — odmowa.)*
+
+**M2.6 `praca`** — Która pozycja z listy najlepiej opisuje Pani/Pana obecną sytuację zawodową?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Zatrudniona/y w pełnym wymiarze godzin |
+| 2 | Zatrudniona/y w niepełnym wymiarze godzin |
+| 3 | Prowadzę własną działalność gospodarczą |
+| 4 | Pomagam w rodzinnej firmie lub gospodarstwie rolnym |
+| 5 | Bezrobotna/y |
+| 6 | Uczę się lub studiuję |
+| 7 | Emerytura |
+| 8 | Renta |
+| 9 | Zajmuję się domem |
+| 10 | Inna sytuacja |
+| 98 | Odmowa odpowiedzi |
+
+**M2.7 `dochod`** — Które z poniższych stwierdzeń najlepiej opisuje sytuację finansową Pani/Pana gospodarstwa domowego?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Wystarcza na wszystko i jeszcze oszczędzamy na przyszłość |
+| 2 | Wystarcza na wszystko bez specjalnych wyrzeczeń, lecz nie oszczędzamy |
+| 3 | Żyjemy oszczędnie i dzięki temu starcza na wszystko |
+| 4 | Żyjemy bardzo oszczędnie, aby odłożyć na poważniejsze zakupy |
+| 5 | Pieniędzy wystarcza tylko na podstawowe potrzeby |
+| 6 | Pieniędzy nie wystarcza nawet na najtańsze jedzenie |
+| 97 | Nie wiem / Trudno powiedzieć |
+| 98 | Odmowa odpowiedzi |
+
+**M2.8 `praktyki`** — Poza szczególnymi okazjami, takimi jak wesela czy pogrzeby, jak często obecnie uczestniczy Pani/Pan we mszy, nabożeństwach lub spotkaniach religijnych?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Codziennie |
+| 2 | Częściej niż raz w tygodniu |
+| 3 | Raz w tygodniu |
+| 4 | Co najmniej raz w miesiącu |
+| 5 | Tylko z okazji szczególnych świąt |
+| 6 | Jeszcze rzadziej |
+| 7 | Nigdy |
+| 97 | Nie wiem / Trudno powiedzieć |
+| 98 | Odmowa odpowiedzi |
+
+*Rola dodatkowa: punkt odniesienia zewnętrzny (CBOS, ISKK).*
+
+**M2.9 `relig`** — Niezależnie od tego, czy należy Pani/Pan do konkretnej religii, na ile uważa się Pani/Pan za osobę religijną? *(Skala 0–10: 0 — w ogóle niereligijna/y, 10 — bardzo religijna/y; 97; 98.)*
+
+{{< pagebreak >}}
+
+# M3. Zaangażowanie polityczne i wiedza
+
+*Rola: M3.1 — kontrola pozytywna (M-check). Pozostałe — kowarianty i materiał eksploracyjny. Bez rotacji.*
+
+**M3.1 `intpol`** — Jak określiłaby Pani / określiłby Pan swoje zainteresowanie polityką? Czy jest Pani/Pan…?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Bardzo zainteresowana/y |
+| 2 | Raczej zainteresowana/y |
+| 3 | Raczej niezainteresowana/y |
+| 4 | Zupełnie niezainteresowana/y |
+| 97 | Nie wiem / Trudno powiedzieć |
+| 98 | Odmowa odpowiedzi |
+
+*To jest **kluczowe pytanie kontrolne całego badania**. Jeżeli nie wykaże ono różnicy między grupami, instrument należy uznać za słaby, co zmienia interpretację pozostałych wyników zerowych.*
+
+**M3.2 `uwaga`** — Jak często w ciągu ostatniego miesiąca śledziła Pani / śledził Pan wiadomości o polityce — w telewizji, radiu, prasie lub internecie?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Codziennie lub prawie codziennie |
+| 2 | Kilka razy w tygodniu |
+| 3 | Mniej więcej raz w tygodniu |
+| 4 | Rzadziej niż raz w tygodniu |
+| 5 | Wcale |
+| 97 | Nie wiem / Trudno powiedzieć |
+| 98 | Odmowa odpowiedzi |
+
+**M3.3–M3.5 — wiedza polityczna.** *(Trzy pytania faktograficzne, prezentowane pojedynczo, bez możliwości cofnięcia się. Wprowadzenie: "Kilka pytań o fakty z życia publicznego. Wiele osób nie zna odpowiedzi na te pytania — jeśli Pani/Pan nie wie, prosimy o zaznaczenie «nie wiem».")*
+
+**M3.3 `wiedza1`** — Ile lat trwa kadencja Sejmu?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | 3 lata |
+| 2 | 4 lata *(poprawna)* |
+| 3 | 5 lat |
+| 4 | 6 lat |
+| 97 | Nie wiem |
+
+**M3.4 `wiedza2`** — Jaki procent głosów musi uzyskać partia (nie koalicja), aby wejść do Sejmu?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | 3% |
+| 2 | 5% *(poprawna)* |
+| 3 | 8% |
+| 4 | 10% |
+| 97 | Nie wiem |
+
+**M3.5 `wiedza3`** — Kto ma prawo zawetować ustawę uchwaloną przez Sejm i Senat?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Marszałek Sejmu |
+| 2 | Prezes Rady Ministrów |
+| 3 | Prezydent RP *(poprawna)* |
+| 4 | Pierwszy Prezes Sądu Najwyższego |
+| 97 | Nie wiem |
+
+**M3.6 `media`** — Z którego z poniższych źródeł czerpie Pani/Pan **najwięcej** informacji o polityce? *(Jedna odpowiedź.)*
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Telewizja |
+| 2 | Radio |
+| 3 | Prasa drukowana |
+| 4 | Portale internetowe |
+| 5 | Media społecznościowe |
+| 6 | Rozmowy z rodziną i znajomymi |
+| 7 | Nie interesuję się informacjami o polityce |
+| 98 | Odmowa odpowiedzi |
+
+{{< pagebreak >}}
+
+# M4. Frekwencja i zachowania wyborcze
+
+*Rola: H1 (M4.1, M4.2); pozostałe — zmienne porównywane z oficjalnymi wynikami PKW. Bez rotacji między pytaniami; rotacja list komitetów wewnątrz M4.4, M4.6, M4.8.*
+
+**M4.1 `sklonfrek`** — Używając skali od 0 do 10, jak ocenia Pani/Pan prawdopodobieństwo, że weźmie udział w najbliższych wyborach parlamentarnych? *(Skala S3.)*
+
+*H1. Zmienna ciągła — podstawowy test frekwencyjny.*
+
+**M4.2 `frekniedz`** — Gdyby wybory do Sejmu odbywały się w najbliższą niedzielę, czy na pewno wzięłaby Pani / wziąłby Pan w nich udział?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Na pewno wziąłbym/wzięłabym udział |
+| 2 | Prawdopodobnie wziąłbym/wzięłabym udział |
+| 3 | Trudno powiedzieć, czy wziąłbym/wzięłabym udział |
+| 4 | Prawdopodobnie nie wziąłbym/wzięłabym udziału |
+| 5 | Na pewno nie wziąłbym/wzięłabym udziału |
+| 98 | Odmowa odpowiedzi |
+
+*H1. Zmienna binarna do analizy głównej: kod 1 vs pozostałe ("frekwencja pewna").*
+
+**M4.3 `glosniedz`** — A gdyby wybory do Sejmu odbywały się w najbliższą niedzielę, na kandydatów którego ugrupowania oddałaby Pani / oddałby Pan swój głos? *(Rotacja pozycji 1–8; pozycje 9–11 zawsze na końcu.)*
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Prawo i Sprawiedliwość (PiS) |
+| 2 | Koalicja Obywatelska (KO) |
+| 3 | Polska 2050 |
+| 4 | Polskie Stronnictwo Ludowe (PSL) |
+| 5 | Nowa Lewica |
+| 6 | Razem |
+| 7 | Konfederacja Wolność i Niepodległość |
+| 8 | Konfederacja Korony Polskiej (Grzegorz Braun) |
+| 9 | Inne ugrupowanie |
+| 10 | Nie oddałabym/oddałbym głosu na żadne ugrupowanie |
+| 97 | Nie wiem / Trudno powiedzieć |
+| 98 | Odmowa odpowiedzi |
+
+**M4.4 `frek2023`** — 15 października 2023 r. odbyły się wybory parlamentarne. Jak zwykle wiele osób — z różnych powodów — nie wzięło w nich udziału, inni zaś w nich uczestniczyli. Czy głosowała Pani / głosował Pan w tych wyborach?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Tak, głosowałam/głosowałem |
+| 2 | Nie, nie głosowałam/głosowałem |
+| 3 | Nie byłam/byłem uprawniona/y |
+| 97 | Nie pamiętam |
+| 98 | Odmowa odpowiedzi |
+
+*Punkt odniesienia: frekwencja PKW w wyborach do Sejmu 2023 = 74,38% (do zweryfikowania na stronie PKW przy finalizacji).*
+
+**M4.5 `glos2023`** — Na listę którego komitetu wyborczego oddała Pani / oddał Pan swój głos w wyborach do Sejmu w 2023 r.? *(Filtr: tylko jeśli M4.4 = 1. Rotacja pozycji 1–6.)*
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | KW Prawo i Sprawiedliwość |
+| 2 | KKW Koalicja Obywatelska |
+| 3 | KKW Trzecia Droga (PSL – Polska 2050) |
+| 4 | KKW Lewica |
+| 5 | KW Konfederacja Wolność i Niepodległość |
+| 6 | KW Bezpartyjni Samorządowcy |
+| 7 | Inny komitet |
+| 8 | Oddałam/oddałem głos nieważny |
+| 97 | Nie pamiętam |
+| 98 | Odmowa odpowiedzi |
+
+**M4.6 `frek2025r1`** — 18 maja 2025 r. odbyła się pierwsza tura wyborów prezydenckich. Czy wzięła Pani / wziął Pan w niej udział? *(Kategorie jak w M4.4.)*
+
+**M4.7 `glos2025r1`** — Na którego kandydata oddała Pani / oddał Pan głos w pierwszej turze? *(Filtr: tylko jeśli M4.6 = 1. Rotacja pozycji 1–6; pozycja 7 "inny kandydat" na końcu.)*
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Rafał Trzaskowski |
+| 2 | Karol Nawrocki |
+| 3 | Sławomir Mentzen |
+| 4 | Grzegorz Braun |
+| 5 | Szymon Hołownia |
+| 6 | Adrian Zandberg |
+| 7 | Inny kandydat |
+| 8 | Oddałam/oddałem głos nieważny |
+| 97 | Nie pamiętam |
+| 98 | Odmowa odpowiedzi |
+
+**M4.8 `frek2025r2`** — 1 czerwca 2025 r. odbyła się druga tura wyborów prezydenckich. Czy wzięła Pani / wziął Pan w niej udział? *(Kategorie jak w M4.4.)*
+
+**M4.9 `glos2025r2`** — Na którego kandydata oddała Pani / oddał Pan głos w drugiej turze? *(Filtr: tylko jeśli M4.8 = 1. Rotacja pozycji 1–2.)*
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Rafał Trzaskowski |
+| 2 | Karol Nawrocki |
+| 3 | Oddałam/oddałem głos nieważny |
+| 97 | Nie pamiętam |
+| 98 | Odmowa odpowiedzi |
+
+*Punkty odniesienia dla M4.6–M4.9: frekwencja PKW w pierwszej turze 2025 = 67,31%, w drugiej turze = 71,63%; wynik drugiej tury: Nawrocki ok. 50,9%, Trzaskowski ok. 49,1%. Wszystkie wartości do zweryfikowania na stronie PKW przy finalizacji kwestionariusza.*
+
+{{< pagebreak >}}
+
+# M5. Oceny partii i liderów
+
+*Rola: H2 (M5.7, M5.8; wtórnie M5.1); podstawa podziału na elektoraty w analizach eksploracyjnych. **Rotacja pozycji w obrębie całego bloku.***
+
+**Wprowadzenie:** "Gdy przeczyta Pani/Pan nazwę partii politycznej, prosimy umieścić ją na skali od 0 do 10, gdzie 0 oznacza, że partia ta zdecydowanie się Pani/Panu nie podoba, a 10 — że zdecydowanie się podoba."
+
+*Skala S2 dla wszystkich pozycji poniżej.*
+
+| Kod zmiennej | Pozycja |
+|:--------|:-------------------------------------|
+| `prefpis` | M5.1 Prawo i Sprawiedliwość |
+| `prefko` | M5.2 Koalicja Obywatelska |
+| `pref2050` | M5.3 Polska 2050 |
+| `prefpsl` | M5.4 Polskie Stronnictwo Ludowe |
+| `preflew` | M5.5 Nowa Lewica |
+| `prefraz` | M5.6 Razem |
+| `prefkonf` | M5.7 Konfederacja Wolność i Niepodległość |
+| `prefkor` | M5.8 Konfederacja Korony Polskiej |
+
+: {tbl-colwidths="[22,78]"}
+
+**Wprowadzenie do części drugiej:** "A teraz prosimy o ocenę kilku polityków na tej samej skali, gdzie 0 oznacza, że dana osoba zdecydowanie się Pani/Panu nie podoba, a 10 — że zdecydowanie się podoba."
+
+| Kod zmiennej | Pozycja |
+|:--------|:-------------------------------------|
+| `preftusk` | M5.9 Donald Tusk |
+| `prefkacz` | M5.10 Jarosław Kaczyński |
+| `prefnawr` | M5.11 Karol Nawrocki |
+| `prefment` | M5.12 Sławomir Mentzen |
+
+: {tbl-colwidths="[22,78]"}
+
+*Uwaga do H2: oczekiwany kierunek β_Z < 0 dla M5.7 i M5.8 oznacza, że w grupie o kontakcie ograniczonym (respondenci najchętniejsi) sympatia wobec tych ugrupowań jest **niższa**. Jeżeli tak jest, sondaże systematycznie zaniżają poparcie dla nich — nie dlatego, że respondenci kłamią, lecz dlatego, że ich zwolennicy rzadziej w ogóle odpowiadają.*
+
+# M6. Postawy wobec mniejszości
+
+*Rola: H3. **Rotacja pozycji w obrębie całego bloku.** Skala S1 dla wszystkich pozycji. Pytanie kontrolne uważności (M10.1) wstawione losowo między pozycję 4 a 6.*
+
+**Wprowadzenie:** "Poniżej znajduje się kilka stwierdzeń na temat różnych grup w polskim społeczeństwie. Prosimy wskazać, w jakim stopniu zgadza się Pani/Pan lub nie zgadza z każdym z nich. Nie ma tu odpowiedzi dobrych ani złych."
+
+| Kod zmiennej | Stwierdzenie | Kodowanie |
+|:------|:----------------------------------------------|:-------|
+| `lgbt1` | M6.1 Osoby o orientacji homoseksualnej, geje i lesbijki, powinny mieć swobodę układania sobie życia według własnych przekonań. | progresywne |
+| `lgbt2` | M6.2 Pary jednopłciowe powinny mieć możliwość zawierania związków partnerskich. | progresywne |
+| `lgbt3` | M6.3 Nauczanie nastolatków w szkołach o tolerancji wobec mniejszości transpłciowych i homoseksualnych może być szkodliwe. | odwrócone |
+| `ukr1` | M6.4 Polska powinna nadal przyjmować uchodźców z Ukrainy tak długo, jak długo trwa wojna. | progresywne |
+| `ukr2` | M6.5 Uchodźcy z Ukrainy przebywający w Polsce powinni mieć taki sam dostęp do świadczeń socjalnych jak obywatele polscy. | progresywne |
+| `ukr3` | M6.6 Obecność uchodźców z Ukrainy zagraża polskiej kulturze i tożsamości. | odwrócone |
+| `mniej1` | M6.7 Każdy powinien mieć równe szanse na uzyskanie obywatelstwa polskiego, niezależnie od kraju pochodzenia. | progresywne |
+| `mniej2` | M6.8 Ludzie, których rodziny mieszkają w Polsce od pokoleń, powinni mieć większy wpływ na sprawy kraju niż osoby, które niedawno uzyskały obywatelstwo. | odwrócone |
+
+: {tbl-colwidths="[12,72,16]"}
+
+**Konstrukcja indeksu (ustalona przed zebraniem danych):** pozycje odwrócone przekodowane; wszystkie pozycje wystandaryzowane; indeks `idx_mniej` jako średnia wystandaryzowanych pozycji, wyższe wartości = postawy bardziej progresywne. Rzetelność (α Cronbacha oraz ω) raportowana. Analiza prowadzona równolegle na indeksie ogólnym i na trzech podindeksach tematycznych (LGBT, Ukraina, obywatelstwo), ponieważ kierunek selekcji może się między nimi różnić.
+
+# M10. Kontrola uważności
+
+*Umieszczona wewnątrz bloku M6, w tej samej konwencji graficznej, aby nie odróżniała się wizualnie.*
+
+**M10.1 `uwaga_test`** — To pytanie sprawdza, czy uważnie czyta Pani/Pan treść pytań. Prosimy zaznaczyć odpowiedź "Raczej się nie zgadzam".
+
+*Skala S1. Odpowiedź poprawna: kod 4. Zmienna wtórna, analizowana według grup; **nie stanowi podstawy do wykluczania respondentów z analizy podstawowej** — reguły wykluczania wchodzą w interakcję ze skłonnością do odpowiadania i są stosowane wyłącznie w analizie wrażliwości, według zasad ustalonych w pre-rejestracji.*
+
+{{< pagebreak >}}
+
+# M7. Normy demokratyczne
+
+*Rola: H4. **Rotacja pozycji w obrębie bloku.** Skala S1 dla M7.1–M7.4, skala S4 dla M7.5–M7.6.*
+
+**Wprowadzenie do M7.1–M7.4:** "Czy zgadza się Pani/Pan lub nie zgadza z następującymi stwierdzeniami na temat funkcjonowania państwa?"
+
+| Kod zmiennej | Stwierdzenie | Kodowanie |
+|:------|:----------------------------------------------|:-------|
+| `norm1` | M7.1 Silni przywódcy powinni móc podejmować decyzje bez ingerencji sądów lub parlamentu. | odwrócone |
+| `norm2` | M7.2 Sądy powinny mieć możliwość uchylania decyzji rządu, jeśli zostaną one uznane za niezgodne z prawem. | liberalne |
+| `norm3` | M7.3 Ludzie powinni mieć prawo do krytykowania rządu nawet w obliczu głębokiego kryzysu. | liberalne |
+| `norm4` | M7.4 Należy szanować wyniki wyborów, niezależnie od tego, która partia je wygra. | liberalne |
+
+: {tbl-colwidths="[12,72,16]"}
+
+**Wprowadzenie do M7.5–M7.6:** "Prosimy teraz ocenić, na ile ważne są poniższe sprawy dla demokracji w ogóle. Nie ma tu odpowiedzi dobrych ani złych."
+
+| Kod zmiennej | Pozycja | Kodowanie |
+|:------|:----------------------------------------------|:-------|
+| `norm5` | M7.5 …żeby media miały możliwość krytykowania rządu? | liberalne |
+| `norm6` | M7.6 …żeby były chronione prawa różnych grup mniejszościowych? | liberalne |
+
+: {tbl-colwidths="[12,72,16]"}
+
+**Konstrukcja indeksu:** `idx_norm` jako średnia wystandaryzowanych pozycji po przekodowaniu pozycji odwróconej; wyższe wartości = silniejsze przywiązanie do norm liberalno-demokratycznych. Pozycje M7.5–M7.6 wystandaryzowane osobno przed uśrednieniem z uwagi na odmienny format skali.
+
+# M8. Ideologia i kontrole tematyczne
+
+*Rola: H5 — kontrole negatywne. Oczekiwanie: brak różnicy między grupami, weryfikowane testem równoważności. Bez rotacji.*
+
+**M8.1 `lewprawo`** — W polityce często mówi się o "lewicy" i "prawicy". Gdzie umieściłaby Pani / umieściłby Pan swoje poglądy na tej skali? *(Skala 0–10: 0 — lewica, 10 — prawica; 97; 98.)*
+
+**M8.2 `ue`** — Ogólnie rzecz biorąc, czy członkostwo Polski w Unii Europejskiej jest dla Polski dobre czy złe?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Zdecydowanie dobre |
+| 2 | Raczej dobre |
+| 3 | Ani dobre, ani złe |
+| 4 | Raczej złe |
+| 5 | Zdecydowanie złe |
+| 97 | Nie wiem / Trudno powiedzieć |
+| 98 | Odmowa odpowiedzi |
+
+**M8.3–M8.5 — stanowiska w sprawach publicznych.** *(Skala 1–7, format dwubiegunowy. Wprowadzenie: "Poniżej przedstawiamy skrajne stanowiska w kilku sprawach. Prosimy określić, gdzie znajduje się Pani/Pan na skali od 1 do 7, gdzie 1 oznacza całkowitą zgodę ze stanowiskiem po lewej stronie, a 7 — całkowitą zgodę ze stanowiskiem po prawej stronie." Kody 97 i 98 dostępne.)*
+
+| Kod zmiennej | Stanowisko lewe | Stanowisko prawe |
+|:------|:-------------------------|:-------------------------|
+| `pol1` | M8.3 **Czas oczekiwania na leczenie:** Lepiej mieć system, w którym wszyscy mają równy dostęp do opieki zdrowotnej, nawet jeśli oznacza to dłuższy czas oczekiwania na niektóre zabiegi | Lepiej umożliwić pacjentom, którzy mogą i chcą płacić, szybszy dostęp do leczenia, nawet jeśli stworzy to system dwupoziomowy |
+| `pol2` | M8.4 **Dostępność mieszkań:** Państwo powinno budować mieszkania na wynajem i regulować ceny mieszkań, aby były dostępne dla wszystkich obywateli | Rynek mieszkaniowy powinien działać na zasadach wolnorynkowych, a państwo powinno ograniczyć swoją rolę do usuwania barier regulacyjnych |
+| `pol3` | M8.5 **Zanieczyszczenie powietrza:** Aby zmniejszyć zanieczyszczenie powietrza, w miastach należy ograniczyć ruch pojazdów spalinowych i promować pojazdy elektryczne | Państwo nie powinno faworyzować pojazdów elektrycznych kosztem pojazdów spalinowych, nawet jeśli oznacza to większe zanieczyszczenie powietrza |
+
+: {tbl-colwidths="[10,45,45]"}
+
+*Uzasadnienie doboru: są to sprawy o wyraźnym podziale opinii, ale bez ładunku stygmatyzującego — nikt nie ma powodu, by ukrywać stanowisko w sprawie kolejek do lekarza. Jeżeli test równoważności potwierdzi brak różnicy między grupami dla tych pozycji, a wykaże różnicę dla M4 i M6, mamy mocny dowód, że mechanizmem jest selektywność związana z treścią, a nie ogólna różnica między grupami.*
+
+# M9. Zachowania o znanej wartości populacyjnej
+
+*Rola: H5 — kontrole negatywne z zewnętrznym punktem odniesienia. Bez rotacji.*
+
+**M9.1 `palenie`** — Czy obecnie pali Pani/Pan wyroby tytoniowe (papierosy, w tym elektroniczne, cygara, fajkę)?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Tak, codziennie |
+| 2 | Tak, okazjonalnie |
+| 3 | Nie, ale paliłam/paliłem w przeszłości |
+| 4 | Nie, nigdy nie paliłam/paliłem |
+| 98 | Odmowa odpowiedzi |
+
+*Punkt odniesienia: GUS / Europejskie Ankietowe Badanie Zdrowia (EHIS). Zmienna binarna do analizy: kody 1–2 vs 3–4.*
+
+**M9.2 `prawojazdy`** — Czy posiada Pani/Pan prawo jazdy kategorii B?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Tak |
+| 2 | Nie |
+| 98 | Odmowa odpowiedzi |
+
+*Punkt odniesienia: dane Ministerstwa Infrastruktury / CEPiK o liczbie uprawnionych kierowców w populacji dorosłych.*
+
+**M9.3 `internet`** — Jak często korzysta Pani/Pan z internetu?
+
+| Kod | Opcja |
+|:--:|:------|
+| 1 | Codziennie lub prawie codziennie |
+| 2 | Kilka razy w tygodniu |
+| 3 | Rzadziej |
+| 98 | Odmowa odpowiedzi |
+
+*Punkt odniesienia: GUS, Społeczeństwo informacyjne w Polsce. Uwaga interpretacyjna: w populacji panelowej rozkład będzie silnie skośny; pozycja służy przede wszystkim udokumentowaniu odległości panelu od populacji ogólnej, nie zaś jako pełnoprawny test H5.*
+
+{{< pagebreak >}}
+
+# Ekran końcowy
+
+Po ostatnim pytaniu wyświetlany jest ekran podziękowania zawierający **notę informacyjną po badaniu (debriefing)** w brzmieniu Załącznika B wniosku do Komisji ds. Etyki Badań Naukowych. Nota wyjaśnia losowe zróżnicowanie liczby przypomnień, powód, dla którego nie mogło ono zostać ujawnione wcześniej, oraz sposób wycofania odpowiedzi.
+
+Ekran końcowy wyświetlany jest **identycznie w obu grupach**.
+
+# Zestawienie zmiennych
+
+| Zmienna | Moduł | Format | Rola |
+|:----------|:--|:--------------|:------------------|
+| `zgoda`, `wiek18` | M1 | kategorialna | Filtr |
+| `plec`, `rokur`, `eduk`, `miejsc`, `woj`, `praca`, `dochod` | M2 | kategorialne / liczbowa | Kowarianty X |
+| `praktyki`, `relig` | M2 | kategorialna / 0–10 | Kowarianty X; `praktyki` także punkt odniesienia |
+| `intpol` | M3 | 4-stopniowa | **M-check**; poza X w specyfikacji podstawowej |
+| `uwaga`, `media` | M3 | kategorialne | Eksploracyjne |
+| `wiedza1`–`wiedza3` | M3 | binarne (poprawna/niepoprawna) | Eksploracyjne; indeks `idx_wiedza` = suma poprawnych |
+| `sklonfrek` | M4 | 0–10 | **H1** |
+| `frekniedz` | M4 | 5-stopniowa → binarna | **H1** |
+| `glosniedz` | M4 | kategorialna | Podział na elektoraty |
+| `frek2023`, `glos2023` | M4 | kategorialne | Punkt odniesienia PKW |
+| `frek2025r1`, `glos2025r1`, `frek2025r2`, `glos2025r2` | M4 | kategorialne | Punkt odniesienia PKW |
+| `prefpis`–`prefkor` | M5 | 0–10 | **H2** (`prefkonf`, `prefkor`; wtórnie `prefpis`) |
+| `preftusk`–`prefment` | M5 | 0–10 | Eksploracyjne |
+| `lgbt1`–`mniej2` | M6 | 5-stopniowe | **H3**, indeks `idx_mniej` |
+| `uwaga_test` | M10 | binarna | Wskaźnik jakości, według grup |
+| `norm1`–`norm6` | M7 | 5-stopniowe / 0–10 | **H4**, indeks `idx_norm` |
+| `lewprawo`, `ue`, `pol1`–`pol3` | M8 | 0–10 / 5-stopniowa / 1–7 | **H5** (TOST) |
+| `palenie`, `prawojazdy`, `internet` | M9 | kategorialne | **H5** (TOST) + punkt odniesienia |
+
+: {tbl-colwidths="[26,8,22,44]"}
+
+**Zmienne dostarczane przez wykonawcę** (nie pochodzą z kwestionariusza): `grupa` (A/B), `fala` (0/1/2), `partia_zapr`, `czas_start`, `czas_koniec`, `urzadzenie`, `ostatnie_pyt`, `status` — zgodnie z Załącznikiem 2 zapytania ofertowego.
+
+# Pochodzenie pytań
+
+Podstawą doboru sformułowań były wcześniejsze badania zespołu oraz PGSW. Pozycje przejęte dosłownie lub z drobną adaptacją redakcyjną:
+
+| Pytania | Źródło |
+|:--------------|:--------------------------------------------|
+| M2.1, M2.4, M2.5, M2.6, M2.7, M2.8, M2.9 | Sondaż FNW/SWPS, Polska, grudzień 2025 (`data/FNW SWPS surveys/FNW SWPS survey Dec 2025 PL questionnaire.md`) — pozycje `sex`, `miasta`, `woj`, `m5`, `m6`, `m8`, `m9_r1`. M2.3 rozszerzone z 3 do 6 kategorii dla lepszej kontroli statystycznej |
+| M3.1 | Tamże, `pzw1_r1` (czterostopniowa skala zainteresowania polityką, zgodna z PGSW) |
+| M4.3 | Tamże, `pzw4`, z aktualizacją listy ugrupowań |
+| M4.4, M4.6, M4.8 | Panel NCN OPUS, fala 1 (`data/NCN Opus panel surveys/Panel survey wave 1 questionnaire.md`), pozycja `voted2019` — sformułowanie z preambułą normalizującą niegłosowanie, przeniesione na wybory 2023 i 2025 |
+| M4.5, M4.7, M4.9 | Tamże, `votefor2019`, z listą komitetów 2023 i kandydatów 2025 |
+| M5.1–M5.8 | Tamże, `prefpis`–`prefconf` (skala 0–10 "podoba / nie podoba się"), lista rozszerzona do ośmiu ugrupowań |
+| M6.1 | Panel NCN OPUS, fala 2, pozycja `lgbtatt` |
+| M6.3 | Panel NCN OPUS, fala 3, pozycja `lgbtharm` |
+| M6.7, M6.8 | Sondaż FNW/SWPS, grudzień 2025, pozycje `oi_r14`, `oi_r13` (bateria "odmiany illiberalizmu"), przeformułowane na skalę zgody |
+| M7.1 | Sondaż FNW/SWPS, grudzień 2025, `oi_r3` |
+| M7.2, M7.3, M7.4 | Panel NCN OPUS, fala 1, bateria "Liberal Democracy": `judcnstr1`, `frexp1`, `frelect1` |
+| M7.5, M7.6 | Panel NCN OPUS, fala 1, bateria ESS: `essgen5`, `essgen3` |
+| M8.1 | Sondaż FNW/SWPS, grudzień 2025, `pzw2_r1` |
+| M8.3, M8.4, M8.5 | Tamże, pozycje `pi_2_r1`, `pi_7_r1`, `pi_6_r1` (format dwubiegunowy 1–7) |
+| M2.8 (punkt odniesienia), M9.1, M9.2, M9.3 | Sformułowania własne, wzorowane na kwestionariuszach GUS/EHIS oraz CBOS, dobrane pod kątem istnienia zewnętrznej wartości populacyjnej |
+| M3.3–M3.5 | Sformułowania własne (pytania faktograficzne o ustroju), wzorowane na standardowych skalach wiedzy politycznej |
+| M6.2, M6.4, M6.5, M6.6 | Sformułowania własne, do weryfikacji w teście poznawczym |
+
+: {tbl-colwidths="[22,78]"}
+
+Pliki źródłowe znajdują się w repozytorium `Writing`, w katalogu `data/`.
+
+# Zadania do zamknięcia wersji finalnej
+
+1. **Test poznawczy** — zespół oraz 2–3 osoby spoza środowiska akademickiego; szczególna uwaga na pozycje własne (M6.2, M6.4–M6.6, M9.1–M9.3) oraz na zrozumiałość formatu dwubiegunowego w M8.3–M8.5.
+2. **Podział zadań** — M6 i M7: M. Żerkowska-Balas; M4 i porównywalność z PGSW: M. Cześnik; M5, M8, M9 i integracja całości: B. Stanley.
+3. **Weryfikacja danych PKW** — dokładne wartości frekwencji i wyników dla wyborów 2023 i 2025 (obie tury).
+4. **Pomiar czasu** — po zaprogramowaniu przez wykonawcę zmierzyć medianę czasu na miękkim starcie; jeżeli przekroczy 12 minut, skrócić w pierwszej kolejności M5 (redukcja liderów z czterech do dwóch) i M3.6.
+5. **Wersja angielska** — tłumaczenie na potrzeby pre-rejestracji na OSF i publikacji w repozytorium.
+6. **Załączenie do wniosku etycznego** jako Załącznik C oraz do umowy z wykonawcą jako podstawa programowania.
