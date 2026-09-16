@@ -1,0 +1,715 @@
+<title>CitiSense at SWPS</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+  :root {
+    --paper:        #f2f4f7;
+    --surface:      #ffffff;
+    --surface-sunk: #e8ecf1;
+    --ink:          #121820;
+    --ink-soft:     #3d4854;
+    --muted:        #667585;
+    --rule:         #d5dce4;
+    --rule-soft:    #e3e9ef;
+    --accent:       #2b4b8c;
+    --accent-soft:  #e7ecf6;
+    --flag:         #8a5a0c;
+    --flag-soft:    #f7efdd;
+    --done:         #2f6b4f;
+    --shadow:       0 1px 2px rgba(18, 24, 32, .05), 0 8px 24px -16px rgba(18, 24, 32, .22);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:        #0e1217;
+      --surface:      #161b22;
+      --surface-sunk: #1d242d;
+      --ink:          #e5eaf0;
+      --ink-soft:     #b3bdc9;
+      --muted:        #8a95a3;
+      --rule:         #2a323c;
+      --rule-soft:    #222932;
+      --accent:       #8aa9e8;
+      --accent-soft:  #1b2434;
+      --flag:         #d7a54e;
+      --flag-soft:    #2a2316;
+      --done:         #6bbf94;
+      --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:        #0e1217;
+    --surface:      #161b22;
+    --surface-sunk: #1d242d;
+    --ink:          #e5eaf0;
+    --ink-soft:     #b3bdc9;
+    --muted:        #8a95a3;
+    --rule:         #2a323c;
+    --rule-soft:    #222932;
+    --accent:       #8aa9e8;
+    --accent-soft:  #1b2434;
+    --flag:         #d7a54e;
+    --flag-soft:    #2a2316;
+    --done:         #6bbf94;
+    --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 40px 80px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(28px, 5.4vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -.015em;
+    text-wrap: balance;
+    margin: 0 0 12px;
+  }
+  .standfirst {
+    font-size: 16.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  /* ---------- fact strip ---------- */
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    margin-block: 32px;
+    overflow: hidden;
+  }
+  .fact { background: var(--surface); padding: 12px 14px; }
+  .fact dt {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 4px;
+  }
+  .fact dd {
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .fact dd small { display: block; font-weight: 400; font-size: 12.5px; color: var(--muted); }
+
+  /* ---------- assumption banner ---------- */
+
+  .assume {
+    border-left: 3px solid var(--flag);
+    background: var(--flag-soft);
+    padding: 14px 16px;
+    border-radius: 0 3px 3px 0;
+    margin-block: 0 36px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .assume strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- progress ---------- */
+
+  .progress {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--paper);
+    padding-block: 12px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .bar {
+    flex: 1 1 180px;
+    height: 5px;
+    background: var(--surface-sunk);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    border-radius: 3px;
+    transition: width .25s ease;
+  }
+  .count {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .count b { color: var(--ink); font-weight: 600; }
+  .syncnote {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .04em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ---------- sections ---------- */
+
+  section { margin-top: 44px; }
+  .shead {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 4px;
+  }
+  .shead h2 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -.01em;
+    margin: 0;
+    flex: 1;
+    text-wrap: balance;
+  }
+  .shead .when {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .sintro {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 12px 0 4px;
+    max-width: 64ch;
+  }
+
+  /* ---------- items ---------- */
+
+  .item {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 0 12px;
+    padding: 14px 2px;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: start;
+  }
+  .item:last-child { border-bottom: none; }
+
+  .item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 0;
+    border: 1.5px solid var(--rule);
+    border-radius: 3px;
+    background: var(--surface);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    flex: none;
+  }
+  .item input[type="checkbox"]:hover { border-color: var(--accent); }
+  .item input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .item input[type="checkbox"]::after {
+    content: "";
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid var(--surface);
+    border-bottom: 2px solid var(--surface);
+    transform: rotate(-45deg) translateY(-1px);
+    opacity: 0;
+  }
+  .item input[type="checkbox"]:checked {
+    background: var(--done);
+    border-color: var(--done);
+  }
+  .item input[type="checkbox"]:checked::after { opacity: 1; }
+
+  .body { min-width: 0; }
+  .row {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: .05em;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: var(--surface-sunk);
+    color: var(--muted);
+    white-space: nowrap;
+    flex: none;
+    position: relative;
+    top: -1px;
+  }
+  .tag.now   { background: var(--accent-soft); color: var(--accent); }
+  .tag.lead  { background: var(--accent); color: var(--surface); }
+  :root[data-theme="dark"] .tag.lead,
+  :root:not([data-theme="light"]) .tag.lead { color: var(--paper); }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .tag.lead { color: #fff; } }
+  .tag.flag  { background: var(--flag-soft); color: var(--flag); }
+
+  .title { font-weight: 500; font-size: 14.5px; }
+  .item.checked .title { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
+  .detail {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 4px 0 0;
+    max-width: 70ch;
+  }
+  .item.checked .detail { color: var(--muted); }
+  .detail code {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    background: var(--surface-sunk);
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- source note ---------- */
+
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 70ch;
+  }
+  footer p { margin: 0 0 8px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+  @media (max-width: 420px) {
+    .item { grid-template-columns: 20px 1fr; gap: 0 10px; }
+  }
+  .tag.coll { background: transparent; color: var(--done); box-shadow: inset 0 0 0 1px currentColor; }
+  .tag.chg  { background: var(--flag); color: var(--paper); }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Horizon Europe &middot; HORIZON-CL2-2025-01-DEMOCRACY-03 &middot; GA 101286806</p>
+  <h1>CitiSense at SWPS</h1>
+  <p class="standfirst">What SWPS University has to do to deliver its part of <em>Making Sense of EU Enlargement for, with and by Citizens</em> — leading Work Package 6 and two of its four public deliverables, on 13 person-months and a &euro;113,850 lump sum.</p>
+
+  <dl class="facts">
+    <div class="fact"><dt>Role</dt><dd>Beneficiary 12<small>WP6 lead</small></dd></div>
+    <div class="fact"><dt>PI</dt><dd>Ben Stanley<small>Inst. of Social Sciences</small></dd></div>
+    <div class="fact"><dt>Effort</dt><dd>13 PM<small>10 of them in WP6</small></dd></div>
+    <div class="fact"><dt>Grant</dt><dd>&euro;113,850<small>lump sum, per work package</small></dd></div>
+    <div class="fact"><dt>SWPS deliverables</dt><dd>D6.2, D6.3<small>both M24 = Sep 2028</small></dd></div>
+    <div class="fact"><dt>Duration</dt><dd>Oct 2026 – Sep 2029<small>16 partners</small></dd></div>
+  </dl>
+
+  <p class="assume"><strong>Rebuilt from the signed Grant Agreement (Ref. Ares(2026)4751689, 11 May 2026).</strong> Three things changed fundamentally from the proposal this list was previously built on. The work packages were <strong>renumbered</strong> — the old WP5 (Economic) is now <strong>WP6</strong>, and SWPS is its sole Lead Beneficiary, not a co-lead. The grant is a <strong>lump sum</strong>, not an actual-cost grant, which removes cost reporting and timesheets but ties payment to whole work packages being completed. And the start date is now <strong>fixed at 1 October 2026</strong> — so M1 is about a fortnight away, and every date below is real rather than assumed.</p>
+
+  <div class="progress">
+    <div class="bar"><span id="fill"></span></div>
+    <div class="count"><b id="ndone">0</b> of <span id="ntotal">0</span> done</div>
+    <div class="syncnote" id="sync">local only</div>
+  </div>
+
+  <main id="list"></main>
+
+  <footer>
+    <p>Built from the signed Grant Agreement for project 101286806 — CitiSense (HE Lump Sum MGA v1.2, REA.C.1): Data Sheet, Terms and Conditions, Annex 1 Parts A and B, Annex 2 (lump sum breakdown) and Annex 5 (specific rules). Month-to-calendar dates follow the fixed start of 1 October 2026: M6 = Mar 2027, M12 = Sep 2027, M18 = Mar 2028, M24 = Sep 2028, M30 = Mar 2029, M36 = Sep 2029.</p>
+    <p>Items tagged <strong>CHANGED</strong> differ materially from the September 2025 proposal. Items tagged <strong>ALL PARTNERS</strong> are collective obligations where SWPS is one of a named set. Items tagged <strong>VERIFY</strong> are points the Agreement leaves genuinely open or internally inconsistent — they are not defects in this list.</p>
+  </footer>
+
+</div>
+
+<script>
+  const SECTIONS = [
+    {
+      title: "Before 1 October 2026",
+      when: "now — M1",
+      intro: "The project starts on a fixed date, so these are the only items with a deadline measured in days rather than months. Prefinancing is only distributed to beneficiaries that have acceded.",
+      items: [
+        ["1.1", "now", "Sign and return the Accession Form (Annex 3)",
+         "SWPS becomes a beneficiary only on signing. The Data Sheet restricts distribution of the initial prefinancing to beneficiaries that have acceded — no accession, no money."],
+        ["1.2", "now", "Get the Consortium Agreement through SWPS legal and signed",
+         "The Data Sheet records <em>Consortium agreement: Yes</em>, so it is mandatory. Check: the WP6 lead role and what it obliges SWPS to do for CEU, ISU, UKMA and IPRE; access rights and background; how and when EUI passes on prefinancing; and the individual-liability position (each beneficiary is liable only for its own debts, per Data Sheet 4.4)."],
+        ["1.3", "now", "Confirm SWPS's share of the initial prefinancing and when EUI will transfer it",
+         "Consortium prefinancing is &euro;2,787,837.28, paid 30 days from entry into force or 10 days before the start date, whichever is later, minus 5% (&euro;174,239.83) retained for the Mutual Insurance Mechanism. Establish what reaches SWPS and on what schedule, because WP6 money is not recognised until the final report."],
+        ["1.4", "now", "Fix Portal roles and contacts under PIC 999884634",
+         "Confirm the LEAR's details are current, name a Participant Contact who is not the PI so that EC notifications do not depend on one inbox, and add whoever from Centrum Wsparcia Nauki will administer the grant."],
+        ["1.5", "now", "Register the project internally: cost centre, project number, CWN file",
+         "Do this before M1 so that the first month's effort has somewhere to land."],
+        ["1.6", "now", "Confirm SWPS's Gender Equality Plan is current and on file",
+         "A Horizon Europe eligibility condition. Annex 5 requires measures to promote equal opportunities in implementing the action and gender balance at all levels of personnel, including supervisory and managerial — which now includes the WP6 lead team."],
+        ["1.7", "now", "Diarise the whole project calendar against M1 = 1 October 2026",
+         "Kick-off M3 (Dec 2026), AB/CSN consultations M3/M18/M30, RP1 ends M18 (31 Mar 2028) with the report due ~30 May 2028, all four WP6 deliverables M24 (Sep 2028), project end M36 (30 Sep 2029) with the final report due ~29 Nov 2029."],
+        ["1.8", "chg", "Read Annex 1 Part A yourself rather than working from the proposal",
+         "WP numbering, task numbering, deliverable numbering and two partner changes all moved during grant preparation. Part B carries a History of Change table listing 21 changes; the ones that matter to SWPS are items 3, 5, 6, 7, 9 and 10."]
+      ]
+    },
+    {
+      title: "What the lump sum changes",
+      when: "throughout",
+      intro: "This is an HE Lump Sum MGA. It removes most of the cost-accounting burden the previous version of this list was built around, and replaces it with a single sharper risk: money is released for completed work packages, not for effort expended.",
+      items: [
+        ["2.1", "chg", "No actual-cost reporting, no cost records, no CFS",
+         "Article 20.1 is explicit: <em>beneficiaries do not need to keep specific records on the actual costs incurred</em>. Data Sheet 4.3 sets certificates to n/a. The old worries about hybrid APC eligibility, 25% indirect rates and the &euro;430,000 CFS threshold are gone."],
+        ["2.2", "chg", "Payment follows completed work packages",
+         "Article 6: a lump sum contribution is eligible only if the work package is completed and the work properly implemented in accordance with Annex 1. Partial credit exists only exceptionally, in the last reporting period, for force majeure or technical impossibility."],
+        ["2.3", "flag", "Understand the cash-flow shape: only &euro;8,000 of SWPS's grant closes in RP1",
+         "SWPS's breakdown is WP2 &euro;8,000 (ends M18), WP6 &euro;86,000 (ends M24), WP10 &euro;8,000 (M36), WP11 &euro;5,500 (M36), WP12 &euro;6,350 (M36). Only work packages completed within a reporting period can be declared in it, so &euro;105,850 — 93% of the grant — is only recognised at the final payment in late 2029. Prefinancing has to carry the rest."],
+        ["2.4", "now", "Keep evidence of implementation, not evidence of spending",
+         "Article 20 requires records proving the work was properly implemented and the results achieved as described in Annex 1, kept for 5 years after final payment. For SWPS that means drafts, data, code, analysis files, meeting records, correspondence and the deliverables themselves — an audit trail of research, not of invoices."],
+        ["2.5", "now", "Set up SWPS-side accounting on the university's own terms",
+         "The EC no longer asks how the &euro;113,850 is spent, but SWPS still does. Agree with the grants office how the lump sum is booked, how the project supplement (dodatek projektowy) is set and what internal effort recording they want — this is now an internal requirement, not an EU one."],
+        ["2.6", "now", "Rule out double funding against the OPUS grant and other commitments",
+         "Article 6.3(b) makes lump sum contributions for activities already funded under another EU or national grant ineligible. Document the boundary between CitiSense and the OPUS work now, while it is easy to draw."],
+        ["2.7", "flag", "Note that budget flexibility is switched off",
+         "Article 5.5: any change to the lump sum breakdown needs a formal amendment, and transfers between work packages are possible only if those work packages are not already completed and declared. Decide early if the WP6 / WP10 split is wrong."],
+        ["2.8", "now", "Sanity-check the workload: 10 PM across M7–M24 while leading the WP",
+         "Roughly 0.55 FTE for eighteen months, on top of leading a five-partner work package. Set against teaching, OPUS commitments and post-professorship duties, this is still the number most likely to turn into a delivery problem. Decide now whether a junior researcher is brought in — under a lump sum that is purely an SWPS decision, with no EC transfer to negotiate."]
+      ]
+    },
+    {
+      title: "WP6 — leading the work package",
+      when: "M7 — M24",
+      intro: "SWPS is sole Lead Beneficiary of WP6 Economic Dimensions of Enlargement: 30 person-months and €201,187.50 across five partners (USWPS 10, CEU 12.5, ISU 3, UKMA 3, IPRE 1.5), M7 to M24, four deliverables all landing in the same month. SWPS leads two tasks and two deliverables; CEU leads the other two of each.",
+      items: [
+        ["3.1", "lead", "Set up WP6 governance in writing before M7",
+         "Five partners, four deliverables, one deadline. Agree drafting responsibility, internal deadlines, review rounds, authorship and what CEU's larger effort allocation buys. Nothing in Annex 1 fixes this and it will not get easier at M20."],
+        ["3.2", "chg", "Take up the Steering Committee seat that comes with the WP lead role",
+         "T12.5: the SC is composed of the Coordinator, the Scientific Lead and all Work Package Leads. It coordinates across WPs, sets scientific priorities, validates milestones and tracks risks. Part B adds that methodological risk monitoring runs through six-monthly SC reviews and that WP leads are responsible for early identification of deviations."],
+        ["3.3", "M7–M18", "T6.1 Literature review — CEU lead, SWPS partner",
+         "Systematic review of the limits of static cost-benefit analysis, the economic terms of accession treaties (transition periods, funding arrangements, free movement, real-estate acquisition), and a comparison of Southern, Eastern and current integration strategies, integrating REDEMOS, REUNIR, EMBRACE and InvigoratEU. Leads to D6.1."],
+        ["3.4", "M13–M24", "T6.2 Inclusion and exclusion at the regional level — CEU lead, SWPS partner",
+         "Subnational variation in the governance of EU funding, with particular attention to Hungary and Poland, plus fieldwork case studies in two Ukrainian regions. SWPS covers Poland. Note the asymmetry: CEU leads the task, SWPS is lead beneficiary for the deliverable it feeds."],
+        ["3.5", "M7+", "Start the Polish regional data access requests early",
+         "CST2021/SIMIK payment data, MFiPR and ARDECO regional accounts, NUTS-2 and NUTS-3 socio-economic series, with the Hungarian counterpart from CEU. This is the long pole in D6.2 and nothing else in the WP is blocked by an external gatekeeper."],
+        ["3.6", "lead", "T6.3 Perceptions, attitudes and behaviour — SWPS leads, M13–M24",
+         "Partners CEU, ISU, UKMA, IPRE. Design a longitudinal comparative strategy capturing citizens' perceptions of enlargement and post-accession socio-economic change in absolute and relative terms, and how these relate to political attitudes and behaviour, focused on Hungary and Poland. Leads to D6.3."],
+        ["3.7", "lead", "T6.4 Policy recommendations — SWPS leads, M7–M24",
+         "Partners CEU, ISU, UKMA. Synthesise WP6 into adaptive, regionally responsive recommendations, validated through the CitiSense Civil Society Network (T10.5, UDE) and the EU Enlargement Expert Hub (T11.2, TEPSA). Book those validation slots well before M22 — they are a dependency, not a formality."],
+        ["3.8", "lead", "D6.2 Policy Paper: Patterns of Regional Exclusion and Inclusion — M24, public",
+         "SWPS is lead beneficiary. Compares current with previous enlargements, focused on regional economic impact."],
+        ["3.9", "lead", "D6.3 Research Report: Popular Perceptions of Socio-Economic Developments — M24, public",
+         "SWPS is lead beneficiary. Uses Hungary and Poland to examine how attitudes relate to economic performance. See 4.2 — the survey this was meant to draw on does not cover either country."],
+        ["3.10", "M24", "Track D6.1 and D6.4, which CEU leads but SWPS is answerable for",
+         "D6.1 Ambiguities in Economic Cost-Benefit Analysis and D6.4 Adaptive Approaches to Economic Integration and Enlargement, both M24, both CEU. As WP lead, SWPS carries the work package even where it does not hold the pen."],
+        ["3.11", "flag", "The whole &euro;86,000 turns on WP6 being complete, including CEU's half",
+         "Under a lump sum, the work package is the unit of payment. If D6.1 or D6.4 slips or falls short, the exposure is not only CEU's. This is the strongest single argument for the written division of labour in 3.1 and for early internal deadlines."],
+        ["3.12", "M21–M24", "Work the delivery schedule back from M24 (Sep 2028)",
+         "All four WP6 deliverables land together, in the same month as the M24 cross-WP integration workshop. Internal drafts by M21, partner and Advisory Board review at M22, quality note and sign-off at M23. T12.4 requires a brief quality note attached to each submitted deliverable."],
+        ["3.13", "throughout", "Keep WP6 current in the Portal Continuous Reporting tool",
+         "Article 21.1: deliverables, milestones, outputs and critical risks are reported continuously, not just at period end. As WP lead this falls to SWPS, coordinated with EUI under T12.3."],
+        ["3.14", "M18+", "Plan the journal output alongside the deliverables",
+         "Decide targets early enough that D6.3 and the article can share an analysis rather than duplicate one, and so that open access is arranged before submission rather than after acceptance."]
+      ]
+    },
+    {
+      title: "Input to other work packages",
+      when: "M1 — M36",
+      intro: "Three person-months and €27,850 sit outside WP6, in WP2, WP10, WP11 and WP12. Small allocations, but two of them carry a named commitment and one of them is the last chance to fix a problem inside WP6.",
+      items: [
+        ["4.1", "M1–M10", "WP2 (1 PM, &euro;8,000): survey and survey experiment design",
+         "SU leads. T2.1 literature review and survey design runs M1–M6; T2.2 pilot survey names all partners and runs M6–M10. This is the window in which question wording and country coverage can still move — it opens in October 2026 and shuts in July 2027."],
+        ["4.2", "flag", "Poland and Hungary are still not in the survey — raise it in T2.1, not later",
+         "The WP2 sample is five member states (Estonia, Slovenia, France, the Netherlands, Spain) and four candidate countries (Ukraine, Moldova, North Macedonia, Serbia). Neither Poland nor Hungary is among them, yet T6.3 and D6.3 — SWPS's own lead deliverable — are built on exactly those two cases. Either get the design changed while T2.1 is open, or commit now to PGSW, the Polish Panel Survey, ESS, EVS, CSES and Eurobarometer and write D6.3 accordingly."],
+        ["4.3", "chg", "Note that SWPS has no effort in WP3, where the survey is actually analysed",
+         "The old WP2 was split into WP2 (collection, SU, M1–M18) and WP3 (analysis, SU, M18–M34). SWPS has 1 PM in WP2 and zero in WP3. If D6.3 is to use WP2 microdata, the access terms need settling through the DMP and a data-sharing agreement, not through WP3 membership."],
+        ["4.4", "M22–M36", "WP10 T10.1 (part of 1 PM, &euro;8,000): Toolbox for Policymakers",
+         "UDE and UM lead; SWPS is a named partner. Includes the digital guidebook '30 FAQs on Enlargement'. WP10 now runs to M36 so that the toolboxes can be presented at the final conference."],
+        ["4.5", "M13–M36", "WP10 T10.4: the Polish contribution to 'Europe Next'",
+         "Short country reports by College of Europe post-graduates using CitiSense data. SWPS is a named partner — expect to supply data, supervise or review. Deadline moved from M33 to M36 to align with the College's second semester."],
+        ["4.6", "coll", "WP10 T10.2: Toolbox for civil society and citizenship education — all partners, M22–M36"],
+        ["4.7", "flag", "WP10 T10.3: the Warsaw Youth Lab — establish who hosts it and what the &euro;8,000 covers",
+         "UDE leads, SWPS is a named partner, and Warsaw is one of the 14 Youth Lab cities. Unlike the proposal version, there is now money in SWPS's WP10 line — but &euro;8,000 has to stretch across T10.1, T10.2, T10.3 and T10.4. Confirm the expectation before someone assumes SWPS is hosting."],
+        ["4.8", "M1–M36", "WP11 (0.5 PM, &euro;5,500): the Polish national briefing and the dissemination commitments",
+         "TEPSA leads. T11.6 has each consortium partner organising a decentralised briefing with national policymakers to discuss the recommendations. T11.1, T11.2, T11.3 and T11.5 all name partners as 'all'. Coordinate with the SWPS press office early."],
+        ["4.9", "M1–M36", "WP12 (0.5 PM, &euro;6,350): management, ethics and quality obligations that name all partners",
+         "T12.1 financial and administrative, T12.2 data management and ethics, T12.3 governance and reporting, T12.4 scientific quality and integration, T12.5 Steering Committee — every one lists partners as 'all'. This half person-month is what pays for SC attendance, reporting input and DMP contributions."],
+        ["4.10", "flag", "Clarify the 'survey panel access' claim before someone acts on it",
+         "Part B twice cites SWPS alongside SU as providing access to nationally representative survey panels. Under a lump sum nobody will ask how it is funded, but they may well ask for the panel. Establish what was actually promised."]
+      ]
+    },
+    {
+      title: "Collective actions — meetings, reviews and governance",
+      when: "M3 — M36",
+      intro: "Under a lump sum there is no itemised travel line to defend or exceed; the constraint is the €113,850 as a whole and SWPS's own delegacja rules. What matters is knowing which dates are obligations rather than invitations.",
+      items: [
+        ["5.1", "coll", "Kick-off conference, Florence — M3 (Dec 2026)",
+         "Milestone 2, EUI-led under T12.3, verified by the conference being held and the report published. T12.4 holds a coordination check-in with WP leads at the kick-off on concepts, methods, gender, ethics and terminology — so SWPS attends as WP6 lead, not just as a partner."],
+        ["5.2", "coll", "Advisory Board and Civil Society Network consultations — M3, M18, M30",
+         "T12.6: three structured online consultations plus light quarterly updates. Two-page briefs circulate a fortnight ahead; written comments are due within two weeks. The M18 and M30 rounds bracket WP6's deliverables, and the AB validates recommendations feeding T6.4."],
+        ["5.3", "coll", "Cross-WP integration workshops — M18, M24, M36",
+         "Organised by EUI under T12.3 and named in the risk table as the project's defence against fragmented outputs. The M24 workshop falls in WP6's deliverable month, which makes it load-bearing for SWPS."],
+        ["5.4", "coll", "Mid-term conference, Florence or Tbilisi — M18 (Mar 2028)",
+         "Milestone 4, TEPSA under T11.7. Part B also places a methodological review here to catch inconsistencies and apply corrective harmonisation — relevant to WP6, which is mid-flight at that point."],
+        ["5.5", "coll", "Final conference, Brussels — M36 (Sep 2029)",
+         "Milestone 6: final policy recommendations and toolkits presented and delivered to the EC and stakeholders."],
+        ["5.6", "coll", "Six-monthly Steering Committee reviews — M1 onward",
+         "Standing commitment for WP leads: methodological risk monitoring, milestone validation and formal recording of significant risks in the Portal risk table with mitigation timelines."],
+        ["5.7", "coll", "EC project reviews RV1 (M18) and RV2 (M36)",
+         "Annex 1 Part A lists both, location to be determined. Distinct from the periodic reports and from the internal conferences."],
+        ["5.8", "M18", "Ethics check at M18 — D13.1",
+         "See 6.1. It is a formal checkpoint in the same month as RP1, RV1, the mid-term conference and a cross-WP workshop. March 2028 is the most congested month in the project."],
+        ["5.9", "now", "Budget the travel envelope yourself, early",
+         "Kick-off, mid-term, final conference, three cross-WP workshops, the national briefing, Expert Hub and TEPSA events, plus dissemination conferences. Under a lump sum the trade-off between travel and staff time is entirely SWPS's to make — make it deliberately rather than discovering it at M30."]
+      ]
+    },
+    {
+      title: "Ethics, data protection and research integrity",
+      when: "M1 — M18",
+      intro: "The signed agreement adds a work package that did not exist in the proposal. WP13 carries zero effort and zero budget, but it carries a deliverable and a formal ethics check.",
+      items: [
+        ["6.1", "chg", "WP13 and D13.1 — ethics report due M18 (Mar 2028), EUI-led, sensitive",
+         "New in the signed GA. The ethics screening required it because the project gathers a high volume of personal data and the proposal did not explain how a Data Protection Officer would be appointed or embedded across 16 beneficiaries. SWPS will be asked to contribute its side of this."],
+        ["6.2", "now", "Register the processing with the SWPS data protection officer",
+         "Set out the legal basis for holding individual-level WP2 microdata and for any personal data arising from SWPS's own work, and be ready to feed that into D13.1."],
+        ["6.3", "M6", "Feed SWPS's storage, retention and repository arrangements into the DMP",
+         "D12.2, due M6 (Mar 2027), EUI-led, sensitive. Annex 5 requires the DMP to define per dataset: purpose, ownership, consent, anonymisation, access level and retention — and any decision not to open data must be justified in it."],
+        ["6.4", "now", "Settle controller and processor roles for the WP2 survey microdata",
+         "SU collects via a subcontracted agency (&euro;100,000, YouGov or InfoSapiens pricing). SWPS would analyse it in T6.3. That needs a data-sharing agreement, plus transfer arrangements covering the Georgian, Ukrainian, Moldovan and North Macedonian partners."],
+        ["6.5", "now", "Decide whether an SWPS ethics committee application is needed for T6.3",
+         "T6.3 is largely secondary analysis, but Annex 5 is categorical: before starting any action task raising ethical issues, all approvals must be obtained, kept on file, and submitted with an English summary on request. T6.2's Ukrainian fieldwork is CEU-led — establish whether SWPS is exposed to it at all."],
+        ["6.6", "coll", "Research integrity under the ALLEA Code — reliability, honesty, respect, accountability",
+         "Annex 5 makes the European Code of Conduct for Research Integrity binding, and requires that everyone carrying out research tasks follows it, including openness, reproducibility and traceability."],
+        ["6.7", "chg", "European Charter for Researchers applies to any hire",
+         "Annex 5, Article 18: beneficiaries must implement Annex II to the Council Recommendation on attracting and retaining research talent — working conditions, transparent merit-based recruitment, career development — and must ensure researchers are aware of them. Relevant if a junior researcher is added under 2.8."],
+        ["6.8", "throughout", "Carry the gender dimension into the WP6 analysis, not just the GEP",
+         "Annex 5 requires gender mainstreaming in implementation; Part B commits the project to gender in the economic analysis. That has to be visible in D6.2 and D6.3."]
+      ]
+    },
+    {
+      title: "Open science and dissemination",
+      when: "throughout",
+      intro: "Annex 5 makes these contractual, and they bind SWPS directly rather than through the coordinator.",
+      items: [
+        ["7.1", "coll", "Immediate open access, CC BY, for every peer-reviewed publication",
+         "At the latest at publication, a machine-readable copy of the published version or accepted manuscript deposited in a trusted repository, with immediate open access under CC BY. Authors must retain sufficient IP rights to comply. Monographs may use CC BY-NC or CC BY-ND."],
+        ["7.2", "chg", "Only fees at full open access venues are eligible — but the constraint is now internal",
+         "Annex 5 still states that only publication fees in full open access venues are eligible. Under a lump sum this no longer produces a rejected cost line; it means an APC paid to a hybrid journal comes out of the &euro;113,850 with no EU cover. Diamond OA, the Polish national licence or an SWPS fund remain the sensible routes."],
+        ["7.3", "throughout", "Deposit metadata under CC0 with the full required field set",
+         "Author(s), title, date, venue, Horizon Europe funding, project name, acronym and number 101286806, licensing terms, and persistent identifiers for the publication, the authors and, if possible, their organisations and the grant."],
+        ["7.4", "M24", "Deposit the data and code behind D6.2 and D6.3",
+         "FAIR, in a trusted repository, open under CC BY or CC0 following 'as open as possible, as closed as necessary', within the deadlines the DMP sets, and subject to what the WP2 data-sharing agreement permits. Cadmus at EUI, Zenodo or RepOD."],
+        ["7.5", "throughout", "EU emblem, funding statement and disclaimer on every output",
+         "Article 17.2 and 17.3. The emblem may not be modified or combined with other marks, must be at least as prominent as other logos, and the disclaimer names the granting authority — REA — not the Commission."],
+        ["7.6", "flag", "Inform the granting authority before any activity expected to have major media impact",
+         "Article 17.1. Easy to overlook, and it applies to a partner's own press activity, not only the coordinator's."],
+        ["7.7", "M30+", "Report dissemination and exploitation activity to TEPSA",
+         "It feeds D11.2 Recommendations Digest and D11.3 Digest of Public-Oriented Communications Products, both M36."],
+        ["7.8", "throughout", "Register outputs in the Portal and in SWPS's own systems",
+         "The Polish-language project description and summary drafted with Aleksandra Noga can be reused for the SWPS project database — but update it: the work package is now WP6, and SWPS leads it."]
+      ]
+    },
+    {
+      title: "Raise with the coordinator and CEU",
+      when: "next exchange",
+      intro: "Points where the signed agreement is silent, inconsistent, or says something different from what people remember from the proposal. Each is cheap to settle in October 2026 and expensive to discover at M22.",
+      items: [
+        ["8.1", "flag", "Is SWPS the sole WP6 lead, or does CEU co-lead it?",
+         "Annex 1 Part A names USWPS as Lead Beneficiary of WP6, flat. Part B says WP6 is 'co-led by Prof. László Bruszt and Prof. Ben Stanley'. Part A governs the Portal, the reporting and the liability; Part B shapes what CEU thinks it agreed to. Settle it in the Consortium Agreement."],
+        ["8.2", "flag", "Confirm the task and deliverable crossover in WP6 is deliberate",
+         "T6.2 is CEU-led but D6.2 is SWPS-led; T6.4 is SWPS-led but D6.4 is CEU-led. Either it is a considered split of research and writing or it is a drafting artefact carried over from the proposal. It survived grant preparation, which argues for deliberate — but confirm."],
+        ["8.3", "flag", "What data will T6.3 actually use for Poland and Hungary?",
+         "The most consequential open question on this list: it goes to whether SWPS's own lead deliverable can be written as specified. See 4.2. Raise it at the kick-off at the latest, while T2.1 is still running."],
+        ["8.4", "flag", "CEU holds more effort in WP6 than SWPS does",
+         "CEU 12.5 PM and &euro;76,562.50; SWPS 10 PM and &euro;86,000. The lead beneficiary is the smaller contributor of effort. Not a problem in itself, but it needs to be named when the division of labour is agreed."],
+        ["8.5", "flag", "What does 'WP6 completed' mean in practice for the final payment?",
+         "Four public deliverables and five objectives. Ask EUI what evidence the consortium will hold to substantiate completion under Article 6, so that WP6 is built to satisfy it rather than reverse-engineered in 2029."],
+        ["8.6", "now", "Ask for the internal deadline calendar",
+         "Draft dates, review windows and the T12.4 quality-assurance pass ahead of the M24 cluster. Without one, four WP6 deliverables plus the M24 cross-WP workshop will collide."],
+        ["8.7", "flag", "Who hosts and funds the Warsaw Youth Lab?",
+         "See 4.7. UDE leads T10.3 and holds &euro;225,250 in WP10; SWPS holds &euro;8,000 across four WP10 tasks."],
+        ["8.8", "chg", "Confirm the Moldovan partner change is fully reflected in WP6",
+         "Resolved in the signed GA: WatchDog.MD withdrew and IPRE (Iulian Groza) acceded as beneficiary 15. IPRE is a named partner in T6.3 with 1.5 PM in WP6 — so this is a live working relationship for SWPS, not just a list correction."]
+      ]
+    }
+  ];
+
+  const TAGS = {
+    now:  { cls: "now",  text: "DO NOW" },
+    flag: { cls: "flag", text: "VERIFY" },
+    lead: { cls: "lead", text: "SWPS LEADS" },
+    coll: { cls: "coll", text: "ALL PARTNERS" },
+    chg:  { cls: "chg",  text: "CHANGED" }
+  };
+
+  const list = document.getElementById("list");
+  const boxes = [];
+
+  SECTIONS.forEach((sec) => {
+    const el = document.createElement("section");
+    const head = document.createElement("div");
+    head.className = "shead";
+    const h2 = document.createElement("h2");
+    h2.textContent = sec.title;
+    const when = document.createElement("span");
+    when.className = "when";
+    when.textContent = sec.when;
+    head.append(h2, when);
+    el.append(head);
+
+    if (sec.intro) {
+      const p = document.createElement("p");
+      p.className = "sintro";
+      p.textContent = sec.intro;
+      el.append(p);
+    }
+
+    sec.items.forEach(([id, tag, title, detail]) => {
+      const item = document.createElement("div");
+      item.className = "item";
+
+      const box = document.createElement("input");
+      box.type = "checkbox";
+      box.id = "chk-" + id;
+      box.setAttribute("aria-label", id + " " + title);
+      boxes.push(box);
+
+      const body = document.createElement("div");
+      body.className = "body";
+
+      const row = document.createElement("div");
+      row.className = "row";
+
+      const num = document.createElement("span");
+      num.className = "tag";
+      num.textContent = id;
+
+      const badge = document.createElement("span");
+      const t = TAGS[tag];
+      badge.className = "tag " + (t ? t.cls : "");
+      badge.textContent = t ? t.text : tag;
+
+      const label = document.createElement("label");
+      label.className = "title";
+      label.htmlFor = box.id;
+      label.textContent = title;
+
+      row.append(num, badge, label);
+      body.append(row);
+
+      if (detail) {
+        const d = document.createElement("p");
+        d.className = "detail";
+        d.innerHTML = detail;
+        body.append(d);
+      }
+
+      item.append(box, body);
+      el.append(item);
+
+      box.addEventListener("change", () => {
+        item.classList.toggle("checked", box.checked);
+        tally();
+        save(id, box.checked);
+      });
+    });
+
+    list.append(el);
+  });
+
+  const fill = document.getElementById("fill");
+  const ndone = document.getElementById("ndone");
+  document.getElementById("ntotal").textContent = boxes.length;
+
+  function tally() {
+    const n = boxes.filter((b) => b.checked).length;
+    ndone.textContent = n;
+    fill.style.width = (boxes.length ? (n / boxes.length) * 100 : 0) + "%";
+  }
+  tally();
+
+  /* ---- shared, persistent state ---- */
+
+  const sync = document.getElementById("sync");
+  let doc = null;
+
+  function applyState(done) {
+    if (!done) return;
+    boxes.forEach((b) => {
+      const id = b.id.slice(4);
+      const want = done[id] === true;
+      if (b.checked !== want) {
+        b.checked = want;
+        b.closest(".item").classList.toggle("checked", want);
+      }
+    });
+    tally();
+  }
+
+  async function save(id, value) {
+    if (!doc) return;
+    try {
+      await doc.update({ done: { [id]: value } });
+    } catch (e) {
+      sync.textContent = "not saved";
+    }
+  }
+
+  (async () => {
+    const db = await (window.claude?.use?.("db") ?? Promise.resolve(null));
+    if (!db) { sync.textContent = "local only"; return; }
+    try {
+      doc = db.doc("checklist/swps");
+      const snap = await doc.get();
+      if (!snap.exists) await doc.set({ done: {} });
+      doc.onSnapshot(
+        (s) => {
+          applyState(s.data()?.done);
+          sync.textContent = "shared";
+        },
+        () => { sync.textContent = "not syncing"; }
+      );
+    } catch (e) {
+      doc = null;
+      sync.textContent = "local only";
+    }
+  })();
+</script>
