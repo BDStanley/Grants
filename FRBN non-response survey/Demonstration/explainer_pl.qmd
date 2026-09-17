@@ -1,0 +1,366 @@
+---
+title: "Kto odpowiada ankieterowi?"
+subtitle: "Diagnoza nieignorowalnego braku odpowiedzi za pomocą randomizowanego instrumentu odpowiedzi — przewodnik po pilotażu FRBN"
+author: "Ben Stanley (Uniwersytet SWPS, Centrum Studiów nad Demokracją)"
+date: last-modified
+date-format: "D MMMM YYYY"
+lang: pl
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.2cm
+      y: 2cm
+    fontsize: 10pt
+    mainfont: "Minion 3"
+    section-numbering: "1.1"
+    toc: true
+    toc-title: "Spis treści"
+    toc-depth: 2
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+key <- readRDS("output/key_numbers.rds")
+est <- key$est
+dig <- function(item) ifelse(item %in% c("minor", "norms"), 2, 1)
+
+# liczba w zapisie polskim (przecinek dziesiętny)
+pl <- function(x, d) formatC(x, format = "f", digits = d, decimal.mark = ",")
+# minus typograficzny, bez wiodącego plusa
+mn <- function(x, d) sprintf("%s%s", ifelse(x < 0, "−", ""), pl(abs(x), d))
+# ze znakiem
+sgn <- function(x, d) {
+  sprintf("%s%s", ifelse(x > 0, "+", ifelse(x < 0, "−", "")), pl(abs(x), d))
+}
+
+g <- function(item, estimator) {
+  v <- est$est_u[est$item == item & est$estimator == estimator]
+  round(v[1], dig(item))
+}
+gf <- function(item, estimator) pl(g(item, estimator), dig(item))
+err <- function(item, estimator) {
+  sgn(round(g(item, estimator) - g(item, "Truth"), dig(item)), dig(item))
+}
+rho_v <- function(item) mn(key$rho$rho[key$rho$item == item], 2)
+rho_z <- function(item) mn(key$rho$z[key$rho$item == item], 1)
+dgf <- function(item) sgn(key$diag$est_u[key$diag$item == item], dig(item))
+dgsef <- function(item) pl(key$diag$se_u[key$diag$item == item], 2)
+dg_p <- function(item) {
+  p <- key$diag$p[key$diag$item == item]
+  if (p < 0.001) "< 0,001" else pl(p, 3)
+}
+pol <- function(estimator) {
+  pl(round(key$pol$gap[key$pol$estimator == estimator], 1), 1)
+}
+rr <- function(arm) pl(round(100 * key[[paste0("rr_", arm)]], 1), 1)
+nn <- function(arm) format(key[[paste0("n_", arm)]], big.mark = " ")
+```
+
+*Tekst przygotowany dla współpracowniczek i współpracowników z Centrum Studiów nad Demokracją oraz zespołu PGSW. Wyjaśnia, czemu służy pilotaż FRBN (decyzja nr 67/2026/FRBN/C) i dlaczego został zaprojektowany właśnie tak, posługując się demonstracją na danych syntetycznych, w której prawidłowa odpowiedź jest znana. Wszystkie liczby i wykresy pochodzą z tej symulacji, a nie z rzeczywistych danych polskich: pokazują, co metoda potrafi, a nie co ustaliliśmy. Zespół projektu: Ben Stanley (kierownik), Mikołaj Cześnik, Marta Żerkowska-Balas.*
+
+# Problem, który próbujemy rozwiązać
+
+## Sondaże słyszą dziś niemal nikogo
+
+Prawie wszystko, co twierdzimy na temat polskiej opinii publicznej — przewidywana frekwencja, poparcie partii, postawy wobec mniejszości, przywiązanie do norm demokratycznych — powstaje na podstawie badań, w których zdecydowana większość zaproszonych nigdy nie odpowiada. W typowym polskim badaniu internetowym (CAWI) ankietę wypełnia mniej niż co dziesiąta zaproszona osoba. Wszystko, o czym informujemy, pochodzi od mniejszości, która *zechciała* wziąć udział.
+
+Standardową naprawą jest **ważenie**: próbę koryguje się tak, by jej struktura odpowiadała populacji pod względem wieku, płci, wykształcenia i miejsca zamieszkania. Raking, poststratyfikacja i kalibracja to warianty tego samego posunięcia. Zabieg ten działa i jest niezbędny — opiera się jednak na założeniu, które rzadko formułuje się równie wprost, jak na to zasługuje:
+
+> Respondent jest wymienialny z tymi osobami, które nie odpowiedziały, a mają ten sam profil demograficzny. Gdy tylko cechy demograficzne się zgadzają, ci, którzy odpowiedzieli, mówią nam to, co powiedzieliby ci, którzy tego nie zrobili.
+
+Dla wielu pytań jest to z grubsza prawda. Dla niektórych — i to często akurat tych, na których najbardziej zależy politologom — nie jest.
+
+## Kiedy założenie zawodzi
+
+Skłonność do wypełnienia ankiety politycznej nie rozkłada się losowo. Osoby zaangażowane politycznie lubią sondaże polityczne i częściej chodzą na wybory. Osoby nieufne wobec instytucji albo przekonane, że ich poglądy są źle widziane, po cichu znikają z próby — i mają odrębne opinie. W takich przypadkach *sama treść odpowiedzi wiąże się ze skłonnością do jej udzielenia*.
+
+To właśnie **nieignorowalny brak odpowiedzi**: skłonność do odpowiedzi $R^*$ jest skorelowana ze zmienną wynikową $Y$ przy kontroli wszystkiego, co obserwujemy. Ważenie demograficzne nie jest w stanie ani tego wykryć, ani naprawić, ponieważ osoby brakujące różnią się *opiniami*, a nie tylko wiekiem czy wykształceniem. Korektę stosujemy wzdłuż wymiarów, które widzimy; szkoda powstaje wzdłuż wymiaru, którego nie widzimy.
+
+Przy 50-procentowym odsetku odpowiedzi wynosi 1. Przy 10 procentach — 3. Przy 5 procentach — 4,4. Korelacja między udziałem w badaniu a treścią odpowiedzi, która w 1980 roku byłaby błędem zaokrąglenia, dziś daje obciążenie rzędu kilkunastu punktów. Co kluczowe, **liczebność próby tu nie pomaga**: kara zależy od *odsetka* odpowiedzi, a nie od liczby zrealizowanych wywiadów. Większa obciążona próba to próba, która myli się z większą pewnością siebie.
+
+# Rozwiązanie Baileya: zaprojektować badanie tak, by obciążenie zostawiło ślad
+
+Projekt wdraża ramy teoretyczne z książki Michaela Baileya *Polling at a Crossroads* (Cambridge University Press, 2024), zwłaszcza z rozdziałów 8–12.
+
+## Kolejka
+
+Wyobraźmy sobie wszystkie zaproszone osoby ustawione w kolejce według chęci udziału w badaniu. Sondaż o niskim wskaźniku odpowiedzi słyszy wyłącznie początek kolejki. Sondaż, który naciska mocniej — przypomnienia, zachęty, dłuższy okres realizacji — sięga głębiej i zbiera także osoby mniej chętne.
+
+Zrealizujmy więc to samo badanie na dwa sposoby jednocześnie. Losowo przydzielmy połowę zaproszonych do **protokołu lekkiego kontaktu** (jedno zaproszenie, potem cisza), a połowę do **protokołu intensywnego** (zaproszenie i przypomnienia). Ramię lekkie obejmuje wyłącznie chętny początek kolejki. Ramię standardowe obejmuje chętnych *oraz* wycinek niechętnych. Porównajmy ich odpowiedzi, pytanie po pytaniu:
+
+- **Takie same odpowiedzi w obu ramionach** → niechętni przypominają chętnych, co przemawia za tym, że niedostępni przypominają jednych i drugich. Brak odpowiedzi jest dla tego pytania ignorowalny, a zwykłe ważenie — wiarygodne.
+- **Różne odpowiedzi** → skłonność do udziału wiąże się z treścią odpowiedzi. Publikowana wartość jest przesunięta, a ważenie jej nie uratuje.
+
+Ponieważ przydział do ramienia jest rzutem monetą, różnicy między ramionami nie da się przypisać temu, że od początku byli to ludzie innego rodzaju. To właśnie czyni z takiego bodźca **randomizowany instrument odpowiedzi**: losowo przydzielone oddziaływanie, które zmienia to, *czy* ktoś odpowiada, nie zmieniając tego, *co myśli*.
+
+Formalnie instrument $Z$ musi spełniać dwa warunki:
+
+- **Warunek włączenia** (*inclusion*): $Z$ zmienia prawdopodobieństwo udzielenia odpowiedzi, i to wyraźnie. Słaby instrument sprawia, że cała dalsza analiza jest bezużyteczna.
+- **Warunek wyłączenia** (*exclusion restriction*): $Z$ nie wpływa na odpowiedzi tych, którzy wzięli udział. Randomizacja gwarantuje to w wartości oczekiwanej; co robimy, by chronić ten warunek w praktyce, opisuje dalsza część poświęcona projektowi badania.
+
+## Od diagnozy do naprawy
+
+Gdy już widzimy, jak zmieniają się odpowiedzi w miarę sięgania głębiej w kolejkę, modele selekcji (Heckman 1979 i jego kontynuacje) potrafią ekstrapolować tę zmianę na osoby, które nigdy nie odpowiedziały, i wyprodukować skorygowane oszacowania. Bailey dowodzi, że zła reputacja tych modeli nie bierze się z błędnej matematyki, lecz z tego, że rutynowo karmiono je danymi pozbawionymi instrumentu — identyfikacja opierała się wtedy wyłącznie na postaci funkcyjnej. Jeśli dostarczyć im prawdziwy randomizowany instrument, zachowują się porządnie.
+
+# Demonstracja: syntetyczna Polska
+
+Wszystko, co znajduje się w rozdziałach 4–8, pochodzi z symulacji, a to z jednego powodu: w symulacji znamy prawdę. Możemy więc sprawdzić nie tylko to, czy diagnostyka się uruchamia, ale i to, czy skorygowane oszacowania trafiają tam, gdzie powinny.
+
+## Świat syntetyczny
+
+Tworzymy populację 100 000 osób dorosłych o realistycznej strukturze demograficznej (płeć, wiek, wykształcenie, wielkość miejscowości). Dwie **nieobserwowane** cechy wpływają następnie zarówno na udział w badaniu, jak i na część odpowiedzi:
+
+- **zaangażowanie polityczne** — podnosi prawdopodobieństwo odpowiedzi; podnosi deklarowaną frekwencję oraz postawy przychylne mniejszościom i demokracji;
+- **zaufanie do instytucji** — podnosi prawdopodobieństwo odpowiedzi; obniża poparcie dla stygmatyzowanej partii antyestablishmentowej.
+
+Konstruujemy sześć pytań: cztery są z założenia skażone, dwa są czyste:
+
+| Pytanie | Zależne od cech ukrytych? | Zakładany werdykt |
+|:---|:---|:---|
+| Pewny udział w wyborach | zaangażowanie ↑ | nieignorowalny — zawyżany w sondażach |
+| Stygmatyzowana partia | zaufanie ↓ | nieignorowalny — zaniżany |
+| Indeks postaw wobec mniejszości | zaangażowanie + zaufanie ↑ | nieignorowalny — zawyżany |
+| Normy demokratyczne | zaangażowanie + zaufanie ↑ | nieignorowalny — zawyżany |
+| Poparcie dla członkostwa w UE | wyłącznie demografia | **ignorowalny** — ważenie działa |
+| Palenie papierosów | wyłącznie demografia | **ignorowalny** — ważenie działa |
+
+*Pytania w świecie syntetycznym. Dwa pytania kontrolne to uczciwa połowa ćwiczenia: diagnostyka, która uruchamia się przy wszystkim, nie jest diagnostyką.*
+
+Następnie zapraszamy do badania 30 000 losowo wybranych osób i dzielimy listę zaproszeń losowo, w proporcji 50/50, na dwa protokoły kontaktu.
+
+## Jak wygląda selekcja na cesze nieobserwowanej
+
+Rysunek 1 pokazuje to, czego normalnie zobaczyć nie możemy. Każdy punkt to jedna zaproszona osoba. Oś pozioma to jej (ukryta) skłonność do odpowiedzi, oś pionowa — odpowiedź na indeksie postaw wobec mniejszości. Czerwone punkty odpowiedziały, szare nie. W rzeczywistym badaniu punkty szare są niewidoczne — obserwujemy wyłącznie czerwone i ich średnią.
+
+![Respondenci to przechylony wycinek zaproszonych. Odpowiedzi rosną wraz ze skłonnością do udziału, więc średnia z respondentów leży znacznie powyżej średniej w populacji — a żadna waga demograficzna nie widzi osi poziomej.](figs/pl/fig2_tilted_fish.png){#fig-fish width=92%}
+
+Ponieważ chmura punktów jest przechylona, średnia z punktów czerwonych nie odtwarza średniej ze wszystkich punktów: średnia z respondentów wynosi `r gf("minor","Observed")` wobec prawdziwej wartości `r gf("minor","Truth")`. Całym problemem jest właśnie to przechylenie. Gdyby chmura była płaska — gdyby odpowiedź nie miała nic wspólnego z chęcią udziału — średnia z respondentów byłaby nieobciążona i nic w tym tekście nie byłoby potrzebne. Dokładnie tak jest w przypadku dwóch pytań kontrolnych.
+
+Warto zauważyć, co ważenie może tu zrobić, a czego nie. Ważenie operuje na osiach *obserwowanych* (wiek, wykształcenie, wielkość miejscowości). Przechylenie zachodzi wzdłuż osi, której nie ma w żadnym zbiorze danych. Ważenie rzetelnie naprawi każdą nierównowagę, którą widzi, i nie tknie tej jednej.
+
+# Projekt badania: randomizacja protokołu kontaktu
+
+| | **Ramię A — kontakt standardowy** | **Ramię B — lekki kontakt** |
+|:---|:---|:---|
+| Zaproszenie | dzień 0 | dzień 0 |
+| Przypomnienia | dni 3, 7 i 11 | brak |
+| Gratyfikacja, kwestionariusz, okno realizacji | identyczne | identyczne |
+| Odsetek odpowiedzi (symulacja) | `r rr("A")`% | `r rr("B")`% |
+| Zrealizowane wywiady (symulacja) | `r nn("A")` | `r nn("B")` |
+| Kto się w nim znajduje | typy chętne **i** niechętne | wyłącznie najbardziej chętni |
+
+*Ramiona różnią się dokładnie jednym: tym, jak mocno badanie naciska. Wszystko, co respondent widzi na ekranie, jest takie samo. Harmonogram przypomnień jest harmonogramem pilotażu; odsetki odpowiedzi pochodzą z demonstracji syntetycznej, w której instrument jest celowo silniejszy (zob. uwagę w następnym rozdziale).*
+
+Dwie cechy tego projektu zasługują na chwilę uwagi, bo to one czynią go tanim i wiarygodnym.
+
+Po pierwsze, **nikt nie jest traktowany w sposób nietypowy**. Ramię A to standardowy protokół agencji. Ramię B otrzymuje *mniej* kontaktów niż standard branżowy — dlatego argumentacja etyczna jest prosta: manipulacja eksperymentalna zmniejsza obciążenie uczestników, a nie je zwiększa.
+
+Po drugie, **manipulujemy parametrem realizacji terenowej, a nie narzędziem badawczym**. Agencje zmieniają harmonogramy przypomnień nieustannie. Nowe jest to, że robimy to celowo i losowo, oznaczamy każdy zrealizowany wywiad wskaźnikiem ramienia i analizujemy wynik. Koszt krańcowy wobec zwykłego sondażu jest bliski zeru — ramię B jest w istocie tańsze w realizacji.
+
+# Krok 1: czy instrument działa?
+
+Warunek włączenia nie jest założeniem; to rzecz, którą sprawdza się w pierwszej kolejności, zanim zinterpretuje się cokolwiek innego.
+
+![Instrument działa: losowo przydzielona intensywność kontaktu zmienia odsetek odpowiedzi o 15 punktów procentowych.](figs/pl/fig1_response_rates.png){#fig-rr width=78%}
+
+W symulacji ramię standardowe daje `r rr("A")`%, a ramię lekkie `r rr("B")`% — różnica `r pl(round(100*(key$rr_A - key$rr_B), 1), 1)` punktu procentowego, przy statystyce $z$ dla współczynnika przy ramieniu w równaniu pierwszego stopnia równej `r round(key$fs_z, 0)`. Instrument jest silny.
+
+::: {.callout-important title="Instrument w symulacji jest celowo silniejszy niż ten, którego spodziewamy się w terenie"}
+Różnica 15 punktów jest hojna. Realistyczne wartości dla polskich paneli internetowych to raczej 7–9% przy pojedynczym zaproszeniu i 14–17% przy trzech przypomnieniach — czyli różnica rzędu 6–8 punktów. Pilotaż jest zwymiarowany pod takie liczby, a wymiarowania dokonano symulując ten właśnie projekt, a nie ze wzoru. Miękki start sprawdza przyrost jeszcze przed startem głównym, wobec progu ustawionego na **mocy testu**, a nie na poprawności instrumentu: co najmniej 7 punktów — idziemy; 5–7 — idziemy, mówiąc, ile to kosztuje; poniżej 5 — czwarte przypomnienie w ramieniu A na mocy klauzuli eskalacji w umowie. Symulacja wyolbrzymia instrument po to, by mechanizm był czytelny; nie sprawia jednak, że problem znika.
+:::
+
+# Krok 2: test diagnostyczny
+
+Dla każdego pytania szacujemy regresję odpowiedzi na wskaźniku ramienia **oraz pełnym zestawie zmiennych demograficznych**, wyłącznie wśród respondentów:
+
+$$Y_i \;=\; \alpha + \beta Z_i + X_i'\gamma + \varepsilon_i \qquad \text{(Bailey, równanie 10.6)}$$
+
+gdzie $Z = 1$ dla ramienia lekkiego kontaktu. Hipoteza zerowa mówi, że $\beta = 0$: respondenci z grupy "tylko chętni" odpowiadają tak samo jak szersza pula. Jej odrzucenie jest bezpośrednim dowodem na to, że skłonność do odpowiedzi i treść odpowiedzi są ze sobą powiązane.
+
+![Diagnostyka uruchamia się dokładnie przy czterech pytaniach skażonych z założenia i przy żadnym z pytań kontrolnych. Pytania binarne w punktach procentowych, indeksy w jednostkach odchylenia standardowego; 95-procentowe przedziały ufności.](figs/pl/fig3_diagnostic.png){#fig-diag width=100%}
+
+| Pytanie | Efekt ramienia B | Błąd st. | $p$ | Z założenia |
+|:---|---:|---:|---:|:---|
+| Pewny udział w wyborach | `r dgf("turnout")` pp | `r dgsef("turnout")` | `r dg_p("turnout")` | nieignorowalny |
+| Stygmatyzowana partia | `r dgf("partyS")` pp | `r dgsef("partyS")` | `r dg_p("partyS")` | nieignorowalny |
+| Indeks mniejszościowy | `r dgf("minor")` SD | `r dgsef("minor")` | `r dg_p("minor")` | nieignorowalny |
+| Normy demokratyczne | `r dgf("norms")` SD | `r dgsef("norms")` | `r dg_p("norms")` | nieignorowalny |
+| Członkostwo w UE | `r dgf("eu")` pp | `r dgsef("eu")` | `r dg_p("eu")` | kontrolne (zero) |
+| Palenie papierosów | `r dgf("smoke")` pp | `r dgsef("smoke")` | `r dg_p("smoke")` | kontrolne (zero) |
+
+*Test diagnostyczny na danych syntetycznych. Respondenci lekkiego kontaktu — chętny początek kolejki — deklarują wyższą frekwencję, niższe poparcie dla stygmatyzowanej partii i bardziej progresywne postawy. Pytania kontrolne nie odbiegają od zera.*
+
+Znaki są dokładnie takie, jakich każe oczekiwać logika kolejki. W ramieniu B skupienie osób chętnych, zaangażowanych i ufnych jest większe, więc zawyża ono frekwencję nawet względem i tak już zawyżonego ramienia A, a zaniża poparcie dla partii, której zwolennicy nie ufają instytucjom.
+
+::: {.callout-note title="Dlaczego zmienne kontrolne nie są opcjonalne"}
+Dwuzmiennowa wersja tego testu — regresja $Y$ na samym $Z$ — ma katastrofalny odsetek fałszywych odkryć (Bailey, rys. 11.4). Przydział do ramienia jest losowy wśród *zaproszonych*, ale nie wśród *respondentów*: warunkowanie na udziale w badaniu wytwarza korelację między ramieniem a cechami demograficznymi, a zatem i ze wszystkim, co te cechy przewidują. Dodanie $X$ przywraca poprawny rozmiar testu (około 5%). To najczęstszy sposób, w jaki można zepsuć ten projekt badawczy, i właśnie dlatego zestaw zmiennych kontrolnych zostaje zamrożony w prerejestracji, a nie dobrany po fakcie.
+:::
+
+# Krok 3: ważenie nie ratuje pytań oznaczonych jako podejrzane
+
+To demonstracja nośna dla całego argumentu. Ważymy próbę respondentów metodą rakingu do prawdziwych rozkładów brzegowych w populacji — płeć, grupa wieku, wykształcenie, wielkość miejscowości — czyli stosujemy podręcznikowo doskonałą wersję tego, co robią polskie agencje, korzystając z rzeczywistych wartości populacyjnych, a nie z ich oszacowań.
+
+| Pytanie | Prawda | Sondaż | Po ważeniu | Błąd po ważeniu |
+|:---|---:|---:|---:|---:|
+| Pewny udział w wyborach | `r gf("turnout","Truth")`% | `r gf("turnout","Observed")`% | `r gf("turnout","Raked (conventional)")`% | **`r err("turnout","Raked (conventional)")` pp** |
+| Stygmatyzowana partia | `r gf("partyS","Truth")`% | `r gf("partyS","Observed")`% | `r gf("partyS","Raked (conventional)")`% | **`r err("partyS","Raked (conventional)")` pp** |
+| Indeks mniejszościowy | `r gf("minor","Truth")` | `r gf("minor","Observed")` | `r gf("minor","Raked (conventional)")` | **`r err("minor","Raked (conventional)")`** |
+| Normy demokratyczne | `r gf("norms","Truth")` | `r gf("norms","Observed")` | `r gf("norms","Raked (conventional)")` | **`r err("norms","Raked (conventional)")`** |
+| Członkostwo w UE | `r gf("eu","Truth")`% | `r gf("eu","Observed")`% | `r gf("eu","Raked (conventional)")`% | `r err("eu","Raked (conventional)")` pp |
+| Palenie papierosów | `r gf("smoke","Truth")`% | `r gf("smoke","Observed")`% | `r gf("smoke","Raked (conventional)")`% | `r err("smoke","Raked (conventional)")` pp |
+
+*Konwencjonalny raking do znanych rozkładów brzegowych. Po ważeniu próba odpowiada Polsce pod względem każdej cechy demograficznej — a oszacowania dla pytań podejrzanych ledwie drgnęły.*
+
+Deklarowana frekwencja jest zawyżona o `r err("turnout","Observed")` punktu procentowego przed ważeniem i o `r err("turnout","Raked (conventional)")` po nim. Poparcie dla stygmatyzowanej partii jest zaniżone o `r err("partyS","Observed")` punktu przed ważeniem i `r err("partyS","Raked (conventional)")` po. Oba pytania kontrolne były trafne i takie pozostały.
+
+Nie jest to argument przeciwko ważeniu. Ważenie zrobiło swoje: skorygowało nierównowagę demograficzną, a tam, gdzie nierównowaga demograficzna była całą historią — przy dwóch pytaniach kontrolnych — odpowiedzi są trafne. Argument brzmi tak: ważenie milczy na temat drugiego rodzaju nierównowagi, a jego milczenie łatwo wziąć za sygnał, że wszystko jest w porządku.
+
+# Krok 4: modele selekcji z instrumentem
+
+Dla pytań oznaczonych jako podejrzane szacujemy model selekcji Heckmana metodą największej wiarygodności: równanie udziału w badaniu na pełnej puli zaproszonych (łącznie z tymi, którzy nigdy nie odpowiedzieli), ze wskaźnikiem ramienia jako instrumentem wyłączonym z równania wynikowego, oraz równanie wynikowe dla odpowiedzi.
+
+![Oszacowania surowe, ważone i skorygowane modelem selekcji wobec prawdy (linia przerywana). Model selekcji przesuwa pytania podejrzane w większości drogi z powrotem; przy pytaniach kontrolnych rusza oszacowania, które ruszać nie było trzeba.](figs/pl/fig4_estimators.png){#fig-est width=100%}
+
+| Pytanie | Prawda | Błąd surowy | Błąd po ważeniu | Błąd Heckmana |
+|:---|---:|---:|---:|---:|
+| Pewny udział w wyborach | `r gf("turnout","Truth")`% | `r err("turnout","Observed")` | `r err("turnout","Raked (conventional)")` | **`r err("turnout","Heckman (instrument)")`** |
+| Stygmatyzowana partia | `r gf("partyS","Truth")`% | `r err("partyS","Observed")` | `r err("partyS","Raked (conventional)")` | **`r err("partyS","Heckman (instrument)")`** |
+| Indeks mniejszościowy | `r gf("minor","Truth")` | `r err("minor","Observed")` | `r err("minor","Raked (conventional)")` | **`r err("minor","Heckman (instrument)")`** |
+| Normy demokratyczne | `r gf("norms","Truth")` | `r err("norms","Observed")` | `r err("norms","Raked (conventional)")` | **`r err("norms","Heckman (instrument)")`** |
+| Członkostwo w UE | `r gf("eu","Truth")`% | `r err("eu","Observed")` | `r err("eu","Raked (conventional)")` | `r err("eu","Heckman (instrument)")` |
+| Palenie papierosów | `r gf("smoke","Truth")`% | `r err("smoke","Observed")` | `r err("smoke","Raked (conventional)")` | `r err("smoke","Heckman (instrument)")` |
+
+*Błąd każdego estymatora względem znanej prawdy, ze znakiem. Punkty procentowe dla pytań binarnych, punkty indeksu dla dwóch indeksów.*
+
+Trzy rzeczy z tej tabeli zasługują na to, by powiedzieć je wprost, zamiast prześlizgnąć się po nich.
+
+**Korekta działa tam, gdzie jest potrzebna.** Przy frekwencji błąd spada z `r err("turnout","Observed")` punktu procentowego do `r err("turnout","Heckman (instrument)")`. Przy obu indeksach maleje o mniej więcej trzy czwarte. To duże naprawy dużych obciążeń, osiągnięte bez żadnej informacji, której rzeczywisty sondaż nie mógłby mieć.
+
+**Korekta nie jest chirurgiczna.** Przy poparciu dla stygmatyzowanej partii model przestrzeliwuje: prawda to `r gf("partyS","Truth")`%, sondaż mówi `r gf("partyS","Observed")`%, a wartość skorygowana wynosi `r gf("partyS","Heckman (instrument)")`% — właściwy kierunek, z grubsza właściwa skala, ale teraz błąd `r err("partyS","Heckman (instrument)")` punktu w drugą stronę. Oszacowanie skorygowane jest oszacowaniem lepszym, a nie dokładnym, i należy je podawać jako przedział, a nie jako liczbę. W pilotażu służą temu modele kopulowe (`GJRM`) szacowane obok referencyjnego modelu Heckmana, prezentacja rozrzutu między specyfikacjami oraz bootstrapowe przedziały ufności liczone na puli zaproszonych.
+
+**Przy pytaniach czystych korekta nieco szkodzi.** Poparcie dla UE dryfuje o `r err("eu","Heckman (instrument)")` punktu procentowego, a palenie o `r err("smoke","Heckman (instrument)")` — oddalając się od wartości, które raking już wcześniej ustalił poprawnie. To spodziewana cena modelu, który szacuje parametr selekcji w istocie równy zeru. To również powód, dla którego cała procedura jest **regułą decyzyjną**, a nie zastąpieniem ważenia modelowaniem selekcji.
+
+::: {.callout-warning title="Zastrzeżenie do wykresu"}
+Oszacowania skorygowane na rysunku 4 przedstawiono bez przedziałów ufności, przez co wyglądają na bardziej precyzyjne, niż są w istocie; oszacowania surowe i ważone niosą wyłącznie błąd losowania, przez co z kolei *one* wyglądają na mniej niepewne, niż są w interesującym nas sensie. W pilotażu niepewność oszacowań skorygowanych pochodzi z bootstrapu warstwowego na puli zaproszonych, a każda kluczowa liczba jest raportowana z przedziałem. Sensem wykresu jest położenie oszacowań względem linii przerywanej, a nie ich precyzja.
+:::
+
+# Odczytanie wyników: drzewo decyzyjne
+
+Produktem tej procedury nie jest jeden skorygowany zbiór danych. Jest nim odczyt — dla każdego pytania z osobna — tego, jak silnie skłonność do odpowiedzi wiąże się z treścią odpowiedzi, co dla programu badawczego jest znacznie użyteczniejsze niż korekta hurtowa. Statystyką podsumowującą jest parametr selekcji $\rho$ — korelacja między skłonnością do odpowiedzi a treścią odpowiedzi.
+
+| Pytanie | $\hat{\rho}$ | $z$ | Werdykt | Narzędzie |
+|:---|---:|---:|:---|:---|
+| Pewny udział w wyborach | `r rho_v("turnout")` | `r rho_z("turnout")` | nieignorowalny | model selekcji |
+| Stygmatyzowana partia | `r rho_v("partyS")` | `r rho_z("partyS")` | nieignorowalny | model selekcji |
+| Indeks mniejszościowy | `r rho_v("minor")` | `r rho_z("minor")` | nieignorowalny | model selekcji |
+| Normy demokratyczne | `r rho_v("norms")` | `r rho_z("norms")` | nieignorowalny | model selekcji |
+| Członkostwo w UE | `r rho_v("eu")` | `r rho_z("eu")` | ignorowalny | **dalej ważyć** |
+| Palenie papierosów | `r rho_v("smoke")` | `r rho_z("smoke")` | ignorowalny | **dalej ważyć** |
+
+*Oszacowane korelacje selekcja–odpowiedź. Oszacowania skorygowane dla pytań podejrzanych raportujemy jako przedział między specyfikacjami, a nie jako pojedyncze liczby. Tam, gdzie $\hat{\rho} \approx 0$, lepszym narzędziem jest ważenie: model selekcji dodałby szum i — jak pokazał poprzedni rozdział — odrobinę obciążenia.*
+
+Dwie rzeczy są tu łatwiejsze w symulacji niż będą w terenie. Syntetyczne badanie ma 15-punktową różnicę odsetków odpowiedzi i 4000 respondentów, więc werdykty są czyste. Pilotaż będzie miał różnicę rzędu 7–8 punktów i około 2200 respondentów, a przy takiej skali sporo pytań wróci jako nierozstrzygnięte, zamiast trafić do jednej z kolumn. Właśnie dlatego podstawowym produktem pilotażu jest oszacowanie wraz z przedziałem — $\hat{\rho}$ z przedziałem ufności, dla każdego konstruktu — a werdykty są tym, co możemy dopowiedzieć tam, gdzie prerejestrowany test okaże się rozstrzygający.
+
+Warto też zwrócić uwagę na kierunek wnioskowania. O pytaniu mówimy, że "wykazuje nieignorowalny brak odpowiedzi", jeżeli test ramienia z kontrolą zmiennych demograficznych prowadzi do odrzucenia hipotezy zerowej; $\hat{\rho}$ pełni rolę potwierdzającą. Test jest pierwszy, ponieważ jest nieparametryczny i ma poprawny rozmiar, podczas gdy heckmanowskie oszacowania $\rho$ odrzucają zbyt często przy błędnej specyfikacji. Twierdzenie o *ignorowalności* formułujemy zaś afirmatywnie, za pomocą testu równoważności (TOST wobec najmniejszego istotnego efektu ±0,10 SD, a dla pytań binarnych ±3 punkty procentowe), nigdy zaś przez brak istotności. "Nie wykryliśmy problemu" i "możemy zaświadczyć, że nie ma problemu istotnej wielkości" to dwa różne stwierdzenia — i tylko drugie jest cokolwiek warte dla programu badawczego.
+
+# Co to oznacza dla polaryzacji
+
+Jeden z wyników amerykańskiego zastosowania metody przez Baileya wart jest odtworzenia, bo zmienia sposób czytania znanego nagłówka.
+
+![Sondaże wyolbrzymiają polaryzację: obserwowana różnica sympatii do własnej i przeciwnej partii wśród zwolenników partii wynosi `r pol("Observed poll")` punktu wobec prawdziwej różnicy `r pol("Truth")`.](figs/pl/fig5_polarization.png){#fig-pol width=78%}
+
+Zaangażowani zwolennicy partii chętniej biorą udział w badaniach *i* są bardziej niechętni drugiej stronie. Oba obozy są więc reprezentowane w danych przez swoich bardziej bojowych przedstawicieli, a dzieląca je różnica zostaje zawyżona — tutaj o `r pl(round(key$pol$gap[key$pol$estimator=="Observed poll"] - key$pol$gap[key$pol$estimator=="Truth"], 1), 1)` punktu na skali stupunktowej, przy czym raking usuwa z tego niemal nic (`r pol("Raked poll")` po ważeniu), a model selekcji odtwarza `r pol("Heckman (instrument)")`.
+
+Szersza lekcja dotyczy tego, co to obciążenie robi z porównaniami **wewnątrz podgrup**. Wielkość może być nieobciążona w całej próbie, a jednocześnie mocno obciążona w każdej z porównywanych grup, jeśli obciążenia biegną w przeciwnych kierunkach i przypadkiem się znoszą. Bailey znalazł dokładnie to przy poparciu dla Trumpa: zagregowana wartość wyglądała poprawnie, podczas gdy odpowiadający Demokraci byli bardziej antytrumpowscy niż typowi Demokraci, a odpowiadający Republikanie bardziej protrumpowscy niż typowi Republikanie. Każda analiza sięgająca *wewnątrz* elektoratów partyjnych — czyli większość tego, co politolodzy robią z danymi sondażowymi — dziedziczy problem, który liczby zagregowane skrywają.
+
+# Od demonstracji do pilotażu FRBN
+
+## Co faktycznie zrealizujemy
+
+| | |
+|:---|:---|
+| **Finansowanie** | Fundusz Rozwoju Badań Naukowych Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C; 21 000 zł netto, wyłącznie realizacja terenowa |
+| **Zespół** | Ben Stanley (kierownik), Mikołaj Cześnik, Marta Żerkowska-Balas |
+| **Projekt badania** | Jedno ogólnopolskie badanie CAWI, ok. 10–12 minut, w panelu internetowym; pula ok. 18 500 osób wylosowana z góry i podzielona losowo w proporcji 42/58 na ramię A (zaproszenie i trzy przypomnienia, dni 0/3/7/11) oraz ramię B (jedno zaproszenie, nic więcej). Proporcja jest nierówna, bo ramię B wymaga mniej więcej dwukrotnie większej liczby zaproszeń, by dać tyle samo wywiadów, a szacowaną wielkością jest różnica między ramionami |
+| **Cel realizacyjny** | ok. 2000 zrealizowanych wywiadów (ok. 1200 w ramieniu A, ok. 800 w B), każdy oznaczony ramieniem i falą przypomnienia |
+| **Okno realizacji** | 14 dni, koniec października – początek listopada 2026, zamknięcie przed 11 listopada |
+| **Kwestionariusz** | Brzmienia pytań z PGSW/CSES/EVS: zaangażowanie, frekwencja i głosowanie (w tym deklaracje retrospektywne: Sejm 2023 i prezydenckie 2025), termometry sympatii do partii i liderów, postawy wobec mniejszości, normy demokratyczne oraz pytania kontrolne i zachowania z punktem odniesienia |
+| **Prerejestracja** | Hipotezy, plan analizy, reguły decyzyjne i procedury awaryjne zamrożone na OSF przed startem badania głównego |
+| **Etyka** | Komisja ds. Etyki Badań Naukowych Uniwersytetu SWPS; ramię lekkie zmniejsza obciążenie kontaktowe wobec standardu branżowego |
+
+*Pilotaż w jednej tabeli. Budżet pokrywa wyłącznie realizację terenową; projekt badania, analiza i raportowanie wykonywane są własnymi siłami.*
+
+## Co rzeczywiste badanie ma, a czego symulacja nie miała
+
+**Zewnętrzne punkty odniesienia.** Symulacja mogła sprawdzić swoje odpowiedzi wobec znanej prawdy. Pilotaż konfrontuje część pytań z danymi urzędowymi: deklarowaną frekwencję i głosowanie w wyborach do Sejmu 2023 oraz w wyborach prezydenckich 2025 z wynikami PKW; palenie papierosów i posiadanie prawa jazdy z GUS/EHIS; praktyki religijne z CBOS/ISKK. Wartości te potwierdzają kierunek i rząd wielkości, a nie dokładność co do miejsca po przecinku — błąd pamięci jest realny — ale korekta, która przesuwa deklarowaną frekwencję w stronę danych PKW, robi coś widocznego i sprawdzalnego.
+
+**Pięciostopniowy gradient skłonności bez dodatkowych kosztów.** Wewnątrz ramienia A fala przypomnienia, po której dana osoba wypełniła ankietę (0, 1, 2, 3), jest stopniowalną, wynikającą z protokołu miarą niechęci. W połączeniu z ramieniem B daje to pięć uporządkowanych poziomów skłonności zamiast dwóch, co pozwala testować trend i zabezpiecza przed niemonotonicznością — jednym ze znanych sposobów, w jakie ten projekt może zawieść. Daje też czysty test placebo: respondenci z ramienia B i respondenci z fali 0 w ramieniu A otrzymali w momencie wypełniania identyczny bodziec, więc jakakolwiek różnica między nimi sygnalizowałaby usterkę instrumentu.
+
+**Projekt zwymiarowany symulacją, a nie wzorem.** Całą analizę zbudowaliśmy i uruchomiliśmy na danych syntetycznych, zanim pojawiły się dane rzeczywiste — i stąd właśnie wzięły się trzy przypomnienia w protokole kontaktu zamiast dwóch. Przy dwóch symulowana różnica odsetków odpowiedzi wynosiła około 5 punktów, a przy takiej różnicy testy konfirmacyjne wykrywały spodziewane efekty mniej więcej raz na dziesięć prób: różnica między ramionami zależy od tego, jak bardzo różni się ich skład, a 5 punktów zmienia ten skład bardzo nieznacznie. Zwiększanie próby nie jest tu lekarstwem — moc rośnie z pierwiastkiem z n, a budżet jest stały; różnicę odsetków kontroluje natomiast sam protokół. To samo ćwiczenie przebudowało projekt części konfirmacyjnej: cztery konstrukty zamiast trzynastu pytań, testy jednostronne w prerejestrowanym kierunku i łączny test dla całej rodziny hipotez jako główne twierdzenie. Razem zmiany te przesuwają pilotaż z wykrywania poszukiwanych efektów mniej więcej raz na dziesięć prób do mniej więcej dwóch razy na trzy, przy teście łącznym bliskim pewności. Dwie trzecie to wciąż mniej, niż chciałoby się mieć w badaniu rozstrzygającym — i dlatego pilotaż raportuje oszacowania z przedziałami, a nie werdykty.
+
+**Uczciwe ograniczenia.** Symulacja ma 15-punktową różnicę odsetków odpowiedzi, poprawnie wyspecyfikowane rozkłady składników losowych i znaną populację. Pilotaż będzie miał różnicę mniejszą, możliwą błędną specyfikację modelu i co najwyżej przybliżone punkty odniesienia. Właśnie dlatego podstawowe wnioskowanie opiera się na nieparametrycznym teście ramienia, a nie na modelach; dlatego modele kopulowe wyznaczają przedział wokół oszacowania Heckmana, zamiast je rozstrzygać; i dlatego w materiale uzupełniającym znajdą się granice Manskiego oraz analizy wrażliwości.
+
+## Główne ryzyka i to, co je amortyzuje
+
+| Ryzyko | Sposób ograniczenia |
+|:---|:---|
+| Zbyt mały przyrost z przypomnień — słaby instrument | Przyrost realizacji fala po fali jest wymaganiem obowiązkowym w zapytaniu ofertowym; miękki start z progiem ustawionym na mocy testu, a nie na poprawności instrumentu; czwarte przypomnienie w ramieniu A bez dodatkowego wynagrodzenia na mocy klauzuli eskalacji; test gradientowy pozostaje informacyjny |
+| Agencja nie potrafi realizować badania na zaproszenia albo oznaczać ramion | Kryterium dopuszczające w zapytaniu ofertowym; rekrutacja routerowa i linki otwarte dyskwalifikują ofertę, bo bez ustalonej puli zaproszonych nie ma mianownika ani kontrolowanego protokołu |
+| Brak danych jednostkowych o nierespondentach (RODO) | Zbiorcze tabele krzyżowe puli zaproszonych wymagane umownie; metoda pseudonierespondentów odtwarza rozkład ich cech z rozkładów brzegowych |
+| Niestabilność modeli selekcji przy części pytań | Podstawowe wnioskowanie nigdy od nich nie zależy; diagnostyka współliniowości raportowana rutynowo; brak zbieżności dokumentowany, a nie ukrywany |
+| Realizacja zbiega się ze wstrząsem politycznym | Krótkie okno; znaczniki czasu wypełnienia; efekty stałe dnia realizacji jako test odporności; placebo z falą 0 |
+| Podejrzenie o swobodę decyzyjną badacza | Zamrożona prerejestracja, korekta Benjaminiego–Hochberga w rodzinie hipotez konfirmacyjnych, afirmatywne testy równoważności dla twierdzeń o braku efektu oraz pełne udostępnienie kodu i danych |
+
+*Rejestr ryzyk (skrócony, za dokumentem projektowym).*
+
+## Co z tego powstanie
+
+1. **Raport metodologiczny po polsku** dla SWPS i FRBN, wraz ze streszczeniem napisanym dla dziennikarzy pracujących z sondażami: dla każdego pytania — jak silnie skłonność do odpowiedzi wiąże się z jej treścią, wraz z uczciwym przedziałem; które pytania potrafimy wskazać jako zniekształcone; i czego ważenie naprawić nie potrafi.
+2. **Manuskrypt artykułu po angielsku**, kierowany do *Public Opinion Quarterly*, a następnie do *Survey Research Methods* lub *IJPOR*. Atutami są: pierwsze systematyczne zastosowanie randomizowanego instrumentu odpowiedzi w panelu z Europy Środkowo-Wschodniej, walidacja wobec zewnętrznych punktów odniesienia oraz dowody na "lustrzane" obciążenia partyjne poza amerykańskim kontekstem dwupartyjnym.
+3. **Publiczne repozytorium**: projekt R z zamrożonym `renv`, potok `targets`, pakiet symulacyjny, na którym oparty jest ten tekst, zanonimizowane dane, kwestionariusz po polsku i angielsku, wzór załącznika do umowy z agencją oraz krok po kroku opisany przewodnik wdrożeniowy ("jak dodać ramię lekkiego kontaktu do własnego badania CAWI").
+4. **Warsztat** dla zespołu PGSW i pracowników CSD, z konkretną propozycją ramienia lekkiego kontaktu w kolejnej komponencie CAWI PGSW i modelem kosztowym z tego pilotażu.
+5. **Dźwignia grantowa**: oszacowania wielkości efektów i sprawdzony protokół pod wniosek NCN OPUS w pełnej skali oraz argument pozycjonujący CSD w konkursach infrastrukturalnych Horyzontu Europa.
+
+## Po co to wszystko, w jednym akapicie
+
+Zamiast zakładać, że osoby ignorujące nasze sondaże myślą tak samo jak te, które na nie odpowiadają, przeprowadzamy wewnątrz badania mały eksperyment z randomizacją, który mierzy — pytanie po pytaniu — na ile to założenie się trzyma, i naprawia liczby tam, gdzie się nie trzyma. Diagnostyka kosztuje niemal nic, bo losuje parametr realizacji terenowej, którym agencje i tak manipulują. Produktem nie jest skorygowany zbiór danych. Są nim oszacowania: dla każdego konstruktu — jak silnie skłonność do udziału wiąże się z treścią odpowiedzi, wraz z przedziałem; wskazanie tych pytań, przy których związek ten jest na tyle wyraźny, że da się go wykazać; protokół, który inne polskie badania mogą do siebie dołączyć; oraz wielkości efektów potrzebne do tego, by badanie w pełnej skali miało odpowiednią moc. Pilotaż na 2200 respondentach nie rozstrzygnie wszystkich pytań, które stawia — jak pokazuje symulacja, część wróci jako nierozstrzygnięte — ale powie, jak duży jest problem i czego wymagałoby jego porządne zmierzenie. I po to właśnie robi się pilotaż.
+
+# Słowniczek
+
+**Nieignorowalny brak odpowiedzi** — brak odpowiedzi, którego wzorzec zależy od treści odpowiedzi, jakiej dana osoba by udzieliła, przy kontroli cech obserwowanych; równoważnie $\rho \neq 0$. Ważenie nie potrafi go ani wykryć, ani naprawić.
+
+**Randomizowany instrument odpowiedzi** — losowo przydzielone oddziaływanie, które zmienia prawdopodobieństwo udzielenia odpowiedzi, nie zmieniając odpowiedzi tych, którzy jej udzielają. Tutaj: intensywność kontaktu.
+
+**Warunek włączenia** — wymóg, by instrument wyraźnie zmieniał prawdopodobieństwo odpowiedzi. Sprawdzany równaniem odpowiedzi pierwszego stopnia.
+
+**Warunek wyłączenia** — wymóg, by instrument nie wpływał bezpośrednio na treść odpowiedzi. Gwarantowany w wartości oczekiwanej przez randomizację; w praktyce chroniony krótkim oknem realizacji, symetryczną gratyfikacją i testem placebo.
+
+**Raking** — iteracyjne dopasowanie wag do rozkładów brzegowych w populacji; konwencjonalna praktyka polska i punkt odniesienia, który ten projekt poddaje sprawdzeniu.
+
+**Model selekcji (Heckmana)** — model dwóch równań, szacujący łącznie udział w badaniu i zmienną wynikową, z parametrem korelacji $\rho$ między ich składnikami losowymi. Przy poprawnym instrumencie w równaniu udziału pozwala ekstrapolować na nierespondentów.
+
+**TOST (dwa jednostronne testy)** — testowanie równoważności: procedura pozwalająca *stwierdzić*, że efekt jest mniejszy od zadanego progu, zamiast jedynie nie wykryć efektu.
+
+**Granice Manskiego** — wolne od założeń granice wielkości populacyjnej przy danym odsetku odpowiedzi; z konstrukcji szerokie i przypominające, co same dane są w stanie unieść.
+
+# Bibliografia
+
+Bailey, M. A. (2024). *Polling at a Crossroads: Rethinking Modern Survey Research*. Cambridge University Press. (rozdz. 5–12)
+
+Heckman, J. J. (1979). Sample selection bias as a specification error. *Econometrica*, 47(1), 153–161.
+
+Meng, X.-L. (2018). Statistical paradises and paradoxes in big data (I): law of large populations, big data paradox, and the 2016 US presidential election. *Annals of Applied Statistics*, 12(2), 685–726.
+
+Peress, M. (2010). Correcting for survey nonresponse using variable response propensity. *Journal of the American Statistical Association*, 105(492), 1418–1430.
+
+Sun, B., Liu, L., Miao, W., Wirth, K., Robins, J., & Tchetgen Tchetgen, E. J. (2018). Semiparametric estimation with data missing not at random using an instrumental variable. *Statistica Sinica*, 28, 1965–1983.
+
+---
+
+*Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C).*

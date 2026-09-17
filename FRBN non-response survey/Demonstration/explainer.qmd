@@ -1,0 +1,410 @@
+---
+title: "Who answers the pollster?"
+subtitle: "Diagnosing non-ignorable nonresponse with a randomised response instrument — a guided walkthrough of the FRBN pilot"
+author: "Ben Stanley (SWPS University, Centre for the Study of Democracy)"
+date: last-modified
+date-format: "D MMMM YYYY"
+lang: en
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.2cm
+      y: 2cm
+    fontsize: 10pt
+    mainfont: "Minion 3"
+    section-numbering: "1.1"
+    toc: true
+    toc-title: "Contents"
+    toc-depth: 2
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+key <- readRDS("output/key_numbers.rds")
+est <- key$est
+dig <- function(item) ifelse(item %in% c("minor", "norms"), 2, 1)
+
+# point estimate for an item/estimator, in display units
+g <- function(item, estimator) {
+  v <- est$est_u[est$item == item & est$estimator == estimator]
+  round(v[1], dig(item))
+}
+# signed error of an estimator against the truth, formatted with a sign
+err <- function(item, estimator) {
+  d <- round(g(item, estimator) - g(item, "Truth"), dig(item))
+  sprintf(
+    "%s%s",
+    ifelse(d > 0, "+", ifelse(d < 0, "−", "")),
+    formatC(abs(d), format = "f", digits = dig(item))
+  )
+}
+# formatted point estimate, fixed decimals
+gf <- function(item, estimator) {
+  formatC(g(item, estimator), format = "f", digits = dig(item))
+}
+# signed, formatted diagnostic estimate and its SE
+sgn <- function(x, d) {
+  sprintf(
+    "%s%s",
+    ifelse(x > 0, "+", ifelse(x < 0, "\u2212", "")),
+    formatC(abs(x), format = "f", digits = d)
+  )
+}
+dgf <- function(item) sgn(key$diag$est_u[key$diag$item == item], dig(item))
+dgsef <- function(item) {
+  formatC(key$diag$se_u[key$diag$item == item], format = "f", digits = 2)
+}
+# minus-sign-only formatter (no leading "+")
+mn <- function(x, d) {
+  sprintf(
+    "%s%s",
+    ifelse(x < 0, "\u2212", ""),
+    formatC(abs(x), format = "f", digits = d)
+  )
+}
+rho_v <- function(item) mn(key$rho$rho[key$rho$item == item], 2)
+rho_z <- function(item) mn(key$rho$z[key$rho$item == item], 1)
+dg_v <- function(item) {
+  round(
+    key$diag$est_u[key$diag$item == item],
+    ifelse(item %in% c("minor", "norms"), 2, 1)
+  )
+}
+dg_se <- function(item) {
+  round(
+    key$diag$se_u[key$diag$item == item],
+    ifelse(item %in% c("minor", "norms"), 2, 1)
+  )
+}
+dg_p <- function(item) {
+  p <- key$diag$p[key$diag$item == item]
+  if (p < 0.001) "< 0.001" else formatC(p, format = "f", digits = 3)
+}
+pol <- function(estimator) round(key$pol$gap[key$pol$estimator == estimator], 1)
+rr <- function(arm) round(100 * key[[paste0("rr_", arm)]], 1)
+nn <- function(arm) format(key[[paste0("n_", arm)]], big.mark = ",")
+```
+
+*Prepared for colleagues at the Centre for the Study of Democracy and the PGSW team. It explains what the FRBN pilot (decision no. 67/2026/FRBN/C) is trying to do and why, using a synthetic demonstration in which the right answer is known. The figures and numbers below come from that simulation, not from real Polish data: they show what the method can do, not what we have found. Project team: Ben Stanley (PI), Mikołaj Cześnik, Marta Żerkowska-Balas.*
+
+# The problem we are trying to solve
+
+## Surveys now hear from almost nobody
+
+Almost everything we claim to know about Polish public opinion — turnout expectations, party support, attitudes towards minorities, commitment to democratic norms — is produced by surveys in which the overwhelming majority of the people invited never answer. In a typical Polish online (CAWI) panel study, fewer than one invitee in ten completes the questionnaire. Everything we report comes from the minority who *chose* to take part.
+
+The standard repair is **weighting**: the sample is adjusted until its composition matches the population on age, gender, education and place of residence. Raking, post-stratification and calibration are all versions of the same move. This works, and it is indispensable — but it rests on an assumption that is rarely stated as plainly as it deserves:
+
+> A respondent is interchangeable with the non-respondents who share their demographic profile. Once the demographics match, the people who answered tell us what the people who did not would have said.
+
+For many questions this is roughly true. For some — and often exactly the ones political scientists care about — it is not.
+
+## When the assumption fails
+
+Willingness to answer a political survey is not randomly distributed. The politically engaged enjoy political surveys and also vote more often. People who distrust institutions, or who suspect their views are frowned upon, quietly disappear from the sample and also hold distinctive opinions. In these cases *the answer itself is linked to the willingness to give it*.
+
+This is **non-ignorable nonresponse**: the propensity to respond, $R^*$, is correlated with the outcome $Y$, conditional on everything we observe. Demographic weighting cannot detect it and cannot repair it, because the missing people differ in their *opinions*, not just in their age or education. The correction is applied along the dimensions we can see; the damage is along a dimension we cannot.
+
+## Why low response rates make this dangerous rather than merely untidy
+
+A useful piece of arithmetic (Meng 2018; Bailey 2024, ch. 5) decomposes the error of a survey mean under random contact into three factors:
+
+$$\text{error} \;=\; \underbrace{\rho}_{\text{selection--outcome correlation}} \times \underbrace{\sqrt{\frac{1-p_r}{p_r}}}_{\text{response-rate penalty}} \times \underbrace{\sigma_Y}_{\text{variability of the answer}}$$
+
+The middle term is what has changed. At a 50% response rate it equals 1. At 10% it is 3. At 5% it is 4.4. A correlation between response and answer that would have been a rounding error in 1980 is now a multi-point bias — and, crucially, **sample size does not help**: the penalty depends on the response *rate*, not on the number of completes. A bigger biased sample is a more confidently wrong sample.
+
+Two consequences follow, and they structure the whole project:
+
+1. Whether $\rho \neq 0$ is an **empirical, item-specific question**. It is not a property of a survey, or of a panel, or of a mode; it is a property of each individual question. Turnout may be badly contaminated while support for EU membership is clean.
+2. Because $\rho$ involves the unobserved non-respondents, it cannot be estimated from an ordinary survey at all. It has to be **designed for**.
+
+# Bailey's solution: design the survey so the bias leaves a fingerprint
+
+The project implements the framework in Michael Bailey's *Polling at a Crossroads* (Cambridge University Press, 2024), especially chapters 8–12.
+
+## The queue
+
+Think of everyone invited to a survey as standing in a queue ordered by eagerness to take part. A survey with a low response rate hears only from the front of the queue. A survey that pushes harder — reminders, encouragement, a longer field period — reaches further back and picks up more reluctant people as well.
+
+Now run the same survey two ways at once. Randomly assign half the invitees to a **light-contact protocol** (one invitation, then silence) and half to the **intensive protocol** (invitation plus reminders). The light arm captures only the eager front of the queue. The standard arm captures the eager *plus* a slice of the reluctant. Compare their answers, question by question:
+
+- **Same answers in both arms** → the reluctant resemble the eager, which is evidence that the never-answering resemble both. Nonresponse is ignorable for that item and ordinary weighting is trustworthy.
+- **Different answers** → willingness to respond is linked to the answer itself. The published figure is skewed, and weighting will not rescue it.
+
+Because arm assignment is a coin flip, any difference between the arms cannot be attributed to the two groups being different kinds of people to begin with. That is what makes the nudge a **randomised response instrument**: a randomly assigned intervention that changes *whether* people respond without changing *what they think*.
+
+Formally the instrument $Z$ must satisfy two conditions:
+
+- **Inclusion**: $Z$ moves the probability of responding, and moves it hard. A weak instrument makes everything downstream useless.
+- **Exclusion**: $Z$ does not affect the answers of those who respond. Randomisation guarantees this in expectation; what we do to protect it in practice is set out in the design section below.
+
+## From diagnosis to repair
+
+Once we can see how answers shift as the sample reaches deeper into the queue, selection models (Heckman 1979 and its descendants) can extrapolate that shift to the people who never answered and produce corrected estimates. Bailey's argument is that these models acquired a bad reputation not because the mathematics is wrong but because they were routinely fed data containing no instrument — identification then rests entirely on functional form. Give them a genuine randomised instrument and they behave. In Rubin's phrase, which Bailey adopts as a motto: **design trumps analysis**.
+
+# The demonstration: a synthetic Poland
+
+Everything in sections 4 to 8 comes from a simulation, for one reason: in a simulation we know the truth. We can therefore check not only that the diagnostic fires, but that the corrected estimates land where they should. The code is in `R/01_simulate.R` and `R/02_analyze.R`; the seed is 67, after the FRBN decision number.
+
+## The synthetic world
+
+We create a population of 100,000 adults with realistic demographics (sex, age, education, settlement size). Two **unobserved** traits then drive both survey response and some of the answers:
+
+- **political engagement** — raises the probability of responding; raises turnout, pro-minority and pro-democratic answers;
+- **institutional trust** — raises the probability of responding; lowers support for a stigmatised anti-establishment party.
+
+Six survey items are constructed, four of which are contaminated by construction and two of which are clean:
+
+| Item | Depends on the hidden traits? | Designed verdict |
+|:---|:---|:---|
+| Certain to vote | engagement ↑ | non-ignorable — overstated in polls |
+| Stigmatised party | trust ↓ | non-ignorable — understated |
+| Pro-minority index | engagement + trust ↑ | non-ignorable — overstated |
+| Democratic norms | engagement + trust ↑ | non-ignorable — overstated |
+| EU membership | demographics only | **ignorable** — weighting works |
+| Smoking | demographics only | **ignorable** — weighting works |
+
+*Items in the synthetic world. The two controls are the honest half of the exercise: a diagnostic that fires on everything is not a diagnostic.*
+
+We then invite 30,000 randomly chosen people to a survey and split the invitation list 50/50 at random into the two contact protocols.
+
+## What selection on an unobserved trait looks like
+
+@fig-fish shows the thing we normally cannot see. Each dot is one invitee. The horizontal axis is their (latent) eagerness to respond; the vertical axis is their answer on the pro-minority index. The red dots responded; the grey dots did not. In a real survey the grey dots are invisible — we observe only the red ones and their mean.
+
+![Respondents are a tilted slice of the invited. The answer rises with eagerness to respond, so the respondent mean sits well above the population mean — and no demographic weight can see the horizontal axis.](figs/fig2_tilted_fish.png){#fig-fish width=92%}
+
+Because the cloud is tilted, taking the mean of the red dots does not recover the mean of all dots: the respondent mean is `r gf("minor","Observed")` against a true value of `r gf("minor","Truth")`. The tilt is the entire problem. If the cloud were flat — if the answer had nothing to do with eagerness — the respondent mean would be unbiased and nothing in this document would be necessary. That is precisely the case of the two control items.
+
+Note what weighting can and cannot do here. Weighting operates on the *observed* axes (age, education, settlement). The tilt lives on an axis that appears in no dataset. Weighting will faithfully repair any imbalance it can see and leave this one untouched.
+
+# The design: randomise the contact protocol
+
+| | **Arm A — standard contact** | **Arm B — light contact** |
+|:---|:---|:---|
+| Invitation | day 0 | day 0 |
+| Reminders | days 3, 7 and 11 | none |
+| Incentive, questionnaire, field window | identical | identical |
+| Response rate (synthetic) | `r rr("A")`% | `r rr("B")`% |
+| Completes (synthetic) | `r nn("A")` | `r nn("B")` |
+| Who is in it | eager **and** reluctant types | only the most eager types |
+
+*The two arms differ in exactly one respect — how hard the survey pushes. Everything a respondent sees on screen is the same. The reminder schedule is the pilot's; the response rates are the synthetic demonstration's, which uses a deliberately stronger instrument (see the note in the next section).*
+
+Two features of this design are worth dwelling on, because they are what make it cheap and plausible.
+
+First, **nothing unusual is being done to anyone**. Arm A is the agency's business-as-usual protocol. Arm B receives *fewer* contacts than standard practice, which is why the ethics case is straightforward: the experimental treatment reduces burden rather than adding it.
+
+Second, **the manipulation is a fieldwork parameter, not a research instrument**. Agencies vary reminder schedules all the time. What is new is randomising it deliberately, tagging every completed interview with its arm, and analysing the result. The marginal cost over a conventional survey is close to zero — arm B is actually cheaper to field.
+
+# Step 1: does the instrument work?
+
+The inclusion condition is not an assumption; it is something to be checked first, before anything else is interpreted.
+
+![The instrument works: randomly assigned contact intensity moves the response rate by 15 percentage points.](figs/fig1_response_rates.png){#fig-rr width=78%}
+
+In the simulation the standard arm returns `r rr("A")`% and the light arm `r rr("B")`%, a gap of `r round(rr("A") - rr("B"), 1)` percentage points, with a first-stage $z$ statistic on the arm coefficient of `r round(key$fs_z, 0)`. The instrument is strong.
+
+::: {.callout-important title="The synthetic instrument is deliberately stronger than the one we expect in the field"}
+A 15-point gap is generous. Realistic Polish access-panel figures are more like 7–9% for a single invitation and 14–17% with three reminders — a gap of perhaps 6–8 points. The pilot is sized for those numbers, and the sizing was done by simulating this design rather than by formula. A soft launch checks the lift before the main launch against a threshold set on *power* rather than on instrument validity: at least 7 points and we proceed, 5 to 7 and we proceed while saying what it costs, below 5 and a fourth reminder is added in arm A under the contract's escalation clause. The simulation exaggerates the instrument in order to make the mechanism legible; it does not assume it away.
+:::
+
+# Step 2: the diagnostic test
+
+For each item we regress the answer on the arm indicator **plus the full set of demographic covariates**, among respondents only:
+
+$$Y_i \;=\; \alpha + \beta Z_i + X_i'\gamma + \varepsilon_i \qquad \text{(Bailey eq. 10.6)}$$
+
+where $Z = 1$ for the light-contact arm. The null hypothesis is $\beta = 0$: eager-only respondents answer the same as the broader pool. Rejecting it is direct evidence that response propensity and the answer are linked.
+
+![The diagnostic fires on exactly the four items that are contaminated by construction, and on neither control. Binary items in percentage points, indices in standard-deviation units; 95% confidence intervals.](figs/fig3_diagnostic.png){#fig-diag width=100%}
+
+| Item | Arm B effect | SE | $p$ | Designed to be |
+|:---|---:|---:|---:|:---|
+| Certain to vote | `r dgf("turnout")` pp | `r dgsef("turnout")` | `r dg_p("turnout")` | non-ignorable |
+| Stigmatised party | `r dgf("partyS")` pp | `r dgsef("partyS")` | `r dg_p("partyS")` | non-ignorable |
+| Pro-minority index | `r dgf("minor")` SD | `r dgsef("minor")` | `r dg_p("minor")` | non-ignorable |
+| Democratic norms | `r dgf("norms")` SD | `r dgsef("norms")` | `r dg_p("norms")` | non-ignorable |
+| EU membership | `r dgf("eu")` pp | `r dgsef("eu")` | `r dg_p("eu")` | control (null) |
+| Smoking | `r dgf("smoke")` pp | `r dgsef("smoke")` | `r dg_p("smoke")` | control (null) |
+
+*The diagnostic test in the synthetic data. Light-contact respondents — the eager front of the queue — report more turnout, less support for the stigmatised party and more progressive attitudes. The controls sit on zero.*
+
+The signs are the ones the queue logic predicts. Arm B contains a purer concentration of eager, engaged, trusting respondents, so it overstates turnout even relative to the already-overstated standard arm, and understates support for the party whose supporters distrust institutions.
+
+::: {.callout-note title="Why the covariates are not optional"}
+The bivariate version of this test — regressing $Y$ on $Z$ alone — has a catastrophic false-positive rate (Bailey, fig. 11.4). Arm assignment is random among *invitees*, but not among *respondents*: conditioning on response induces a correlation between the arm and the demographics, and thus with anything the demographics predict. Adding $X$ restores the correct size of the test (about 5%). This is the single most common way to get this design wrong, and it is why the covariate set is fixed in the pre-registration rather than chosen afterwards.
+:::
+
+# Step 3: weighting does not rescue the flagged items
+
+This is the load-bearing demonstration. We rake the respondent sample to the true population margins on sex, age group, education and settlement size — a textbook-perfect version of what Polish agencies do, using the actual population values rather than estimates of them.
+
+| Item | Truth | Observed | Raked | Error after raking |
+|:---|---:|---:|---:|---:|
+| Certain to vote | `r gf("turnout","Truth")`% | `r gf("turnout","Observed")`% | `r gf("turnout","Raked (conventional)")`% | **`r err("turnout","Raked (conventional)")` pp** |
+| Stigmatised party | `r gf("partyS","Truth")`% | `r gf("partyS","Observed")`% | `r gf("partyS","Raked (conventional)")`% | **`r err("partyS","Raked (conventional)")` pp** |
+| Pro-minority index | `r gf("minor","Truth")` | `r gf("minor","Observed")` | `r gf("minor","Raked (conventional)")` | **`r err("minor","Raked (conventional)")`** |
+| Democratic norms | `r gf("norms","Truth")` | `r gf("norms","Observed")` | `r gf("norms","Raked (conventional)")` | **`r err("norms","Raked (conventional)")`** |
+| EU membership | `r gf("eu","Truth")`% | `r gf("eu","Observed")`% | `r gf("eu","Raked (conventional)")`% | `r err("eu","Raked (conventional)")` pp |
+| Smoking | `r gf("smoke","Truth")`% | `r gf("smoke","Observed")`% | `r gf("smoke","Raked (conventional)")`% | `r err("smoke","Raked (conventional)")` pp |
+
+*Conventional raking against known population margins. After weighting, the sample matches Poland on every demographic — and the flagged estimates have barely moved.*
+
+Reported turnout is overstated by `r err("turnout","Observed")` percentage points before weighting and by `r err("turnout","Raked (conventional)")` after it. Support for the stigmatised party is understated by `r err("partyS","Observed")` points before weighting and `r err("partyS","Raked (conventional)")` after. The two controls were already accurate and remain accurate.
+
+This is not an argument against weighting. Weighting did its job: it corrected demographic imbalance, and on the items where demographic imbalance was the whole story — the two controls — the answers are right. The argument is that weighting is silent about a second kind of imbalance, and that its silence is easy to mistake for an all-clear.
+
+# Step 4: selection models with the instrument
+
+For the flagged items we fit a Heckman maximum-likelihood selection model: a first-stage response equation estimated on the full invited sample (including those who never answered), with the arm indicator as the excluded instrument, and an outcome equation on the survey answer.
+
+![Observed, raked and selection-corrected estimates against the truth (dashed line). The selection model moves the flagged items most of the way back; on the controls it moves estimates that did not need moving.](figs/fig4_estimators.png){#fig-est width=100%}
+
+```{=typst}
+#pagebreak(weak: true)
+```
+
+| Item | Truth | Observed error | Raked error | Heckman error |
+|:---|---:|---:|---:|---:|
+| Certain to vote | `r gf("turnout","Truth")`% | `r err("turnout","Observed")` | `r err("turnout","Raked (conventional)")` | **`r err("turnout","Heckman (instrument)")`** |
+| Stigmatised party | `r gf("partyS","Truth")`% | `r err("partyS","Observed")` | `r err("partyS","Raked (conventional)")` | **`r err("partyS","Heckman (instrument)")`** |
+| Pro-minority index | `r gf("minor","Truth")` | `r err("minor","Observed")` | `r err("minor","Raked (conventional)")` | **`r err("minor","Heckman (instrument)")`** |
+| Democratic norms | `r gf("norms","Truth")` | `r err("norms","Observed")` | `r err("norms","Raked (conventional)")` | **`r err("norms","Heckman (instrument)")`** |
+| EU membership | `r gf("eu","Truth")`% | `r err("eu","Observed")` | `r err("eu","Raked (conventional)")` | `r err("eu","Heckman (instrument)")` |
+| Smoking | `r gf("smoke","Truth")`% | `r err("smoke","Observed")` | `r err("smoke","Raked (conventional)")` | `r err("smoke","Heckman (instrument)")` |
+
+*Signed error of each estimator against the known truth. Percentage points for binary items, index points for the two indices.*
+
+Three things in that table deserve to be said out loud rather than skated over.
+
+**The correction works where it is needed.** On turnout the error falls from `r err("turnout","Observed")` percentage points to `r err("turnout","Heckman (instrument)")`. On the two indices it falls by roughly three quarters. These are large repairs of large biases, achieved with no information that a real survey could not have had.
+
+**The correction is not surgical.** On support for the stigmatised party the model overshoots: the truth is `r gf("partyS","Truth")`%, the poll says `r gf("partyS","Observed")`%, and the corrected figure is `r gf("partyS","Heckman (instrument)")`% — right direction, roughly right magnitude, and now wrong by `r err("partyS","Heckman (instrument)")` points in the other direction. A corrected estimate is a better estimate, not an exact one, and it should be reported as a range rather than a number. In the pilot this is handled by fitting copula models (`GJRM`) alongside the Heckman reference and presenting the spread across specifications, and by bootstrapping confidence intervals over the invited sample.
+
+**On clean items the correction makes things slightly worse.** EU support drifts `r err("eu","Heckman (instrument)")` percentage points and smoking `r err("smoke","Heckman (instrument)")` away from values that raking had already got right. This is the expected price of a model that is estimating a selection parameter which in truth is zero. It is also the reason the workflow is a *decision procedure* and not a blanket replacement of weighting by selection modelling.
+
+::: {.callout-warning title="A caveat about the figure"}
+The corrected estimates in @fig-est are plotted without confidence intervals, which makes them look more precise than they are; the observed and raked estimates carry sampling error only, which makes *them* look less uncertain than they are in the sense that matters. In the pilot, uncertainty for corrected estimates comes from a stratified bootstrap over the invited sample, and every headline number is reported with an interval. The point of the figure is the location of the estimates relative to the dashed line, not their precision.
+:::
+
+# Reading the results: the decision tree
+
+The output of the workflow is not a single corrected dataset. It is a per-item reading of how far response propensity and the answer are linked, which is far more useful to a survey programme than a blanket correction would be. The selection parameter $\rho$ — the correlation between the propensity to respond and the answer — is the summary statistic.
+
+| Item | $\hat{\rho}$ | $z$ | Verdict | Recommended tool |
+|:---|---:|---:|:---|:---|
+| Certain to vote | `r rho_v("turnout")` | `r rho_z("turnout")` | non-ignorable | selection model |
+| Stigmatised party | `r rho_v("partyS")` | `r rho_z("partyS")` | non-ignorable | selection model |
+| Pro-minority index | `r rho_v("minor")` | `r rho_z("minor")` | non-ignorable | selection model |
+| Democratic norms | `r rho_v("norms")` | `r rho_z("norms")` | non-ignorable | selection model |
+| EU membership | `r rho_v("eu")` | `r rho_z("eu")` | ignorable | **keep weighting** |
+| Smoking | `r rho_v("smoke")` | `r rho_z("smoke")` | ignorable | **keep weighting** |
+
+*Estimated selection–outcome correlations. Corrected estimates for the flagged items are reported as a range across specifications, not as single numbers. Where $\hat{\rho} \approx 0$, weighting is the better tool: a selection model would add noise and, as the previous section showed, a little bias.*
+
+Two things about this table are easier in a simulation than they will be in the field. The synthetic study has a 15-point response gap and 4,000 respondents, so the verdicts are clean. The pilot will have a gap of 7–8 points and about 2,200 respondents, and at that size a good many items will come back indeterminate rather than sorted into one column or the other. That is why the pilot's primary output is the estimate and its interval — $\hat{\rho}$ with a confidence interval, per construct — and the verdicts are what we can say on top of it where a pre-registered test is conclusive.
+
+Note also the direction of the primary claim. An item "shows non-ignorable nonresponse" if the covariate-adjusted arm test rejects; $\hat{\rho}$ corroborates. The test comes first because it is nonparametric and correctly sized, whereas Heckman $\rho$ estimates reject too often under misspecification. And a claim of *ignorability* is made affirmatively, by an equivalence test (TOST against a smallest effect size of interest of ±0.10 SD, or ±3 percentage points for binary items), never by failure to find significance. "We could not detect a problem" and "we can certify there is no problem of substantive size" are different statements, and only the second is worth anything to a survey programme.
+
+# What this means for polarisation
+
+One result from Bailey's US application is worth reproducing because it changes how a familiar headline should be read.
+
+![Polls exaggerate polarisation: the observed in-party/out-party sympathy gap among partisans is `r pol("Observed poll")` points against a true gap of `r pol("Truth")`.](figs/fig5_polarization.png){#fig-pol width=78%}
+
+Engaged partisans are more likely to answer surveys *and* more hostile to the other side. Both camps are therefore represented in the data by their more combative members, and the gap between them is inflated — here by `r round(pol("Observed poll") - pol("Truth"), 1)` points on a 100-point scale, with raking removing almost none of it (`r pol("Raked poll")` after weighting) and the selection model recovering `r pol("Heckman (instrument)")`.
+
+The wider lesson is about what this bias does to *subgroup* comparisons. A quantity can be unbiased in the full sample while being badly biased within each of the groups being compared, if the biases run in opposite directions and happen to cancel. Bailey found exactly this for Trump approval: the aggregate looked fine, while responding Democrats were more anti-Trump than typical Democrats and responding Republicans more pro-Trump than typical Republicans. Any analysis that looks *within* parties — which is most of what political scientists do with survey data — inherits a problem that the aggregate numbers conceal.
+
+# From the demonstration to the FRBN pilot
+
+## What we will actually field
+
+| | |
+|:---|:---|
+| **Funding** | SWPS Research Development Fund (FRBN), decision 67/2026/FRBN/C; 21,000 zł net, fieldwork only |
+| **Team** | Ben Stanley (PI), Mikołaj Cześnik, Marta Żerkowska-Balas |
+| **Design** | One nationwide CAWI survey, ~10–12 minutes, on a Polish access panel; invited pool of about 18,500 pre-drawn, randomised 42/58 into arm A (invitation plus three reminders, days 0/3/7/11) and arm B (one invitation, nothing else). The split is unequal because arm B needs about twice the invitations to yield the same number of interviews, and the estimand is a difference between arms |
+| **Target** | ≈ 2,000 completes (≈ 1,200 arm A, ≈ 800 arm B), each tagged with its arm and reminder wave |
+| **Field window** | 14 days, late October to early November 2026, closing before 11 November |
+| **Questionnaire** | PGSW/CSES/EVS item wordings: engagement, turnout and vote (incl. recalled 2023 Sejm and 2025 presidential), party and leader thermometers, minority attitudes, democratic norms, plus controls and benchmarked behaviours |
+| **Pre-registration** | Hypotheses, analysis plan, decision rules and contingencies frozen on OSF before the main launch |
+| **Ethics** | SWPS Research Ethics Committee; the light arm reduces contact burden relative to standard practice |
+
+*The pilot in one table. Budget covers fieldwork only; all design, analysis and reporting work is done in-house.*
+
+## What the real study has that the simulation does not
+
+**External benchmarks.** The simulation could check its answers against a known truth. The pilot checks a subset of items against official figures: recalled 2023 Sejm turnout and vote shares and recalled 2025 presidential results against PKW; smoking and driving-licence possession against GUS/EHIS; church attendance against CBOS/ISKK. These validate direction and rough magnitude rather than decimal precision — recall error is real — but a correction that moves reported turnout towards the PKW figure is doing something visible and checkable.
+
+**A five-level propensity gradient at no extra cost.** Within arm A, the reminder wave on which each person completed (0, 1, 2, 3) is a graded, protocol-driven measure of reluctance. Combined with arm B this gives five ordered propensity levels rather than two, which supports a trend test and guards against the non-monotonicity that is one of the known failure modes of this design. It also yields a clean placebo: arm B respondents and arm A wave-0 respondents received an identical stimulus at the moment they completed, so any difference between them would indicate something wrong with the instrument.
+
+**A design sized by simulation rather than by formula.** The whole analysis was built and run on synthetic data before any real data existed, which is how the contact protocol came to have three reminders rather than two. With two, the simulated response-rate gap was about 5 points, and at that gap the confirmatory tests detected the effects we expect roughly one time in ten — the arm difference is a function of how much the two arms differ in composition, and a 5-point gap moves composition very little. Sample size is not the remedy: power grows with the square root of n and the budget is fixed, while the gap is something the protocol controls. The same exercise reshaped the confirmatory design — four constructs instead of thirteen items, one-sided tests in the pre-registered direction, and a combined test across the family as the headline claim. Together those changes take the pilot from detecting the effects it is looking for about one time in ten to about two times in three, with the combined test at or near certainty. Two thirds is still short of what one would want from a definitive study, which is why the pilot reports estimates with intervals rather than verdicts.
+
+**Honest limits.** The simulation has a 15-point response gap, correctly specified error distributions and a known population. The pilot will have a smaller gap, possible model misspecification, and at best an approximate benchmark. That is why the primary claim rests on the nonparametric arm test rather than on the models, why copulas bound the Heckman estimate rather than adjudicate it, and why Manski bounds and sensitivity analyses appear in the supplementary material.
+
+## The main risks, and what absorbs them
+
+| Risk | Mitigation |
+|:---|:---|
+| Reminder lift too small — a weak instrument | Wave-by-wave response-rate evidence is a pass/fail tender requirement; soft launch with a go/no-go set on power rather than instrument validity; a fourth reminder in arm A required at no cost under the contract's escalation clause; the gradient test remains informative |
+| Agency cannot field by invitation, or cannot tag arms | Pass/fail criterion in the tender; router-based recruitment and open links disqualify a bid outright, because without a fixed invited pool there is no denominator and no controllable protocol |
+| No individual-level data on non-respondents (GDPR) | Aggregate invited-pool cross-tabs contractually required; the pseudo-non-respondent method reconstructs the non-respondent covariate distribution from the margins |
+| Selection models unstable on some items | The primary claim never depends on them; the multicollinearity diagnostic is reported as a matter of course; non-convergence is documented rather than hidden |
+| Fieldwork collides with a political shock | Short window; completion timestamps; field-day fixed effects as robustness; the wave-0 placebo |
+| Suspicion of researcher degrees of freedom | Frozen pre-registration, Benjamini–Hochberg correction within the confirmatory family, affirmative equivalence tests for null claims, and full release of code and data |
+
+*Risk register (abridged from the project design document).*
+
+## What comes out of it
+
+1. **A methodological report in Polish**, including a summary written for journalists who work with polls: for each item, how strongly response propensity and the answer are linked, with an honest interval around it; which questions we can show are distorted; and what weighting can and cannot fix.
+2. **An article manuscript in English**, targeting *Public Opinion Quarterly* and then *Survey Research Methods* or *IJPOR*. The selling points are the first systematic randomised response instrument in a CEE panel, benchmark validation, and partisan mirror-image evidence outside the US two-party context.
+3. **A public repository**: `renv`-pinned R project, `targets` pipeline, the simulation suite this document is built on, anonymised data, the questionnaire in Polish and English, the agency contract annex, and a step-by-step guide to adding a light-contact arm to an existing CAWI study.
+4. **A workshop** for the PGSW team and CSD staff, with a concrete proposal for a light-contact arm in the next PGSW CAWI component and a cost model taken from this pilot.
+5. **Leverage**: effect sizes and a demonstrated protocol for an NCN OPUS proposal at full scale, and a positioning argument for Horizon Europe survey-infrastructure calls.
+
+## What this is for, in one paragraph
+
+Instead of assuming that the people who ignore our surveys think like the people who answer them, we run a small randomised experiment inside the survey that measures — question by question — how far that assumption holds, and repairs the numbers where it does not. The diagnostic costs almost nothing, because it randomises a fieldwork parameter that agencies vary anyway. The deliverable is not a corrected dataset. It is a set of estimates: for each construct, how strongly the propensity to respond is tied to the answer, with an interval around it; the items where that link is strong enough to demonstrate; a protocol other Polish studies can bolt on; and the effect sizes a full-scale study needs in order to be properly powered. A pilot on 2,200 respondents will not settle every question it raises — on the simulation's evidence some will come back indeterminate — but it will say how big the problem is and what it would take to measure it properly, which is what a pilot is for.
+
+# Glossary
+
+**Non-ignorable nonresponse** — nonresponse whose pattern depends on the answer that would have been given, conditional on observed covariates; equivalently $\rho \neq 0$. Weighting cannot detect or repair it.
+
+**Randomised response instrument** — a randomly assigned intervention that changes the probability of responding without changing the answers of those who respond. Here: contact intensity.
+
+**Inclusion condition** — the requirement that the instrument moves response probability substantially. Checked by the first-stage response regression.
+
+**Exclusion restriction** — the requirement that the instrument does not affect answers directly. Guaranteed in expectation by randomisation; protected in practice by a short field window, symmetric incentives and a placebo comparison.
+
+**Raking** — iterative proportional fitting of survey weights to population margins; the conventional Polish practice, and the benchmark this project tests.
+
+**Selection model (Heckman)** — a two-equation model estimating response and outcome jointly, with a correlation parameter $\rho$ between their error terms. With a valid instrument in the response equation it can extrapolate to non-respondents.
+
+**TOST (two one-sided tests)** — equivalence testing: a procedure for *affirming* that an effect is smaller than a pre-specified threshold, rather than merely failing to detect one.
+
+**Manski bounds** — assumption-free bounds on a population quantity given the observed response rate; wide by construction, and a useful reminder of what the data alone can support.
+
+# References
+
+Bailey, M. A. (2024). *Polling at a Crossroads: Rethinking Modern Survey Research*. Cambridge University Press. (chs. 5–12)
+
+Heckman, J. J. (1979). Sample selection bias as a specification error. *Econometrica*, 47(1), 153–161.
+
+Meng, X.-L. (2018). Statistical paradises and paradoxes in big data (I): law of large populations, big data paradox, and the 2016 US presidential election. *Annals of Applied Statistics*, 12(2), 685–726.
+
+Peress, M. (2010). Correcting for survey nonresponse using variable response propensity. *Journal of the American Statistical Association*, 105(492), 1418–1430.
+
+Sun, B., Liu, L., Miao, W., Wirth, K., Robins, J., & Tchetgen Tchetgen, E. J. (2018). Semiparametric estimation with data missing not at random using an instrumental variable. *Statistica Sinica*, 28, 1965–1983.
+
+---
+
+*Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C).*

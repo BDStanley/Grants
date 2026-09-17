@@ -32,7 +32,7 @@ format:
 | **Okres realizacji projektu** | 7 września 2026 – 16 grudnia 2026 |
 | **Planowany termin badania terenowego** | 26 października – 9 listopada 2026 (14-dniowe okno) |
 | **Typ badania** | Sondaż CAWI z wbudowanym eksperymentem randomizowanym (manipulacja parametrem kontaktu) |
-| **Uczestnicy** | Osoby pełnoletnie, członkowie komercyjnego panelu internetowego; ok. 20 000 zaproszonych, ok. 2 000 wywiadów zrealizowanych |
+| **Uczestnicy** | Osoby pełnoletnie, członkowie komercyjnego panelu internetowego; ok. 18 500 zaproszonych, ok. 2 000 wywiadów zrealizowanych |
 | **Kontakt** | bstanley\@swps.edu.pl |
 
 : {tbl-colwidths="[30,70]"}
@@ -45,14 +45,14 @@ Projekt odpowiada na problem, który w ostatniej dekadzie stał się centralny d
 
 Projekt wdraża w polskim kontekście podejście zaproponowane przez Michaela A. Baileya (*Polling at a Crossroads: Rethinking Modern Survey Research*, Cambridge University Press, 2024). Jego istotą jest **randomizowany instrument odpowiedzi**: losowe zróżnicowanie intensywności kontaktu z zaproszonymi osobami przy całkowicie identycznej treści badania. Zaproszona próba jest dzielona losowo na dwie grupy:
 
-- **Grupa A (kontakt standardowy):** zaproszenie w dniu 0 oraz dwa przypomnienia (dzień 4 i dzień 9) — dokładnie taka procedura, jaką agencje panelowe stosują rutynowo we wszystkich swoich badaniach;
-- **Grupa B (kontakt ograniczony):** wyłącznie zaproszenie w dniu 0, bez żadnych przypomnień.
+- **Grupa A (kontakt intensywny):** zaproszenie w dniu 0 oraz trzy przypomnienia (dzień 3, dzień 7 i dzień 11) — o jedno przypomnienie więcej niż rutynowa praktyka panelowa;
+- **Grupa B (kontakt ograniczony):** wyłącznie zaproszenie w dniu 0, bez żadnych przypomnień — wyraźnie mniej niż rutynowa praktyka panelowa.
 
 Grupa B osiąga niższy wskaźnik realizacji, a zatem obejmuje wyłącznie osoby najbardziej skłonne do udziału; grupa A obejmuje dodatkowo osoby mniej chętne. **Porównanie odpowiedzi między grupami pozwala — pytanie po pytaniu — rozstrzygnąć empirycznie, czy skłonność do odpowiadania wiąże się z treścią odpowiedzi.** Brak różnicy stanowi pozytywny dowód, że dla danego pytania standardowe ważenie jest wystarczające; różnica ujawnia obciążenie, którego ważenie nie usuwa, i pozwala je skorygować przy użyciu modeli selekcji.
 
 Ponieważ o przydziale do grupy decyduje losowanie, różnice między grupami nie mogą wynikać z tego, że tworzą je odmienne kategorie osób. To właśnie randomizacja przekształca przypuszczenie w pomiar.
 
-**Kluczowa uwaga z punktu widzenia oceny etycznej:** manipulacja eksperymentalna dotyczy wyłącznie **liczby przypomnień** — parametru operacyjnego, który agencje badawcze i tak zmieniają rutynowo z badania na badanie, i którego wartość nigdy nie jest komunikowana uczestnikom panelu. Kwestionariusz, treść zaproszenia, gratyfikacja, okno terenowe i wszystkie pozostałe elementy są w obu grupach identyczne. Grupa eksperymentalna (B) otrzymuje **mniej** kontaktów niż standard branżowy, zatem interwencja **zmniejsza** obciążenie uczestników względem praktyki rutynowej.
+**Kluczowa uwaga z punktu widzenia oceny etycznej:** manipulacja eksperymentalna dotyczy wyłącznie **liczby przypomnień** — parametru operacyjnego, który agencje badawcze i tak zmieniają rutynowo z badania na badanie, i którego wartość nigdy nie jest komunikowana uczestnikom panelu. Kwestionariusz, treść zaproszenia, gratyfikacja, okno terenowe i wszystkie pozostałe elementy są w obu grupach identyczne. Rozkład obciążenia kontaktowego jest asymetryczny: mniejsza część zaproszonych (42%) otrzymuje o jedno przypomnienie więcej niż w rutynowym badaniu panelowym, większa (58%) — o dwa mniej. **W skali całego badania oznacza to o około jedną czwartą mniej kontaktów niż w badaniu zrealizowanym konwencjonalnie na próbie tej samej wielkości** (bilans liczbowy przedstawiamy w rozdz. 6.2).
 
 # Cel naukowy i spodziewane korzyści
 
@@ -80,8 +80,8 @@ Ryzyko dla uczestników jest — jak uzasadniamy w rozdziale 6 — minimalne i n
 | Populacja | Dorośli mieszkańcy Polski (18+) |
 | Operat | Komercyjny panel internetowy wybranej agencji badawczej (wyłonionej w procedurze zapytania ofertowego zgodnej z wewnętrznymi zasadami udzielania zamówień Uniwersytetu SWPS) |
 | Sposób doboru | Próba losowa z panelu, prestratyfikowana wg płci × wieku × wykształcenia × regionu |
-| Liczebność zaproszonych | ok. 20 000 osób (ok. 10 000 na grupę) |
-| Liczebność zrealizowanych wywiadów | ok. 2 000 (ok. 1 200 w grupie A, ok. 700–800 w grupie B) |
+| Liczebność zaproszonych | ok. 18 500 osób (ok. 7 800 w grupie A, ok. 10 700 w grupie B) |
+| Liczebność zrealizowanych wywiadów | ok. 2 000 (ok. 1 200 w grupie A, ok. 800 w grupie B) |
 | Kryteria włączenia | Ukończone 18 lat; członkostwo w panelu; wyrażenie zgody na ekranie zgody |
 | Kryteria wyłączenia | Wiek poniżej 18 lat (weryfikacja na ekranie wstępnym — osoby niepełnoletnie nie są zapraszane i nie są dopuszczane do kwestionariusza) |
 | Czas trwania | mediana ≤ 12 minut, ok. 60 pytań |
@@ -99,10 +99,10 @@ Rekrutacja jest prowadzona wyłącznie przez agencję badawczą, w ramach jej st
 
 ## Przebieg
 
-1. Agencja losuje z panelu pulę ok. 20 000 osób, prestratyfikowaną demograficznie.
-2. Pula jest dzielona losowo w proporcji 50/50 na grupę A i grupę B (losowanie wykonane przy użyciu ziarna dostarczonego przez zespół badawczy albo udokumentowane przez agencję w sposób umożliwiający weryfikację).
+1. Agencja losuje z panelu pulę ok. 18 500 osób, prestratyfikowaną demograficznie.
+2. Pula jest dzielona losowo w proporcji 42/58 na grupę A i grupę B (losowanie wykonane przy użyciu ziarna dostarczonego przez zespół badawczy albo udokumentowane przez agencję w sposób umożliwiający weryfikację). Proporcja jest nierówna, ponieważ grupa B osiąga niższy wskaźnik realizacji: zaproszenie do niej większej liczby osób wyrównuje liczbę wywiadów w obu grupach, co jest najkorzystniejsze statystycznie i nie zwiększa łącznej liczby wysyłanych wiadomości.
 3. W dniu 0 wszystkie osoby otrzymują **identyczne** zaproszenie (ten sam nadawca, temat, treść, ten sam link, ta sama informacja o gratyfikacji).
-4. Osoby z grupy A, które nie wypełniły kwestionariusza, otrzymują przypomnienia w dniu ok. 4 i ok. 9. Osoby z grupy B nie otrzymują żadnych przypomnień.
+4. Osoby z grupy A, które nie wypełniły kwestionariusza, otrzymują przypomnienia w dniu ok. 3, ok. 7 i ok. 11. Osoby z grupy B nie otrzymują żadnych przypomnień.
 5. Po kliknięciu w link uczestnik widzi **ekran informacyjny i ekran zgody** (Załącznik A), następnie pytanie weryfikujące pełnoletność, następnie kwestionariusz.
 6. Okno terenowe zamyka się w dniu 14 jednocześnie dla obu grup.
 7. Po zakończeniu kwestionariusza uczestnik widzi ekran podziękowania zawierający **notę informacyjną po badaniu** (Załącznik B) wraz z odnośnikiem do strony projektu.
@@ -142,7 +142,7 @@ Jest to element wniosku wymagający najbardziej szczegółowego uzasadnienia; pr
 
 ## Czym manipulacja jest, a czym nie jest
 
-Manipulacja polega **wyłącznie** na zróżnicowaniu liczby przypomnień wysyłanych do osób, które nie wypełniły kwestionariusza: dwa przypomnienia w grupie A, brak przypomnień w grupie B. Nie manipulujemy:
+Manipulacja polega **wyłącznie** na zróżnicowaniu liczby przypomnień wysyłanych do osób, które nie wypełniły kwestionariusza: trzy przypomnienia w grupie A, brak przypomnień w grupie B. Nie manipulujemy:
 
 - treścią kwestionariusza ani żadnego pytania;
 - treścią, nadawcą ani tonem zaproszenia;
@@ -152,9 +152,28 @@ Manipulacja polega **wyłącznie** na zróżnicowaniu liczby przypomnień wysył
 
 Uczestnik grupy A i uczestnik grupy B widzą **dokładnie to samo badanie**. Jedyna różnica dotyczy osób, które badania nie wypełniły — a więc osób, których dane merytoryczne w ogóle nie powstają.
 
-## Dlaczego interwencja nie zwiększa obciążenia
+## Bilans obciążenia kontaktowego
 
-Standardem branżowym w polskich panelach internetowych jest zaproszenie plus dwa przypomnienia. Grupa A odpowiada zatem dokładnie praktyce rutynowej, której uczestnicy panelu doświadczają w każdym innym badaniu, do którego są zapraszani. Grupa B otrzymuje **mniej** kontaktów niż ten standard. **Żaden uczestnik nie otrzymuje większej liczby kontaktów niż otrzymałby, gdyby projekt nie był realizowany.** Interwencja eksperymentalna ma zatem charakter redukujący obciążenie, nie zaś je zwiększający.
+Standardem branżowym w polskich panelach internetowych jest zaproszenie plus dwa przypomnienia. Przedstawiamy bilans wprost, ponieważ jest asymetryczny i nie chcemy go zacierać: **osoby z grupy A otrzymują o jedno przypomnienie więcej niż w rutynowym badaniu panelowym, osoby z grupy B — o dwa mniej.** Przypomnienia trafiają wyłącznie do osób, które kwestionariusza nie wypełniły; osoba, która wypełni ankietę po zaproszeniu, nie otrzymuje żadnego przypomnienia niezależnie od grupy.
+
+Poniższe liczby pochodzą z symulacji projektu badania przy realistycznych wskaźnikach realizacji (dokumentacja: repozytorium projektu, `Analysis/`):
+
+| | Nasze badanie | To samo badanie zrealizowane konwencjonalnie |
+|:------------------------------|-------------:|--------------------------:|
+| Liczba zaproszonych | 18 500 | 18 500 |
+| Łączna liczba wysłanych wiadomości | ok. 39 000 | ok. 51 900 |
+| Średnio na osobę zaproszoną | 2,11 | 2,80 |
+| Maksymalnie dla jednej osoby | 4 (grupa A) | 3 |
+| Udział osób otrzymujących 1 wiadomość | 58% | 0% |
+
+: {tbl-colwidths="[40,28,32]"}
+
+Wnioski, które z tego wyciągamy i które poddajemy ocenie Komisji:
+
+1. **Łączne obciążenie kontaktowe jest o około 25% niższe** niż w badaniu zrealizowanym konwencjonalnie na próbie tej samej wielkości. Ponad połowa zaproszonych otrzymuje dokładnie jedną wiadomość — sytuację łagodniejszą niż jakiekolwiek inne badanie, do którego zostaną zaproszeni.
+2. **Dla 42% zaproszonych obciążenie jest nieznacznie wyższe niż rutynowe**: jedna dodatkowa wiadomość w czternastodniowym oknie, o tej samej treści i z tą samą możliwością rezygnacji co pozostałe, wysyłana wyłącznie do osób, które na poprzednie nie zareagowały. Nie twierdzimy, że jest to obciążenie zerowe. Twierdzimy, że jest ono minimalne w rozumieniu przepisów o badaniach z minimalnym ryzykiem: nie przekracza uciążliwości, jakiej uczestnik panelu doświadcza w zwykłym toku uczestnictwa, a różnica wobec praktyki rutynowej wynosi jedną wiadomość e-mail.
+3. **Dodatkowe przypomnienie nie jest ozdobnikiem projektu, lecz jego warunkiem.** Symulacyjna analiza mocy wykazała, że przy dwóch przypomnieniach różnica wskaźników realizacji między grupami wynosi około 5 punktów procentowych, a przy takiej różnicy badanie z prawdopodobieństwem ok. 90% nie rozstrzygnęłoby pytania, dla którego zostało zaprojektowane. Trzecie przypomnienie podnosi tę różnicę do ok. 7,6 punktu i moc testów do poziomu użytecznego. Badanie o niewystarczającej mocy obciąża uczestników bez perspektywy korzyści poznawczej — i to właśnie uznalibyśmy za trudne do uzasadnienia etycznie.
+4. **Uwaga o historii projektu badania.** Pierwotny protokół przewidywał dwa przypomnienia w grupie A, a więc dokładnie standard branżowy, i pozwalał stwierdzić, że żaden uczestnik nie otrzymuje większej liczby kontaktów niż w zwykłym badaniu panelowym. Symulacyjna analiza mocy, przeprowadzona przed rozpoczęciem realizacji terenowej, wykazała, że taki protokół nie pozwoliłby odpowiedzieć na pytanie badawcze. Zdecydowaliśmy się na trzecie przypomnienie i na wycofanie powyższego stwierdzenia, zamiast realizować badanie, które obciążałoby uczestników bez szans na rozstrzygnięcie. Przedstawiamy tę zmianę wprost, ponieważ zmienia ona bilans obciążenia i uważamy, że Komisja powinna oceniać protokół w wersji, która zostanie zrealizowana.
 
 ## Zakres niepełnego ujawnienia i jego uzasadnienie
 
@@ -163,7 +182,7 @@ Uczestnicy **nie są informowani przed badaniem**, że liczba przypomnień zosta
 Uzasadnienie:
 
 1. **Konieczność metodologiczna.** Poinformowanie zaproszonych, że liczba przypomnień jest eksperymentalnie zróżnicowana, wpłynęłoby na samo zachowanie będące przedmiotem pomiaru (decyzję o udziale), co unieważniłoby badanie. Nie istnieje alternatywna procedura pozwalająca odpowiedzieć na pytanie badawcze.
-2. **Minimalne ryzyko.** Nieujawniana informacja dotyczy parametru operacyjnego, którego wartość nie jest komunikowana uczestnikom w żadnym badaniu panelowym. Trudno wskazać osobę, której decyzja o udziale zmieniłaby się, gdyby wiedziała, ile przypomnień otrzyma — a jeśli już, to w kierunku obniżającym, nie podwyższającym, komfort uczestnictwa (grupa B jest mniej nagabywana).
+2. **Minimalne ryzyko.** Nieujawniana informacja dotyczy parametru operacyjnego, którego wartość nie jest komunikowana uczestnikom w żadnym badaniu panelowym. Trudno wskazać osobę, której decyzja o udziale zmieniłaby się, gdyby wiedziała, ile przypomnień otrzyma. Dla większości zaproszonych (grupa B) nieujawniony parametr oznacza mniej wiadomości, nie więcej.
 3. **Brak negatywnych konsekwencji.** Nieujawnienie nie naraża uczestnika na dyskomfort, stratę, ryzyko reputacyjne ani na jakąkolwiek zmianę sposobu, w jaki jest traktowany w panelu.
 4. **Debriefing.** Pełna informacja o eksperymentalnym charakterze zróżnicowania kontaktu jest udostępniana **wszystkim uczestnikom po wypełnieniu kwestionariusza**, na ekranie podziękowania (Załącznik B), wraz z adresem strony projektu, na której publikowany będzie raport, oraz z kontaktem do kierownika projektu. Uczestnik może po tej informacji zażądać usunięcia swoich odpowiedzi.
 5. **Zgodność ze standardami.** Procedura jest zgodna z Kodeksem Etyki Pracownika Naukowego PAN oraz ze standardami ESOMAR/WAPOR dotyczącymi badań sondażowych, które traktują zróżnicowanie protokołu kontaktu jako element metodologii pracy terenowej, a nie jako interwencję wobec uczestnika.
@@ -176,9 +195,9 @@ Prosimy Komisję o wyraźne odniesienie się do tego elementu wniosku.
 |:--------------------|:--------|:-------------------------------|
 | Dyskomfort związany z pytaniami o poglądy polityczne, postawy wobec mniejszości, normy demokratyczne | Niski; pytania tego typu są standardem w polskich badaniach opinii (CBOS, PGSW, EVS) i są kierowane do dorosłych wolontariuszy panelowych | Wyłącznie sformułowania już zwalidowane i wcześniej stosowane; jawna opcja "trudno powiedzieć" i "odmowa odpowiedzi"; brak wymuszania odpowiedzi; możliwość przerwania w każdej chwili; informacja o tematyce badania podana przed wyrażeniem zgody |
 | Obciążenie czasowe | Niskie — mediana ≤ 12 minut | Czas podany w zaproszeniu i na ekranie zgody; kwestionariusz testowany pod kątem czasu w miękkim starcie |
-| Uciążliwość przypomnień | Nie przekracza standardu panelowego; w grupie B jest niższa | Maksymalnie dwa przypomnienia (standard branżowy); przypomnienia otrzymują wyłącznie osoby, które nie wypełniły kwestionariusza; każde zawiera standardową panelową możliwość rezygnacji |
-| Ryzyko ujawnienia poglądów politycznych osoby możliwej do zidentyfikowania | Niskie | Zespół otrzymuje wyłącznie dane spseudonimizowane; brak dostępu do danych identyfikujących; region na poziomie NUTS2; wiek w przedziałach w pliku publikowanym; kontrola k-anonimowości przed publikacją danych (rozdz. 9) |
-| Ryzyko związane z przetwarzaniem danych osób, które nie wzięły udziału (paradane) | Umiarkowane — omówione osobno w rozdz. 8.3 | Wyłącznie dane spseudonimizowane i ograniczone do kategorii profilowych już posiadanych przez agencję; wariant awaryjny oparty na danych wyłącznie zagregowanych |
+| Uciążliwość przypomnień | Niska; w grupie A o jedną wiadomość wyższa niż standard panelowy, w grupie B o dwie niższa; łącznie ok. 25% niższa niż w badaniu konwencjonalnym (rozdz. 6.2) | Maksymalnie trzy przypomnienia w oknie 14 dni; przypomnienia otrzymują wyłącznie osoby, które nie wypełniły kwestionariusza; każde zawiera standardową panelową możliwość rezygnacji; treść przypomnień neutralna, bez ponaglania i bez odwołań do zobowiązania |
+| Ryzyko ujawnienia poglądów politycznych osoby możliwej do zidentyfikowania | Niskie | Zespół otrzymuje wyłącznie dane spseudonimizowane; brak dostępu do danych identyfikujących; region na poziomie NUTS2; wiek w przedziałach w pliku publikowanym; kontrola k-anonimowości przed publikacją danych (rozdz. 9.4) |
+| Ryzyko związane z przetwarzaniem danych osób, które nie wzięły udziału (paradane) | Umiarkowane — omówione osobno w rozdz. 9.3 | Wyłącznie dane spseudonimizowane i ograniczone do kategorii profilowych już posiadanych przez agencję; wariant awaryjny oparty na danych wyłącznie zagregowanych |
 | Fałszywe wrażenie, że badanie ocenia indywidualne poglądy uczestnika | Niskie | Nota po badaniu wyjaśnia, że przedmiotem analizy są wzorce zbiorowe, a nie odpowiedzi jednostkowe; brak informacji zwrotnej indywidualnej |
 
 : {tbl-colwidths="[26,17,57]"}
@@ -229,7 +248,7 @@ Zbierane są dane dotyczące poglądów politycznych oraz przekonań światopogl
 
 ## Dane dotyczące osób, które nie wzięły udziału w badaniu
 
-Metodologia wymaga informacji o **całej zaproszonej puli** (ok. 20 000 osób), a nie tylko o uczestnikach: pierwszy stopień modelu selekcji szacowany jest na wszystkich zaproszonych. Zespół wnioskuje o przekazanie przez agencję — **w formie spseudonimizowanej** — następujących danych na poziomie zaproszonego: oznaczenie grupy, identyfikator partii zaproszeń, znaczniki czasowe wysłanych zaproszeń i przypomnień, status realizacji (wypełnione / przerwane / kliknięte / brak reakcji), typ urządzenia oraz **posiadane już przez agencję** zmienne profilowe (płeć, wiek lub przedział wieku, wykształcenie, region NUTS2, wielkość miejscowości, staż w panelu).
+Metodologia wymaga informacji o **całej zaproszonej puli** (ok. 18 500 osób), a nie tylko o uczestnikach: pierwszy stopień modelu selekcji szacowany jest na wszystkich zaproszonych. Zespół wnioskuje o przekazanie przez agencję — **w formie spseudonimizowanej** — następujących danych na poziomie zaproszonego: oznaczenie grupy, identyfikator partii zaproszeń, znaczniki czasowe wysłanych zaproszeń i przypomnień, status realizacji (wypełnione / przerwane / kliknięte / brak reakcji), typ urządzenia oraz **posiadane już przez agencję** zmienne profilowe (płeć, wiek lub przedział wieku, wykształcenie, region NUTS2, wielkość miejscowości, staż w panelu).
 
 Zabezpieczenia:
 
@@ -295,7 +314,7 @@ Kierownik projektu oświadcza, że:
 | A | Ekran informacyjny i ekran zgody (pełna treść, w tym klauzula informacyjna RODO) | Poniżej |
 | B | Nota informacyjna po badaniu (debriefing) | Poniżej |
 | C | Kwestionariusz — pełne brzmienie pytań | Do dołączenia po finalizacji (planowo do 9.10.2026) |
-| D | Treść zaproszenia i przypomnień | Poniżej (wzór) |
+| D | Treść zaproszenia i trzech przypomnień | Poniżej (wzór) |
 | E | Wymogi wobec agencji badawczej w zakresie protokołu kontaktu i przekazania danych (aneks do umowy) | Do dołączenia |
 | F | Decyzja o finansowaniu nr 67/2026/FRBN/C | Do dołączenia |
 
@@ -364,13 +383,13 @@ Chcielibyśmy wyjaśnić jeden element tego badania, o którym nie mogliśmy poi
 
 Poza pytaniem o Pani/Pana poglądy, badanie sprawdza **jak bardzo wyniki sondaży zależą od tego, kto na nie odpowiada**. Dziś na zaproszenie do badania internetowego odpowiada zwykle kilka–kilkanaście procent zaproszonych osób. Jeżeli osoby odpowiadające różnią się poglądami od tych, które nie odpowiadają, wyniki sondaży są zniekształcone — a standardowe metody korekty (ważenie po wieku, płci czy wykształceniu) tego nie naprawiają.
 
-Aby to sprawdzić, **losowo podzieliliśmy zaproszone osoby na dwie grupy**: jedna otrzymała zaproszenie i dwa przypomnienia (tak jak w każdym typowym badaniu panelowym), druga — samo zaproszenie, bez przypomnień. Grupa bez przypomnień składa się z osób najbardziej chętnych do udziału; grupa z przypomnieniami obejmuje dodatkowo osoby mniej chętne. **Porównanie odpowiedzi obu grup pozwala nam ustalić — pytanie po pytaniu — czy chęć udziału w badaniu wiąże się z treścią odpowiedzi.** Jeśli nie ma różnicy, wynik sondażu dla danego pytania jest wiarygodny. Jeśli różnica jest, potrafimy oszacować, o ile wynik jest przesunięty.
+Aby to sprawdzić, **losowo podzieliliśmy zaproszone osoby na dwie grupy**: jedna otrzymała zaproszenie i trzy przypomnienia, druga — samo zaproszenie, bez przypomnień. Grupa bez przypomnień składa się z osób najbardziej chętnych do udziału; grupa z przypomnieniami obejmuje dodatkowo osoby mniej chętne. **Porównanie odpowiedzi obu grup pozwala nam ustalić — pytanie po pytaniu — czy chęć udziału w badaniu wiąże się z treścią odpowiedzi.** Jeśli nie ma różnicy, wynik sondażu dla danego pytania jest wiarygodny. Jeśli różnica jest, potrafimy oszacować, o ile wynik jest przesunięty.
 
 **Dlaczego nie powiedzieliśmy o tym wcześniej?** Ponieważ informacja o tym, ile przypomnień ktoś otrzyma, sama wpłynęłaby na decyzję o udziale — a to właśnie tę decyzję badamy. Podkreślamy, że:
 
 - **wszystkie pytania, które Pani/Pan widziała/widział, były prawdziwe i zadane w tej samej formie wszystkim uczestnikom;**
 - obie grupy otrzymały identyczne zaproszenie, identyczny kwestionariusz i identyczne wynagrodzenie;
-- grupa bez przypomnień otrzymała **mniej** wiadomości niż w standardowym badaniu panelowym — nikt nie został zaczepiony częściej, niż byłoby to normalne.
+- grupa bez przypomnień — czyli większość zaproszonych — otrzymała **znacznie mniej** wiadomości niż w standardowym badaniu panelowym; w grupie z przypomnieniami była to jedna wiadomość więcej niż zwykle. W sumie wysłaliśmy o około jedną czwartą mniej wiadomości, niż wysłałoby badanie zrealizowane w zwykły sposób.
 
 **Co dalej z Pani/Pana odpowiedziami?** Analizujemy je wyłącznie zbiorczo. Nie wyciągamy żadnych wniosków o pojedynczych osobach i nie mamy możliwości ustalenia, kto udzielił jakich odpowiedzi.
 
@@ -406,7 +425,7 @@ Aby to sprawdzić, **losowo podzieliliśmy zaproszone osoby na dwie grupy**: jed
 >
 > Zespół [nazwa agencji]
 
-## Przypomnienie 1 (dzień ok. 4, wyłącznie grupa A, wyłącznie do osób, które nie wypełniły ankiety)
+## Przypomnienie 1 (dzień ok. 3, wyłącznie grupa A, wyłącznie do osób, które nie wypełniły ankiety)
 
 > **Temat:** Przypomnienie — badanie postaw społecznych i politycznych (ok. 10 minut)
 >
@@ -420,9 +439,9 @@ Aby to sprawdzić, **losowo podzieliliśmy zaproszone osoby na dwie grupy**: jed
 >
 > Zespół [nazwa agencji]
 
-## Przypomnienie 2 (dzień ok. 9, wyłącznie grupa A, wyłącznie do osób, które nie wypełniły ankiety)
+## Przypomnienie 2 (dzień ok. 7, wyłącznie grupa A, wyłącznie do osób, które nie wypełniły ankiety)
 
-> **Temat:** Ostatnie przypomnienie — badanie postaw społecznych i politycznych
+> **Temat:** Przypomnienie — badanie postaw społecznych i politycznych
 >
 > Dzień dobry,
 >
@@ -430,6 +449,20 @@ Aby to sprawdzić, **losowo podzieliliśmy zaproszone osoby na dwie grupy**: jed
 >
 > [LINK]
 >
-> To ostatnia wiadomość w sprawie tego badania.
+> Jeśli nie chce Pani/Pan brać udziału, prosimy o zignorowanie tej wiadomości.
+>
+> Zespół [nazwa agencji]
+
+## Przypomnienie 3 (dzień ok. 11, wyłącznie grupa A, wyłącznie do osób, które nie wypełniły ankiety)
+
+> **Temat:** Ostatnie przypomnienie — badanie postaw społecznych i politycznych
+>
+> Dzień dobry,
+>
+> to ostatnia wiadomość w sprawie badania dla Uniwersytetu SWPS. Ankieta będzie dostępna do [data], a jej wypełnienie zajmuje około 10 minut.
+>
+> [LINK]
+>
+> Jeśli nie chce Pani/Pan brać udziału, prosimy o zignorowanie tej wiadomości — więcej wiadomości w tej sprawie nie wyślemy.
 >
 > Zespół [nazwa agencji]

@@ -1,0 +1,108 @@
+---
+title: "Modyfikacja nr 1 zapytania ofertowego"
+subtitle: "Realizacja ogólnopolskiego badania CAWI z eksperymentalnym zróżnicowaniem protokołu kontaktu"
+date: "2026-09-17"
+date-format: "D MMMM YYYY"
+lang: pl
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.2cm
+      y: 2.2cm
+    fontsize: 10pt
+    mainfont: "Times New Roman"
+    section-numbering: "1.1"
+    toc: false
+---
+
+| | |
+|:----------------------------|:-----------------------------------------------------|
+| **Zamawiający** | Uniwersytet SWPS, ul. Chodakowska 19/31, 03-815 Warszawa |
+| **Osoba do kontaktu** | dr hab. Ben Stanley, prof. Uniwersytetu SWPS — kierownik projektu, bstanley\@swps.edu.pl |
+| **Dotyczy** | Zapytania ofertowego z dnia 11 września 2026 r. (projekt finansowany ze środków FRBN Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C) |
+| **Data modyfikacji** | 17 września 2026 r. |
+| **Termin składania ofert** | **bez zmian: 30 września 2026 r., godz. 23:59** |
+
+: {tbl-colwidths="[28,72]"}
+
+Zamawiający modyfikuje treść zapytania ofertowego w zakresie opisanym poniżej. Pozostałe postanowienia zapytania pozostają bez zmian. Modyfikacja zostaje przekazana wszystkim wykonawcom, do których skierowano zapytanie, oraz opublikowana w ten sam sposób co zapytanie pierwotne.
+
+**Wykonawcy, którzy złożyli już ofertę, mogą ją wycofać i złożyć ponownie w terminie składania ofert.** Na wniosek któregokolwiek z wykonawców, złożony do 22 września 2026 r., Zamawiający przedłuży termin składania ofert o 7 dni.
+
+# Przyczyna modyfikacji
+
+Zamawiający przeprowadził symulacyjną analizę mocy statystycznej zaprojektowanego badania, opartą na parametrach odpowiadających realiom polskich paneli internetowych. Analiza wykazała, że przy protokole z dwoma przypomnieniami różnica wskaźników realizacji między grupami wynosi około 5 punktów procentowych, a przy takiej różnicy badanie z dużym prawdopodobieństwem nie rozstrzygnie pytania, dla którego zostało zaprojektowane.
+
+Wielkością, która decyduje o rozstrzygalności, jest **różnica wskaźników realizacji między grupami**, a nie liczba zrealizowanych wywiadów. Stąd dwie zmiany: intensywniejszy protokół kontaktu w grupie A oraz przeniesienie udokumentowanego przyrostu realizacji dzięki przypomnieniom z kryteriów oceny punktowej do wymagań obowiązkowych.
+
+Zamawiający podkreśla, że zmiany **nie zwiększają zakresu zamówienia w części wycenianej za wywiad** — liczba zaproszeń i docelowa liczba wywiadów pozostają bez zmian. Zmienia się liczba wysyłek przypomnień w grupie A. Jeżeli w ocenie wykonawcy wpływa to na cenę, prosimy o wskazanie tego wprost w ofercie.
+
+# Zmiana 1. Protokół kontaktu w grupie A — trzy przypomnienia
+
+W rozdziale „Kontekst i cel badania" opis grupy A otrzymuje brzmienie:
+
+> - **Grupa A (kontakt intensywny)** — zaproszenie w dniu 0 oraz **trzy przypomnienia (dzień 3, dzień 7 i dzień 11)**;
+
+W Załączniku 2 pkt 3 tabela protokołu kontaktu otrzymuje brzmienie:
+
+| | Grupa A (kontakt intensywny) | Grupa B (kontakt ograniczony) |
+|:---------------|:-------------------------|:-------------------------|
+| Dzień 0 | Zaproszenie | Zaproszenie (identyczne) |
+| Dzień 3 ± 1 | Przypomnienie 1 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
+| Dzień 7 ± 1 | Przypomnienie 2 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
+| Dzień 11 ± 1 | Przypomnienie 3 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
+| Dzień 14 | Zamknięcie | Zamknięcie (ten sam dzień) |
+
+: {tbl-colwidths="[20,40,40]"}
+
+Elementy identyczne w obu grupach pozostają bez zmian. Zasada, zgodnie z którą **grupa B nie otrzymuje żadnego przypomnienia w żadnym kanale**, pozostaje bez zmian i pozostaje kluczowym wymaganiem protokołu.
+
+Odpowiednio zmienia się wymaganie **W3**: „dwa przypomnienia wyłącznie w grupie A (dzień 4 ± 1 i dzień 9 ± 1)" zastępuje się brzmieniem „trzy przypomnienia wyłącznie w grupie A (dzień 3 ± 1, dzień 7 ± 1 i dzień 11 ± 1)".
+
+Odpowiednio zmienia się wymaganie **W5**: oznaczenie fali przypomnienia przyjmuje wartości 0–3 (0 = wypełnienie po zaproszeniu, 1 = po pierwszym przypomnieniu, 2 = po drugim, 3 = po trzecim).
+
+# Zmiana 2. Udokumentowany przyrost realizacji — wymaganie obowiązkowe
+
+Wymaganie **W6** otrzymuje brzmienie:
+
+> **W6. Udokumentowany przyrost realizacji dzięki przypomnieniom (wymaganie obowiązkowe).** Wykonawca przedstawia w ofercie udokumentowane wskaźniki realizacji (zaproszenie → wywiad zrealizowany) na porównywalnych badaniach społeczno-politycznych o długości 10–12 minut, **osobno dla wariantu bez przypomnień i dla każdej kolejnej fali przypomnień**, wraz ze wskazaniem badań, z których pochodzą. Oferta, która nie przedstawia takich danych, podlega odrzuceniu.
+
+Uzasadnienie: różnica wskaźników realizacji między grupami jest jedynym parametrem, który decyduje o tym, czy badanie jest w stanie odpowiedzieć na postawione pytanie badawcze. Bez danych o przyroście realizacji oferty nie da się ocenić pod tym względem.
+
+W kryteriach oceny ofert punktacja za przyrost realizacji (kryterium K2, 12 pkt) **zostaje utrzymana** — wymaganie obowiązkowe dotyczy przedstawienia danych, punktacja dotyczy ich wysokości. Progi punktowe otrzymują brzmienie: ≥ 8 pp — 12 pkt; 6–8 pp — 8 pkt; 4–6 pp — 4 pkt; < 4 pp — 0 pkt.
+
+# Zmiana 3. Klauzula eskalacji po miękkim starcie
+
+Do rozdziału „Istotne warunki umowy" dodaje się postanowienie:
+
+> **Weryfikacja przyrostu realizacji po miękkim starcie.** Po zakończeniu miękkiego startu Zamawiający weryfikuje różnicę wskaźników realizacji między grupami. Jeżeli różnica ta jest niższa niż 5 punktów procentowych, Wykonawca — na wniosek Zamawiającego i **bez dodatkowego wynagrodzenia** — dodaje w grupie A czwartą falę przypomnienia (dzień 13 ± 1) w badaniu głównym. Start badania głównego następuje po uzgodnieniu zmienionego protokołu. Zmiana ta nie stanowi odstępstwa od protokołu w rozumieniu pkt 1 „Istotnych warunków umowy" ani podstawy do naliczenia kar umownych.
+
+Zamawiający zwraca uwagę, że mechanizm ten działa wyłącznie w jedną stronę: dodanie przypomnień w grupie A jest dopuszczalne, natomiast **jakiekolwiek działanie zwiększające realizację w grupie B niszczy projekt badania** i pozostaje objęte karami umownymi przewidzianymi w zapytaniu.
+
+# Zmiana 4. Wielkość zaproszonej puli i proporcja podziału
+
+Intensywniejszy protokół w grupie A podnosi wskaźnik realizacji w tej grupie, a więc i liczbę wywiadów. Aby utrzymać zamówienie w granicach budżetu, Zamawiający **zmniejsza zaproszoną pulę i zmienia proporcję podziału**.
+
+W rozdziale „Opis przedmiotu zamówienia" pkt 1 oraz w Załączniku 2 pkt 1–2 otrzymują brzmienie:
+
+> 1. wylosowanie z panelu wykonawcy puli **ok. 18 500 osób**, prestratyfikowanej według płci × wieku × wykształcenia × regionu (NUTS2);
+> 2. losowy podział puli w proporcji **42/58** — ok. 7 800 osób do grupy A i ok. 10 700 osób do grupy B.
+
+Odpowiednio zmienia się wymaganie **W2** (proporcja podziału 42/58 zamiast 50/50) oraz parametry badania: zakładana liczba wywiadów ok. 2 000, w tym **ok. 1 200 w grupie A i ok. 800 w grupie B**. Minimalna akceptowalna liczba wywiadów pozostaje bez zmian (1 800 łącznie, nie mniej niż 650 w grupie B).
+
+W Załączniku 1 (formularz ofertowy), w tabeli „Cena", pozycja „Cena zawiera zaproszenie ok. 20 000 osób…" otrzymuje brzmienie „Cena zawiera zaproszenie **ok. 18 500 osób**, programowanie, testy, miękki start, realizację, paradane i raport". Pozostałe pozycje tabeli pozostają bez zmian.
+
+Uzasadnienie proporcji: testowaną wielkością jest **różnica między grupami**, a jej błąd standardowy jest najmniejszy wtedy, gdy obie grupy wnoszą zbliżoną liczbę wywiadów. Ponieważ grupa B osiąga niższy wskaźnik realizacji, uzyskanie zbliżonej liczby wywiadów wymaga zaproszenia do niej większej liczby osób. Zmiana nie zwiększa kosztu ani nakładu pracy.
+
+# Zmiana 5. Pytania do wyjaśnienia na rozmowach z wykonawcami
+
+Do listy zagadnień poruszanych na rozmowach wyjaśniających dodaje się:
+
+- jaki przyrost realizacji daje w panelu wykonawcy każda kolejna fala przypomnień (rozkład wywiadów według fali) — na podstawie danych z badań porównywalnych;
+- czy trzy przypomnienia w oknie 14-dniowym są zgodne z polityką kontaktu panelu i czy nie uruchamiają automatycznych ograniczeń częstotliwości kontaktu;
+- czy wykonawca może zagwarantować, że ograniczenia częstotliwości kontaktu nie zadziałają asymetrycznie (tj. że nie wykluczą z wysyłki części osób z grupy A z powodu innych badań realizowanych równolegle).
+
+---
+
+*Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C).*

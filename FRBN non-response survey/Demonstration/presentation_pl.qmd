@@ -150,7 +150,14 @@ Zaangażowani zwolennicy partii częściej odpowiadają *i* żywią większą ni
 
 ## Pilotaż FRBN
 
-- **Ok. 2000 zrealizowanych ankiet** z polskiego panelu CAWI; zaproszenia losowo dzielone 50/50 na kontakt standardowy i lekki; agencja oznacza każdy wywiad wskaźnikiem ramienia.
+- **Ok. 2000 zrealizowanych ankiet** z polskiego panelu CAWI; ok. 18 500 zaproszeń dzielonych losowo w proporcji 42/58 na kontakt **intensywny** (zaproszenie + trzy przypomnienia) i **lekki**; agencja oznacza każdy wywiad ramieniem i falą przypomnienia.
 - Kwestionariusz łączy pytania, w których spodziewamy się obciążenia nieignorowalnym brakiem odpowiedzi (frekwencja, partie stygmatyzowane, mniejszości, normy demokratyczne), z pytaniami **kontrolnymi** — w tym z benchmarkiem w statystyce publicznej i wynikach wyborów.
 - **Prerejestracja** hipotez, testów i reguł decyzyjnych; pełny kod i zanonimizowane dane zostaną opublikowane.
-- Rezultat: pierwsza mapa tego, *które* pytania polskich sondaży obciąża nieignorowalny brak odpowiedzi — oraz **zwalidowany protokół wielokrotnego użytku** dla PGSW i kolejnych badań.
+- Rezultat: dla każdego konstruktu — **jak silnie skłonność do odpowiedzi wiąże się z jej treścią, wraz z przedziałem** — oraz **zwalidowany protokół wielokrotnego użytku** dla PGSW i wielkości efektów potrzebne badaniu w pełnej skali.
+
+## Co pilotaż tej wielkości rozstrzygnie, a czego nie {.smaller}
+
+- Analizę zbudowaliśmy i uruchomiliśmy **na danych symulowanych, zanim ruszy badanie** — i tak właśnie odkryliśmy, że przy dwóch przypomnieniach kluczowe testy wykrywałyby spodziewane efekty mniej więcej **raz na dziesięć prób**.
+- Wiążącym ograniczeniem jest **różnica odsetków odpowiedzi**, a nie liczba wywiadów: próba daje √n, protokół kontaktu daje różnicę. Stąd trzy przypomnienia i próg „idziemy / nie idziemy" po miękkim starcie ustawiony na mocy testu, a nie na poprawności instrumentu.
+- Mimo to: część pytań wróci jako **nierozstrzygnięte**. Uczciwym produktem jest oszacowanie z przedziałem, a nie werdykt przy każdym pytaniu.
+- I po to właśnie robi się pilotaż — a to dokładnie to, czego potrzebuje wniosek NCN OPUS, żeby mieć odpowiednią moc.

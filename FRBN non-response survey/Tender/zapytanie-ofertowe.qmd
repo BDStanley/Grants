@@ -11,7 +11,7 @@ format:
       x: 2.2cm
       y: 2.2cm
     fontsize: 10pt
-    mainfont: "Times New Roman"
+    mainfont: "Minion 3"
     section-numbering: "1.1"
     toc: true
     toc-title: "Spis treści"

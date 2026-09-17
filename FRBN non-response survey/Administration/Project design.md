@@ -10,7 +10,7 @@
 
 The application (wniosek #34, 13 May 2026) commits us to:
 
-1. A **two-arm CAWI experiment** on a Polish online panel: random 50/50 split of the *invited* sample into a **standard-contact arm (A)** and a **limited-contact arm (B)**, with the agency tagging every completed interview with its arm indicator. Target ≈ 2,000 completes (≈ 1,200 in A, ≈ 700–800 in B).
+1. A **two-arm CAWI experiment** on a Polish online panel: random split of the *invited* sample into a **standard-contact arm (A)** and a **limited-contact arm (B)**, with the agency tagging every completed interview with its arm indicator. Target ≈ 2,000 completes (≈ 1,200 in A, ≈ 700–800 in B). *(The application specified a 50/50 split; §4.2 revises this to 42/58 on statistical grounds, at the same cost and the same total completes. What the application commits to — a randomised two-arm contact experiment at this scale — is unaffected.)*
 2. **Pre-registration** (hypotheses, tests, significance criteria, multiple-testing strategy) *before fieldwork*.
 3. SWPS **Research Ethics Committee approval**.
 4. A questionnaire mixing items where non-ignorable nonresponse is expected (turnout, support for stigmatized parties, minority attitudes, democratic norms) with **control items** where it is not.
@@ -56,14 +56,14 @@ The design translates Bailey's framework into a Polish CAWI setting. The load-be
 
 ```
 Panel sample drawn by agency (pre-stratified: sex × age × education × region)
-                    │  pre-randomized 50/50 (by us or verified seed)
+                    │  pre-randomized 42/58 (by us or verified seed)
       ┌─────────────┴──────────────┐
-   ARM A (standard contact)     ARM B (light contact)
-   invitation + 2 reminders     single invitation, no reminders
-   (days 0, 4, 9)               (day 0)
+   ARM A (intensive contact)    ARM B (light contact)
+   invitation + 3 reminders     single invitation, no reminders
+   (days 0, 3, 7, 11)           (day 0)
    same incentive, same questionnaire, same field window (14 days)
       │                            │
-   ~1,200 completes             ~700–800 completes
+   ~1,200 completes            ~800 completes
    (higher RR → includes        (lower RR → only eager,
     reluctant respondents)       high-R* respondents)
       └─────────────┬──────────────┘
@@ -76,7 +76,7 @@ Panel sample drawn by agency (pre-stratified: sex × age × education × region)
 
 Direction conventions used throughout: **Z = 1 for arm B (light contact)**. Arm B respondents are the high-propensity types (Bailey fig. 8.3, *top* panels); arm A adds reluctant types (*bottom* panels). Under ρ > 0 for an item, arm B shows a **higher** observed mean.
 
-Within arm A, the reminder wave on which each respondent completed (0, 1, 2) provides a **graded, protocol-driven response-propensity measure** — a continuum-of-resistance variable in the spirit of Peress (2010) / Bailey §9.4 — at zero extra cost. It supports a second, partially independent diagnostic and guards against non-monotonicity (ch. 11.4 recommends ≥3 propensity levels; we get four: B, A-wave-0, A-wave-1, A-wave-2, ordered by decreasing eagerness... strictly: B and A-wave-0 have identical stimulus at completion time; their comparison is also a clean no-difference placebo check).
+Within arm A, the reminder wave on which each respondent completed (0, 1, 2, 3) provides a **graded, protocol-driven response-propensity measure** — a continuum-of-resistance variable in the spirit of Peress (2010) / Bailey §9.4 — at zero extra cost. It supports a second, partially independent diagnostic and guards against non-monotonicity (ch. 11.4 recommends ≥3 propensity levels; we get five: B, A-wave-0, A-wave-1, A-wave-2, A-wave-3, ordered by decreasing eagerness... strictly: B and A-wave-0 have identical stimulus at completion time; their comparison is also a clean no-difference placebo check).
 
 ---
 
@@ -84,31 +84,75 @@ Within arm A, the reminder wave on which each respondent completed (0, 1, 2) pro
 
 ### 4.1 The instrument (contact-intensity manipulation)
 
-- **Arm A (standard):** e-mail/app invitation on day 0; reminders on ~day 4 and ~day 9 to non-completers. This mirrors the panel's normal protocol — A is the business-as-usual benchmark.
+- **Arm A (intensive):** e-mail/app invitation on day 0; reminders on ~day 3, ~day 7 and ~day 11 to non-completers. **Revised 17 September 2026: three reminders, not two.** The simulation-based power analysis (§7.6) showed that the two-reminder protocol produced a response-rate gap of ~5 pp, at which the confirmatory tests detect the effects we expect 8–10% of the time. The gap, not the number of completes, is the binding constraint on power, and arm A is the only side of it we can move. This takes arm A above business-as-usual, so arm A is no longer a pure benchmark for the panel's normal protocol; the wave-level response curve still recovers what a two-reminder protocol would have yielded, which is what the PGSW recommendation needs.
 - **Arm B (light):** the same invitation on day 0 only. Nothing else. Less invasive than standard practice (relevant for ethics: the treatment *reduces* contact burden).
 - **Identical in both arms:** incentive (standard panel points), questionnaire, field window (close both arms on day 14), invitation text, sender, subject line, device availability.
 - **What must NOT happen:** router-based recruitment ("survey offered on login"), quota-managed fielding, top-ups to one arm only, differential incentives, early closure of one arm. Any of these destroys either the instrument or the denominator. These are contract clauses, not preferences (§9).
 
 ### 4.2 Sample sizing and power
 
-Assumptions to be replaced by the agency's empirical rates at RFQ stage (ask each bidder for invitation→complete rates with and without reminders on comparable 10–12 min political surveys):
+Assumptions to be replaced by the agency's empirical rates at RFQ stage. Bidders are now required (§9 W6, mandatory since Modyfikacja nr 1) to supply invitation→complete rates **wave by wave** on comparable 10–12 min political surveys, not just with and without reminders: the shape of the wave profile determines what a third reminder is worth.
 
-- Plausible Polish access-panel rates: RR_B ≈ 7–9% (single invitation), RR_A ≈ 11–14% (two reminders typically lift completes by 40–60% over invitation-only).
-- **Invite ≈ 10,000 per arm** (single pre-drawn pool of ≈ 20,000, randomized 50/50). Expected completes ≈ 1,100–1,400 (A) and 700–900 (B) — matching the application's targets.
-- **Top-up rule (if completes lag):** release additional *pre-randomized* invitation batches to both arms in the same 50/50 ratio, never selectively; keep the day-0/4/9 cadence within each batch. Document batch IDs in the data.
+- Plausible Polish access-panel rates: RR_B ≈ 7–9% (single invitation), RR_A ≈ 14–17% (three reminders; two reminders typically lift completes by 40–60% over invitation-only, a third adds less).
+- **Invite ≈ 18,500 in total, split 42/58 towards arm B** (≈ 7,800 in A, ≈ 10,700 in B). Expected completes ≈ 1,200 (A) and ≈ 800 (B).
 
-**Power (respondent-level test, n_A = 1,200, n_B = 800):**
+  Both numbers changed for reasons worth recording. **The pool shrank because three reminders cost money.** The mechanism is indirect and worth stating precisely: §9 asks for a fixed price for the whole commission, not a price per interview, and bids above 21,000 zł net are rejected outright. Completes nonetheless drive the agency's own cost — incentive points are paid per interview — so a protocol expected to yield ~2,400 completes will be bid higher than one yielding ~2,000. At 20,000 invitations the revised protocol yields ~2,400 completes, which at the ~10.50 zł per interview implied by the original costing is about 25,000 zł of variable cost alone, and puts a compliant bid in doubt. 18,500 invitations land on ~2,000 completes, in line with the costing the budget was built on. **The split became unequal because equal completes beat equal invitations**: the quantity being tested is a difference between arms, its standard error is minimised when the two arms contribute equally, and arm B needs roughly twice the invitations to produce the same number of completes. The unequal split is free — same cost, same field effort — and it buys 0.05–0.15 of power per construct:
 
-| Outcome type | MDE (80% power, α = .05, two-sided) |
-|---|---|
-| Binary item, p ≈ 0.5 (e.g., turnout certain) | ≈ 6.4 pp |
-| Binary item, p ≈ 0.2 (e.g., stigmatized-party support) | ≈ 5.1 pp |
-| Standardized index (minority attitudes, democratic norms) | ≈ 0.13 SD |
-| Within-party subgroup (~30% of sample) | ≈ 0.23 SD → **exploratory only** |
+  | Configuration | Invited | Completes A / B | Cost at 10.50 zł | Turnout | Other three | Global |
+  |---|---:|---:|---:|---:|---:|---:|
+  | 17,000, split 50/50 | 17,000 | 1,307 / 675 | 20,811 zł | 0.97 | 0.49–0.55 | 1.00 |
+  | **18,500, split 42/58** | 18,500 | 1,193 / 807 | 21,000 zł | 0.97 | **0.58–0.69** | 1.00 |
+  | (20,000, split 50/50 — over budget) | 20,000 | ~1,600 / ~800 | ~25,200 zł | 1.00 | 0.65–0.69 | 1.00 |
 
-Bailey's observed effects (turnout gap 16–25 pp across propensity groups; partisan thermometer gaps 0.2–0.4 SD) sit above the full-sample MDEs, so the pilot is adequately powered for its confirmatory aims; **within-party mirror-image tests are pre-registered as exploratory/directional** and become a headline power justification for the OPUS-scale follow-up.
+  It also lifts arm B clear of the 650-complete floor in the tender. Source: `Analysis/output/power_affordable_2026-09-17.csv`.
+- **Top-up rule (if completes lag):** release additional *pre-randomized* invitation batches to both arms in the same 42/58 ratio, never selectively; keep the day-0/3/7/11 cadence within each batch. Document batch IDs in the data.
 
-**First-stage strength:** with 10,000 invited per arm, even a 3 pp RR difference gives z ≈ 7–10 on the arm coefficient in the response probit. Target ≥ 4 pp (≥ 40% relative). The soft launch (§4.5) verifies the gap early; if the reminder lift looks < 2 pp, add a third reminder to arm A before main launch (protocol amendment pre-registered as a contingency).
+**Power (simulation, 200 replications per scenario; `Analysis/output/power_2026-09-17.csv`).**
+
+| Design | Gap | n | Turnout | Stigmatised party | Minority index | Norms index | Global test |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Design of record** (3 reminders, 4 constructs, one-sided, 18,500 invited split 42/58) | 7.6 pp | 2,000 | 0.97 | 0.69 | 0.60 | 0.58 | **1.00** |
+| The same, at 20,000 invited 50/50 (over budget) | 7.6 pp | 2,300 | 1.00 | 0.67 | 0.69 | 0.65 | 1.00 |
+| Revised analysis, 2 reminders | 4.7 pp | 2,010 | 0.71 | 0.30 | 0.34 | 0.32 | 0.94 |
+| As originally specified (13 items, two-sided, 2 reminders) | 4.7 pp | 2,010 | 0.34 | 0.08 | 0.10 | 0.08 | — |
+| Poor lift despite three reminders | 3.3 pp | 1,870 | 0.34 | 0.17 | 0.15 | 0.14 | 0.70 |
+| Revised, but only 1,600 completes | 7.5 pp | 1,610 | 0.90 | 0.46 | 0.49 | 0.48 | 1.00 |
+| Revised, heavy-tailed errors | 7.5 pp | 2,300 | 0.99 | 0.61 | 0.81 | 0.81 | 1.00 |
+
+Read the third, fourth and fifth rows together: the analysis changes in §6 roughly tripled power on H2–H4, and the protocol change in §4.1 doubled it again. The per-construct tests still fall short of a conventional 80% — which is the honest reason §6 makes the estimate rather than the verdict the primary reported quantity, and why the **global test carries the headline claim**: it is at or near certainty in every scenario except a genuinely failed instrument.
+
+Size is nominal (false-positive rates 0.005–0.06 on the control items) and the revised equivalence bounds let ignorability be affirmed for the binary controls 39–55% of the time, against approximately never under the old ±3 pp bound.
+
+Two further findings from the same run:
+
+- **A three-arm design is not worth asking for.** Splitting the pool 40/20/40 to add a one-reminder middle arm costs power on the primary contrast (0.56 against 0.67–0.69) without a compensating gain, because the middle arm thins the two arms that identify the effect. Not pursued.
+- **A violated exclusion restriction is not symmetric in its damage.** Simulating a direct arm effect of 0.10 SD inflated the three same-signed constructs to power 1.00 and *masked* the opposite-signed one entirely (power 0.01, estimated effect +0.03 SD against a true −0.09). A violation therefore does not just add noise: it can turn a real effect into a null in exactly the direction H2 predicts. This is the argument for the §4.3 protections and for reporting the wave-0 placebo as a first-class result.
+
+The remainder of this section is superseded by simulation (§7.6), which supplies the numbers the pre-registration reports. The MDE table that stood here asked the wrong question. It compared a detectable effect against *Bailey's observed effects across propensity groups* — but his contrasts span a far wider range of response propensity than a two-arm contrast at a 5 pp gap does. The right question is what effect **this** design produces, and the simulation answers it directly: the arm difference is a function of how much the two arms differ in composition, and a 5-point difference in response rate moves composition very little.
+
+Two consequences, both of which drove the September revisions:
+
+- **Sample size is not the lever.** Power scales with √n, and the budget is fixed. The response-rate gap is the lever, which is why §4.1 now specifies three reminders and why §9 makes demonstrated reminder lift a mandatory requirement rather than a scoring criterion.
+- **The confirmatory design had to change** (§6): four constructs instead of thirteen items, one-sided tests, a global test across the family, and equivalence bounds stated in SD units. Together these recover a large multiple of the power the original specification had.
+
+**Within-party mirror-image tests remain pre-registered as exploratory/directional** and become a headline power justification for the OPUS-scale follow-up.
+
+**First-stage strength, and the go/no-go threshold (revised).** With 10,000 invited per arm even a 3 pp RR difference gives z ≈ 7–10 on the arm coefficient, so the *inclusion condition* is easy to satisfy. That is not the same as being powered, and the previous threshold conflated them: a 4 pp gap passes the inclusion test comfortably and still leaves the confirmatory tests at 8–10% power.
+
+The soft launch (§4.5) therefore checks the gap against a **power** threshold, not a validity one:
+
+The thresholds come from the `gap_curve()` target, which sweeps arm A's response rate and reports power per construct (`Analysis/output/gap_curve_2026-09-17.csv`):
+
+| RR in arm A | Gap | Turnout | Other three constructs | Global test | Action at soft launch |
+|---:|---:|---:|---:|---:|---|
+| 20% | 11.4 pp | 1.00 | 0.93 | 1.00 | proceed |
+| 18% | 9.5 pp | 1.00 | 0.82–0.83 | 1.00 | proceed |
+| 16% | 7.6 pp | 1.00 | 0.62–0.68 | 0.99 | **proceed as planned** |
+| 14% | 5.6 pp | 0.91 | 0.42–0.47 | 0.97 | **proceed, stating the reduced power; emphasis on the global test and the estimation table** |
+| 12% | 3.7 pp | 0.49 | 0.19–0.22 | 0.81 | **invoke the escalation clause: fourth reminder in arm A, hold the launch** |
+| 10% | 2.3 pp | 0.16 | 0.08–0.09 | 0.43 | escalate; if the lift cannot be produced, the confirmatory aims are not achievable and the study is reported as an estimation exercise |
+
+In short: **≥ 7 pp proceed, 5–7 pp proceed with caveats, < 5 pp escalate.** Note what the bottom row means — at a 2–3 pp gap even the global test is a coin flip, which is why §9 now makes demonstrated reminder lift a pass/fail tender requirement.
 
 ### 4.3 Protecting the exclusion restriction
 
@@ -119,7 +163,7 @@ Randomization guarantees Z ⊥ Y in expectation, but two practical leak paths ne
 
 ### 4.4 Data contract (deliverables from the agency — contract annex, non-negotiable)
 
-Per **invitee** (pseudonymous ID, all ≈ 20,000):
+Per **invitee** (pseudonymous ID, all ≈ 18,500):
 1. Arm indicator; invitation batch ID; timestamps of invitation and each reminder actually sent.
 2. Disposition: completed / partial (with break-off point) / clicked-but-not-started / no click; completion timestamp; device type.
 3. Panel-profile covariates: sex, age (or band), education, region (NUTS2), settlement size; plus any panel-held political profile variables (past-vote or party-preference profile fields, if the panel maintains them — Ipsos panel data made Bailey's first stage possible); panel tenure and recent-activity indicator.
@@ -162,16 +206,24 @@ Design rules: DK/refusal explicitly offered on attitude items (item nonresponse 
 
 Pre-register on **OSF** (registration frozen before main launch; soft launch allowed before freeze only for technical verification, no outcome analysis). Contents: design protocol, full questionnaire, hypotheses below, SAP (§7) including estimators/SEs/multiplicity/exclusions, power analysis, contingency rules (third reminder; top-up batches; pseudo-nonrespondent fallback), and the simulated-data pipeline (§7.6).
 
-**Confirmatory hypotheses** (test: coefficient on Z [= arm B] in Y ~ Z + X among respondents; BH-FDR 5% within the confirmatory family; two-sided tests reported with signed expectations):
+**The primary reported quantity is an estimate, not a verdict (revised 17 September 2026).** For each construct we report the arm difference in SD units with a 95% confidence interval, and ρ̂ with its interval from the selection model. Hypothesis tests are secondary to that table. The reason is the power analysis in §7.6: a pilot that reports "ρ̂ = 0.31, 95% CI [0.05, 0.55]" has produced something the methodological report, the manuscript and the OPUS power analysis can all use, whether or not a test clears its threshold, whereas a pilot that reports six rows of "indeterminate" has not. This also matches what the funded application promised — a *pilotażowe wdrożenie*, not a definitive census of Polish survey items.
 
-| H | Items | Expectation | Rationale |
-|---|---|---|---|
-| H1 | Turnout propensity; "next Sunday" certainty | β_Z > 0 | Civic engagement ↔ response propensity; the most robust finding in the literature (Bailey ch. 12.2: ρ̂ = .49) |
-| H2 | Support/sympathy: Konfederacja, Korona; (secondary: PiS) | β_Z < 0 | Anti-establishment distrust lowers response propensity among these electorates ("shy" pattern via nonresponse, not lying) |
-| H3 | Minority-attitude indices (progressive-scored) | β_Z > 0 | Socially conservative views concentrated among low-R\* types (Bailey ch. 12.4: concentrated among specific subgroups) |
-| H4 | Democratic-norms index (liberal-scored) | β_Z > 0 | Norm-committed citizens overrepresented at high R\* |
-| H5 | Left–right placement; EU support; valence policy; benchmarked behaviors | β_Z ≈ 0, tested by **TOST equivalence** with SESOI ±0.10 SD (±3 pp for binaries) | Ignorability claims must be affirmative, not absence-of-significance |
-| M-check | Political interest | β_Z > 0, sizable | Positive control; if null, instrument too weak → interpret H1–H4 nulls cautiously (pre-specified inference rule) |
+**Confirmatory tests: four constructs, one-sided** (coefficient on Z [= arm B] in Y ~ Z + X among respondents; BH-FDR 5% across the four). The family was thirteen items and is now four constructs. Multiplicity was costing roughly half the power, most of the items measured the same four things, and every hypothesis carries a signed prediction, so two-sided testing was giving away more power for nothing. A result significant in the *wrong* direction is reported as a failure of the hypothesis, not as a discovery.
+
+| H | Construct | Composition | Expectation | Rationale |
+|---|---|---|---|---|
+| H1 | Turnout propensity | `sklonfrek`, 0–10 (the binary "next Sunday" certainty becomes secondary: the scale is better powered) | β_Z > 0 | Civic engagement ↔ response propensity; the most robust finding in the literature (Bailey ch. 12.2: ρ̂ = .49) |
+| H2 | Stigmatised-party sympathy | mean of Konfederacja and Korona thermometers, 0–10 (PiS secondary) | β_Z < 0 | Anti-establishment distrust lowers response propensity among these electorates ("shy" pattern via nonresponse, not lying) |
+| H3 | Minority attitudes (progressive-scored index) | 8 items | β_Z > 0 | Socially conservative views concentrated among low-R\* types (Bailey ch. 12.4) |
+| H4 | Democratic norms (liberal-scored index) | 5 items | β_Z > 0 | Norm-committed citizens overrepresented at high R\* |
+
+**Global test (new, and the headline confirmatory claim).** The four directional test statistics are combined by Brown's method, using the correlation of the outcome residuals among respondents to account for the four constructs being measured on the same people. This answers "is *anything* in this family non-ignorable" and is far better powered than any single construct; the per-construct tests then say where.
+
+**H5 (ignorable items).** Left–right self-placement, EU support, three low-stigma valence items and two benchmarked behavioural items: β_Z ≈ 0, tested by **TOST equivalence with SESOI ±0.10 SD for every item, binary ones included.** The old bound of ±3 pp for binaries needed a standard error near 1.5 pp; at n ≈ 2,000 we will have about 1.9, so no binary control could ever have cleared it and the reassuring finding — certifying an item as clean — would have been unobtainable by construction. In SD units the same bound is about 5 pp at p = 0.5 and 4 pp at p = 0.2. Ignorability claims remain affirmative, never absence-of-significance.
+
+**M-check (political interest).** β_Z > 0, sizable. Positive control; if null, the instrument is too weak and H1–H4 nulls are uninformative (pre-specified inference rule). Note the cliff this creates: the simulation puts the failure rate of this check at roughly one run in five at the two-reminder protocol, which is a further argument for the three-reminder revision in §4.1.
+
+**Secondary confirmatory test: the four-level propensity gradient (pre-registered now, §3).** Rejection rates of 0.64–1.00 against 0.20–0.72 for the arm contrast on the same items — it is the best-powered test available. It is registered *now*, before any data exist, precisely because reaching for it after a null arm contrast would be indefensible. It buys its power with weaker identification: the reminder wave a person completed on is not randomly assigned, so it is confounded with time in field. It is reported alongside the arm contrast, never instead of it, always with field-day fixed effects, and the arm-B vs arm-A-wave-0 placebo carries the defence.
 
 **Exploratory (pre-registered as such, no confirmatory claims):** within-party mirror-image effects (PiS vs KO vs Konfederacja identifiers; Bailey ch. 12.3 logic); heterogeneity by education and political interest strata (non-monotonicity guard); the four-level propensity gradient (B / A-wave-0 / A-wave-1 / A-wave-2) with test for monotonic trend; item-nonresponse rates by arm; data-quality outcomes by arm; A-wave-0 vs B placebo (expect null).
 
@@ -184,7 +236,7 @@ Pre-register on **OSF** (registration frozen before main launch; soft launch all
 All analysis in R (≥ 4.4), pipeline built with `targets`, environment pinned with `renv`, report in Quarto. Everything written and tested against **simulated data before fieldwork ends** (§7.6).
 
 ### 7.1 Stage 0 — validation & construction
-- Reconcile invitee file with field report (denominators per arm per batch); verify 50/50 randomization balance on profile covariates (standardized differences; joint permutation test).
+- Reconcile invitee file with field report (denominators per arm per batch); verify that the realised allocation matches the 42/58 design and check randomization balance on profile covariates (standardized differences; joint permutation test).
 - Construct outcome variables and indices (pre-specified codings; indices as means of standardized items, reliability reported).
 - Primary sample: all completes. Sensitivity sample: quality-filtered (rules from prereg). Partials treated as nonrespondents (sensitivity: as respondents for items answered before break-off).
 
@@ -194,7 +246,7 @@ All analysis in R (≥ 4.4), pipeline built with `targets`, environment pinned w
 
 ### 7.3 Stage 2 — the diagnostic test (respondent-level)
 - For each pre-registered outcome: OLS (linear probability for binaries; ordered-logit sensitivity) of Y on Z + X, HC2 SEs. **X set (fixed ex ante):** sex, age, age², education, settlement size, region, income band, religiosity, labour-market status. (Political interest is *excluded* from X here — it is outcome-adjacent and itself a test variable; noted as a limitation with a with/without-interest robustness column.)
-- BH-FDR 5% within the confirmatory family; TOST for H5 items; standardized effect sizes with 95% CIs for everything (the CI, not the star, is the product).
+- One-sided tests in the pre-registered direction for the four constructs; BH-FDR 5% across those four; Brown-combined global test across the family; TOST (±0.10 SD) for H5 items; standardized effect sizes with 95% CIs for everything (the CI, not the star, is the product — and after the September revision, the CI *is* the primary result).
 - Placebo: A-wave-0 vs B. Trend: four-level propensity gradient.
 
 ### 7.4 Stage 3 — selection models for flagged items
@@ -211,6 +263,8 @@ All analysis in R (≥ 4.4), pipeline built with `targets`, environment pinned w
 
 ### 7.6 Simulation-first development
 Before data arrive: simulate the full design (invited pool with profile X; latent R\* = γ_Z Z + γ_X X + τ; outcomes with direct and indirect non-ignorability pathways; ch. 11.1 style) at registered parameter values; run the entire `targets` pipeline end-to-end on simulated data; verify size/power of the test and recovery by Heckman/GJRM under correct and misspecified errors (t-distributed, per fig. 11.3). The simulation doubles as (a) the power analysis in the prereg, (b) the regression test suite for the pipeline, (c) teaching material for the workshop.
+
+**Implemented September 2026** in `Analysis/` (targets pipeline, `R/simulate.R` for the data-generating process, `tests/smoke.R` for the end-to-end check). It did its job before fieldwork rather than after: the first run showed the design as originally specified had 8–10% power on H2–H4, which is what prompted the revisions to §4.1, §4.2, §6 and §9 recorded above. Parameters are calibrated so the implied selection–outcome correlations sit near Bailey's empirical anchors (ρ ≈ .44 for turnout against his .49), and the benchmarked recall items are pinned to the PKW figures so the Stage 4 comparison tests something. The `gap_curve()` target reports power per construct across candidate response rates and is the source of the §4.2 threshold.
 
 ### 7.7 Sensitivity & bounds (supplementary)
 - Manski bounds for headline items at observed response rates (ch. 7.1) — honesty exhibit for the report.
@@ -240,11 +294,12 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 
 **Mandatory technical requirements (bid must confirm each in writing):**
 1. **Invitation-based fielding to a fixed, pre-drawn sample** (e-mail/app push). No router assignment, no open links. This is the make-or-break requirement — router recruitment has no invited denominator and no controllable contact protocol.
-2. Random 50/50 arm assignment of the invited pool, stratified by sex × age × education × region; assignment executed with our seed or verifiably documented.
-3. Arm protocols exactly as §4.1 (A: day 0 + reminders day 4, 9; B: day 0 only); identical incentives; fixed 14-day window; **no quota management during fielding**; completes targets are expectations, not quotas.
+2. Random 42/58 arm assignment of the invited pool (arm A / arm B), stratified by sex × age × education × region; assignment executed with our seed or verifiably documented.
+3. Arm protocols exactly as §4.1 (A: day 0 + reminders day 3, 7, 11; B: day 0 only); identical incentives; fixed 14-day window; **no quota management during fielding**; completes targets are expectations, not quotas.
 4. Per-invitee data deliverables per §4.4 (or, minimum, aggregate invited-pool cross-tabs per arm) — GDPR-compatible pseudonymized delivery.
 5. Reminder-wave tagging of every complete; batch-tagged top-ups to both arms only.
-6. Empirical response-rate evidence: the panel's invitation→complete rates and reminder lift on comparable surveys (sizing input).
+6. **Demonstrated reminder lift (mandatory, revised 17 September 2026).** The panel's invitation→complete rate and its wave-by-wave reminder lift on comparable 10–12 minute political surveys, in writing. This moved from scoring criterion to pass/fail because the power analysis (§7.6) shows a 2–3 pp gap makes the study uninformative, and the range this document itself called plausible (RR_B 7–9%, RR_A 11–14% under two reminders) admits exactly that. A bid that cannot evidence the lift cannot be evaluated for the only parameter that determines whether the study can answer its question.
+7. **Escalation clause.** If the soft launch shows a gap below the §4.2 threshold, the agency adds a further reminder wave to arm A at no additional cost, and the main launch is held until it does.
 
 **Selection criteria (weighted):** compliance with 1–5 (pass/fail); panel size and invitation-RR evidence (30%); price per complete (30%); data-delivery quality incl. paradata (25%); timeline reliability (15%). Volume discount for N > 1,500 was already assumed in the application's costing; arm B is cheaper to field (no reminders), which the application flags as the argument for holding the blended rate at standard levels.
 
@@ -274,7 +329,9 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 
 | Risk | Likelihood | Impact | Mitigation / fallback |
 |---|---|---|---|
-| Reminder lift too small → weak instrument | Med | High | RFQ asks for empirical lift data; soft-launch go/no-go; contingency third reminder in arm A (pre-registered); four-level gradient still informative |
+| Reminder lift too small → weak instrument | Med | **Fatal to the confirmatory aims** | Demonstrated lift is now a pass/fail tender requirement with an escalation clause (§9); three reminders from the start (§4.1); soft-launch go/no-go raised to a power threshold, not a validity one (§4.2); gradient pre-registered as a secondary test (§6) |
+| Confirmatory tests return null across the board | Low for the global test, **Med for individual constructs** (power 0.65–0.69 at the target gap) | Med | Primary reported quantity is an estimate with an interval, not a verdict (§6); global test across the family is the headline claim; the report and the manuscript are framed around effect-size estimation and the OPUS power case, which survive nulls |
+| Ignorability cannot be certified for any item | Med | Med | Equivalence bounds restated in SD units so binary controls are testable at all (§6); where TOST is indeterminate, report the interval and say so |
 | Agency cannot do invitation-based fielding or arm tagging | Med | Fatal per agency | Pass/fail RFQ criterion; ≥3 bidders + 2 backups |
 | No nonrespondent-level covariates (GDPR) | Med | Med | Pseudo-nonrespondents (ch. 10.5) pre-specified as fallback; aggregate cross-tabs contractually required |
 | Completes shortfall (esp. arm B) | Med | Med | Symmetric top-up batches; accept 700 in B (application anticipates 700–800); power holds |
@@ -298,4 +355,4 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 
 ---
 
-*Design document prepared 16 July 2026; revised 20 July 2026 (timeline shifted to 7 September – 16 December 2026). Funding: Uniwersytet SWPS, FRBN, decyzja nr 67/2026/FRBN/C. All outputs to acknowledge: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C)."*
+*Design document prepared 16 July 2026; revised 20 July 2026 (timeline shifted to 7 September – 16 December 2026); revised 17 September 2026 (§§3, 4.1, 4.2, 6, 7.3, 7.6, 9, 12 — contact protocol, confirmatory design and procurement requirements changed in response to the simulation-based power analysis). Funding: Uniwersytet SWPS, FRBN, decyzja nr 67/2026/FRBN/C. All outputs to acknowledge: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C)."*

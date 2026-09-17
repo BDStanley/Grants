@@ -15,21 +15,23 @@ Dates from [[Project design]] §8 timeline and §13 immediate actions.
 
 ## Contracting & instrument preparation (21 September – 9 October)
 
-- [ ] Hold clarification calls with bidders: reminder channels symmetric across arms, auto top-up disabled, nonrespondent profile-variable availability #FRBN 🔼 🛫 2026-09-21 📅 2026-10-02
+- [ ] Issue Modyfikacja nr 1 to all bidders (three reminders in arm A; reminder-lift evidence becomes mandatory; escalation clause) — before the clarification calls; offer the 7-day deadline extension on request #FRBN 🔺 📅 2026-09-19
+- [ ] Hold clarification calls with bidders: wave-by-wave reminder lift, whether three reminders in 14 days breach panel contact-frequency policy, asymmetric frequency capping, reminder channels symmetric across arms, auto top-up disabled, nonrespondent profile-variable availability #FRBN 🔼 🛫 2026-09-21 📅 2026-10-02
 - [ ] Evaluate bids against §9 criteria (pass/fail on mandatory requirements 1–5; then panel size/RR 30%, price 30%, data quality 25%, timeline 15%) #FRBN ⏫ 📅 2026-10-02
 - [ ] Sign agency contract incl. data-delivery annex (§4.4), no-quota-management and fixed-window clauses, publication-rights clause for CC0 data release #FRBN ⏫ 📅 2026-10-09
 - [ ] Finalize questionnaire (median ≤ 12 min, ~60 items) + cognitive check with team and 2–3 naive testers #FRBN ⏫ 📅 2026-10-09
-- [ ] Complete simulation-based power analysis and lock parameters for the prereg #FRBN 🔼 📅 2026-10-09
-- [ ] Draft full pre-registration: hypotheses, SAP (estimators, SEs, BH-FDR, TOST SESOI, exclusion rules), contingencies (third reminder, top-up batches, pseudo-nonrespondent fallback) #FRBN ⏫ 📅 2026-10-09
+- [ ] Complete simulation-based power analysis and lock parameters for the prereg — pipeline built, first pass done; remaining: re-run `gap_curve()` with the winning agency's wave profile and set the soft-launch threshold from it #FRBN 🔼 📅 2026-10-09
+- [ ] Review and sign off the September design revisions (§§4.1, 4.2, 6, 9, 12) with Cześnik and Żerkowska-Balas — protocol, four-construct confirmatory family, one-sided tests, estimation as the primary output #FRBN ⏫ 📅 2026-09-25
+- [ ] Draft full pre-registration: primary estimand (arm difference and ρ̂ with intervals), four-construct confirmatory family with one-sided tests and BH across four, Brown-combined global test, TOST at ±0.10 SD for every item type, gradient test registered as secondary with field-day controls, contingencies (fourth reminder, top-up batches, pseudo-nonrespondent fallback) #FRBN ⏫ 📅 2026-10-09
 - [ ] Receive KEB ethics decision (follow up if not received) #FRBN ⏫ 📅 2026-10-09
 
 ## Scripting & soft launch (12–23 October)
 
 - [ ] Test agency scripting: routing, DK/refusal options, item-order randomization in M5–M7, attention check, arm tagging #FRBN ⏫ 🛫 2026-10-12 📅 2026-10-20
 - [ ] Run soft launch (~100 invitations per arm): verify arm tagging in data, paradata fields populated, median timing ≤ 12 min, no routing errors #FRBN ⏫ 📅 2026-10-23
-- [ ] Go/no-go check on reminder lift; if < 2 pp, invoke pre-registered contingency (third reminder in arm A) #FRBN ⏫ 📅 2026-10-23
+- [ ] Go/no-go check on reminder lift against the power threshold (≥ 7 pp proceed; 5–7 pp proceed with stated caveats; < 5 pp invoke the contingency — fourth reminder in arm A under the escalation clause) #FRBN ⏫ 📅 2026-10-23
 - [ ] Freeze pre-registration on OSF before main launch #FRBN 🔺 📅 2026-10-23
-- [ ] Verify 50/50 randomization of invited pool (our seed or documented procedure; balance on profile covariates) #FRBN 🔼 📅 2026-10-23
+- [ ] Verify 42/58 randomization of invited pool (our seed or documented procedure; balance on profile covariates) #FRBN 🔼 📅 2026-10-23
 
 ## Main fieldwork (26 October – 9 November)
 

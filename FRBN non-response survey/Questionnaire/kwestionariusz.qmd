@@ -11,7 +11,7 @@ format:
       x: 2cm
       y: 2cm
     fontsize: 9.5pt
-    mainfont: "Times New Roman"
+    mainfont: "Minion 3"
     section-numbering: "1.1"
     toc: true
     toc-title: "Spis treści"
@@ -43,7 +43,7 @@ Poniższe zasady mają charakter wiążący i wynikają z konstrukcji badania. O
 3. **Brak imputacji i brak własnych reguł czyszczenia.** Zbiór przekazywany Zamawiającemu zawiera odpowiedzi surowe, z zachowaniem odrębnych kodów 97 i 98. Wykonawca nie usuwa rekordów według własnych kryteriów jakości.
 4. **Rotacja.** Kolejność pozycji rotowana w blokach M5, M6 i M7 (rotacja na poziomie pozycji, niezależnie dla każdego respondenta). W M4.4 i M4.6 rotowana kolejność komitetów wyborczych, z wyłączeniem pozycji "inny", "nie pamiętam", "odmowa", które zawsze pozostają na końcu. Fakt i porządek rotacji zapisywane w danych.
 5. **Jedno pytanie kontrolne uważności** (M10.1), umieszczone wewnątrz bloku M6. Nie wolno dodawać kolejnych pytań kontrolnych ani pułapek czasowych.
-6. **Paradane.** Dla każdego respondenta zapisywane są: oznaczenie grupy (A/B), fala przypomnienia po której nastąpiło wypełnienie (0/1/2), identyfikator partii zaproszeń, znaczniki czasowe rozpoczęcia i zakończenia, czas na poszczególnych ekranach (jeżeli system to rejestruje), typ urządzenia oraz numer ostatniego wyświetlonego pytania w razie przerwania.
+6. **Paradane.** Dla każdego respondenta zapisywane są: oznaczenie grupy (A/B), fala przypomnienia po której nastąpiło wypełnienie (0/1/2/3), identyfikator partii zaproszeń, znaczniki czasowe rozpoczęcia i zakończenia, czas na poszczególnych ekranach (jeżeli system to rejestruje), typ urządzenia oraz numer ostatniego wyświetlonego pytania w razie przerwania.
 7. **Zapis przerwań.** Rekordy niedokończone są zachowywane i przekazywane wraz z numerem pytania, na którym nastąpiło przerwanie.
 8. **Ekrany dostarczone przez Zamawiającego** (ekran informacyjny, ekran zgody, nota po badaniu) wyświetlane są w brzmieniu zatwierdzonym przez Komisję ds. Etyki Badań Naukowych, bez zmian redakcyjnych.
 9. **Jeden ekran — jedno pytanie lub jeden blok.** Baterie M5, M6, M7 mogą być prezentowane jako tabele (grid), pozostałe pytania pojedynczo.
@@ -89,18 +89,23 @@ Kolejność modułów: M1 → M2 → M3 → M4 → M5 → M6 (z M10 w środku) �
 
 Kierunek: **Z = 1 dla grupy B (kontakt ograniczony)**. Grupa B to respondenci o wysokiej skłonności do udziału.
 
-| Hipoteza | Pytania | Oczekiwanie | Uzasadnienie |
+Rodzina konfirmacyjna obejmuje **cztery konstrukty, po jednym teście na konstrukt**, testowane **jednostronnie** w prerejestrowanym kierunku, z korektą Benjaminiego–Hochberga w obrębie tych czterech testów. Pojedyncze pytania składowe raportowane są jako wyniki wtórne, z przedziałami ufności.
+
+| Hipoteza | Konstrukt konfirmacyjny | Oczekiwanie | Uzasadnienie |
 |:--|:----------------------|:--------|:---------------------------|
 | **M-check** | M3.1 (zainteresowanie polityką) | β_Z > 0, wyraźne | Kontrola pozytywna. Brak efektu oznacza słaby instrument i nakazuje ostrożność w interpretacji zerowych wyników H1–H4 |
-| **H1** | M4.1, M4.2 | β_Z > 0 | Zaangażowanie obywatelskie a skłonność do odpowiadania — najlepiej udokumentowana zależność w literaturze |
-| **H2** | M5.7, M5.8 (Konfederacja, Korona); wtórnie M5.1 (PiS) | β_Z < 0 | Nieufność wobec instytucji obniża skłonność do udziału w badaniach wśród tych elektoratów |
+| **H1** | M4.1 (skłonność do głosowania, 0–10) — konfirmacyjnie; M4.2 wtórnie | β_Z > 0 | Zaangażowanie obywatelskie a skłonność do odpowiadania — najlepiej udokumentowana zależność w literaturze. Skala 0–10 jest lepiej wysycona mocą niż jej dychotomizacja |
+| **H2** | Indeks stygmatyzacyjny: średnia z M5.7 i M5.8 (Konfederacja, Korona); wtórnie M5.1 (PiS) i pytania składowe osobno | β_Z < 0 | Nieufność wobec instytucji obniża skłonność do udziału w badaniach wśród tych elektoratów |
 | **H3** | Indeks z M6 (kodowany progresywnie) | β_Z > 0 | Poglądy konserwatywne skoncentrowane wśród osób o niskiej skłonności do odpowiadania |
 | **H4** | Indeks z M7 (kodowany liberalnie) | β_Z > 0 | Osoby przywiązane do norm demokratycznych nadreprezentowane wśród chętnych respondentów |
-| **H5** | M8.1–M8.5, M9.1–M9.3 | β_Z ≈ 0, test równoważności TOST, SESOI ± 0,10 SD (± 3 pp dla zmiennych binarnych) | Twierdzenie o ignorowalności musi być potwierdzone pozytywnie, a nie wywiedzione z braku istotności |
+| **H-łączna** | Test łączny dla H1–H4 (metoda Browna) | odrzucenie dla co najmniej jednego konstruktu | Główne twierdzenie konfirmacyjne: test łączny jest istotnie lepiej wysycony mocą niż którykolwiek pojedynczy konstrukt |
+| **H5** | M8.1–M8.5, M9.1–M9.3 | β_Z ≈ 0, test równoważności TOST, SESOI ± 0,10 SD dla **wszystkich** pytań, również binarnych | Twierdzenie o ignorowalności musi być potwierdzone pozytywnie, a nie wywiedzione z braku istotności. Granica ± 3 pp dla pytań binarnych byłaby nieosiągalna przy zakładanej liczebności |
 
-: {tbl-colwidths="[12,24,22,42]"}
+: {tbl-colwidths="[12,26,20,42]"}
 
-**Eksploracyjnie** (bez roszczeń konfirmacyjnych): efekty lustrzane wewnątrz elektoratów; gradient czterostopniowy (B / A-fala 0 / A-fala 1 / A-fala 2); odsetki braków odpowiedzi według grup; placebo A-fala 0 vs B; wskaźniki jakości odpowiedzi według grup.
+**Testy wtórne konfirmacyjne** (prerejestrowane, raportowane obok testu ramienia, nigdy zamiast niego): gradient pięciostopniowy (B / A-fala 0 / A-fala 1 / A-fala 2 / A-fala 3) z efektami stałymi dnia realizacji; placebo A-fala 0 vs B.
+
+**Eksploracyjnie** (bez roszczeń konfirmacyjnych): efekty lustrzane wewnątrz elektoratów; podindeksy i pojedyncze pytania składowe konstruktów; odsetki braków odpowiedzi według grup; wskaźniki jakości odpowiedzi według grup.
 
 **Uwaga analityczna.** M3.1 (zainteresowanie polityką) jest zmienną testowaną, nie kontrolną — **nie wchodzi do zestawu kowariantów X** w podstawowej specyfikacji testu diagnostycznego. Specyfikacja z M3.1 w X raportowana jest jako kolumna odpornościowa.
 

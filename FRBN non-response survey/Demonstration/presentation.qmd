@@ -149,7 +149,14 @@ Engaged partisans respond more *and* feel more hostility towards the other side,
 
 ## The FRBN pilot
 
-- **~2,000 completes** from a Polish CAWI panel, invitations randomised 50/50 into standard vs light contact; the agency tags every interview with its arm.
+- **~2,000 completes** from a Polish CAWI panel; ~18,500 invitations randomised 42/58 into **intensive** (invitation + three reminders) vs **light** contact; the agency tags every interview with its arm and reminder wave.
 - Questionnaire mixes items expected to be affected by non-ignorable nonresponse bias (turnout, stigmatised parties, minorities, democratic norms) with **controls** — including items benchmarked against official statistics and election results.
 - **Pre-registered** hypotheses, tests and decision rules; full code and anonymised data published.
-- Output: the first map of *which* Polish survey questions carry non-ignorable nonresponse — and a **validated, reusable protocol** for PGSW and future studies.
+- Output: for each construct, **how strongly response propensity is tied to the answer, with an interval** — plus a **validated, reusable protocol** for PGSW and the effect sizes a full-scale study needs.
+
+## What a pilot this size can and cannot settle {.smaller}
+
+- The analysis was built and run on **simulated data before fieldwork** — which is how we found that two reminders would have left the key tests detecting the expected effects about **one time in ten**.
+- The binding constraint is the **response-rate gap**, not the number of completes: sample size buys √n, the contact protocol buys the gap. Hence three reminders, and a go/no-go at the soft launch set on power rather than on instrument validity.
+- Even so: expect some items to come back **indeterminate**. The honest product is the estimate and its interval, not a verdict on every question.
+- That is what a pilot is for — and it is exactly what an NCN OPUS proposal needs in order to be properly powered.
