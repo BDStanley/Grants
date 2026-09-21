@@ -1,7 +1,7 @@
 ---
 title: "Diagnosing non-ignorable nonresponse with a randomized response instrument: a Polish CAWI pilot"
 subtitle: "Pre-registration — text prepared for submission to AsPredicted (Questions version 2.00)"
-date: "2026-10-20"
+date: "2026-10-24"
 date-format: "YYYY/MM/DD"
 lang: en
 format:
@@ -79,7 +79,7 @@ All items are administered in Polish. Item labels below refer to the questionnai
 
 Two conditions, differing **only** in the number of reminder contacts sent to invited persons who have not yet completed the survey.
 
-A pool of approximately 18,500 adult panel members, pre-stratified by sex × age × education × region, is randomly assigned at the level of the **invited person**, before any contact is made, in a **42/58 ratio** — approximately 7,800 to arm A and 10,700 to arm B. The ratio is deliberately unequal: the estimand is a difference between arms, its standard error is minimised when the two arms contribute equal numbers of *interviews*, and arm B requires roughly twice the invitations to yield the same number of interviews. Assignment is executed using a seed supplied by the research team or by a documented procedure that permits independent verification of balance.
+A pool of approximately 18,500 adult panel members, pre-stratified by sex × age × education × region, is randomly assigned at the level of the **invited person**, before any contact is made, in a **42/58 ratio** — approximately 7,800 to arm A and 10,700 to arm B. The ratio is deliberately unequal: the estimand is a difference between arms, its standard error is minimised when the two arms contribute equal numbers of *interviews*, and arm B requires roughly twice the invitations to yield the same number of interviews. Full equalisation would require a ratio near 33/67; 42/58 is a deliberate compromise between the precision of the arm contrast and the total number of interviews obtained, and is fixed here in advance. Assignment is executed using a seed supplied by the research team or by a documented procedure that permits independent verification of balance.
 
 - **Arm A (intensive contact, Z = 0):** invitation on day 0; reminders to non-completers on approximately day 3, day 7 and day 11.
 - **Arm B (light contact, Z = 1):** the identical invitation on day 0; no reminders of any kind, by any channel.
@@ -88,7 +88,7 @@ Identical across arms: invitation text, sender and subject line; questionnaire c
 
 Respondents are not informed before participating that the number of reminders varies between randomly assigned groups, because that information would alter the behaviour under study. All respondents receive a debriefing note explaining the manipulation on the closing screen. The contact burden is asymmetric and is reported as such: arm A receives one reminder more than the panel's standard protocol of an invitation plus two reminders, and arm B two fewer. Across the invited pool the study sends approximately 25% fewer messages than a conventionally fielded survey of the same size (approximately 2.11 messages per invitee against 2.80), and 58% of invitees receive exactly one message. This procedure has been reviewed by the Research Ethics Committee of SWPS University.
 
-A secondary gradient of response propensity is derived from the reminder wave at which each arm A respondent completed, giving five ordered levels: arm B, arm A wave 0, arm A wave 1, arm A wave 2, arm A wave 3, ordered by decreasing willingness to respond. Arm B and arm A wave 0 received an identical stimulus at the time of completion and their comparison serves as a placebo test. **The gradient test is pre-registered here as a secondary confirmatory test** (Q5), not as an exploratory one. It is materially better powered than the binary arm contrast, and it is registered in advance precisely because reaching for it after a null arm contrast would be indefensible. It buys that power with weaker identification: the wave on which a person completed is not randomly assigned and is confounded with time in field, so it is always reported alongside the arm contrast rather than instead of it, and always with field-day fixed effects.
+A secondary gradient of response propensity is derived from the reminder wave at which each arm A respondent completed, giving five ordered levels: arm B, arm A wave 0, arm A wave 1, arm A wave 2, arm A wave 3, ordered by decreasing willingness to respond (six levels if the escalation clause adds a fourth reminder wave). Arm B and arm A wave 0 received an identical stimulus at the time of completion and their comparison serves as a placebo test. **The gradient test is pre-registered here as a secondary confirmatory test** (Q5), not as an exploratory one. It is materially better powered than the binary arm contrast, and it is registered in advance precisely because reaching for it after a null arm contrast would be indefensible. It buys that power with weaker identification: the wave on which a person completed is not randomly assigned and is confounded with time in field, so it is always reported alongside the arm contrast rather than instead of it, and always with field-day fixed effects.
 
 # 5) Specify exactly which analyses you will conduct to examine the main question/hypothesis.
 
@@ -120,7 +120,7 @@ The covariate-adjusted specification is essential and is not a robustness choice
 
 Selection-model evidence is **corroborating, not primary**: the confirmatory claim that an item exhibits non-ignorable nonresponse rests on the Stage 2 covariate-adjusted test, because the selection-model ρ̂ over-rejects under misspecification.
 
-**Stage 5 — Comparison and external validation.** For each flagged item we report three estimates side by side: (1) the observed unweighted estimate; (2) a conventionally raked estimate (sex × age, education, settlement size, region — standard Polish practice; `survey::rake`); and (3) the selection-corrected estimate (Heckman reference plus copula range). Where an external benchmark exists we report the absolute error of each estimator against it: recalled 2023 Sejm turnout and vote against official PKW results; recalled 2025 presidential turnout and vote for both rounds against PKW; smoking against GUS/EHIS; religious attendance against CBOS/ISKK. Benchmarks validate direction and approximate magnitude, not decimal precision, since recall error is itself correlated with engagement; this caveat is stated wherever benchmark comparisons are reported.
+**Stage 5 — Comparison and external validation.** For each flagged item we report three estimates side by side: (1) the observed unweighted estimate; (2) a conventionally raked estimate (sex × age, education, settlement size, region — standard Polish practice; `survey::rake`); and (3) the selection-corrected estimate (Heckman reference plus copula range). Where an external benchmark exists we report the absolute error of each estimator against it: recalled 2023 Sejm turnout and vote against official PKW results; recalled 2025 presidential turnout and vote for both rounds against PKW; smoking against GUS/EHIS; driving-licence possession against the CEPiK register; religious attendance against CBOS/ISKK. Benchmarks validate direction and approximate magnitude, not decimal precision, since recall error is itself correlated with engagement; this caveat is stated wherever benchmark comparisons are reported.
 
 **Placebo test.** Arm A wave 0 versus arm B, which differ in assignment but not in the stimulus received at the time of completion: we expect no difference, and a difference here would indicate a timing or composition artefact rather than selection. This test carries more weight than its simplicity suggests. A simulated violation of the exclusion restriction of 0.10 SD inflated the three same-signed constructs to certainty and *masked* the opposite-signed one entirely (power 0.01, with an estimated effect of the wrong sign). A violated exclusion restriction therefore does not merely add noise: it can convert a real effect into a null in precisely the direction H2 predicts. The placebo is reported as a first-class result, not as a footnote.
 
@@ -148,17 +148,19 @@ Fieldwork closes on day 14 for both arms regardless of the number of interviews 
 
 **Power is established by simulation rather than by formula**, because the formula knows nothing about item nonresponse, break-off, the covariate set, or the arithmetic that converts a response-rate gap into a difference in arm composition. The full data-generating process — invited pool, latent response propensity, the wave-by-wave contact protocol, and outcomes with the non-ignorability structure the hypotheses posit — was simulated 200 times per scenario at parameters calibrated so that the implied selection–outcome correlations match those reported in comparable United States work (ρ ≈ .44 for turnout). The pipeline that analyses the real data is the pipeline that was run on the simulations.
 
-At the expected realisation (n_A ≈ 1,200, n_B ≈ 800, response-rate gap ≈ 7.6 percentage points), power for the pre-registered one-sided tests with BH correction across the four constructs is approximately:
+In the base scenario the simulation realises a response-rate gap of 7.6 percentage points and approximately 2,300 completed interviews. Power for the pre-registered one-sided tests, with BH correction across the four constructs, is:
 
 | Construct | Power |
 |:--------------------------------|------:|
-| H1 Turnout propensity | 0.97 |
-| H2 Stigmatised-party index | 0.69 |
-| H3 Minority-attitudes index | 0.60 |
-| H4 Democratic-norms index | 0.58 |
+| H1 Turnout propensity | 1.00 |
+| H2 Stigmatised-party index | 0.67 |
+| H3 Minority-attitudes index | 0.69 |
+| H4 Democratic-norms index | 0.65 |
 | **H-global (combined test)** | **1.00** |
 
-Two observations follow, and both are pre-registered as part of the interpretation. First, the per-construct tests fall short of a conventional 80% threshold, which is why Q2 makes the interval rather than the verdict the primary reported quantity. Second, the combined test is at or near certainty across every scenario examined except a genuinely failed instrument, which is why it carries the headline claim.
+The base scenario's yield is somewhat above the 2,000 completed interviews we expect from the agency's documented rates, so these figures are mildly optimistic for the planning target. The relevant bracket is given by the reduced-sample scenario: at approximately 1,600 interviews and the same gap, the three non-turnout constructs fall to 0.46–0.50 and turnout to 0.90, with the combined test unchanged. Power at the expected 2,000 lies between the two.
+
+Two observations follow, and both are pre-registered as part of the interpretation. First, the per-construct tests fall short of a conventional 80% threshold under every realisation considered, which is why Q2 makes the interval rather than the verdict the primary reported quantity. Second, the combined test is at or near certainty across every scenario examined except a genuinely failed instrument, which is why it carries the headline claim.
 
 Sample size is not the binding constraint: power grows with the square root of n while the budget is fixed, whereas the response-rate gap is set by the contact protocol. At a gap of 5.6 percentage points the three non-turnout constructs fall to 0.42–0.47; at 3.7 points, to 0.19–0.22 with the combined test at 0.81; at 2.3 points the combined test itself is approximately a coin flip. This is the basis of the go/no-go rule in Q8. Within-party subgroup comparisons remain designated exploratory (Q8).
 
@@ -182,7 +184,7 @@ Sample size is not the binding constraint: power grows with the square root of n
 
 **Pre-registered contingencies.**
 
-- *Weak reminder lift.* If the soft launch indicates a difference in response rates between arms of less than 2 percentage points, a third reminder is added to arm A before the main launch. This decision is made before the main launch and is recorded.
+- *Weak reminder lift.* Governed by the go/no-go rule above: if the soft launch shows a gap below 5 percentage points we invoke the contractual escalation clause and add a fourth reminder wave in arm A before the main launch. This decision is made before the main launch and is recorded.
 - *Completion shortfall.* Symmetric top-up batches as described in Q7.
 - *No individual-level covariates for nonrespondents.* If the agency cannot release profile variables for nonrespondents, the first stage is estimated using pseudo-nonrespondents constructed from aggregate margins of the invited pool, Pr(X | R = 0) = [Pr(X)·N − Pr(X | R = 1)·n] / (N − n), with multiple imputation over draws from the pseudo-nonrespondent pool. Randomisation guarantees that Z is independent of X among nonrespondents, which is what makes this fallback viable.
 

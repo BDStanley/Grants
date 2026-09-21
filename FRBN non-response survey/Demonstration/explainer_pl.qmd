@@ -82,7 +82,18 @@ Skłonność do wypełnienia ankiety politycznej nie rozkłada się losowo. Osob
 
 To właśnie **nieignorowalny brak odpowiedzi**: skłonność do odpowiedzi $R^*$ jest skorelowana ze zmienną wynikową $Y$ przy kontroli wszystkiego, co obserwujemy. Ważenie demograficzne nie jest w stanie ani tego wykryć, ani naprawić, ponieważ osoby brakujące różnią się *opiniami*, a nie tylko wiekiem czy wykształceniem. Korektę stosujemy wzdłuż wymiarów, które widzimy; szkoda powstaje wzdłuż wymiaru, którego nie widzimy.
 
-Przy 50-procentowym odsetku odpowiedzi wynosi 1. Przy 10 procentach — 3. Przy 5 procentach — 4,4. Korelacja między udziałem w badaniu a treścią odpowiedzi, która w 1980 roku byłaby błędem zaokrąglenia, dziś daje obciążenie rzędu kilkunastu punktów. Co kluczowe, **liczebność próby tu nie pomaga**: kara zależy od *odsetka* odpowiedzi, a nie od liczby zrealizowanych wywiadów. Większa obciążona próba to próba, która myli się z większą pewnością siebie.
+## Dlaczego niskie odsetki odpowiedzi są groźne, a nie tylko niechlujne
+
+Pożyteczny rachunek (Meng 2018; Bailey 2024, rozdz. 5) rozkłada błąd średniej sondażowej przy losowym kontakcie na trzy czynniki:
+
+$$\text{błąd} \;=\; \underbrace{\rho}_{\text{korelacja selekcja–odpowiedź}} \times \underbrace{\sqrt{\frac{1-p_r}{p_r}}}_{\text{kara za odsetek odpowiedzi}} \times \underbrace{\sigma_Y}_{\text{zmienność odpowiedzi}}$$
+
+Zmienił się człon środkowy. Przy 50-procentowym odsetku odpowiedzi wynosi 1. Przy 10 procentach — 3. Przy 5 procentach — 4,4. Korelacja między udziałem w badaniu a treścią odpowiedzi, która w 1980 roku byłaby błędem zaokrąglenia, dziś daje obciążenie rzędu kilkunastu punktów. Co kluczowe, **liczebność próby tu nie pomaga**: kara zależy od *odsetka* odpowiedzi, a nie od liczby zrealizowanych wywiadów. Większa obciążona próba to próba, która myli się z większą pewnością siebie.
+
+Wynikają stąd dwie konsekwencje, które porządkują cały projekt:
+
+1. To, czy $\rho \neq 0$, jest **pytaniem empirycznym, rozstrzyganym osobno dla każdego pytania**. Nie jest to własność badania, panelu ani techniki; jest to własność każdego pojedynczego pytania. Frekwencja może być mocno skażona, podczas gdy poparcie dla członkostwa w UE pozostaje czyste.
+2. Ponieważ $\rho$ dotyczy nieobserwowanych nierespondentów, nie da się go w ogóle oszacować na podstawie zwykłego sondażu. Trzeba go **przewidzieć w projekcie badania**.
 
 # Rozwiązanie Baileya: zaprojektować badanie tak, by obciążenie zostawiło ślad
 
@@ -265,9 +276,9 @@ Produktem tej procedury nie jest jeden skorygowany zbiór danych. Jest nim odczy
 
 *Oszacowane korelacje selekcja–odpowiedź. Oszacowania skorygowane dla pytań podejrzanych raportujemy jako przedział między specyfikacjami, a nie jako pojedyncze liczby. Tam, gdzie $\hat{\rho} \approx 0$, lepszym narzędziem jest ważenie: model selekcji dodałby szum i — jak pokazał poprzedni rozdział — odrobinę obciążenia.*
 
-Dwie rzeczy są tu łatwiejsze w symulacji niż będą w terenie. Syntetyczne badanie ma 15-punktową różnicę odsetków odpowiedzi i 4000 respondentów, więc werdykty są czyste. Pilotaż będzie miał różnicę rzędu 7–8 punktów i około 2200 respondentów, a przy takiej skali sporo pytań wróci jako nierozstrzygnięte, zamiast trafić do jednej z kolumn. Właśnie dlatego podstawowym produktem pilotażu jest oszacowanie wraz z przedziałem — $\hat{\rho}$ z przedziałem ufności, dla każdego konstruktu — a werdykty są tym, co możemy dopowiedzieć tam, gdzie prerejestrowany test okaże się rozstrzygający.
+Dwie rzeczy są tu łatwiejsze w symulacji niż będą w terenie. Syntetyczne badanie ma 15-punktową różnicę odsetków odpowiedzi i 4000 respondentów, więc werdykty są czyste. Pilotaż będzie miał różnicę rzędu 7–8 punktów i około 2000 respondentów, a przy takiej skali sporo pytań wróci jako nierozstrzygnięte, zamiast trafić do jednej z kolumn. Właśnie dlatego podstawowym produktem pilotażu jest oszacowanie wraz z przedziałem — $\hat{\rho}$ z przedziałem ufności, dla każdego konstruktu — a werdykty są tym, co możemy dopowiedzieć tam, gdzie prerejestrowany test okaże się rozstrzygający.
 
-Warto też zwrócić uwagę na kierunek wnioskowania. O pytaniu mówimy, że "wykazuje nieignorowalny brak odpowiedzi", jeżeli test ramienia z kontrolą zmiennych demograficznych prowadzi do odrzucenia hipotezy zerowej; $\hat{\rho}$ pełni rolę potwierdzającą. Test jest pierwszy, ponieważ jest nieparametryczny i ma poprawny rozmiar, podczas gdy heckmanowskie oszacowania $\rho$ odrzucają zbyt często przy błędnej specyfikacji. Twierdzenie o *ignorowalności* formułujemy zaś afirmatywnie, za pomocą testu równoważności (TOST wobec najmniejszego istotnego efektu ±0,10 SD, a dla pytań binarnych ±3 punkty procentowe), nigdy zaś przez brak istotności. "Nie wykryliśmy problemu" i "możemy zaświadczyć, że nie ma problemu istotnej wielkości" to dwa różne stwierdzenia — i tylko drugie jest cokolwiek warte dla programu badawczego.
+Warto też zwrócić uwagę na kierunek wnioskowania. O pytaniu mówimy, że "wykazuje nieignorowalny brak odpowiedzi", jeżeli test ramienia z kontrolą zmiennych demograficznych prowadzi do odrzucenia hipotezy zerowej; $\hat{\rho}$ pełni rolę potwierdzającą. Test jest pierwszy, ponieważ jest nieparametryczny i ma poprawny rozmiar, podczas gdy heckmanowskie oszacowania $\rho$ odrzucają zbyt często przy błędnej specyfikacji. Twierdzenie o *ignorowalności* formułujemy zaś afirmatywnie, za pomocą testu równoważności (TOST wobec najmniejszego istotnego efektu ±0,10 SD, również dla pytań binarnych), nigdy zaś przez brak istotności. "Nie wykryliśmy problemu" i "możemy zaświadczyć, że nie ma problemu istotnej wielkości" to dwa różne stwierdzenia — i tylko drugie jest cokolwiek warte dla programu badawczego.
 
 # Co to oznacza dla polaryzacji
 
@@ -298,7 +309,7 @@ Szersza lekcja dotyczy tego, co to obciążenie robi z porównaniami **wewnątrz
 
 ## Co rzeczywiste badanie ma, a czego symulacja nie miała
 
-**Zewnętrzne punkty odniesienia.** Symulacja mogła sprawdzić swoje odpowiedzi wobec znanej prawdy. Pilotaż konfrontuje część pytań z danymi urzędowymi: deklarowaną frekwencję i głosowanie w wyborach do Sejmu 2023 oraz w wyborach prezydenckich 2025 z wynikami PKW; palenie papierosów i posiadanie prawa jazdy z GUS/EHIS; praktyki religijne z CBOS/ISKK. Wartości te potwierdzają kierunek i rząd wielkości, a nie dokładność co do miejsca po przecinku — błąd pamięci jest realny — ale korekta, która przesuwa deklarowaną frekwencję w stronę danych PKW, robi coś widocznego i sprawdzalnego.
+**Zewnętrzne punkty odniesienia.** Symulacja mogła sprawdzić swoje odpowiedzi wobec znanej prawdy. Pilotaż konfrontuje część pytań z danymi urzędowymi: deklarowaną frekwencję i głosowanie w wyborach do Sejmu 2023 oraz w wyborach prezydenckich 2025 z wynikami PKW; palenie papierosów z GUS/EHIS; posiadanie prawa jazdy z danych CEPiK; praktyki religijne z CBOS/ISKK. Wartości te potwierdzają kierunek i rząd wielkości, a nie dokładność co do miejsca po przecinku — błąd pamięci jest realny — ale korekta, która przesuwa deklarowaną frekwencję w stronę danych PKW, robi coś widocznego i sprawdzalnego.
 
 **Pięciostopniowy gradient skłonności bez dodatkowych kosztów.** Wewnątrz ramienia A fala przypomnienia, po której dana osoba wypełniła ankietę (0, 1, 2, 3), jest stopniowalną, wynikającą z protokołu miarą niechęci. W połączeniu z ramieniem B daje to pięć uporządkowanych poziomów skłonności zamiast dwóch, co pozwala testować trend i zabezpiecza przed niemonotonicznością — jednym ze znanych sposobów, w jakie ten projekt może zawieść. Daje też czysty test placebo: respondenci z ramienia B i respondenci z fali 0 w ramieniu A otrzymali w momencie wypełniania identyczny bodziec, więc jakakolwiek różnica między nimi sygnalizowałaby usterkę instrumentu.
 
@@ -329,25 +340,7 @@ Szersza lekcja dotyczy tego, co to obciążenie robi z porównaniami **wewnątrz
 
 ## Po co to wszystko, w jednym akapicie
 
-Zamiast zakładać, że osoby ignorujące nasze sondaże myślą tak samo jak te, które na nie odpowiadają, przeprowadzamy wewnątrz badania mały eksperyment z randomizacją, który mierzy — pytanie po pytaniu — na ile to założenie się trzyma, i naprawia liczby tam, gdzie się nie trzyma. Diagnostyka kosztuje niemal nic, bo losuje parametr realizacji terenowej, którym agencje i tak manipulują. Produktem nie jest skorygowany zbiór danych. Są nim oszacowania: dla każdego konstruktu — jak silnie skłonność do udziału wiąże się z treścią odpowiedzi, wraz z przedziałem; wskazanie tych pytań, przy których związek ten jest na tyle wyraźny, że da się go wykazać; protokół, który inne polskie badania mogą do siebie dołączyć; oraz wielkości efektów potrzebne do tego, by badanie w pełnej skali miało odpowiednią moc. Pilotaż na 2200 respondentach nie rozstrzygnie wszystkich pytań, które stawia — jak pokazuje symulacja, część wróci jako nierozstrzygnięte — ale powie, jak duży jest problem i czego wymagałoby jego porządne zmierzenie. I po to właśnie robi się pilotaż.
-
-# Słowniczek
-
-**Nieignorowalny brak odpowiedzi** — brak odpowiedzi, którego wzorzec zależy od treści odpowiedzi, jakiej dana osoba by udzieliła, przy kontroli cech obserwowanych; równoważnie $\rho \neq 0$. Ważenie nie potrafi go ani wykryć, ani naprawić.
-
-**Randomizowany instrument odpowiedzi** — losowo przydzielone oddziaływanie, które zmienia prawdopodobieństwo udzielenia odpowiedzi, nie zmieniając odpowiedzi tych, którzy jej udzielają. Tutaj: intensywność kontaktu.
-
-**Warunek włączenia** — wymóg, by instrument wyraźnie zmieniał prawdopodobieństwo odpowiedzi. Sprawdzany równaniem odpowiedzi pierwszego stopnia.
-
-**Warunek wyłączenia** — wymóg, by instrument nie wpływał bezpośrednio na treść odpowiedzi. Gwarantowany w wartości oczekiwanej przez randomizację; w praktyce chroniony krótkim oknem realizacji, symetryczną gratyfikacją i testem placebo.
-
-**Raking** — iteracyjne dopasowanie wag do rozkładów brzegowych w populacji; konwencjonalna praktyka polska i punkt odniesienia, który ten projekt poddaje sprawdzeniu.
-
-**Model selekcji (Heckmana)** — model dwóch równań, szacujący łącznie udział w badaniu i zmienną wynikową, z parametrem korelacji $\rho$ między ich składnikami losowymi. Przy poprawnym instrumencie w równaniu udziału pozwala ekstrapolować na nierespondentów.
-
-**TOST (dwa jednostronne testy)** — testowanie równoważności: procedura pozwalająca *stwierdzić*, że efekt jest mniejszy od zadanego progu, zamiast jedynie nie wykryć efektu.
-
-**Granice Manskiego** — wolne od założeń granice wielkości populacyjnej przy danym odsetku odpowiedzi; z konstrukcji szerokie i przypominające, co same dane są w stanie unieść.
+Zamiast zakładać, że osoby ignorujące nasze sondaże myślą tak samo jak te, które na nie odpowiadają, przeprowadzamy wewnątrz badania mały eksperyment z randomizacją, który mierzy — pytanie po pytaniu — na ile to założenie się trzyma, i naprawia liczby tam, gdzie się nie trzyma. Diagnostyka kosztuje niemal nic, bo losuje parametr realizacji terenowej, którym agencje i tak manipulują. Produktem nie jest skorygowany zbiór danych. Są nim oszacowania: dla każdego konstruktu — jak silnie skłonność do udziału wiąże się z treścią odpowiedzi, wraz z przedziałem; wskazanie tych pytań, przy których związek ten jest na tyle wyraźny, że da się go wykazać; protokół, który inne polskie badania mogą do siebie dołączyć; oraz wielkości efektów potrzebne do tego, by badanie w pełnej skali miało odpowiednią moc. Pilotaż na 2000 respondentach nie rozstrzygnie wszystkich pytań, które stawia — jak pokazuje symulacja, część wróci jako nierozstrzygnięte — ale powie, jak duży jest problem i czego wymagałoby jego porządne zmierzenie.
 
 # Bibliografia
 

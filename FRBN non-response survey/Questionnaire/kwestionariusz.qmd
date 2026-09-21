@@ -41,9 +41,9 @@ Poniższe zasady mają charakter wiążący i wynikają z konstrukcji badania. O
 1. **Brak wymuszania odpowiedzi.** Poza ekranem zgody (M1.1) i weryfikacją wieku (M1.2) **żadne pytanie nie może być obowiązkowe**. Respondent musi mieć możliwość przejścia dalej bez udzielenia odpowiedzi. Braki danych są w tym badaniu przedmiotem analizy, nie usterką.
 2. **Jawne opcje "nie wiem" i "odmowa".** Przy każdym pytaniu o postawy wyświetlane są widoczne opcje *Nie wiem / Trudno powiedzieć* (kod 97) oraz *Odmowa odpowiedzi* (kod 98). Nie wolno ich ukrywać, wyszarzać ani umieszczać poza główną listą.
 3. **Brak imputacji i brak własnych reguł czyszczenia.** Zbiór przekazywany Zamawiającemu zawiera odpowiedzi surowe, z zachowaniem odrębnych kodów 97 i 98. Wykonawca nie usuwa rekordów według własnych kryteriów jakości.
-4. **Rotacja.** Kolejność pozycji rotowana w blokach M5, M6 i M7 (rotacja na poziomie pozycji, niezależnie dla każdego respondenta). W M4.4 i M4.6 rotowana kolejność komitetów wyborczych, z wyłączeniem pozycji "inny", "nie pamiętam", "odmowa", które zawsze pozostają na końcu. Fakt i porządek rotacji zapisywane w danych.
+4. **Rotacja.** Kolejność pozycji rotowana w blokach M5, M6 i M7 (rotacja na poziomie pozycji, niezależnie dla każdego respondenta). W M4.3, M4.5, M4.7 i M4.9 rotowana kolejność komitetów wyborczych i kandydatów, z wyłączeniem pozycji "inny", "głos nieważny", "nie pamiętam", "nie wiem", "odmowa", które zawsze pozostają na końcu. Fakt i porządek rotacji zapisywane w danych.
 5. **Jedno pytanie kontrolne uważności** (M10.1), umieszczone wewnątrz bloku M6. Nie wolno dodawać kolejnych pytań kontrolnych ani pułapek czasowych.
-6. **Paradane.** Dla każdego respondenta zapisywane są: oznaczenie grupy (A/B), fala przypomnienia po której nastąpiło wypełnienie (0/1/2/3), identyfikator partii zaproszeń, znaczniki czasowe rozpoczęcia i zakończenia, czas na poszczególnych ekranach (jeżeli system to rejestruje), typ urządzenia oraz numer ostatniego wyświetlonego pytania w razie przerwania.
+6. **Paradane.** Dla każdego respondenta zapisywane są: oznaczenie grupy (A/B), fala przypomnienia po której nastąpiło wypełnienie (0/1/2/3; w razie uruchomienia klauzuli eskalacji również 4), identyfikator partii zaproszeń, znaczniki czasowe rozpoczęcia i zakończenia, czas na poszczególnych ekranach (jeżeli system to rejestruje), typ urządzenia oraz numer ostatniego wyświetlonego pytania w razie przerwania.
 7. **Zapis przerwań.** Rekordy niedokończone są zachowywane i przekazywane wraz z numerem pytania, na którym nastąpiło przerwanie.
 8. **Ekrany dostarczone przez Zamawiającego** (ekran informacyjny, ekran zgody, nota po badaniu) wyświetlane są w brzmieniu zatwierdzonym przez Komisję ds. Etyki Badań Naukowych, bez zmian redakcyjnych.
 9. **Jeden ekran — jedno pytanie lub jeden blok.** Baterie M5, M6, M7 mogą być prezentowane jako tabele (grid), pozostałe pytania pojedynczo.
@@ -77,7 +77,8 @@ Kody 97 i 98 stosowane są konsekwentnie w całym kwestionariuszu, zgodnie z kon
 | M8 | Ideologia i kontrole tematyczne | 5 | 0:55 |
 | M9 | Zachowania o znanej wartości populacyjnej | 3 | 0:30 |
 | M10 | Kontrola uważności (wewnątrz M6) | 1 | 0:10 |
-| | **Razem** | **58** | **≈ 12:00** |
+| | **Razem pytań merytorycznych (M2–M9)** | **58** | |
+| | **Razem z kontrolą uważności** | **59** | **≈ 12:00** |
 
 : {tbl-colwidths="[8,52,20,20]"}
 
@@ -99,7 +100,7 @@ Rodzina konfirmacyjna obejmuje **cztery konstrukty, po jednym teście na konstru
 | **H3** | Indeks z M6 (kodowany progresywnie) | β_Z > 0 | Poglądy konserwatywne skoncentrowane wśród osób o niskiej skłonności do odpowiadania |
 | **H4** | Indeks z M7 (kodowany liberalnie) | β_Z > 0 | Osoby przywiązane do norm demokratycznych nadreprezentowane wśród chętnych respondentów |
 | **H-łączna** | Test łączny dla H1–H4 (metoda Browna) | odrzucenie dla co najmniej jednego konstruktu | Główne twierdzenie konfirmacyjne: test łączny jest istotnie lepiej wysycony mocą niż którykolwiek pojedynczy konstrukt |
-| **H5** | M8.1–M8.5, M9.1–M9.3 | β_Z ≈ 0, test równoważności TOST, SESOI ± 0,10 SD dla **wszystkich** pytań, również binarnych | Twierdzenie o ignorowalności musi być potwierdzone pozytywnie, a nie wywiedzione z braku istotności. Granica ± 3 pp dla pytań binarnych byłaby nieosiągalna przy zakładanej liczebności |
+| **H5** | M8.1–M8.5, M9.1–M9.2 | β_Z ≈ 0, test równoważności TOST, SESOI ± 0,10 SD dla **wszystkich** pytań, również binarnych | Twierdzenie o ignorowalności musi być potwierdzone pozytywnie, a nie wywiedzione z braku istotności. Granica ± 3 pp dla pytań binarnych byłaby nieosiągalna przy zakładanej liczebności |
 
 : {tbl-colwidths="[12,26,20,42]"}
 
@@ -113,7 +114,7 @@ Rodzina konfirmacyjna obejmuje **cztery konstrukty, po jednym teście na konstru
 
 # M1. Ekran informacyjny, zgoda i weryfikacja wieku
 
-**M1.0** — Ekran informacyjny w brzmieniu Załącznika A wniosku do Komisji ds. Etyki Badań Naukowych (dokument osobny, dostarczany wykonawcy).
+**M1.0** — Ekran informacyjny w brzmieniu Załącznika 1 wniosku do Komisji ds. Etyki Badań Naukowych (dokument osobny, dostarczany wykonawcy).
 
 **M1.1 `zgoda`** — ekran zgody. *(Pytanie obowiązkowe. Zaznaczenie opcji 2 kończy sesję ekranem podziękowania.)*
 
@@ -296,7 +297,7 @@ Rodzina konfirmacyjna obejmuje **cztery konstrukty, po jednym teście na konstru
 
 # M4. Frekwencja i zachowania wyborcze
 
-*Rola: H1 (M4.1, M4.2); pozostałe — zmienne porównywane z oficjalnymi wynikami PKW. Bez rotacji między pytaniami; rotacja list komitetów wewnątrz M4.4, M4.6, M4.8.*
+*Rola: H1 (M4.1, M4.2); pozostałe — zmienne porównywane z oficjalnymi wynikami PKW. Bez rotacji między pytaniami; rotacja list komitetów i kandydatów wewnątrz M4.3, M4.5, M4.7 i M4.9.*
 
 **M4.1 `sklonfrek`** — Używając skali od 0 do 10, jak ocenia Pani/Pan prawdopodobieństwo, że weźmie udział w najbliższych wyborach parlamentarnych? *(Skala S3.)*
 
@@ -313,7 +314,7 @@ Rodzina konfirmacyjna obejmuje **cztery konstrukty, po jednym teście na konstru
 | 5 | Na pewno nie wziąłbym/wzięłabym udziału |
 | 98 | Odmowa odpowiedzi |
 
-*H1. Zmienna binarna do analizy głównej: kod 1 vs pozostałe ("frekwencja pewna").*
+*H1 — wynik wtórny (konfirmacyjny jest M4.1). Raportowana zarówno jako zmienna porządkowa pięciostopniowa, jak i binarna: kod 1 vs pozostałe ("frekwencja pewna").*
 
 **M4.3 `glosniedz`** — A gdyby wybory do Sejmu odbywały się w najbliższą niedzielę, na kandydatów którego ugrupowania oddałaby Pani / oddałby Pan swój głos? *(Rotacja pozycji 1–8; pozycje 9–11 zawsze na końcu.)*
 
@@ -515,7 +516,7 @@ Rodzina konfirmacyjna obejmuje **cztery konstrukty, po jednym teście na konstru
 
 # M9. Zachowania o znanej wartości populacyjnej
 
-*Rola: H5 — kontrole negatywne z zewnętrznym punktem odniesienia. Bez rotacji.*
+*Rola: H5 — kontrole negatywne z zewnętrznym punktem odniesienia (M9.1, M9.2). M9.3 poza rodziną H5, eksploracyjnie. Bez rotacji.*
 
 **M9.1 `palenie`** — Czy obecnie pali Pani/Pan wyroby tytoniowe (papierosy, w tym elektroniczne, cygara, fajkę)?
 
@@ -548,13 +549,13 @@ Rodzina konfirmacyjna obejmuje **cztery konstrukty, po jednym teście na konstru
 | 3 | Rzadziej |
 | 98 | Odmowa odpowiedzi |
 
-*Punkt odniesienia: GUS, Społeczeństwo informacyjne w Polsce. Uwaga interpretacyjna: w populacji panelowej rozkład będzie silnie skośny; pozycja służy przede wszystkim udokumentowaniu odległości panelu od populacji ogólnej, nie zaś jako pełnoprawny test H5.*
+*Punkt odniesienia: GUS, Społeczeństwo informacyjne w Polsce. Uwaga interpretacyjna: w populacji panelowej rozkład będzie silnie skośny, więc pozycja ta **nie wchodzi do rodziny konfirmacyjnej H5** i nie jest objęta testem równoważności. Służy udokumentowaniu odległości panelu od populacji ogólnej i raportowana jest eksploracyjnie.*
 
 {{< pagebreak >}}
 
 # Ekran końcowy
 
-Po ostatnim pytaniu wyświetlany jest ekran podziękowania zawierający **notę informacyjną po badaniu (debriefing)** w brzmieniu Załącznika B wniosku do Komisji ds. Etyki Badań Naukowych. Nota wyjaśnia losowe zróżnicowanie liczby przypomnień, powód, dla którego nie mogło ono zostać ujawnione wcześniej, oraz sposób wycofania odpowiedzi.
+Po ostatnim pytaniu wyświetlany jest ekran podziękowania zawierający **notę informacyjną po badaniu (debriefing)** w brzmieniu Załącznika 2 wniosku do Komisji ds. Etyki Badań Naukowych. Nota wyjaśnia losowe zróżnicowanie liczby przypomnień, powód, dla którego nie mogło ono zostać ujawnione wcześniej, oraz sposób wycofania odpowiedzi.
 
 Ekran końcowy wyświetlany jest **identycznie w obu grupach**.
 
@@ -568,8 +569,8 @@ Ekran końcowy wyświetlany jest **identycznie w obu grupach**.
 | `intpol` | M3 | 4-stopniowa | **M-check**; poza X w specyfikacji podstawowej |
 | `uwaga`, `media` | M3 | kategorialne | Eksploracyjne |
 | `wiedza1`–`wiedza3` | M3 | binarne (poprawna/niepoprawna) | Eksploracyjne; indeks `idx_wiedza` = suma poprawnych |
-| `sklonfrek` | M4 | 0–10 | **H1** |
-| `frekniedz` | M4 | 5-stopniowa → binarna | **H1** |
+| `sklonfrek` | M4 | 0–10 | **H1** — wynik konfirmacyjny |
+| `frekniedz` | M4 | 5-stopniowa → binarna | H1 — wynik wtórny |
 | `glosniedz` | M4 | kategorialna | Podział na elektoraty |
 | `frek2023`, `glos2023` | M4 | kategorialne | Punkt odniesienia PKW |
 | `frek2025r1`, `glos2025r1`, `frek2025r2`, `glos2025r2` | M4 | kategorialne | Punkt odniesienia PKW |
@@ -579,11 +580,12 @@ Ekran końcowy wyświetlany jest **identycznie w obu grupach**.
 | `uwaga_test` | M10 | binarna | Wskaźnik jakości, według grup |
 | `norm1`–`norm6` | M7 | 5-stopniowe / 0–10 | **H4**, indeks `idx_norm` |
 | `lewprawo`, `ue`, `pol1`–`pol3` | M8 | 0–10 / 5-stopniowa / 1–7 | **H5** (TOST) |
-| `palenie`, `prawojazdy`, `internet` | M9 | kategorialne | **H5** (TOST) + punkt odniesienia |
+| `palenie`, `prawojazdy` | M9 | kategorialne | **H5** (TOST) + punkt odniesienia |
+| `internet` | M9 | kategorialna | Eksploracyjne; poza rodziną H5 (zob. M9.3) |
 
 : {tbl-colwidths="[26,8,22,44]"}
 
-**Zmienne dostarczane przez wykonawcę** (nie pochodzą z kwestionariusza): `grupa` (A/B), `fala` (0/1/2), `partia_zapr`, `czas_start`, `czas_koniec`, `urzadzenie`, `ostatnie_pyt`, `status` — zgodnie z Załącznikiem 2 zapytania ofertowego.
+**Zmienne dostarczane przez wykonawcę** (nie pochodzą z kwestionariusza): `grupa` (A/B), `fala` (0/1/2/3, wyjątkowo 4 — zob. klauzula eskalacji w zapytaniu ofertowym), `partia_zapr`, `czas_start`, `czas_koniec`, `urzadzenie`, `ostatnie_pyt`, `status` — zgodnie z Załącznikiem 2 zapytania ofertowego.
 
 # Pochodzenie pytań
 
@@ -620,4 +622,4 @@ Pliki źródłowe znajdują się w repozytorium `Writing`, w katalogu `data/`.
 3. **Weryfikacja danych PKW** — dokładne wartości frekwencji i wyników dla wyborów 2023 i 2025 (obie tury).
 4. **Pomiar czasu** — po zaprogramowaniu przez wykonawcę zmierzyć medianę czasu na miękkim starcie; jeżeli przekroczy 12 minut, skrócić w pierwszej kolejności M5 (redukcja liderów z czterech do dwóch) i M3.6.
 5. **Wersja angielska** — tłumaczenie na potrzeby pre-rejestracji na OSF i publikacji w repozytorium.
-6. **Załączenie do wniosku etycznego** jako Załącznik C oraz do umowy z wykonawcą jako podstawa programowania.
+6. **Załączenie do wniosku etycznego** jako Załącznik 3 oraz do umowy z wykonawcą jako podstawa programowania.

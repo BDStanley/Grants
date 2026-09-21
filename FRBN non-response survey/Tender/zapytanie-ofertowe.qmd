@@ -1,8 +1,7 @@
 ---
 title: "Zapytanie ofertowe"
 subtitle: "Realizacja ogólnopolskiego badania CAWI z eksperymentalnym zróżnicowaniem protokołu kontaktu"
-date: "2026-09-16"
-date-format: "D MMMM YYYY"
+date: "[T1]"
 lang: pl
 format:
   typst:
@@ -18,6 +17,12 @@ format:
     toc-depth: 2
 ---
 
+::: {.callout-important title="Terminy do uzupełnienia przed wysłaniem zapytania"}
+Wszystkie terminy kalendarzowe w niniejszym dokumencie zastąpiono symbolami **[T1]–[T15]**. Ich znaczenie definiuje tabela w rozdz. 7 („Harmonogram postępowania i realizacji"). Przed wysłaniem zapytania należy uzupełnić tę tabelę i zastąpić symbole datami w całym dokumencie wraz z załącznikami.
+
+**Terminy względne pozostają bez zmian i nie podlegają uzupełnieniu:** numeracja dni protokołu kontaktu (dzień 0, 3, 7, 11, 13, 14) liczona jest od dnia wysłania zaproszeń w badaniu głównym, a nie od daty kalendarzowej.
+:::
+
 # Zamawiający i dane postępowania
 
 | | |
@@ -29,7 +34,7 @@ format:
 | **Finansowanie** | Fundusz Rozwoju Badań Naukowych Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C |
 | **Przedmiot zamówienia** | Usługa realizacji terenowej ogólnopolskiego badania CAWI na próbie ok. 2 000 zrealizowanych wywiadów, z eksperymentalnym zróżnicowaniem protokołu kontaktu i przekazaniem pełnych paradanych |
 | **Maksymalna wartość zamówienia** | do 21 000,00 zł netto |
-| **Termin składania ofert** | **30 września 2026 r., godz. 23:59** |
+| **Termin składania ofert** | **[T4]** |
 | **Termin związania ofertą** | 60 dni od upływu terminu składania ofert |
 | **Sposób złożenia oferty** | Pocztą elektroniczną na adres bstanley\@swps.edu.pl, w formacie PDF, na formularzu stanowiącym Załącznik 1 |
 
@@ -45,7 +50,7 @@ Celem projektu jest empiryczna ocena tego, **w jakim stopniu wyniki polskich son
 
 Metoda polega na **losowym zróżnicowaniu intensywności kontaktu** przy całkowicie identycznej treści badania. Zaproszona pula jest dzielona losowo na dwie grupy:
 
-- **Grupa A (kontakt standardowy)** — zaproszenie w dniu 0 oraz dwa przypomnienia (dzień 4 i dzień 9);
+- **Grupa A (kontakt intensywny)** — zaproszenie w dniu 0 oraz **trzy przypomnienia (dzień 3, dzień 7 i dzień 11)**;
 - **Grupa B (kontakt ograniczony)** — wyłącznie zaproszenie w dniu 0, bez przypomnień.
 
 Grupa B osiąga niższy wskaźnik realizacji i obejmuje wyłącznie osoby najchętniej uczestniczące w badaniach; grupa A obejmuje dodatkowo osoby mniej chętne. Porównanie odpowiedzi między grupami pozwala ustalić, dla których pytań skłonność do udziału wiąże się z treścią odpowiedzi.
@@ -55,7 +60,9 @@ Grupa B osiąga niższy wskaźnik realizacji i obejmuje wyłącznie osoby najch�
 1. **Realizowany wskaźnik odpowiedzi w grupie B ma być niższy niż w grupie A — to jest zamierzony efekt badania, a nie problem do naprawienia.** Prosimy, aby nie podejmować żadnych działań zmierzających do wyrównania realizacji między grupami.
 2. **Liczy się cała zaproszona pula, nie tylko zrealizowane wywiady.** Mianownik (liczba i charakterystyka osób zaproszonych, które nie odpowiedziały) jest równie ważny jak licznik. Stąd szczegółowe wymagania dotyczące paradanych opisane w Załączniku 2.
 
-Projekt uzyska opinię Komisji ds. Etyki Badań Naukowych Uniwersytetu SWPS przed rozpoczęciem realizacji terenowej. Zaznaczamy, że grupa B otrzymuje **mniej** kontaktów niż standard branżowy, a zatem manipulacja eksperymentalna zmniejsza, a nie zwiększa, obciążenie uczestników panelu.
+**Dlaczego trzy przypomnienia, a nie dwa.** Zamawiający przeprowadził symulacyjną analizę mocy statystycznej zaprojektowanego badania, opartą na parametrach odpowiadających realiom polskich paneli internetowych. Wielkością, która decyduje o rozstrzygalności badania, jest **różnica wskaźników realizacji między grupami**, a nie liczba zrealizowanych wywiadów. Protokół z dwoma przypomnieniami daje różnicę rzędu 5 punktów procentowych, przy której moc testów pozostaje niewystarczająca; trzecie przypomnienie podnosi ją do ok. 7,6 punktu. Stąd intensywniejszy protokół w grupie A oraz przeniesienie udokumentowanego przyrostu realizacji dzięki przypomnieniom do wymagań obowiązkowych (W6).
+
+Projekt uzyska opinię Komisji ds. Etyki Badań Naukowych Uniwersytetu SWPS przed rozpoczęciem realizacji terenowej. Zaznaczamy, że grupa B otrzymuje **mniej** kontaktów niż standard branżowy, a zatem — w skali całej zaproszonej puli — manipulacja eksperymentalna zmniejsza, a nie zwiększa, obciążenie uczestników panelu.
 
 # Opis przedmiotu zamówienia
 
@@ -63,8 +70,8 @@ Projekt uzyska opinię Komisji ds. Etyki Badań Naukowych Uniwersytetu SWPS prze
 
 Przedmiotem zamówienia jest kompleksowa realizacja terenowa badania ilościowego metodą CAWI, obejmująca:
 
-1. wylosowanie z panelu wykonawcy puli ok. 20 000 osób, prestratyfikowanej według płci × wieku × wykształcenia × regionu (NUTS2);
-2. losowy podział puli w proporcji 50/50 na grupę A i grupę B;
+1. wylosowanie z panelu wykonawcy puli **ok. 18 500 osób**, prestratyfikowanej według płci × wieku × wykształcenia × regionu (NUTS2);
+2. losowy podział puli w proporcji **42/58** — ok. 7 800 osób do grupy A i ok. 10 700 osób do grupy B;
 3. zaprogramowanie i przetestowanie kwestionariusza dostarczonego przez Zamawiającego (ok. 60 pytań, mediana czasu wypełnienia ≤ 12 minut), w tym: ekran informacyjny i ekran zgody, weryfikacja pełnoletności, jawne opcje "trudno powiedzieć" i "odmowa odpowiedzi", randomizacja kolejności pytań w wskazanych bateriach, jedno pytanie sprawdzające uważność, ekran podziękowania z notą po badaniu;
 4. realizację miękkiego startu (ok. 100 zaproszeń na grupę) i przekazanie danych z niego do weryfikacji przez Zamawiającego;
 5. realizację badania głównego zgodnie z protokołem kontaktu opisanym w Załączniku 2;
@@ -78,14 +85,17 @@ Przedmiotem zamówienia jest kompleksowa realizacja terenowa badania ilościoweg
 |:--------------------------|:------------------------------------------|
 | Metoda | CAWI, panel internetowy wykonawcy |
 | Populacja | Dorośli mieszkańcy Polski (18+) |
-| Liczebność zaproszonych | ok. 20 000 (ok. 10 000 na grupę) |
-| Zakładana liczba wywiadów | ok. 2 000 (ok. 1 200 w grupie A, ok. 700–800 w grupie B) |
+| Liczebność zaproszonych | **ok. 18 500** (ok. 7 800 w grupie A, ok. 10 700 w grupie B) |
+| Proporcja podziału | **42/58** (grupa A / grupa B) |
+| Zakładana liczba wywiadów | ok. 2 000 (**ok. 1 200 w grupie A, ok. 800 w grupie B**) |
 | Minimalna akceptowalna liczba wywiadów | 1 800 łącznie, przy czym nie mniej niż 650 w grupie B |
 | Długość kwestionariusza | ok. 60 pytań, mediana ≤ 12 minut |
 | Okno terenowe | 14 dni kalendarzowych, identyczne dla obu grup |
 | Gratyfikacja | Standardowa gratyfikacja panelowa, **identyczna w obu grupach** |
 
 : {tbl-colwidths="[38,62]"}
+
+**Uzasadnienie nierównej proporcji podziału.** Testowaną wielkością jest **różnica między grupami**, a jej błąd standardowy jest tym mniejszy, im bardziej zbliżone są liczby wywiadów wnoszone przez obie grupy. Ponieważ grupa B osiąga mniej więcej o połowę niższy wskaźnik realizacji, zaproszenie do niej większej liczby osób zbliża te liczby do siebie. Pełne wyrównanie wymagałoby proporcji ok. 33/67; przyjęta proporcja 42/58 jest kompromisem między precyzją oszacowania a łączną liczbą wywiadów. Zmiana proporcji nie zwiększa kosztu ani nakładu pracy — łączna liczba zaproszeń i wysyłek pozostaje w granicach wyceny.
 
 **Uwaga dotycząca liczebności:** podane liczby wywiadów są **wartościami oczekiwanymi, a nie kwotami do zrealizowania**. Wykonawca nie ponosi odpowiedzialności za to, że rzeczywista realizacja w grupie B okaże się niższa od oczekiwanej, o ile protokół kontaktu został zachowany. Odpowiedzialność wykonawcy dotyczy **liczby wysłanych zaproszeń i zgodności protokołu**, nie zaś liczby uzyskanych wywiadów, z zastrzeżeniem mechanizmu dosyłek opisanego w Załączniku 2 pkt 5.
 
@@ -95,15 +105,17 @@ Oferta, która nie potwierdza wszystkich poniższych wymagań, podlega odrzuceni
 
 **W1. Realizacja na próbie imiennie wylosowanej, wyłącznie na podstawie zaproszeń.** Badanie jest kierowane do zamkniętej, wcześniej wylosowanej puli osób, drogą zaproszenia (e-mail lub powiadomienie w aplikacji). **Niedopuszczalne jest:** kierowanie badania przez router (udostępnianie ankiety osobom logującym się do panelu), stosowanie otwartych linków, rekrutacja spoza wylosowanej puli oraz jakiekolwiek udostępnianie badania osobom niezaproszonym. *Jest to warunek rozstrzygający: bez zamkniętego mianownika badanie traci sens metodologiczny.*
 
-**W2. Losowy podział puli 50/50 na grupę A i grupę B**, prestratyfikowany według płci × wieku × wykształcenia × regionu, wykonany albo z użyciem ziarna losowego dostarczonego przez Zamawiającego, albo procedurą udokumentowaną w sposób umożliwiający Zamawiającemu weryfikację zrównoważenia grup.
+**W2. Losowy podział puli w proporcji 42/58 na grupę A i grupę B**, prestratyfikowany według płci × wieku × wykształcenia × regionu, wykonany albo z użyciem ziarna losowego dostarczonego przez Zamawiającego, albo procedurą udokumentowaną w sposób umożliwiający Zamawiającemu weryfikację zrównoważenia grup.
 
-**W3. Ścisłe przestrzeganie protokołu kontaktu** opisanego w Załączniku 2, w tym: identyczna treść i nadawca zaproszenia w obu grupach; dwa przypomnienia wyłącznie w grupie A (dzień 4 ± 1 i dzień 9 ± 1); **brak jakichkolwiek przypomnień w grupie B**; symetria kanałów kontaktu (jeżeli przypomnienia obejmują powiadomienia w aplikacji, dotyczy to wyłącznie grupy A — grupa B nie otrzymuje ani e-maila, ani powiadomienia); identyczna gratyfikacja; **brak zarządzania kwotami w trakcie realizacji**; **brak automatycznych dosyłek uruchamianych przez systemy wykonawcy**; zamknięcie obu grup w tym samym dniu.
+**W3. Ścisłe przestrzeganie protokołu kontaktu** opisanego w Załączniku 2, w tym: identyczna treść i nadawca zaproszenia w obu grupach; **trzy przypomnienia wyłącznie w grupie A (dzień 3 ± 1, dzień 7 ± 1 i dzień 11 ± 1)**; **brak jakichkolwiek przypomnień w grupie B**; symetria kanałów kontaktu (jeżeli przypomnienia obejmują powiadomienia w aplikacji, dotyczy to wyłącznie grupy A — grupa B nie otrzymuje ani e-maila, ani powiadomienia); identyczna gratyfikacja; **brak zarządzania kwotami w trakcie realizacji**; **brak automatycznych dosyłek uruchamianych przez systemy wykonawcy**; zamknięcie obu grup w tym samym dniu.
 
 **W4. Przekazanie danych na poziomie zaproszonego** w zakresie określonym w Załączniku 2 pkt 6, w postaci spseudonimizowanej, zgodnej z RODO — **albo**, jeżeli wykonawca z przyczyn związanych z ochroną danych nie może przekazać zmiennych profilowych dla osób, które nie odpowiedziały, przekazanie **zagregowanych tablic wielodzielczych zaproszonej puli w podziale na grupy** (płeć × wiek × wykształcenie × region × wielkość miejscowości). Prosimy o jednoznaczne wskazanie w ofercie, który z tych wariantów wykonawca oferuje.
 
-**W5. Oznaczenie każdego zrealizowanego wywiadu falą przypomnienia** (0 = wypełnienie po zaproszeniu, 1 = po pierwszym przypomnieniu, 2 = po drugim) oraz identyfikatorem partii zaproszeń; ewentualne dosyłki wyłącznie do obu grup jednocześnie, w proporcji 50/50, z odrębnym identyfikatorem partii.
+**W5. Oznaczenie każdego zrealizowanego wywiadu falą przypomnienia**, przyjmującą wartości **0–3** (0 = wypełnienie po zaproszeniu, 1 = po pierwszym przypomnieniu, 2 = po drugim, 3 = po trzecim), oraz identyfikatorem partii zaproszeń; ewentualne dosyłki wyłącznie do obu grup jednocześnie, w proporcji 42/58, z odrębnym identyfikatorem partii.
 
-**W6. Przedstawienie danych o skuteczności zaproszeń** — udokumentowanych wskaźników realizacji (zaproszenie → wywiad zrealizowany) na porównywalnych badaniach społeczno-politycznych o długości 10–12 minut, osobno dla wariantu bez przypomnień i z przypomnieniami. Dane te stanowią podstawę oceny w kryterium K2 i podstawę do ostatecznego ustalenia wielkości zaproszonej puli.
+**W6. Udokumentowany przyrost realizacji dzięki przypomnieniom.** Wykonawca przedstawia w ofercie udokumentowane wskaźniki realizacji (zaproszenie → wywiad zrealizowany) na porównywalnych badaniach społeczno-politycznych o długości 10–12 minut, **osobno dla wariantu bez przypomnień i dla każdej kolejnej fali przypomnień**, wraz ze wskazaniem badań, z których pochodzą. **Oferta, która nie przedstawia takich danych, podlega odrzuceniu.**
+
+*Uzasadnienie:* różnica wskaźników realizacji między grupami jest jedynym parametrem, który decyduje o tym, czy badanie jest w stanie odpowiedzieć na postawione pytanie badawcze. Bez danych o przyroście realizacji oferty nie da się ocenić pod tym względem. Wymaganie obowiązkowe dotyczy **przedstawienia** danych; ich wysokość podlega odrębnie punktacji w kryterium K2.
 
 **W7. Brak imputacji po stronie wykonawcy** — przekazywany zbiór zawiera surowe odpowiedzi z zachowaniem kodów "trudno powiedzieć" i "odmowa odpowiedzi"; wykonawca nie uzupełnia braków danych ani nie usuwa rekordów według własnych reguł jakościowych bez uzgodnienia z Zamawiającym.
 
@@ -112,7 +124,7 @@ Oferta, która nie potwierdza wszystkich poniższych wymagań, podlega odrzuceni
 O zamówienie mogą ubiegać się wykonawcy, którzy:
 
 1. prowadzą zarejestrowaną działalność gospodarczą w zakresie badań rynku i opinii publicznej;
-2. dysponują **własnym** panelem internetowym o zasięgu ogólnopolskim, umożliwiającym wylosowanie i zaproszenie puli co najmniej 20 000 dorosłych osób w podanym harmonogramie (w przypadku korzystania z panelu podmiotu trzeciego prosimy o wskazanie tego podmiotu w ofercie);
+2. dysponują **własnym** panelem internetowym o zasięgu ogólnopolskim, umożliwiającym wylosowanie i zaproszenie co najmniej 20 000 dorosłych osób w podanym harmonogramie — tj. puli podstawowej ok. 18 500 osób wraz z zapasem na ewentualne dosyłki (w przypadku korzystania z panelu podmiotu trzeciego prosimy o wskazanie tego podmiotu w ofercie);
 3. zrealizowali w okresie ostatnich trzech lat co najmniej dwa ogólnopolskie badania CAWI o liczebności nie mniejszej niż 1 000 wywiadów, o tematyce społecznej lub politycznej;
 4. stosują standardy jakościowe branży (członkostwo w OFBOR, ESOMAR lub równoważne, albo udokumentowane stosowanie równoważnych procedur);
 5. nie są powiązani osobowo ani kapitałowo z Zamawiającym ani z członkami zespołu badawczego.
@@ -144,12 +156,12 @@ gdzie $C_{min}$ to najniższa cena brutto spośród ofert nieodrzuconych, a $C_{
 | Podkryterium | Punkty |
 |:------------------------------------------------------|--:|
 | Udokumentowany wskaźnik realizacji przy pojedynczym zaproszeniu (bez przypomnień): ≥ 9% — 12 pkt; 7–9% — 8 pkt; 5–7% — 4 pkt; < 5% — 0 pkt | 12 |
-| Udokumentowany przyrost realizacji dzięki przypomnieniom (różnica w punktach procentowych między wariantem z przypomnieniami a bez): ≥ 6 pp — 12 pkt; 4–6 pp — 8 pkt; 2–4 pp — 4 pkt; < 2 pp — 0 pkt | 12 |
+| Udokumentowany przyrost realizacji dzięki przypomnieniom (różnica w punktach procentowych między wariantem z pełnym cyklem przypomnień a wariantem bez przypomnień): **≥ 8 pp — 12 pkt; 6–8 pp — 8 pkt; 4–6 pp — 4 pkt; < 4 pp — 0 pkt** | 12 |
 | Liczebność aktywnej części panelu umożliwiająca realizację z jednego losowania, bez dosyłek: ≥ 60 000 — 6 pkt; 30 000–60 000 — 3 pkt; < 30 000 — 0 pkt | 6 |
 
 : {tbl-colwidths="[85,15]"}
 
-*Uwaga:* podkryterium drugie ma dla projektu znaczenie kluczowe — siła instrumentu badawczego zależy wprost od różnicy w realizacji między grupami. Oferta dokumentująca przyrost poniżej 2 pp może zostać uznana za niewykonalną metodologicznie i odrzucona po wyjaśnieniach.
+*Uwaga:* podkryterium drugie ma dla projektu znaczenie kluczowe — siła instrumentu badawczego zależy wprost od różnicy w realizacji między grupami. Oferta dokumentująca przyrost poniżej 4 pp może zostać uznana za niewykonalną metodologicznie i odrzucona po wyjaśnieniach.
 
 **K3 — Zakres i jakość danych (25 pkt).**
 
@@ -166,7 +178,7 @@ gdzie $C_{min}$ to najniższa cena brutto spośród ofert nieodrzuconych, a $C_{
 
 | Podkryterium | Punkty |
 |:------------------------------------------------------|--:|
-| Gotowość do uruchomienia badania głównego w dniu 26 października 2026 r. | 7 |
+| Gotowość do uruchomienia badania głównego w terminie **[T10]** | 7 |
 | Zadeklarowany termin przekazania kompletu danych po zamknięciu terenu: ≤ 3 dni robocze — 8 pkt; 4–5 dni roboczych — 5 pkt; > 5 dni roboczych — 0 pkt | 8 |
 
 : {tbl-colwidths="[85,15]"}
@@ -175,26 +187,29 @@ Zamówienie zostanie udzielone wykonawcy, którego oferta uzyska najwyższą ł�
 
 # Harmonogram postępowania i realizacji
 
-| Etap | Termin |
-|:--------------------------------------------------|:--------------------|
-| Wysłanie zapytania ofertowego | 16 września 2026 |
-| Termin składania pytań i wniosków o wyjaśnienie | 22 września 2026 |
-| Odpowiedzi Zamawiającego (przesyłane wszystkim adresatom zapytania) | 24 września 2026 |
-| **Termin składania ofert** | **30 września 2026, godz. 23:59** |
-| Rozmowy wyjaśniające z wykonawcami (w razie potrzeby) | 1–7 października 2026 |
-| Wybór wykonawcy i informacja o wyniku | do 9 października 2026 |
-| Podpisanie umowy | do 9 października 2026 |
-| Przekazanie kwestionariusza do zaprogramowania | do 12 października 2026 |
-| Testy skryptu po stronie Zamawiającego | 13–20 października 2026 |
-| Miękki start (ok. 100 zaproszeń na grupę) i przekazanie danych testowych | do 23 października 2026 |
-| **Uruchomienie badania głównego** | **26 października 2026** |
-| Zamknięcie terenu (obie grupy) | 9 listopada 2026 |
-| Przekazanie kompletu danych i raportu z realizacji | do 16 listopada 2026 |
-| Protokół odbioru i faktura | do 20 listopada 2026 |
+**Tabela poniżej jest jedynym miejscem, w którym definiuje się terminy kalendarzowe postępowania.** Symbole [T1]–[T15] używane w pozostałej części dokumentu odsyłają do tej tabeli.
 
-: {tbl-colwidths="[62,38]"}
+| Symbol | Etap | Termin |
+|:--|:--------------------------------------------------|:--------------------|
+| [T1] | Wysłanie zapytania ofertowego | **[do ustalenia]** |
+| [T2] | Termin składania pytań i wniosków o wyjaśnienie | **[do ustalenia]** |
+| [T3] | Odpowiedzi Zamawiającego (przesyłane wszystkim adresatom zapytania) | **[do ustalenia]** |
+| [T4] | **Termin składania ofert** | **[do ustalenia]** |
+| [T5] | Rozmowy wyjaśniające z wykonawcami (w razie potrzeby) | **[do ustalenia]** |
+| [T6] | Wybór wykonawcy, informacja o wyniku i podpisanie umowy | **[do ustalenia]** |
+| [T7] | Przekazanie kwestionariusza do zaprogramowania | **[do ustalenia]** |
+| [T8] | Testy skryptu po stronie Zamawiającego | **[do ustalenia]** |
+| [T9] | Miękki start (ok. 100 zaproszeń na grupę) i przekazanie danych testowych | **[do ustalenia]** |
+| [T10] | **Uruchomienie badania głównego (dzień 0)** | **[do ustalenia]** |
+| [T11] | Zamknięcie terenu, obie grupy (dzień 14) | **[do ustalenia]** |
+| [T12] | Przekazanie kompletu danych i raportu z realizacji | **[do ustalenia]** |
+| [T13] | Protokół odbioru i faktura | **[do ustalenia]** |
+| [T14] | Nieprzekraczalny termin przekazania danych przy zmianie harmonogramu (rozdz. 8.1 lit. b) | **[do ustalenia]** |
+| [T15] | Zakończenie projektu wg decyzji FRBN | **[do ustalenia]** |
 
-Termin przekazania danych ma charakter nieprzekraczalny: projekt kończy się 16 grudnia 2026 r., a analiza, raport i warsztat muszą zmieścić się w pozostałym czasie.
+: {tbl-colwidths="[10,55,35]"}
+
+**Wskazówki do uzupełnienia harmonogramu.** Okno terenowe wynosi 14 dni kalendarzowych, zatem [T11] = [T10] + 14 dni. Miękki start [T9] powinien poprzedzać [T10] o co najmniej 3 dni robocze, aby umożliwić weryfikację danych testowych i ewentualne uruchomienie klauzuli eskalacji (rozdz. 8 pkt 9). Termin przekazania danych ma charakter nieprzekraczalny: projekt kończy się w terminie [T15], a analiza, raport i warsztat muszą zmieścić się w pozostałym czasie.
 
 # Istotne warunki umowy
 
@@ -208,33 +223,39 @@ Poniższe postanowienia zostaną zawarte w umowie i nie podlegają zmianie po z�
    b. za zwłokę w przekazaniu kompletu danych — 1% wynagrodzenia netto za każdy dzień roboczy zwłoki, nie więcej niż 15%;
    c. za nieprzekazanie paradanych w zadeklarowanym w ofercie zakresie — 10% wynagrodzenia netto;
    d. łączna wysokość kar umownych nie przekroczy 40% wynagrodzenia netto; Zamawiający może dochodzić odszkodowania przewyższającego wysokość kar na zasadach ogólnych.
-   
+
    Wykonawca nie ponosi odpowiedzialności za nieosiągnięcie zakładanej liczby wywiadów, o ile protokół kontaktu i liczba wysłanych zaproszeń były zgodne z umową.
 5. **Prawa do materiałów i danych.** Kwestionariusz oraz projekt badania stanowią własność Zamawiającego. Zamawiający nabywa pełne prawo do wykorzystania i publikacji zebranych danych, w tym prawo do **publicznego udostępnienia zanonimizowanego zbioru danych oraz zredukowanego zbioru na poziomie zaproszonego** (grupa, status realizacji, fala przypomnienia, zgrubione zmienne demograficzne) w otwartym repozytorium naukowym, na wolnej licencji. Wykonawca nie wykorzysta kwestionariusza ani projektu badania na rzecz innych podmiotów.
 6. **Ochrona danych osobowych.** Wykonawca pozostaje administratorem danych swojego panelu i jako jedyny ma dostęp do danych identyfikujących uczestników. Zamawiającemu przekazywane są wyłącznie dane spseudonimizowane. Strony zawrą odrębną umowę regulującą zasady udostępnienia danych, zgodną z RODO. Wykonawca zapewni wyświetlenie dostarczonych przez Zamawiającego: ekranu informacyjnego, ekranu zgody oraz noty po badaniu, w brzmieniu zatwierdzonym przez Komisję ds. Etyki Badań Naukowych Uniwersytetu SWPS, bez zmian redakcyjnych.
 7. **Poufność.** Treść kwestionariusza przed rozpoczęciem realizacji terenowej oraz wyniki badania przed ich publikacją przez Zamawiającego są objęte poufnością.
 8. **Oznaczenie finansowania.** Wykonawca nie publikuje wyników badania ani informacji o nim bez zgody Zamawiającego. Publikacje Zamawiającego będą zawierać informację o finansowaniu ze środków FRBN Uniwersytetu SWPS oraz o wykonawcy realizacji terenowej.
+9. **Weryfikacja przyrostu realizacji po miękkim starcie (klauzula eskalacji).** Po zakończeniu miękkiego startu Zamawiający weryfikuje różnicę wskaźników realizacji między grupami. Jeżeli różnica ta jest niższa niż 5 punktów procentowych, Wykonawca — na wniosek Zamawiającego i **bez dodatkowego wynagrodzenia** — dodaje w grupie A czwartą falę przypomnienia (dzień 13 ± 1) w badaniu głównym, bez wydłużenia okna terenowego. Start badania głównego następuje po uzgodnieniu zmienionego protokołu. Zmiana ta nie stanowi odstępstwa od protokołu w rozumieniu pkt 1 ani podstawy do naliczenia kar umownych. W wariancie tym oznaczenie fali przypomnienia przyjmuje wartości 0–4.
+
+   Zamawiający zwraca uwagę, że mechanizm ten działa wyłącznie w jedną stronę: dodanie przypomnień w grupie A jest dopuszczalne, natomiast **jakiekolwiek działanie zwiększające realizację w grupie B niszczy projekt badania** i pozostaje objęte karami umownymi określonymi w pkt 4.
 
 ## Dopuszczalne zmiany umowy
 
 Zamawiający przewiduje możliwość zmiany umowy w następujących przypadkach:
 
 a. zmiana powszechnie obowiązujących przepisów prawa, w tym stawki podatku VAT (wynagrodzenie netto pozostaje bez zmian);
-b. zmiana harmonogramu realizacji wynikająca z opóźnienia w wydaniu opinii przez Komisję ds. Etyki Badań Naukowych lub z okoliczności niezależnych od stron, przy zachowaniu nieprzekraczalnego terminu przekazania danych do 23 listopada 2026 r.;
-c. uzgodniona zmiana wielkości zaproszonej puli wynikająca z empirycznych wskaźników realizacji potwierdzonych w miękkim starcie, przy zachowaniu proporcji 50/50 i bez zmiany wynagrodzenia;
+b. zmiana harmonogramu realizacji wynikająca z opóźnienia w wydaniu opinii przez Komisję ds. Etyki Badań Naukowych lub z okoliczności niezależnych od stron, przy zachowaniu nieprzekraczalnego terminu przekazania danych **[T14]**;
+c. uzgodniona zmiana wielkości zaproszonej puli wynikająca z empirycznych wskaźników realizacji potwierdzonych w miękkim starcie, **przy zachowaniu proporcji 42/58** i bez zmiany wynagrodzenia;
 d. uruchomienie dodatkowej partii zaproszeń ("dosyłki") na zasadach określonych w Załączniku 2 pkt 5;
-e. zmiana liczby przypomnień w grupie A z dwóch na trzy, jeżeli miękki start wykaże przyrost realizacji poniżej 2 punktów procentowych — wyłącznie na pisemny wniosek Zamawiającego i przed uruchomieniem badania głównego.
+e. dodanie czwartej fali przypomnienia w grupie A na zasadach określonych w rozdz. 8 pkt 9 (klauzula eskalacji).
 
 # Pytania i wyjaśnienia
 
-Pytania prosimy kierować na adres bstanley\@swps.edu.pl do **22 września 2026 r.** Odpowiedzi zostaną przesłane wszystkim adresatom zapytania, bez wskazania podmiotu pytającego, do 24 września 2026 r.
+Pytania prosimy kierować na adres bstanley\@swps.edu.pl do **[T2]**. Odpowiedzi zostaną przesłane wszystkim adresatom zapytania, bez wskazania podmiotu pytającego, do **[T3]**.
 
 Zamawiający jest szczególnie zainteresowany wyjaśnieniem następujących kwestii i zachęca do ich poruszenia w ofercie lub w pytaniach:
 
 - czy przypomnienia w panelu wykonawcy obejmują wyłącznie e-mail, czy również powiadomienia w aplikacji, i czy możliwe jest ich całkowite wyłączenie dla wskazanej grupy;
 - czy systemy wykonawcy uruchamiają automatyczne dosyłki przy niedoborze realizacji i czy można je wyłączyć dla tego badania;
 - jaki zakres zmiennych profilowych wykonawca jest w stanie przekazać dla osób, które nie odpowiedziały na zaproszenie, i na jakiej podstawie prawnej;
-- czy panel przechowuje profilowe zmienne polityczne (np. deklaracja głosowania w przeszłych wyborach, preferencja partyjna) i czy mogą one zostać przekazane.
+- czy panel przechowuje profilowe zmienne polityczne (np. deklaracja głosowania w przeszłych wyborach, preferencja partyjna) i czy mogą one zostać przekazane;
+- jaki przyrost realizacji daje w panelu wykonawcy każda kolejna fala przypomnień (rozkład wywiadów według fali) — na podstawie danych z badań porównywalnych;
+- czy trzy przypomnienia w oknie 14-dniowym są zgodne z polityką kontaktu panelu i czy nie uruchamiają automatycznych ograniczeń częstotliwości kontaktu;
+- czy wykonawca może zagwarantować, że ograniczenia częstotliwości kontaktu nie zadziałają asymetrycznie, tj. że nie wykluczą z wysyłki części osób z grupy A z powodu innych badań realizowanych równolegle.
 
 # Informacja o przetwarzaniu danych osobowych oferentów
 
@@ -254,7 +275,7 @@ Administratorem danych osobowych osób wskazanych w ofertach jest Uniwersytet SW
 
 # Załącznik 1. Formularz ofertowy {#sec-zal-1}
 
-*Prosimy o wypełnienie, podpisanie i przesłanie w formacie PDF na adres bstanley\@swps.edu.pl do 30 września 2026 r.*
+*Prosimy o wypełnienie, podpisanie i przesłanie w formacie PDF na adres bstanley\@swps.edu.pl do* **[T4]**.
 
 ## Dane wykonawcy
 
@@ -276,7 +297,7 @@ Administratorem danych osobowych osób wskazanych w ofertach jest Uniwersytet SW
 | Stawka VAT | ............ % |
 | **Cena brutto** | **............ zł** |
 | Cena netto w przeliczeniu na jeden zrealizowany wywiad | ............ zł |
-| Cena zawiera zaproszenie ok. 20 000 osób, programowanie, testy, miękki start, realizację, paradane i raport (TAK / NIE — jeśli nie, prosimy wskazać wyłączenia) | |
+| Cena zawiera zaproszenie **ok. 18 500 osób**, programowanie, testy, miękki start, realizację, paradane i raport (TAK / NIE — jeśli nie, prosimy wskazać wyłączenia) | |
 
 : {tbl-colwidths="[62,38]"}
 
@@ -287,13 +308,13 @@ Prosimy o wpisanie "TAK", "NIE" albo "TAK z zastrzeżeniem" wraz z opisem zastrz
 | Wymaganie | Potwierdzenie |
 |:--------------------------------------------------------|:--------------|
 | W1 — realizacja wyłącznie na wylosowanej puli, bez routera i otwartych linków | |
-| W2 — losowy podział 50/50, stratyfikowany, z ziarnem Zamawiającego lub udokumentowany | |
-| W3 — ścisłe przestrzeganie protokołu kontaktu (Załącznik 2), brak zarządzania kwotami i automatycznych dosyłek | |
+| W2 — losowy podział **42/58**, stratyfikowany, z ziarnem Zamawiającego lub udokumentowany | |
+| W3 — ścisłe przestrzeganie protokołu kontaktu (Załącznik 2), w tym **trzy przypomnienia w grupie A**, brak zarządzania kwotami i automatycznych dosyłek | |
 | W4 — zakres danych o zaproszonych: proszę wskazać wariant **W4a** (dane jednostkowe) albo **W4b** (tablice zagregowane) | |
-| W5 — oznaczenie fali przypomnienia i partii zaproszeń przy każdym wywiadzie | |
-| W6 — załączone dane o skuteczności zaproszeń na badaniach porównywalnych | |
+| W5 — oznaczenie fali przypomnienia (**wartości 0–3**) i partii zaproszeń przy każdym wywiadzie | |
+| W6 — **załączone** dane o wskaźnikach realizacji osobno dla wariantu bez przypomnień i dla każdej kolejnej fali przypomnień | |
 | W7 — brak imputacji i własnych reguł usuwania rekordów | |
-| Akceptacja istotnych warunków umowy (rozdz. 8 zapytania) | |
+| Akceptacja istotnych warunków umowy, w tym klauzuli eskalacji (rozdz. 8 pkt 9) | |
 | Oświadczenie o spełnieniu warunków dostępu (rozdz. 5 zapytania) | |
 
 : {tbl-colwidths="[72,28]"}
@@ -303,12 +324,16 @@ Prosimy o wpisanie "TAK", "NIE" albo "TAK z zastrzeżeniem" wraz z opisem zastrz
 | Parametr | Wartość |
 |:--------------------------------------------------------|:--------------|
 | Wskaźnik realizacji (zaproszenie → wywiad) przy pojedynczym zaproszeniu, bez przypomnień, na badaniach społeczno-politycznych 10–12 min | ............ % |
-| Wskaźnik realizacji przy zaproszeniu i dwóch przypomnieniach, na badaniach porównywalnych | ............ % |
-| Różnica (przyrost dzięki przypomnieniom) | ............ pp |
+| Wskaźnik realizacji narastająco po **pierwszym** przypomnieniu | ............ % |
+| Wskaźnik realizacji narastająco po **drugim** przypomnieniu | ............ % |
+| Wskaźnik realizacji narastająco po **trzecim** przypomnieniu (jeżeli wykonawca dysponuje danymi dla trzech fal) | ............ % |
+| Różnica między wariantem z pełnym cyklem przypomnień a wariantem bez przypomnień (przyrost) | ............ pp |
 | Liczebność aktywnej części panelu (osoby, które wzięły udział w co najmniej jednym badaniu w ciągu ostatnich 12 miesięcy) | ............ |
 | Źródło podanych wskaźników (liczba i charakterystyka badań, z których pochodzą) | |
 
 : {tbl-colwidths="[62,38]"}
+
+*Jeżeli wykonawca nie dysponuje danymi dla trzech fal przypomnień, prosimy o podanie danych dla tylu fal, ile zrealizował, i wyraźne wskazanie tego faktu. Brak jakichkolwiek danych o przyroście realizacji skutkuje odrzuceniem oferty (W6).*
 
 ## Dane do oceny w kryteriach K3 i K4
 
@@ -319,7 +344,7 @@ Prosimy o wpisanie "TAK", "NIE" albo "TAK z zastrzeżeniem" wraz z opisem zastrz
 | Staż w panelu i wskaźnik aktywności (TAK / NIE) | |
 | Profilowe zmienne polityczne, jeżeli panel je posiada (TAK / NIE / panel ich nie posiada) | |
 | Dokumentacja procedury losowania umożliwiająca weryfikację (TAK / NIE) | |
-| Gotowość do uruchomienia badania głównego 26 października 2026 (TAK / NIE — proszę podać najwcześniejszy możliwy termin) | |
+| Gotowość do uruchomienia badania głównego w terminie **[T10]** (TAK / NIE — proszę podać najwcześniejszy możliwy termin) | |
 | Termin przekazania kompletu danych po zamknięciu terenu | ...... dni roboczych |
 
 : {tbl-colwidths="[72,28]"}
@@ -347,24 +372,28 @@ Oświadczam, że:
 
 ## 1. Losowanie puli
 
-Wykonawca losuje z panelu pulę ok. 20 000 osób dorosłych (18+), prestratyfikowaną według płci × wieku × wykształcenia × regionu NUTS2. Ostateczna liczebność puli zostanie ustalona po analizie danych z miękkiego startu, przy zachowaniu proporcji 50/50 i bez zmiany wynagrodzenia.
+Wykonawca losuje z panelu pulę **ok. 18 500 osób** dorosłych (18+), prestratyfikowaną według płci × wieku × wykształcenia × regionu NUTS2. Ostateczna liczebność puli zostanie ustalona po analizie danych z miękkiego startu, przy zachowaniu proporcji 42/58 i bez zmiany wynagrodzenia.
 
 ## 2. Podział na grupy
 
-Pula jest dzielona losowo w proporcji 50/50 na grupę A i grupę B. Podział wykonywany jest albo z użyciem ziarna losowego dostarczonego przez Zamawiającego, albo procedurą udokumentowaną w sposób umożliwiający niezależną weryfikację zrównoważenia grup pod względem zmiennych profilowych. Dokumentacja procedury stanowi element przekazywanych danych.
+Pula jest dzielona losowo w proporcji **42/58** — ok. 7 800 osób do grupy A i ok. 10 700 osób do grupy B. Podział wykonywany jest albo z użyciem ziarna losowego dostarczonego przez Zamawiającego, albo procedurą udokumentowaną w sposób umożliwiający niezależną weryfikację zrównoważenia grup pod względem zmiennych profilowych. Dokumentacja procedury stanowi element przekazywanych danych.
 
 ## 3. Protokół kontaktu
 
-| | Grupa A (kontakt standardowy) | Grupa B (kontakt ograniczony) |
+| | Grupa A (kontakt intensywny) | Grupa B (kontakt ograniczony) |
 |:---------------|:-------------------------|:-------------------------|
 | Dzień 0 | Zaproszenie | Zaproszenie (identyczne) |
-| Dzień 4 ± 1 | Przypomnienie 1 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
-| Dzień 9 ± 1 | Przypomnienie 2 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
+| Dzień 3 ± 1 | Przypomnienie 1 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
+| Dzień 7 ± 1 | Przypomnienie 2 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
+| Dzień 11 ± 1 | Przypomnienie 3 — wyłącznie do osób, które nie wypełniły ankiety | **brak** |
+| Dzień 13 ± 1 | *Przypomnienie 4 — wyłącznie w razie uruchomienia klauzuli eskalacji (rozdz. 8 pkt 9)* | **brak** |
 | Dzień 14 | Zamknięcie | Zamknięcie (ten sam dzień) |
 
 : {tbl-colwidths="[20,40,40]"}
 
 Elementy **identyczne w obu grupach**: treść, nadawca i temat zaproszenia; link i wygląd ankiety; gratyfikacja; długość okna terenowego; dostępność na urządzeniach mobilnych; treść ekranów informacyjnych.
+
+Zasada, zgodnie z którą **grupa B nie otrzymuje żadnego przypomnienia w żadnym kanale**, jest kluczowym wymaganiem protokołu i nie podlega żadnym wyjątkom, również przy uruchomieniu klauzuli eskalacji.
 
 ## 4. Działania niedopuszczalne
 
@@ -382,11 +411,11 @@ Wystąpienie któregokolwiek z tych zdarzeń wykonawca zgłasza Zamawiającemu n
 
 ## 5. Dosyłki
 
-Jeżeli liczba zrealizowanych wywiadów w połowie okna terenowego wskazuje na ryzyko niedoboru, Zamawiający może wystąpić o uruchomienie dodatkowej partii zaproszeń. Dosyłka podlega następującym zasadom: (a) kierowana jest **jednocześnie do obu grup, w proporcji 50/50**; (b) obejmuje pulę wylosowaną i podzieloną tą samą procedurą; (c) zachowuje pełny cykl dzień 0 / 4 / 9 w grupie A i samo zaproszenie w grupie B; (d) otrzymuje odrębny identyfikator partii, zapisywany w danych; (e) nie może prowadzić do zamknięcia terenu w różnych dniach dla obu grup.
+Jeżeli liczba zrealizowanych wywiadów w połowie okna terenowego wskazuje na ryzyko niedoboru, Zamawiający może wystąpić o uruchomienie dodatkowej partii zaproszeń. Dosyłka podlega następującym zasadom: (a) kierowana jest **jednocześnie do obu grup, w proporcji 42/58**; (b) obejmuje pulę wylosowaną i podzieloną tą samą procedurą; (c) zachowuje pełny cykl **dzień 0 / 3 / 7 / 11** w grupie A i samo zaproszenie w grupie B; (d) otrzymuje odrębny identyfikator partii, zapisywany w danych; (e) nie może prowadzić do zamknięcia terenu w różnych dniach dla obu grup.
 
 ## 6. Zakres przekazywanych danych
 
-### 6.1 Zbiór na poziomie zaproszonego (wszystkie ok. 20 000 osób)
+### 6.1 Zbiór na poziomie zaproszonego (wszystkie ok. 18 500 osób)
 
 Format: plik CSV lub SAV, pseudonimizowany identyfikator jako klucz łączący ze zbiorem respondentów.
 
@@ -405,7 +434,7 @@ Format: plik CSV lub SAV, pseudonimizowany identyfikator jako klucz łączący z
 ### 6.2 Zbiór respondentów
 
 1. pełne odpowiedzi na wszystkie pytania kwestionariusza, z zachowaniem odrębnych kodów "trudno powiedzieć" i "odmowa odpowiedzi", bez imputacji;
-2. fala przypomnienia, po której nastąpiło wypełnienie (0 / 1 / 2);
+2. **fala przypomnienia, po której nastąpiło wypełnienie (0 / 1 / 2 / 3; przy uruchomieniu klauzuli eskalacji również 4)**;
 3. oznaczenie grupy i identyfikator partii zaproszeń;
 4. czas wypełnienia ankiety ogółem oraz — jeżeli system to rejestruje — czas na poszczególnych ekranach;
 5. wynik pytania sprawdzającego uważność;
@@ -413,7 +442,7 @@ Format: plik CSV lub SAV, pseudonimizowany identyfikator jako klucz łączący z
 
 ### 6.3 Dokumentacja
 
-1. raport z realizacji terenowej: liczba wysłanych zaproszeń i przypomnień oraz liczba wywiadów **w podziale na grupy i dni**;
+1. raport z realizacji terenowej: liczba wysłanych zaproszeń i przypomnień oraz liczba wywiadów **w podziale na grupy, fale przypomnień i dni**;
 2. opis procedury losowania i podziału na grupy;
 3. potwierdzenie braku zarządzania kwotami, braku automatycznych dosyłek i zachowania jednakowego okna terenowego dla obu grup;
 4. zestawienie wszelkich odstępstw od protokołu, jeżeli wystąpiły.
@@ -424,4 +453,8 @@ Wykonawca przekazuje Zamawiającemu codziennie, w dni robocze, zestawienie liczb
 
 ## 8. Miękki start
 
-Przed uruchomieniem badania głównego wykonawca realizuje miękki start na ok. 100 zaproszeniach na grupę i przekazuje Zamawiającemu dane z niego w terminie 2 dni roboczych. Celem jest weryfikacja: poprawności oznaczeń grupy i fali przypomnienia w danych, kompletności paradanych, mediany czasu wypełnienia oraz poprawności reguł przejść w kwestionariuszu. Rekordy z miękkiego startu zostaną włączone do zbioru głównego wyłącznie wtedy, gdy protokół był identyczny z protokołem badania głównego; decyzję podejmuje Zamawiający i komunikuje ją przed uruchomieniem badania głównego.
+Przed uruchomieniem badania głównego wykonawca realizuje miękki start na ok. 100 zaproszeniach na grupę i przekazuje Zamawiającemu dane z niego w terminie 2 dni roboczych. Celem jest weryfikacja: poprawności oznaczeń grupy i fali przypomnienia w danych, kompletności paradanych, mediany czasu wypełnienia, poprawności reguł przejść w kwestionariuszu oraz **różnicy wskaźników realizacji między grupami, stanowiącej podstawę decyzji o ewentualnym uruchomieniu klauzuli eskalacji (rozdz. 8 pkt 9)**. Rekordy z miękkiego startu zostaną włączone do zbioru głównego wyłącznie wtedy, gdy protokół był identyczny z protokołem badania głównego; decyzję podejmuje Zamawiający i komunikuje ją przed uruchomieniem badania głównego.
+
+---
+
+*Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C).*

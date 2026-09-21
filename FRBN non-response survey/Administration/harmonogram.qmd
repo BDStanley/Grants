@@ -1,0 +1,175 @@
+---
+title: "Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi — harmonogram projektu"
+lang: pl
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 1.1cm
+      y: 0.9cm
+    fontsize: 9pt
+    mainfont: "Helvetica Neue"
+    toc: false
+    page-numbering: ""
+    include-in-header:
+      text: |
+        #set page(flipped: true)
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: gantt
+#| fig-width: 11.0
+#| fig-height: 5.95
+#| fig-dpi: 300
+#| dev: ragg_png
+
+library(ggplot2)
+
+FONT <- "Helvetica Neue"
+pal <- c("#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e34948", "#4a3aa7")
+phases <- c("Kwestionariusz i etyka", "Postępowanie ofertowe",
+            "Programowanie i testy", "Miękki start i prerejestracja",
+            "Realizacja terenowa", "Analiza i produkty")
+ink <- "#0b0b0b"; ink2 <- "#52514e"; ink3 <- "#95938b"
+surf <- "#fcfcfb"; grid <- "#dedcd5"; band <- "#f2f1ec"
+d <- function(x) as.Date(x)
+
+# ---------------------------------------------------------------- zadania
+# end = NA oznacza kamień milowy (romb)
+tasks <- tibble::tribble(
+  ~phase, ~task, ~start, ~end,
+  1, "Test poznawczy kwestionariusza",            "2026-09-22", "2026-10-06",
+  1, "Wersja finalna kwestionariusza",            "2026-10-09", NA,
+  1, "Złożenie wniosku do Komisji Etyki",         "2026-09-24", NA,
+  1, "Opiniowanie przez Komisję Etyki",           "2026-09-24", "2026-10-30",
+  1, "Tłumaczenie kwestionariusza na angielski",  "2026-10-12", "2026-10-30",
+  2, "Wysłanie zapytania ofertowego",             "2026-09-29", NA,
+  2, "Pytania wykonawców i odpowiedzi",           "2026-09-29", "2026-10-08",
+  2, "Składanie ofert",                           "2026-10-08", "2026-10-15",
+  2, "Rozmowy wyjaśniające z wykonawcami",        "2026-10-16", "2026-10-20",
+  2, "Wybór wykonawcy i podpisanie umowy",        "2026-10-23", NA,
+  3, "Przekazanie kwestionariusza wykonawcy",     "2026-10-26", NA,
+  3, "Programowanie skryptu (agencja)",           "2026-10-26", "2026-10-30",
+  3, "Testy skryptu po stronie zespołu",          "2026-11-02", "2026-11-04",
+  4, "Miękki start (ok. 100 zaproszeń na grupę)", "2026-11-05", "2026-11-09",
+  4, "Weryfikacja przyrostu realizacji",          "2026-11-09", "2026-11-11",
+  4, "Decyzja go / no-go (klauzula eskalacji)",   "2026-11-12", NA,
+  4, "Zamrożenie prerejestracji na OSF",          "2026-11-13", NA,
+  5, "Badanie główne — okno 14 dni",              "2026-11-16", "2026-11-30",
+  5, "Zamknięcie terenu (obie grupy)",            "2026-11-30", NA,
+  6, "Przekazanie danych przez agencję",          "2026-11-30", "2026-12-03",
+  6, "Weryfikacja i protokół odbioru",            "2026-12-03", "2026-12-09",
+  6, "Analiza (potok targets)",                   "2026-12-04", "2026-12-14",
+  6, "Raport metodologiczny (PL)",                "2026-12-09", "2026-12-16",
+  6, "Repozytorium publiczne (OSF / GitHub)",     "2026-12-11", "2026-12-16",
+  6, "Warsztat PGSW / CSD",                       "2026-12-15", NA,
+  6, "Zakończenie projektu",                      "2026-12-16", NA
+)
+tasks$start <- d(tasks$start); tasks$end <- d(tasks$end)
+
+# wiersz nagłówkowy przed każdym blokiem faz
+rows <- do.call(rbind, lapply(seq_along(phases), function(i) {
+  blk <- tasks[tasks$phase == i, ]
+  hdr <- blk[1, ]
+  hdr$task <- phases[i]; hdr$start <- as.Date(NA); hdr$end <- as.Date(NA)
+  hdr$kind <- "header"
+  blk$kind <- ifelse(is.na(blk$end), "milestone", "bar")
+  rbind(hdr, blk)
+}))
+rows$y <- rev(seq_len(nrow(rows)))
+rows$col <- pal[rows$phase]
+
+pl_date <- function(a, b) {
+  m <- c("I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII")
+  f <- function(x) paste0(as.integer(format(x, "%d")), " ",
+                          m[as.integer(format(x, "%m"))])
+  if (is.na(b)) f(a) else paste0(f(a), " – ", f(b))
+}
+rows$datelab <- vapply(seq_len(nrow(rows)), function(i)
+  if (rows$kind[i] == "header") "" else pl_date(rows$start[i], rows$end[i]),
+  character(1))
+
+# ------------------------------------------- geometria: etykiety | wykres | daty
+p0 <- d("2026-09-20"); p1 <- d("2026-12-19")
+lab0 <- p0 - 46
+dat0 <- p1 + 3
+xr   <- c(lab0, p1 + 24)
+
+bars <- rows[rows$kind == "bar", ]
+mile <- rows[rows$kind == "milestone", ]
+hdrs <- rows[rows$kind == "header", ]
+tsk  <- rows[rows$kind != "header", ]
+rem  <- data.frame(x = d(c("2026-11-19", "2026-11-23", "2026-11-27")),
+                   y = rows$y[rows$task == "Badanie główne — okno 14 dni"])
+
+months <- seq(d("2026-10-01"), d("2026-12-01"), by = "month")
+mlab   <- c(d("2026-09-25"), months + 15)
+ntop   <- nrow(rows) + 0.9
+
+blocks <- do.call(rbind, lapply(seq_along(phases), function(i) {
+  ys <- rows$y[rows$phase == i]
+  data.frame(i = i, ymin = min(ys) - 0.5, ymax = max(ys) + 0.5)
+}))
+shade <- blocks[blocks$i %% 2 == 0, ]
+
+ggplot() +
+  geom_rect(data = shade, aes(xmin = lab0, xmax = p1 + 24,
+            ymin = ymin, ymax = ymax), fill = band) +
+  annotate("rect", xmin = d("2026-11-16"), xmax = d("2026-11-30"),
+           ymin = -0.2, ymax = ntop, fill = "#e34948", alpha = 0.11) +
+  geom_vline(xintercept = months, colour = grid, linewidth = 0.3) +
+  annotate("segment", x = d("2026-12-16"), xend = d("2026-12-16"),
+           y = -0.2, yend = ntop - 0.6, colour = ink3,
+           linewidth = 0.4, linetype = "22") +
+  annotate("text", x = d("2026-11-23"), y = ntop + 0.5,
+           label = "REALIZACJA TERENOWA · 16–30 XI", family = FONT,
+           size = 2.5, colour = "#b82d2c", fontface = "bold") +
+  geom_segment(data = bars, aes(x = start, xend = end, y = y, yend = y,
+               colour = I(col)), linewidth = 2.6, lineend = "round") +
+  geom_point(data = mile, aes(x = start, y = y, fill = I(col)),
+             shape = 23, size = 2.3, stroke = 0.8, colour = surf) +
+  geom_point(data = rem, aes(x = x, y = y), shape = 21, size = 1.5,
+             fill = surf, colour = "#8f1f1e", stroke = 0.6) +
+  geom_text(data = hdrs, aes(x = lab0 + 0.5, y = y, label = toupper(task),
+            colour = I(col)), family = FONT, fontface = "bold",
+            size = 2.35, hjust = 0) +
+  geom_text(data = tsk, aes(x = lab0 + 3, y = y, label = task),
+            family = FONT, size = 2.4, colour = ink, hjust = 0) +
+  geom_text(data = tsk, aes(x = dat0, y = y, label = datelab),
+            family = FONT, size = 2.2, colour = ink2, hjust = 0) +
+  scale_y_continuous(expand = expansion(add = c(0.5, 1.9))) +
+  scale_x_date(limits = xr, breaks = mlab, position = "top",
+               labels = c("wrzesień", "październik", "listopad", "grudzień"),
+               expand = expansion(add = c(0, 0))) +
+  theme_minimal(base_family = FONT, base_size = 8) +
+  theme(
+    panel.grid = element_blank(),
+    axis.title = element_blank(),
+    axis.text.y = element_blank(),
+    axis.text.x = element_text(colour = ink2, size = 8.6, margin = margin(b = 1)),
+    axis.ticks = element_blank(),
+    plot.background = element_rect(fill = surf, colour = NA),
+    panel.background = element_rect(fill = surf, colour = NA),
+    plot.margin = margin(1, 2, 0, 2)
+  )
+```
+
+```{=typst}
+#v(-10pt)
+#set text(size: 6.9pt, fill: rgb("#52514e"))
+#grid(columns: (1.5fr, 1fr, 1.2fr), gutter: 14pt,
+[*Oznaczenia.* Romb — kamień milowy. Białe kropki na pasku badania głównego —
+zaproszenie i trzy przypomnienia (dni 0 / 3 / 7 / 11, tj. 16, 19, 23 i 27 XI).
+Różowe pole — 14-dniowe okno terenowe. Linia przerywana — koniec okresu
+realizacji projektu wg decyzji FRBN.],
+[*Punkt stały.* Harmonogram zbudowano wstecz i wprzód od realizacji terenowej
+16–30 XI. Poniedziałkowy start daje trzy przypomnienia w dni robocze i omija
+Święto Niepodległości (11 XI).],
+[*Do rozstrzygnięcia.* Dane wracają 3 XII, a projekt kończy się 16 XII — na
+analizę, raport i warsztat zostaje 9 dni roboczych. Potok jest już zbudowany
+i przetestowany na symulacji, ale zapas czasu jest zerowy.])
+```

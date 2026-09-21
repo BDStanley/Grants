@@ -141,7 +141,7 @@ Wszyscy członkowie zespołu są pracownikami naukowymi Instytutu Nauk Społeczn
 | M6 | Postawy wobec mniejszości (prawa osób LGBT, uchodźcy z Ukrainy, mniejszości narodowe) — krótkie zwalidowane baterie |
 | M7 | Normy demokratyczne (niezależność sądów, tolerancja krytyki władzy, akceptacja porażki wyborczej) |
 | M8 | Autoidentyfikacja lewica–prawica, poparcie dla członkostwa w UE, pytania o politykę publiczną nieobciążone stygmatem |
-| M9 | Zachowania o znanej wartości populacyjnej (palenie tytoniu, posiadanie prawa jazdy) |
+| M9 | Zachowania o znanej wartości populacyjnej (palenie tytoniu, posiadanie prawa jazdy, częstość korzystania z internetu) |
 | M10 | Jedno pytanie sprawdzające uważność |
 
 : {tbl-colwidths="[8,92]"}
@@ -162,6 +162,8 @@ Zasady konstrukcji istotne etycznie: przy wszystkich pytaniach o postawy jawnie 
 
 Identyczne w obu grupach: treść, nadawca i temat zaproszenia; wygląd i długość ankiety; gratyfikacja (standardowe punkty panelowe); okno terenowe; treść ekranów informacyjnych. Przypomnienia trafiają **wyłącznie** do osób, które ankiety nie wypełniły. Wzory zaproszenia i wszystkich trzech przypomnień stanowią Załącznik 4.
 
+**Wariant awaryjny — czwarte przypomnienie w grupie A.** Prosimy Komisję o objęcie opinią również tego wariantu, ponieważ jego uruchomienie zmieniłoby bilans obciążenia opisany w części D.2. Skuteczność całego badania zależy od tego, czy przypomnienia rzeczywiście podnoszą wskaźnik realizacji w grupie A — jest to warunek, bez którego pytanie badawcze pozostaje bez odpowiedzi. Miękki start sprawdza ten przyrost przed startem badania głównego. Jeżeli różnica wskaźników realizacji między grupami okaże się mniejsza niż 5 punktów procentowych, umowa z agencją przewiduje klauzulę eskalacji: do grupy A wysyłane jest **czwarte przypomnienie** (ok. dnia 13), bez dodatkowego wynagrodzenia dla agencji i bez wydłużenia okna realizacji. Decyzja zapada przed startem badania głównego i zostaje odnotowana; reguła jest zamrożona w prerejestracji, a nie podejmowana po obejrzeniu wyników. W wariancie tym osoba z grupy A otrzymuje maksymalnie pięć wiadomości zamiast czterech, czyli o dwie więcej niż w rutynowym badaniu panelowym; osoby z grupy B (58% zaproszonych) otrzymują niezmiennie jedną. Łączne obciążenie kontaktowe wzrasta wówczas do ok. 45 700 wiadomości (2,47 na osobę zaproszoną), pozostając o ok. 12% niższe od badania zrealizowanego konwencjonalnie.
+
 **3. Narzędzia analityczne.** Regresja zmiennej wynikowej na wskaźniku grupy z kontrolą zmiennych demograficznych (test diagnostyczny); modele selekcji Heckmana i modele kopulowe dla pytań, przy których wykryto obciążenie; ważenie metodą rakingu jako punkt odniesienia. Pełny potok analityczny został zbudowany i przetestowany na danych symulowanych przed rozpoczęciem badania.
 
 ```{=typst}
@@ -175,7 +177,7 @@ Identyczne w obu grupach: treść, nadawca i temat zaproszenia; wygląd i długo
 | **Sposób doboru** | Próba losowa z panelu, prestratyfikowana wg płci × wieku × wykształcenia × regionu (NUTS2) |
 | **Liczba zaproszonych** | ok. 18 500 osób (ok. 7 800 w grupie A, ok. 10 700 w grupie B) |
 | **Liczba zrealizowanych wywiadów** | ok. 2 000 (ok. 1 200 w grupie A, ok. 800 w grupie B) |
-| **Podział na grupy** | Losowy, w proporcji 42/58. Proporcja jest nierówna, ponieważ grupa B osiąga niższy wskaźnik realizacji; zaproszenie do niej większej liczby osób wyrównuje liczbę wywiadów w obu grupach. Nie zwiększa to łącznej liczby wysyłanych wiadomości |
+| **Podział na grupy** | Losowy, w proporcji 42/58. Proporcja jest nierówna, ponieważ grupa B osiąga mniej więcej o połowę niższy wskaźnik realizacji; zaproszenie do niej większej liczby osób zbliża liczby wywiadów w obu grupach, a tym samym zmniejsza błąd standardowy szacowanej różnicy. Pełne wyrównanie wymagałoby proporcji ok. 33/67; przyjęta proporcja jest kompromisem między precyzją a łączną liczbą wywiadów. Nie zwiększa to łącznej liczby wysyłanych wiadomości |
 | **Kryterium włączenia** | Ukończone 18 lat; członkostwo w panelu; zgoda wyrażona na ekranie zgody |
 | **Kryterium wyłączenia** | Wiek poniżej 18 lat — weryfikowany na ekranie wstępnym; osoby niepełnoletnie nie są dopuszczane do kwestionariusza |
 | **Sposób rekrutacji** | Wyłącznie przez agencję, w ramach jej standardowej procedury zapraszania członków panelu (e-mail lub powiadomienie w aplikacji). Zespół badawczy nie kontaktuje się z uczestnikami |
@@ -234,16 +236,16 @@ Liczby pochodzą z symulacji projektu badania przy realistycznych wskaźnikach r
 | Liczba zaproszonych | 18 500 | 18 500 |
 | Łączna liczba wysłanych wiadomości | ok. 39 000 | ok. 51 900 |
 | Średnio na osobę zaproszoną | 2,11 | 2,80 |
-| Maksymalnie dla jednej osoby | 4 (grupa A) | 3 |
+| Maksymalnie dla jednej osoby | 4 (grupa A); 5 w wariancie awaryjnym | 3 |
 | Udział osób otrzymujących 1 wiadomość | 58% | 0% |
 
 : {tbl-colwidths="[40,28,32]"}
 
 Wnioski: **łączne obciążenie kontaktowe jest o około 25% niższe** niż w badaniu zrealizowanym konwencjonalnie na próbie tej samej wielkości, a ponad połowa zaproszonych otrzymuje dokładnie jedną wiadomość. Dla 42% zaproszonych obciążenie jest nieznacznie wyższe niż rutynowe: jedna dodatkowa wiadomość w oknie czternastodniowym, o tej samej treści i z tą samą możliwością rezygnacji, wysyłana wyłącznie do osób, które na poprzednie nie zareagowały. Nie twierdzimy, że jest to obciążenie zerowe — twierdzimy, że jest minimalne, a różnica wobec praktyki rutynowej wynosi jedną wiadomość e-mail.
 
-**Dlaczego trzecie przypomnienie jest warunkiem badania, a nie jego ozdobnikiem.** Symulacyjna analiza mocy, przeprowadzona przed rozpoczęciem realizacji terenowej, wykazała, że przy dwóch przypomnieniach różnica wskaźników realizacji między grupami wynosi ok. 5 punktów procentowych, a przy takiej różnicy badanie z prawdopodobieństwem ok. 90% nie rozstrzygnęłoby pytania, dla którego zostało zaprojektowane. Trzecie przypomnienie podnosi tę różnicę do ok. 7,6 punktu i moc testów do poziomu użytecznego. Badanie o niewystarczającej mocy obciąża uczestników bez perspektywy korzyści poznawczej — i to właśnie uznalibyśmy za trudne do uzasadnienia etycznie. Pierwotny protokół przewidywał dwa przypomnienia; przedstawiamy tę zmianę wprost, ponieważ zmienia ona bilans obciążenia.
+**Dlaczego trzecie przypomnienie jest warunkiem badania, a nie jego ozdobnikiem.** Symulacyjna analiza mocy, przeprowadzona przed rozpoczęciem realizacji terenowej, wykazała, że projekt w pierwotnej postaci — dwa przypomnienia, trzynaście pytań konfirmacyjnych, testy dwustronne — wykrywałby poszukiwane efekty z prawdopodobieństwem ok. 0,10, a więc nie rozstrzygnąłby pytania, dla którego został zaprojektowany. Poprawiliśmy to dwoma niezależnymi posunięciami. Przebudowa części konfirmacyjnej (cztery konstrukty zamiast trzynastu pytań, testy jednostronne w prerejestrowanym kierunku) podniosła moc do ok. 0,30–0,34 przy niezmienionym obciążeniu uczestników. Dopiero trzecie przypomnienie, które zwiększa różnicę wskaźników realizacji z ok. 4,7 do ok. 7,6 punktu procentowego, podnosi ją do ok. 0,65–0,69, a moc testu łącznego — do poziomu bliskiego pewności. Wyczerpaliśmy zatem możliwości poprawy mocy po stronie analizy, zanim sięgnęliśmy po dodatkową wiadomość do uczestników. Badanie o niewystarczającej mocy obciąża uczestników bez perspektywy korzyści poznawczej — i to właśnie uznalibyśmy za trudne do uzasadnienia etycznie. Pierwotny protokół przewidywał dwa przypomnienia; przedstawiamy tę zmianę wprost, ponieważ zmienia ona bilans obciążenia.
 
-**Minimalizacja.** Maksymalnie trzy przypomnienia w oknie 14 dni; wyłącznie do osób, które nie wypełniły kwestionariusza; każde zawiera standardową panelową możliwość rezygnacji; treść przypomnień neutralna, bez ponaglania i bez odwołań do zobowiązania.
+**Minimalizacja.** Maksymalnie trzy przypomnienia w oknie 14 dni — cztery wyłącznie w razie uruchomienia opisanej wyżej klauzuli eskalacji, przy niezmienionej długości okna; wyłącznie do osób, które nie wypełniły kwestionariusza; każde zawiera standardową panelową możliwość rezygnacji; treść przypomnień neutralna, bez ponaglania i bez odwołań do zobowiązania.
 
 ## 3. Przetwarzanie danych osób, które nie wzięły udziału w badaniu
 

@@ -1,0 +1,2416 @@
+---
+title: "Polish Public Opinion Survey Datasets Overview"
+subtitle: "Research Dataset Overview Document for Studying Post-Enlargement Socioeconomic Disparities and Euroscepticism"
+author: "Ben Stanley (SWPS University)"
+date: "2026-09-21"
+date-format: "D MMMM YYYY"
+lang: en
+toc: true
+toc-depth: 2
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.2cm
+      y: 2cm
+    fontsize: 10pt
+    mainfont: "Times New Roman"
+---
+
+```{=typst}
+#set par(justify: true)
+#show heading.where(level: 1): it => block(above: 1.4em, below: 0.8em)[#text(size: 13pt, weight: "bold")[#it.body]]
+#show heading.where(level: 2): it => block(above: 1.1em, below: 0.6em)[#text(size: 11pt, weight: "bold")[#it.body]]
+#let note(body) = block(inset: (left: 0pt), above: 0.7em, below: 1.2em)[
+  #text(size: 8pt, style: "italic")[#body]
+]
+#let apx = table.cell.with(inset: 4pt)
+#show table: set text(hyphenate: false)
+#show table: set par(justify: false)
+```
+
+*Prepared for CitiSense (HORIZON-CL2-2025-01-DEMOCRACY-03, GA 101286806), WP5 — Economic
+Dimensions of Enlargement, Tasks 5.2 and 5.3. This document is the Polish counterpart to
+Krisztina Szabó's* Hungarian Public Opinion Survey Datasets Overview *(12 August 2026) and
+follows its structure so that the two national inventories can be read side by side.*
+
+CBOS data archive (PADS/RDS): https://rds.icm.edu.pl/dataverse/CBOS \
+ESS Data Portal: https://ess.sikt.no/ \
+PGSW / Polish National Election Study: https://pgsw.edu.pl/
+
+
+# 1. Introduction
+
+This document provides an overview of the public opinion survey datasets covering Poland that
+are suitable for examining the relationship between post-enlargement socioeconomic
+disparities and support for populist, illiberal and eurosceptic political forces. It is the
+Polish counterpart to the Hungarian dataset overview prepared for the same work package, and
+is organised so that the two can be compared directly.
+
+Two datasets carry the main analytical weight:
+
+1. **CBOS "Aktualne problemy i wydarzenia" (APiW)** (1990–present): a Polish recurring
+   cross-sectional omnibus survey conducted monthly by the CBOS Foundation (Fundacja Centrum
+   Badania Opinii Społecznej). This is the functional equivalent of the Hungarian TÁRKI
+   Omnibusz, but with a longer, denser and more completely archived time series.
+2. **European Social Survey (ESS)** (2002–2024): the pan-European biennial survey coordinated
+   by ESS ERIC. Poland has participated in every round to date, and is in the field for
+   Round 12.
+
+Three further sources are documented in Section 6 because they answer questions the two main
+datasets cannot: the **Polish National Election Study (PGSW)**, the **Polish Panel Survey
+(POLPAN)** and **Diagnoza Społeczna**.
+
+The two main datasets are complementary in the same way as their Hungarian counterparts. CBOS
+APiW provides high-frequency, Poland-specific measurement with a very long EU attitude series;
+the ESS provides standardised cross-national comparability and documented methodological
+control. There is, however, one important asymmetry relative to the Hungarian case, and it
+works in Poland's favour: **both** Polish datasets carry a regional identifier at NUTS 2
+level, whereas in Hungary the TÁRKI Omnibusz offers only settlement type. This is set out in
+Section 7.
+
+The appendices inventory the relevant questions. Appendix A catalogues 798 CBOS APiW
+questions on European integration, globalisation, migration and international organisations,
+drawn from 133 survey waves between 1992 and 2017. Appendix B catalogues the
+corresponding ESS questions (2002–2023), with verbatim Polish wording.
+
+## 1.1. Research Context
+
+The 2004 enlargement of the European Union, of which Poland was much the largest new member,
+transformed the socioeconomic structure of Central and Eastern Europe. Poland's trajectory
+since accession differs from Hungary's in ways that matter for WP5's comparative design:
+
+- Poland has been the largest net recipient of EU cohesion and agricultural funds in
+  absolute terms since 2004, and the distribution of those funds across voivodeships and
+  subregions is highly uneven. This makes Poland the central case for Task 5.2's analysis of
+  subnational variation in EU fund governance.
+- Aggregate support for EU membership has remained extremely high throughout — CBOS has
+  recorded it continuously since 1994 — while political conflict over the EU intensified
+  sharply between 2015 and 2023. Poland therefore offers the analytically useful combination
+  of *stable majority support* with *rising elite and partisan polarisation*, which is
+  precisely the configuration in which aggregate figures conceal the socioeconomic and
+  regional divides Task 5.3 is designed to detect.
+- The 2015–2016 refugee crisis produced a large and abrupt shift in attitudes to migration
+  that is densely measured in the CBOS series. Because it can be observed at monthly
+  resolution, the Polish data can identify the timing of attitude change far more precisely
+  than biennial cross-national surveys allow.
+
+Both datasets are suited to this agenda because they cover the pre- and post-accession
+periods with long time series, measure attitudes to the EU and to democratic institutions
+repeatedly, contain the key political preference and socioeconomic variables, and rest on
+representative national probability samples.
+
+
+# 2. Comparison of the Two Datasets
+
+```{=typst}
+#table(
+  columns: (auto, 1fr, 1fr),
+  stroke: none,
+  inset: 5pt,
+  table.hline(),
+  table.header(
+    [*Characteristic*], [*CBOS APiW*], [*ESS (Poland)*],
+  ),
+  table.hline(),
+  [Organisation], [CBOS Foundation (Poland)], [ESS ERIC (European)],
+  [Time span], [1990–present], [2002–2024],
+  [Frequency], [Monthly (c. 12 waves/year)], [Biennial],
+  [Waves archived], [329 deposited in PADS/RDS (I 1990 – XII 2017)], [11 rounds released; R12 in field],
+  [Sample size], [c. 1,000 per wave], [c. 1,500–2,000 per round],
+  [Mode], [CAPI to 2020; mixed-mode CAPI/CATI/CAWI since May 2020], [CAPI (self-completion in R10)],
+  [Countries], [Poland only], [30+ European countries],
+  [Sampling frame], [PESEL population register], [PESEL population register],
+  [Core content], [Demographics, party preference, institutional evaluation, social mood], [Demographics, politics, trust, media, well-being],
+  [Rotating content], [Ad-hoc and commissioned modules, changing monthly], [Two rotating modules per round, by open call],
+  [Geographic identifier], [Voivodeship (NUTS 2), macroregion (NUTS 1), settlement size], [Region (NUTS 2), settlement type],
+  [Best suited for], [High-frequency Poland-specific tracking; event timing], [Cross-national comparison; methodological control],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 1. Comparison of the CBOS APiW and ESS datasets]]
+#v(0.6em)
+```
+```{=typst}
+#v(0.6em)
+#table(
+  columns: (auto, auto, auto),
+  stroke: none,
+  inset: 5pt,
+  table.hline(),
+  table.header([*Dataset*], [*Before accession (pre-May 2004)*], [*After accession (post-May 2004)*]),
+  table.hline(),
+  [CBOS APiW], [165 waves deposited (I 1990 – IV 2004)], [164 waves deposited (V 2004 – XII 2017); series continues],
+  [ESS (Poland)], [1 round (R1, 2002)], [10 rounds released (R2–R11, 2004–2024)],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 2. Survey waves available before and after EU accession (1 May 2004)]]
+#v(0.6em)
+```
+A caveat on the CBOS counts: the figures above are for the *deposited* archive, which holds
+329 waves running from APiW 1 (January 1990) to APiW 331 (December 2017), with complete
+twelve-waves-per-year coverage from 1993 onward. The APiW series itself continues to the
+present; waves after December 2017 are not in the open archive and must be requested from
+CBOS directly (see Section 3.6).
+
+
+# 3. Dataset 1: CBOS "Aktualne problemy i wydarzenia"
+
+## 3.1. What is the APiW survey?
+
+"Aktualne problemy i wydarzenia" (Current Problems and Events) is the statutory monthly
+survey of the CBOS Foundation, conducted since 1990. Like the Hungarian Omnibusz, it consists
+of a stable core administered in every wave together with rotating blocks that change from
+month to month. CBOS publishes 160–200 research reports (*komunikaty z badań*) per year drawn
+from this series; the reports are the public face of the data, but the microdata and the full
+questionnaires are separately archived (Section 3.6).
+
+CBOS is a public foundation established by statute, which distinguishes it from a commercial
+polling house: the statutory survey programme is not client-driven, its results are published
+in full, and the questionnaires are deposited. For the purposes of WP5 this matters because
+the EU-related items were asked as part of a continuing public-interest programme rather than
+commissioned episodically, which is why the series is as long and as regular as it is.
+
+## 3.2. Methodology
+
+**Sampling.** Stratified, multi-stage random sample of adults (18+) drawn as a *named*
+(imienna) sample from the PESEL population register. The population of each of the 16
+voivodeships is stratified by six settlement-size classes — village; town up to 19,999;
+20,000–49,999; 50,000–99,999; 100,000–499,999; and cities above 500,000 (Warsaw, Kraków,
+Łódź, Poznań, Wrocław). Rural populations in Mazowieckie (left/right bank of the Vistula) and
+Śląskie (Silesia proper vs. the Dąbrowa Basin) are split further. Because most voivodeships
+contain fewer than six settlement classes, and small strata are merged, the realised design
+has used approximately 79–80 strata in recent years rather than the notional 96.
+
+**Selection.** Two- or three-stage depending on stratum type. In urban strata, localities are
+drawn with probability proportional to size without replacement, then one cluster of
+respondents is drawn within each selected locality. In rural strata, a gmina/rural area is
+drawn PPS, then a village within it PPS, then a cluster. Strata consisting of a single
+locality (e.g. a large voivodeship capital) are single-stage. Clusters have comprised 9
+respondents; a recent annual sample design drew 330 clusters, i.e. 2,971 named individuals
+per wave, to achieve roughly 1,000 interviews.
+
+**Sample size.** Typically c. 1,000 respondents per wave (e.g. 1,020 achieved from 2,971
+drawn in March 2017; 938 in January 2026).
+
+**Data collection.** Face-to-face interviews (CAPI) until 2020. Since May 2020 CBOS has run
+the statutory surveys as a **mixed-mode** design in which each named respondent chooses
+between CAPI, CATI (telephone, using contact details supplied in an advance letter) and CAWI
+(self-completion online, using a login supplied in the advance letter). The instrument is
+identical across modes, and CBOS reports the mode split for every wave (January 2026: 55.5%
+CAPI, 26.4% CATI, 18.0% CAWI).
+
+**Fieldwork control.** Minimum three contact attempts, required at different times of day and
+on different days of the week; substitution of respondents is not permitted; 5–10% of
+completed interviews are back-checked in line with OFBOR standards.
+
+**Weighting.** Post-stratification by rim (iterative proportional fitting) weighting to GUS
+and PESEL demographic benchmarks on sex, urban/rural settlement class, voivodeship of
+residence, age group, education and socio-occupational group.
+
+**Frequency.** Monthly, approximately 12 waves per year.
+
+**Language.** Questionnaires are in Polish. There is no routine English translation, although
+CBOS publishes an English-language summary series (*Polish Public Opinion*).
+
+## 3.3. Survey structure
+
+Each wave has two parts:
+
+1. **Core module** — administered every wave: sociodemographics drawn partly from the sample
+   frame (sex, year of birth, settlement size class, voivodeship), party preference and
+   turnout intention, evaluation of the government and of named politicians, trust in
+   institutions, and the standard "social mood" battery on the country's economic and
+   political situation and on household material conditions.
+2. **Rotating blocks** — a variable set of questions that changes monthly, covering topical
+   subjects. EU-related content appears here, which is why its coverage is uneven across
+   waves and is concentrated around politically salient moments.
+
+## 3.4. Temporal coverage
+
+- **1990–1997**: Pre-accession; attitudes to the European Communities/EU as a distant
+  prospect, and to NATO membership.
+- **1998–2002**: Accession negotiations; dense measurement of expected costs and benefits,
+  and of referendum vote intention.
+- **June 2003**: EU accession referendum (77.45% in favour on 58.85% turnout).
+- **1 May 2004**: Accession.
+- **2004–2014**: Post-accession evaluation, labour mobility, euro adoption, the
+  Constitutional and Lisbon treaties, EU funds.
+- **2015–2017**: Refugee crisis and the change of government; the densest concentration of
+  migration items in the whole series.
+- **2018–present**: Rule-of-law conflict, "Polexit" debate, Brexit, and — after February 2022
+  — Ukrainian refugees and enlargement to Ukraine. This period is covered by the published
+  *komunikaty* but not by the open microdata archive.
+
+## 3.5. Dataset summary
+
+```{=typst}
+#table(
+  columns: (1fr, auto),
+  stroke: none, inset: 5pt,
+  table.hline(),
+  table.header([*Characteristic*], [*Value*]),
+  table.hline(),
+  [Waves deposited in the open archive], [329 (APiW waves 1–331)],
+  [Deposited waves containing EU-related content], [165 identified; 136 with extractable items],
+  [Polish questionnaire available], [Yes, for every deposited wave],
+  [English questionnaire available], [No],
+  [Time period (archive)], [January 1990 – December 2017],
+  [Time period (series)], [1990–present],
+  [Typical sample size], [c. 1,000],
+  [Waves per year], [c. 12],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 3. CBOS APiW: basic characteristics]]
+#v(0.6em)
+```
+## 3.6. Access and archiving
+
+CBOS has deposited the APiW microdata with the **Polish Social Data Archive** (Polskie
+Archiwum Danych Społecznych, PADS), published through the **Social Data Repository**
+(Repozytorium Danych Społecznych, RDS) at `rds.icm.edu.pl`. There are 329 deposited waves.
+Access is free after registration, and all but one of the deposits carry a CC BY-SA 4.0
+licence.
+
+Each deposit contains three files: the data in SPSS (`.sav`) and Stata formats, and a
+documentation PDF (`_DOK.pdf`) that runs to roughly 200–250 pages. The documentation is the
+reason this archive is unusually valuable for the present purpose. It contains, for every
+wave: the topic list with keywords; the full sampling and weighting documentation; and **the
+complete verbatim questionnaire**, including question numbers, exact Polish wording, response
+categories and the corresponding variable names. Appendix A is built directly from these
+documents.
+
+Two practical notes:
+
+- **Two documentation formats.** Waves up to roughly 2008 use a typeset PAPI questionnaire
+  with plain numeric question identifiers (`21.`, `22.`). Later waves are exports from the
+  CADAS CAPI scripting system, with letter-prefixed identifiers (`E1.`, `M12A.`,
+  `P7.`), inline variable names (`q86 (single)`) and placeholder tokens (`%tpu%` for
+  "trudno powiedzieć", `%oo%` for refusal). Both are readable, but text extracted
+  programmatically needs format-aware parsing, and question numbering is not comparable
+  across the break.
+- **The archive stops at December 2017.** The deposits were published in 2021, but the
+  fieldwork they cover runs from January 1990 to December 2017 (APiW waves 1–331). Coverage
+  within that window is complete: twelve waves per year from 1993 onward, eleven in 1990 and
+  1991, eight in 1992. The monthly series itself continues without interruption, and the
+  *komunikaty* for recent years report the EU items with their measurement dates — the
+  membership-support series is published as a continuous trend from 1994 to the present.
+  Microdata for waves after 2017 must be requested from CBOS directly. For WP5, any analysis
+  needing individual-level data past 2017 will require that request; the published aggregate
+  series is sufficient for establishing trend context.
+
+
+# 4. Dataset 2: European Social Survey (Poland)
+
+## 4.1. What is the ESS?
+
+The European Social Survey is an academically driven cross-national survey conducted across
+Europe every two years since 2002. It was awarded European Research Infrastructure Consortium
+(ERIC) status in 2013. **Poland has participated in all eleven released rounds and is in the
+field for Round 12**, giving an unbroken biennial series from 2002. The Polish national
+coordination has been based at the Institute of Philosophy and Sociology of the Polish
+Academy of Sciences (IFiS PAN).
+
+## 4.2. Methodology
+
+**Sampling.** Stratified random probability sampling of persons aged 15+ resident in private
+households. The Polish sample is drawn from the PESEL register as a named individual sample.
+
+**Sample size.** Typically c. 1,500–2,000 achieved interviews per round in Poland.
+
+**Data collection.** Face-to-face interviews (CAPI). Round 10 was fielded by self-completion
+in Poland because of COVID-19, which changed the questionnaire layout and question numbering
+(Section 4.5).
+
+**Response rates.** Documented per round; Round 9 (fieldwork 26 October 2018 – 20 March 2019)
+achieved 43.31%.
+
+**Frequency.** Biennial.
+
+**Languages.** Fielded in Polish; source questionnaire in English. Polish is a "shared
+language" in ESS terms, also fielded in Iceland in recent rounds.
+
+**Standards.** ESS Sampling Guidelines, Translation Guidelines (TRAPD) and Questionnaire
+Design Protocols apply, with published quality and documentation reports per round.
+
+## 4.3. Survey structure
+
+Each round comprises a **core module** repeated every round (media use, social and
+institutional trust, politics, subjective well-being, national/ethnic/religious allegiance,
+social values, demographics, socioeconomic background) and **two rotating modules** selected
+by open academic competition.
+
+## 4.4. Rounds and modules
+
+```{=typst}
+#table(
+  columns: (auto, auto, 1fr),
+  stroke: none, inset: 5pt,
+  table.hline(),
+  table.header([*Round*], [*Year*], [*Rotating modules*]),
+  table.hline(),
+  [ESS1], [2002], [Citizenship; Immigration; Health],
+  [ESS2], [2004], [Family/Work/Well-being; Health; Economic Morality],
+  [ESS3], [2006], [Personal and Social Well-being; Timing of Life],
+  [ESS4], [2008], [Welfare Attitudes; Ageism],
+  [ESS5], [2010], [Trust in Justice; Work/Family/Well-being],
+  [ESS6], [2012], [Personal and Social Well-being; Democracy],
+  [ESS7], [2014], [Immigration; Health Inequalities],
+  [ESS8], [2016], [Welfare Attitudes; Climate Change and Energy],
+  [ESS9], [2018], [Timing of Life; Justice and Fairness],
+  [ESS10], [2020/21], [Digital Social Contacts; Democracy (repeat)],
+  [ESS11], [2023/24], [Social Inequalities in Health; Gender/Work/Family],
+  [ESS12], [2025/26], [Fieldwork ongoing],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 4. ESS rounds and rotating modules]]
+#v(0.6em)
+```
+For WP5 the rounds that carry most weight are **ESS7 (2014)**, for its detailed immigration
+module immediately before the refugee crisis; **ESS8 (2016)**, which introduced the EU
+membership referendum item and a block on EU-level redistribution and EU-level
+decision-making; and **ESS11 (2023)**, the first round fielded after the 2023 Polish election.
+
+## 4.5. Poland-specific features and deviations
+
+Three features of the Polish ESS series need to be known before the data are used, and none
+of them is obvious from the codebook alone.
+
+1. **`euftf` is missing in Round 5.** The item on European unification having "gone too far"
+   or needing to "go further" was not fielded in 2010. This is not a Polish deviation: the
+   ESS5 source questionnaire states that "Question B34 has been excluded for Round 5.
+   Showcard 13 will not be used in Round 5", and the Polish questionnaire records the
+   deletion in the corresponding place ("PYTANIE B34 I KARTA 13 ZOSTAŁY USUNIĘTE"). Any
+   longitudinal series on this item has a structural gap at 2010 for every country.
+2. **Round 10 uses a different numbering scheme.** Because Poland fielded R10 by
+   self-completion, questions carry a single A-series numbering (`A22`, `A50`, `A90`)
+   rather than the usual B/C/E blocks. The R10 documentation includes an explicit mapping
+   table from source question number to self-completion question number to variable name;
+   the variables themselves are unchanged.
+3. **The regional identifier is not designed for regional inference.** The ESS9
+   documentation for Poland records "Statistical inference possible at the regional level:
+   No", and recommends grouping the 16 NUTS 2 categories into six NUTS 1 groups by first
+   digit for analysis. This is a real constraint on Task 5.2: the ESS can characterise broad
+   macroregional contrasts in Poland, but it is not a vehicle for voivodeship-level
+   estimates. Where voivodeship-level precision is needed, pooled CBOS waves are the better
+   instrument.
+
+
+# 5. Dataset 3: Polish National Election Study (PGSW)
+
+The *Polskie Generalne Studium Wyborcze* (PGSW) is Poland's national election study, fielded
+after each parliamentary election since 1997 (1997, 2001, 2005, 2007, 2011, 2015, 2019,
+2023). It carries the CSES module, which makes it comparable with some 50 electoral
+democracies, and it is the standard source for Polish voting behaviour.
+
+Three things recommend it for WP5. First, it measures vote choice directly and validly, which
+neither CBOS nor the ESS does with the same precision — and Task 5.3 is about the link between
+socioeconomic experience and *political behaviour*, not attitudes alone. Second, it contains
+EU-specific items: the 2019 study includes a foreign-policy placement scale running from
+"closest possible cooperation with the European Union, and observance of its binding rules"
+to "defence of our political and economic independence, even at the cost of leaving the
+European Union", and a direct item on whether EU membership will bring Poland more benefits
+than dangers over the next decade. Third, **PGSW 2023 is based at SWPS University**, the WP5
+lead, which removes access friction for the most recent and most politically consequential
+edition.
+
+PGSW 2023 fielded a CAPI sample of 1,500 and a CAWI sample of 2,000 within one to three weeks
+of the election. Earlier editions are deposited in PADS/RDS and, for some years, in Harvard
+Dataverse; access conditions are more restrictive than for CBOS and require registration and
+approval.
+
+# 6. Further Polish data sources
+
+**POLPAN (Polski Sondaż Panelowy)**, at IFiS PAN, is one of the longest-running panel studies
+in Europe: initiated in 1987–88 with 5,817 respondents aged 21–65, reduced to a target panel
+of 2,500 in 1993, and fielded at five-year intervals since, with youngest-cohort refreshment
+samples from 1998. It is the only Polish source that can identify *within-person* change in
+socioeconomic position across the accession period, which is what distinguishes a genuine
+test of the "losers of transition" hypothesis from a cross-sectional association. Its
+weakness for present purposes is a thin EU attitude battery.
+
+**Diagnoza Społeczna** (2000–2015) combined household and individual panel measurement with
+unusually detailed material-conditions data. It is discontinued, but for the 2004–2015 window
+it remains the richest Polish source on objective household economic circumstances measured
+alongside attitudes.
+
+**PGSS (Polski Generalny Sondaż Społeczny)** carried the ISSP modules for Poland and provides
+the closest Polish analogue to the ISSP content that appears in the Hungarian Omnibusz
+rotating modules.
+
+**Eurobarometer** provides harmonised EU attitude measurement for Poland from 2001 (candidate
+country barometers) and continuously since accession. Its sampling and mode documentation is
+weaker than the ESS's, but it fills the gap in cross-national EU-specific items — particularly
+on trust in EU institutions and on perceived benefit from membership — at higher frequency
+than the ESS.
+
+
+# 7. Geographic identifiers in the datasets
+
+Availability of geographic identifiers is the binding constraint on any analysis of regional
+disparities, and it is the point on which the Polish and Hungarian cases differ most.
+
+## 7.1. Polish administrative and statistical geography
+
+```{=typst}
+#table(
+  columns: (auto, 1fr, 1fr, auto),
+  stroke: none, inset: 5pt,
+  table.hline(),
+  table.header([*Level*], [*Polish name*], [*English name*], [*Count*]),
+  table.hline(),
+  [NUTS 1], [Makroregion], [Macroregion], [7],
+  [NUTS 2], [Region], [Region (voivodeship; Mazowieckie split in two)], [17],
+  [NUTS 3], [Podregion], [Subregion (groups of powiats)], [73],
+  [LAU 1], [Powiat], [County (314 land + 66 city-counties)], [380],
+  [LAU 2], [Gmina], [Municipality], [2,479],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 5. Polish administrative and statistical geography (as at 1 January 2025)]]
+#v(0.6em)
+```
+Two points of detail matter. First, the **administrative** unit is the voivodeship
+(*województwo*), of which there are 16; the **statistical** NUTS 2 level has 17 units because
+Mazowieckie is divided into the Warsaw capital region and the surrounding Mazowiecki regional
+unit. Surveys generally code the 16 administrative voivodeships, so mapping survey data onto
+NUTS 2 statistics requires care for Mazowieckie in particular — and Mazowieckie is precisely
+the unit where the Warsaw/periphery contrast is largest and most relevant to WP5. Second, the
+present NUTS structure dates from the NUTS 2016 revision (effective 2018); the NUTS 2021 and
+NUTS 2024 revisions introduced no changes for Poland, but earlier ESS rounds use the
+pre-2018 coding.
+
+Every unit carries a TERYT code issued by GUS, which is the join key for merging external
+data — census results, GUS regional statistics, EU fund absorption figures and PKW election
+results are all published on TERYT identifiers.
+
+## 7.2. Geographic identifier availability
+
+```{=typst}
+#table(
+  columns: (auto, 1fr, 1fr),
+  stroke: none, inset: 5pt,
+  table.hline(),
+  table.header([*Geographic level*], [*CBOS APiW*], [*ESS (Poland)*]),
+  table.hline(),
+  [Country], [Yes (Poland only)], [Yes (country code)],
+  [NUTS 1 (macroregion)], [Yes (`region`, 6–7 macroregions)], [Derivable (first digit of `region`)],
+  [NUTS 2 (voivodeship)], [Yes (`WOJEWODZTWO`, 16)], [Yes (`region`, 16: PL11–PL63)],
+  [NUTS 3 (subregion)], [No], [No],
+  [Powiat], [Partial: a "city with powiat status" flag in CAPI-era waves], [No],
+  [Gmina / settlement], [No], [No],
+  [Settlement size], [Yes (`KLM`, 6 classes)], [Yes (`domicil`, 5 classes)],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 6. Geographic identifier availability by dataset]]
+#v(0.6em)
+```
+**CBOS APiW.** Voivodeship of residence is a sample-frame variable, present in every wave and
+used both as a stratification variable and as a weighting margin. Settlement size class
+(`KLM`) has six categories: village; town up to 19,999; 20,000–49,999; 50,000–99,999;
+100,000–499,999; 500,000+. Later (CAPI-era) waves additionally carry a flag for whether the
+locality is a city with powiat status, which is a coarse but genuine sub-voivodeship
+distinction and separates the large urban centres from their hinterlands.
+
+**ESS (Poland).** The `region` variable is coded at NUTS 2, with 16 units (PL11 Łódzkie, PL12
+Mazowieckie, PL21 Małopolskie, PL22 Śląskie, PL31 Lubelskie, PL32 Podkarpackie, PL33
+Świętokrzyskie, PL34 Podlaskie, PL41 Wielkopolskie, PL42 Zachodniopomorskie, PL43 Lubuskie,
+PL51 Dolnośląskie, PL52 Opolskie, PL61 Kujawsko-Pomorskie, PL62 Warmińsko-Mazurskie, PL63
+Pomorskie in the pre-2018 coding). `domicil` gives a five-category settlement type comparable
+to the Hungarian variable.
+
+## 7.3. Implications for research
+
+- **Both** Polish datasets support voivodeship-level (NUTS 2) analysis in their standard
+  public releases. This is a material advantage over the Hungarian case, where the TÁRKI
+  Omnibusz offers only settlement type and NUTS 2/3 identification is confined to the ESS.
+  The Polish and Hungarian analyses can be aligned at NUTS 2, but only the Polish one can be
+  run at that level in both datasets.
+- **Neither** dataset identifies powiat or gmina. Analyses requiring finer resolution —
+  matching respondents to local EU fund absorption, to local labour market conditions or to
+  commune-level election results — cannot be done with these releases. Three options exist:
+  aggregate the contextual data to voivodeship and accept the loss of variance; commission a
+  survey with settlement identifiers, as the Hungarian team has done with TÁRKI; or negotiate
+  access to identified CBOS data.
+- **Pooling is the practical route to regional precision.** A single CBOS wave of c. 1,000
+  gives roughly 60 respondents per voivodeship, which will not support voivodeship estimates.
+  But the waves are monthly and the core items are stable, so pooling waves within a year or
+  a period yields usable voivodeship samples. This is the main methodological reason to prefer
+  CBOS over the ESS for Task 5.2 on the Polish side, and it has no Hungarian counterpart
+  because the Hungarian omnibus lacks the regional variable entirely.
+- **The ESS regional caveat is binding.** As noted in Section 4.5, ESS documentation states
+  that regional inference is not supported for Poland and recommends NUTS 1 grouping. Treat
+  ESS regional breakdowns as descriptive.
+
+
+# 8. Variable coverage comparison
+
+Key: ● available and repeated; ◐ available in some waves/rounds only; ○ not available.
+
+```{=typst}
+#table(
+  columns: (1fr, auto, auto),
+  stroke: none, inset: 4.5pt,
+  table.hline(),
+  table.header([*Variable group*], [*CBOS APiW*], [*ESS (PL)*]),
+  table.hline(),
+  table.cell(colspan: 3)[*A. Sociodemographic background*],
+  [Sex], [●], [●],
+  [Age], [●], [●],
+  [Education], [●], [●],
+  [Occupation / socio-occupational group], [●], [●],
+  [Settlement size / urbanisation], [● (6 classes)], [● (5 classes)],
+  [Voivodeship / NUTS 2 region], [●], [●],
+  [Income], [● (per capita bands)], [● (deciles)],
+  [Marital status], [●], [●],
+  [Household size], [●], [●],
+  table.hline(stroke: 0.3pt),
+  table.cell(colspan: 3)[*B. Socioeconomic situation*],
+  [Household material conditions], [●], [●],
+  [Country's economic situation], [●], [●],
+  [Economic expectations], [●], [◐],
+  [Unemployment perception / threat], [●], [◐],
+  [Life satisfaction], [●], [●],
+  [Subjective health], [◐], [●],
+  [Material deprivation index], [◐], [○],
+  table.hline(stroke: 0.3pt),
+  table.cell(colspan: 3)[*C. Political preferences and ideology*],
+  [Party preference], [●], [●],
+  [Political interest], [●], [●],
+  [Left–right self-placement], [●], [●],
+  [Political efficacy], [◐], [●],
+  [Reported vote / turnout], [●], [●],
+  [Government evaluation], [●], [◐],
+  [Trust in named politicians], [●], [○],
+  table.hline(stroke: 0.3pt),
+  table.cell(colspan: 3)[*D. Democracy and institutions*],
+  [Satisfaction with democracy], [●], [●],
+  [Trust in parliament], [●], [●],
+  [Trust in government], [●], [◐],
+  [Trust in courts / legal system], [●], [●],
+  [Trust in police], [●], [●],
+  [Trust in the Church], [●], [○],
+  [Corruption perception], [◐], [◐],
+  table.hline(stroke: 0.3pt),
+  table.cell(colspan: 3)[*E. EU attitudes and integration*],
+  [Support for EU membership], [● (1994–present)], [◐ (R8 onward)],
+  [Trust in EU institutions], [◐], [● (EP, all rounds)],
+  [Assessment of benefits of membership], [●], [○],
+  [Euro adoption], [●], [○],
+  [Depth of integration (further / too far)], [◐], [● (except R5)],
+  [EU funds], [◐], [○],
+  [European identity], [◐], [◐],
+  [EU-level redistribution / decision-making], [◐], [◐ (R8, R10)],
+  table.hline(stroke: 0.3pt),
+  table.cell(colspan: 3)[*F. Trust and social capital*],
+  [Generalised trust], [◐], [●],
+  [Institutional trust], [●], [●],
+  [Social networks / sociability], [◐], [●],
+  [Volunteering], [◐], [●],
+  table.hline(stroke: 0.3pt),
+  table.cell(colspan: 3)[*G. Values and identity*],
+  [National pride], [◐], [●],
+  [Religiosity / religious practice], [●], [●],
+  [Family values], [◐], [●],
+  [Immigration attitudes], [● (dense 2015–17)], [●],
+  [Human values scale], [○], [●],
+  table.hline(stroke: 0.3pt),
+  table.cell(colspan: 3)[*H. Geographic variables*],
+  [Settlement size (urban–rural)], [● (6)], [● (5)],
+  [NUTS 2 (voivodeship)], [●], [●],
+  [NUTS 1 (macroregion)], [●], [● (derivable)],
+  [NUTS 3 / powiat / gmina], [○], [○],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 7. Variable coverage comparison]]
+#v(0.6em)
+```
+The pattern to note is that the two datasets are strong in opposite places, and in a way that
+is convenient. CBOS is stronger on **EU-specific substance** — membership support, benefit
+assessment, the euro, EU funds — because those items were written for a national audience and
+asked repeatedly. The ESS is stronger on **standardised psychometric and trust constructs** —
+generalised trust, human values, political efficacy — because those are core ESS content. For
+Task 5.3, which needs socioeconomic perception measured against EU attitudes, CBOS supplies
+the EU side at high frequency and the ESS supplies the comparative and attitudinal-construct
+side.
+
+
+# 9. CBOS APiW: EU-related content by year
+
+The table below summarises the 798 EU-related questions catalogued in Appendix A,
+by year of fieldwork. Counts refer to distinct questions identified in the deposited
+questionnaires, not to waves.
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto),
+  stroke: none, inset: 4.5pt,
+  table.hline(),
+  table.header([*Year*], [*Waves with EU content*], [*Questions catalogued*]),
+  table.hline(),
+  [1992], [1], [4],
+  [1993], [1], [1],
+  [1995], [1], [4],
+  [1998], [6], [16],
+  [1999], [6], [31],
+  [2000], [2], [24],
+  [2001], [7], [38],
+  [2002], [11], [68],
+  [2003], [11], [77],
+  [2004], [11], [89],
+  [2005], [8], [59],
+  [2006], [3], [15],
+  [2007], [8], [35],
+  [2008], [5], [37],
+  [2009], [5], [32],
+  [2010], [1], [1],
+  [2011], [3], [15],
+  [2012], [4], [21],
+  [2013], [6], [21],
+  [2014], [8], [53],
+  [2015], [8], [54],
+  [2016], [12], [79],
+  [2017], [5], [24],
+  table.hline(),
+  [*Total*], [*133*], [*798*],
+  table.hline(),
+)
+```
+
+```{=typst}
+#align(center)[#text(size: 9pt, style: "italic")[Table 8. EU-related questions in the deposited CBOS APiW waves]]
+#v(0.6em)
+```
+The distribution is informative in itself. Content peaks in 2002–2004 (accession negotiations,
+referendum, first year of membership) and again in 2014–2017 (European Parliament elections,
+euro debate, refugee crisis). The thin years — 2010, 2011 — reflect both genuinely lower
+salience and the limits of what has been deposited. Note that these counts are of questions
+appearing in the *deposited* archive; the underlying monthly series is continuous.
+
+
+# 10. Conclusion
+
+This document has presented the Polish public opinion data landscape for the study of
+post-enlargement socioeconomic disparities and euroscepticism:
+
+1. **CBOS "Aktualne problemy i wydarzenia" (1990–present)**: a monthly national omnibus with
+   329 waves (January 1990 – December 2017) deposited openly with full verbatim
+   questionnaires, voivodeship-level geographic identification, and the longest continuous EU
+   membership support series in the region.
+2. **ESS Poland (2002–2024)**: eleven released rounds with cross-national comparability,
+   NUTS 2 identification and documented methodological control.
+3. **PGSW, POLPAN and Diagnoza Społeczna**: election behaviour, within-person change, and
+   detailed household economic measurement respectively.
+
+Key findings:
+
+- Both principal datasets contain the core political, socioeconomic and EU attitude variables
+  needed for Tasks 5.2 and 5.3.
+- **Geographic identification is better in Poland than in Hungary.** Both Polish datasets
+  carry a NUTS 2 identifier in their standard public releases, where the Hungarian omnibus
+  carries only settlement type. Neither Polish dataset reaches powiat or gmina level, so
+  fine-grained matching to local EU fund absorption or local election results is not possible
+  without commissioned data or a negotiated release.
+- **Pooling CBOS waves is the practical route to voivodeship-level estimates.** Monthly
+  fieldwork with stable core items means that pooling within a year gives usable regional
+  samples; no equivalent strategy is available on the Hungarian side.
+- Appendix A catalogues 798 CBOS questions (630 tier A, 168 tier B) from 133
+  waves between 1992 and 2017, classified by construct and reproduced verbatim in
+  Polish. Of these, 27 distinct question texts recur in four or more waves and
+  constitute the usable longitudinal series; these are listed separately in Appendix A.1.
+- Appendix B catalogues the ESS Poland items with verbatim Polish wording and question
+  numbers by round.
+- **CBOS question coverage is uneven and politically driven.** Pre-2004 waves concentrate on
+  accession and its expected costs and benefits; 2004–2014 on post-accession evaluation,
+  labour mobility and the euro; 2015–2017 on refugees and migration. Researchers should not
+  assume that absence of an item in a given year is random with respect to salience.
+- **ESS coverage is more regular but narrower.** Trust in the European Parliament and in the
+  United Nations appear in every round and give an unbroken 20-year series. The integration
+  depth item (`euftf`) appears in every round except Round 5, where it was excluded from the
+  source questionnaire. The EU membership referendum item (`vteurmmb`) is available only from
+  Round 8 (2016). The most detailed immigration modules are Round 1 (2002) and Round 7 (2014).
+- **The two sources answer different questions and should be used together.** The ESS
+  establishes where Poland sits relative to other member states and supplies validated
+  attitudinal constructs; CBOS establishes when Polish attitudes moved, and supports the
+  regional disaggregation that Task 5.2 requires.
+
+The most common constructs catalogued in Appendix A, by frequency, are:
+EU / international orientation (other) (138), EU accession referendum: vote intention/turnout (101), Refugees (75), Support for EU membership / integration (74), NATO membership (65), European Parliament / EP elections (60), Assessment of costs/benefits of membership (52), Labour mobility / free movement of workers (38).
+
+
+```{=typst}
+#pagebreak()
+#set page(flipped: true)
+```
+
+# Appendix A. Inventory of CBOS APiW Questions Related to European Integration
+
+This appendix catalogues every question identified in the deposited CBOS "Aktualne problemy i
+wydarzenia" documentation (1992–2017) that bears directly or indirectly on European
+integration, EU attitudes, mobility, migration and international organisations. It was built
+by parsing the verbatim questionnaires contained in the 165 deposited wave documentation
+files whose metadata indicates EU-related content, and it reproduces the Polish wording as it
+appears in those documents.
+
+**Column key**
+
+- **Wave** — APiW wave number with month and year of fieldwork (e.g. APiW 322 (III 2017)).
+- **Q** — question identifier within that wave's questionnaire. Numeric identifiers are from
+  the PAPI-era format; letter-prefixed identifiers (E1, M12A) are from the CADAS CAPI format.
+- **Tier** — A = direct EU/European integration question; B = indirectly relevant (migration,
+  NATO, international orientation).
+- **Construct** — short English label for the measured concept, assigned by rule from the
+  Polish wording.
+- **Exact Polish wording** — verbatim question stem from the deposited questionnaire.
+
+**A note on provenance and limits.** The Polish text is reproduced as extracted from the
+archived PDFs. Extraction is faithful but mechanical: line breaks within a question stem are
+joined, response categories are omitted from the table (they are in the source documents), and
+very long stems are truncated with […]. Question numbering is not comparable across the
+PAPI/CADAS format break described in Section 3.6. Construct labels are assigned by pattern
+matching and should be treated as a navigation aid rather than as a validated coding. Before
+using any item analytically, consult the wave's documentation PDF via the DOI given in
+Appendix A.3.
+
+
+## A.1. Recurring longitudinal series
+
+The question texts below appear in four or more separate waves and therefore constitute the
+usable longitudinal series in the archive. For each, the verbatim wording is given once,
+followed by every wave in which it was identified. These are the items to build time series
+on; everything in A.2 is one-off or near one-off measurement.
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Support for EU membership / integration] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 52 waves, 2003–2017]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy osobiście popiera Pan(i) członkostwo Polski w Unii Europejskiej czy też jest Pan(i) temu przeciwny(a)?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 161 (X 2003), 162 (XI 2003), 163 (XII 2003), 164 (I 2004), 165 (II 2004), 166 (III 2004), 167 (IV 2004), 168 (V 2004), 169 (VI 2004), 171 (VIII 2004), 173 (X 2004), 174 (XI 2004), 175 (XII 2004), 177 (II 2005), 178 (III 2005), 179 (IV 2005), 180 (V 2005), 181 (VI 2005), 182 (VII 2005), 200 (I 2007), 204 (V 2007), 215 (IV 2008), 216 (V 2008), 218 (VII 2008), 224 (I 2009), 226 (III 2009), 227 (IV 2009), 229 (VI 2009), 239 (IV 2010), 251 (IV 2011), 252 (V 2011), 271 (XII 2012), 273 (II 2013), 275 (IV 2013), 276 (V 2013), 282 (XI 2013), 284 (I 2014), 285 (II 2014), 288 (V 2014), 292 (IX 2014), 293 (X 2014), 299 (IV 2015), 304 (IX 2015), 305 (X 2015), 306 (XI 2015), 309 (II 2016), 311 (IV 2016), 312 (V 2016), 313 (VI 2016), 314 (VII 2016), 325 (VI 2017), 331 (XII 2017)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[EU accession referendum: vote intention/turnout] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 21 waves, 2003–2005]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„A jak Pan(i) głosował(a) w tym referendum?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 162 (XI 2003), 163 (XII 2003), 164 (I 2004), 165 (II 2004), 166 (III 2004), 167 (IV 2004), 168 (V 2004), 169 (VI 2004), 170 (VII 2004), 171 (VIII 2004), 173 (X 2004), 174 (XI 2004), 175 (XII 2004), 177 (II 2005), 178 (III 2005), 179 (IV 2005), 180 (V 2005), 181 (VI 2005), 182 (VII 2005), 183 (VIII 2005), 184 (IX 2005)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[EU accession referendum: vote intention/turnout] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 17 waves, 2004–2005]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy brał(a) Pan(i) udział w referendum w sprawie przystąpienia Polski do Unii Europejskiej w czerwcu 2003 r.?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 165 (II 2004), 166 (III 2004), 167 (IV 2004), 168 (V 2004), 169 (VI 2004), 171 (VIII 2004), 173 (X 2004), 174 (XI 2004), 175 (XII 2004), 177 (II 2005), 178 (III 2005), 179 (IV 2005), 180 (V 2005), 181 (VI 2005), 182 (VII 2005), 183 (VIII 2005), 184 (IX 2005)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Refugees] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 15 waves, 2015–2017]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Z powodu dużego napływu uchodźców z Bliskiego Wschodu i Afryki do niektórych państw Unii Europejskiej kraje te nie są w stanie poradzić sobie z tym problemem. Czy, Pana(i) zdaniem, Polska powinna przyjąć część uchodźców przybywających do Europy?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 307 (XII 2015), 308 (I 2016), 309 (II 2016), 310 (III 2016), 311 (IV 2016), 312 (V 2016), 313 (VI 2016), 314 (VII 2016), 315 (VIII 2016), 316 (IX 2016), 317 (X 2016), 318 (XI 2016), 319 (XII 2016), 323 (IV 2017), 329 (X 2017)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[EU accession referendum: vote intention/turnout] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 14 waves, 2002–2003]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Gdyby w najbliższą niedzielę odbywało się referendum w sprawie przystąpienia Polski do Unii Europejskiej, to czy wziął(ęła) by Pan(i) w nim udział?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 140 (I 2002), 141 (II 2002), 142 (III 2002), 143 (IV 2002), 144 (V 2002), 145 (VI 2002), 146 (VII 2002), 147 (VIII 2002), 149 (X 2002), 150 (XI 2002), 151 (XII 2002), 152 (I 2003), 153 (II 2003), 154 (III 2003)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Refugees] #h(0.5em)
+  #text(size: 8.5pt)[— tier B, 12 waves, 2015–2017]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„W związku z konfliktem na Wschodzie Ukrainy odnotowano także wzrost liczby uchodźców z tego kraju. Czy, Pana(i) zdaniem, Polska powinna przyjąć ukraińskich uchodźców z terenów objętych konfliktem?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 303 (VIII 2015), 304 (IX 2015), 307 (XII 2015), 308 (I 2016), 309 (II 2016), 310 (III 2016), 311 (IV 2016), 312 (V 2016), 313 (VI 2016), 314 (VII 2016), 315 (VIII 2016), 329 (X 2017)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Refugees] #h(0.5em)
+  #text(size: 8.5pt)[— tier B, 12 waves, 2015–2017]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy, Pana(i) zdaniem, Polska powinna przyjmować uchodźców z krajów objętych konfliktami zbrojnymi?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 304 (IX 2015), 305 (X 2015), 307 (XII 2015), 308 (I 2016), 309 (II 2016), 310 (III 2016), 311 (IV 2016), 312 (V 2016), 313 (VI 2016), 314 (VII 2016), 315 (VIII 2016), 329 (X 2017)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[EU accession referendum: vote intention/turnout] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 10 waves, 1999–2002]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Gdyby w Polsce odbywało się referendum w sprawie przystąpienia Polski do Unii Europejskiej, to czy głosował(a)by Pan(i):"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 108 (V 1999), 120 (V 2000), 124 (IX 2000), 130 (III 2001), 132 (V 2001), 133 (VI 2001), 134 (VII 2001), 137 (X 2001), 139 (XII 2001), 140 (I 2002)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[EU accession referendum: vote intention/turnout] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 9 waves, 2002–2003]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Do referendum w sprawie przystąpienia Polski do Unii Europejskiej zostało jeszcze dużo czasu. Wiele osób decyduje się na udział w głosowaniu w ostatniej chwili. Gdyby jednak zdecydował(a) się Pan(i) na udział w referendum, to jak głosował(a)by Pan(i)? Czy głosował(a)by Pan(i):"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 142 (III 2002), 143 (IV 2002), 144 (V 2002), 145 (VI 2002), 146 (VII 2002), 149 (X 2002), 150 (XI 2002), 153 (II 2003), 154 (III 2003)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Assessment of costs/benefits of membership] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 8 waves, 1998–2003]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Jak Pan(i) ocenia dotychczasowe stosunki między Polską a Unią Europejską? Komu przynoszą one więcej korzyści?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 99 (VIII 1998), 108 (V 1999), 120 (V 2000), 124 (IX 2000), 130 (III 2001), 139 (XII 2001), 141 (II 2002), 153 (II 2003)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[European Parliament / EP elections] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 8 waves, 2004–2014]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy zamierza Pan(i) wziąć udział w wyborach do Parlamentu Europejskiego?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 166 (III 2004), 226 (III 2009), 228 (V 2009), 229 (VI 2009), 285 (II 2014), 286 (III 2014), 287 (IV 2014), 288 (V 2014)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[EU / international orientation (other)] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 8 waves, 2004–2015]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Jak Pan(i) ocenia, jaką pozycję w Unii Europejskiej ma Polska? Czy Polskę można zaliczyć do:"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 169 (VI 2004), 203 (IV 2007), 215 (IV 2008), 216 (V 2008), 252 (V 2011), 260 (I 2012), 292 (IX 2014), 306 (XI 2015)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[NATO membership] #h(0.5em)
+  #text(size: 8.5pt)[— tier B, 7 waves, 2002–2016]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy Pan(i) osobiście popiera przynależność Polski do NATO czy też jest temu przeciwny(a)?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 143 (IV 2002), 156 (V 2003), 166 (III 2004), 285 (II 2014), 287 (IV 2014), 292 (IX 2014), 313 (VI 2016)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[European Parliament / EP elections] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 7 waves, 2004–2009]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„13 czerwca tego roku Polacy będą wybierali w bezpośrednich wyborach posłów do Parlamentu Europejskiego. Czy Pan(i) osobiście interesuje się tymi wyborami?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 166 (III 2004), 167 (IV 2004), 168 (V 2004), 224 (I 2009), 227 (IV 2009), 228 (V 2009), 229 (VI 2009)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[NATO membership] #h(0.5em)
+  #text(size: 8.5pt)[— tier B, 6 waves, 2007–2008]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy popiera Pan(i) udział żołnierzy polskich w operacji NATO w Afganistanie czy też nie?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 205 (VI 2007), 206 (VII 2007), 208 (IX 2007), 209 (X 2007), 215 (IV 2008), 216 (V 2008)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Refugees] #h(0.5em)
+  #text(size: 8.5pt)[— tier B, 5 waves, 2016–2017]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„W związku z konfliktem na wschodzie Ukrainy odnotowano także wzrost liczby uchodźców z tego kraju. Czy, P. zdaniem, Polska powinna przyjąć ukraińskich uchodźców z terenów objętych konfliktem?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 316 (IX 2016), 317 (X 2016), 318 (XI 2016), 319 (XII 2016), 323 (IV 2017)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Attention to / knowledge of EU affairs] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 1998–2002]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy czuje się Pan(i) dobrze poinformowany(a) na temat planowanej integracji Polski z Unią Europejską czy też nie?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 100 (IX 1998), 133 (VI 2001), 141 (II 2002), 145 (VI 2002)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Assessment of costs/benefits of membership] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2000–2003]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy uważa Pan(i), że Polsce łatwiej będzie zmniejszyć dystans w rozwoju gospodarczym, dzielący ją od krajów Unii Europejskiej pozostając poza Unią czy też będąc członkiem Unii Europejskiej? Czy, Pana(i) zdaniem:"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 120 (V 2000), 132 (V 2001), 139 (XII 2001), 153 (II 2003)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Attention to / knowledge of EU affairs] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2002–2003]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy interesuje się Pan(i) planowanym przystąpieniem Polski do Unii Europejskiej czy też nie?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 141 (II 2002), 145 (VI 2002), 149 (X 2002), 155 (IV 2003)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[European identity] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2005–2005]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Gdyby w Polsce odbywało się referendum w sprawie przyjęcia europejskiej konstytucji, to czy wziął(ęła)by Pan(i) w nim udział?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 177 (II 2005), 179 (IV 2005), 180 (V 2005), 181 (VI 2005)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[EU / international orientation (other)] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2005–2008]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy, Pana(i) zdaniem przystąpienie Polski do Unii Europejskiej wpłynęło raczej korzystnie, raczej niekorzystnie czy też nie miało wpływu na: \[odczytać kolejny podpunkt pytania\]"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 180 (V 2005), 203 (IV 2007), 215 (IV 2008), 216 (V 2008)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Assessment of costs/benefits of membership] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2005–2008]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy, Pana(i) zdaniem, w wyniku przystąpienia Polski do Unii Europejskiej \[odczytać kolejny podpunkt pytania\] raczej zwiększyła(o) się, raczej zmniejszyła(o) się czy też integracja nie miała na to wpływu?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 180 (V 2005), 203 (IV 2007), 215 (IV 2008), 216 (V 2008)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[NATO membership] #h(0.5em)
+  #text(size: 8.5pt)[— tier B, 4 waves, 2007–2008]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy uważa Pan(i), że operacja NATO w Afganistanie przyczyni się do zapanowania pokoju w tym kraju czy też nie?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 208 (IX 2007), 209 (X 2007), 215 (IV 2008), 216 (V 2008)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[European Parliament / EP elections] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2009–2009]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy brał(a) Pan(i) udział w wyborach do Parlamentu Europejskiego 13 czerwca 2004?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 226 (III 2009), 227 (IV 2009), 228 (V 2009), 229 (VI 2009)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Euro adoption] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2011–2015]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy zgodził(a)by się Pan(i) na zastąpienie polskiego pieniądza (złotego) wspólnym dla wielu państw UE pieniądzem - euro?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 250 (III 2011), 273 (II 2013), 293 (X 2014), 299 (IV 2015)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Sovereignty / EU decision-making / voting power] #h(0.5em)
+  #text(size: 8.5pt)[— tier A, 4 waves, 2014–2017]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Z którym ze stwierdzeń się Pan(i) zgadza?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 285 (II 2014), 306 (XI 2015), 309 (II 2016), 325 (VI 2017)])
+]
+```
+
+```{=typst}
+#block(breakable: true, above: 1em, below: 0.4em)[
+  #text(weight: "bold", size: 9.5pt)[Refugees] #h(0.5em)
+  #text(size: 8.5pt)[— tier B, 4 waves, 2016–2016]
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 9pt)[„Czy, P. zdaniem, Polska powinna przyjmować uchodźców z krajów objętych konfliktami zbrojnymi?"])
+  #v(0.25em)
+  #block(inset: (left: 8pt), text(size: 7.5pt)[*Waves:* 316 (IX 2016), 317 (X 2016), 318 (XI 2016), 319 (XII 2016)])
+]
+```
+
+
+## A.2. Year-by-year inventory of non-recurring items
+
+Items appearing in fewer than four waves, organised by year of fieldwork. Where a question
+text appeared in two or three waves, the first is listed and the others noted in the Wave
+column.
+
+
+### 1992
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [29 (XI 1992)], [37], [A], [EU / international orientation (other)], [A czy, Pana(i) zdaniem, Zdecydowanie tak państwom EWG zależy na tym, Raczej tak aby Polska stała się Raczej nie pełnoprawnym członkiem EWG? Zdecydowanie nie 149 Jest im to obojętne To zależy którym, jednym zależy innym nie Trudno powiedzieć],
+  [29 (XI 1992)], [39], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, państwa EWG Zdecydowanie tak pomogą Polsce w dostosowaniu się Raczej tak do tych norm i zasad, czy też nie? Raczej nie 151 Zdecydowanie nie Trudno powiedzieć],
+  [29 (XI 1992)], [40], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, jest w rządzie Tak ktoś, kto się zajmuje problemami Nie .. \[przejść do pyt.41\] .. 2 152 związanymi z przystąpieniem Polski do EWG?],
+  [29 (XI 1992)], [41], [A], [Attention to / knowledge of EU affairs], [Czy, Pana(i) zdaniem, środki masowego przekazu, a w tym \[odczytać kolejny podpunkt pytania\] poświęcają problemom związanym z przystąpieniem Polski do EWG:],
+)
+```
+
+
+### 1993
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [36 (VI 1993)], [50], [A], [EU / international orientation (other)], [Jak być może Pan(i) wie, 12 państw Europy Zachodniej tworzy Wspólnotę Europejską, potocznie określaną jako EWG. Jaka jest, ogólnie rzecz biorąc, Pana(i) opinia o celach i działalności EWG?],
+)
+```
+
+
+### 1995
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [60 (V 1995)], [58], [A], [EU accession referendum: vote intention/turnout], [Gdyby w Polsce odbywało się referendum w sprawie przystąpienia do Unii Europej- skiej, to czy będzie Pan(i) głosować:],
+  [60 (V 1995)], [59], [A], [Assessment of costs/benefits of membership], [W skład Unii Europejskiej wchodzą zarówno państwa silne pod względem gospodar- czym jak Anglia, Niemcy, Francja jak i słabe gospodarczo jak Grecja, Portugalia czy Irlandia. Czy, Pana(i) zdaniem, państwa słabsze gospodarczo więcej zyskają czy też więcej tracą na swoim członkostwie w Unii Europejskiej?],
+  [60 (V 1995)], [60], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, państwa Unii Europejskiej dążą do zacieśniania wzajemnej współpracy ponieważ ich celem jest:],
+  [60 (V 1995)], [61], [A], [Attention to / knowledge of EU affairs], [Jak Pan(i) sądzi, czym przede wszystkim kierują się państwa Unii Europejskiej dążąc do zacieśnienia kontaktów z Polską. Czy chęcią:],
+)
+```
+
+
+### 1998
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [92 (I 1998) + 105], [42], [B], [Sovereignty / EU decision-making / voting power], [Które z następujących stwierdzeń jest najbliższe Pana(i) poglądowi na temat przystąpienia Polski do NATO?],
+  [92 (I 1998)], [45], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, czy - ogólnie rzecz biorąc - kontrole polskich produktów przeprowadzane przez Unię Europejską są:],
+  [95 (IV 1998)], [20], [A], [Assessment of costs/benefits of membership], [W jakim stopniu czuje się Pan(i) poinformowany(a) na temat planów nowego podziału],
+  [98 (VII 1998)], [49], [A], [EU / international orientation (other)], [Czy powinniśmy, Pana(i) zdaniem, dostosować nasze hutnictwo jak najszybciej do warunków Unii Europejskiej?],
+  [99 (VIII 1998) + 103, 114], [P28], [A], [EU accession referendum: vote intention/turnout], [Gdyby obecnie odbywało się referendum w sprawie przystąpienia Polski do Unii Europejskiej, to czy głosował(a)by Pan(i):],
+  [100 (IX 1998)], [49], [A], [EU / international orientation (other)], [Brak postępów w rokowaniach z Unią Europejską i negatywne oceny Komitetu Integracji Europejskiej i Czarneckiego - przystąpienie do Unii cały czas jest niepewne, ”nie weszliśmy do Unii Europejskiej, nie wejdziemy za 2 lata i czy w ogóle nas tam chcą?”, ”straciliśmy zaufanie przez Czarneckiego”, utrata części funduszy z PHARE],
+  [103 (XII 1998)], [21], [A], [Foreign policy orientation], [Jaki, Pana(i) zdaniem, powinien być główny cel polityki zagranicznej Polski?],
+  [103 (XII 1998)], [22], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, państwom Unii Europejskiej zależy na tym, aby Polska stała się pełnoprawnym członkiem Unii?],
+  [103 (XII 1998)], [23], [A], [Perceived EU/member-state stance toward Poland], [A w Pana(i) ocenie, które z państw Unii Europejskiej najsilniej wspiera polskie starania o przyjęcie do tej organizacji?],
+  [103 (XII 1998)], [25], [A], [Assessment of costs/benefits of membership], [Jak zmiana koalicji rządzącej w Niemczech wpłynie na tempo wchodzenia Polski do Unii Europejskiej. Czy, Pana(i) zdaniem, dojście do władzy koalicji socjaldemokratów i Zielonych:],
+  [103 (XII 1998)], [26], [A], [Enlargement / candidate countries], [A jak, Pana(i) zdaniem, zmiana koalicji rządzącej w Niemczech wpłynie na warunki, na jakich Polska zostanie przyjęta do Unii Europejskiej? Czy spowoduje to:],
+  [103 (XII 1998) + 108, 130], [P29], [A], [EU / international orientation (other)], [Jak Pan(i) ocenia, jak blisko czy też jak daleko, jest Polska na swojej drodze do tego, aby stać się pełnym członkiem Unii Europejskiej? Odpowiadając proszę posłużyć się skalą gdzie: ”10” - oznacza, że droga ta jest jeszcze bardzo długa, ”0” - oznacza, że właściwie Polska jest już w Unii Europejskiej. Oczywiście może Pan(i) wybrać punkty leżące pomiędzy 10 i 0.],
+  [103 (XII 1998)], [P31], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, czym kierują się państwa Unii Europejskiej dążąc do zacieśnienia kontaktów z Polską. Czy chęcią:],
+)
+```
+
+
+### 1999
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [105 (II 1999)], [65], [B], [NATO membership], [Czy sądzi Pan(i), że po wejściu do NATO interesy i bezpieczeństwo Polski będą tak samo traktowane jak interesy i bezpieczeństwo dotychczasowych państw członkowskich czy też będą miały dla polityki Sojuszu mniejsze znaczenie?],
+  [105 (II 1999)], [66], [B], [NATO membership], [Czy uważa Pan(i), że po wejściu Polski do NATO powinny w Polsce stacjonować wojska innych państw członkowskich NATO czy też nie?],
+  [105 (II 1999)], [67], [B], [NATO membership], [Wyrażane są opinie, że chociaż przed II wojną światową Polska też była związana sojuszami wojskowymi z niektórymi państwami Zachodu, we wrześniu 1939 roku walczyliśmy praktycznie w osamotnieniu. Czy uważa Pan(i), że taka sytuacja może się powtórzyć, gdy Polska będzie członkiem NATO, czy też nie?],
+  [105 (II 1999)], [P62], [B], [NATO membership], [Czy, Pana(i) zdaniem, przystąpienie do NATO będzie dla Polski wydarzeniem:],
+  [106 (III 1999)], [37], [B], [Support for EU membership / integration], [W marcu Polska zostanie oficjalnie przyjęta do NATO. Czy Pan(i) osobiście popiera przystąpienie Polski do NATO czy też jest Pan(i) temu przeciwny(a)?],
+  [107 (IV 1999)], [46], [B], [NATO membership], [Jeśli działania lotnictwa NATO nie doprowadzą do zakończenia konfliktu w Kosowie w Jugosławii, to czy, Pana(i) zdaniem, NATO powinno wysłać tam wojska lądowe czy też nie?],
+  [107 (IV 1999)], [47], [B], [Refugees], [Ostatnio z Kosowa w Jugosławii zostało wypędzonych bardzo wielu mieszkających tam Albańczyków. Czy, Pana(i) zdaniem, Polska powinna przyjąć część uchodźców z Kosowa czy też nie powinna?],
+  [107 (IV 1999)], [48], [B], [Refugees], [A czy Polska powinna udzielać pomocy materialnej uchodźcom z Kosowa np. wysyłając im żywność, leki, ubrania? Czy, Pana(i) zdaniem:],
+  [107 (IV 1999)], [P42], [B], [Support for EU membership / integration], [W marcu Polska została oficjalnie przyjęta do NATO. Czy Pan(i) osobiście popiera przystąpienie Polski do NATO czy też jest Pan(i) temu przeciwny(a)?],
+  [107 (IV 1999) + 109], [P43], [B], [NATO membership], [Czy uważa Pan(i) za słuszne czy też niesłuszne podjęcie zbrojnej interwencji przez państwa NATO w związku z konfliktem serbsko-albańskim na terenie Kosowa w Jugosławii?],
+  [107 (IV 1999)], [P44], [B], [NATO membership], [A jak Pan(i) sądzi, czy żołnierze polscy powinni czy też nie powinni uczestniczyć w tej operacji NATO ?],
+  [107 (IV 1999)], [P45], [B], [NATO membership], [Kto powinien wchodzić w skład oddziałów polskich uczestniczących w operacji NATO na terenie Kosowa w Jugosławii?],
+  [108 (V 1999) + 168], [29], [A], [EU / international orientation (other)], [W jakich dziedzinach, Pana(i) zdaniem, Polska powinna integrować się, jednoczyć z Europą, a w jakich powinna zachować odrębność? Czy jeśli chodzi o \[odczytać kolejny podpunkt pytania\] Polska powinna jednoczyć się z Unią Europejską czy też zachować odrębność?],
+  [108 (V 1999)], [46], [B], [NATO membership], [Czy, Pana(i) zdaniem, słuszne jest podejmowanie interwencji zbrojnej przez NATO \[odczytać kolejny podpunkt pytania\] czy też jest to niesłuszne?],
+  [108 (V 1999)], [P30], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, połączenie, integracja Polski z Unią Europejską wpłynie raczej korzystnie czy raczej niekorzystnie na:],
+  [108 (V 1999) + 120], [P32], [A], [EU / international orientation (other)], [Czy uważa Pan(i) za słuszne czy też niesłuszne wprowadzenie w Polsce takich norm i regulacji, obowiązujących w Unii Europejskiej, jak: \[odczytać kolejny podpunkt pytania\]],
+  [108 (V 1999)], [P42], [B], [NATO membership], [Czy uważa Pan(i) za słuszne czy też niesłuszne podjęcie przez państwa NATO zbrojnej interwencji w związku z konfliktem serbsko - albańskim na terenie Kosowa w Jugosławii?],
+  [108 (V 1999)], [P43], [B], [NATO membership], [Jeśli działania lotnictwa NATO nie doprowadzą do zakończenia konfliktu w Kosowie w Jugosławii, to czy, Pana(i) zdaniem, NATO powinno podjąć działania zbrojne z użyciem wojsk lądowych czy też nie?],
+  [108 (V 1999)], [P44], [B], [NATO membership], [A jeśli zapadłaby decyzja o podjęciu przez wojska lądowe NATO na terenie Kosowa działań zbrojnych, to czy poparł(a)by Pan(i) udział w walkach żołnierzy polskich czy też nie?],
+  [109 (VI 1999)], [27], [B], [NATO membership], [Jak Pan(i) sądzi, czy zawarte obecnie porozumienie pomiędzy NATO a Jugosławią doprowadzi do ostatecznego zakończenia konfliktu w Kosowie czy też będzie mieć znaczenie tymczasowe, tylko na pewien czas powstrzyma konflikt?],
+  [109 (VI 1999)], [28], [B], [Refugees], [Jak Pan(i) sądzi, czy do końca bieżącego roku większość albańskich uchodźców wróci do Kosowa czy też nie?],
+  [109 (VI 1999)], [29], [B], [NATO membership], [Czy Pana(i) zdaniem w obecnej sytuacji można powiedzieć, że interwencja NATO w Jugosławii była skuteczna czy też nie?],
+  [109 (VI 1999)], [75], [B], [NATO membership], [Czy interwencja NATO w Jugosławii,Pana(i) zdaniem, w rezultacie wzmocniła czy też osłabiła pozycję Rosji w świecie?],
+  [109 (VI 1999)], [77], [B], [Labour mobility / free movement of workers], [Jak, Pana(i) zdaniem, ułożą się stosunki pomiędzy wojskami NATO a wojskami rosyjskimi w Kosowie?],
+  [109 (VI 1999)], [P25], [B], [Support for EU membership / integration], [Polska jest od niedawna członkiem NATO. Czy Pan(i) osobiście popiera przystąpienie Polski do NATO czy też jest Pan(i) temu przeciwny(a)?],
+)
+```
+
+
+### 2000
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [120 (V 2000) + 153, 165], [41], [A], [Labour mobility / free movement of workers], [Czy Pan(i) osobiście był(a)by zainteresowany(a) podjęciem pracy na terenie któregoś z państw Unii Europejskiej po przystąpieniu Polski do tej organizacji:],
+  [120 (V 2000)], [42], [A], [EU / international orientation (other)], [Czy w ubiegłym, 1999 roku pracował(a) Pan(i) zarobkowo w którymś z krajów Unii Europejskiej?],
+  [120 (V 2000)], [46], [A], [EU / international orientation (other)], [Jak ocenia Pan(i) przebieg negocjacji między Polską a Unią Europejską o członkostwo naszego kraju w tej organizacji? Czy, Pana(i) zdaniem, egocjacje przebiegają, toczą się:],
+  [120 (V 2000)], [48], [A], [Enlargement / candidate countries], [Równocześnie z Polską Unia Europejska prowadzi negocjacje o wejście do tej organizacji z innymi państwami europejskimi. Czy, Pana(i) zdaniem, Polska znajdzie się w grupie państw przyjętych do Unii w pierwszej kolejności, czy też nie?],
+  [120 (V 2000)], [P37], [A], [EU / international orientation (other)], [Czy państwom Unii Europejskiej zależy na tym, aby Polska stała się pełnoprawnym członkiem Unii?],
+  [120 (V 2000)], [P38], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, integracja, połączenie Polski z Unią Europejską wpłynie raczej korzystnie czy raczej niekorzystnie na:],
+  [120 (V 2000)], [P45], [A], [EU / international orientation (other)], [Jak Pan(i) ocenia, jak blisko czy też jak daleko jest Polska na swojej drodze do tego, aby stać się pełnym członkiem Unii Europejskiej? Odpowiadając proszę],
+  [124 (IX 2000)], [27], [A], [Economy, firms and EU regulation], [Czy, Pana(i) zdaniem, polska gospodarka skorzysta na integracji z Unią Europejską, czy też nie?],
+  [124 (IX 2000)], [28], [A], [Assessment of costs/benefits of membership], [Jaki, Pana(i) zdaniem, wpływ na Pana(i) życie będzie miało wprowadzenie norm UE dotyczących technologii produkcji i jakości towarów?],
+  [124 (IX 2000) + 130], [30], [A], [Economy, firms and EU regulation], [Czy, Pana(i) zdaniem, przystąpienie Polski do UE poprawi konkurencyjność polskich firm wobec firm z innych krajów UE?],
+  [124 (IX 2000) + 130, 132], [31], [A], [Labour mobility / free movement of workers], [Czy po przystąpieniu Polski do Unii Europejskiej był(a)by Pan(i) osobiście zainteresowany(a) podjęciem pracy w którymś z krajów Unii?],
+  [124 (IX 2000)], [33], [A], [Immigration], [Czy uważa Pan(i), że wprowadzenie zasad obowiązujących w Unii Europejskiej w dziedzinach takich, jak migracja międzynarodowa, polityka wizowa, kontrola graniczna i kontrola celna powinno być dokonywane samodzielnie przez polski rząd, czy też z pomocą Unii Europejskiej?],
+  [124 (IX 2000)], [34], [A], [EU / international orientation (other)], [Czy uważa Pan(i), że po wejściu do UE Polacy powinni mieć prawo posiadania ziemi w innych krajach UE, a obywatele tych krajów - ziemi w Polsce?],
+  [124 (IX 2000)], [35], [A], [Assessment of costs/benefits of membership], [Czy, Pana(i) zdaniem, wejście Polski do UE będzie bardziej korzystne dla rolnictwa polskiego, czy dla rolnictwa obecnych członków UE?],
+  [124 (IX 2000)], [36], [A], [Agriculture and EU membership], [Jeżeli rząd polski miałby więcej środków lub gdyby otrzymał dodatkową pomoc finansową od Unii Europejskiej, na jakie cele powinien ją przede wszystkim przeznaczyć? Proszę uszeregować wszystkie wymienione cele w kolejności od najważniejszego do najmniej ważnego.],
+  [124 (IX 2000)], [37], [A], [Assessment of costs/benefits of membership], [Na jakim szczeblu administracji środki finansowe uzyskane przez Polskę z Unii Europejskiej powinny być przede wszystkim rozdzielane?],
+  [124 (IX 2000)], [38], [A], [EU funds / budget / direct payments], [Po przystąpieniu Polski do Unii Europejskiej dostępne będą fundusze na rozwój regionalny. Czy Pan(i) osobiście wziął(ęła)by udział w przygotowaniu projektów wykorzystania tych funduszy w Pana(i) miejscu zamieszkania?],
+  [124 (IX 2000)], [39], [A], [EU / international orientation (other)], [Czy uważa Pan(i), że polskie stawki podatku VAT, w tym stawki na artykuły pierwszej potrzeby, powinny być dostosowane do stawek obowiązujących w krajach UE, jeżeli będzie to oznaczać obniżkę stawek VAT na niektóre produkty, a - być może częściej - podwyżkę na inne?],
+)
+```
+
+
+### 2001
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [130 (III 2001)], [26], [B], [NATO membership], [Mijają dwa lata od przyjęcia Polski do NATO. Czy Pan(i) osobiście popiera przynależność Polski do NATO czy też jest temu przeciwny?],
+  [132 (V 2001)], [35], [A], [EU relations with third countries], [A z kim Polska powinna starać się o jak najściślejsze stosunki, współpracę gospodarczą?],
+  [132 (V 2001) + 165, 178], [52], [A], [Labour mobility / free movement of workers], [W jakim kraju Unii Europejskiej chciał(a)by Pan(i) pracować?],
+  [132 (V 2001) + 178], [53], [A], [Labour mobility / free movement of workers], [Jak długo chciał(a)by Pan(i) tam pracować?],
+  [132 (V 2001)], [54], [B], [EU / international orientation (other)], [Ile musiałaby wynosić miesięczna płaca, aby zdecydował(a) się Pan(i) na wyjazd do pracy za granicą?],
+  [132 (V 2001)], [55], [A], [Labour mobility / free movement of workers], [Jeżeli Unia Europejska ustanowi kilkuletni okres przejściowy w dostępie Polaków do rynku pracy w krajach Unii już po wstąpieniu do tej organizacji, to czy Pana(i) zdaniem Polska powinna domagać się w zamian za to od Unii ustępstw w innych dziedzinach?],
+  [132 (V 2001)], [56], [A], [Labour mobility / free movement of workers], [Czego Polska powinna się domagać w zamian za zgodę na okres przejściowy w dostępie do rynku pracy krajów UE? W której z wymienionych dziedzin powinniśmy żądać ustępstw we wprowadzaniu prawa unijnego w dziedzinie:],
+  [132 (V 2001) + 141], [57], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, lepiej byłoby, gdyby Polska weszła do Unii Europejskiej:],
+  [133 (VI 2001)], [39], [A], [EU / international orientation (other)], [Nie znamy jeszcze terminu wstąpienia Polski do Unii Europejskiej. Polska dąży do tego, aby datą wstąpienia był 1 stycznia 2003 roku. Jaka data wstąpienia do Unii, Pana(i) zdaniem, byłaby dla Polski najbardziej korzystna?],
+  [134 (VII 2001)], [64], [A], [Labour mobility / free movement of workers], [Czy sądzi Pan(i), że rząd polski powinien zaakceptować siedmioletni okres przejściowy, w czasie którego Polacy nie mogliby pracować w innych krajach UE już po wstąpieniu do tej organizacji?],
+  [134 (VII 2001)], [65], [A], [Labour mobility / free movement of workers], [A czy sądzi Pan(i), że potrzebny jest okres przejściowy, w czasie którego obywatele krajów Unii Europejskiej nie mieliby prawa kupować w Polsce ziemi już po wstąpieniu Polski do UE?],
+  [136 (IX 2001)], [43], [A], [EU / international orientation (other)], [Czy Pana(i) zdaniem, kiedy Polska stanie się członkiem Unii Europejskiej i dostosuje się do unijnych standardów produkcji, magazynowania i sprzedaży, to żywność w Polsce będzie bardziej, czy też mniej bezpieczna?],
+  [136 (IX 2001)], [M30], [B], [NATO membership], [Jeśli NATO podejmie działania zbrojne w odpowiedzi na ataki terrorystyczne w USA, czy, Pana(i) zdaniem, Polska powinna wypełnić sojuszniczy obowiązek i przyłączyć się do takich działań?],
+  [137 (X 2001) + 153], [77], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, po przystąpieniu Polski do Unii Europejskiej \[odczytać kolejny podpunkt pytania\] wzrośnie(ną), spadnie(ną), czy też pozostanie(ną) bez zmian?],
+  [137 (X 2001)], [78], [A], [EU relations with third countries], [Czy posiada Pan(i) pieniądze któregoś z krajów Unii Europejskiej (np. marki niemieckie, franki francuskie)?],
+  [137 (X 2001)], [79], [A], [Euro adoption], [Czy wie Pan(i), jak wymienić te pieniądze na euro - nową walutę w niektórych krajach UE?],
+  [137 (X 2001)], [80], [A], [Euro adoption], [Czy chciał(a)by Pan(i), aby euro zastąpiło złotówkę już teraz, przed przystąpieniem Polski do UE?],
+  [139 (XII 2001)], [32], [B], [NATO membership], [Czy, Pana(i) zdaniem, Polska powinna przyłączyć się do działań wojskowych NATO w Afganistanie czy też nie?],
+  [139 (XII 2001)], [40], [A], [Assessment of costs/benefits of membership], [Czy uważa Pan(i), że łatwiej będzie zmniejszyć dystans w poziomie życia ludzi w Polsce dzielący go od poziomu życia ludzi w krajach Unii Europejskiej pozostając poza Unią czy też będąc członkiem Unii Europejskiej? Czy, Pana(i) zdaniem:],
+  [139 (XII 2001)], [46], [A], [Agriculture and EU membership], [Czy uważa Pan(i) za słuszne czy też niesłuszne, aby po wejściu Polski do Unii Europejskiej obywatele innych krajów Unii mogli:],
+  [139 (XII 2001) + 140], [P34], [B], [NATO membership], [Czy sądzi Pan(i), że akcja NATO w Afganistanie może doprowadzić do wojny światowej czy też nie?],
+  [139 (XII 2001)], [P44], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, przedstawiciele rządu w rozmowach z Unią Europejską o członkostwo naszego kraju w tej organizacji:],
+  [139 (XII 2001)], [P45], [A], [Labour mobility / free movement of workers], [Czy sądzi Pan(i), że potrzebny jest okres przejściowy, w czasie którego obywatele krajów Unii Europejskiej nie mieliby prawa kupować w Polsce ziemi już po wstąpieniu Polski do UE?],
+)
+```
+
+
+### 2002
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [140 (I 2002)], [51], [A], [Euro adoption], [Kiedy, Pana(i) zdaniem, w Polskce powinno się zastąpić złotówkę nową europejską walutą - euro. Czy powinno to nastąpić:],
+  [140 (I 2002)], [P20], [A], [EU accession referendum: vote intention/turnout], [Dlaczego głosował(a)by Pan(i) za przyjęciem Polski do Unii Europejskiej?],
+  [140 (I 2002)], [P21], [A], [EU accession referendum: vote intention/turnout], [Dlaczego głosował(a)by Pan(i) przeciw przystąpieniu Polski do Unii Europejskiej?],
+  [141 (II 2002)], [87], [A], [Agriculture and EU membership], [A czy polscy negocjatorzy powinni zgodzić się czy też nie, aby rolnicy otrzymywali w pierwszych latach członkowstwa tylko część dopłat, jakie otrzymują rolnicy unijni, jeśli po wejściu do Unii Europejskiej Polska utrzymałaby - w pewnym zakresie - cła na produkty rolne sprowadzane z Unii?],
+  [141 (II 2002) + 153], [P37], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, integracja, połączenie Polski z Unią Europejską wpłynie raczej korzystnie czy raczej niekorzystnie na \[odczytać kolejny podpunkt pytania\]:],
+  [142 (III 2002)], [19], [A], [Attention to / knowledge of EU affairs], [Czy słyszał(a) Pan(i) o powołaniu do życia Konwentu Europejskiejgo, który ma opracować projekt reformy Unii Europejskiej czy też nie słyszał(a) Pan(i) o tym?],
+  [142 (III 2002)], [20], [A], [Assessment of costs/benefits of membership], [Polska i inne kraje kandydujące do UE biorą udział w pracach Konwentu Europejskiego. Czy, Pana(i) zdaniem, poprzez udział Polski w pracach Konwentu nasz kraj zyska rzeczywisty wpływ na przyszłość Unii Europejskiej czy też nie?],
+  [142 (III 2002)], [39], [A], [Attention to / knowledge of EU affairs], [Czy, Pana(i) zdaniem, większość środków masowego przekazu w Polsce jest przychylna czy też nieprzychylna wobec:],
+  [143 (IV 2002)], [20], [A], [Agriculture and EU membership], [Czy, Pana(i) zdaniem, fundusze z Unii Europejskiej przeznaczone dla wsi i rolnictwa powinny być wykorzystywane],
+  [143 (IV 2002)], [23], [A], [EU funds / budget / direct payments], [Czy zgadza się Pan(i) z następującymi opiniami czy też nie?],
+  [143 (IV 2002)], [31], [B], [Enlargement / candidate countries], [Jesienią tego roku być może nastąpi rozszerzenie NATO o nowych członków, mają to być Litwa, Łotwa, Estonia, Słowenia, Słowacja, Rumunia i Bułgaria. Czy jest Pan(i) zwolennikiem rozszerzenia NATO o nowe państwa, czy też nie?],
+  [144 (V 2002)], [42], [A], [EU / international orientation (other)], [Które z poniższych stwierdzeń najlepiej opisuje to, co dla Pana(i) osobiście znaczy Unia Europejska? Z podanej listy proszę wskazać trzy możliwości],
+  [145 (VI 2002)], [44], [A], [Support for EU membership / integration], [Czy, Pana(i) zdaniem, Kościół katolicki w Polsce popiera integrację naszego kraju z Unią Europejską, czy też jest jej przeciwny?],
+  [145 (VI 2002)], [45], [A], [Perceived EU/member-state stance toward Poland], [Czy, Pana(i) zdaniem, Kościół powinien wspierać działania na rzecz integracji Polski z Unią Europejską, czy też nie?],
+  [145 (VI 2002)], [66], [A], [EU / international orientation (other)], [Czy zetknął(ęła) się Pan(i) w ciągu ostatniego miesiąca z jakimiś informacjami dotyczącymi Unii Europejskiej i przystąpienia Polski do tej organizacji?],
+  [145 (VI 2002)], [68], [A], [EU / international orientation (other)], [A czy sam, z własnej inicjatywy, poszukiwał(a) Pan(i) w ciągu ostatniego miesiąca jakichś informacji o Unii Europejskiej czy też nie?],
+  [146 (VII 2002)], [30], [A], [Enlargement / candidate countries], [Po przyjęciu Polski i Litwy do Unii Europejskiej i wprowadzeniu wiz dla obywateli Rosji utrudnione zostaną podróże między Obwodem Kaliningradzkim a Rosją. Jak, Pana(i) zdaniem należy rozwiązać ten problem?],
+  [146 (VII 2002)], [31], [A], [Immigration], [Po wstąpieniu Polski do Unii Europejskiej wschodnia granica Polski stanie się zewnętrzną granicą Unii. Unii Europejskiej bardzo zależy na powstrzymaniu fali nielegalnej imigracji ze wschodu do Europy. Co w tej sytuacji należy robić?],
+  [146 (VII 2002)], [34], [A], [EU relations with third countries], [Jak Pan(i) sądzi, czy wejście Polski do Unii Europejskiej będzie dobrze służyć pojednaniu polsko-niemieckiemu czy też stworzy nowe lub odświeży stare konflikty w stosunkach polsko-niemieckich?],
+  [146 (VII 2002)], [35], [A], [EU relations with third countries], [A jak Pan(i) przypuszcza, czy po wejściu Polski do Unii Europejskiej obywatelom niemieckim posiadającym przed wojną nieruchomości, znajdujące się obecnie na terenie Polski, uda się skutecznie odzyskiwać swoją dawną własność?],
+  [146 (VII 2002)], [53], [A], [Euro adoption], [A czy chciał(a)by Pan(i), by już teraz w naszym kraju złotówka została zastąpiona przez wspólną walutę europejską euro?],
+  [146 (VII 2002)], [P39], [A], [Agriculture and EU membership], [Czy, Pana(i) zdaniem, wejście Polski do Unii Europejskiej przyczyni się do poprawy sytuacji w rolnictwie?],
+  [149 (X 2002)], [28], [A], [Attention to / knowledge of EU affairs], [Jak Pan(i) ocenia kampanię informacyjną rządu na temat integracji Polski z Unią Europejską. Czy Pana(i) zdaniem:],
+  [149 (X 2002)], [29], [A], [EU accession referendum: vote intention/turnout], [Czy, Pana(i) zdaniem, kampania informacyjna rządu raczej zachęca czy też raczej zniechęca do głosowania w referendum za wejściem Polski do Unii Europejskiej?],
+  [149 (X 2002) + 155], [31], [A], [EU accession referendum: vote intention/turnout], [Jak Pan(i) przypuszcza, jaki będzie wynik referendum w sprawie wejścia Polski do Unii Europejskiej? Czy sądzi Pan(i), że większość głosujących Polaków opowie się za czy też przeciw przystąpieniu Polski do Unii Europejskiej?],
+  [149 (X 2002) + 155], [32], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, czy to czy Polska wejdzie do Unii Europejskiej, będzie miało znaczenie dla przyszłości naszego kraju czy też nie:],
+  [149 (X 2002)], [33], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, w dotychczasowych negocjacjach w sprawie przystąpienia Polski do Unii Europejskiej:],
+  [149 (X 2002) + 155], [P24], [A], [Attention to / knowledge of EU affairs], [Czy czuje się Pan(i) dobrze poinformowany(a) na temat planowanej integracji Polski z Unia Europejską czy też nie?],
+  [149 (X 2002) + 155], [P26], [A], [EU / international orientation (other)], [A czy sam(a), z własnej inicjatywy poszukiwał(a) Pan(i) w ciągu ostatniego miesiąca jakichś informacji o Unii Europejskiej czy też nie?],
+  [149 (X 2002)], [P27], [A], [Attention to / knowledge of EU affairs], [Czy uważa Pan(i), że na dzień dzisiejszy Pana(i) wiedza na temat integracji Polski z Unią Europejską jest wystarczająca czy też niewystarczająca?],
+  [150 (XI 2002)], [21], [A], [Support for EU membership / integration], [Dlaczego zamierza Pan(i) głosować za przystąpieniem Polski do UE? Z podanej listy proszę wskazać nie więcej niż cztery najistotniejsze powody swojej decyzji o poparciu integracji],
+  [150 (XI 2002)], [23], [A], [Trust in / evaluation of EU institutions], [Dlaczego zamierza Pan(i) głosować przeciw przystąpieniu Polski do UE? Z podanej listy proszę wskazać nie więcej niż cztery najistotniejsze powody swojej decyzji o odrzuceniu integracji],
+  [151 (XII 2002) + 152], [56], [A], [EU / international orientation (other)], [Ludzie mają różne opinie o Unii Europejskiej. Jaki, ogólnie rzecz biorąc, jest Pana(i) stosunek do Unii Europejskiej?],
+  [151 (XII 2002) + 152], [57], [A], [Enlargement / candidate countries], [Czy zgadza się Pan(i) czy też nie zgadza z następującymi opiniami \[odczytać kolejny podpunkt pytania\]:],
+  [151 (XII 2002) + 152], [58], [A], [Enlargement / candidate countries], [Jaka sprawa dotycząca rozszerzenia Unii Europejskiej jest dla Pana(i) najważniejsza?],
+  [151 (XII 2002)], [59], [A], [Attention to / knowledge of EU affairs], [Jak ocenia Pan(i) działalność naszego rządu w następujących sprawach:],
+  [151 (XII 2002)], [66], [B], [NATO membership], [Na szczycie NATO w Pradze postanowiono, że sojusz będzie na całym świecie nie tylko bronić terytorium swych członków, ale też działać wszędzie tam, gdzie pojawią się zagrożenia. Czy popiera Pan(i) tę decyzję, czy też jest temu przeciwny(a)?],
+  [151 (XII 2002)], [67], [B], [NATO membership], [NATO utworzy też siły szybkiego reagowania, które w razie potrzeby będą mogły podjąć natychmiastową akcję na całym świecie. Polska zgłosiła do sił szybkiego reagowania 600 żołnierzy. Czy popiera Pan(i) udział żołnierzy polskich w tych siłach czy też jest temu przeciwny(a)?],
+  [151 (XII 2002)], [70], [B], [NATO membership], [W czasie szczytu NATO w Pradze odbywały się demonstracje przeciwników globalizacji i NATO, uczestnicy tych demonstracji przyjechali z wielu krajów. Czy popierał(a) Pan(i) te demonstracje, czy też nie?],
+  [151 (XII 2002)], [P24], [A], [Assessment of costs/benefits of membership], [W ostatnim okresie wiele mówi się i pisze w środkach masowego przekazu w prasie, telewizji, radiu o przystąpieniu Polski do Unii Europejskiej. Czy, Pana(i) zdaniem, więcej mówi się o korzyściach czy też o zagrożeniach związanych z integracją?],
+)
+```
+
+
+### 2003
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [152 (I 2003)], [28], [A], [Enlargement / candidate countries], [Kto w głównej mierze, Pana(i) zdaniem, będzie ponosić finansowe koszty rozszerzenia Unii Europejskiej:],
+  [152 (I 2003)], [29], [A], [Agriculture and EU membership], [Czy, Pana(i) zdaniem, biorąc po uwagę wynik negocjacji, rolnicy polscy będą mieli szanse konkurowania na rynku z rolnikami z Unii Europejskiej, czy też nie?],
+  [152 (I 2003)], [50], [A], [Attention to / knowledge of EU affairs], [Jak ocenia Pan(i) działalność naszego rządu w następujących sprawach: \[odczytać kolejny podpunkt pytania\]],
+  [153 (II 2003)], [32], [A], [EU accession referendum: vote intention/turnout], [Jeżeli w referendum w sprawie przystąpienia Polski do Unii Europejskiej weźmie udział mniej niż połowa uprawnionych to jak należy postąpić?],
+  [153 (II 2003)], [33], [A], [EU accession referendum: vote intention/turnout], [Czy Pana(i) zdaniem należy przedłużyć czas trwania referendum w sprawie przystąpienia Polski do Unii Europejskiej do dwóch dni?],
+  [153 (II 2003)], [34], [A], [EU / international orientation (other)], [Istnieją różne propozycje co do tego, w jaki dzień należy przeprowadzić referendum w sprawie wejścia Polski do UE, aby jak najwięcej ludzi mogło wziąć w nim udział. Jakie jest Pana(i) zdanie na ten temat?],
+  [154 (III 2003) + 161], [19], [A], [Enlargement / candidate countries], [W jakim kierunku powinna, Pan(i) zdaniem, rozwijać się Unia Europejska po rozszerzeniu tzn. po przyjęciu Polski i innych krajów kandydujących? Czy Unia Europejska powinna zmierzać raczej:],
+  [154 (III 2003)], [20], [A], [Labour mobility / free movement of workers], [Czy, Pana(i) zdaniem, państwa Unii Europejskiej:],
+  [154 (III 2003)], [40], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, w Unii Europejskiej powi(na)ien powstać \[odczytać kolejny podpunkt pytania\]:],
+  [155 (IV 2003)], [39], [A], [EU accession referendum: vote intention/turnout], [Które z poniższych stwierdzeń lepiej opisuje Pana(i) stosunek do udziału w referendum w sprawie wejścia Polski do Unii Europejskiej?],
+  [155 (IV 2003)], [41], [A], [Sovereignty / EU decision-making / voting power], [W jakim stopniu podejmując ostateczną decyzję jak głosować w sprawie przystąpienia Polski do Unii Europejskiej będzie się Pan(i) kierować \[odczytać kolejny podpunkt pytania\] w tej sprawie:],
+  [155 (IV 2003)], [42], [A], [EU accession referendum: vote intention/turnout], [Załóżmy, że w referendum w sprawie przystąpienia Polski do Unii Europejskiej weźmie udział większość Polaków i będą oni w większości głosować przeciw integracji. Co się, Pana(i) zdaniem, wówczas stanie?],
+  [155 (IV 2003)], [43], [A], [EU relations with third countries], [A jak Pan(i) sadzi, jakie będą konsekwencje dla Polski, jeśli nasz kraj nie wejdzie do Unii Europejskiej? Czy, Pana(i) zdaniem, wówczas \[odczytać kolejny podpunkt pytania\]:],
+  [155 (IV 2003)], [P36], [A], [Support for EU membership / integration], [Jak Pan(i) ocenia kampanię informacyjną rządu na temat integracji Polski z Unią Europejską? Czy Pana(i) zdaniem: \[odczytać kolejny podpunkt pytania\]],
+  [156 (V 2003)], [15], [A], [Foreign policy orientation], [Co zaliczył(a)by Pan(i) do najważniejszych osiągnięć lub sukcesów rządu Leszka Millera?],
+  [156 (V 2003)], [16], [A], [Attention to / knowledge of EU affairs], [A co zaliczył(a)by Pan(i) do największych porażek, błędów lub zaniedbań rządu Leszka Millera?],
+  [156 (V 2003)], [26], [A], [EU / international orientation (other)], [Kiedy podjął(ęła) Pan(i) decyzję o tym, że będzie Pan(i) głosować za przystąpieniem Polski do Unii Europejskiej?],
+  [156 (V 2003)], [28], [A], [EU / international orientation (other)], [Kiedy podjął(ęła) Pan(i) decyzję o tym, że będzie Pan(i) głosować przeciw przystąpieniu Polski do Unii Europejskiej?],
+  [156 (V 2003)], [29], [A], [EU accession referendum: vote intention/turnout], [Dlaczego nie zamierza Pan(i) wziąć udziału w referendum w sprawie wejścia Polski do Unii Europejskiej lub waha się Pan(i) jeszcze, czy głosować?],
+  [156 (V 2003) + 157], [P30], [A], [EU accession referendum: vote intention/turnout], [Do referendum w sprawie przystąpienia Polski do Unii Europejskiej zostało jeszcze troche czasu. Wiele osób decyduje się na udział w głosowaniu w ostatniej chwili. Gdyby jednak zdecydował(a) się Pan(i) na udział w referendum, to jak głosował(a)by Pan(i)? Czy głosował(a)by Pan(i):],
+  [157 (VI 2003)], [20], [A], [EU accession referendum: vote intention/turnout], [Jak Pan(i) sądzi, jaki procent społeczeństwa weźmie udział w referendum w sprawie przystąpienia Polski do Unii Europejskiej?],
+  [157 (VI 2003)], [21], [A], [EU accession referendum: vote intention/turnout], [A jak Pan(i) sądzi, jaki procent Polaków głosujących w referendum opowie się za przystąpieniem naszego kraju do Unii Europejskiej?],
+  [157 (VI 2003)], [22], [A], [EU accession referendum: vote intention/turnout], [A czy, Pana(i) zdaniem, w trakcie trwania referendum w sprawie przystąpienia Polski do Unii Europejskiej, np. wówczas gdy po pierwszym dniu głosowania okaże się, że mało ludzi poszło do urn, powinno się publicznie nawoływać ludzi do udziału w nim, czy też nie powinno się tego robić?],
+  [157 (VI 2003)], [23], [A], [EU / international orientation (other)], [Jakie nadzieje wiąże Pan(i) z planowanym przystąpieniem Polski do Unii Europejskiej?],
+  [157 (VI 2003)], [24], [A], [Support for EU membership / integration], [Czego obawia się Pan(i) w związku z planowanym przystąpieniem Polski do Unii Europejskiej?],
+  [157 (VI 2003)], [P17], [A], [EU accession referendum: vote intention/turnout], [7 i 8 czerwca odbędzie się referendum w sprawie przystąpienia Polski do Unii Europejskiej. Czy zamierza Pan(i) wziąć w nim udział?],
+  [158 (VII 2003)], [21], [A], [EU accession referendum: vote intention/turnout], [Z jakimi uczuciami przyjął(ęła) Pan(i) wynik referendum w sprawie wejścia Polski do Unii Europejskiej? Z podanej karty proszę wskazać nie więcej niż dwie odpowiedzi.],
+  [158 (VII 2003)], [22], [A], [EU accession referendum: vote intention/turnout], [Czy brał(a) Pan(i) udział w referendum w sprawie przystąpienia Polski do Unii Europejskiej czy też nie?],
+  [158 (VII 2003)], [23], [A], [EU accession referendum: vote intention/turnout], [Jak Pan(i) głosował(a) w tym referendum?],
+  [158 (VII 2003)], [P32], [A], [Foreign policy orientation], [Czy, Pana(i) zdaniem, w Unii Europejskiej powin(na)ien powstać \[odczytać kolejny podpunkt pytania\]:],
+  [160 (IX 2003)], [22], [A], [Support for EU membership / integration], [Czy osobiście popiera Pan(i) członkostwo Polski w Unii Europejskiej czy też jest Pan(i) temu przeciwny?],
+  [161 (X 2003)], [23], [A], [EU treaties (Constitutional/Lisbon)], [Czy słyszał(a) Pan(i), czy też nie, o projekcie Traktatu Konstytucyjnego dokumentu regulującego funkcjonowanie przyszłej Unii Europejskiej, zwanego też konstytucją Unii Europejskiej?],
+  [161 (X 2003)], [24], [A], [EU / international orientation (other)], [Czy to, jakie będą ustalenia zawarte w konstytucji Unii Europejskiej, jest, Pana(i) zdaniem, ważne dla Polski czy też nie?],
+  [161 (X 2003)], [26], [A], [Sovereignty / EU decision-making / voting power], [Według zapisów projektu konstytucji Unii Europejskiej Polska prawdopodobnie będzie miała mniejszy wpływ na decyzje Unii Europejskiej niż by to wynikało z dotychczasowych ustaleń (z tzw. Traktatu Nicejskiego). Polska domaga się zachowania wcześniejszych korzystniejszych dla naszego kraju ustaleń w tej kwestii. Jak powinna postąpić Polska w tej sprawie?],
+  [161 (X 2003)], [27], [A], [Sovereignty / EU decision-making / voting power], [W jaki sposób, Pana(i) zdaniem, powinny być podejmowane decyzje w Unii Europejskiej? Czy, Pana(i) zdaniem, do podjęcia jakiejś decyzji powinna być wymagana zgoda wszystkich państw czy też zgoda większości z nich?],
+  [161 (X 2003)], [32], [A], [Euro adoption], [A jaki jest, według Pana(i) przekonania, zakres władzy Parlamentu Europejskiego? Czy Parlament Europejski zajmuje się:],
+  [161 (X 2003)], [33], [A], [European Parliament / EP elections], [W czerwcu przyszłego roku Polacy będą wybierali w bezpośrednich wyborach posłów do Parlamentu Europejskiego. Czy Pan(i) osobiście interesuje się tymi wyborami?],
+  [161 (X 2003)], [35], [A], [European Parliament / EP elections], [A gdyby wybory do Parlamentu Europejskiego odbywały się w najbliższą niedzielę, to czy wziął(ęła)by Pan(i) w nich udział?],
+  [161 (X 2003)], [36], [A], [European Parliament / EP elections], [A na kandydatów której partii najchętniej oddał(a)by Pan(i) głos w wyborach do Parlamentu Europejskiego?],
+  [161 (X 2003) + 166], [37], [A], [European Parliament / EP elections], [A czy w wyborach do Parlamentu Europejskiego wolał(a)by Pan(i) głosować na kandydatów:],
+  [161 (X 2003)], [P30], [A], [European Parliament / EP elections], [W jaki sposób, według Pana(i) wiedzy, będą wybierani posłowie do Parlamentu Europejskiego? Czy:],
+  [162 (XI 2003)], [36], [A], [EU / international orientation (other)], [Jak ocenia Pan(i) przygotowanie Polski do członkostwa w Unii Europejskiej? Czy ogólnie rzecz biorąc Polska jest do niego dobrze czy też źle przygotowana?],
+  [162 (XI 2003)], [37], [A], [EU / international orientation (other)], [Czy to, że Polska nie jest jeszcze dobrze przygotowana do przystąpienia do Unii Europejskiej, wynika przede wszystkim z tego, że],
+  [162 (XI 2003)], [38], [A], [Agriculture and EU membership], [Czy, Pana(i) zdaniem, polskie(a) jest (są) dobrze czy też źle przygotowane(a) do członkostwa naszego kraju w Unii Europejskiej?],
+  [162 (XI 2003)], [39], [A], [Attention to / knowledge of EU affairs], [A czy jeśli chodzi o: Polska jest dobrze czy też źle przygotowana do przystąpienia do Unii Europejskiej?],
+  [162 (XI 2003)], [40], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, jaką część pieniędzy, które Polska ma szansę otrzymać z Unii Europejskiej, nasz kraj faktycznie wykorzysta?],
+  [162 (XI 2003)], [41], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, w pierwszych latach po wejściu do Unii Europejskiej Polska będzie więcej pieniędzy otrzymywać z unijnej kasy czy też będzie więcej do niej wpłacać?],
+  [162 (XI 2003) + 163, 164], [M24], [A], [EU accession referendum: vote intention/turnout], [Czy brał(a) Pan(i) udział w referendum w sprawie przystąpienia Polski do Unii Europejskiej?],
+  [163 (XII 2003) + 164], [32], [A], [EU treaties (Constitutional/Lisbon)], [Czy słyszał(a) Pan(i), czy też nie, o projekcie Traktatu Konstytucyjnego zwanego też konstytucją Unii Europejskiej?],
+  [163 (XII 2003)], [34], [A], [EU treaties (Constitutional/Lisbon)], [A jak Pan(i) sądzi, czy na grudniowym szczycie UE uda się ostatecznie uzgodnić tekst Konstytucji Europejskiej, tak jak to było planowane, czy też nie uda się tego zrobić?],
+)
+```
+
+
+### 2004
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [164 (I 2004)], [23], [A], [EU / international orientation (other)], [Na grudniowym szczycie Unii Europejskiej w Brukseli nie dało się, tak jak to było planowane, uzgodnić tekstu unijnej konstytucji. Czy, Pana(i) zdaniem, obecnie nadal są szanse na osiągnięcie porozumienia w sprawie konstytucji i przyjęcie jej przez wszystkie państwa Unii Europejskiej?],
+  [164 (I 2004)], [25], [A], [Assessment of costs/benefits of membership], [Mówi się o tym, że niepowodzenie szczytu w Brukseli może mieć różne skutki dla Polski i dla całej Unii Europejskiej. Czy Pana(i) zdaniem, spowoduje ono \[odczytać kolejny podpunkt pytania\] czy też nie?:],
+  [164 (I 2004)], [32], [A], [EU / international orientation (other)], [Które państwa Unii Europejskiej są, Pana(i) zdaniem, obecnie największymi sprzymierzeńcami Polski? Proszę wskazać nie więcej niż trzy takie państwa.],
+  [164 (I 2004)], [33], [A], [Perceived EU/member-state stance toward Poland], [A które państwa Unii Europejskiej są, Pana(i) zdaniem, obecnie najbardziej Polsce niechętne? Proszę wskazać nie więcej niż trzy takie państwa.],
+  [164 (I 2004)], [37], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, przystąpienie naszego kraju do Unii Europejskiej zwiększy czy też zmniejszy liczbę ludzi bogatych w Polsce?],
+  [164 (I 2004) + 292, 313], [P52], [B], [NATO membership], [Czy uważa Pan(i), że w Polsce powinny stacjonować wojska innych państw NATO, czy też nie?],
+  [166 (III 2004)], [26], [A], [EU / international orientation (other)], [W jakich sprawach, dziedzinach powinna decydować Unia Europejska, a w jakich każde państwo członkowskie Unii samodzielnie? Czy w takich sprawach jak \[odczytać kolejny podpunkt pytania\] powinna decydować:],
+  [166 (III 2004)], [35], [A], [European Parliament / EP elections], [Czy, Pana(i) zdaniem, to jacy ludzie zostaną wybrani do Parlamentu Europejskiego, kto będzie nas reprezentował w tej instytucji, będzie miało dla naszego kraju:],
+  [166 (III 2004)], [47], [A], [EU / international orientation (other)], [Czy Pana(i) zdaniem, przystąpienie naszego kraju do Unii Europejskiej zwiększy, czy też zmiejszy liczbę ludzi biednych w Polsce?],
+  [166 (III 2004)], [P27], [A], [Enlargement / candidate countries], [W jakim kierunku powinna, Pana(i) zdaniem, rozwijać się Unia Europejska po rozszerzeniu, tzn. po przyjęciu Polski i innych krajów kandydujących? Czy UE powinna zmierzać raczej:],
+  [167 (IV 2004)], [17], [A], [EU / international orientation (other)], [Ostatnio Leszek Miller ogłosił, że 2 maja czyli dzień po wejściu Polski do UE, ustąpi ze stanowiska premiera i poda rząd do dymisji. Z jakimi uczuciami przyjął(a) Pan(i) wiadomość o ustąpieniu rządu Leszka Millera? Proszę wybrać nie więcej niż dwie odpowiedzi],
+  [167 (IV 2004)], [29], [A], [EU / international orientation (other)], [1 maja Polaka stanie się członkiem Unii Europejskiej. Z jakimi uczuciami oczekuje Pan(i) wejścia Polski do tej organizacji? Z podanej listy proszę wskazać nie więcej niż trzy uczucia],
+  [167 (IV 2004)], [30], [A], [Agriculture and EU membership], [Przystępując do Unii Europejskiej Polacy mają nadzieję na różnego rodzaju korzyści z tym związane. A co, Pana(i) zdaniem, Polska może wnieść do jednoczącej się Europy? Z podanej listy proszę wskazać nie więcej niż trzy możliwości.],
+  [167 (IV 2004)], [31], [A], [Sovereignty / EU decision-making / voting power], [Przywódcy obecnych i przyszłych państw Unii Europejskiej ponownie debatowali na temat konstytucji Unii Europejskiej. Hiszpania zrezygnowała z postulatu utrzymania nicejskiego systemu głosowania w Radzie UE. Z postulatu zachowania systemu nicejskiego zrezygnowała również Polska deklarując, że jest gotować zgodzić się na jakieś inne kompromisowe rozwiązanie. Jak Pan(i) ocenia tę decyzję?],
+  [167 (IV 2004) + 168], [P26], [A], [European Parliament / EP elections], [A czy zamierza Pan(i) wziąć udział w wyborach do Parlamentu Europejskiego?],
+  [168 (V 2004)], [26], [A], [EU / international orientation (other)], [1 maja Polska stała się członkiem Unii Europejskiej. Z jakimi uczuciami przyjął(ęła) Pan(i) wejście Polski do tej organizacji? Z podanej listy proszę wskazać nie więcej niż trzy uczucia],
+  [168 (V 2004)], [P45], [A], [EU / international orientation (other)], [Czy celem Unii Europejskiej powinna być jak najściślejsza współpraca ze Stanami Zjednoczonymi czy też raczej budowanie własnej, konkurencyjnej wobec USA, pozycji w świecie?],
+  [169 (VI 2004)], [24], [A], [European Parliament / EP elections], [13 czerwca odbyły się wybory do Parlamentu Europejskiego. Czy brał(a) Pan(i) udział w tych wyborach?],
+  [169 (VI 2004)], [27], [A], [European Parliament / EP elections], [Czy zaznaczając nazwisko konkretnego kandydata na posła do Parlamentu Europejskiego kierował(a) się Pan(i) przede wszystkim osobą kandydata czy też nazwą partii, komitetu wyborczego?],
+  [169 (VI 2004)], [28], [A], [European Parliament / EP elections], [Dlaczego nie wziął(ęła) Pan(i) udziału w wyborach do Parlamentu Europejskiego? Proszę wskazać nie więcej niż trzy powody],
+  [169 (VI 2004)], [30], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, które państwa Unii Europejskiej mają najsilniejszą pozycję, największy wpływ na funkcjonowanie tej organizacji? Proszę wskazać nie więcej niż pięć państw.],
+  [169 (VI 2004)], [32], [A], [EU funds / budget / direct payments], [Jak Pan(i) sądzi, od czego przede wszystkim zależy to, jaką pozycję, wpływy ma dane państwo w Unii Europejskiej? Z podanej listy proszę wybrać nie więcej niż dwie odpowiedzi.],
+  [169 (VI 2004)], [33], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem \[odczytać kolejny podpunkt pytania\] powinni w swojej pracy kierować się przede wszystkim:],
+  [169 (VI 2004)], [34], [A], [European Parliament / EP elections], [Czy, Pana(i) zdaniem, lepiej byłoby, gdyby posłowie do Parlamentu Europejskiego byli wybierani:],
+  [170 (VII 2004)], [21], [A], [EU / international orientation (other)], [18 czerwca w Brukseli przywódcy państw Unii Europejskiej uzgodnili tekst europejskiej konstytucji. Jak Pan(i) ocenia postawę przedstawicieli polskiego rządu w sprawie konstytucji? Czy, Pana(i) zdaniem, polski rząd:],
+  [170 (VII 2004)], [22], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, przyjęcie europejskiej konstytucji przyczyni się do:],
+  [170 (VII 2004) + 174], [24], [A], [European identity], [Gdyby w Polsce odbywało się referendum w sprawie przyjęcia europejskiej konstytucji, to czy wziął(ę)by Pan(i) w nim udział?],
+  [170 (VII 2004)], [M24], [A], [EU accession referendum: vote intention/turnout], [Czy brał(a) Pan(i) udział w referendum w sprawie przystąpienia Polski do Unii],
+  [171 (VIII 2004)], [50], [B], [Immigration], [Niektórzy dostrzegają w obecności cudzoziemców w Polsce raczej korzyści, inni uważają ją raczej za niekorzystną. Czy, Pana(i) zdaniem, obecność \[odczytać kolejny podpunkt pytania\] w Polsce jest dla naszego kraju raczej korzystna czy raczej niekorzystna?],
+  [171 (VIII 2004)], [51], [B], [Immigration], [Na czym, Pana(i) zdaniem, mogą polegać korzyści wynikające z obecności zamieszkałych w Polsce obcokrajowców?],
+  [171 (VIII 2004)], [52], [B], [Immigration], [A dlaczego, Pana(i) zdaniem, obecność zamieszkałych w Polsce obcokrajowców może być niekorzystna?],
+  [171 (VIII 2004) + 196], [55], [B], [Labour mobility / free movement of workers], [Gdyby miał(a) Pan(i) do wyboru pracować wspólnie z Polakami lub z obcokrajowcami, to czy wolał(a)by Pan(i) pracować:],
+  [171 (VIII 2004)], [56], [B], [Immigration], [A czy za szefa wolał(a)by Pan(i) Polaka czy obcokrajowca, czy też jest to sprawa bez znaczenia?],
+  [171 (VIII 2004) + 300], [57], [B], [Immigration], [Czy, Pana(i) zdaniem, obcokrajowcy prześladowani w swoim kraju za przekonania i działalność polityczną powinni mieć prawo mieszkać w Polsce?],
+  [171 (VIII 2004)], [P49], [B], [Labour mobility / free movement of workers], [W ostatnich latach w Polsce mieszka coraz więcej obcokrajowców, osób nie posiadających obywatelstwa polskiego. Czasem przyjeżdżają oni, żeby pracować; inni zakładają przedsiębiorstwa. Polki i Polacy wchodzą w związki małżeńskie z obcokrajowcami. Czy zna Pan(i) osobiście jakiegoś mieszkającego w Polsce cudzoziemca?],
+  [171 (VIII 2004)], [P53], [B], [Labour mobility / free movement of workers], [Jak Pan sądzi, czy cudzoziemcom powinno się pozwolić na podjęcie pracy w Polsce?],
+  [174 (XI 2004) + 178], [100], [A], [Attention to / knowledge of EU affairs], [Proszę powiedzieć, czy akceptuje Pan(i) członkostwo Polski w Unii Europejskiej?],
+  [174 (XI 2004)], [20], [A], [Enlargement / candidate countries], [Czy, Pana(i) zdaniem, do UE powinny zostać przyjęte takie państwa jak:],
+  [174 (XI 2004) + 182], [41], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, czy w najbliższym czasie Unia Europejska powinna],
+  [174 (XI 2004)], [42], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, w następujących sprawach Unia Europejska odgrywa rolę pozytywną, negatywną, czy też nie odgrywa żadnej roli?],
+  [174 (XI 2004)], [70], [A], [EU / international orientation (other)], [Jaki jest, według Pana(i), obecnie najbardziej skuteczny sposób ochrony interesów pracowników?],
+  [175 (XII 2004) + 203], [27], [A], [Assessment of costs/benefits of membership], [Jak Pan(i) sądzi, które grupy ludzi w Polsce zyskują, a które tracą na członkostwie Polski w Unii Europejskiej? Czy \[odczytać kolejny podpunkt pytania\].. raczej zyskują czy tez raczej tracą na członkostwie w Unii Europejskiej?],
+  [175 (XII 2004)], [28], [A], [Assessment of costs/benefits of membership], [Jakie korzystne skutki członkostwa Polski w Unii Europejskiej odczuł(a) Pan(i) osobiście lub ktoś z Pana(i) najbliżej rodziny?],
+  [175 (XII 2004)], [29], [A], [Assessment of costs/benefits of membership], [A jakie niekorzystne skutki członkostwa w Unii Europejskiej odczuł Pan(i) osobiście lub ktoś z Pana(i) najbliżej rodziny?],
+  [175 (XII 2004)], [33], [A], [Enlargement / candidate countries], [Jak Pan(i) sądzi, czy w interesie Polski jest:],
+)
+```
+
+
+### 2005
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [177 (II 2005)], [46], [B], [Immigration], [A czy, Pana(i) zdaniem, Polska potrzebuje imigrantów, osób, które przyjeżdżają do Polski, aby się tu osiedlić czy też nie?],
+  [177 (II 2005)], [47], [B], [Refugees], [Czy, Pana(i) zdaniem, Polska powinna przyjmować uchodźców politycznych?],
+  [178 (III 2005)], [101], [B], [NATO membership], [A czy akceptuje Pan(i) członkostwo Polski w NATO?],
+  [178 (III 2005) + 197], [34], [A], [Labour mobility / free movement of workers], [Czy po wejściu Polski do Unii Europejskiej tzn. po 1 maja 2004 poszukiwał(a) Pan(i) pracy w którymś z krajów Unii Europejskiej?],
+  [178 (III 2005)], [36], [A], [Labour mobility / free movement of workers], [A czy po wejściu Polski do Unii Europejskiej, tzn. po 1 maja 2004 roku, ktoś z Pana(i) najbliższej rodziny wyjechał do pracy do któregoś z krajów Unii Europejskiej?],
+  [178 (III 2005)], [37], [A], [EU / international orientation (other)], [Do którego z krajów Unii Europejskiej wyjechała ta osoba?],
+  [178 (III 2005) + 197], [39], [A], [Support for EU membership / integration], [A czy obecnie, jest Pan(i) zainteresowany(a) podjęciem pracy na terenie któregoś z państw Unii Europejskiej?],
+  [178 (III 2005)], [99], [A], [Labour mobility / free movement of workers], [Czy Pan(i) osobiście jest zainteresowany(a) podjęciem pracy w którymś z państw Unii Europejskiej?],
+  [179 (IV 2005)], [49], [A], [EU / international orientation (other)], [A jak Pan(i) sądzi, jakie stanowisko w kwestii członkostwa Polski w Unii Europejskiej zajmuje \[odczytać kolejny podpunkt pytania\]],
+  [180 (V 2005)], [51], [A], [Assessment of costs/benefits of membership], [Jak, z perspektywy czasu, ocenia Pani(i) skutki wejścia Polski do Unii Europejskiej? Czy skutki integracji okazały się lepsze czy też gorsze niż się Pan(i) spodziewał(a)?],
+  [180 (V 2005)], [52], [A], [EU / international orientation (other)], [A jakie uczucia towarzyszą Panu(i) obecnie, rok po wejściu Polski do Unii Europejskiej? Czy w związku z tym, że Polska od roku jest członkiem Unii Europejskiej odczuwa Pan(i): Z podanej listy proszę wybrać nie więcej niż trzy odpowiedzi],
+  [180 (V 2005)], [53], [A], [Enlargement / candidate countries], [Minął rok od rozszerzenia Unii Europejskiej. Jakie są, Pana(i) zdaniem, korzyści związane z wejściem Polski do Unii Europejskiej?],
+  [180 (V 2005)], [57], [A], [EU / international orientation (other)], [Czy Pana(i) zdaniem, przystąpienie do Unii Europejskiej było dla Polski wydarzeniem:],
+  [181 (VI 2005)], [23], [A], [Foreign policy orientation], [Czy, Pana(i) zdaniem członkostwo Polski w Unii Europejskiej zwiększa czy też ogranicza możliwości Polski w prowadzeniu polityki zagranicznej zgodnej z naszymi interesami?],
+  [181 (VI 2005)], [29], [A], [Enlargement / candidate countries], [Czy w interesie Polski jest członkostwo Ukrainy w Unii Europejskiej czy też nie?],
+  [181 (VI 2005)], [36], [A], [European identity], [A jak Pan(i) sądzi, jaki termin przeprowadzenia w Polsce referendum w sprawie przyjęcia europejskiej konstytucji byłyby najlepszy. Czy najlepiej byłoby, aby referendum odbyło się:],
+  [181 (VI 2005)], [37], [A], [EU treaties (Constitutional/Lisbon)], [Obecnie wiadomo już, że konstytucja europejska nie zostanie przyjęta przez wszystkie kraje Unii Europejskiej. Czy w tej sytuacji wynik ewentualnego referendum w Polsce będzie miał znaczenie dla przyszłości konstytucji czy też nie?],
+  [182 (VII 2005)], [28], [A], [EU / international orientation (other)], [Czy widzi Pan(i) obecnie jakieś zagrożenia dla funkcjonowania Unii Europejskiej, czy też nie?],
+  [182 (VII 2005) + 204], [31], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, w jakim kierunku zmierza obecnie Unia Europejska? Czy w kierunku:],
+  [182 (VII 2005)], [33], [A], [EU / international orientation (other)], [Pojawiają się niekiedy propozycje, aby w UE ukształtowała się niewielka grupa państw współpracujących ze sobą ściślej niż pozostałe państwa. Czy, Pana(i) zdaniem, byłoby dobrze czy też źle, gdyby się tak stało?],
+  [182 (VII 2005)], [35], [A], [Perceived EU/member-state stance toward Poland], [Czy, Pana(i) zdaniem, państwa członkowskie Unii Europejskiej dbają przede wszystkim o:],
+  [182 (VII 2005)], [36], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, możliwe jest pogodzenie dbałości o interesy własnego państwa z troską o interesy Unii Europejskiej jako całości czy też nie jest to możliwe?],
+  [182 (VII 2005)], [37], [A], [EU / international orientation (other)], [Czy na członkostwie w Unii Europejskiej korzystają wszystkie państwa unijne czy też tylko niektóre z nich?],
+  [182 (VII 2005)], [38], [A], [EU / international orientation (other)], [Które państwa korzystają najbardziej na członkostwie w Unii Europejskiej? Proszę wskazać nie więcej niż 5 z nich.],
+  [184 (IX 2005)], [61], [A], [EU / international orientation (other)], [Proszę powiedzieć, jak ogólnie rzecz biorąc, ocenił(a)by Pan(i) działalność Komisji Europejskiej? słyszał(a) na ten temat”],
+  [184 (IX 2005)], [62], [A], [Perceived EU/member-state stance toward Poland], [Czy, według Pana(i), instytucje Unii Europejskiej \[odczytać kolejne pary stwierdzeń A,B C i D\]: słyszał(a) na ten temat”],
+  [184 (IX 2005)], [65], [A], [Assessment of costs/benefits of membership], [Jaki wpływ, Pana(i) zdaniem, miało przystąpienie Polski do Unii Europejskiej na: \[odczytać kolejny podpunkt pytania\]],
+)
+```
+
+
+### 2006
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [196 (IX 2006)], [25], [B], [Immigration], [A czy zna Pan(i) osobiście jakiegoś obcokrajowca pracującego w Polsce?],
+  [196 (IX 2006)], [27], [B], [Immigration], [A czy zna Pan(i) osobiście kogoś zatrudniającego obcokrajowca (np. jako pomoc domową, opiekunkę do dzieci, pielęgniarkę, na budowie, przy pracach polowych, itp.)?],
+  [196 (IX 2006)], [28], [A], [Immigration], [Czy, Pana(i) zdaniem, praca obcokrajowców spoza Unii Europejskiej w Polsce jest dla \[odczytać kolejny podpunkt pytania\] korzystna, czy teŜ niekorzystna?],
+  [196 (IX 2006)], [29], [A], [Immigration], [Jak Pan(i) sądzi, czy powinno się ułatwić obcokrajowcom spoza Unii Europejskiej podejmowanie w Polsce pracy, jeŜeli nie ma Polaków chętnych do pracy na danym stanowisku, czy teŜ nie?],
+  [196 (IX 2006)], [33], [B], [Labour mobility / free movement of workers], [Jak Pan(i) sądzi, czy obcokrajowcy pracujący w Polsce powinni],
+  [196 (IX 2006)], [P24], [B], [Labour mobility / free movement of workers], [W ostatnich latach w Polsce mieszka coraz więcej obcokrajowców, osób nie posiadających obywatelstwa polskiego. Czasem przyjeŜdŜają oni, Ŝeby pracować; inni zakładają przedsiębiorstwa. Polki i Polacy wchodzą w związki małŜeńskie z obcokrajowcami. Czy zna Pan(i) osobiście jakiegoś mieszkającego w Polsce cudzoziemca?],
+  [196 (IX 2006) + 215, 216], [P31], [B], [Labour mobility / free movement of workers], [Jak Pan(i) sądzi, czy cudzoziemcom powinno się pozwolić na podjęcie pracy w Polsce?],
+  [196 (IX 2006)], [Z38], [A], [EU / international orientation (other)], [Jak Pan(i) sądzi, czy przystąpienie Polski do Unii Europejskiej zwiększyło przemyt ludzi do Polski, czy teŜ nie?],
+  [197 (X 2006)], [57], [B], [NATO membership], [Rząd podjął decyzję o zwiększeniu polskiego kontyngentu w siłach NATO w Afganistanie o tysiąc Ŝołnierzy. Czy popiera Pan(i) tę decyzję czy teŜ nie?],
+  [197 (X 2006)], [P31], [A], [Support for EU membership / integration], [Czy osobiście popiera Pan(i) członkostwo Polski w Unii Europejskiej czy teŜ jest Pan(i) temu przeciwny(a)?],
+  [199 (XII 2006)], [31], [A], [Sovereignty / EU decision-making / voting power], [Polska zgłosiła veto przeciw podjęciu rozmów w sprawie nowej umowy pomiędzy Unią Europejską a Rosją, stojąc na stanowisku, Ŝe zgodzi się na te rozmowy dopiero jak Rosja zniesie ograniczenia w handlu z Polską. Czy stanowisko Polski jest słuszne?],
+  [199 (XII 2006)], [32], [A], [Sovereignty / EU decision-making / voting power], [Czy veto Polski przeciw podjęciu rozmów w sprawie nowej umowy pomiędzy UE a Rosją raczej wzmocni czy teŜ osłabi pozycję naszego kraju w UE?],
+)
+```
+
+
+### 2007
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [200 (I 2007)], [23], [B], [NATO membership], [A czy popiera Pan(i) udział żołnierzy polskich w operacji NATO w Afganistanie czy też nie?],
+  [200 (I 2007)], [P40], [A], [EU relations with third countries], [A które z wydarzeń mijającego roku można, Pana(i) zdaniem, uznać za najważniejsze dla świata?],
+  [202 (III 2007)], [48], [A], [EU / international orientation (other)], [Czy Pana(i) zdaniem, przystąpienie naszego kraju do Unii Europejskiej zwiększyło, czy też zmniejszyło liczbę ludzi biednych w Polsce?],
+  [203 (IV 2007)], [48], [A], [EU funds / budget / direct payments], [Wkrótce miną trzy lata od rozszerzenia Unii Europejskiej. Jakie są, Pana(i) zdaniem, korzyści związane z wejściem Polski do Unii Europejskiej?],
+  [203 (IV 2007)], [49], [A], [EU funds / budget / direct payments], [A jakie są, Pana(i) zdaniem, niekorzystne skutki przystąpienia Polski do Unii Europejskiej?],
+  [203 (IV 2007) + 205], [P45], [B], [NATO membership], [A czy uważa Pan(i) za lepszą propozycję, aby system tarczy antyrakietowej był realizowany w ramach NATO, a nie jako system wyłącznie amerykański?],
+  [203 (IV 2007)], [P46], [A], [Support for EU membership / integration], [Czy osobiście popiera Pan(i) członkostwo Polski w Unii Europejskiejczy też jest Pan(i) temu przeciwny(a)?],
+  [204 (V 2007)], [36], [A], [EU treaties (Constitutional/Lisbon)], [Czy to, jaka będzie w przyszłości pozycja Polski w Unii Europejskiej zależy przede wszystkim od:],
+  [204 (V 2007) + 218], [P31], [A], [EU / international orientation (other)], [Pojawiają się niekiedy propozycje, aby w Unii Europejskiej ukształtowała się niewielka grupa państw współpracujących ze sobą ściślej niż pozostałe państwa. Czy, Pana(i) zdaniem, byłoby dobrze czy też źle, gdyby się tak stało?],
+  [205 (VI 2007)], [32], [A], [EU relations with third countries], [Polska nadal sprzeciwia się podjęciu rozmów w sprawie nowej umowy pomiędzy Unią Europejską a Rosją, ponieważ mimo starań ze strony Unii Europejskiej Rosja ciągle blokuje swoją granicę dla wwozu z Polski mięsa i niektórych innych artykułów spożywczych. Czy stanowisko Polski jest słuszne, czy też nie?],
+  [205 (VI 2007) + 206], [46], [B], [NATO membership], [Czy uważa Pan(i), że operacja militarna NATO w Afganistanie przyczyni się do zapanowania pokoju w tym kraju?],
+  [206 (VII 2007)], [52], [A], [Perceived EU/member-state stance toward Poland], [Czy polityka polskich władz przyczynia się do poprawy czy do pogorszenia pozycji Polski w Unii Europejskiej?],
+  [206 (VII 2007)], [53], [A], [Sovereignty / EU decision-making / voting power], [Na zakończonym niedawno szczycie Unii Europejskiej w Brukseli ustalono, że do 2014 roku będzie obowiązywał nicejski system głosowania w Radzie UE. Potem ma obowiązywać system podwójnej większości, zgodnie z którym wpływ danego państwa w Radzie UE zależy od liczby jego mieszkańców. Czy przyjęcie takiego ustalenia można uznać za sukces czy też za porażkę polskich władz?],
+  [206 (VII 2007)], [54], [A], [Sovereignty / EU decision-making / voting power], [Czy, Pana(i) zdaniem, w negocjacjach w sprawie systemu głosowania w Radzie UE Polska mogła osiągnąć więcej czy też nie?],
+  [206 (VII 2007)], [55], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, Polska powinna się obawiać wzmocnienia pozycji Niemiec w Unii Europejskiej czy też nie powinna się tego obawiać?],
+  [206 (VII 2007)], [P49], [A], [Support for EU membership / integration], [Czy popiera Pan(i) członkostwo Polski w Unii Europejskiej czy też jest Pana(i) temu przeciwny(a)?],
+  [206 (VII 2007)], [P50], [A], [EU relations with third countries], [Które państwa Unii Europejskiej są obecnie, Pana(i) zdaniem, największymi sprzymierzeńcami Polski? Proszę wskazać nie więcej niż trzy takie państwa],
+  [206 (VII 2007)], [P51], [A], [Perceived EU/member-state stance toward Poland], [Które państwa Unii Europejskiej są obecnie, Pana(i) zdaniem, najbardziej niechętne Polsce? Proszę wskazać nie więcej niż trzy takie państwa],
+  [208 (IX 2007)], [28], [B], [NATO membership], [Czy, Pana (i) zdaniem, udział żołnierzy polskich w operacji NATO w Afganistanie wpływa korzystnie czy też niekorzystnie na:],
+  [208 (IX 2007)], [P24], [B], [NATO membership], [Czy Pan(i) osobiście popiera przynależność Polski do NATO (Paktu Północnoatlantyckiego) czy też jest temu przeciwny(a)?],
+)
+```
+
+
+### 2008
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [215 (IV 2008) + 216], [17], [A], [EU treaties (Constitutional/Lisbon)], [Czy interesuje się Pan(i) sprawą przyjęcia przez Polskę traktatu reformującego Unię Europejską, zwanego traktatem lizbońskim?],
+  [215 (IV 2008) + 216], [32], [B], [NATO membership], [Członkostwu Ukrainy i Gruzji w NATO sprzeciwia się Rosja. Czy NATO powinno wziąć pod uwagę sprzeciw Rosji czy też nie?],
+  [215 (IV 2008) + 216], [40], [B], [Immigration], [Czy kiedykolwiek korzystał(a) Pan(i) z płatnej pomocy obcokrajowca (np. przy pracach domowych, opiece nad dziećmi) lub zatrudniał(a) Pan(i) obcokrajowca np. na budowie, przy pracach polowych, itp.?],
+  [215 (IV 2008) + 216], [41], [B], [Immigration], [A czy zna Pan(i) osobiście kogoś zatrudniającego obcokrajowca (np. jako pomoc domową, opiekunkę do dzieci, pielęgniarkę, pracownika na budowie lub przy pracach polowych, itp.)?],
+  [215 (IV 2008) + 216], [46], [B], [Immigration], [Od niedawna obywatele państw byłego ZSRR pochodzenia polskiego mogą ubiegać się o Kartę Polaka. Posiadacze Karty mogą m.in. prowadzić działalność gospodarczą na zasadach takich jak obywatele polscy, zwolnieni są z obowiązku posiadania zezwolenia na pracę, mają zniżki na przejazd koleją i inne przywileje niedostępne dla pozostałych obcokrajowców. Czy, Pana(i) zdaniem, wprowadzenie Karty Polaka było słuszne czy też nie?],
+  [215 (IV 2008) + 216], [P36], [A], [Support for EU membership / integration], [W najbliższym czasie 400 polskich żołnierzy wyjedzie do Czadu w Afryce w ramach misji pokojowej Unii Europejskiej. Czy popiera Pan(i) udział żołnierzy polskich w misji Unii Europejskiej w Czadzie?],
+  [215 (IV 2008) + 216], [P37], [B], [Labour mobility / free movement of workers], [W ostatnich latach w Polsce mieszka coraz więcej obcokrajowców, osób nieposiadających obywatelstwa polskiego. Czasem przyjeżdżają oni, żeby pracować; inni zakładają przedsiębiorstwa. Polki i Polacy wchodzą w związki małżeńskie z obcokrajowcami. Czy zna Pan(i) osobiście jakiegoś cudzoziemca mieszkającego w Polsce?],
+  [217 (VI 2008)], [25], [A], [Assessment of costs/benefits of membership], [Czy, biorąc pod uwagę dotychczasową działalność prezydenta Lecha Kaczyńskiego, uważa Pan(i), że jego prezydentura: A)],
+  [217 (VI 2008)], [39], [A], [EU relations with third countries], [A czy Polska, działając w ramach Unii Europejskiej, powinna dążyć do zacieśnienia stosunków UE z krajami dawnego ZSRR (Ukraina, Białoruś, Mołdawia, Gruzja, Armenia, Azerbejdżan) czy też nie?],
+  [218 (VII 2008)], [33], [A], [EU treaties (Constitutional/Lisbon)], [Odrzucenie przez Irlandczyków traktatu lizbońskiego ma znaczenie dla całej Unii Europejskiej. Jeśli choć jedno państwo Unii nie zgodzi się na ratyfikację traktatu, nie wejdzie on w życie. Rozważa się zatem różne możliwości wyjścia z sytuacji, w której znalazła się Unia Europejska po odrzucenia traktatu przez Irlandczyków. Jakie rozwiązanie, Pana(i) zdaniem, byłoby najlepsze w tej sytuacji?],
+  [218 (VII 2008)], [34], [A], [EU treaties (Constitutional/Lisbon)], [Czy w związku z problemami z ratyfikacją dokumentów, mających na celu pogłębienie współpracy między krajami Unii Europejskiej, tj. konstytucji europejskiej i traktatu lizbońskiego, państwa tworzące Unię powinny:],
+  [218 (VII 2008) + 260, 266], [P37], [A], [EU / international orientation (other)], [W jakim kierunku powinna, Pana(i) zdaniem, rozwijać się Unia Europejska? Czy Unia Europejska powinna zmierzać raczej:],
+  [222 (XI 2008)], [E6], [A], [Euro adoption], [Gdyby w Polsce odbywało się referendum w sprawie wprowadzenia w naszym kraju europejskiej waluty euro, to czywziął(ę)łaby Pan(i) w nim udział? q37 (pytanie jednowyborowe)],
+  [222 (XI 2008)], [EP1], [A], [Support for EU membership / integration], [Czy osobiście popiera Pan(i) członkostwo Polski w Unii Europejskiej czy też jest Pan(i) temu przeciwny(a)? q32 (pytanie jednowyborowe)],
+)
+```
+
+
+### 2009
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [226 (III 2009)], [U4], [A], [European Parliament / EP elections], [Nie wiadomo jeszcze jakie partie, koalicje, komitety wyborcze zgłoszą swoich kandydatów w wyborach do Parlamentu Europejskiego.Na kandydatów jakiej partii, koalicji lub komitetu wyborczego głosował(a)by Pan(i) w tych wyborach?],
+  [226 (III 2009)], [U5], [A], [EU / international orientation (other)], [Przedstawię Panu(i) teraz listę polskich polityków działających w instytucjach Unii Europejskiej. O każdej z tych osób proszę powiedzieć, w jakim stopniu budzi ona Pana(i) zaufanie? Przy odpowiedzi proszę posłużyć się skalą, gdzie -5 oznacza, że osoba ta budzi Pana(i) głęboką nieufność, 0, że jest Panu(i) obojętna, a +5 oznacza, że ma Pan(i) do tej osoby pełne zaufanie. Oczywiście może Pan(i) posługiwać się innymi ocenami tej skali. Jeśli nie zna Pan(i) danej osoby, proszę mi o tym powiedzieć.],
+  [226 (III 2009) + 275, 309], [UP10], [A], [European Parliament / EP elections], [Proszę powiedzieć jak, ogólnie rzecz biorąc, ocenił(a)by Pan(i) działalność Parlamentu Europejskiego?Ankieter: Jeżeli respondent nie wie, proszę spytać: „A jak się Panu(i) wydaje, co Pan(i)słyszał(a) na ten temat”],
+  [226 (III 2009) + 275, 309], [UP11], [A], [EU / international orientation (other)], [Proszę powiedzieć, jak ogólnie rzecz biorąc, ocenił(a)by Pan(i) działalność Komisji Europejskiej?Ankieter: Jeżeli respondent nie wie, proszę spytać: „A jak się Panu(i) wydaje, co Pan(i)słyszał(a) na ten temat”],
+  [226 (III 2009)], [UP12A], [A], [Perceived EU/member-state stance toward Poland], [Czy, według Pana(i), instytucje Unii Europejskiej ..Ankieter: Jeżeli respondent nie wie, proszę spytać: „A jak się Panu(i) wydaje, co Pan(i)słyszał(a) na ten temat”],
+  [226 (III 2009)], [UP2], [A], [European Parliament / EP elections], [W czerwcu tego roku Polacy będą wybierali w bezpośrednich wyborach posłów do Parlamentu Europejskiego. Czy Pan(i) osobiście interesuje się tymi wyborami?],
+  [227 (IV 2009) + 286], [EP4], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, w wyniku przystąpienia Polski do Unii Europejskiej raczej zwiększyła(o) się, raczej zmniejszyła(o) się czy też integracja nie miała na to wpływu?],
+  [227 (IV 2009) + 287], [U3], [A], [European Parliament / EP elections], [Czy wie Pan(i) kto, jacy kandydaci będą startować w wyborach do Parlamentu Europejskiego z Pana(i) okręgu wyborczego?],
+  [227 (IV 2009)], [U6], [A], [European Parliament / EP elections], [Jak duże znaczenie ma dla Pana(i) to, jaką partię reprezentują kandydaci startujący w wyborach do Parlamentu Europejskiego? Przy odpowiedzi proszę posłużyć się poniższą skalą, na której „1” oznacza, że ma to dla Pana(i) bardzo dużo znaczenie, zaś „7”, że w ogóle nie ma to dla Pana(i) znaczenia. Ma bardzo duże znaczenieW ogóle nie ma znaczenia| | | | | | |1234567],
+  [227 (IV 2009)], [WP2], [B], [Sovereignty / EU decision-making / voting power], [Jak Pan(i) sądzi, dlaczego ludzie dążą do zdobycia wykształcenia? Czy liczą przede wszystkim na: Proszę wybrać nie więcej niż trzy odpowiedzi. \[\_\]1. interesujący zawód \[\_\]2. niezależność, samodzielność \[\_\]3. wysokie zarobki \[\_\]4. rozwój intelektualny, samodoskonalenie \[\_\]5. możliwość pracy na swoim \[\_\]6. uniknięcie bezrobocia \[\_\]7. lekką pracę \[\_\]8. udział we władzy \[\_\]9. uznanie, szacunek ze strony innych ludzi \[\_\]10. łatwiejsze życie \[\_\]11. możliwość pracy za granicą \[\_\]12. inna odpowiedź \[\_\]97.],
+  [228 (V 2009)], [EP2], [A], [European Parliament / EP elections], [Czy wie Pan(i) kto, jakie osoby będą startować w wyborach do Parlamentu Europejskiego z Pana(i) okręgu wyborczego?],
+  [228 (V 2009) + 229, 288], [EP4], [A], [European Parliament / EP elections], [Na kandydata jakiego komitetu wyborczego zamierza Pan(i) głosować w wyborach do Parlamentu Europejskiego?],
+  [228 (V 2009) + 229, 287], [EP5], [A], [European Parliament / EP elections], [Czy w wyborach do Parlamentu Europejskiego:],
+  [228 (V 2009)], [W1], [A], [European Parliament / EP elections], [A czy przed dniem dzisiejszym słyszał(a) Pan(i) o wyborach do Parlamentu Europejskiego, które odbędą się 7 czerwca 2009?],
+  [229 (VI 2009)], [M28], [A], [Agriculture and EU membership], [Czy pracuje Pan(i) lub pomaga w pracy w tym gospodarstwie rolnym?],
+)
+```
+
+
+### 2011
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [250 (III 2011) + 273, 293], [E6], [A], [Euro adoption], [Czy, Pana(i) zdaniem, Polska spełnia obecnie warunki konieczne do przyjęcia euro?],
+  [250 (III 2011)], [E9], [A], [Euro adoption], [Jak Pan(i) sądzi, jaka będzie przyszłość strefy euro, obejmującej wszystkie państwa, które przyjęły europejską walutę? Czy, Pana(i) zdaniem, w ciągu najbliższych pięciu lat:],
+  [251 (IV 2011)], [EP4], [A], [Assessment of costs/benefits of membership], [Jak Pan(i) sądzi, które grupy ludzi w Polsce zyskują, a które tracą na członkostwie Polski w Unii Europejskiej? Czy … raczej zyskują czy tez raczej tracą na członkostwie w Unii Europejskiej?],
+  [251 (IV 2011)], [L1], [B], [NATO membership], [W Libii trwa powstanie przeciwko rządom Muammara Kaddafiego. Lotnictwo Kaddafiego bombardowało powstańców i ludność cywilną, w związku z tym ONZ podjął uchwałę umożliwiającą wprowadzenie zakazu lotów nad tym krajem. Interwencję w Libii, za zgodą państw arabskich, przeprowadziły niektóre kraje Europy, Stany Zjednoczone oraz Kanada. Obecnie dowództwo nad tą operacją przejęło NATO. Czy Pan(i) osobiście uważa operację zachodniego lotnictwa w Libii za słuszną czy też niesłuszną?],
+  [252 (V 2011)], [E3], [A], [Attention to / knowledge of EU affairs], [Czy słyszał(a) Pan(i), że 1 lipca tego roku Polska obejmie półroczne przewodnictwo (prezydencję) w Radzie Unii Europejskiej?],
+  [252 (V 2011)], [E4], [A], [EU / international orientation (other)], [1 lipca Polska obejmie prezydencję w Radzie Unii Europejskiej – głównym organie decyzyjnym Unii Europejskiej, reprezentującym państwa należące do tej organizacji. Jak Pan(i) sądzi, czy Polska wykorzysta szanse związane z prezydencją naszego kraju w Radzie Unii Europejskiej?Czy, Pana(i) zdaniem, prezydencja przyczyni się do:],
+  [252 (V 2011)], [E5], [A], [EU / international orientation (other)], [Czy sprawując prezydencję w Radzie Unii Europejskiej Polska powinna:],
+  [252 (V 2011)], [E6], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, w okresie sprawowania prezydencji w Radzie Unii Europejskiej Polska powinna skupić się przede wszystkim na:],
+  [252 (V 2011)], [E7], [A], [EU / international orientation (other)], [Jakimi sprawami przede wszystkim powinna zająć się Polska w okresie swojej prezydencji w Radzie Unii Europejskiej?],
+  [252 (V 2011) + 260], [E9], [A], [Assessment of costs/benefits of membership], [Z którą z poniższych opinii zgadza się Pan(i) w większym stopniu?],
+  [252 (V 2011)], [U6], [A], [Assessment of costs/benefits of membership], [Czy w Pana(i) ocenie, wizyta prezydenta Obamy wzmocni, osłabi czy też nie będzie miała wpływu na pozycję Polski w UE:],
+)
+```
+
+
+### 2012
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [260 (I 2012)], [U13], [A], [EU / international orientation (other)], [Słyszy się różne opinie o integracji europejskiej. Z którymi z nich się Pan(i) zgadza, a z którymi nie zgadza? q71 (sub question)],
+  [260 (I 2012)], [U14A], [A], [EU / international orientation (other)], [W grudniu skończyło się półroczne przewodnictwo (prezydencja) Polski w Radzie Unii Europejskiej. Jak Pan(i) ocenia polską prezydencję? Czy, Pana(i) zdaniem:],
+  [260 (I 2012)], [U5], [A], [Euro adoption], [Czy Polska powinna angażować się w działania mające na celu ratowanie strefy euro czy też nie?],
+  [260 (I 2012)], [U7], [A], [Euro adoption], [Polska ma zamiar podpisać umowę w sprawie paktu fiskalnego, ale jego zapisy będą dotyczyć naszego kraju dopiero po przystąpieniu do strefy euro. Czy popiera Pan(i) podpisanie przez Polskę tej umowy, czy też jest Pan(i) temu przeciwny(a)?],
+  [260 (I 2012)], [UP1], [A], [Support for EU membership / integration], [Czy osobiście popiera Pan(i) członkostwo Polski w Unii Europejskiej czy też jest Pan(i)],
+  [260 (I 2012) + 266], [UP11], [A], [Euro adoption], [Czy zgodził(a)by się Pan(i) na zastąpienie polskiego pieniądza (złotego) wspólnym dla wielu państw UE europejskim pieniądzem – euro?],
+  [260 (I 2012) + 266, 273], [UP3], [A], [Euro adoption], [Czy, Pana(i) zdaniem, w najbliższych latach:],
+  [264 (V 2012)], [E11], [A], [Euro adoption], [Ze strony polityków różnych narodowości, w tym licznych przedstawicieli Parlamentu Europejskiego, pojawiają się wezwania do bojkotu rozgrywek Euro 2012 na Ukrainie jako formy nacisku na władze tego kraju w związku ze sprawą więzionej byłej premier Julii Tymoszenko i innych polityków opozycji. Czy uważa Pan(i), polityczny bojkot Euro 2012 na Ukrainie za słuszny czy raczej niesłuszny?],
+  [266 (VII 2012)], [U5], [A], [Euro adoption], [Kto powinien ponosić finansowe koszty zwalczania kryzysu finansowego w państwach strefy euro? Czy powinny ponosić je:],
+  [271 (XII 2012)], [1], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, od kiedy Polska stała się członkiem Unii Europejskiej i dostosowała się do unijnych standardów produkcji, magazynowania i sprzedaży, to żywność w Polsce jest bardziej czy też mniej bezpieczna?],
+  [271 (XII 2012)], [4], [A], [EU funds / budget / direct payments], [Jak Pan(i) sądzi, czy na kolejnym szczycie, planowanym na początek przyszłego roku, państwom Unii Europejskiej uda się porozumieć w sprawie budżetu UE na lata 2014 - 2020?],
+  [271 (XII 2012)], [5], [A], [EU / international orientation (other)], [Czy spodziewa się Pan(i), że w latach 2014 - 2020 Polska będzie mogła otrzymywać:],
+  [271 (XII 2012)], [6], [A], [EU funds / budget / direct payments], [A jak dotychczas, Pana(i) zdaniem, Polska radzi sobie z wykorzystaniem funduszy unijnych?],
+  [271 (XII 2012)], [P2], [A], [EU funds / budget / direct payments], [Czy, Pana(i) zdaniem, dla rozwoju Polski ważniejsze(a) jest:],
+)
+```
+
+
+### 2013
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [273 (II 2013) + 293], [E8], [A], [Euro adoption], [Niezależnie od tego, czy jest Pan(i) zwolennikiem czy przeciwnikiem wprowadzenia euro w Polsce, jakie byłyby najważniejsze z Pana(i) punktu widzenia możliwe skutki przyjęcia europejskiej waluty w naszym kraju?Proszę wskazać nie więcej niż trzy odpowiedzi \[\_\]1. wzrost cen \[\_\]2. utrata przez Polskę możliwości prowadzenia samodzielnej/ suwerennej polityki pieniężnej \[\_\]3. niekorzystny kurs wymiany złotego na euro \[\_\]4. koszty finansowe związane z wprowadzeniem euro dla banków, administracji i przedsiębiorstw \[\_\]5. ułatwienie dla przedsiębiorców i przyspieszenie wzrostu gospodarczego \[\_\]6. wzrost inwestycji zagranicznych w Polsce \[\_\]7. spadek stóp procentowych: tańsze kredyty i niższe oprocentowanie lokat bankowych \[\_\]8. likwidacja ryzyka związanego ze \[…\]],
+  [273 (II 2013)], [PF4], [A], [EU treaties (Constitutional/Lisbon)], [Polska chce przystąpić do paktu fiskalnego, aby mieć możliwość uczestnictwa w szczytach państw strefy euro, choć rozwiązania w nim zawarte będą dotyczyć naszego kraju dopiero po przystąpieniu do strefy euro. Czy popiera Pan(i) ratyfikację (zatwierdzenie) przez Polskę traktatu fiskalnego czy też jest Pan(i) temu przeciwny(a)?],
+  [275 (IV 2013)], [U2], [A], [Assessment of costs/benefits of membership], [Czy, Pana(i) zdaniem, ludzie tacy jak Pan(i) mają wpływ na sprawy Unii Europejskiej?],
+  [275 (IV 2013) + 306], [U8], [A], [Assessment of costs/benefits of membership], [Kto, Pana(i) zdaniem, ma największy wpływ na politykę Unii Europejskiej?],
+  [276 (V 2013)], [W2], [A], [Economy, firms and EU regulation], [A na co przede wszystkim zwraca Pan(i) uwagę, kiedy kupuje Pan(i) jajka?Proszę wybrać z podanej listy nie więcej niż dwie odpowiedzi. \[\_\]1. Czy mają odpowiednią datę ważności \[\_\]2. Jakiej są wielkości \[\_\]3. Czy mają niską cenę \[\_\]4. Czy są odpowiednio oznakowane i spełniają normy UE; \[\_\]5. Czy pochodzą od kur hodowanych w klatkach czy od innych \[\_\]7. \[\_\]8. \[\_\]9. \*\*\* Nie dotyczy, nie robię takich zakupów Skrypt wywoływany przed: excl 7,8,9; Skrypt wywoływany po: if q76.len \>2 then alert “Można wybrać nie więcej niż 2 odpowiedzi”; go q76; end;],
+  [277 (VI 2013)], [C1], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem - w ogólnym rozrachunku - Polska skorzystała czy też nie skorzystała na członkostwie w Unii Europejskiej?],
+  [277 (VI 2013)], [C2], [A], [EU / international orientation (other)], [Czy, ogólnie rzecz biorąc, uważa Pan(i), że członkostwo Polski w Unii Europejskiej jest:],
+  [278 (VII 2013)], [C1], [A], [Euro adoption], [Czy, ogólnie rzecz biorąc, Pana(i) zdaniem, Polska powinna wprowadzić euro i wejść do strefy euro?],
+  [282 (XI 2013)], [G2P], [A], [EU / international orientation (other)], [Czy pracował(a) Pan(i) za granicą po wejściu Polski do Unii Europejskiej, tzn. po 1 maja 2004 roku?],
+  [282 (XI 2013)], [G4P], [A], [EU relations with third countries], [W którym kraju/krajach Pan(i) pracował(a) lub pracuje, biorąc pod uwagę okres od wejścia Polski do Unii Europejskiej? których pracował(a) najdłużej. \[\_\]1. Austria \[\_\]2. Belgia \[\_\]3. Czechy \[\_\]4. Dania \[\_\]5. Finlandia \[\_\]6. Francja \[\_\]7. Grecja \[\_\]8. Hiszpania \[\_\]9. Holandia \[\_\]10. Irlandia \[\_\]11. Kanada \[\_\]12. Niemcy],
+  [282 (XI 2013) + 305], [G6P], [B], [Labour mobility / free movement of workers], [Czy obecnie jest Pan(i) zainteresowany(a) podjęciem pracy za granicą?],
+  [282 (XI 2013)], [U3], [A], [Enlargement / candidate countries], [Czy, Pan(i) zdaniem, w przyszłości Ukraina powinna stać się członkiem Unii Europejskiej?],
+)
+```
+
+
+### 2014
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [284 (I 2014)], [U2], [A], [EU / international orientation (other)], [Czy, Pan(i) zdaniem, w przyszłości powinna stać się członkiem Unii Europejskiej? q43 (sub question)],
+  [284 (I 2014)], [U3], [A], [EU relations with third countries], [Od 21 listopada na Ukrainie trwają protesty z powodu niepodpisania przez rząd umowy stowarzy- szeniowej z UE. Polscy politycy spotykali się z protestującymi na kijowskim Majdanie Ukraińcami. Czy, Pana(i) zdaniem, zaangażowanie polskich polityków na Ukrainie jest właściwe czy też niewłaściwe?],
+  [284 (I 2014)], [U5], [A], [EU relations with third countries], [Jak Pan(i) sądzi czy w interesie Ukrainy jest:],
+  [284 (I 2014)], [U6], [A], [EU relations with third countries], [A jak Pan(i) przypuszcza, czy obecne władze Ukrainy zdecydują się na podpisanie umowy stowarzy- szeniowej z UE,czy też na dołączenie do Unii Celnej tworzonej przez Rosję, Białoruś i Kazachstan?],
+  [285 (II 2014)], [EP1], [A], [European Parliament / EP elections], [Wiosną tego roku odbędą się wybory do Parlamentu Europejskiego. Czy Pan(i) osobiście interesuje się tymi wyborami?],
+  [285 (II 2014)], [EP3], [A], [European Parliament / EP elections], [Przedstawię Panu(i) teraz listę obecnych polskich posłów do Parlamentu Europejskiego. O każdej z tych osób proszę powiedzieć, w jakim stopniu budzi ona Pana(i) zaufanie? Przy odpowiedzi proszę posłużyć się skalą, gdzie “-5” oznacza, że osoba ta budzi Pana(i) głęboką nieufność,”0” - że jest Panu(i) obojętna, a “+5” oznacza, że ma Pan(i) do tej osoby pełne zaufanie. Oczywiście może Pan(i) posługiwać się innymi ocenami tej skali. Jeśli nie zna Pan(i) danej osoby, proszę mi o tym powiedzieć. Głęboka nieufność ||||||||||| Pełne zaufanie -5-4-3-2-1012345 q63 (sub question)],
+  [285 (II 2014)], [N2A], [B], [Sovereignty / EU decision-making / voting power], [Które z następujących stwierdzeń jest bliższe Pana(i) poglądowi na temat przynależności Polski do NATO? Przynależność do NATO:],
+  [285 (II 2014)], [R6], [A], [EU relations with third countries], [Co Pan(i) myśli na temat wydarzeń na Ukrainie? Proszę wskazać wszystkie te stwierdzenia, z którymi się Pan(i) zgadza. \[\_\]1. Protestujący reprezentują większość Ukraińców \[\_\]2. Protestujący chcą zbliżenia Ukrainy z UE \[\_\]3. Protestujący chcą zmian politycznych, w tym ustąpienia prezydenta Janukowycza \[\_\]4. Protestujący to często ukraińscy nacjonaliści, nieprzychylni Polsce \[\_\]5. Nie zgadzam się z żadnym z tych stwierdzeń \[\_\]7. \[\_\]8. Skrypt wywoływany przed: excl 5,7,8;],
+  [285 (II 2014)], [R8], [A], [EU relations with third countries], [Czy, Pana(i) zdaniem, Unia Europejska powinna wprowadzić pewne sankcje wobec Ukrainy? Czy powinna q58 (sub question)],
+  [285 (II 2014)], [U2], [A], [EU / international orientation (other)], [Jakie są plusy członkostwa Polski w UE?],
+  [285 (II 2014)], [U3], [A], [EU / international orientation (other)], [Jakie są minusy członkostwa Polski w UE?],
+  [286 (III 2014) + 287], [G1], [A], [European Parliament / EP elections], [W maju tego roku Polacy będą wybierali w bezpośrednich wyborach posłów do Parlamentu Europejskiego.Czy Pan(i) osobiście interesuje się tymi wyborami?],
+  [286 (III 2014) + 287], [G4], [A], [European Parliament / EP elections], [Nie wiadomo jeszcze jakie partie, koalicje, komitety wyborcze na pewno zgłoszą swoich kandydatów do Parlamentu Europejskiego. Na kandydatów której partii, koalicji lub komitetu wyborczego głosował(a)by Pan(i) w tych wyborach?],
+  [286 (III 2014) + 287], [G5], [A], [Support for EU membership / integration], [Czy osobiście popiera Pan(i) członkostwo Polski w Unii Europejskiej?],
+  [286 (III 2014)], [U5], [A], [Sovereignty / EU decision-making / voting power], [Ostatnio Rada Federacji - izba wyższa rosyjskiego parlamentu wyraziła zgodę na użycie rosyjskich wojsk na terytorium Ukrainy. Rosyjskie oddziały zajęły niektóre obiekty na Krymie. W próbę rozwiązania konfliktu między Ukrainą a Rosją włączył się rząd polski, rządy państw europejskich, OBWE, Unia Europejska, Stany Zjednoczone. Jakiego rodzaju działania,Pana(i) zdaniem, powinna podjąć społeczność międzynarodowa? Czy powinna q49 (sub question)],
+  [287 (IV 2014)], [C2], [A], [European Parliament / EP elections], [Skąd przede wszystkim czerpie Pan(i) informacje na temat kandydatek i kandydatów w wyborach do Parlamentu Europejskiego? Z podanej listy proszę wskazać nie więcej niż trzy źródła informacji. \[\_\]1. Z internetu \[\_\]2. Z audycji informacyjnych i publicystycznych w radiu \[\_\]3. Ze spotów, reklam wyborczych w radiu i telewizji \[\_\]4. Z billboardów, plakatów wyborczych \[\_\]5. Z gazet i czasopism \[\_\]6. Z programów informacyjnych i publicystycznych w telewizji \[\_\]7. Z indywidualnych rozmów z kandydatami (np. kiedy kandydaci odwiedzają wyborców w domach) \[\_\]8. Z wieców, spotkań wyborczych \[\_\]9. Od znajomych, członków rodziny \[\_\]97. \* W ogóle się tym nie interesuję, trudno powiedzieć \[\_\]98. Skrypt wywoływany przed: excl 97,98;],
+  [287 (IV 2014)], [C5], [A], [European Parliament / EP elections], [A jaki powinien być, Pana(i) zdaniem, gwarantowany przez prawo udział kobiet na listach wyborczych do Parlamentu Europejskiego? Które z poniższych rozwiązań bardziej się Panu(i) podoba?],
+  [287 (IV 2014)], [U10], [B], [NATO membership], [Czy, Pana(i) zdaniem, NATO powinno wzmocnić swoją obecność militarną w Polsce?],
+  [288 (V 2014)], [G1], [A], [European Parliament / EP elections], [25 maja tego roku Polacy będą wybierali w bezpośrednich wyborach posłów do Parlamentu Europejskiego. Czy Pan(i) osobiście interesuje się tymi wyborami?],
+  [288 (V 2014)], [M21A], [A], [European Parliament / EP elections], [25 maja br. odbędą się wybory do Parlamentu Europejskiego. Zapytam Pana(ią) jeszcze raz – czy zamierza Pan(i) wziąć w nich udział?],
+  [288 (V 2014)], [M21B], [A], [European Parliament / EP elections], [A czy brał(a) Pan(i) udział w wyborach do Parlamentu Europejskiego 7 czerwca 2009 roku?],
+  [288 (V 2014) + 292, 313], [R19], [B], [NATO membership], [Bezpieczeństwo Polski oparte jest na przynależności do Sojuszu Atlantyckiego (NATO). Czy, Pana(i) zdaniem, w tej chwili Polska może być pewna zaangażowania sojuszników w ewentualną obronę naszych granic czy też nie?],
+  [291 (VIII 2014)], [U4], [A], [Assessment of costs/benefits of membership], [Jaki wpływ na gospodarkę Rosji będzie miało wprowadzenie przez UE sankcji gospodarczych?],
+  [291 (VIII 2014)], [U6], [A], [Agriculture and EU membership], [W odwecie za unijne sankcje Rosja wprowadziła zakaz wwozu do tego kraju niektórych produktów rolnych m.in. z Unii Europejskiej. Jaki wpływ na gospodarkę będą miały obustronne sankcje gospodarcze? q108 (sub question)],
+  [291 (VIII 2014)], [U7], [A], [EU relations with third countries], [Kto bardziej straci na wprowadzeniu obustronnych sankcji gospodarczych: Rosja czy Unia Europejska?],
+  [292 (IX 2014)], [N4], [B], [NATO membership], [Czy, Pana(i) zdaniem, w obecnej sytuacji międzynarodowej decyzje podjęte na szczycie NATO są:],
+  [293 (X 2014)], [E9], [A], [Euro adoption], [Czy, w Pana(i) opinii, państwom strefy euro udało się przezwyciężyć kryzys czy też nie?Czy, Pana(i) zdaniem:],
+)
+```
+
+
+### 2015
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [299 (IV 2015)], [39], [A], [EU / international orientation (other)], [Od dłuższego czasu (2013 roku) negocjowana jest umowa handlowo-inwestycyjna między Unią Europejską a Stanami Zjednoczonymi Ameryki, zwana Transatlantyckim Partnerstwem w sprawie Handlu i Inwestycji (TTIP). Czy popiera Pan(i) następujące posunięcia/działania mające na celu pogłębienie relacji handlowych i inwestycyjnych między Unią Europejską i Stanami Zjednoczonymi, czy też jest Pan(i) im przeciwny(a)? q80 (sub question) 4.],
+  [300 (V 2015) + 317], [75], [B], [Labour mobility / free movement of workers], [W Polsce mieszka coraz więcej obcokrajowców, osób nieposiadających obywatelstwa polskiego. Czasem przyjeżdżają oni, żeby pracować, inni zakładają przedsiębiorstwa. Polki i Polacy wchodzą w związki małżeńskie z obcokrajowcami. Obywateli jakich krajów, Pana(i) zdaniem, przebywa w Polsce obecnie najwięcej? Proszę wskazać nie więcej niż trzy możliwości.],
+  [300 (V 2015)], [78], [B], [Immigration], [Niektórzy dostrzegają w obecności cudzoziemców w Polsce raczej korzyści, inni uważają ją raczej za niekorzystną.Czy, Pana(i) zdaniem, obecność w Polsce jest dla naszego kraju raczej korzystna czy raczej niekorzystna? q127 (sub question)],
+  [300 (V 2015)], [79], [A], [Immigration], [Czy, Pana(i) zdaniem, praca obcokrajowców spoza Unii Europejskiej w Polsce jest dla korzystna czy też niekorzystna?],
+  [300 (V 2015)], [80], [A], [Immigration], [Jak Pan(i) sądzi, czy powinno się ułatwić obcokrajowcom spoza Unii Europejskiej podejmowanie w Polsce pracy, jeżeli nie ma Polaków chętnych do pracy na danym stanowisku czy też nie?],
+  [300 (V 2015)], [82], [B], [Immigration], [A czy, Pana(i) zdaniem, nasz kraj potrzebuje większej liczby imigrantów, ludzi którzy przyjeżdżają do Polski, aby się tu osiedlić?],
+  [300 (V 2015)], [85], [B], [Refugees], [Do Europy przybywa wielu uchodźców z państw Bliskiego Wschodu i Afryki. Przybywają głównie do Włoch, które nie są w stanie poradzić sobie z taką liczbą uchodźców. Czy, Pana(i) zdaniem, Polska powinna przyjąć część uchodźców przybywających do Europy?],
+  [300 (V 2015)], [86], [B], [Refugees], [Wielu Ukraińcom z Krymu i terenów zajętych przez prorosyjskich separatystów odmówiono statusu uchodźcy.Czy Polska powinna udzielać statusu uchodźcy Ukraińcom z terenów objętych konfliktem zbrojnym?],
+  [300 (V 2015)], [88], [B], [Immigration], [Czy zna Pan(i) osobiście jakiegoś cudzoziemca mieszkającego w Polsce?],
+  [300 (V 2015)], [89], [B], [Immigration], [Czy kiedykolwiek korzystał(a) Pan(i) z płatnej pomocy obcokrajowca (np. przy pracach domowych, remontowych, opiece nad dziećmi) lub zatrudniał(a) Pan(i) obcokrajowca np. na budowie, przy pracach polowych, itp.?],
+  [302 (VII 2015)], [29], [A], [Perceived EU/member-state stance toward Poland], [Czego oczekuje Pan(i) po prezydenturze Andrzeja Dudy? Czy, Pana(i) zdaniem, prezydentura Andrzeja Dudy:],
+  [303 (VIII 2015)], [36], [A], [Refugees], [W zeszłym roku głównie z powodu konfliktów zbrojnych państwa Unii Europejskiej odnotowały wzrost liczby uchodźców.Czy, Pana(i) zdaniem, Polska powinna przyjmować uchodźców z krajów objętych konfliktami zbrojnymi?],
+  [303 (VIII 2015)], [37], [A], [Attention to / knowledge of EU affairs], [Czy słyszał(a) Pan(i), że do południowych krajów UE (głównie Włoch i Grecji) przybywa bardzo wielu uchodźców z Bliskiego Wschodu i Afryki?],
+  [303 (VIII 2015)], [38], [B], [Refugees], [Z powodu tak dużego napływu uchodźców z Bliskiego Wschodu i Północnej Afryki do państw Europy południowej kraje te nie są w stanie poradzić sobie z tym problemem. Czy, Pana(i) zdaniem, Polska powinna przyjąć część uchodźców przybywających do Europy?],
+  [303 (VIII 2015)], [39], [A], [Refugees], [Komisja Europejska proponowała, żeby kraje UE podzieliły między siebie uchodźców przybyłych do państw UE. Czy, Pana(i) zdaniem, przydzielenie każdemu państwu określonej liczby uchodźców jest dobrym czy też złym rozwiązaniem?],
+  [303 (VIII 2015)], [40], [B], [Refugees], [Na razie państwa dobrowolnie zgłaszały, ilu uchodźców mogą do siebie przyjąć. Polski rząd zadeklarował, że w ciągu dwóch lat Polska przyjmie dwa tysiące uchodźców. Czy, Pana(i) zdaniem, rząd zadeklarował odpowiednią czy też nieodpowiednią liczbę? Dwa tysiące uchodźców to],
+  [303 (VIII 2015)], [42], [B], [Refugees], [Czy, Pana(i) zdaniem, Polska powinna przyjmować tylko uchodźców deklarujących, że są chrześcijanami czy też wyznawana religia nie powinna być kryterium przy przyjmowaniu uchodźców?],
+  [303 (VIII 2015)], [43], [B], [Refugees], [Czy zna/znał(a) Pan(i) osobiście jakiegoś uchodźcę przebywającego w Polsce?],
+  [303 (VIII 2015)], [44], [B], [Refugees], [Z jakiego kraju pochodzi/ pochodzą/ pochodzili uchodźcy, których zna/znał(a) Pan(i) osobiście?],
+  [304 (IX 2015) + 305], [44], [A], [Refugees], [Z powodu dużego napływu uchodźców z Bliskiego Wschodu i Północnej Afryki do niektórych państw Unii Europejskiej kraje te nie są w stanie poradzić sobie z tym problemem. Czy, Pana(i) zdaniem, Polska powinna przyjąć część uchodźców przybywających do Europy?],
+  [304 (IX 2015)], [45], [B], [Refugees], [Dlaczego, Pana(i) zdaniem, Polska powinna przyjąć uchodźców z Bliskiego Wschodu i Afryki?],
+  [304 (IX 2015)], [46], [B], [Refugees], [Dlaczego, Pana(i) zdaniem, Polska nie powinna przyjąć uchodźców z Bliskiego Wschodu i Afryki?],
+  [304 (IX 2015)], [47], [A], [Refugees], [Czy, Pana(i) zdaniem, większość osób z Bliskiego Wschodu i Afryki przybywających do Unii Europejskiej to uchodźcy uciekający przed wojnami i konfliktami zbrojnymi czy też imigranci zarobkowi, poszukujący lepszego życia w Europie?],
+  [304 (IX 2015)], [48], [B], [Refugees], [Jak zareagował(a)by Pan(i), gdyby okazało się, że uchodźca z Bliskiego Wschodu lub Afryki ma zostać Pana(i) sąsiadem?],
+  [304 (IX 2015)], [49], [B], [Refugees], [Niezależnie od tego czy ma Pan(i) dzieci czy nie, proszę powiedzieć, jak zareagował(a)by Pan(i), gdyby okazało się, że do klasy,w której uczą się Pana(i) dzieci będą uczęszczały dzieci uchodźców z Bliskiego Wschodu lub Afryki?],
+  [304 (IX 2015) + 311], [51], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, kryzys imigracyjny grozi rozpadem Unii Europejskiej czy też nie?],
+  [305 (X 2015)], [37], [A], [EU / international orientation (other)], [Czy wyjechał(a) Pan(i) do pracy po wejściu Polski do Unii Europejskiej, tzn. po 1 maja 2004 roku czy też jeszcze przed wejściem naszego kraju do tej organizacji? ANKIETER:Jeżeli respondent wyjeżdżał kilkakrotnie, pytamy o ostatni wyjazd.],
+  [305 (X 2015)], [39], [B], [EU / international orientation (other)], [Z jakiego powodu zamierza Pan(i) szukać pracy za granicą? Proszę wskazać najważniejszą przyczynę.],
+  [305 (X 2015)], [40], [B], [EU / international orientation (other)], [Z jakiego innego powodu zamierza Pan(i) szukać pracy za granicą?],
+  [306 (XI 2015)], [37], [A], [Refugees], [Jakie są obecnie największe wyzwania stojące przed Unią Europejską? Które spośród wymienionych poniżej spraw wydają się Panu(i) najważniejsze? Z podanej listy proszę wskazać nie więcej niż trzy takie sprawy.],
+  [306 (XI 2015)], [39], [A], [Foreign policy orientation], [Jaką politykę powinna prowadzić Polska w Unii Europejskiej? Czy, Pana(i) zdaniem, Polska w UE powinna:],
+  [306 (XI 2015)], [40], [A], [EU / international orientation (other)], [Z jakimi państwami, przede wszystkim, Polska powinna trwale współdziałać w ramach Unii Europejskiej?],
+  [307 (XII 2015)], [21], [A], [Perceived EU/member-state stance toward Poland], [Czy, Pana(i) zdaniem, w czasie sprawowania władzy przez rząd Beaty Szydło pozycja Polski w Unii Europejskiej:],
+  [307 (XII 2015)], [46], [A], [Refugees], [Czy, Pana(i) zdaniem, przyjęcie do Polski takiej liczby uchodźców, jaka została nam wyznaczona przez Komisję Europejską będzie:],
+  [307 (XII 2015) + 311], [47], [B], [Refugees], [A czy, Pana(i) zdaniem, przyjęcie uchodźców:],
+  [307 (XII 2015)], [48], [B], [Refugees], [Czy, Pana(i) zdaniem, polski rząd powinien dążyć do zmiany wcześniejszych ustaleń dotyczących rozlokowania uchodźców między państwa członkowskie przyjętych przez poprzedni rząd?],
+)
+```
+
+
+### 2016
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [309 (II 2016)], [37], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, decyzja Komisji Europejskiej:],
+  [310 (III 2016)], [30], [A], [Attention to / knowledge of EU affairs], [Wicepremier Morawiecki zapowiedział, że za 15 lat przeciętny Polak będzie zarabiał tyle co przeciętny obywatel UE. Czy wierzy Pan(i) w tę zapowiedź, czy też nie?],
+  [311 (IV 2016)], [36], [A], [EU / international orientation (other)], [Z którą z opinii się Pan(i) zgadza:],
+  [311 (IV 2016)], [39], [A], [Refugees], [Czy, Pana(i) zdaniem, polski rząd powinien dążyć do zmiany wcześniejszych ustaleń dotyczących rozlokowania uchodźców między państwa członkowskie Unii Europejskiej przyjętych przez poprzedni rząd?],
+  [313 (VI 2016)], [27], [A], [Sovereignty / EU decision-making / voting power], [Czy, Pan(i) zdaniem, Polska powinna uwzględnić opinie i oczekiwania Komisji Europejskiej czy też nie? Proszę wybrać jedną odpowiedź, która najlepiej oddaje Pana(i) odczucia.],
+  [313 (VI 2016)], [28], [A], [EU / international orientation (other)], [Czy, Pana(i) zdaniem, Polsce grożą jakieś realne sankcje za nieuwzględnienie opinii i oczekiwań Komisji Europejskiej?],
+  [314 (VII 2016)], [18], [A], [EU accession referendum: vote intention/turnout], [Brytyjczycy zdecydowali w referendum o wyjściu Wielkiej Brytanii z Unii Europejskiej. Jak Pan(i) przyjął(ęła) wynik tego referendum?],
+  [314 (VII 2016)], [25], [B], [NATO membership], [A czy obawia się Pan(i), że działania państw NATO na terenie Syrii mogą doprowadzić do konfliktu z Rosją?],
+  [317 (X 2016) + 321, 323], [30], [A], [Support for EU membership / integration], [Czy osobiście popiera P. członkostwo Polski w Unii Europejskiej, czy też jest P. temu przeciwny(a)?],
+  [317 (X 2016)], [31], [A], [EU funds / budget / direct payments], [Czy, P. zdaniem, dla rozwoju Polski ważniejsze jest:],
+  [317 (X 2016)], [33], [A], [EU funds / budget / direct payments], [A jak dotychczas, P. zdaniem, Polska radzi sobie z wykorzystaniem funduszy unijnych?],
+  [317 (X 2016)], [34], [A], [EU funds / budget / direct payments], [Jak P. sądzi na podstawie swoich doświadczeń i obserwacji, na co w głównej mierze przeznaczane były dotychczas pieniądze z Unii Europejskiej? Proszę wskazać nie więcej niż 4 dziedziny],
+  [317 (X 2016)], [35], [A], [Agriculture and EU membership], [Na co, P. zdaniem, należałoby wydawać w kraju więcej pieniędzy z Unii Europejskiej? Proszę wskazać nie więcej niż 4 dziedziny],
+  [317 (X 2016)], [36], [A], [Agriculture and EU membership], [Na co, P. zdaniem, należałoby wydawać w P. miejscowości więcej pieniędzy z Unii Europejskiej? Proszę wskazać nie więcej niż 4 dziedziny.],
+  [317 (X 2016)], [38], [A], [EU funds / budget / direct payments], [Czy, P. zdaniem, pieniądze z Unii Europejskiej przyczyniły się do zmniejszenia czy też do zwiększenia: q79 (sub question)],
+  [317 (X 2016)], [39], [A], [EU / international orientation (other)], [Czy P. osobiście kiedykolwiek korzystał(a) lub korzysta obecnie z pieniędzy unijnych np. otrzymy- wał(a) lub otrzymuje dopłaty, dotacje z Unii Europejskiej, brał(a) lub bierze udział w projektach unijnych?],
+  [317 (X 2016)], [42], [B], [Labour mobility / free movement of workers], [Jak P. sądzi, czy cudzoziemcom powinno się pozwolić na podjęcie pracy w Polsce?],
+  [317 (X 2016)], [43], [B], [Immigration], [Czy kiedykolwiek korzystał(a) P. z płatnej pomocy obcokrajowca (np. przy pracach domowych, remontowych, opiece nad dziećmi) lub zatrudniał(a) P. obcokrajowca np. na budowie, przy pracach polowych, itp.?],
+  [317 (X 2016)], [44], [B], [Immigration], [A czy zna P. osobiście kogoś zatrudniającego obcokrajowca (np. jako pomoc domową, opiekunkę do dzieci, pielęgniarkę, pracownika na budowie lub przy pracach remontowych, polowych, itp.)?],
+  [317 (X 2016)], [49], [A], [EU / international orientation (other)], [Czy, P. zdaniem, od czasu wejścia Polski do Unii Europejskiej, czyli od 2004 roku, w miejscowości, w której P. mieszka:],
+  [317 (X 2016)], [50], [A], [EU / international orientation (other)], [Czy, P. zdaniem, od czasu wejścia Polski do Unii Europejskiej, czyli od 2004 roku, w regionie, województwie, w którym P. mieszka:],
+  [317 (X 2016)], [57], [B], [Labour mobility / free movement of workers], [Czy obecnie jest P. zainteresowany(a) podjęciem pracy za granicą?],
+  [317 (X 2016)], [58], [B], [EU / international orientation (other)], [Z jakiego powodu zamierza P. szukać pracy za granicą? Proszę wskazać najważniejszą przyczynę.],
+  [317 (X 2016)], [59], [B], [EU / international orientation (other)], [Z jakiego innego powodu zamierza P. szukać pracy za granicą?],
+  [317 (X 2016)], [M13], [A], [EU accession referendum: vote intention/turnout], [Czy brał(a) P. udział w referendum w sprawie przystąpienia Polski do Unii Europejskiej, które odbyło się 7 i 8 czerwca 2003 roku?],
+  [317 (X 2016)], [M14], [A], [EU accession referendum: vote intention/turnout], [Jak P. głosował(a) w tym referendum?],
+  [318 (XI 2016)], [28], [A], [EU / international orientation (other)], [Niedawno Unia Europejska i Kanada podpisały kompleksową umowę gospodarczo-handlową (CETA). Umowa przewiduje m.in. zniesienie ceł w handlu między UE a Kanadą oraz ułatwienia dotyczące wzajemnych inwestycji. Czy popiera P. zawarcie takiej umowy między UE a Kanadą czy też jest P. temu przeciwny(a)?],
+  [318 (XI 2016)], [30], [A], [EU / international orientation (other)], [Od 2013 roku negocjowana jest także umowa handlowo-inwestycyjna między Unią Europejską a Stanami Zjednoczonymi Ameryki, zwana Transatlantyckim Partnerstwem w sprawie Handlu i Inwestycji (TTIP). Umowa przewiduje m.in. zniesienie ceł w handlu między UE a Stanami Zjednoczonymi oraz ułatwienia dotyczące wzajemnych inwestycji. Czy popiera P. zawarcie takiej umowy między UE a Stanami Zjednoczonymi czy też jest P. temu przeciwny?],
+  [318 (XI 2016)], [31], [A], [Assessment of costs/benefits of membership], [Czy ewentualne wejście w życie umowy ułatwiającej handel i wzajemne inwestycje między Unią Europejską a Stanami Zjednoczonymi będzie korzystne dla Unii Europejskiej ? L1q70 (single)],
+)
+```
+
+
+### 2017
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 8.4em, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: (left, left, center, left, left),
+  table.header(
+    text(size: 8pt, weight: "bold")[Wave],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Tier],
+    text(size: 8pt, weight: "bold")[Construct],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [321 (II 2017)], [30], [B], [NATO membership], [Czy P. osobiście popiera przynależność Polski do NATO czy też jest temu przeciwny(a)?],
+  [321 (II 2017)], [31], [B], [NATO membership], [Bezpieczeństwo Polski oparte jest na przynależności do Sojuszu Atlantyckiego (NATO). Czy, P. zdaniem, w tej chwili Polska może być pewna zaangażowania sojuszników w ewentualną obronę naszych granic czy też nie?],
+  [321 (II 2017)], [32], [B], [NATO membership], [Czy uważa P., że w Polsce powinny stacjonować wojska innych państw NATO czy też nie?],
+  [323 (IV 2017)], [23], [A], [Assessment of costs/benefits of membership], [Jak P. ocenia, jaką pozycję w Unii Europejskiej ma Polska? Czy Polskę można zaliczyć do:],
+  [323 (IV 2017)], [24], [A], [Assessment of costs/benefits of membership], [Z którym ze stwierdzeń się P. zgadza?],
+  [323 (IV 2017)], [25], [A], [Euro adoption], [Czy zgodził(a)by się P. na zastąpienie polskiego pieniądza (złotego) wspólnym dla wielu państw UE pieniądzem - euro?],
+  [323 (IV 2017)], [28], [A], [Polexit / leaving the EU], [Jak P. sądzi, jaki jest stosunek polskich władz i rządzącej partii do przyszłości Polski i Unii Europejskiej? Czy rządzący obecnie w Polsce dążą do:],
+  [323 (IV 2017)], [29], [A], [Polexit / leaving the EU], [A która z tych możliwych wizji przyszłości Polski i Unii Europejskiej P. osobiście najbardziej odpowiada?],
+  [323 (IV 2017)], [30], [A], [EU / international orientation (other)], [Jak P. ocenia politykę, jaką prowadzi Polska na forum Unii Europejskiej?],
+  [323 (IV 2017)], [34], [A], [EU / international orientation (other)], [Co, w P. ocenie, jest obecnie ważniejsze:],
+  [325 (VI 2017)], [21], [A], [EU / international orientation (other)], [Co, w Pana(i) ocenie, jest obecnie ważniejsze:],
+  [329 (X 2017)], [33], [A], [EU funds / budget / direct payments], [Jeżeli Polsce groziłaby utrata pieniędzy z funduszy unijnych, to czy powinna przyjąć uchodźców z krajów muzułmańskich?],
+  [331 (XII 2017)], [30], [A], [European Parliament / EP elections], [A czy, Pana(i) zdaniem, rezolucja Parlamentu Europejskiego:],
+  [331 (XII 2017)], [32], [A], [EU / international orientation (other)], [Czy obawia się Pan(i), że nieuwzględnienie opinii i oczekiwań Unii Europejskiej kierowanych pod adresem Polski może spowodować wprowadzenie jakichś sankcji przeciwko Polsce, czy też się Pan(i) tego nie obawia?],
+)
+```
+
+
+## A.3. Archive identifiers for the catalogued waves
+
+Every wave catalogued above is deposited in the Social Data Repository (RDS) under the DOI
+given below. The documentation PDF (`_DOK.pdf`) attached to each deposit contains the full
+questionnaire, sampling documentation and codebook.
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(220)) },
+  inset: 3.5pt,
+  table.header(
+    text(size: 8pt, weight: "bold")[APiW wave],
+    text(size: 8pt, weight: "bold")[Fieldwork],
+    text(size: 8pt, weight: "bold")[Items],
+    text(size: 8pt, weight: "bold")[DOI (prefix https://doi.org/)],
+  ),
+  [29], [XI 1992], [4], [10.18150/KT6G3G],
+  [36], [VI 1993], [1], [10.18150/IV31H9],
+  [60], [V 1995], [4], [10.18150/8ZDBA5],
+  [92], [I 1998], [2], [10.18150/CIOOZK],
+  [95], [IV 1998], [1], [10.18150/ZHDB3G],
+  [98], [VII 1998], [1], [10.18150/9PSFM6],
+  [99], [VIII 1998], [2], [10.18150/RVMCM3],
+  [100], [IX 1998], [2], [10.18150/TXYONH],
+  [103], [XII 1998], [8], [10.18150/0Y0UF7],
+  [105], [II 1999], [5], [10.18150/FNBOCT],
+  [106], [III 1999], [1], [10.18150/HETSFG],
+  [107], [IV 1999], [7], [10.18150/HKXZOM],
+  [108], [V 1999], [10], [10.18150/F4KLBT],
+  [109], [VI 1999], [7], [10.18150/PLXGRY],
+  [114], [XI 1999], [1], [10.18150/1YOXZC],
+  [120], [V 2000], [11], [10.18150/JEFRMB],
+  [124], [IX 2000], [13], [10.18150/LFRGFY],
+  [130], [III 2001], [6], [10.18150/DI5YKB],
+  [132], [V 2001], [10], [10.18150/82YQCW],
+  [133], [VI 2001], [3], [10.18150/UHT9WQ],
+  [134], [VII 2001], [3], [10.18150/HWC0BJ],
+  [136], [IX 2001], [2], [10.18150/KKHUFR],
+  [137], [X 2001], [5], [10.18150/8D3NK3],
+  [139], [XII 2001], [9], [10.18150/H7XZM7],
+  [140], [I 2002], [6], [10.18150/V7SV9K],
+  [141], [II 2002], [7], [10.18150/BLPBEA],
+  [142], [III 2002], [5], [10.18150/BLFQOM],
+  [143], [IV 2002], [6], [10.18150/DVS1E4],
+  [144], [V 2002], [3], [10.18150/XACXFC],
+  [145], [VI 2002], [8], [10.18150/SYMJTU],
+  [146], [VII 2002], [8], [10.18150/KJBLJB],
+  [147], [VIII 2002], [1], [10.18150/BEH5CP],
+  [149], [X 2002], [11], [10.18150/QWHQDZ],
+  [150], [XI 2002], [4], [10.18150/XR7CO2],
+  [151], [XII 2002], [9], [10.18150/OYARBC],
+  [152], [I 2003], [7], [10.18150/IQ5WU1],
+  [153], [II 2003], [10], [10.18150/EWKCVO],
+  [154], [III 2003], [5], [10.18150/MDF2AT],
+  [155], [IV 2003], [10], [10.18150/EATH1F],
+  [156], [V 2003], [7], [10.18150/YV3HQI],
+  [157], [VI 2003], [7], [10.18150/YLNVQM],
+  [158], [VII 2003], [4], [10.18150/BZTLE2],
+  [160], [IX 2003], [1], [10.18150/R41HTY],
+  [161], [X 2003], [12], [10.18150/NGSPUY],
+  [162], [XI 2003], [9], [10.18150/40IZQB],
+  [163], [XII 2003], [5], [10.18150/MEH7UC],
+  [164], [I 2004], [10], [10.18150/WOV0RC],
+  [165], [II 2004], [5], [10.18150/MVKI5G],
+  [166], [III 2004], [11], [10.18150/NKP07H],
+  [167], [IV 2004], [9], [10.18150/6IYKUA],
+  [168], [V 2004], [8], [10.18150/ZTG6VH],
+  [169], [VI 2004], [11], [10.18150/GLAPBG],
+  [170], [VII 2004], [5], [10.18150/IQSFB6],
+  [171], [VIII 2004], [11], [10.18150/ZBPXRD],
+  [173], [X 2004], [3], [10.18150/ATKZKR],
+  [174], [XI 2004], [9], [10.18150/0UOYHI],
+  [175], [XII 2004], [7], [10.18150/2C81MK],
+  [177], [II 2005], [6], [10.18150/8XPCC7],
+  [178], [III 2005], [12], [10.18150/MWIGTJ],
+  [179], [IV 2005], [5], [10.18150/U04P4M],
+  [180], [V 2005], [10], [10.18150/UPMWTW],
+  [181], [VI 2005], [8], [10.18150/3NXLNO],
+  [182], [VII 2005], [11], [10.18150/J1NX4Z],
+  [183], [VIII 2005], [2], [10.18150/AO4QM2],
+  [184], [IX 2005], [5], [10.18150/MUJIYW],
+  [196], [IX 2006], [9], [10.18150/QVPBPV],
+  [197], [X 2006], [4], [10.18150/XX53L5],
+  [199], [XII 2006], [2], [10.18150/1WZH6W],
+  [200], [I 2007], [3], [10.18150/WC7KRM],
+  [202], [III 2007], [1], [10.18150/BUVXWS],
+  [203], [IV 2007], [8], [10.18150/BMHS8D],
+  [204], [V 2007], [4], [10.18150/SRBPSE],
+  [205], [VI 2007], [4], [10.18150/SIINZS],
+  [206], [VII 2007], [9], [10.18150/1EBVKD],
+  [208], [IX 2007], [4], [10.18150/OUYBAW],
+  [209], [X 2007], [2], [10.18150/JJMUVV],
+  [215], [IV 2008], [14], [10.18150/YIWR5K],
+  [216], [V 2008], [14], [10.18150/RMLJES],
+  [217], [VI 2008], [2], [10.18150/UMLT3M],
+  [218], [VII 2008], [5], [10.18150/7AIA5A],
+  [222], [XI 2008], [2], [10.18150/OJKPWJ],
+  [224], [I 2009], [2], [10.18150/IGYQLN],
+  [226], [III 2009], [9], [10.18150/FWNZ8R],
+  [227], [IV 2009], [7], [10.18150/SNHXOZ],
+  [228], [V 2009], [7], [10.18150/3C0LJA],
+  [229], [VI 2009], [7], [10.18150/XLOKXP],
+  [239], [IV 2010], [1], [10.18150/4GXYJR],
+  [250], [III 2011], [3], [10.18150/RCFV4U],
+  [251], [IV 2011], [3], [10.18150/LF5ALE],
+  [252], [V 2011], [9], [10.18150/EEFIQ9],
+  [260], [I 2012], [10], [10.18150/2JEL6P],
+  [264], [V 2012], [1], [10.18150/U5QWNH],
+  [266], [VII 2012], [4], [10.18150/ML6KZO],
+  [271], [XII 2012], [6], [10.18150/MZRWDP],
+  [273], [II 2013], [6], [10.18150/W4R2T4],
+  [275], [IV 2013], [5], [10.18150/1PBMTA],
+  [276], [V 2013], [2], [10.18150/0DD0HX],
+  [277], [VI 2013], [2], [10.18150/JTEX8B],
+  [278], [VII 2013], [1], [10.18150/ZEXJLR],
+  [282], [XI 2013], [5], [10.18150/OQBSLV],
+  [284], [I 2014], [5], [10.18150/H4PO7M],
+  [285], [II 2014], [11], [10.18150/AOSVB9],
+  [286], [III 2014], [6], [10.18150/G9TGJX],
+  [287], [IV 2014], [10], [10.18150/R2KXWG],
+  [288], [V 2014], [7], [10.18150/7EPOZX],
+  [291], [VIII 2014], [3], [10.18150/M0EJOO],
+  [292], [IX 2014], [6], [10.18150/8BTSVK],
+  [293], [X 2014], [5], [10.18150/LTLPYE],
+  [299], [IV 2015], [3], [10.18150/37H7TN],
+  [300], [V 2015], [10], [10.18150/ZSA06D],
+  [302], [VII 2015], [1], [10.18150/HCVJOK],
+  [303], [VIII 2015], [9], [10.18150/PNEANK],
+  [304], [IX 2015], [10], [10.18150/6TDCDY],
+  [305], [X 2015], [7], [10.18150/0MY6RN],
+  [306], [XI 2015], [7], [10.18150/MX7DHQ],
+  [307], [XII 2015], [7], [10.18150/YWGPM4],
+  [308], [I 2016], [3], [10.18150/4P9SMO],
+  [309], [II 2016], [8], [10.18150/HYO2T2],
+  [310], [III 2016], [4], [10.18150/9GY461],
+  [311], [IV 2016], [8], [10.18150/4QPK8O],
+  [312], [V 2016], [4], [10.18150/AVAACH],
+  [313], [VI 2016], [9], [10.18150/KH16WR],
+  [314], [VII 2016], [6], [10.18150/KFHWCT],
+  [315], [VIII 2016], [3], [10.18150/RWR7VW],
+  [316], [IX 2016], [3], [10.18150/JXVFJF],
+  [317], [X 2016], [22], [10.18150/EBWIH6],
+  [318], [XI 2016], [6], [10.18150/TMQBX7],
+  [319], [XII 2016], [3], [10.18150/6SX4HN],
+  [321], [II 2017], [4], [10.18150/H1IUUZ],
+  [323], [IV 2017], [10], [10.18150/QUWOGI],
+  [325], [VI 2017], [3], [10.18150/2VYV4A],
+  [329], [X 2017], [4], [10.18150/RBQRKH],
+  [331], [XII 2017], [3], [10.18150/6MQWQM],
+)
+```
+
+
+# Appendix B. Inventory of ESS (Poland) Questions Related to European Integration
+
+This appendix catalogues the ESS items bearing on European integration, international
+institutional trust and immigration, with the verbatim Polish wording used in the Polish
+fieldwork questionnaires and the question number for each round.
+
+**Sources and limits.** The Polish wording is taken from the Polish translated questionnaires
+archived by ESS for Rounds 3–11. **The Polish questionnaires for Rounds 1 and 2 are not in the
+public ESS document archive**; for those rounds the question numbers below are taken from the
+ESS source (English) questionnaire, and the Polish wording should be obtained from the ESS
+Data Portal's national documentation or from the Polish national coordinator at IFiS PAN
+before being quoted. Where an item's Polish wording is identical to the previous round, this
+is stated rather than repeated.
+
+**Column key.** Round/year; Q = question number in the Polish questionnaire; Variable = ESS
+variable name; Construct; Exact Polish wording.
+
+
+## B.1. Trust in the European Parliament and the United Nations
+
+Both items sit inside the standard institutional trust battery, introduced by a common stem.
+The battery stem in the Polish questionnaire reads:
+
+```{=typst}
+#block(inset: (left: 10pt), above: 0.6em, below: 0.8em)[
+  #text(size: 9pt)[„KARTA 9 Posługując się tą kartą, proszę wskazać na skali od 0 do 10 na ile
+  osobiście ma P. zaufanie do każdej z instytucji, którą wymienię. 0 oznacza całkowity brak
+  zaufania wobec instytucji, a 10 oznacza, że ma P. do niej całkowite zaufanie. Pozostałe
+  liczby służą do wyrażenia opinii pośrednich. Na ile ma P. zaufanie do… ODCZYTAĆ…"]
+]
+```
+
+The two items of interest are `… Parlamentu Europejskiego?` (`trstep`) and `… Organizacji
+Narodów Zjednoczonych?` (`trstun`), each answered on a 0–10 scale with 77 = refusal and 88 =
+don't know. The showcard number and the battery position change between rounds; the item
+wording does not.
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, auto, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  table.header(
+    text(size: 8pt, weight: "bold")[Round],
+    text(size: 8pt, weight: "bold")[trstep],
+    text(size: 8pt, weight: "bold")[trstun],
+    text(size: 8pt, weight: "bold")[Scale],
+    text(size: 8pt, weight: "bold")[Source],
+  ),
+  [ESS1 (2002)], [B11], [B12], [0–10], [ESS source questionnaire; Polish version not archived publicly],
+  [ESS2 (2004)], [B9], [B10], [0–10], [ESS source questionnaire; Polish version not archived publicly],
+  [ESS3 (2006)], [B9], [B10], [0–10], [Polish questionnaire],
+  [ESS4 (2008)], [B9], [B10], [0–10], [Polish questionnaire],
+  [ESS5 (2010)], [B9], [B10], [0–10], [Polish questionnaire],
+  [ESS6 (2012)], [B7], [B8], [0–10], [Polish questionnaire],
+  [ESS7 (2014)], [B7], [B8], [0–10], [Polish questionnaire],
+  [ESS8 (2016)], [B11], [B12], [0–10], [Polish questionnaire],
+  [ESS9 (2018)], [B11], [B12], [0–10], [Polish questionnaire],
+  [ESS10 (2021)], [A22], [A23], [0–10], [Polish questionnaire (self-completion numbering)],
+  [ESS11 (2023)], [B11], [B12], [0–10], [Polish questionnaire],
+)
+```
+
+```{=typst}
+#note[These are the most consistent longitudinal items in the Polish ESS series, present in
+every round from 2002 to 2023 with identical wording and scale. Only the question number
+changes. Together they give a two-decade series on international institutional trust; the gap
+between them is interpretable as an EU-specific trust premium or deficit, and is directly
+comparable with the Hungarian series.]
+```
+
+
+## B.2. European integration: further vs. gone too far (`euftf`)
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  table.header(
+    text(size: 8pt, weight: "bold")[Round],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Variable],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [ESS3 (2006)], [B34], [euftf], [A teraz proszę pomyśleć o Unii Europejskiej. Niektórzy twierdzą, że integracja europejska, proces jednoczenia się krajów członkowskich, powinien postępować coraz dalej. Inni twierdzą, że proces jednoczenia się Europy i tak zaszedł już zbyt daleko. Posługując się tą kartą \[KARTA 13\], proszę powiedzieć, która liczba na skali najbardziej odpowiada P. opinii w tej sprawie.],
+  [ESS4 (2008)], [B34], [euftf], [Identyczne brzmienie jak wyżej.],
+  [ESS6 (2012)], [B28], [euftf], [Identyczne brzmienie jak wyżej.],
+  [ESS7 (2014)], [B28], [euftf], [Identyczne brzmienie jak wyżej.],
+  [ESS8 (2016)], [B37], [euftf], [Identyczne brzmienie jak wyżej.],
+  [ESS9 (2018)], [B37], [euftf], [Identyczne brzmienie jak wyżej.],
+  [ESS10 (2021)], [A50], [euftf], [A teraz proszę pomyśleć o Unii Europejskiej. Niektórzy twierdzą, że integracja europejska, proces jednoczenia się krajów członkowskich, powinien postępować coraz dalej. Inni twierdzą, że proces jednoczenia się Europy i tak zaszedł już zbyt daleko. Proszę zaznaczyć, która liczba na poniższej skali najbardziej odpowiada Pana opinii w tej sprawie.],
+  [ESS11 (2023)], [B37], [euftf], [A teraz proszę pomyśleć o Unii Europejskiej. Niektórzy twierdzą, że integracja europejska, proces jednoczenia się krajów członkowskich, powinien postępować coraz dalej. Inni twierdzą, że proces jednoczenia się Europy i tak zaszedł już zbyt daleko. Posługując się tą kartą, proszę powiedzieć, która liczba na skali najbardziej odpowiada P. opinii w tej sprawie.],
+)
+```
+
+
+```{=typst}
+#note[Not fielded in Round 5: the ESS5 source questionnaire records that question B34 and Showcard 13 were excluded for that round, and the Polish questionnaire marks the deletion in place. The item is absent for all countries in 2010, not only Poland. Response scale 00 (jednoczenia zaszło zbyt daleko) – 10 (powinien postępować coraz dalej), with 77 = refusal, 88 = don't know. Question numbers for ESS1 and ESS2 are not listed because the item was not fielded in ESS1 and the Polish ESS2 questionnaire is not archived publicly; in the ESS2 source questionnaire it is B34.]
+```
+
+
+## B.3. EU membership referendum: remain vs. leave (`vteurmmb`)
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, 1fr),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  table.header(
+    text(size: 8pt, weight: "bold")[Round],
+    text(size: 8pt, weight: "bold")[Q],
+    text(size: 8pt, weight: "bold")[Variable],
+    text(size: 8pt, weight: "bold")[Exact Polish wording],
+  ),
+  [ESS8 (2016)], [E41], [vteurmmb], [Proszę sobie wyobrazić, że w najbliższą niedzielę odbyłoby się w Polsce referendum na temat członkostwa w Unii Europejskiej. Czy głosowałby/-aby P. za pozostaniem Polski w Unii Europejskiej czy za wyjściem Polski z Unii Europejskiej?],
+  [ESS9 (2018)], [C41], [vteurmmb], [Identyczne brzmienie jak wyżej.],
+  [ESS10 (2021)], [A90], [vteurmmb], [Proszę sobie wyobrazić, że w najbliższą niedzielę odbyłoby się w Polsce referendum na temat członkostwa w Unii Europejskiej. Czy głosowałby Pan za pozostaniem Polski w Unii Europejskiej czy za wyjściem Polski z Unii Europejskiej?],
+  [ESS11 (2023)], [C43], [vteurmmb], [Identyczne brzmienie jak wyżej.],
+)
+```
+
+
+```{=typst}
+#note[Available only from Round 8 (2016) onward. Response options: 1 = Za pozostaniem Polski w Unii Europejskiej; 2 = Za wyjściem Polski z Unii Europejskiej; 3 = blank ballot; 4 = spoilt ballot; 5 = would not vote; 6 = not eligible; 7 = refusal; 8 = don't know. This is the single most directly relevant item in the ESS for measuring Polish euroscepticism, and the four available observations (2016, 2018, 2021, 2023) bracket the rule-of-law conflict and the 2023 change of government.]
+```
+
+
+## B.4. Immigration: admission and perceived consequences
+
+The six-item standard immigration battery is present in every round. The first three items
+(`imsmetn`, `imdfetn`, `impcntr`) ask how far Poland should allow people to come and live
+there — of the same ethnic group as the majority, of a different ethnic group, and from
+poorer countries outside Europe respectively — on a four-point scale (Zezwalać dużej liczbie
+osób / Zezwalać pewnej liczbie osób / Zezwalać tylko nielicznym / Nie zezwalać nikomu). The
+second three (`imbgeco`, `imueclt`, `imwbcnt`) ask about perceived consequences on 0–10
+scales.
+
+```{=typst}
+#block(inset: (left: 10pt), above: 0.6em, below: 0.4em)[
+  #text(size: 9pt, weight: "bold")[imsmetn] #linebreak()
+  #text(size: 9pt)[„Posługując się tą kartą, proszę powiedzieć, w jakim zakresie, P. zdaniem,
+  państwo polskie powinno zezwalać ludziom należącym do tej samej rasy lub grupy etnicznej,
+  co większość mieszkańców Polski, na przyjazd i zamieszkanie w Polsce? Czy Polska powinna:"]
+  #v(0.45em)
+  #text(size: 9pt, weight: "bold")[imdfetn] #linebreak()
+  #text(size: 9pt)[„A jeśli chodzi o ludzi należących do innej rasy lub grupy etnicznej niż
+  większość mieszkańców Polski? Proszę wybrać odpowiedź z tej samej karty."]
+  #v(0.45em)
+  #text(size: 9pt, weight: "bold")[impcntr] #linebreak()
+  #text(size: 9pt)[„A jeśli chodzi o ludzi z biedniejszych krajów spoza Europy? Proszę wybrać
+  odpowiedź z tej samej karty."]
+  #v(0.45em)
+  #text(size: 9pt, weight: "bold")[imbgeco] #linebreak()
+  #text(size: 9pt)[„Czy P. zdaniem to, że ludzie z innych krajów przyjeżdżają, aby żyć
+  w Polsce, jest ogólnie biorąc korzystne, czy też niekorzystne dla polskiej gospodarki?
+  Odpowiadając, proszę posłużyć się tą kartą." (00 = Niekorzystne dla gospodarki, 10 =
+  Korzystne dla gospodarki)]
+  #v(0.45em)
+  #text(size: 9pt, weight: "bold")[imueclt] #linebreak()
+  #text(size: 9pt)[„Posługując się tą kartą, proszę powiedzieć, czy P. zdaniem to, że ludzie
+  z innych krajów przyjeżdżają, aby żyć w Polsce, ogólnie biorąc, szkodzi życiu kulturalnemu
+  w Polsce, czy też je wzbogaca?" (00 = Szkodzi życiu kulturalnemu, 10 = Wzbogaca życie
+  kulturalne)]
+  #v(0.45em)
+  #text(size: 9pt, weight: "bold")[imwbcnt] #linebreak()
+  #text(size: 9pt)[„Czy w wyniku tego, że ludzie z innych krajów przyjeżdżają do Polski
+  i żyją tutaj, Polska stała się gorszym czy lepszym miejscem do życia? Odpowiadając, proszę
+  posłużyć się tą kartą." (00 = Gorszym miejscem do życia, 10 = Lepszym miejscem do życia)]
+]
+```
+
+Question numbers by round:
+
+```{=typst}
+#table(
+  columns: (auto, auto, auto, auto, auto, auto, auto),
+  stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { (bottom: 0.2pt + luma(200)) },
+  inset: 4pt,
+  align: center,
+  table.header(
+    text(size: 8pt, weight: "bold")[Round],
+    text(size: 8pt, weight: "bold")[imsmetn],
+    text(size: 8pt, weight: "bold")[imdfetn],
+    text(size: 8pt, weight: "bold")[impcntr],
+    text(size: 8pt, weight: "bold")[imbgeco],
+    text(size: 8pt, weight: "bold")[imueclt],
+    text(size: 8pt, weight: "bold")[imwbcnt],
+  ),
+  [ESS3 (2006)], [B35], [B36], [B37], [B38], [B39], [B40],
+  [ESS4 (2008)], [B35], [B36], [B37], [B38], [B39], [B40],
+  [ESS5 (2010)], [B35], [B36], [B37], [B38], [B39], [B40],
+  [ESS6 (2012)], [B29], [B30], [B31], [B32], [B33], [B34],
+  [ESS7 (2014)], [B29], [B30], [B31], [B32], [B33], [B34],
+  [ESS8 (2016)], [B38], [B39], [B40], [B41], [B42], [B43],
+  [ESS9 (2018)], [B38], [B39], [B40], [B41], [B42], [B43],
+  [ESS10 (2021)], [A54], [A55], [A56], [A57], [A58], [A59],
+  [ESS11 (2023)], [B40], [B41], [B42], [B43], [B44], [B45],
+)
+```
+
+```{=typst}
+#note[Rounds 1 and 2 also carry the battery; the Polish questionnaires for those rounds are
+not in the public ESS document archive, so numbers are omitted here. Rounds 1 (2002) and 7
+(2014) additionally carry full rotating immigration modules with substantially more detail —
+including items on the perceived origin, skills and economic contribution of migrants — which
+are the appropriate source for any fine-grained analysis of immigration attitudes. For Poland,
+ESS7 is the last measurement before the 2015 refugee crisis and is therefore the natural
+baseline against which the CBOS 2015–2017 series (Appendix A) should be read.]
+```
+
+## B.5. EU-wide redistribution and EU-level decision-making (ESS8 only)
+
+Round 8 (2016) carried two items in the welfare module that bear directly on preferences over
+the level at which social policy should be decided.
+
+```{=typst}
+#block(inset: (left: 10pt), above: 0.6em, below: 0.4em)[
+  #text(size: 9pt, weight: "bold")[E37 — EU-wide social benefit scheme] #linebreak()
+  #text(size: 9pt)[„Proponuje się, aby wprowadzić program świadczeń społecznych dla wszystkich
+  osób ubogich na terenie całej Unii Europejskiej. […] Czy, ogólnie rzecz biorąc, byłby/-aby
+  P. za czy przeciwko wprowadzeniu takiego programu świadczeń społecznych na terenie całej
+  Unii Europejskiej?" (1 = Zdecydowanie przeciw … 4 = Zdecydowanie za)]
+  #v(0.5em)
+  #text(size: 9pt, weight: "bold")[E38 — effect of shifting decisions to EU level] #linebreak()
+  #text(size: 9pt)[„Gdyby więcej decyzji zapadało na poziomie Unii Europejskiej, a nie na
+  poziomie rządów poszczególnych krajów, to czy uważa P., że świadczenia społeczne i usługi
+  socjalne w Polsce poprawiłyby się czy pogorszyły?" (1 = Znacznie poprawiłyby się … 5 =
+  Znacznie by się pogorszyły)]
+]
+```
+
+```{=typst}
+#note[The showcard for E37 sets out three design features of the hypothetical scheme,
+including that richer member states would contribute more than poorer ones. Because Poland is
+a net recipient, responses to this item are not directly comparable with those from net
+contributor states without accounting for that asymmetry — a point that applies equally to the
+Hungarian data and should be handled consistently across the two national analyses.]
+```
+
+## B.6. Allocation of authority (ESS1 only)
+
+Round 1 (2002) carried an item asking respondents to allocate decision-making authority over
+a set of policy areas between the international, European, national and regional levels. It
+is the only ESS measurement of multi-level authority preferences, has no later counterpart,
+and was fielded in Poland in the year before the accession referendum. The Polish wording is
+not in the public ESS document archive and should be obtained from the Polish national
+documentation.
+
+
+```{=typst}
+#set page(flipped: false)
+#pagebreak()
+```
+
+# Sources
+
+**Data archives**
+
+- Social Data Repository (RDS) / Polish Social Data Archive (PADS), CBOS collection:
+  `https://rds.icm.edu.pl/dataverse/CBOS` (329 deposits, CC BY-SA 4.0).
+- ESS Data Portal: `https://ess.sikt.no/`; ESS documentation archive:
+  `https://stessrelpubprodwe.blob.core.windows.net/data/round{N}/…`.
+- Harvard Dataverse (PGSW 2019): `https://doi.org/10.7910/DVN/94B2AU`.
+- POLPAN: `https://polpan.org/en/data-and-documentation/data/`.
+
+**Documentation consulted**
+
+- CBOS APiW wave documentation PDFs (sampling design, weighting, verbatim questionnaires) for
+  the 165 deposited waves identified as containing EU-related content.
+- CBOS, *Polacy o integracji europejskiej*, Komunikat z badań nr 19/2026 (February 2026) —
+  membership support series 1994–2026 and current mixed-mode methodology.
+- CBOS, *20 lat członkostwa Polski w UE*, Komunikat z badań nr 43/2024 — benefit-assessment
+  item wording and measurement dates from 2005.
+- CBOS, *15 lat członkostwa Polski w Unii Europejskiej*, Komunikat z badań nr 59/2019.
+- ESS Polish fieldwork questionnaires, Rounds 3–11.
+- ESS source (English) main questionnaires, Rounds 1, 2 and 5.
+- ESS Round 9 Data Documentation Report, edition 3.1 (Poland section: mode, fieldwork period,
+  response rate, region variable and its stated limits).
+- ESS Round 10 Quality Report.
+- GUS/Statistics Poland, NUTS classification in Poland and administrative division
+  (1 January 2025).
+- Szabó, K. (2026) *Hungarian Public Opinion Survey Datasets Overview*, 12 August 2026 —
+  the document this one is built to parallel.
