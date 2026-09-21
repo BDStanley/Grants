@@ -10,7 +10,7 @@
 
 The application (wniosek #34, 13 May 2026) commits us to:
 
-1. A **two-arm CAWI experiment** on a Polish online panel: random split of the *invited* sample into a **standard-contact arm (A)** and a **limited-contact arm (B)**, with the agency tagging every completed interview with its arm indicator. Target ≈ 2,000 completes (≈ 1,200 in A, ≈ 700–800 in B). *(The application specified a 50/50 split; §4.2 revises this to 42/58 on statistical grounds, at the same cost and the same total completes. What the application commits to — a randomised two-arm contact experiment at this scale — is unaffected.)*
+1. A **two-arm CAWI experiment** on a Polish online panel: random split of the *invited* sample into a **standard-contact arm (A)** and a **limited-contact arm (B)**, with the agency tagging every completed interview with its arm indicator. Target ≈ 2,000 completes (≈ 1,200 in A, ≈ 800 in B; contractual floor 1,800 with ≥ 650 in B). *(The application specified a 50/50 split; §4.2 revises this to 42/58 on statistical grounds, at the same cost and the same total completes. What the application commits to — a randomised two-arm contact experiment at this scale — is unaffected.)*
 2. **Pre-registration** (hypotheses, tests, significance criteria, multiple-testing strategy) *before fieldwork*.
 3. SWPS **Research Ethics Committee approval**.
 4. A questionnaire mixing items where non-ignorable nonresponse is expected (turnout, support for stigmatized parties, minority attitudes, democratic norms) with **control items** where it is not.
@@ -24,10 +24,10 @@ Tasks and months in the application map onto the project window as follows (deci
 |---|---|---|
 | Zadanie 1 (m. 1) | Questionnaire + pre-registration | early Sep – early Oct |
 | Zadanie 2 (m. 1) | Agency procurement, contract, ethics approval | early Sep – mid-Oct |
-| Zadanie 3 (m. 2) | Fieldwork, ~2,000 completes; invoice | late Oct – mid-Nov |
-| Zadanie 4 (m. 2–3) | Validation + diagnostic regressions | mid–late Nov |
-| Zadanie 5 (m. 3) | Selection models, corrected vs weighted estimates | late Nov |
-| Zadanie 6 (m. 3–4) | Report + manuscript | late Nov – mid-Dec |
+| Zadanie 3 (m. 2) | Fieldwork, ~2,000 completes; invoice | mid-Nov – early Dec |
+| Zadanie 4 (m. 2–3) | Validation + diagnostic regressions | early–mid Dec |
+| Zadanie 5 (m. 3) | Selection models, corrected vs weighted estimates | mid-Dec |
+| Zadanie 6 (m. 3–4) | Report + manuscript | mid-Dec (manuscript continues past project close) |
 | Zadanie 7 (m. 4) | Public repo + PGSW/CSD workshop | early–mid Dec, done by 16.12 |
 
 ---
@@ -276,15 +276,15 @@ Before data arrive: simulate the full design (invited pool with profile X; laten
 
 | Weeks (2026) | Workstream | Milestones |
 |---|---|---|
-| **7–18 Sep** | Ethics application submitted to SWPS KEB (light-contact arm framed as burden-*reducing*); RFQ with contract annex (§9) to ≥3 agencies (Ariadna, Opinia24, Pollster, + Norstat/IQS as backups); questionnaire v0.9 assembled from PGSW/CSES/EVS items; repo initialized, simulation harness started | RFQ out by 11 Sep; ethics submitted by 18 Sep |
-| **21 Sep – 9 Oct** | Bids evaluated (criteria §9); contract signed; questionnaire finalized + cognitive check; prereg drafted; simulation-based power analysis locked | Contract by ~9 Oct; ethics decision received |
-| **12 – 23 Oct** | Agency scripting + our testing; **soft launch** (~100/arm); prereg **frozen on OSF before main launch** | Prereg frozen; go/no-go on reminder-lift check |
-| **26 Oct – 9 Nov** | **Main fieldwork** (14-day window, both arms; closes before 11 Nov Independence Day; avoid fielding across any other major political event day — All Saints' falls mid-window but is apolitical and affects both arms symmetrically); daily monitoring of per-arm completes; top-up batches if needed; **agency invoice** on completion (coordinate FRBN invoice timing with Dział Badań — application scheduled it for "month 2") | ≥ 1,800 completes by 9 Nov |
-| **10 – 27 Nov** | Data delivery (contractual: ≤ 5 working days after close, i.e. by 16 Nov); Stage 0–2 per SAP; flag items; Stage 3–4 models | Diagnostic results by ~23 Nov |
-| **23 Nov – 9 Dec** | Methodological report (PL, incl. journalist-accessible summary per application); manuscript draft (EN); PGSW implementation memo (arm design for next wave, cost model, protocol lessons) | Report v1 by 4 Dec |
-| **7–14 Dec** | Public repo release (code, anonymized data per §10, replication guide); **workshop** for PGSW team + CSD; final FRBN report to Dział Badań | Everything closed by **14 Dec**, 2-day buffer to 16.12 |
+| **22 Sep – 30 Oct** | Questionnaire cognitive testing then final version; ethics application to SWPS KEB (light-contact arm framed as burden-*reducing*); English translation of the instrument | Ethics submitted 24 Sep; questionnaire final 9 Oct; ethics decision by 30 Oct |
+| **29 Sep – 23 Oct** | RFQ with contract annex (Załącznik 2) to ≥3 agencies (Ariadna, Opinia24, Pollster, + Norstat/IQS as backups); bidder questions answered; bids evaluated (criteria §9); clarification calls; contract signed | RFQ out 29 Sep; bids 15 Oct; contract 23 Oct |
+| **26 Oct – 4 Nov** | Questionnaire handed to agency; agency scripting; our script testing; randomization verified | Script signed off 4 Nov |
+| **5 – 13 Nov** | **Soft launch** (~100/arm); reminder-lift verified; go/no-go decision; prereg **frozen on OSF before main launch** | Go/no-go 12 Nov; prereg frozen 13 Nov |
+| **16 – 30 Nov** | **Main fieldwork** (14-day window, both arms; opens after 11 Nov Independence Day so no public holiday falls inside it); reminders day 3/7/11 (19, 23, 27 Nov); daily monitoring of per-arm completes; top-up batches in the same 42/58 ratio if needed | ~2,000 completes; floor 1,800 with ≥ 650 in arm B |
+| **30 Nov – 14 Dec** | Data delivery (≤ 3 working days after close, i.e. by 3 Dec); acceptance protocol; **agency invoice** (coordinate FRBN invoice timing with Dział Badań); Stage 0–5 per SAP | Data 3 Dec; acceptance 9 Dec; diagnostics 9 Dec; Stage 5 by 14 Dec |
+| **9 – 16 Dec** | Methodological report (PL, incl. journalist-accessible summary per application); PGSW implementation memo; public repo release (code, anonymized data per §10, replication guide); **workshop** for PGSW team + CSD; final FRBN report to Dział Badań | Workshop 15 Dec; everything closed by **16 Dec** |
 
-The September start puts contracting and pre-registration in the post-vacation period (agency staffing back, faster turnaround) and fieldwork in late October–early November — still good response behavior, closing before Independence Day and well clear of the December holiday trough. The schedule is ~3 weeks tighter than a four-month window; the slack is taken out of analysis and reporting, which is safe because the pipeline is built simulation-first (analysis is a re-run on real data). If contracting slips a week, fieldwork can start as late as 2 Nov (close 16 Nov, data by ~23 Nov) without endangering the deadline, at the cost of overlapping the reporting and closeout phases; slippage beyond that eats the final buffer and should trigger trimming the manuscript draft to an outline (the report, repo and workshop are the FRBN commitments).
+Fieldwork sits in the second half of November. A Monday day 0 puts all three reminders on weekdays (Thu 19, Mon 23, Fri 27) and opens the window after Independence Day, so no public holiday falls inside it — unlike a late-October window, in which All Saints' Day would have landed mid-field. The cost is the tail: data return 3 December against a 16 December close, leaving **9 working days** for analysis, report, repository and workshop with no slack. That is only feasible because the pipeline is built simulation-first, so analysis is a re-run on real data rather than new development. Any slippage upstream eats the report directly; the mitigations, in order of preference, are moving the workshop to January, requesting a no-cost extension from FRBN, or delivering the report as a draft at project close. The manuscript draft (EN) is scheduled after project close and is not an FRBN commitment — the report, repo and workshop are.
 
 ---
 
@@ -334,7 +334,7 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 | Ignorability cannot be certified for any item | Med | Med | Equivalence bounds restated in SD units so binary controls are testable at all (§6); where TOST is indeterminate, report the interval and say so |
 | Agency cannot do invitation-based fielding or arm tagging | Med | Fatal per agency | Pass/fail RFQ criterion; ≥3 bidders + 2 backups |
 | No nonrespondent-level covariates (GDPR) | Med | Med | Pseudo-nonrespondents (ch. 10.5) pre-specified as fallback; aggregate cross-tabs contractually required |
-| Completes shortfall (esp. arm B) | Med | Med | Symmetric top-up batches; accept 700 in B (application anticipates 700–800); power holds |
+| Completes shortfall (esp. arm B) | Med | Med | Top-up batches to both arms in the same 42/58 ratio; contractual floor is 1,800 total with ≥ 650 in B; power holds |
 | Price above 10.50 zł net/complete | Med | Med | Trim questionnaire to 10 min; reduce target to ~1,800 (power at 1,100/700: MDE 6.8 pp / 0.14 SD — still adequate); negotiate arm-B discount |
 | Fieldwork collides with unscheduled political shock | Low | Med | 14-day window, timestamps, field-day FE robustness, A-wave-0 vs B placebo |
 | Heckman/GJRM instability on flagged items | Med | Low–Med | Primary claim rests on the nonparametric test; report R²_M; copula range; document honestly (ch. 12 practice) |

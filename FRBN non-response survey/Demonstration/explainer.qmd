@@ -333,7 +333,7 @@ The wider lesson is about what this bias does to *subgroup* comparisons. A quant
 | **Team** | Ben Stanley (PI), Mikołaj Cześnik, Marta Żerkowska-Balas |
 | **Design** | One nationwide CAWI survey, ~10–12 minutes, on a Polish access panel; invited pool of about 18,500 pre-drawn, randomised 42/58 into arm A (invitation plus three reminders, days 0/3/7/11) and arm B (one invitation, nothing else). The split is unequal because arm B needs about twice the invitations to yield the same number of interviews, and the estimand is a difference between arms |
 | **Target** | ≈ 2,000 completes (≈ 1,200 arm A, ≈ 800 arm B), each tagged with its arm and reminder wave |
-| **Field window** | 14 days, late October to early November 2026, closing before 11 November |
+| **Field window** | 14 days, 16–30 November 2026; the window opens after Independence Day (11 November), so no public holiday falls inside it |
 | **Questionnaire** | PGSW/CSES/EVS item wordings: engagement, turnout and vote (incl. recalled 2023 Sejm and 2025 presidential), party and leader thermometers, minority attitudes, democratic norms, plus controls and benchmarked behaviours |
 | **Pre-registration** | Hypotheses, analysis plan, decision rules and contingencies frozen on OSF before the main launch |
 | **Ethics** | SWPS Research Ethics Committee; the light arm reduces contact burden relative to standard practice |

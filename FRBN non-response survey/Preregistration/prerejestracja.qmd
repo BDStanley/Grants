@@ -1,7 +1,7 @@
 ---
 title: "Diagnosing non-ignorable nonresponse with a randomized response instrument: a Polish CAWI pilot"
 subtitle: "Pre-registration — text prepared for submission to AsPredicted (Questions version 2.00)"
-date: "2026-10-24"
+date: "2026-11-12"
 date-format: "YYYY/MM/DD"
 lang: en
 format:

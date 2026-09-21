@@ -1,7 +1,7 @@
 ---
 title: "Wniosek o wydanie opinii Komisji ds. Etyki Badań Naukowych Uniwersytetu SWPS"
 subtitle: "Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi w polskim sondażu społeczno-politycznym"
-date: "2026-09-18"
+date: "2026-09-24"
 date-format: "D MMMM YYYY"
 lang: pl
 format:
@@ -30,7 +30,7 @@ format:
 | **Źródło finansowania** | Fundusz Rozwoju Badań Naukowych Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C |
 | **Budżet** | 25 830 zł brutto (21 000 zł netto + VAT) — wyłącznie realizacja terenowa badania |
 | **Okres realizacji projektu** | 7 września 2026 – 16 grudnia 2026 |
-| **Planowany termin badania terenowego** | 26 października – 9 listopada 2026 (14-dniowe okno) |
+| **Planowany termin badania terenowego** | 16–30 listopada 2026 (14-dniowe okno); miękki start 5–9 listopada |
 | **Typ badania** | Sondaż CAWI z wbudowanym eksperymentem randomizowanym (manipulacja parametrem kontaktu) |
 | **Uczestnicy** | Osoby pełnoletnie, członkowie komercyjnego panelu internetowego; ok. 18 500 zaproszonych, ok. 2 000 wywiadów zrealizowanych |
 | **Kontakt** | bstanley\@swps.edu.pl |
@@ -100,7 +100,7 @@ Rekrutacja jest prowadzona wyłącznie przez agencję badawczą, w ramach jej st
 ## Przebieg
 
 1. Agencja losuje z panelu pulę ok. 18 500 osób, prestratyfikowaną demograficznie.
-2. Pula jest dzielona losowo w proporcji 42/58 na grupę A i grupę B (losowanie wykonane przy użyciu ziarna dostarczonego przez zespół badawczy albo udokumentowane przez agencję w sposób umożliwiający weryfikację). Proporcja jest nierówna, ponieważ grupa B osiąga niższy wskaźnik realizacji: zaproszenie do niej większej liczby osób wyrównuje liczbę wywiadów w obu grupach, co jest najkorzystniejsze statystycznie i nie zwiększa łącznej liczby wysyłanych wiadomości.
+2. Pula jest dzielona losowo w proporcji 42/58 na grupę A i grupę B (losowanie wykonane przy użyciu ziarna dostarczonego przez zespół badawczy albo udokumentowane przez agencję w sposób umożliwiający weryfikację). Proporcja jest nierówna, ponieważ grupa B osiąga mniej więcej o połowę niższy wskaźnik realizacji: zaproszenie do niej większej liczby osób zbliża liczby wywiadów w obu grupach, co zmniejsza błąd standardowy szacowanej różnicy. Pełne wyrównanie wymagałoby proporcji ok. 33/67; przyjęta proporcja jest kompromisem między precyzją a łączną liczbą wywiadów i nie zwiększa łącznej liczby wysyłanych wiadomości.
 3. W dniu 0 wszystkie osoby otrzymują **identyczne** zaproszenie (ten sam nadawca, temat, treść, ten sam link, ta sama informacja o gratyfikacji).
 4. Osoby z grupy A, które nie wypełniły kwestionariusza, otrzymują przypomnienia w dniu ok. 3, ok. 7 i ok. 11. Osoby z grupy B nie otrzymują żadnych przypomnień.
 5. Po kliknięciu w link uczestnik widzi **ekran informacyjny i ekran zgody** (Załącznik A), następnie pytanie weryfikujące pełnoletność, następnie kwestionariusz.
@@ -108,6 +108,8 @@ Rekrutacja jest prowadzona wyłącznie przez agencję badawczą, w ramach jej st
 7. Po zakończeniu kwestionariusza uczestnik widzi ekran podziękowania zawierający **notę informacyjną po badaniu** (Załącznik B) wraz z odnośnikiem do strony projektu.
 
 Przed uruchomieniem badania głównego przeprowadzony zostanie tzw. miękki start (ok. 100 zaproszeń na grupę) w celu weryfikacji poprawności działania kwestionariusza, oznaczeń grup i czasu wypełniania. Uczestnicy miękkiego startu są traktowani identycznie jak uczestnicy badania głównego pod względem informacji, zgody i gratyfikacji.
+
+**Wariant awaryjny — czwarte przypomnienie w grupie A.** Prosimy Komisję o objęcie opinią również tego wariantu, ponieważ jego uruchomienie zmieniłoby bilans obciążenia opisany w rozdz. 6.2. Miękki start służy także sprawdzeniu, czy przypomnienia rzeczywiście podnoszą wskaźnik realizacji w grupie A — bez tego przyrostu pytanie badawcze pozostaje bez odpowiedzi. Jeżeli różnica wskaźników realizacji między grupami okaże się mniejsza niż 5 punktów procentowych, umowa z agencją przewiduje klauzulę eskalacji: do grupy A wysyłane jest **czwarte przypomnienie** (ok. dnia 13), bez dodatkowego wynagrodzenia dla agencji i bez wydłużenia okna terenowego. Decyzja zapada przed startem badania głównego i zostaje odnotowana; reguła jest zamrożona w prerejestracji, a nie podejmowana po obejrzeniu wyników. W wariancie tym osoba z grupy A otrzymuje maksymalnie pięć wiadomości zamiast czterech, czyli o dwie więcej niż w rutynowym badaniu panelowym; osoby z grupy B (58% zaproszonych) otrzymują niezmiennie jedną. Łączne obciążenie kontaktowe pozostaje wówczas o ok. 12% niższe od badania zrealizowanego konwencjonalnie.
 
 ## Zawartość kwestionariusza
 
@@ -163,7 +165,7 @@ Poniższe liczby pochodzą z symulacji projektu badania przy realistycznych wska
 | Liczba zaproszonych | 18 500 | 18 500 |
 | Łączna liczba wysłanych wiadomości | ok. 39 000 | ok. 51 900 |
 | Średnio na osobę zaproszoną | 2,11 | 2,80 |
-| Maksymalnie dla jednej osoby | 4 (grupa A) | 3 |
+| Maksymalnie dla jednej osoby | 4 (grupa A); 5 w wariancie awaryjnym | 3 |
 | Udział osób otrzymujących 1 wiadomość | 58% | 0% |
 
 : {tbl-colwidths="[40,28,32]"}
@@ -172,7 +174,7 @@ Wnioski, które z tego wyciągamy i które poddajemy ocenie Komisji:
 
 1. **Łączne obciążenie kontaktowe jest o około 25% niższe** niż w badaniu zrealizowanym konwencjonalnie na próbie tej samej wielkości. Ponad połowa zaproszonych otrzymuje dokładnie jedną wiadomość — sytuację łagodniejszą niż jakiekolwiek inne badanie, do którego zostaną zaproszeni.
 2. **Dla 42% zaproszonych obciążenie jest nieznacznie wyższe niż rutynowe**: jedna dodatkowa wiadomość w czternastodniowym oknie, o tej samej treści i z tą samą możliwością rezygnacji co pozostałe, wysyłana wyłącznie do osób, które na poprzednie nie zareagowały. Nie twierdzimy, że jest to obciążenie zerowe. Twierdzimy, że jest ono minimalne w rozumieniu przepisów o badaniach z minimalnym ryzykiem: nie przekracza uciążliwości, jakiej uczestnik panelu doświadcza w zwykłym toku uczestnictwa, a różnica wobec praktyki rutynowej wynosi jedną wiadomość e-mail.
-3. **Dodatkowe przypomnienie nie jest ozdobnikiem projektu, lecz jego warunkiem.** Symulacyjna analiza mocy wykazała, że przy dwóch przypomnieniach różnica wskaźników realizacji między grupami wynosi około 5 punktów procentowych, a przy takiej różnicy badanie z prawdopodobieństwem ok. 90% nie rozstrzygnęłoby pytania, dla którego zostało zaprojektowane. Trzecie przypomnienie podnosi tę różnicę do ok. 7,6 punktu i moc testów do poziomu użytecznego. Badanie o niewystarczającej mocy obciąża uczestników bez perspektywy korzyści poznawczej — i to właśnie uznalibyśmy za trudne do uzasadnienia etycznie.
+3. **Dodatkowe przypomnienie nie jest ozdobnikiem projektu, lecz jego warunkiem.** Symulacyjna analiza mocy wykazała, że projekt w pierwotnej postaci — dwa przypomnienia, trzynaście pytań konfirmacyjnych, testy dwustronne — wykrywałby poszukiwane efekty z prawdopodobieństwem ok. 0,10, a więc nie rozstrzygnąłby pytania, dla którego został zaprojektowany. Przebudowa części konfirmacyjnej (cztery konstrukty zamiast trzynastu pytań, testy jednostronne w prerejestrowanym kierunku) podniosła moc do ok. 0,30–0,34 przy niezmienionym obciążeniu uczestników. Dopiero trzecie przypomnienie, zwiększające różnicę wskaźników realizacji z ok. 4,7 do ok. 7,6 punktu procentowego, podnosi ją do ok. 0,65–0,69, a moc testu łącznego do poziomu bliskiego pewności. Wyczerpaliśmy zatem możliwości poprawy mocy po stronie analizy, zanim sięgnęliśmy po dodatkową wiadomość do uczestników. Badanie o niewystarczającej mocy obciąża uczestników bez perspektywy korzyści poznawczej — i to właśnie uznalibyśmy za trudne do uzasadnienia etycznie.
 4. **Uwaga o historii projektu badania.** Pierwotny protokół przewidywał dwa przypomnienia w grupie A, a więc dokładnie standard branżowy, i pozwalał stwierdzić, że żaden uczestnik nie otrzymuje większej liczby kontaktów niż w zwykłym badaniu panelowym. Symulacyjna analiza mocy, przeprowadzona przed rozpoczęciem realizacji terenowej, wykazała, że taki protokół nie pozwoliłby odpowiedzieć na pytanie badawcze. Zdecydowaliśmy się na trzecie przypomnienie i na wycofanie powyższego stwierdzenia, zamiast realizować badanie, które obciążałoby uczestników bez szans na rozstrzygnięcie. Przedstawiamy tę zmianę wprost, ponieważ zmienia ona bilans obciążenia i uważamy, że Komisja powinna oceniać protokół w wersji, która zostanie zrealizowana.
 
 ## Zakres niepełnego ujawnienia i jego uzasadnienie
@@ -195,7 +197,7 @@ Prosimy Komisję o wyraźne odniesienie się do tego elementu wniosku.
 |:--------------------|:--------|:-------------------------------|
 | Dyskomfort związany z pytaniami o poglądy polityczne, postawy wobec mniejszości, normy demokratyczne | Niski; pytania tego typu są standardem w polskich badaniach opinii (CBOS, PGSW, EVS) i są kierowane do dorosłych wolontariuszy panelowych | Wyłącznie sformułowania już zwalidowane i wcześniej stosowane; jawna opcja "trudno powiedzieć" i "odmowa odpowiedzi"; brak wymuszania odpowiedzi; możliwość przerwania w każdej chwili; informacja o tematyce badania podana przed wyrażeniem zgody |
 | Obciążenie czasowe | Niskie — mediana ≤ 12 minut | Czas podany w zaproszeniu i na ekranie zgody; kwestionariusz testowany pod kątem czasu w miękkim starcie |
-| Uciążliwość przypomnień | Niska; w grupie A o jedną wiadomość wyższa niż standard panelowy, w grupie B o dwie niższa; łącznie ok. 25% niższa niż w badaniu konwencjonalnym (rozdz. 6.2) | Maksymalnie trzy przypomnienia w oknie 14 dni; przypomnienia otrzymują wyłącznie osoby, które nie wypełniły kwestionariusza; każde zawiera standardową panelową możliwość rezygnacji; treść przypomnień neutralna, bez ponaglania i bez odwołań do zobowiązania |
+| Uciążliwość przypomnień | Niska; w grupie A o jedną wiadomość wyższa niż standard panelowy, w grupie B o dwie niższa; łącznie ok. 25% niższa niż w badaniu konwencjonalnym (rozdz. 6.2) | Maksymalnie trzy przypomnienia w oknie 14 dni — cztery wyłącznie w razie uruchomienia klauzuli eskalacji, przy niezmienionej długości okna; przypomnienia otrzymują wyłącznie osoby, które nie wypełniły kwestionariusza; każde zawiera standardową panelową możliwość rezygnacji; treść przypomnień neutralna, bez ponaglania i bez odwołań do zobowiązania |
 | Ryzyko ujawnienia poglądów politycznych osoby możliwej do zidentyfikowania | Niskie | Zespół otrzymuje wyłącznie dane spseudonimizowane; brak dostępu do danych identyfikujących; region na poziomie NUTS2; wiek w przedziałach w pliku publikowanym; kontrola k-anonimowości przed publikacją danych (rozdz. 9.4) |
 | Ryzyko związane z przetwarzaniem danych osób, które nie wzięły udziału (paradane) | Umiarkowane — omówione osobno w rozdz. 9.3 | Wyłącznie dane spseudonimizowane i ograniczone do kategorii profilowych już posiadanych przez agencję; wariant awaryjny oparty na danych wyłącznie zagregowanych |
 | Fałszywe wrażenie, że badanie ocenia indywidualne poglądy uczestnika | Niskie | Nota po badaniu wyjaśnia, że przedmiotem analizy są wzorce zbiorowe, a nie odpowiedzi jednostkowe; brak informacji zwrotnej indywidualnej |

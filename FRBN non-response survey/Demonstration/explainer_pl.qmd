@@ -300,7 +300,7 @@ Szersza lekcja dotyczy tego, co to obciążenie robi z porównaniami **wewnątrz
 | **Zespół** | Ben Stanley (kierownik), Mikołaj Cześnik, Marta Żerkowska-Balas |
 | **Projekt badania** | Jedno ogólnopolskie badanie CAWI, ok. 10–12 minut, w panelu internetowym; pula ok. 18 500 osób wylosowana z góry i podzielona losowo w proporcji 42/58 na ramię A (zaproszenie i trzy przypomnienia, dni 0/3/7/11) oraz ramię B (jedno zaproszenie, nic więcej). Proporcja jest nierówna, bo ramię B wymaga mniej więcej dwukrotnie większej liczby zaproszeń, by dać tyle samo wywiadów, a szacowaną wielkością jest różnica między ramionami |
 | **Cel realizacyjny** | ok. 2000 zrealizowanych wywiadów (ok. 1200 w ramieniu A, ok. 800 w B), każdy oznaczony ramieniem i falą przypomnienia |
-| **Okno realizacji** | 14 dni, koniec października – początek listopada 2026, zamknięcie przed 11 listopada |
+| **Okno realizacji** | 14 dni, 16–30 listopada 2026; okno otwiera się po Święcie Niepodległości (11 listopada), więc żadne święto państwowe nie przypada w jego trakcie |
 | **Kwestionariusz** | Brzmienia pytań z PGSW/CSES/EVS: zaangażowanie, frekwencja i głosowanie (w tym deklaracje retrospektywne: Sejm 2023 i prezydenckie 2025), termometry sympatii do partii i liderów, postawy wobec mniejszości, normy demokratyczne oraz pytania kontrolne i zachowania z punktem odniesienia |
 | **Prerejestracja** | Hipotezy, plan analizy, reguły decyzyjne i procedury awaryjne zamrożone na OSF przed startem badania głównego |
 | **Etyka** | Komisja ds. Etyki Badań Naukowych Uniwersytetu SWPS; ramię lekkie zmniejsza obciążenie kontaktowe wobec standardu branżowego |

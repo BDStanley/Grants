@@ -43,7 +43,7 @@ Proszę o dopuszczenie do realizacji projektu badawczego przedstawionego poniże
 ```{=typst}
 #grid(columns: (1fr, 1fr), gutter: 12pt,
   block(width: 100%, height: 2.2cm, stroke: 0.5pt + luma(120), inset: 8pt)[
-    18 września 2026 r.],
+    24 września 2026 r.],
   block(width: 100%, height: 2.2cm, stroke: 0.5pt + luma(120), inset: 8pt)[])
 #grid(columns: (1fr, 1fr), gutter: 12pt,
   align(center)[#text(size: 9pt)[Data]],
@@ -84,7 +84,7 @@ Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu 
 
 **Okres realizacji projektu:** 7 września – 16 grudnia 2026 r.
 
-**Realizacja terenowa badania:** miękki start ok. 23 października 2026 r. (ok. 100 zaproszeń na grupę, weryfikacja techniczna), badanie główne 26 października – 9 listopada 2026 r. (okno 14-dniowe, zamykane jednocześnie dla obu grup).
+**Realizacja terenowa badania:** miękki start 5–9 listopada 2026 r. (ok. 100 zaproszeń na grupę, weryfikacja techniczna), badanie główne 16–30 listopada 2026 r. (okno 14-dniowe, zamykane jednocześnie dla obu grup). Okno otwiera się po Święcie Niepodległości, dzięki czemu żadne święto państwowe nie przypada w jego trakcie.
 
 **Miejsce:** badanie internetowe (CAWI) na ogólnopolskiej próbie dorosłych mieszkańców Polski, realizowane zdalnie przez komercyjną agencję badawczą wyłonioną w postępowaniu ofertowym zgodnym z wewnętrznymi zasadami udzielania zamówień Uniwersytetu SWPS. Uczestnicy wypełniają kwestionariusz we własnym otoczeniu, na własnym urządzeniu, w dogodnym dla siebie czasie. Analiza danych prowadzona jest w Instytucie Nauk Społecznych Uniwersytetu SWPS. **Zespół badawczy na żadnym etapie nie kontaktuje się bezpośrednio z uczestnikami i nie ma dostępu do danych identyfikujących członków panelu.**
 
