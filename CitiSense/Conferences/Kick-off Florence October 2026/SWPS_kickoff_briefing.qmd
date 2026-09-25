@@ -1,0 +1,312 @@
+---
+title: "CitiSense: SWPS University's Role and Questions for the Kick-off"
+subtitle: "Briefing note for the kick-off meeting, Florence, 27–29 October 2026"
+author: "Ben Stanley and Marta Żerkowska-Balas (SWPS University)"
+date: today
+date-format: "D MMMM YYYY"
+lang: en-GB
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.2cm
+      y: 2cm
+    fontsize: 10pt
+    mainfont: "Times New Roman"
+---
+
+```{=typst}
+#set par(justify: true)
+#show heading.where(level: 1): it => block(above: 1.4em, below: 0.8em)[#text(size: 13pt, weight: "bold")[#it.body]]
+#show heading.where(level: 2): it => block(above: 1.1em, below: 0.6em)[#text(size: 11pt, weight: "bold")[#it.body]]
+#show table: set text(hyphenate: false, size: 9pt)
+#show table: set par(justify: false)
+#let caption(body) = [#v(0.2em)#align(center)[#text(size: 9pt, style: "italic")[#body]]#v(0.6em)]
+```
+
+*Prepared for the CitiSense kick-off (HORIZON-CL2-2025-01-DEMOCRACY-03, GA 101286806). Based on
+the signed Grant Agreement, Annex 1 Parts A and B (Ref. Ares(2026)4751689, 11 May 2026). This
+note covers academic matters only; SWPS's research office is handling financial and
+administrative questions with EUI directly.*
+
+
+# 1. Purpose
+
+This note sets out how we at SWPS University understand our part in CitiSense, and lists the
+questions we would like to settle at the kick-off. Where our reading of the Grant Agreement
+differs from the coordinator's or from CEU's, we would be grateful to be corrected: the point
+is to agree a shared understanding before WP6 begins in April 2027.
+
+Sixteen questions follow in Section 6. Four matter most, because their answers shape the WP6
+work plan or face an early deadline:
+
+- **Q1.** Is SWPS the sole lead of WP6, or its co-lead with CEU?
+- **Q2.** Who drafts each of the four WP6 deliverables?
+- **Q5.** Which survey data will Task 6.3 use for Poland and Hungary, which the WP2 survey does
+  not cover?
+- **Q6.** Can WP6 add a short block of questions to the WP2 survey? Survey design (T2.1) closes
+  at M6 (March 2027).
+
+
+# 2. SWPS in CitiSense at a glance
+
+```{=typst}
+#block(breakable: false)[
+#table(
+  columns: (auto, 1fr),
+  stroke: none,
+  inset: 5pt,
+  table.hline(),
+  [*Role*], [Beneficiary 12 (USWPS); lead beneficiary of WP6, Economic Dimensions of Enlargement],
+  [*Team*], [Ben Stanley (principal investigator), Marta Żerkowska-Balas],
+  [*Effort*], [13 person-months: WP6 10; WP2 1; WP10 1; WP11 0.5; WP12 0.5],
+  [*By person*], [Ben Stanley 8 person-months (WP6 6; WP2, WP10, WP11 and WP12 0.5 each); Marta Żerkowska-Balas 5 person-months (WP6 4; WP2 and WP10 0.5 each)],
+  [*Leads*], [WP6 (M7–M24); Tasks 6.3 and 6.4; Deliverables D6.2 and D6.3],
+  [*Partner in*], [T6.1 and T6.2; the WP2 pilot survey (T2.2); WP10 Tasks 10.1–10.4; the WP11 tasks that name all partners; WP12 (Steering Committee, data management, quality assurance)],
+  table.hline(),
+)
+#caption[Table 1. SWPS University's role in CitiSense]
+]
+```
+
+
+# 3. Work Package 6: our understanding
+
+WP6 runs from M7 to M24 (April 2027 – September 2028), with 30 person-months across five
+partners: CEU 12.5, SWPS 10, ISU 3, UKMA 3 and IPRE 1.5. Its objectives are to analyse the
+economic costs and benefits of enlargement and non-enlargement; to draw political-economic
+lessons from previous enlargements; to assess the long-term relationship between
+post-accession economic development and political attitudes and behaviour; to examine
+subnational variation in the governance of EU funds; and to turn these findings into adaptive
+policy recommendations.
+
+```{=typst}
+#block(breakable: false)[
+#table(
+  columns: (auto, 1fr, auto, 1fr, auto, auto),
+  stroke: none,
+  inset: 5pt,
+  table.hline(),
+  table.header([*Task*], [*Title*], [*Lead*], [*Partners*], [*Months*], [*Feeds*]),
+  table.hline(),
+  [T6.1], [Literature review], [CEU], [SWPS], [M7–M18], [D6.1],
+  [T6.2], [Inclusion and exclusion at the regional level], [CEU], [SWPS, ISU, UKMA], [M13–M24], [D6.2],
+  [T6.3], [Perceptions, attitudes and behaviour], [SWPS], [CEU, ISU, UKMA, IPRE], [M13–M24], [D6.3],
+  [T6.4], [Policy recommendations], [SWPS], [CEU, ISU, UKMA], [M7–M24], [D6.4],
+  table.hline(),
+)
+#caption[Table 2. WP6 tasks (Annex 1, Part A)]
+]
+```
+
+```{=typst}
+#block(breakable: false)[
+#table(
+  columns: (auto, 1fr, auto, auto),
+  stroke: none,
+  inset: 5pt,
+  table.hline(),
+  table.header([*No.*], [*Deliverable*], [*Lead*], [*Due*]),
+  table.hline(),
+  [D6.1], [Policy Paper: Ambiguities in Economic Cost-Benefit Analysis], [CEU], [M24],
+  [D6.2], [Policy Paper: Patterns of Regional Exclusion and Inclusion], [SWPS], [M24],
+  [D6.3], [Research Report: Popular Perceptions of Socio-Economic Developments], [SWPS], [M24],
+  [D6.4], [Policy Paper: Adaptive Approaches to Economic Integration and Enlargement], [CEU], [M24],
+  table.hline(),
+)
+#caption[Table 3. WP6 deliverables; all are public and due in September 2028]
+]
+```
+
+## 3.1. Three features of the structure
+
+**Task and deliverable leads cross over.** T6.2 is led by CEU but feeds D6.2, which SWPS
+leads; T6.4 is led by SWPS but feeds D6.4, which CEU leads. This may be a deliberate split
+between research and writing, or a remnant of the proposal's drafting. Either way, WP6 needs
+an explicit agreement on who drafts each deliverable (Q2).
+
+**Everything lands at M24.** All four deliverables are due in September 2028, the same month
+as the second cross-WP workshop. They need an internal timetable that works back from that
+date (Q4).
+
+**Leadership is described in two ways.** Part A names SWPS as the lead beneficiary of WP6.
+Part B describes WP6 as co-led by László Bruszt (CEU) and Ben Stanley (SWPS), and CEU holds
+the larger share of the effort. Both descriptions can be true at once, but the division of
+responsibilities should be explicit (Q1).
+
+## 3.2. Data
+
+T6.3 and D6.3 focus on Hungary and Poland. The two lead institutions have already prepared
+national inventories of the public opinion data available for this analysis:
+
+- **Poland (SWPS, September 2026):** the CBOS monthly survey *Aktualne problemy i wydarzenia*
+  (329 waves archived for 1990–2017; the series continues) and the European Social Survey
+  (every round). The Polish National Election Study (PGSW), the Polish Panel Survey (POLPAN) and
+  Diagnoza Społeczna cover questions that these two cannot. Both main Polish datasets carry a
+  regional identifier at NUTS 2 level.
+- **Hungary (CEU, Krisztina Szabó, August 2026):** the TÁRKI Omnibusz (1997–2017) and the
+  European Social Survey. The TÁRKI data identify settlement type but not region.
+
+The WP2 survey covers five member states (Estonia, Slovenia, France, the Netherlands, Spain) and
+four candidate countries (Ukraine, Moldova, North Macedonia, Serbia), but neither Poland nor
+Hungary. Part B nonetheless expects T6.3 to use survey data "including from WPs 2 and 3".
+Questions 5–7 address this.
+
+For T6.2, SWPS will cover Poland: regional data on EU fund allocations and payments, and
+socio-economic series at NUTS 2 and NUTS 3 level (Eurostat, ARDECO, Statistics Poland). CEU
+covers Hungary and the fieldwork in two Ukrainian regions.
+
+## 3.3. How we propose to run WP6
+
+We will bring the following proposal to the kick-off for discussion with CEU and the other WP6
+partners:
+
+1. A WP6 meeting of all five partners at the kick-off or shortly afterwards.
+2. A written division of labour, by task and by deliverable, agreed by the end of
+   November 2026.
+3. An internal timetable for the deliverables: drafts at M21 (June 2028); partner and Advisory
+   Board review at M22 (July 2028); revisions and the quality note required under T12.4 at M23
+   (August 2028); submission at M24 (September 2028).
+4. WP6 calls every six to eight weeks from M7, and a shared workspace.
+5. Agreed rules on authorship of journal articles that draw on WP6 work.
+
+
+# 4. SWPS's contributions to other work packages
+
+```{=typst}
+#table(
+  columns: (auto, 1fr, auto, auto),
+  stroke: none,
+  inset: 5pt,
+  table.hline(),
+  table.header([*Work package (lead)*], [*SWPS role*], [*Months*], [*Effort*]),
+  table.hline(),
+  [WP2 Public opinion survey (SU)], [Partner in the pilot survey (T2.2, all partners). SWPS is not a partner in survey design (T2.1).], [M6–M10], [1 PM],
+  [WP10 Toolboxes (UDE)], [Named partner in the toolbox for policymakers (T10.1), the Youth Labs (T10.3; Warsaw is one of 14 cities) and the “Europe Next” country reports (T10.4); all partners contribute to the civil society and education toolbox (T10.2)], [M12–M36], [1 PM],
+  [WP11 Communication (TEPSA)], [Tasks naming all partners: external communication (T11.1), Expert Hub (T11.2), public panels (T11.3), policy briefs (T11.5), national briefings (T11.6), traditional media (T11.10), participatory videos (T11.12)], [M1–M36], [0.5 PM],
+  [WP12 Management (EUI)], [Steering Committee member as WP6 lead (T12.5); input to the Data Management Plan (T12.2), quality assurance (T12.4) and reporting (T12.3)], [M1–M36], [0.5 PM],
+  [WP13 Ethics (EUI)], [Input to the ethics report (D13.1)], [M18], [–],
+  table.hline(),
+)
+#caption[Table 4. SWPS contributions outside WP6]
+```
+
+
+# 5. Key dates for SWPS
+
+```{=typst}
+#table(
+  columns: (auto, auto, 1fr),
+  stroke: none,
+  inset: 5pt,
+  table.hline(),
+  table.header([*Month*], [*Date*], [*Event*]),
+  table.hline(),
+  [M1], [Oct 2026], [Kick-off, Florence (Milestone 2, scheduled in the Grant Agreement for M3)],
+  [M3], [Dec 2026], [First Advisory Board and Civil Society Network consultation],
+  [M6], [Mar 2027], [Conceptual framework (D1.1); Data Management Plan (D12.2); survey design (T2.1) closes],
+  [M6–M10], [Mar–Jul 2027], [WP2 pilot survey (T2.2)],
+  [M7], [Apr 2027], [WP6 begins with T6.1 and T6.4],
+  [M10–M16], [Jul 2027 – Jan 2028], [WP2 fieldwork],
+  [M13], [Oct 2027], [T6.2 and T6.3 begin],
+  [M18], [Mar 2028], [Mid-term conference; first cross-WP workshop; second AB and CSN consultation; first EC review; WP2 survey data (D2.1); ethics report (D13.1)],
+  [M24], [Sep 2028], [WP6 deliverables D6.1–D6.4; second cross-WP workshop],
+  [M30], [Mar 2029], [Third AB and CSN consultation],
+  [M32], [May 2029], [Toolbox for policymakers (D10.1); Youth Labs report (D10.3)],
+  [M36], [Sep 2029], [Final conference, Brussels; third cross-WP workshop; second EC review],
+  table.hline(),
+)
+#caption[Table 5. Project dates that involve SWPS (M1 = October 2026)]
+```
+
+
+# 6. Questions for the kick-off
+
+## A. Leading WP6
+
+**Q1. Is SWPS the sole lead of WP6, or its co-lead with CEU?** *(Priority.)* Part A of Annex 1
+names SWPS as the lead beneficiary; Part B describes WP6 as co-led by László Bruszt and Ben
+Stanley. *Our proposal:* SWPS takes the formal lead role (the Steering Committee seat,
+coordination and WP-level reporting), and scientific direction is shared with CEU. Does this
+match the coordinator's and CEU's understanding?
+
+**Q2. Who drafts each WP6 deliverable?** *(Priority.)* T6.2 (CEU) feeds D6.2 (SWPS), and T6.4
+(SWPS) feeds D6.4 (CEU). *Our proposal:* for D6.2, CEU drafts the Hungarian and Ukrainian
+material, SWPS drafts the Polish and comparative material, and SWPS edits the whole; for D6.4,
+CEU drafts from the recommendations developed in T6.4 under SWPS's coordination. We would
+welcome CEU's view.
+
+**Q3. What will ISU, UKMA and IPRE contribute?** Their effort is 3, 3 and 1.5 person-months.
+T6.3 focuses on Hungary and Poland, yet names all three as partners. Is the intention a
+comparison with candidate countries (for example, expectations of the economic effects of
+accession), or input to the recommendations? And who carries out the T6.2 fieldwork in two
+Ukrainian regions?
+
+**Q4. Is there a project-wide review schedule for deliverables?** Section 3.3 proposes an
+internal timetable for WP6. We would like it to fit whatever schedule EUI and UM plan for the
+quality notes required under T12.4.
+
+## B. Data for WP6
+
+**Q5. Which survey data will T6.3 use for Poland and Hungary?** *(Priority.)* The WP2 survey
+does not cover either country. We plan to base the long-run analysis on the national and
+cross-national data described in Section 3.2, and to use WP2 data for cross-national comparison
+of economic perceptions where the questions allow. Is this acceptable to the coordinator and
+to SU? Is adding Poland and Hungary to the WP2 survey feasible at all?
+
+**Q6. Can WP6 add a short block of questions to the WP2 survey?** *(Priority.)* The proposal
+draft for this work package included a short block of retrospective and prospective
+evaluations of personal, local and national economic conditions. That block did not survive
+into the final Annex 1. SWPS is not a partner in T2.1, which closes at M6 (March 2027). Is there
+room for such a block, and what are the route and deadline for proposing it?
+
+**Q7. When can WP6 partners use the WP2 data?** The public dataset (D2.1) is due at M18
+(March 2028), and T6.3 runs from M13 to M24. Could WP6 have access once fieldwork ends at M16,
+and on what terms?
+
+**Q8. Is anyone relying on an SWPS survey panel?** Part B lists SWPS alongside SU as providing
+access to nationally representative survey panels. Annex 1 plans no survey fieldwork at SWPS
+and none is budgeted. We raise this only so that no work package plans on an SWPS survey.
+
+## C. Links to the rest of the project
+
+**Q9. What does WP1 need from WP6, and when?** The conceptual and methodological framework
+(D1.1) is due at M6, before WP6 begins. How will it define the economic costs and benefits of
+enlargement and non-enlargement, and would WP1 like WP6 input before M6?
+
+**Q10. When can the WP6 recommendations be validated?** T6.4 requires validation with the
+Civil Society Network (T10.5) and the Expert Hub (T11.2). Our draft recommendations should be
+ready around M21–M22 (June–July 2028). Can those sessions be scheduled now? Could the M18
+consultation test an early version?
+
+**Q11. What is expected of SWPS in the Youth Labs and “Europe Next”?** Warsaw is one of the 14
+Youth Lab cities (T10.3). Who organises the Warsaw lab, and what is SWPS's part in it? For the
+“Europe Next” country reports (T10.4), are partners expected to suggest topics, supervise a
+report, or provide data?
+
+**Q12. When and in what format should the national briefing take place?** Under T11.6 each
+partner organises a briefing with national policymakers. Should the Polish briefing follow the
+M24 recommendations, and what format does TEPSA expect?
+
+## D. Data management, ethics and publication
+
+**Q13. What does EUI need from partners for the Data Management Plan?** Part B foresees a
+first draft for the kick-off, and D12.2 is due at M6. In what form, and by when, should
+partners describe their datasets?
+
+**Q14. Does WP6 work at SWPS need ethics approval?** Our understanding is that it does not:
+the work is secondary analysis of anonymised survey data and aggregate regional statistics,
+which Part B treats as raising no ethical issues. Is this consistent with EUI's approach to
+the Ethics Monitoring Protocol and the ethics report (D13.1)?
+
+**Q15. Will the consortium agree a publication policy?** We would welcome shared rules on
+authorship, internal review before journal submission, open-access routes and repositories,
+and on publishing material from deliverables in journals.
+
+## E. Governance
+
+**Q16. When and how will the Steering Committee and the cross-WP workshops meet?** What is
+the schedule of Steering Committee meetings and six-monthly risk reviews, and which of these
+meetings and the cross-WP workshops (M18, M24, M36) will be held in person rather than online?
+This helps us plan who from SWPS attends which meeting. Does the Steering Committee want WP6
+input before WP6 formally begins at M7, for example for the M3 consultation?

@@ -1,81 +1,246 @@
-# FRBN non-response survey — actions
+## To-do list
 
-Decision 67/2026/FRBN/C · project runs **2026-09-07 → 2026-12-16**.
-Dates from [[harmonogram]] (Gantt) and [[Project design]] §8 timeline.
+The project runs from 7 September to 16 December 2026, and everything must be finished by the 16th. Numbers in brackets (N1, N2, …) point to the notes below.
 
-## Immediate (21–29 September)
+### Now (25–30 Sep): ethics and admin
 
-- [ ] Fill in tender dates [T1]–[T15] in `Tender/zapytanie-ofertowe.qmd` and re-render before sending #FRBN 📅 2026-09-25
-- [ ] Complete the two `[DO UZUPEŁNIENIA]` placeholders in the KEB form: IOD consultation date, team experience descriptions #FRBN 📅 2026-09-23
-- [ ] Submit KEB ethics application #FRBN 📅 2026-09-24
-- [ ] Contact KEB chair about review turnaround #FRBN 📅 2026-09-24
-- [ ] Contact Marta and Mikołaj regarding the non-response survey project #FRBN 📅 2026-09-22
-- [ ] Confirm with Dział Badań (A. Nahorna): invoice timing against a 10 December acceptance protocol, FRBN reporting template, legal-review lead time for contract signing #FRBN 📅 2026-09-25
-- [ ] Decide whether the workshop moves to January or the project requests a no-cost extension; data return 3 December and the project closes 16 December #FRBN 📅 2026-09-29
+- [ ] Fill in tender dates T1–T15 in the RFQ and re-render it (N1) #FRBN_grant 📅 2026-09-25
+- [ ] Contact the KEB chair about review turnaround #FRBN_grant 📅 2026-09-25
+- [ ] Confirm invoicing, reporting template and legal-review lead time with Dział Badań (N2) #FRBN_grant 📅 2026-09-25
+- [ ] Complete the two placeholders in the KEB form (N3) #FRBN_grant 📅 2026-09-29
+- [ ] Decide: workshop in January, or a no-cost extension (N4) #FRBN_grant 📅 2026-09-29
+- [ ] Submit KEB ethics application [(Ethics board document)](https://docs.google.com/document/d/1mI_bohbcWfy0pxYzIG_tii809VTa3Hhm/edit) #FRBN_grant 📅 2026-09-30
 
-## Questionnaire and ethics (22 September – 30 October)
+### Questionnaire and ethics (22 Sep–30 Oct)
 
-- [ ] Cognitive testing of questionnaire with team and 2–3 naive testers; focus on own-wording items M6.2, M6.4–M6.6, M9.1–M9.3 and the bipolar format in M8.3–M8.5 #FRBN 🛫 2026-09-22 📅 2026-10-06
-- [ ] Verify exact PKW benchmark figures (2023 Sejm turnout; 2025 presidential both rounds) against the PKW site #FRBN 📅 2026-10-06
-- [ ] Finalise questionnaire: 58 substantive items plus attention check, median ≤ 12 minutes #FRBN 📅 2026-10-09
-- [ ] Receive KEB ethics decision (follow up if not received) #FRBN 📅 2026-10-30
-- [ ] Translate questionnaire into English for OSF deposit and repository #FRBN 🛫 2026-10-12 📅 2026-10-30
+- [ ] Cognitive-test the questionnaire with the team and 2–3 naive testers (N5) #FRBN_grant 📅 2026-10-06
+- [ ] Check the PKW benchmark figures against the PKW site (N6) #FRBN_grant 📅 2026-10-06
+- [ ] Finalise the questionnaire (N7) #FRBN_grant 📅 2026-10-09
+- [ ] Receive the KEB decision; follow up if it has not arrived #FRBN_grant 📅 2026-10-30
+- [ ] Translate the questionnaire into English for OSF and the repository #FRBN_grant 📅 2026-10-30
 
-## Tender and contracting (29 September – 23 October)
+### Tender and contracting (29 Sep–23 Oct)
 
-- [ ] Send RFQ to Ariadna, Opinia24, Pollster (CC Norstat/IQS as backups); requirement W6 makes wave-by-wave reminder-lift evidence a rejection criterion #FRBN 📅 2026-09-29
-- [ ] Answer bidder questions and circulate replies to all addressees #FRBN 🛫 2026-09-29 📅 2026-10-08
-- [ ] Receive bids #FRBN 📅 2026-10-15
-- [ ] Hold clarification calls: reminder channel symmetry across arms, auto top-up disabled, nonrespondent profile-variable availability, whether three reminders in 14 days trigger panel contact-frequency caps #FRBN 🛫 2026-10-16 📅 2026-10-20
-- [ ] Evaluate bids: pass/fail on W1–W7, then K1 price 30, K2 panel and invitation effectiveness 30, K3 data quality 25, K4 timeline 15 #FRBN 📅 2026-10-21
-- [ ] Sign agency contract including Załącznik 2 data annex, the §8 pt 9 escalation clause, no-quota-management and fixed-window clauses, and the open-data publication right #FRBN 📅 2026-10-23
+- [ ] Send the RFQ to Ariadna, Opinia24 and Pollster (N8) #FRBN_grant 📅 2026-09-29
+- [ ] Answer bidder questions and circulate the replies to all addressees #FRBN_grant 📅 2026-10-08
+- [ ] Receive bids #FRBN_grant 📅 2026-10-15
+- [ ] Hold clarification calls with bidders (N9) #FRBN_grant 📅 2026-10-20
+- [ ] Evaluate the bids (N10) #FRBN_grant 📅 2026-10-21
+- [ ] Sign the agency contract (N11) #FRBN_grant 📅 2026-10-23
 
-## Scripting and testing (26 October – 4 November)
+### Scripting and testing (26 Oct–4 Nov)
 
-- [ ] Hand questionnaire to agency for programming #FRBN 📅 2026-10-26
-- [ ] Test agency script: routing, code 97/98 options visible on every attitudinal item, item-order randomisation in M5–M7, attention check inside M6, arm and wave tagging #FRBN 🛫 2026-11-02 📅 2026-11-04
-- [ ] Verify 42/58 randomisation of the invited pool (our seed or documented procedure; balance on profile covariates) #FRBN 📅 2026-11-04
+- [ ] Hand the questionnaire to the agency for programming #FRBN_grant 📅 2026-10-26
+- [ ] Test the agency's script (N12) #FRBN_grant 📅 2026-11-04
+- [ ] Verify the 42/58 randomisation of the invited pool (N13) #FRBN_grant 📅 2026-11-04
 
-## Soft launch and pre-registration (5–13 November)
+### Soft launch and pre-registration (5–13 Nov)
 
-- [ ] Run soft launch, ~100 invitations per arm: arm and wave tags present in data, paradata fields populated, median timing ≤ 12 minutes, no routing errors #FRBN 🛫 2026-11-05 📅 2026-11-09
-- [ ] Verify reminder lift between arms from soft-launch data #FRBN 🛫 2026-11-09 📅 2026-11-11
-- [ ] Go/no-go decision: ≥ 7 pp proceed as planned; 5–7 pp proceed and record reduced power; < 5 pp invoke the escalation clause and add a fourth reminder wave in arm A #FRBN 📅 2026-11-12
-- [ ] Record whether soft-launch cases enter the main dataset (only if the protocol was identical) #FRBN 📅 2026-11-12
-- [ ] Freeze pre-registration on OSF: hypotheses H1–H5, M-check, H-global, SAP, decision rules, contingencies, questionnaire, contact protocol, simulation code #FRBN 📅 2026-11-13
+- [ ] Run the soft launch, ~100 invitations per arm (N14) #FRBN_grant 📅 2026-11-09
+- [ ] Check the reminder lift between arms in the soft-launch data (N15) #FRBN_grant 📅 2026-11-11
+- [ ] Make the go/no-go decision on the main launch (N15) #FRBN_grant 📅 2026-11-12
+- [ ] Record whether soft-launch cases enter the main dataset (N14) #FRBN_grant 📅 2026-11-12
+- [ ] Freeze the pre-registration on OSF (N16) #FRBN_grant 📅 2026-11-13
 
-## Main fieldwork (16–30 November)
+### Main fieldwork (16–30 Nov)
 
-- [ ] Launch main fieldwork, day 0; 14-day window, both arms closing the same day #FRBN 📅 2026-11-16
-- [ ] Confirm reminder 1 sent to arm A non-completers only (day 3) #FRBN 📅 2026-11-19
-- [ ] Confirm reminder 2 sent to arm A non-completers only (day 7) #FRBN 📅 2026-11-23
-- [ ] Confirm reminder 3 sent to arm A non-completers only (day 11) #FRBN 📅 2026-11-27
-- [ ] Monitor daily completes per arm; release top-up batches to both arms simultaneously in the same 42/58 ratio if completes lag at the midpoint #FRBN 🛫 2026-11-16 📅 2026-11-30
-- [ ] Close fieldwork: target ~2,000 completes (~1,200 arm A, ~800 arm B), minimum 1,800 with no fewer than 650 in arm B #FRBN 📅 2026-11-30
+- [ ] Launch main fieldwork: day 0 for both arms (N17) #FRBN_grant 📅 2026-11-16
+- [ ] Confirm reminder 1 went to arm A non-completers only (day 3) #FRBN_grant 📅 2026-11-19
+- [ ] Confirm reminder 2 went to arm A non-completers only (day 7) #FRBN_grant 📅 2026-11-23
+- [ ] Confirm reminder 3 went to arm A non-completers only (day 11) #FRBN_grant 📅 2026-11-27
+- [ ] Monitor daily completes per arm; top up if they lag (N17) #FRBN_grant 📅 2026-11-30
+- [ ] Close fieldwork in both arms on the same day (N17) #FRBN_grant 📅 2026-11-30
 
-## Data and analysis (30 November – 14 December)
+### Data and analysis (30 Nov–14 Dec)
 
-- [ ] Receive full data delivery: invitee file, respondent file, field report, randomisation documentation #FRBN 🛫 2026-11-30 📅 2026-12-03
-- [ ] Verify delivery and sign acceptance protocol #FRBN 🛫 2026-12-03 📅 2026-12-09
-- [ ] Coordinate agency invoice with Dział Badań after acceptance #FRBN 📅 2026-12-10
-- [ ] Stage 0: reconcile invitee file against field report, verify randomisation balance, construct outcomes and indices #FRBN 📅 2026-12-04
-- [ ] Stage 1: response rates by arm, response probit on the invited pool, reminder-wave response curve #FRBN 📅 2026-12-07
-- [ ] Stage 2: diagnostic regressions Y ~ Z + X with HC2 errors for all pre-registered outcomes; one-sided tests with BH-FDR across the four constructs; Brown's combined test #FRBN 📅 2026-12-09
-- [ ] Run placebo test (arm B vs arm A wave 0) and the five-level propensity gradient with field-day fixed effects #FRBN 📅 2026-12-09
-- [ ] Stage 3: TOST equivalence tests for H5 against ±0.10 SD, binaries included #FRBN 📅 2026-12-10
-- [ ] Stage 4: Heckman ML plus GJRM copula range for flagged items; bootstrap over the invited pool stratified by arm; NINR weights as a stretch goal; pseudo-nonrespondent fallback if individual-level nonrespondent data are unavailable #FRBN 📅 2026-12-12
-- [ ] Stage 5: three-column comparison (observed / raked / corrected) against PKW 2023 and 2025, GUS/EHIS, CEPiK, CBOS/ISKK; estimator-comparison plot #FRBN 📅 2026-12-14
-- [ ] Run Manski bounds and Hartman–Huang sensitivity analyses for the supplement #FRBN 📅 2026-12-14
+- [ ] Receive the full data delivery (N18) #FRBN_grant 📅 2026-12-03
+- [ ] Stage 0: reconcile files, check balance, build outcomes and indices (N19) #FRBN_grant 📅 2026-12-04
+- [ ] Stage 1: response rates, response probit and reminder-wave curve (N19) #FRBN_grant 📅 2026-12-07
+- [ ] Verify the delivery and sign the acceptance protocol (N18) #FRBN_grant 📅 2026-12-09
+- [ ] Stage 2: diagnostic regressions and confirmatory tests (N19) #FRBN_grant 📅 2026-12-09
+- [ ] Run the placebo test and the propensity gradient (N19) #FRBN_grant 📅 2026-12-09
+- [ ] Coordinate the agency invoice with Dział Badań after acceptance #FRBN_grant 📅 2026-12-10
+- [ ] Stage 3: TOST equivalence tests for H5 (N19) #FRBN_grant 📅 2026-12-10
+- [ ] Stage 4: selection models for flagged items (N19) #FRBN_grant 📅 2026-12-12
+- [ ] Stage 5: compare observed, raked and corrected estimates with benchmarks (N19) #FRBN_grant 📅 2026-12-14
+- [ ] Run Manski bounds and Hartman–Huang sensitivity analyses for the supplement (N19) #FRBN_grant 📅 2026-12-14
 
-## Reporting and closeout (9–16 December)
+### Reporting and closeout (9–16 Dec)
 
-- [ ] Write methodological report v1 (PL) including the journalist-accessible summary #FRBN 🛫 2026-12-09 📅 2026-12-16
-- [ ] Write PGSW implementation memo: light-contact arm for the next wave, cost model, protocol lessons #FRBN 📅 2026-12-14
-- [ ] Release public repository: `renv`-pinned code, `targets` pipeline, simulation suite, anonymised data (k-anonymity check, suppress region × settlement × age cells below 5), questionnaire PL/EN, contract annex template, implementation guide #FRBN 🛫 2026-12-11 📅 2026-12-16
-- [ ] Hold workshop for PGSW team and CSD #FRBN 📅 2026-12-15
-- [ ] Check all outputs carry the FRBN acknowledgement („Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C") #FRBN 📅 2026-12-16
-- [ ] Submit final FRBN report to Dział Badań #FRBN 📅 2026-12-16
+- [ ] Write the PGSW implementation memo (N20) #FRBN_grant 📅 2026-12-14
+- [ ] Hold the workshop for the PGSW team and CSD (N4) #FRBN_grant 📅 2026-12-15
+- [ ] Write methodological report v1 (PL), with a summary for journalists #FRBN_grant 📅 2026-12-16
+- [ ] Release the public repository (N21) #FRBN_grant 📅 2026-12-16
+- [ ] Check that all outputs carry the FRBN acknowledgement (N22) #FRBN_grant 📅 2026-12-16
+- [ ] Submit the final FRBN report to Dział Badań #FRBN_grant 📅 2026-12-16
 
-## After project close
+### After project close
 
-- [ ] Draft article manuscript (EN) — "Diagnosing Non-Ignorable Nonresponse with a Randomized Response Instrument" — targeting POQ #FRBN 📅 2027-01-29
+- [ ] Draft the article manuscript (EN) for POQ (N23) #FRBN_grant 📅 2027-01-29
+
+## Notes
+
+### N1. Tender dates
+The timetable in chapter 7 of `Tender/zapytanie-ofertowe.qmd` is the only place the RFQ defines calendar dates. All of T1–T15 still read "[do ustalenia]" (checked 25 Sep). Dates from the project timeline:
+
+| | Stage | Date |
+|:--|:--|:--|
+| T1 | RFQ sent | 29 Sep |
+| T2 | Deadline for bidder questions | not yet set |
+| T3 | Replies to all addressees | 8 Oct |
+| T4 | Bid deadline | 15 Oct |
+| T5 | Clarification calls | 16–20 Oct |
+| T6 | Selection, notice of result, contract | 23 Oct |
+| T7 | Questionnaire to the agency | 26 Oct |
+| T8 | Our script testing | 2–4 Nov |
+| T9 | Soft launch and test data | 5–9 Nov |
+| T10 | Main launch (day 0) | 16 Nov |
+| T11 | Field closes, both arms (day 14) | 30 Nov |
+| T12 | Data and field report delivered | 3 Dec |
+| T13 | Acceptance protocol and invoice | 9–10 Dec |
+| T14 | Hard data deadline if the timetable changes (ch. 8.1 b) | not yet set |
+| T15 | Project end | 16 Dec |
+
+The RFQ's own rules: T11 = T10 + 14 days, and T9 must come at least 3 working days before T10, leaving time to invoke the escalation clause (N11).
+
+### N2. Dział Badań
+Ask A. Nahorna about:
+- invoice timing against the acceptance protocol (9–10 Dec)
+- the FRBN reporting template
+- how much lead time the university's legal review needs before the contract is signed (contract due 23 Oct)
+
+### N3. KEB form placeholders
+Two `[DO UZUPEŁNIENIA]` placeholders remain in `Ethics/formularz-KEB.qmd` (checked 25 Sep):
+- the date of the consultation with the data protection officer (IOD)
+- a short account of each team member's experience: main research projects and methodological publications
+
+### N4. Workshop or extension
+Data arrive on 3 Dec and the project closes on 16 Dec. That leaves nine working days for analysis, report, repository and workshop, with no slack. Fallbacks, in order of preference (`Project design.md` §8):
+1. Move the workshop to January.
+2. Request a no-cost extension from FRBN.
+3. Deliver the report as a draft at project close.
+
+The report, repository and workshop are FRBN commitments; the manuscript is not.
+
+### N5. Cognitive testing
+Runs 22 Sep–6 Oct. Focus on the items in our own wording (M6.2, M6.4–M6.6, M9.1–M9.3) and on the bipolar format in M8.3–M8.5.
+
+### N6. PKW benchmarks
+Check the exact figures on the PKW site: 2023 Sejm turnout, and the 2025 presidential election (both rounds). They feed the Stage 5 benchmark comparison (N19).
+
+### N7. Final questionnaire
+`Questionnaire/kwestionariusz.qmd`: 58 substantive items (M2–M9) plus an attention check, with a median completion time of 12 minutes or less.
+
+### N8. RFQ
+- Send the same RFQ, with the contract annex (Załącznik 2), to Ariadna, Opinia24 and Pollster. Copy in Norstat and IQS as backups.
+- The budget is disclosed as "up to 21,000 zł net"; bids above that are rejected.
+- Requirement W6 makes evidence of reminder lift, wave by wave, a rejection criterion: a bid without it is rejected.
+
+### N9. Clarification calls
+Run 16–20 Oct. Check with each bidder:
+- reminder channels are symmetric across arms: arm B gets no reminder by any channel, email or app
+- automatic top-ups are switched off
+- whether profile variables are available for nonrespondents (W4a individual-level data, or W4b aggregate tables)
+- whether three reminders in 14 days breach the panel's contact-frequency caps
+
+### N10. Bid evaluation
+Pass/fail on requirements W1–W7 first. Then score:
+- K1 price: 30 points
+- K2 panel and invitation effectiveness: 30
+- K3 data quality: 25
+- K4 timeline: 15
+
+Ties go to the higher K2 score, then K3.
+
+### N11. Contract terms
+The contract must include:
+- the Załącznik 2 data annex
+- the escalation clause (RFQ chapter 8, point 9): a fourth reminder in arm A, at no extra cost, if the soft-launch gap is below 5 pp (N15)
+- no quota management and a fixed field window
+- the right to publish the data openly
+
+### N12. Script testing
+Runs 2–4 Nov. Check:
+- routing
+- codes 97 (don't know) and 98 (refusal) visible on every attitudinal item
+- item order randomised in M5–M7
+- the attention check sits inside M6
+- arm and wave tags recorded
+
+### N13. Randomisation
+The invited pool (~18,500) is split 42/58 into arms A and B, pre-stratified by sex × age × education × region (W2). The agency either uses our seed or documents its procedure. Either way, check balance on the profile covariates.
+
+### N14. Soft launch
+Runs 5–9 Nov, ~100 invitations per arm. Check:
+- arm and wave tags present in the data
+- paradata fields populated
+- median time 12 minutes or less
+- no routing errors
+
+Soft-launch cases enter the main dataset only if the protocol was identical. Record the decision in the pre-registration.
+
+### N15. Reminder lift and go/no-go
+The response-rate gap between arms in the soft launch decides:
+- **≥ 7 pp:** proceed as planned.
+- **5–7 pp:** proceed, and record the reduced power.
+- **< 5 pp:** invoke the escalation clause (N11) and add a fourth reminder in arm A (day 13 ± 1). The main launch waits until the revised protocol is agreed.
+
+### N16. Pre-registration
+Freeze on OSF before the main launch. Contents:
+- hypotheses H1–H5, the M-check and H-global
+- the statistical analysis plan (SAP) and decision rules
+- contingencies
+- questionnaire and contact protocol
+- simulation code
+
+Draft: `Preregistration/prerejestracja.qmd`.
+
+### N17. Fieldwork
+- 14-day window; both arms open and close on the same day.
+- Reminders go to arm A non-completers only, on days 3, 7 and 11 (19, 23 and 27 Nov). Arm B gets none.
+- If completes lag at the midpoint, release top-up batches to both arms at once, in the same 42/58 ratio.
+- Target ~2,000 completes (~1,200 in arm A, ~800 in arm B). The floor is 1,800, with at least 650 in arm B.
+
+### N18. Data delivery
+Due within three working days of close: invitee file, respondent file, field report and randomisation documentation. Verify them before signing the acceptance protocol.
+
+### N19. Analysis stages
+Run 4–14 Dec in the `Analysis/` `targets` pipeline, which is built and tested on simulated data.
+- **Stage 0:** reconcile the invitee file with the field report; check randomisation balance; build outcomes and indices.
+- **Stage 1:** response rates by arm; response probit on the invited pool; response curve by reminder wave.
+- **Stage 2:** Y ~ Z + X with HC2 errors for all pre-registered outcomes; one-sided tests with BH-FDR across the four constructs; Brown's combined test.
+- **Placebo and gradient:** arm B vs arm A wave 0; the five-level propensity gradient with field-day fixed effects.
+- **Stage 3:** TOST equivalence tests for H5 against ±0.10 SD, binary items included.
+- **Stage 4:** Heckman ML plus a GJRM copula range for flagged items; bootstrap over the invited pool, stratified by arm; NINR weights as a stretch goal. Fall back on pseudo-nonrespondents if individual-level nonrespondent data are unavailable.
+- **Stage 5:** observed, raked and corrected estimates side by side, against PKW 2023 and 2025, GUS/EHIS, CEPiK and CBOS/ISKK; an estimator-comparison plot.
+- **Supplement:** Manski bounds; Hartman–Huang sensitivity analysis.
+
+### N20. PGSW memo
+A proposal for a light-contact arm in the next PGSW wave, with a cost model from this pilot and lessons on the protocol.
+
+### N21. Public repository
+Work starts 11 Dec; OSF with a GitHub mirror. Contents:
+- `renv`-pinned code and the `targets` pipeline
+- the simulation suite
+- anonymised data: k-anonymity check; suppress region × settlement × age cells below 5
+- questionnaire in Polish and English
+- contract annex template
+- implementation guide
+
+### N22. FRBN acknowledgement
+Exact wording: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C".
+
+### N23. Article manuscript
+Working title: "Diagnosing Non-Ignorable Nonresponse with a Randomized Response Instrument". Journals in order of preference: *Public Opinion Quarterly*, then *Survey Research Methods*, then *IJPOR*. The manuscript is not an FRBN commitment.
+
+### Background (as of 25 Sep 2026)
+- **Funding:** FRBN decision 67/2026/FRBN/C; 25,830 zł gross (21,000 zł net + 23% VAT), for fieldwork only.
+- **Team:** Ben Stanley (PI), Mikołaj Cześnik, Marta Żerkowska-Balas.
+- **Design:** two-arm CAWI experiment on a Polish online panel. About 18,500 invitees are split 42/58 into arm A (invitation plus three reminders) and arm B (invitation only), for about 2,000 completes.
+- **Files**, relative to `Positron/Grants/FRBN non-response survey/`:
+  - `Administration/Project design.md`: full design, analysis plan and risk register
+  - `Administration/harmonogram.qmd`: Gantt chart
+  - `Tender/zapytanie-ofertowe.qmd`: RFQ
+  - `Ethics/formularz-KEB.qmd` and `Ethics/wniosek-KEB.qmd`: ethics application
+  - `Questionnaire/kwestionariusz.qmd`; `Preregistration/prerejestracja.qmd`
+  - `Analysis/`: `targets` pipeline
