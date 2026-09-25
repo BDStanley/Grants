@@ -276,7 +276,7 @@ Before data arrive: simulate the full design (invited pool with profile X; laten
 
 | Weeks (2026) | Workstream | Milestones |
 |---|---|---|
-| **22 Sep – 30 Oct** | Questionnaire cognitive testing then final version; ethics application to SWPS KEB (light-contact arm framed as burden-*reducing*); English translation of the instrument | Ethics submitted 24 Sep; questionnaire final 9 Oct; ethics decision by 30 Oct |
+| **22 Sep – 30 Oct** | Questionnaire cognitive testing then final version; ethics application to SWPS KEB (light-contact arm framed as burden-*reducing*); English translation of the instrument | Questionnaire final 5 Oct; ethics submitted 6 Oct for the KEB sitting of 13 Oct; ethics decision by 20 Oct |
 | **29 Sep – 23 Oct** | RFQ with contract annex (Załącznik 2) to ≥3 agencies (Ariadna, Opinia24, Pollster, + Norstat/IQS as backups); bidder questions answered; bids evaluated (criteria §9); clarification calls; contract signed | RFQ out 29 Sep; bids 15 Oct; contract 23 Oct |
 | **26 Oct – 4 Nov** | Questionnaire handed to agency; agency scripting; our script testing; randomization verified | Script signed off 4 Nov |
 | **5 – 13 Nov** | **Soft launch** (~100/arm); reminder-lift verified; go/no-go decision; prereg **frozen on OSF before main launch** | Go/no-go 12 Nov; prereg frozen 13 Nov |
@@ -338,7 +338,7 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 | Price above 10.50 zł net/complete | Med | Med | Trim questionnaire to 10 min; reduce target to ~1,800 (power at 1,100/700: MDE 6.8 pp / 0.14 SD — still adequate); negotiate arm-B discount |
 | Fieldwork collides with unscheduled political shock | Low | Med | 14-day window, timestamps, field-day FE robustness, A-wave-0 vs B placebo |
 | Heckman/GJRM instability on flagged items | Med | Low–Med | Primary claim rests on the nonparametric test; report R²_M; copula range; document honestly (ch. 12 practice) |
-| Ethics decision delayed | Low–Med | Med | Submit in first project week (early Sep, post-vacation — KEB back to normal schedule); KEB chair contacted about turnaround; fieldwork not before 26 Oct anyway |
+| Ethics decision delayed | Low–Med | Med | Application goes to the KEB sitting of 13 Oct (submission deadline 6 Oct); chase the decision if not received by 20 Oct; approved screens needed at questionnaire handover (26 Oct), approval needed before soft launch (5 Nov); if revisions are requested, establish the date of the next sitting at once |
 | Timeline compression at analysis stage | Low | Med | Simulation-first pipeline: analysis is a re-run on real data |
 | Multiple-testing / researcher-df criticism at review | Med | Med | Frozen OSF prereg, BH within family, TOST for nulls, full code+data release (ch. 11.4 defenses, verbatim) |
 
@@ -355,4 +355,4 @@ Send identical RFQ to Ariadna, Opinia24, Pollster (+ backups). Budget disclosed 
 
 ---
 
-*Design document prepared 16 July 2026; revised 20 July 2026 (timeline shifted to 7 September – 16 December 2026); revised 17 September 2026 (§§3, 4.1, 4.2, 6, 7.3, 7.6, 9, 12 — contact protocol, confirmatory design and procurement requirements changed in response to the simulation-based power analysis). Funding: Uniwersytet SWPS, FRBN, decyzja nr 67/2026/FRBN/C. All outputs to acknowledge: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C)."*
+*Design document prepared 16 July 2026; revised 20 July 2026 (timeline shifted to 7 September – 16 December 2026); revised 17 September 2026 (§§3, 4.1, 4.2, 6, 7.3, 7.6, 9, 12 — contact protocol, confirmatory design and procurement requirements changed in response to the simulation-based power analysis); revised 25 September 2026 (§§8, 12 — ethics timetable set by the KEB sitting of 13 October). Funding: Uniwersytet SWPS, FRBN, decyzja nr 67/2026/FRBN/C. All outputs to acknowledge: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS (decyzja nr 67/2026/FRBN/C)."*

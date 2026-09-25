@@ -4,19 +4,19 @@ The project runs from 7 September to 16 December 2026, and everything must be fi
 
 ### Now (25–30 Sep): ethics and admin
 
-- [ ] Fill in tender dates T1–T15 in the RFQ and re-render it (N1) #FRBN_grant 📅 2026-09-25
-- [ ] Contact the KEB chair about review turnaround #FRBN_grant 📅 2026-09-25
-- [ ] Confirm invoicing, reporting template and legal-review lead time with Dział Badań (N2) #FRBN_grant 📅 2026-09-25
+- [ ] Fill in tender dates T1–T15 in the RFQ and re-render it (N1) #FRBN_grant 📅 2026-09-30
+- [x] Contact the KEB chair about review turnaround #FRBN_grant 📅 2026-09-25 ✅ 2026-09-25
+- [ ] Confirm invoicing, reporting template and legal-review lead time with Dział Badań (N2) #FRBN_grant 📅 2026-09-28
 - [ ] Complete the two placeholders in the KEB form (N3) #FRBN_grant 📅 2026-09-29
 - [ ] Decide: workshop in January, or a no-cost extension (N4) #FRBN_grant 📅 2026-09-29
-- [ ] Submit KEB ethics application [(Ethics board document)](https://docs.google.com/document/d/1mI_bohbcWfy0pxYzIG_tii809VTa3Hhm/edit) #FRBN_grant 📅 2026-09-30
 
 ### Questionnaire and ethics (22 Sep–30 Oct)
 
-- [ ] Cognitive-test the questionnaire with the team and 2–3 naive testers (N5) #FRBN_grant 📅 2026-10-06
+- [ ] Cognitive-test the questionnaire with the team and 2–3 naive testers (N5) #FRBN_grant 📅 2026-10-02
+- [ ] Finalise the questionnaire (N7) #FRBN_grant 📅 2026-10-05
+- [ ] Submit KEB ethics application [(Ethics board document)](https://docs.google.com/document/d/1mI_bohbcWfy0pxYzIG_tii809VTa3Hhm/edit) (N3) #FRBN_grant 📅 2026-10-06
 - [ ] Check the PKW benchmark figures against the PKW site (N6) #FRBN_grant 📅 2026-10-06
-- [ ] Finalise the questionnaire (N7) #FRBN_grant 📅 2026-10-09
-- [ ] Receive the KEB decision; follow up if it has not arrived #FRBN_grant 📅 2026-10-30
+- [ ] Receive the KEB decision; follow up if it has not arrived (N3) #FRBN_grant 📅 2026-10-20
 - [ ] Translate the questionnaire into English for OSF and the repository #FRBN_grant 📅 2026-10-30
 
 ### Tender and contracting (29 Sep–23 Oct)
@@ -74,10 +74,6 @@ The project runs from 7 September to 16 December 2026, and everything must be fi
 - [ ] Check that all outputs carry the FRBN acknowledgement (N22) #FRBN_grant 📅 2026-12-16
 - [ ] Submit the final FRBN report to Dział Badań #FRBN_grant 📅 2026-12-16
 
-### After project close
-
-- [ ] Draft the article manuscript (EN) for POQ (N23) #FRBN_grant 📅 2027-01-29
-
 ## Notes
 
 ### N1. Tender dates
@@ -109,10 +105,12 @@ Ask A. Nahorna about:
 - the FRBN reporting template
 - how much lead time the university's legal review needs before the contract is signed (contract due 23 Oct)
 
-### N3. KEB form placeholders
-Two `[DO UZUPEŁNIENIA]` placeholders remain in `Ethics/formularz-KEB.qmd` (checked 25 Sep):
+### N3. KEB application
+The KEB next sits on 13 Oct, and applications are due a week before, so submit by 6 Oct. Two `[DO UZUPEŁNIENIA]` placeholders remain in `Ethics/formularz-KEB.qmd` (checked 25 Sep):
 - the date of the consultation with the data protection officer (IOD)
 - a short account of each team member's experience: main research projects and methodological publications
+
+The full questionnaire is attachment C of `Ethics/wniosek-KEB.qmd`, so it must be final before submission (N7). The agency needs the approved information, consent and debriefing screens with the questionnaire on 26 Oct, so chase the decision if it has not arrived by 20 Oct. If the committee asks for changes, find out when it next sits: the soft launch cannot start on 5 Nov without approval.
 
 ### N4. Workshop or extension
 Data arrive on 3 Dec and the project closes on 16 Dec. That leaves nine working days for analysis, report, repository and workshop, with no slack. Fallbacks, in order of preference (`Project design.md` §8):
@@ -123,13 +121,13 @@ Data arrive on 3 Dec and the project closes on 16 Dec. That leaves nine working 
 The report, repository and workshop are FRBN commitments; the manuscript is not.
 
 ### N5. Cognitive testing
-Runs 22 Sep–6 Oct. Focus on the items in our own wording (M6.2, M6.4–M6.6, M9.1–M9.3) and on the bipolar format in M8.3–M8.5.
+Runs 22 Sep–2 Oct, so the final questionnaire can go to the KEB (N3). Focus on the items in our own wording (M6.2, M6.4–M6.6, M9.1–M9.3) and on the bipolar format in M8.3–M8.5.
 
 ### N6. PKW benchmarks
 Check the exact figures on the PKW site: 2023 Sejm turnout, and the 2025 presidential election (both rounds). They feed the Stage 5 benchmark comparison (N19).
 
 ### N7. Final questionnaire
-`Questionnaire/kwestionariusz.qmd`: 58 substantive items (M2–M9) plus an attention check, with a median completion time of 12 minutes or less.
+`Questionnaire/kwestionariusz.qmd`: 58 substantive items (M2–M9) plus an attention check, with a median completion time of 12 minutes or less. Due 5 Oct, because it goes to the KEB with the application on 6 Oct (N3).
 
 ### N8. RFQ
 - Send the same RFQ, with the contract annex (Załącznik 2), to Ariadna, Opinia24 and Pollster. Copy in Norstat and IQS as backups.
@@ -229,9 +227,6 @@ Work starts 11 Dec; OSF with a GitHub mirror. Contents:
 
 ### N22. FRBN acknowledgement
 Exact wording: „Projekt finansowany ze środków Funduszu Rozwoju Badań Naukowych Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C".
-
-### N23. Article manuscript
-Working title: "Diagnosing Non-Ignorable Nonresponse with a Randomized Response Instrument". Journals in order of preference: *Public Opinion Quarterly*, then *Survey Research Methods*, then *IJPOR*. The manuscript is not an FRBN commitment.
 
 ### Background (as of 25 Sep 2026)
 - **Funding:** FRBN decision 67/2026/FRBN/C; 25,830 zł gross (21,000 zł net + 23% VAT), for fieldwork only.

@@ -42,10 +42,10 @@ d <- function(x) as.Date(x)
 # end = NA oznacza kamień milowy (romb)
 tasks <- tibble::tribble(
   ~phase, ~task, ~start, ~end,
-  1, "Test poznawczy kwestionariusza",            "2026-09-22", "2026-10-06",
-  1, "Wersja finalna kwestionariusza",            "2026-10-09", NA,
-  1, "Złożenie wniosku do Komisji Etyki",         "2026-09-24", NA,
-  1, "Opiniowanie przez Komisję Etyki",           "2026-09-24", "2026-10-30",
+  1, "Test poznawczy kwestionariusza",            "2026-09-22", "2026-10-02",
+  1, "Wersja finalna kwestionariusza",            "2026-10-05", NA,
+  1, "Złożenie wniosku do Komisji Etyki",         "2026-10-06", NA,
+  1, "Opiniowanie przez Komisję Etyki",           "2026-10-06", "2026-10-20",
   1, "Tłumaczenie kwestionariusza na angielski",  "2026-10-12", "2026-10-30",
   2, "Wysłanie zapytania ofertowego",             "2026-09-29", NA,
   2, "Pytania wykonawców i odpowiedzi",           "2026-09-29", "2026-10-08",

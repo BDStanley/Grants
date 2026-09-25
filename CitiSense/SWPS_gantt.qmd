@@ -1,0 +1,210 @@
+---
+title: "CitiSense — SWPS University's activities, October 2026 – September 2029"
+lang: en-GB
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 1.1cm
+      y: 0.9cm
+    fontsize: 9pt
+    mainfont: "Helvetica Neue"
+    toc: false
+    page-numbering: ""
+    include-in-header:
+      text: |
+        #set page(flipped: true)
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: gantt
+#| fig-width: 11.0
+#| fig-height: 6.2
+#| fig-dpi: 300
+#| dev: ragg_png
+
+library(ggplot2)
+
+FONT <- "Helvetica Neue"
+pal <- c("#2a78d6", "#1baf7a", "#e34948", "#eda100", "#4a3aa7", "#eb6834")
+phases <- c("Governance and ethics (WP12, WP13)",
+            "Framework and survey data (WP1, WP2)",
+            "WP6 · Economic dimensions of enlargement (SWPS lead)",
+            "WP10 · Toolboxes (UDE lead)",
+            "WP11 · Dissemination (TEPSA lead)",
+            "Conferences and workshops")
+ink <- "#0b0b0b"; ink2 <- "#52514e"; ink3 <- "#95938b"
+surf <- "#fcfcfb"; grid <- "#dedcd5"; band <- "#f2f1ec"
+d <- function(x) as.Date(x)
+
+# ---------------------------------------------------------------- tasks
+# end = NA marks a milestone (diamond); more = further diamonds on the row;
+# plan = TRUE for SWPS's own proposed dates (drawn lighter), FALSE for dates
+# fixed by the Grant Agreement; when = date label, if not built from the dates
+tasks <- tibble::tribble(
+  ~phase, ~task, ~start, ~end, ~more, ~plan, ~when,
+  1, "Steering Committee, as WP6 lead (T12.5)",          "2026-10-01", "2029-09-30", NA, FALSE, NA,
+  1, "Input to the Data Management Plan (D12.2, M6)",    "2027-02-15", NA,           NA, TRUE,  NA,
+  1, "Input to the ethics report (D13.1, M18)",          "2028-02-15", NA,           NA, TRUE,  NA,
+  2, "WP6 question block for the WP2 survey, if agreed", "2027-01-15", NA,           NA, TRUE,  NA,
+  2, "WP1 conceptual framework (D1.1)",                  "2027-03-31", NA,           NA, FALSE, NA,
+  2, "Pilot survey (T2.2)",                              "2027-03-01", "2027-07-31", NA, FALSE, NA,
+  2, "WP2 survey data released (D2.1)",                  "2028-03-31", NA,           NA, FALSE, NA,
+  3, "T6.1 Literature review (CEU lead)",                "2027-04-01", "2028-03-31", NA, FALSE, NA,
+  3, "T6.2 Regional inclusion and exclusion (CEU lead)", "2027-10-01", "2028-09-30", NA, FALSE, NA,
+  3, "T6.3 Perceptions, attitudes, behaviour (SWPS lead)", "2027-10-01", "2028-09-30", NA, FALSE, NA,
+  3, "T6.4 Policy recommendations (SWPS lead)",          "2027-04-01", "2028-09-30", NA, FALSE, NA,
+  3, "T6.3 analysis plan drafted",                       "2027-09-30", NA,           NA, TRUE,  NA,
+  3, "T6.4 validation with the CSN and Expert Hub",      "2028-06-01", "2028-07-31", NA, TRUE,  NA,
+  3, "Internal drafts, partner review, revisions",       "2028-06-01", "2028-08-31", NA, TRUE,  NA,
+  3, "D6.1–D6.4 submitted",                              "2028-09-30", NA,           NA, FALSE, "M24 · 30 Sep 2028",
+  3, "T6.3 journal article submitted (target)",          "2028-12-15", NA,           NA, TRUE,  NA,
+  4, "T10.3 Youth Labs, including Warsaw",               "2027-09-01", "2029-05-31", NA, FALSE, NA,
+  4, "T10.4 National views (“Europe Next”)",             "2027-10-01", "2029-09-30", NA, FALSE, NA,
+  4, "T10.1 Toolbox for policymakers",                   "2028-07-01", "2029-09-30", NA, FALSE, NA,
+  4, "T10.2 Toolbox for civil society and education",    "2028-07-01", "2029-09-30", NA, FALSE, NA,
+  5, "Communication, policy briefs, media (T11.1, .5, .10)", "2026-10-01", "2029-09-30", NA, FALSE, NA,
+  5, "EU Enlargement Expert Hub (T11.2)",                "2026-10-01", "2029-09-30", NA, FALSE, NA,
+  5, "Video engagement (T11.12)",                        "2026-10-01", "2028-03-31", NA, FALSE, NA,
+  5, "Public panel discussions (T11.3)",                 "2028-03-01", "2029-09-30", NA, FALSE, NA,
+  5, "Polish national briefing (T11.6)",                 "2029-06-30", NA,           NA, TRUE,  NA,
+  6, "Kick-off conference, Florence",                    "2026-10-28", NA,           NA, FALSE, "M1 · 27–29 Oct 2026",
+  6, "Mid-term conference, Florence or Tbilisi",         "2028-03-15", NA,           NA, FALSE, NA,
+  6, "Cross-WP workshops",                               "2028-03-15", NA, "2028-09-15;2029-09-15", FALSE, "M18, M24, M36",
+  6, "Two international conferences, WP6 findings",      "2028-06-01", "2029-09-30", NA, TRUE,  "2028–2029, venues open",
+  6, "Final conference, Brussels",                       "2029-09-15", NA,           NA, FALSE, NA
+)
+tasks$start <- d(tasks$start); tasks$end <- d(tasks$end)
+
+# header row before each phase block
+rows <- do.call(rbind, lapply(seq_along(phases), function(i) {
+  blk <- tasks[tasks$phase == i, ]
+  hdr <- blk[1, ]
+  hdr$task <- phases[i]; hdr$start <- as.Date(NA); hdr$end <- as.Date(NA)
+  hdr$more <- NA; hdr$plan <- FALSE; hdr$when <- NA
+  hdr$kind <- "header"
+  blk$kind <- ifelse(is.na(blk$end), "milestone", "bar")
+  rbind(hdr, blk)
+}))
+rows$y <- rev(seq_len(nrow(rows)))
+rows$col <- pal[rows$phase]
+rows$alpha <- ifelse(rows$plan, 0.42, 1)
+
+# project month: M1 = October 2026
+pm  <- function(x) (as.integer(format(x, "%Y")) - 2026) * 12 +
+                   as.integer(format(x, "%m")) - 9
+mon <- function(x) paste(month.abb[as.integer(format(x, "%m"))], format(x, "%Y"))
+en_date <- function(a, b) {
+  if (is.na(b)) return(paste0("M", pm(a), " · ", mon(a)))
+  if (pm(a) == pm(b)) return(paste0("M", pm(a), " · ", mon(a)))
+  paste0("M", pm(a), "–M", pm(b), " · ", mon(a), " – ", mon(b))
+}
+rows$datelab <- vapply(seq_len(nrow(rows)), function(i)
+  if (rows$kind[i] == "header") ""
+  else if (!is.na(rows$when[i])) rows$when[i]
+  else en_date(rows$start[i], rows$end[i]),
+  character(1))
+
+# ------------------------------------------ geometry: labels | chart | dates
+p0 <- d("2026-09-10"); p1 <- d("2029-10-20")
+lab0 <- p0 - 600
+dat0 <- p1 + 20
+xr   <- c(lab0, p1 + 290)
+
+bars <- rows[rows$kind == "bar", ]
+mile <- rows[rows$kind == "milestone", ]
+hdrs <- rows[rows$kind == "header", ]
+tsk  <- rows[rows$kind != "header", ]
+extra <- do.call(rbind, lapply(which(!is.na(mile$more)), function(i) {
+  x <- d(strsplit(mile$more[i], ";")[[1]])
+  data.frame(start = x, y = mile$y[i], col = mile$col[i], alpha = mile$alpha[i])
+}))
+mile <- rbind(mile[, c("start", "y", "col", "alpha")], extra)
+# six-monthly Steering Committee risk reviews (M6, M12, … M36)
+rev6 <- data.frame(x = seq(d("2027-03-15"), by = "6 months", length.out = 6),
+                   y = rows$y[rows$task == "Steering Committee, as WP6 lead (T12.5)"])
+
+years  <- d(c("2026-10-01", "2027-10-01", "2028-10-01", "2029-10-01"))
+halves <- d(c("2027-04-01", "2028-04-01", "2029-04-01"))
+ylab   <- d(c("2027-04-01", "2028-04-01", "2029-04-01"))
+ntop   <- nrow(rows) + 0.9
+m18    <- d("2028-03-15")
+
+blocks <- do.call(rbind, lapply(seq_along(phases), function(i) {
+  ys <- rows$y[rows$phase == i]
+  data.frame(i = i, ymin = min(ys) - 0.5, ymax = max(ys) + 0.5)
+}))
+shade <- blocks[blocks$i %% 2 == 0, ]
+
+ggplot() +
+  geom_rect(data = shade, aes(xmin = lab0, xmax = p1 + 290,
+            ymin = ymin, ymax = ymax), fill = band) +
+  annotate("rect", xmin = d("2027-04-01"), xmax = d("2028-09-30"),
+           ymin = -0.2, ymax = ntop, fill = "#e34948", alpha = 0.09) +
+  geom_vline(xintercept = years, colour = grid, linewidth = 0.3) +
+  geom_vline(xintercept = halves, colour = grid, linewidth = 0.3,
+             linetype = "13") +
+  annotate("text", x = c(years[1:3], halves) + 8, y = ntop + 0.25,
+           label = c("M1", "M13", "M25", "M7", "M19", "M31"),
+           family = FONT, size = 2.0, colour = ink3, hjust = 0) +
+  annotate("segment", x = m18, xend = m18, y = -0.2, yend = ntop - 0.6,
+           colour = ink3, linewidth = 0.4, linetype = "22") +
+  annotate("text", x = d("2027-12-15"), y = ntop + 0.95,
+           label = "WP6 · SWPS LEAD · M7–M24", family = FONT,
+           size = 2.5, colour = "#b82d2c", fontface = "bold") +
+  geom_segment(data = bars, aes(x = start, xend = end, y = y, yend = y,
+               colour = I(col), alpha = I(alpha)),
+               linewidth = 2.6, lineend = "round") +
+  geom_point(data = mile, aes(x = start, y = y, fill = I(col), alpha = I(alpha)),
+             shape = 23, size = 2.3, stroke = 0.8, colour = surf) +
+  geom_point(data = rev6, aes(x = x, y = y), shape = 21, size = 1.5,
+             fill = surf, colour = "#1c4f8f", stroke = 0.6) +
+  geom_text(data = hdrs, aes(x = lab0 + 5, y = y, label = toupper(task),
+            colour = I(col)), family = FONT, fontface = "bold",
+            size = 2.35, hjust = 0) +
+  geom_text(data = tsk, aes(x = lab0 + 30, y = y, label = task),
+            family = FONT, size = 2.4, colour = ink, hjust = 0) +
+  geom_text(data = tsk, aes(x = dat0, y = y, label = datelab),
+            family = FONT, size = 2.2, colour = ink2, hjust = 0) +
+  scale_y_continuous(expand = expansion(add = c(0.5, 2.2))) +
+  scale_x_date(limits = xr, breaks = ylab, position = "top",
+               labels = c("Year 1 · Oct 2026 – Sep 2027",
+                          "Year 2 · Oct 2027 – Sep 2028",
+                          "Year 3 · Oct 2028 – Sep 2029"),
+               expand = expansion(add = c(0, 0))) +
+  theme_minimal(base_family = FONT, base_size = 8) +
+  theme(
+    panel.grid = element_blank(),
+    axis.title = element_blank(),
+    axis.text.y = element_blank(),
+    axis.text.x = element_text(colour = ink2, size = 8.6, margin = margin(b = 1)),
+    axis.ticks = element_blank(),
+    plot.background = element_rect(fill = surf, colour = NA),
+    panel.background = element_rect(fill = surf, colour = NA),
+    plot.margin = margin(1, 2, 0, 2)
+  )
+```
+
+```{=typst}
+#v(-10pt)
+#set text(size: 6.9pt, fill: rgb("#52514e"), hyphenate: false)
+#grid(columns: (1.5fr, 1fr, 1.2fr), gutter: 14pt,
+[*Key.* Solid bars and diamonds follow the Grant Agreement (Annex 1); lighter
+ones are SWPS's own proposed dates, to be agreed at the kick-off. White dots —
+the Steering Committee's six-monthly risk reviews. Red band — WP6 (M7–M24).
+Dashed line — M18 (March 2028): mid-term conference, first EC review, WP2 data
+and the ethics report. Academic work only; the research office handles
+finance and administration.],
+[*Fixed points.* All four WP6 deliverables are due at M24 (30 September 2028):
+D6.2 and D6.3 from SWPS, D6.1 and D6.4 from CEU. As WP lead, SWPS answers for
+all four. WP2 survey design closes at M6, before WP6 starts.],
+[*To resolve at the kick-off.* Whether SWPS leads WP6 alone or with CEU (Q1);
+who drafts which deliverable (Q2); which survey data T6.3 uses, since the WP2
+survey covers neither Poland nor Hungary (Q5, Q6); SWPS's part in the Youth
+Labs, "Europe Next" and the national briefing (Q11, Q12). Q-numbers refer to
+the kick-off briefing.])
+```

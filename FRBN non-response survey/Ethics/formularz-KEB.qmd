@@ -43,7 +43,7 @@ Proszę o dopuszczenie do realizacji projektu badawczego przedstawionego poniże
 ```{=typst}
 #grid(columns: (1fr, 1fr), gutter: 12pt,
   block(width: 100%, height: 2.2cm, stroke: 0.5pt + luma(120), inset: 8pt)[
-    24 września 2026 r.],
+    6 października 2026 r.],
   block(width: 100%, height: 2.2cm, stroke: 0.5pt + luma(120), inset: 8pt)[])
 #grid(columns: (1fr, 1fr), gutter: 12pt,
   align(center)[#text(size: 9pt)[Data]],

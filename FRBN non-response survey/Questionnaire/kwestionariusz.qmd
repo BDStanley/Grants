@@ -25,7 +25,7 @@ format:
 | **Projekt** | Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi w polskim sondażu społeczno-politycznym |
 | **Finansowanie** | FRBN Uniwersytetu SWPS, decyzja nr 67/2026/FRBN/C |
 | **Zespół** | B. Stanley (kierownik), M. Cześnik, M. Żerkowska-Balas |
-| **Status** | Wersja 0.9 — do testu poznawczego (zespół + 2–3 testerów naiwnych) i do wyceny przez agencje; wersja finalna do 9 października 2026 |
+| **Status** | Wersja 0.9 — do testu poznawczego (zespół + 2–3 testerów naiwnych) i do wyceny przez agencje; wersja finalna do 5 października 2026, przed złożeniem wniosku do Komisji ds. Etyki Badań Naukowych |
 | **Zakres** | 58 pytań merytorycznych + ekran zgody + weryfikacja wieku + 1 pytanie kontrolne uważności |
 | **Zakładany czas** | mediana ≤ 12 minut |
 | **Podział na grupy** | Kwestionariusz **identyczny** w grupie A i grupie B; jedyna różnica między grupami dotyczy liczby przypomnień wysyłanych przed wypełnieniem |

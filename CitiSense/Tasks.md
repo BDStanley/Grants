@@ -215,4 +215,5 @@ No trips are planned to the mid-term conference (Florence or Tbilisi, M18), the 
   - `Bid/CitiSense_Grant Agreement - GAP-101286806.pdf`: signed GA, including Annex 1 Parts A and B
   - `Resources/`: Polish and Hungarian datasets overviews, and the provisional internal budget (`CitiSense_budget_SWPS_LUMP SUM_wewnetrzny - wersja 1.pdf`)
   - `Conferences/Kick-off Florence October 2026/SWPS_kickoff_briefing.qmd`: kick-off briefing
+  - `SWPS_gantt.qmd`: Gantt chart of SWPS's activities, M1–M36
 - **Replaces** the HTML checklist `citisense-swps-checklist.html` (removed 25 Sep 2026; still in git history). That checklist also covered administrative and financial items, which the research office handles.

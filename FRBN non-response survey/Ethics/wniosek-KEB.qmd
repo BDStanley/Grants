@@ -1,7 +1,7 @@
 ---
 title: "Wniosek o wydanie opinii Komisji ds. Etyki Badań Naukowych Uniwersytetu SWPS"
 subtitle: "Pilotażowe wdrożenie randomizowanego instrumentu odpowiedzi w polskim sondażu społeczno-politycznym"
-date: "2026-09-24"
+date: "2026-10-06"
 date-format: "D MMMM YYYY"
 lang: pl
 format:
@@ -315,7 +315,7 @@ Kierownik projektu oświadcza, że:
 |:--|:--------------------------------|:------------------|
 | A | Ekran informacyjny i ekran zgody (pełna treść, w tym klauzula informacyjna RODO) | Poniżej |
 | B | Nota informacyjna po badaniu (debriefing) | Poniżej |
-| C | Kwestionariusz — pełne brzmienie pytań | Do dołączenia po finalizacji (planowo do 9.10.2026) |
+| C | Kwestionariusz — pełne brzmienie pytań | Do dołączenia |
 | D | Treść zaproszenia i trzech przypomnień | Poniżej (wzór) |
 | E | Wymogi wobec agencji badawczej w zakresie protokołu kontaktu i przekazania danych (aneks do umowy) | Do dołączenia |
 | F | Decyzja o finansowaniu nr 67/2026/FRBN/C | Do dołączenia |
